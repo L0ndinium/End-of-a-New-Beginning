@@ -27,8 +27,18 @@ USA_american_civil_war_descision = {
 	icon = power_struggle
 
 	available = {
-		tag = USA
-		has_global_flag = ACWAmerican_Civil_War
-		has_war_with = CSA
+		OR = {
+			has_global_flag = ACWAmerican_Civil_War
+			OR = {
+				AND = {
+					tag = CSA
+					has_war_with = USA
+				}
+				AND = {
+					tag = USA
+					has_war_with = CSA
+				}
+			}
+		}
 	}
 }

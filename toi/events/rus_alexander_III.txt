@@ -1,4 +1,4 @@
-add_namespace = alIII
+﻿add_namespace = alIII
 
 country_event = {
     id = alIII.1
@@ -23,11 +23,11 @@ country_event = {
 	    picture = "Portrait_RUS_Alexander_III.dds"
 		expire = "1894.11.20"
 	    ideology = despotism
+		}
 		set_country_flag = eoanb_flag_alexander_ii_dead
 		hidden_effect = {
 		add_ideas = has_heir
-		    }
-	    }
+		}
 	}	
 }
 

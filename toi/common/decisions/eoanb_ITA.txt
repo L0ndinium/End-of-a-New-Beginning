@@ -39,6 +39,8 @@ form_italy_category = {
 			has_full_control_of_state = 156
 			has_full_control_of_state = 115
 			has_full_control_of_state = 114
+			has_full_control_of_state = 981
+			has_full_control_of_state = 982
 			has_completed_focus = PIE_Form_Italy
 		}
 

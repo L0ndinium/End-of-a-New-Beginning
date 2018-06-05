@@ -5,20 +5,18 @@
 
   set_convoys = 0
   
-  set_research_slots = 3
-
-  add_ideas = { 
+  set_research_slots = 4  add_ideas = { 
     #POLITICS 
 		  
     hos_is_leader
     victorian_era
     agrarian
-    no_heir
+    has_heir
     absolute_monarchy
 
     civilian_economy
     limited_exports
-    two_percent
+    three_percent
     normal_taxes
 
     stagnation_growth
@@ -27,10 +25,10 @@
     limited_equality
     absolutism
 
-    no_constitution
+    constitution_adopted
     no_elections
 
-    privileged_education
+    open_schools
     state_religion
 	religion_catholic
         #NATIONAL SPIRITS
@@ -92,11 +90,25 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-    name = "Leader"
-    desc = "POLITICS_TEMP_DESC"
-    picture = ""
+    name = "I.Ferenc József"
+    desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+    picture = "Portrait_HUN_I_Ferenc_Jozsef"
     expire = 2000.09.10
     ideology = despotism
 }
 
+}   traits = {
+		#
+	}
 }
+
+	create_corps_commander = {
+  name = "Albrecht von Österreich-Teschen"
+  picture = "Portrait_HUN_Habsburg_Tescheni_Albert.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}}

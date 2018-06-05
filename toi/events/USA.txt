@@ -401,7 +401,7 @@ country_event = {
 					remove_idea = american_slavery_2
 					add_idea = american_slavery_3
 				}
-				hidden_effect = { USA = { country_event = { days = 105 id = acw.1 } } }
+				hidden_effect = { USA = { country_event = { days = 44 id = acw.1 } } }
 				hidden_effect = { news_event = { id = usa_news.3 } }
 				hidden_effect = { USA = { set_country_flag = USA_LincolnElected } }
 				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
@@ -420,7 +420,7 @@ country_event = {
 					remove_idea = american_slavery_2
 					add_idea = american_slavery_3
 				}
-				hidden_effect = { USA = { country_event = { days = 105 id = acw.0 } } }
+				hidden_effect = { USA = { country_event = { days = 44 id = acw.0 } } }
 				hidden_effect = { news_event = { id = usa_news.4 } }
 				hidden_effect = { USA = { set_country_flag = USA_BreckinridgeElected } }
 				hidden_effect = { USA = { clr_country_flag = USASlavery_Debate } }
@@ -451,7 +451,7 @@ country_event = {
 							has_country_flag = USA_Civil_War_Avoid_Attempt_7
 						}
 					}
-					hidden_effect = { USA = { country_event = { days = 105 id = acw.1 } } }
+					hidden_effect = { USA = { country_event = { days = 44 id = acw.1 } } }
 					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_1 }
 					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_2 }
 					hidden_effect = { clr_country_flag = USA_Civil_War_Avoid_Attempt_3 }
@@ -501,6 +501,8 @@ country_event = {
 				has_country_flag = USA_BreckinridgeElected
 			}
 			date > 1861.3.4
+			NOT = { has_country_flag = CheaterDefeater }
+			NOT = { has_country_flag = CheaterDefeated }
 		}
 
 		mean_time_to_happen = { days = 2 }
@@ -524,6 +526,8 @@ country_event = {
 			tag = USA
 			has_country_flag = USA_DouglasElected
 			date > 1861.3.4
+			NOT = { has_country_flag = CheaterDefeater }
+			NOT = { has_country_flag = CheaterDefeated }
 		}
 
 		mean_time_to_happen = { days = 2 }
@@ -1566,9 +1570,16 @@ country_event = {
 		desc = usa.44.d
 		picture = GFX_report_event_german_reichstag_gathering
 		
-		is_triggered_only = yes
+		trigger = {
+			TAG = USA
+			has_country_flag = USASoaring_Eagle
+		}
 
 		fire_only_once = yes
+
+		mean_time_to_happen = {
+        	days = 3
+    	}
 		
 		option = {
 			trigger = {

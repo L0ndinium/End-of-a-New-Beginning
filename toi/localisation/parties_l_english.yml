@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 
  traditional_conservatism:0 "Traditional Conservatist"
  traditional_conservatism_noun:0 "Traditional Conservatism"
@@ -55,6 +55,8 @@
  FRA_fundamentalism_party:0 "Eglise Catholique de France"
 
  RUS_autocracy_party:0 "House of Romanov"
+ RUS_fundamentalism_party:0 "The Russian Orthodox Church"
+ RUS_vanguard_communism_party:0 "Communist Party"
 
  ZUL_autocracy_party:0 "King's Faction"
  ZUL_anarchism_party:0 "iNkatha Yezwe"
@@ -82,7 +84,7 @@
  PRS_centrism_party:0 "Deutscher Nationalverein"
  PRS_traditional_conservatism_party:0 "Konservative Gruppen"
  PRS_radical_democracy_party:0 "Herrenhaus"
- PRS_autocracy_party:0 "Hohenzollern"
+ PRS_autocracy_party:0 "House of Hohenzollern"
  PRS_chauvinist_populism_party:0 "Deutsche Reformpartei"
  PRS_anarchism_party:0 "Freie Vereinigung deutscher Gewerkschaften"
  PRS_fundamentalism_party:0 "Kirche der Altpreußischen Union"
@@ -90,7 +92,7 @@
  BAV_social_egalitarianism_party:0 "BayernSPD"
  BAV_traditional_conservatism_party:0 "Bayerische Patriotenpartei"
  BAV_radical_democracy_party:0 "Kammer der Reichsräte"
- BAV_autocracy_party:0 "Wittelsbach"
+ BAV_autocracy_party:0 "House of Wittelsbach"
  BAV_fundamentalism_party:0 "Erzbistum München und Freising"
 
  DEN_vanguard_communism_party:0 "Danmarks Kommunistiske Parti"
@@ -99,12 +101,12 @@
  DEN_centrism_party:0 "De Nationalliberale"
  DEN_traditional_conservatism_party:0 "Højre"
  DEN_radical_democracy_party:0 "Landstinget"
- DEN_autocracy_party:0 "Oldenborg"
+ DEN_autocracy_party:0 "House of Oldenborg"
  DEN_chauvinist_populism_party:0 "Danmarks Nationalsocialistiske Arbejderparti"
  DEN_anarchism_party:0 "Dansk Samling"
  DEN_fundamentalism_party:0 "Den Danske Folkekirke"
 
- SAX_autocracy_party:0 "Haus Wettin"
+ SAX_autocracy_party:0 "House of Wettin"
  SAX_fundamentalism_party:0 "Evangelische Kirche der Kirchenprovinz Sachsen"
  SAX_social_egalitarianism_party:0 "Sächsische Volkspartei"
  SAX_radical_democracy_party:0 "Sächsischer Landtag"
@@ -126,7 +128,7 @@
  SPR_centrism_party:0 "Uniòn Liberal"
  SPR_radical_democracy_party:0 "Oligarquìa Española"
  SPR_traditional_conservatism_party:0 "Moderados"
- SPR_autocracy_party:0 "Dinastia Borbòn"
+ SPR_autocracy_party:0 "House of Borbon"
  SPR_chauvinist_populism_party:0 "Partido Radical"
  SPR_anarchism_party:0 "Comuniòn Tradicionalista"
  SPR_fundamentalism_party:0 "Iglesia Española Episcopal"
@@ -145,17 +147,21 @@
  PIE_collectivist_socialism_party:0 "Estrema Sinistra"
  PIE_social_egalitarianism_party:0 "Sinistra Storica"
  PIE_centrism_party:0 "Destra Storica"
- PIE_autocracy_party:0 "Dinastia Savoia"
+ PIE_autocracy_party:0 "House of Savoy"
 
- MOD_autocracy_party:0 "Casa d'Asburgo"
+ MOD_autocracy_party:0 "House of Habsburg"
+ MOD_centrism_party:0 "Destra Storica"
 
- PRM_autocracy_party:0 "Casa Borbone"
+ PRM_autocracy_party:0 "House of Habsburg"
+ PRM_centrism_party:0 "Destra Storica"
 
- TUS_autocracy_party:0 "Casa d'Asburgo"
+ TUS_autocracy_party:0 "House of Habsburg"
+ TUS_centrism_party:0 "Destra Storica"
 
- LVN_autocracy_party:0 "Casa d'Asburgo"
+ LVN_autocracy_party:0 "House of Habsburg"
 
- NSC_autocracy_party:0 "Casa Borbone"
+ NSC_autocracy_party:0 "House of Borbon"
+ NSC_centrism_party:0 "Destra Storica"
 
  PAP_fundamentalism_party:0 "Ecclesia Catholica Romana"
 
@@ -166,7 +172,7 @@
  BEL_radical_democracy_party:0 "Belgian Parliament"
  BEL_traditional_conservatism_party:0 "Catholic Parliament"
  BEL_autocracy_party:0 "Couronne de Belgique"
- BEL_chauvinist_populism_party:0 "Couronne de Belgique"
+ BEL_chauvinist_populism_party:0 "House of Saxe-Coburg and Gotha"
  BEL_anarchism_party:0 " Rex"
  BEL_fundamentalism_party:0 "Archidiocèse de Bruxelles"
 
@@ -187,9 +193,9 @@
  ENG_centrism_party:0 "Liberal Party"
  ENG_radical_democracy_party:0 "British Military Junta"
  ENG_traditional_conservatism_party:0 "Conservatism and Unionist Party"
- ENG_autocracy_party:0 "Royal Crown"
+ ENG_autocracy_party:0 "House of Hanover"
  ENG_chauvinist_populism_party:0 "New-Roundheads"
- ENG_anarchism_party:0 ""
+ ENG_anarchism_party:0 "Anarchist Party"
  ENG_fundamentalism_party:0 "Church of England"
 
  USA_vanguard_communism_party:0 "Radical Socialist Party"
@@ -250,13 +256,13 @@
  NFL_anarchism_party:0 ""
  NFL_fundamentalism_party:0 ""
 
- OFS_vanguard_communism_party:0 ""
- OFS_collectivist_socialism_party:0 ""
+ OFS_vanguard_communism_party:0 "Vanguard Branch of the Volksraad"
+ OFS_collectivist_socialism_party:0 "Socialist Branch of the Volksraad"
  OFS_social_egalitarianism_party:0 ""
  OFS_centrism_party:0 "Liberal Branch of the Volksraad"
  OFS_radical_democracy_party:0 ""
  OFS_traditional_conservatism_party:0 "Conservative Branch of the Volksraad"
- OFS_autocracy_party:0 ""
+ OFS_autocracy_party:0 "Royalist Branch of the Volksraad"
  OFS_chauvinist_populism_party:0 ""
  OFS_anarchism_party:0 ""
  OFS_fundamentalism_party:0 ""
@@ -271,3 +277,123 @@
  TRV_chauvinist_populism_party:0 ""
  TRV_anarchism_party:0 ""
  TRV_fundamentalism_party:0 ""
+
+ GRE_collectivist_socialism_party:0 "English Party"
+ GRE_social_egalitarianism_party:0 "National Committe"
+ GRE_centrism_party:0 "Nationalist Party"
+ GRE_autocracy_party:0 "House of Wittelsbach"
+
+ BRA_autocracy_party:0 "House of Braganza"
+ BRA_social_egalitarianism_party:0 "Partido Republicano Paulista"
+ BRA_centrism_party:0 "Partido Republicano Mineiro"
+ BRA_chauvinist_populism_party:0 "Military Junta"
+
+ URG_social_egalitarianism_party:0 "Partido Colorado"
+ URG_centrism_party:0 "Partido Nacional"
+ URG_chauvinist_populism_party:0 "Military Junta"
+
+ JAP_autocracy_party:0 "House of Japan"
+ JAP_chauvinist_populism_party:0 "Shogun Council"
+ JAP_social_egalitarianism_party:0 "Liberal Party"
+ JAP_centrism_party:0 "Taiseikai"
+
+ COL_social_egalitarianism_party:0 "Partido Liberal"
+ COL_centrism_party:0 "Partido Conservador"
+ COL_chauvinist_populism_party:0 "Military Junta"
+
+ MEX_social_egalitarianism_party:0 "Partido Liberal"
+ MEX_centrism_party:0 "Partido Conservador"
+ MEX_chauvinist_populism_party:0 "Military Junta"
+ MEX_autocracy_party:0 "House of Habsburg"
+
+ CHL_social_egalitarianism_party:0 "Partido Liberal"
+ CHL_centrism_party:0 "Partido Conservador"
+ CHL_chauvinist_populism_party:0 "Military Junta"
+
+ ARG_social_egalitarianism_party:0 "Partido Liberal"
+ ARG_centrism_party:0 "Partido Unitario"
+ ARG_chauvinist_populism_party:0 "Miltary Junta" 
+
+ BUE_social_egalitarianism_party:0 "Partido Liberal"
+ BUE_centrism_party:0 "Partido Federal"
+ BUE_chauvinist_populism_party:0 "Miltary Junta" 
+
+ BOV_social_egalitarianism_party:0 "Partido Democratico"
+ BOV_centrism_party:0 "Partido Conservador"
+ BOV_chauvinist_populism_party:0 "Miltary Junta"
+
+ COS_social_egalitarianism_party:0 "Partido Progressista"
+ COS_centrism_party:0 "Partido Costitucional"
+ COS_chauvinist_populism_party:0 "Miltary Junta"
+
+ AUS_autocracy_party:0 "House of Habsburg"
+
+ HAI_autocracy_party:0 "House of Haiti"
+
+ VEN_social_egalitarianism_party:0 "Partido Liberal"
+ VEN_centrism_party:0 "Partido Conservador"
+ VEN_chauvinist_populism_party:0 "Military"
+
+ ECU_social_egalitarianism_party:0 "Republican Union Party"
+ ECU_centrism_party:0 "Conservative Party"
+ ECU_chauvinist_populism_party:0 "Provissional Goverment"
+
+ HON_social_egalitarianism_party:0 "Partido Liberal"
+ HON_centrism_party:0 "La Democracia"
+ HON_chauvinist_populism_party:0 "Miltary Junta"
+
+ ELS_social_egalitarianism_party:0 "Partido Liberal"
+ ELS_centrism_party:0 "Partido Conservador"
+ ELS_chauvinist_populism_party:0 "Miltary Junta"
+
+ OTO_autocracy_party:0 "House of Osman"
+
+ GRE_autocracy_party:0 "House of Wittelsbach"
+
+ KOR_autocracy_party:0 "House of Joseon"
+
+ LUX_autocracy_party:0 "House of Nassau-Weilburg"
+
+ HOL_autocracy_party:0 "House of Orange-Nassau"
+ 
+ HAN_autocracy_party:0 "House of Hanover"
+
+ MCK_autocracy_party:0 "House of Mecklenburg-Strelitz"
+
+ PER_autocracy_party:0 "House of Qajar"
+
+ OMA_autocracy_party:0 "House of Al Said"
+
+ ETH_autocracy_party:0 "House of Solomon"
+
+ AFG_autocracy_party:0 "House of Barakzai"
+
+ CHI_autocracy_party:0 "House of Qing"
+
+ SIA_autocracy_party:0 "House of Chakri"
+
+ MRN_autocracy_party:0 "House of Hova"
+
+ VIN_autocracy_party:0 "House of Nguyen"
+
+ ACE_autocracy_party:0 "House of Aceh"
+
+ NEP_autocracy_party:0 "House of Shah"
+
+ BHU_autocracy_party:0 "House of Palden"
+
+ BRM_autocracy_party:0 "House of Konbaung"
+
+ MOR_autocracy_party:0 "House of Alaouite"
+
+ EGY_autocracy_party:0 "House of Muhammad Ali"
+
+ ROM_autocracy_party:0 "House of Cuza"
+
+ LBA_autocracy_party:0 "House of Osman"
+
+ MNT_autocracy_party:0 "House of Petrovic-Njegos"
+
+ FIN_autocracy_party:0 "House of Finnish Nobility"
+
+ KHI_autocracy_party:0 "House of Qungrat"

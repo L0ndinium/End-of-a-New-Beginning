@@ -203,10 +203,19 @@ country_event = {
     fire_only_once = yes
     
     trigger = {
-        TAG = USA
-        USA = { has_war_with = CSA }
-        has_global_flag = ACWAmerican_Civil_War
-        CSA = { surrender_progress > 0.8 }
+        tag = USA
+        OR = {
+            AND = {
+                TAG = USA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { surrender_progress > 0.8 }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { exists = no }
+            }
+        }
     }
 
     mean_time_to_happen = {
@@ -220,8 +229,22 @@ country_event = {
         name = acw.7.a
         custom_effect_tooltip = 06_ACW_tt
         hidden_effect = { white_peace = CSA }
-        hidden_effect = { white_peace = ENG }
-        hidden_effect = { white_peace = FRA }
+        hidden_effect = {
+            if = {
+                limit = {
+                    ENG = { has_war_together_with = CSA }
+                }
+                white_peace = ENG
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    FRA = { has_war_together_with = CSA }
+                }
+                white_peace = FRA
+            }
+        }
         hidden_effect = { annex_country { target = CSA } }
         set_global_flag = USAWins_Civil_War
         clr_global_flag = ACWAmerican_Civil_War
@@ -280,10 +303,19 @@ country_event = {
     fire_only_once = yes
     
     trigger = {
-        TAG = CSA
-        USA = { has_war_with = CSA }
-        has_global_flag = ACWAmerican_Civil_War
-        USA = { surrender_progress > 0.7 }
+        tag = CSA
+        OR = {
+            AND = {
+                TAG = CSA
+                USA = { has_war_with = CSA }
+                has_global_flag = ACWAmerican_Civil_War
+                USA = { surrender_progress > 0.7 }
+            }
+            AND = {
+                has_global_flag = ACWAmerican_Civil_War
+                CSA = { exists = yes }
+            }
+        }
     }
 
     mean_time_to_happen = {
@@ -307,6 +339,14 @@ country_event = {
         }
         hidden_effect = { news_event = { id = acw_news.7 } }
         name = acw.8.b
+        hidden_effect = {
+            if = {
+                limit = {
+                    USA = { exists = no }
+                }
+                release = USA
+            }
+        }
         custom_effect_tooltip = 07_ACW_tt
         remove_ideas = USA_Civil_War
         if = {
@@ -334,8 +374,22 @@ country_event = {
             remove_ideas = CSA_Civil_War_Conscription
         }
         hidden_effect = { white_peace = USA }
-        hidden_effect = { ENG = { white_peace = USA } }
-        hidden_effect = { FRA = { white_peace = USA } }
+        hidden_effect = {
+            if = {
+                limit = {
+                    ENG = { has_war_together_with = CSA }
+                }
+                USA = { white_peace = ENG }
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    FRA = { has_war_together_with = CSA }
+                }
+                USA = { white_peace = FRA }
+            }
+        }
         CSA = { transfer_state = 376 }
         CSA = { transfer_state = 377 }
         CSA = { transfer_state = 374 }
@@ -843,219 +897,169 @@ country_event = {
         USA = { clr_country_flag = USA_peace_1 }
     }
 }
-#Historical Battles#
-#First Battle of Bull Run
+#The Rimmy Event (cheating CSA) Calm
 country_event = {
     id = acw.18
     title = acw.18.t
     desc = acw.18.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    fire_only_once = yes
-    
     trigger = {
-        tag = USA
-        USA = { has_war_with = CSA }
-        date > 1861.7.21
-        NOT = { has_global_flag = ACW_First_Bull_Run }
+        tag = CSA
+        is_ai = no
+        USA = { is_ai = yes }
+        USA = { num_divisions < 26 }
+        USA = { num_divisions > 0 }
     }
 
     mean_time_to_happen = {
-        days = 2
+        days = 10
     }
+
+    fire_only_once = yes
     
     option = {
-        trigger = {
-            tag = USA
+        trigger = { 
+            USA = { num_divisions < 26 } 
+            USA = { num_divisions > 19 } 
         }
         name = acw.18.a
-        USA = { load_oob = USA_BULL_RUN }
-        CSA = { country_event = { id = acw.18 } }
+        hidden_effect = { USA = { load_oob = USA_Cheat_1 } }
     }
     option = {
-        trigger = {
-            tag = CSA
+        trigger = { 
+            USA = { num_divisions < 20 } 
+            USA = { num_divisions > 9 } 
         }
         name = acw.18.b
-        set_global_flag = ACW_First_Bull_Run
-        CSA = { load_oob = CSA_BULL_RUN }
-        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
+        hidden_effect = { USA = { load_oob = USA_Cheat_2 } }
+    }
+    option = {
+        trigger = { 
+            USA = { num_divisions < 10 } 
+            USA = { num_divisions > 0 } 
+        }
+        name = acw.18.c
+        hidden_effect = { USA = { load_oob = USA_Cheat_3 } }
     }
 }
-#Battle of Antietam
+#The Rimmy Event (cheating CSA) CHEATER ALERT SOUND THE ALARM
 country_event = {
     id = acw.19
     title = acw.19.t
     desc = acw.19.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    fire_only_once = yes
-
     trigger = {
-        tag = USA
-        USA = { has_war_with = CSA }
-        date > 1862.9.17
-        NOT = { has_global_flag = ACW_Antietam }
+        tag = CSA
+        is_ai = no
+        USA = { is_ai = yes }
+        USA = { num_divisions < 1 }
     }
 
     mean_time_to_happen = {
-        days = 2
+        days = 10
     }
+
+    fire_only_once = yes
     
     option = {
-        trigger = {
-            tag = USA
+        name = acw.19.a
+        hidden_effect = { USA = { load_oob = USA_CHEATER_DETECTED } }
+        USA = { set_country_flag = CheaterDefeater }
+        hidden_effect = { USA = { add_ideas = USA_cheater_defeater } }
+        hidden_effect = {
+            USA = {
+                create_country_leader = {
+                    name = "PresidentStorm"
+                    desc = "PresidentStorm_Cheater_Defeater_Desc"
+                    picture = "Portrait_USA_President_Storm.dds"
+                    expire = "2100.1.1"
+                    ideology = market_liberal
+                    traits = {
+                    }
+                }
+                set_politics = { ruling_party = centrism }
+            }
         }
-        name = acw.18.a
-        USA = { load_oob = USA_ANTIETAM }
-        CSA = { country_event = { id = acw.19 } }
-    }
-    option = {
-        trigger = {
-            tag = CSA
-        }
-        name = acw.18.b
-        set_global_flag = ACW_Antietam
-        CSA = { load_oob = CSA_ANTIETAM }
-        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
     }
 }
-#Battle of Gettysburg
+#End the Cheating Alarm
 country_event = {
     id = acw.20
     title = acw.20.t
     desc = acw.20.d
     picture = GFX_report_event_german_reichstag_gathering
     
-    fire_only_once = yes
-    
     trigger = {
         tag = USA
-        USA = { has_war_with = CSA }
-        date > 1863.7.1
-        NOT = { has_global_flag = ACW_Gettysburg }
+        has_country_flag = CheaterDefeater
+        CSA = { exists = no }
     }
 
     mean_time_to_happen = {
         days = 2
     }
+
+    fire_only_once = yes
     
     option = {
-        trigger = {
-            tag = USA
+        name = acw.20.a
+        hidden_effect = { delete_unit_template_and_units = { division_template = "Cheater Defeater" } }
+        set_country_flag = DefeatedCheater
+        hidden_effect = { USA = { remove_ideas = USA_cheater_defeater } }
+        hidden_effect = { USA = { add_ideas = USA_cheater_defeated } }
+        if = {
+            limit = {
+                USA = { has_country_flag = USA_DouglasElected }
+            }
+            create_country_leader = {
+                    name = "Stephen A. Douglas"
+                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                    picture = "Portrait_USA_Stephen_Douglas.dds"
+                    expire = "1947.1.1"
+                    ideology = conserv_liberal
+                }
         }
-        name = acw.18.a
-        USA = { load_oob = USA_GETTYSBURG }
-        CSA = { country_event = { id = acw.20 } }
-    }
-    option = {
-        trigger = {
-            tag = CSA
+        if = {
+            limit = {
+                USA = { NOT = { has_country_flag = USA_DouglasElected } }
+            }
+            create_country_leader = {
+                    name = "Abraham Lincoln"
+                    desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+                    picture = "Portrait_USA_Abraham_Lincoln.dds"
+                    expire = "1947.1.1"
+                    ideology = conserv_liberal
+                }
         }
-        name = acw.18.b
-        set_global_flag = ACW_Gettysburg
-        CSA = { load_oob = CSA_GETTYSBURG }
-        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
     }
 }
-#Battle of Chancellorsville
+#Equipment for the CSA
 country_event = {
     id = acw.21
     title = acw.21.t
     desc = acw.21.d
     picture = GFX_report_event_german_reichstag_gathering
     
+    trigger = {
+        tag = CSA
+        has_war_with = USA
+    }
+
     fire_only_once = yes
 
-    trigger = {
-        tag = USA
-        USA = { has_war_with = CSA }
-        date > 1863.4.30
-        NOT = { has_global_flag = ACW_Chancellorsville }
+    mean_time_to_happen = {
+        days = 5
     }
 
-    mean_time_to_happen = {
-        days = 2
-    }
-    
-    option = {
-        trigger = {
-            tag = USA
-        }
-        name = acw.18.a
-        USA = { load_oob = USA_CHANCELLORSVILLE }
-        CSA = { country_event = { id = acw.21 } }
-    }
-    option = {
-        trigger = {
-            tag = CSA
-        }
-        name = acw.18.b
-        set_global_flag = ACW_Chancellorsville
-        CSA = { load_oob = CSA_CHANCELLORSVILLE }
-        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
-    }
-}
-#Second Battle of Bull Run
-country_event = {
-    id = acw.22
-    title = acw.22.t
-    desc = acw.22.d
-    picture = GFX_report_event_german_reichstag_gathering
-    
     fire_only_once = yes
     
-    trigger = {
-        tag = USA
-        USA = { has_war_with = CSA }
-        date > 1862.8.28
-        NOT = { has_global_flag = ACW_Second_Bull_Run }
-    }
-
-    mean_time_to_happen = {
-        days = 2
-    }
-    
     option = {
-        trigger = {
-            tag = USA
-        }
-        name = acw.18.a
-        USA = { load_oob = USA_BULL_RUN }
-        CSA = { country_event = { id = acw.18 } }
-    }
-    option = {
-        trigger = {
-            tag = CSA
-        }
-        name = acw.18.b
-        set_global_flag = ACW_Second_Bull_Run
-        CSA = { load_oob = CSA_BULL_RUN }
-        hidden_effect = { USA = { country_event = { days = 40 id = acw.23 } } }
-    }
-}
-country_event = {
-    id = acw.23
-    title = acw.23.t
-    desc = acw.23.d
-    picture = GFX_report_event_german_reichstag_gathering
-    
-    is_triggered_only = yes
-    
-    option = {
-        name = acw.23.a
-        trigger = {
-            tag = USA
-        }
-        delete_unit_template_and_units = { division_template = "Union Battle Regiment" }
-        CSA = { country_event = { id = acw.23 } }
-    }
-    option = {
-        name = acw.23.b
-        trigger = {
-            tag = CSA
-        }
-        delete_unit_template_and_units = { division_template = "Confederate Battle Regimental" }
+        name = acw.21.a
+        add_equipment_to_stockpile = { type = rifle_equipment_0 amount = 4000 }
+        add_equipment_to_stockpile = { type = uniform_equipment_1 amount = 4000 }
+        add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 2000 }
     }
 }
 #Observers
@@ -2937,6 +2941,7 @@ country_event = {
     option = {
         name = acw.102.a
         USA = { add_war_support = -0.1 }
+        USA = { add_popularity = { ideology = traditional_conservatism popularity = 0.025 } }
     }
     option = {
         name = acw.102.b
@@ -2946,6 +2951,7 @@ country_event = {
         USA = { add_war_support = -0.15 }
         USA = { add_stability = -0.1 }
         clr_global_flag = USA_ACW_capital_captured
+        USA = { add_popularity = { ideology = traditional_conservatism popularity = 0.05 } }
     }
 }
 country_event = {

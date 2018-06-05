@@ -1,4 +1,4 @@
-add_namespace = lnl
+﻿add_namespace = lnl
 
 country_event = {
     id = lnl.1

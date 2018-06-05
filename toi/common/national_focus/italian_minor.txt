@@ -33,6 +33,7 @@ focus_tree = {
 		}
 		bypass = {
 			owns_state = 161
+			owns_state = 157
 			PAP = {
 				exists = no
 				NOT = {

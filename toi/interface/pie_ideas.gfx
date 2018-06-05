@@ -4,5 +4,14 @@ spriteTypes = {
 		name = "GFX_idea_PIE_VictorEmmanuel2"
 		texturefile = "gfx/interface/ideas/PIE/PIE_victor_emmanuel_2.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PIE_National_Society"
+		texturefile = "gfx/interface/ideas/PIE/PIE_victor_emmanuel_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LVN_National_Society"
+		texturefile = "gfx/interface/ideas/PIE/LVN_National_Society.dds"
+	}
+
 	
 }

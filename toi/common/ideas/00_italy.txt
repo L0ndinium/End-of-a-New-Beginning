@@ -71,6 +71,29 @@ ideas = {
 				
 			}
 		}
+	country = {
+		PIE_National_Society = {
+
+			picture = GFX_idea_PIE_National_Society
+			
+			modifier = {
+ 				political_power_gain = 0.5
+				
+			}
+		}	
+
+	}
+	country = {
+		LVN_National_Society = {
+
+			picture = GFX_idea_LVN_National_Society
+			
+			modifier = {
+ 				political_power_gain = 0.5
+				
+			}
+		}	
+
 	}
 
 

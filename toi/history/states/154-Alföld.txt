@@ -1,0 +1,25 @@
+
+state = {
+	id=154
+	name="STATE_154"
+	manpower = 1935383
+
+	state_category = city
+
+	history = {
+		owner = AUS
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			cotton_farm=1
+		}
+		victory_points = {
+			11659 1
+		}
+		add_core_of = AUS
+ add_core_of = HUN	}
+
+	provinces={
+		679 699 730 3730 6670 6700 6735 9656 9706 11625 11644 11646 11659
+	}
+}

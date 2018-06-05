@@ -1,4 +1,4 @@
-internal_politics_eoanb = {
+﻿internal_politics_eoanb = {
 	
 	eoanb_situations_RUS_constitution = {
 
@@ -59,7 +59,7 @@ internal_politics_eoanb = {
 		}	
 		
 		visible = {
-			set_country_flag = eoanb_flag_alexander_ii_dead
+			has_country_flag = eoanb_flag_alexander_ii_dead
 		}
 		
 		fire_only_once = yes

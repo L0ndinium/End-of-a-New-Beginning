@@ -1,4 +1,4 @@
-add_namespace = asat
+﻿add_namespace = asat
 
 country_event = {
     id = asat.1

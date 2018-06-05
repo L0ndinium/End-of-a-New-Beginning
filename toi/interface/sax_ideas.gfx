@@ -1,0 +1,47 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_SAX_advisor_gustav_fechner"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_gustav_fechner.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SAX_advisor_richard_von_riesen"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_richard_von_riesen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideaSAX_advisor_friedrich_ferdinand_von_beust"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_friedrich_ferdinand_von_beust.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SAX_advisor_bernhard_hirschel"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_bernhard_hirschel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SAX_advisor_otto_bruckwald"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_otto_bruckwald.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SAX_advisor_friedrich_henning_von_arnim"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_friedrich_henning_von_arnim.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SAX_advisor_karl_gustav_brescius"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_karl_gustav_brescius.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SAX_advisor_claus_koepcke"
+		texturefile = "gfx/interface/ideas/SAX/SAX_advisor_claus_koepcke.dds"
+	}
+}
+
+
+
+
+
+
+

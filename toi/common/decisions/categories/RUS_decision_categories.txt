@@ -1,4 +1,4 @@
-RUS_constitution_creation = {
+﻿RUS_constitution_creation = {
 	icon = generic_political_actions
 	
 }

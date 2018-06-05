@@ -1,4 +1,4 @@
-add_namespace = alII
+﻿add_namespace = alII
 
 country_event = {
     id = alII.1

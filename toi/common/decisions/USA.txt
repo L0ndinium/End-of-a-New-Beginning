@@ -455,6 +455,7 @@ USA_american_civil_war_descision = {
 		}
 
 		visible = {
+			tag = USA
 			has_global_flag = ACWAmerican_Civil_War
 			has_war_with = CSA
 		}
@@ -509,6 +510,55 @@ USA_american_civil_war_descision = {
                 factor = 0
                 CSA = { surrender_progress > 0.1 }
             }
+		}
+	}
+#Confiscate Weapons
+	eoanb_descision_USA_ACW_confiscate = {
+
+		icon = generic_nationalism
+
+		available = {
+			has_global_flag = ACWAmerican_Civil_War
+			OR = {
+				AND = {
+					tag = CSA
+					has_war_with = USA
+				}
+				AND = {
+					tag = USA
+					has_war_with = CSA
+				}
+			}
+			date < 1864.1.1
+		}
+
+		visible = {
+			has_global_flag = ACWAmerican_Civil_War
+			OR = {
+				AND = {
+					tag = CSA
+					has_war_with = USA
+				}
+				AND = {
+					tag = USA
+					has_war_with = CSA
+				}
+			}
+		}
+
+		cost = 75
+
+		days_re_enable = 5
+
+		complete_effect = {
+			add_stability = -0.1
+			add_equipment_to_stockpile = { type = rifle_equipment_1 amount = 4000 }
+            add_equipment_to_stockpile = { type = uniform_equipment_1 amount = 4000 }
+            add_equipment_to_stockpile = { type = cavalry_equipment_0 amount = 1000 }
+		}
+
+		ai_will_do = {
+			base = 40
 		}
 	}
 }
