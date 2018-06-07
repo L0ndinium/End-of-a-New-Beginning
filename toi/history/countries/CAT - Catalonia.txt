@@ -1,0 +1,112 @@
+1857.5.11 = {
+oob = "CAT_1857"
+
+set_politics = {
+    parties = {
+      centrism = {
+        popularity = 10
+      }
+      traditional_conservatism = {
+        popularity = 60
+      }
+      social_egalitarianism = {
+        popularity = 25
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 0
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      anarchism = {
+        popularity = 0
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+
+  ruling_party = traditional_conservatism
+}
+
+set_technology = {
+  infantry_weapons = 1
+  basic_cavalry = 1
+  gw_artillery = 1
+  vic_army_cloth = 1
+}
+
+create_country_leader = {
+  name = "Nicolau Bello"
+  desc = "#"
+  picture = "Portrait_Europe_generic_leader_politician_1"
+  expire = "1900.1.1"
+  ideology = conserv
+  traits = {
+
+  }
+}
+
+create_country_leader = {
+  name = "Tomao Pique"
+  desc = "#"
+  picture = "Portrait_Europe_generic_leader_politician_1"
+  expire = "1900.1.1"
+  ideology = conserv_liberal
+  traits = {
+
+  }
+}
+
+create_country_leader = {
+  name = "Francesc Lassalle"
+  desc = "#"
+  picture = "Portrait_Europe_generic_leader_politician_2"
+  expire = "1900.1.1"
+  ideology = liberal_social
+  traits = {
+
+  }
+}
+
+create_country_leader = {
+  name = "Lluis Selva"
+  desc = "#"
+  picture = "Portrait_Europe_generic_leader_politician_1"
+  expire = "1900.1.1"
+  ideology = sydicalism
+  traits = {
+
+  }
+}
+
+create_country_leader = {
+  name = "Carles Saria"
+  desc = "#"
+  picture = "Portrait_Europe_generic_leader_politician_1"
+  expire = "1900.1.1"
+  ideology = marxism
+  traits = {
+
+  }
+}
+
+create_country_leader = {
+  name = "Parlament de Catalunya"
+  desc = "#"
+  picture = "Portrait_PRS_Herrenhaus.dds"
+  expire = "1900.1.1"
+  ideology = parlia_repub
+  traits = {
+
+  }
+}
