@@ -721,3 +721,15 @@ SNM = {
     color = rgb { 143 209 255 }
 	color_ui = rgb { 143 209 255 }
 }
+GAL = {
+	color = rgb { 5 120 220 }
+	color_ui = rgb { 5 50 220 }	
+}
+BAS = {
+	color = rgb { 45 156 10 }
+	color_ui = rgb { 10 160 30 }
+}
+CAT = {
+	color = rgb { 250 105 10 }
+	color_ui = rgb { 230 70 5 }
+}
