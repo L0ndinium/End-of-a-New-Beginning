@@ -291,7 +291,7 @@ ideologies = {
 			"FACTION_NAME_DESPAUTO_5"
 		}
 
-		color = { 118 85 130 }
+		color = { 120 81 169 }
 
 
 		#war_impact_on_world_tension = 0.25		#no major danger
@@ -520,7 +520,7 @@ ideologies = {
 			"FACTION_NAME_THEO_5"
 		}
 
-		color = { 175 166 117 }
+		color = { 0 144 0 }
 
 		war_impact_on_world_tension = 0.8			#religion!
 		faction_impact_on_world_tension = 0.8
