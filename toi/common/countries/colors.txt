@@ -733,3 +733,11 @@ CAT = {
 	color = rgb { 250 105 10 }
 	color_ui = rgb { 230 70 5 }
 }
+SAT = {
+	color = rgb { 115 250 80 }
+	color_ui = rgb { 115 250 80 }
+}
+TOS = {
+	color = rgb { 255 50 50 }
+	color_ui = rgb { 255 50 50 }
+}
