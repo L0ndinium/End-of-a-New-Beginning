@@ -78,7 +78,7 @@ ideologies = {
 			"FACTION_NAME_TRADCON_5"
 		}
 
-		color = { 64 89 137 }
+		color = { 0 80 168 }
 
 		war_impact_on_world_tension = 0.25		#no major danger
 		faction_impact_on_world_tension = 0.1
