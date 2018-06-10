@@ -8,6 +8,7 @@ state=
 	{
 		owner = JAP
 		add_core_of = JAP
+		add_core_of = TOS
 		buildings = {
 			infrastructure = 2
 			cotton_farm = 1
