@@ -741,3 +741,7 @@ TOS = {
 	color = rgb { 255 50 50 }
 	color_ui = rgb { 255 50 50 }
 }
+NOA = {
+	color = rgb { 170 250 200 }
+	color_ui = rgb { 170 250 200 }
+}
