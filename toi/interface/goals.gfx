@@ -2418,4 +2418,22 @@ spriteTypes = {
 		name = "GFX_focus_theatre_production"
 		texturefile = "gfx/interface/goals/austria/focus_theatre_production.dds"
 		}
+
+		#JAPAN
+	SpriteType = {
+		name = "GFX_focus_cotton"
+		texturefile = "gfx/interface/goals/japan/focus_cotton.dds"
+		}
+	SpriteType = {
+		name = "GFX_focus_ashiro_iron"
+		texturefile = "gfx/interface/goals/japan/focus_ashiro_iron.dds"
+		}
+	SpriteType = {
+		name = "GFX_focus_rice_farm_expation"
+		texturefile = "gfx/interface/goals/japan/focus_rice_farm_expation.dds"
+		}
+	SpriteType = {
+		name = "GFX_focus_rangaku"
+		texturefile = "gfx/interface/goals/japan/focus_rangaku.dds"
+		}
 }
