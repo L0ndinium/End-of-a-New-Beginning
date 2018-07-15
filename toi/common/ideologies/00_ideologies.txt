@@ -540,7 +540,10 @@ ideologies = {
 	fundamentalism = {
 
 		types = {
-
+			shogunate = {
+			
+			}
+			
 			christian = {
 
 			}
