@@ -23,7 +23,7 @@
 
     stagnation_growth
     border_control
-	limited_conscription
+    limited_conscription
     slavery
     absolutism
 
@@ -32,7 +32,7 @@
 
     privileged_education
     state_religion
-	religion_shinto
+    religion_buddhist
          #NATIONAL SPIRITS
 	
   }
@@ -61,17 +61,17 @@
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 70
+        popularity = 0
       }
       autocracy = {
         popularity = 30
       }
       fundamentalism = {
-        popularity = 0
+        popularity = 70
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = fundamentalism
   }
 
   set_technology = {
@@ -104,7 +104,7 @@ create_country_leader = {
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_JAP_Tokugawa_Iesada.dds"
     expire = 1900.1.1
-    ideology = military_goverment
+    ideology = shogunate
 }
 
 create_corps_commander = {
