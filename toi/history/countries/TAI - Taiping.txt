@@ -40,7 +40,12 @@
     privileged_education
     theocratic_state
 	religion_catholic
-         #NATIONAL SPIRITS
+    #NATIONAL SPIRITS
+	
+	TAI_failed_expeditions
+	TAI_tianjing_incident
+	TAI_mismanaged_administration
+	TAI_untrained_army
     
   }
 
