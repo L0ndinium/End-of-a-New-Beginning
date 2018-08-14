@@ -1,0 +1,14 @@
+opinion_modifiers = {
+
+	TAI_invites_to_faction = {
+		value = 30
+	}
+	
+	TAI_western_tolerance = {
+		value = 10
+	}
+	
+	TAI_reaches_out = {
+		value = 20
+	}
+}

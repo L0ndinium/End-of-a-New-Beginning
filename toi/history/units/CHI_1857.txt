@@ -211,4 +211,1846 @@ units = {
 			division_template = "Chinese Line Infantry"
 			start_experience_factor = 0.1
 		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Grenadiers"
+			location = 10068
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "3rd Chinese Cavalry"
+			location = 6999
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "10th Chinese Infantry"
+			location = 4925
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "11th Chinese Infantry"
+			location = 1070
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "12th Chinese Infantry"
+			location = 7186
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Grenadiers"
+			location = 4504
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "4th Chinese Cavalry"
+			location = 7418
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "13th Chinese Infantry"
+			location = 8049
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "14th Chinese Infantry"
+			location = 1069
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "15th Chinese Infantry"
+			location = 1150
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "16th Chinese Infantry"
+			location = 2010
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "17th Chinese Infantry"
+			location = 8029
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "18th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "19th Chinese Infantry"
+			location = 4572
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "20th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "21th Chinese Infantry"
+			location = 9958
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "22th Chinese Infantry"
+			location = 7137
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Grenadiers"
+			location = 7014
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "1st Chinese Cavalry"
+			location = 7014
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "4th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "5th Chinese Infantry"
+			location = 7014
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "6th Chinese Infantry"
+			location = 1047
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Grenadiers"
+			location = 1047
+			division_template = "Chinese Grenadiers"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "2nd Chinese Cavalry"
+			location = 10000
+			division_template = "Chinese Cavalry"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "7th Chinese Infantry"
+			location = 10000
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "8th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "9th Chinese Infantry"
+			location = 9843
+			division_template = "Chinese Line Infantry"
+			start_experience_factor = 0.1
+		}
 }

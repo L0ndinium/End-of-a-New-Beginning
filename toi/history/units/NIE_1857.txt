@@ -43,4 +43,292 @@ division = {
       division_template = "Nien Rebel Line Infantry"
       start_experience_factor = 0.08
       }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
+division= {
+      name = "1st Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "2nd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "3rd Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.05
+    }
+division = {
+    name = "4th Rebellion Division"
+      location = 7129
+      division_template = "Nien Rebel Line Infantry"
+      start_experience_factor = 0.08
+      }
 }
