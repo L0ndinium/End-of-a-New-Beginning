@@ -1,0 +1,199 @@
+ideas = {
+	country = {
+		TAI_defend_tianjing = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				army_defence_factor = 0.25
+			}
+		}
+		
+		TAI_on_the_offensive = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				planning_speed = 0.15
+			}
+		}
+		
+		TAI_striking_south = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+		
+		TAI_western_expedition = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+		
+		TAI_march_toward_beijing = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+		
+		TAI_guangxi_workers = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		TAI_failed_expeditions = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_prc_the_long_march
+			
+			modifier = {
+				war_support_factor = -0.25
+				land_reinforce_rate = -0.1
+			}
+		}
+		
+		TAI_tianjing_incident = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_prc_the_long_march
+			
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.25
+			}
+		}
+		
+		TAI_mismanaged_administration = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_prc_the_long_march
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.10
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.25
+			}
+		}
+		
+		TAI_untrained_army = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_prc_the_long_march
+			
+			modifier = {
+				army_org = -10
+				army_defence_factor = -0.05
+				training_time_factor = -0.25
+			}
+		}
+		
+		TAI_blackmarketeers = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+	}
+	political_advisor{
+		TAI_advisor_hong_rengan = {
+			allowed = {
+				original_tag = TAI
+			}
+			
+			available = {
+				has_completed_focus = riseofhongrengan
+			}
+
+			traits = { 
+				efficient_administrator
+				neutral_party
+			}
+		}
+	}
+	army_chief = {
+		TAI_Li_Xiucheng = {
+			allowed = {
+				original_tag = TAI
+			}
+			
+			available = {
+				has_completed_focus = searchforanewmilitaryadvisor
+			}
+			
+			cost = 50
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
