@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		PTH_fight_for_freedom = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				conscription = 0.1
+			}
+		}
+	}
+}

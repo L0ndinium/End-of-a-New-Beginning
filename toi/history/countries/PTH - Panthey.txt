@@ -39,7 +39,9 @@
     privileged_education
     state_religion
 	religion_confucian
-         #NATIONAL SPIRITS
+    #NATIONAL SPIRITS
+	
+	PTH_fight_for_freedom
 	
   }
 

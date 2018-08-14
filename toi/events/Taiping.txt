@@ -1,0 +1,296 @@
+add_namespace = taiping 
+
+# Invite Panthay
+country_event = {
+	id = taiping.1
+	title = taiping.1.t
+	desc = taiping.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.1.a
+		TAI = { country_event = { id = taiping.7} }
+	}
+	
+	option = {
+		name = taiping.1.b
+		ai_chance = { factor = 0 }
+		TAI = { country_event = { id = taiping.8} }
+	}
+}
+
+# Panthay Accepts
+country_event = {
+	id = taiping.7
+	title = taiping.7.t
+	desc = taiping.7.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.7.a
+		add_to_faction = PTH
+		PTH = {
+			add_ai_strategy = {
+				type = alliance
+				id = "TAI"
+				value = 200
+			}
+		}
+	}
+}
+
+# Panthay Denies
+country_event = {
+	id = taiping.8
+	title = taiping.8.t
+	desc = taiping.8.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.8.a
+	}
+}
+
+# Invite Nian
+country_event = {
+	id = taiping.2
+	title = taiping.2.t
+	desc = taiping.2.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.2.a
+		TAI = { country_event = { id = taiping.9} }
+	}
+	
+	option = {
+		name = taiping.2.b
+		ai_chance = { factor = 0 }
+		TAI = { country_event = { id = taiping.10} }
+	}
+}
+
+# Nian Accepts
+country_event = {
+	id = taiping.9
+	title = taiping.9.t
+	desc = taiping.9.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.9.a
+		add_to_faction = NIE
+		NIE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "TAI"
+				value = 200
+			}
+		}
+	}
+}
+
+# Nian Denies
+country_event = {
+	id = taiping.10
+	title = taiping.10.t
+	desc = taiping.10.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.10.a
+	}
+}
+
+# Invite Dungan
+country_event = {
+	id = taiping.3
+	title = taiping.3.t
+	desc = taiping.3.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.3.a
+		TAI = { country_event = { id = taiping.11} }
+	}
+	
+	option = {
+		name = taiping.3.b
+		ai_chance = { factor = 0 }
+		TAI = { country_event = { id = taiping.12} }
+	}
+}
+
+# Dungan Accepts
+country_event = {
+	id = taiping.11
+	title = taiping.11.t
+	desc = taiping.11.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.11.a
+		add_to_faction = FIX_THIS
+		FIX_THIS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "TAI"
+				value = 200
+			}
+		}
+	}
+}
+
+# Dungan Denies
+country_event = {
+	id = taiping.12
+	title = taiping.12.t
+	desc = taiping.12.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.12.a
+	}
+}
+
+# Invite Miao
+country_event = {
+	id = taiping.6
+	title = taiping.6.t
+	desc = taiping.6.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.6.a
+		TAI = { country_event = { id = taiping.13} }
+	}
+	
+	option = {
+		name = taiping.6.b
+		ai_chance = { factor = 0 }
+		TAI = { country_event = { id = taiping.14} }
+	}
+}
+
+# Miao Accepts
+country_event = {
+	id = taiping.13
+	title = taiping.13.t
+	desc = taiping.13.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.13.a
+		add_to_faction = FIX_THIS
+		FIX_THIS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "TAI"
+				value = 200
+			}
+		}
+	}
+}
+
+# Miao Denies
+country_event = {
+	id = taiping.14
+	title = taiping.14.t
+	desc = taiping.14.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.14.a
+	}
+}
+
+# Modify Shi Dakai
+country_event = {
+	id = taiping.5
+	title = taiping.5.t
+	desc = taiping.5.d
+	picture = GFX_FIX_THIS
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.5.a
+		remove_ideas = CHI_dakai_offensive_1
+		add_ideas = CHI_dakai_offensive_2
+	}
+}
+
+# Modify Shi Dakai
+country_event = {
+	id = taiping.4
+	title = taiping.4.t
+	desc = taiping.4.d
+	picture = GFX_FIX_THIS
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = taiping.4.a
+		trigger = {
+			tag = ENG
+		}
+		set_global_flag = britain_aids_TAI
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = taiping.4.b
+		trigger = {
+			tag = FRA
+		}
+		set_global_flag = france_aids_TAI
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = taiping.4.c
+		trigger = {
+			tag = USA
+		}
+		set_global_flag = america_aids_TAI
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = taiping.4.d
+		trigger = {
+			tag = RUS
+		}
+		set_global_flag = russia_aids_TAI
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = taiping.4.e
+	}
+}
+			

@@ -34,7 +34,9 @@
     privileged_education
     state_religion
 	religion_confucian
-         #NATIONAL SPIRITS
+    #NATIONAL SPIRITS
+	
+	CHI_dakai_offensive_1
 	
   }
 

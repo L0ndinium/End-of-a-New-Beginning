@@ -1,0 +1,1630 @@
+focus_tree = {
+id = 'taiping'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = TAI
+}
+}
+default = no
+#Custom focuses start here
+#Focus for The Heavenly Kingdom 
+		focus = { 
+		id = theheavenlykingdom 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =18 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = 100 
+ } 
+ }#Focus for Bolster our Army 
+		focus = { 
+		id = bolsterourarmy 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =33 
+ y =0 
+ mutually_exclusive = { } 
+ prerequisite = { } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ army_experience= 20 
+ add_manpower = 50000 
+ } 
+ }#Focus for The War with Qing 
+		focus = { 
+		id = thewarwithqing 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =9 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = theheavenlykingdom} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = 50 
+ army_experience= 10 
+ } 
+ }#Focus for Internal Administration 
+		focus = { 
+		id = internaladministration 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =18 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = theheavenlykingdom} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = 50 
+ add_stability = 0.05
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = industrial_complex
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = industrial_complex
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = farm
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = farm
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = farm
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = farm
+		level = 1
+		instant_build = yes
+	}
+ } 
+ } 
+ }#Focus for Reach out to Fellow Uprisings 
+		focus = { 
+		id = reachouttofellowuprisings 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =23 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = theheavenlykingdom} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_opinion_modifier= {  
+ target = PTH  
+ modifier = TAI_reaches_out  
+ } 
+ add_opinion_modifier= {  
+ target = NIE  
+ modifier = TAI_reaches_out  
+ } 
+ add_opinion_modifier= {  
+ target = FIX_THIS  
+ modifier = TAI_reaches_out  
+ } 
+ add_opinion_modifier= {  
+ target = FIX_THIS  
+ modifier = TAI_reaches_out  
+ } 
+ } 
+ }#Focus for Learn from the Expeditions 
+		focus = { 
+		id = learnfromtheexpeditions 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =29 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = bolsterourarmy} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = land_doctrine  
+ }
+ remove_ideas = TAI_failed_expeditions 
+ } 
+ }#Focus for Equipment Effort 
+		focus = { 
+		id = equipmenteffort 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =33 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = bolsterourarmy} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = infantry_weapons  
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ } 
+ } 
+ }#Focus for Form a Navy 
+		focus = { 
+		id = formanavy 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =36 
+ y =1 
+ mutually_exclusive = { } 
+ prerequisite = { focus = bolsterourarmy} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = -75 
+ navy_experience = 10
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = dockyard
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = dockyard
+		level = 1
+		instant_build = yes
+	}
+ } 
+ } 
+ }#Focus for Search for a New Military Advisor 
+		focus = { 
+		id = searchforanewmilitaryadvisor 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =9 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = thewarwithqing} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ create_corps_commander= {  
+ name = "Li Xiucheng"  
+ gfx = "Portrait_TAI_Hong_Xiuquan"  
+ traits = { 
+ }  
+ skill = 3 
+ attack_skill = 1 
+ defense_skill = 1 
+ planning_skill = 1	 
+ logistics_skill = 1  
+ } 
+ } 
+ }#Focus for Appoint New Princes 
+		focus = { 
+		id = appointnewprinces 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =18 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = internaladministration} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = -50 
+ add_stability = 0.15 
+ } 
+ }#Focus for Form the Chinese United Front 
+		focus = { 
+		id = formthechineseunitedfront 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =23 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reachouttofellowuprisings} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ create_faction= "chinese_united_front" 
+ } 
+ }#Focus for Train our Army 
+		focus = { 
+		id = trainourarmy 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =28 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = learnfromtheexpeditions} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = -15 
+ army_experience= 50
+ remove_ideas = TAI_untrained_army 
+ } 
+ }#Focus for Rally Local Support 
+		focus = { 
+		id = rallylocalsupport 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =30 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = learnfromtheexpeditions} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_war_support = 0.15 
+ add_political_power = 75 
+ } 
+ }#Focus for Approach Western Blackmarketeers 
+		focus = { 
+		id = approachwesternblackmarketeers 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =33 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = equipmenteffort} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_ideas = TAI_blackmarketeers 
+ } 
+ }#Focus for Requisition Junks 
+		focus = { 
+		id = requisitionjunks 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =36 
+ y =2 
+ mutually_exclusive = { } 
+ prerequisite = { focus = formanavy} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_equipment_to_stockpile = { 
+  type = convoy_1  
+ amount = 50  
+ producer = TAI  
+ } 
+ } 
+ }#Focus for Go on the Offensive 
+		focus = { 
+		id = goontheoffensive 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =5 
+ y =3 
+ mutually_exclusive = { focus = defendtianjing} 
+ prerequisite = { focus = searchforanewmilitaryadvisor} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_war_support = 0.20 
+ add_political_power = -75
+ add_ideas = TAI_on_the_offensive 
+ } 
+ }#Focus for Defend Tianjing 
+		focus = { 
+		id = defendtianjing 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =13 
+ y =3 
+ mutually_exclusive = { focus = goontheoffensive} 
+ prerequisite = { focus = searchforanewmilitaryadvisor} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_war_support = 0.10 
+ add_political_power = 75 
+ add_ideas = TAI_defend_tianjing
+ } 
+ }#Focus for Recover from the Tianjing Incident 
+		focus = { 
+		id = recoverfromthetianjingincident 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =18 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = appointnewprinces} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = -50
+ remove_ideas = TAI_tianjing_incident 
+ } 
+ }#Focus for Invite the Panthay 
+		focus = { 
+		id = invitethepanthay 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =20 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = formthechineseunitedfront} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_opinion_modifier= {  
+ target = PTH  
+ modifier = TAI_invites_to_faction  
+ } 
+ PTH = { country_event = { id = taiping.1 } }
+ } 
+ }#Focus for Invite the Nian 
+		focus = { 
+		id = invitethenian 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =22 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = formthechineseunitedfront} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ NIE = { country_event = { id = taiping.2 } } 
+ add_opinion_modifier= {  
+ target = NIE  
+ modifier = TAI_invites_to_faction  
+ } 
+ } 
+ }#Focus for Invite the Dungan 
+		focus = { 
+		id = invitethedungan 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =24 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = formthechineseunitedfront} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_opinion_modifier= {  
+ target = FIX_THIS  
+ modifier = TAI_invites_to_faction  
+ } 
+ FIX_THIS = { country_event = { id = taiping.3 } } 
+ } 
+ }#Focus for Invite the Miao 
+		focus = { 
+		id = invitethemiao 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =26 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = formthechineseunitedfront} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ FIX_THIS = { country_event = { id = taiping.6 } } 
+ add_opinion_modifier= {  
+ target = FIX_THIS  
+ modifier = TAI_invites_to_faction  
+ } 
+ } 
+ }#Focus for Revise our Tactics 
+		focus = { 
+		id = reviseourtactics 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =28 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = trainourarmy} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_equipment_to_stockpile = { 
+  type = infantry_equipment_rifle_0  
+ amount = 1000  
+ producer = TAI  
+ } 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = infantry_weapons  
+ } 
+ } 
+ }#Focus for Expand our Army 
+		focus = { 
+		id = expandourarmy 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =30 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = rallylocalsupport} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_manpower = 100000 
+ } 
+ }#Focus for Western Infantry Weapons 
+		focus = { 
+		id = westerninfantryweapons 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =32 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = approachwesternblackmarketeers} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_equipment_to_stockpile = { 
+  type = infantry_equipment_rifle_0  
+ amount = 1000  
+ producer = ENG  
+ } 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = infantry_weapons  
+ } 
+ } 
+ }#Focus for Western Artillery 
+		focus = { 
+		id = westernartillery 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =34 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = approachwesternblackmarketeers} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = artillery  
+ } 
+ add_equipment_to_stockpile = { 
+  type = cannon_equipment_0  
+ amount = 1000  
+ producer = ENG  
+ } 
+ } 
+ }#Focus for Proper Warships 
+		focus = { 
+		id = properwarships 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =36 
+ y =3 
+ mutually_exclusive = { } 
+ prerequisite = { focus = requisitionjunks} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = sloop_tech  
+ } 
+ } 
+ }#Focus for Second Western Expedition 
+		focus = { 
+		id = secondwesternexpedition 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =1 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = goontheoffensive} 
+ available = {
+	NOT = {
+		OR = {
+			has_global_flag = {
+				flag = strike_the_south
+				days < 300
+			}
+			has_global_flag = {
+				flag = march_toward_beijing
+				days < 300
+			}
+		}
+	}
+ } 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ 1057 = {
+	add_building_construction = {
+		type = infrastructure
+		level = 4
+		instant_build = yes
+	}
+ }
+ add_ideas = { TAI_western_expedition }
+ set_global_flag = second_western_expedition
+ }  
+ }#Focus for March toward Beijing 
+		focus = { 
+		id = marchtowardbeijing 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =5 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = goontheoffensive} 
+ available = {
+	NOT = {
+		OR = {
+			has_global_flag = {
+				flag = strike_the_south
+				days < 300
+			}
+			has_global_flag = {
+				flag = second_western_expedition
+				days < 300
+			}
+		}
+	}
+ } 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ 1056 = {
+	add_building_construction = {
+		type = infrastructure
+		level = 4
+		instant_build = yes
+	}
+ }
+ add_ideas = { TAI_march_toward_beijing }
+ set_global_flag = march_toward_beijing
+ }  
+ }#Focus for Strike the South 
+		focus = { 
+		id = strikethesouth 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =9 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = goontheoffensive}
+ available = {
+	NOT = {
+		OR = {
+			has_global_flag = {
+				flag = second_western_expedition
+				days < 300
+			}
+			has_global_flag = {
+				flag = march_toward_beijing
+				days < 300
+			}
+		}
+	}
+ } 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ 600 = {
+	add_building_construction = {
+		type = infrastructure
+		level = 4
+		instant_build = yes
+	}
+ }
+ add_ideas = { TAI_striking_south }
+ set_global_flag = strike_the_south
+ } 
+ }#Focus for Improve our Infrastructure 
+		focus = { 
+		id = improveourinfrastructure 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =13 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = defendtianjing} 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = { add_extra_state_shared_building_slots = 4 }
+ } 
+ }#Focus for Rise of Hong Rengan 
+		focus = { 
+		id = riseofhongrengan 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =18 
+ y =4 
+ mutually_exclusive = { } 
+ prerequisite = { focus = recoverfromthetianjingincident}
+ available = { date > 1859.1.1 } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = 200 
+ add_stability = 0.05 
+ } 
+ }#Focus for Assist Shi Dakai's Offensive 
+		focus = { 
+		id = assistshidakaisoffensive 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =0 
+ y =5 
+ mutually_exclusive = { focus = seizeqingequipment} 
+ prerequisite = { focus = secondwesternexpedition} 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ CHI = { country_event = { id = taiping.5 } }
+ }
+ }#Focus for Seize Qing Equipment 
+		focus = { 
+		id = seizeqingequipment 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =2 
+ y =5 
+ mutually_exclusive = { focus = assistshidakaisoffensive} 
+ prerequisite = { focus = secondwesternexpedition} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_equipment_to_stockpile = { 
+  type = infantry_equipment_rifle_0  
+ amount = 1000  
+ producer = CHI  
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ } 
+ } 
+ }#Focus for Improve our Supply Lines 
+		focus = { 
+		id = improveoursupplylines 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =4 
+ y =5 
+ mutually_exclusive = { focus = reappropriatetheportsofshanghai} 
+ prerequisite = { focus = marchtowardbeijing} 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ 1056 = {
+	add_building_construction = {
+		type = infrastructure
+		level = 2
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ }
+ } 
+ }#Focus for Reappropriate the Ports of Shanghai 
+		focus = { 
+		id = reappropriatetheportsofshanghai 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =6 
+ y =5 
+ mutually_exclusive = { focus = improveoursupplylines} 
+ prerequisite = { focus = marchtowardbeijing} 
+ available = { owns_state = 613 } 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ 613 = {
+	add_building_construction = {
+		type = infrastructure
+		level = 4
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = dockyard
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = dockyard
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = dockyard
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = dockyard
+		level = 1
+		instant_build = yes
+	}
+ }
+ } 
+ }#Focus for Recruit Soldiers from Guangxi 
+		focus = { 
+		id = recruitsoldiersfromguangxi 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =8 
+ y =5 
+ mutually_exclusive = { focus = obtainnewworkersfromguangxi} 
+ prerequisite = { focus = strikethesouth} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_manpower = 20000 
+ add_war_support = 0.05 
+ } 
+ }#Focus for Obtain New Workers from Guangxi 
+		focus = { 
+		id = obtainnewworkersfromguangxi 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 0.5} 
+ x =10 
+ y =5 
+ mutually_exclusive = { focus = recruitsoldiersfromguangxi} 
+ prerequisite = { focus = strikethesouth} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_war_support = 0.05
+ add_ideas = { TAI_guangxi_workers } 
+ } 
+ }#Focus for Fortify Tianjing Area 
+		focus = { 
+		id = fortifytianjingarea 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =12 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = improveourinfrastructure} 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ random_owned_state = { add_extra_state_shared_building_slots = 4 }
+ 1055 = {
+	add_building_construction = {
+		type = bunker
+		province = 4203
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 10017
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 11994
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 1146
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 10008
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 11913
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 1099
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 4105
+		level = 2
+		instant_build = yes
+	}
+ }
+ 596 = {
+	add_building_construction = {
+		type = bunker
+		province = 10101
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 7191
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 4042
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 9944
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 9972
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 7086
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 4099
+		level = 2
+		instant_build = yes
+	}
+ }
+ } 
+ }#Focus for Fortify our Flanks 
+		focus = { 
+		id = fortifyourflanks 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =14 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = improveourinfrastructure} 
+ cost = 10  
+  available_if_capitulated = yes
+ completion_reward = {
+ random_owned_state = { add_extra_state_shared_building_slots = 4 }
+ 1057 = {
+	add_building_construction = {
+		type = bunker
+		province = 9959
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 10462
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 7167
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 12467
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 4631
+		level = 2
+		instant_build = yes
+	}
+ }
+ 600 = {
+	add_building_construction = {
+		type = bunker
+		province = 11988
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 12495
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 4156
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 4183
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 7004
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 9942
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 11945
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 4081
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 10112
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 12030
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 1110
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 11961
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 7054
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = bunker
+		province = 1066
+		level = 2
+		instant_build = yes
+	}
+ }
+ } 
+ }#Focus for Reform Worship Practices 
+		focus = { 
+		id = reformworshippractices 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =16 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = riseofhongrengan} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = 50 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = humanities_tech  
+ } 
+ } 
+ }#Focus for Push for Western Toleration 
+		focus = { 
+		id = pushforwesterntoleration 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =21 
+ y =5 
+ mutually_exclusive = { } 
+ prerequisite = { focus = riseofhongrengan} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_opinion_modifier= {  
+ target = ENG  
+ modifier = TAI_western_tolerance  
+ } 
+ add_opinion_modifier= {  
+ target = FRA  
+ modifier = TAI_western_tolerance 
+ } 
+ add_opinion_modifier= {  
+ target = USA  
+ modifier = TAI_western_tolerance  
+ } 
+ add_opinion_modifier= {  
+ target = RUS  
+ modifier = TAI_western_tolerance  
+ } 
+ } 
+ }#Focus for Supply our Troops 
+		focus = { 
+		id = supplyourtroops 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =13 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = fortifyourflanks} 
+  prerequisite = { focus =fortifytianjingarea} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_war_support = 0.10
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = arms_factory
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+ } 
+ } 
+ }#Focus for Mend Political Rifts 
+		focus = { 
+		id = mendpoliticalrifts 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =16 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = reformworshippractices} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = -25 
+ add_stability = 0.10
+ remove_ideas = TAI_mismanaged_administration 
+ } 
+ }#Focus for Seek Western Aid 
+		focus = { 
+		id = seekwesternaid 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =21 
+ y =6 
+ mutually_exclusive = { } 
+ prerequisite = { focus = pushforwesterntoleration} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ ENG = { country_event = { id = taiping.4 } }
+ FRA = { country_event = { id = taiping.4 } }
+ USA = { country_event = { id = taiping.4 } }
+ RUS = { country_event = { id = taiping.4 } }
+ } 
+ }#Focus for New Railroads 
+		focus = { 
+		id = newrailroads 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =16 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = mendpoliticalrifts} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_tech_bonus = { 
+  bonus = 0.5  
+ uses = 1  
+ category = industry  
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = industrial_complex
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_controlled_state = {
+	limit = {
+		free_building_slots = {
+			building = industrial_complex
+			size > 0
+			include_locked = yes
+		}
+	}
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = { add_extra_state_shared_building_slots = 4 }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ random_owned_state = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+ }
+ }
+ }#Focus for British Aid 
+		focus = { 
+		id = britishaid 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =18 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = seekwesternaid} 
+ available = { 
+	has_war_with = CHI
+	has_global_flag = britain_aids_TAI
+ } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_equipment_to_stockpile = { 
+  type = infantry_equipment_rifle_0  
+ amount = 1000  
+ producer = ENG  
+ } 
+ add_manpower = 10000 
+ } 
+ }#Focus for French Aid 
+		focus = { 
+		id = frenchaid 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =20 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = seekwesternaid} 
+ available = { 
+	has_war_with = CHI 
+	has_global_flag = france_aids_TAI
+ } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_manpower = 10000 
+ add_equipment_to_stockpile = { 
+  type = infantry_equipment_rifle_0  
+ amount = 1000  
+ producer = FRA  
+ } 
+ } 
+ }#Focus for American Aid 
+		focus = { 
+		id = americanaid 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =22 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = seekwesternaid} 
+ available = { 
+	has_war_with = CHI 
+	has_global_flag = america_aids_TAI
+ } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_manpower = 10000 
+ add_equipment_to_stockpile = { 
+  type = infantry_equipment_rifle_0  
+ amount = 1000  
+ producer = USA  
+ } 
+ } 
+ }#Focus for Russian Aid 
+		focus = { 
+		id = russianaid 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =24 
+ y =7 
+ mutually_exclusive = { } 
+ prerequisite = { focus = seekwesternaid} 
+ available = { 
+	has_war_with = CHI 
+	has_global_flag = russia_aids_TAI
+ } 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_equipment_to_stockpile = { 
+  type = infantry_equipment_rifle_0 
+ amount = 1000  
+ producer = RUS  
+ } 
+ add_manpower = 10000 
+ } 
+ }#Focus for Construct a Banking System 
+		focus = { 
+		id = constructabankingsystem 
+		icon = GFX_goal_unknown 
+		ai_will_do = { factor = 1} 
+ x =16 
+ y =8 
+ mutually_exclusive = { } 
+ prerequisite = { focus = newrailroads} 
+ cost = 10  
+  available_if_capitulated = yes  
+ completion_reward = { 
+ add_political_power = 75 
+ add_stability = 0.05 
+ } 
+ }#End of focuses 
+}

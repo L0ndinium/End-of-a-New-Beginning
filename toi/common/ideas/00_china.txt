@@ -1,0 +1,37 @@
+ideas = {
+	country = {
+		CHI_dakai_offensive_1 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				planning_speed = -0.15
+				conscription = -0.01
+				political_power_gain = -0.10
+				industrial_capacity_factory = -0.1
+			}
+		}
+		
+		CHI_dakai_offensive_2 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				planning_speed = -0.20
+				conscription = -0.015
+				political_power_gain = -0.20
+				industrial_capacity_factory = -0.2
+			}
+		}
+	}
+}
