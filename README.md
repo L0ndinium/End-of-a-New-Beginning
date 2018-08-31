@@ -12,6 +12,6 @@ All updates should be sent on Discord and uploaded by me (powerblo) or someone t
 
 # How to install
 
-- Clone this repo (or download as zip) into Documents/Paradox Interactive/Hearts of Iron IV/mod/GithubMods/EndOfANewBeginning"
+- Clone this repo (or download as zip) into Documents/Paradox Interactive/Hearts of Iron IV/GithubMods/EndOfANewBeginning"
 - open a command prompt and cd into that directory
 - run `.\install.bat` (it will just make links to toi folder and toi.mod inside your mods folder)
