@@ -9,3 +9,9 @@ All updates should be sent on Discord and uploaded by me (powerblo) or someone t
 2. ALWAYS inform the devs of what you've done before you send us the files.
 3. ALWAYS download and keep the versions marked "stable", and steer clear from the ones marked "unstable".
 4. ALWAYS (in fact, as much as you can) make separate files for your content.
+
+# How to install
+
+- Clone this repo (or download as zip) into Documents/Paradox Interactive/Hearts of Iron IV/mod/GithubMods/EndOfANewBeginning"
+- open a command prompt and cd into that directory
+- run `.\install.bat` (it will just make links to toi folder and toi.mod inside your mods folder)
