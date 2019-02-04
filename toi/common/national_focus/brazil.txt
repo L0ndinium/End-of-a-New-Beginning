@@ -324,7 +324,7 @@ focus_tree = {
 		495 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -370,26 +370,22 @@ focus_tree = {
 		completion_reward = {
 		1036 = {
 		add_resource = {
-		type = steel
-		amount = 10
+		type = iron
+		amount = 3
 		}
 		}
 		505 = {
 		add_resource = {
-		type = steel
-		amount = 10
+		type = iron
+		amount = 9
 		}
 		add_building_construction = {
 					type = coal_mine
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 		}
 		280 = {
-	add_resource = {
-       type = steel 
-		amount = 10
-		}
 		add_building_construction = {
 					type = coal_mine
 					level = 1
@@ -510,7 +506,7 @@ focus_tree = {
 	   501 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 		}
@@ -532,7 +528,7 @@ focus_tree = {
 	   1037 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -625,21 +621,21 @@ focus_tree = {
 	    500 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
 	    1038 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
 	501 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -661,7 +657,7 @@ focus_tree = {
 	501 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -907,6 +903,7 @@ focus = {
 	    ENG = {
 		country_event = brazil.1 
 		}
+		add_political_power = -25
 		}
 	}
 	
@@ -922,7 +919,7 @@ focus = {
 		}
 
 		completion_reward = {
-	    add_research_slot = 1
+	    add_political_power = 30
 		}
 	}
 	
@@ -974,6 +971,7 @@ focus = {
 		FRA = {
 		country_event = brazil.3
 		}
+		add_stability = -0.01
     }
 	}
 	
@@ -996,7 +994,7 @@ focus = {
 	idea = FRA_idea_new_banks
 	days = 50
 	}
-	add_stability = 0.01
+	add_stability = 0.02
     }
 	
 	}
@@ -1018,11 +1016,11 @@ focus = {
     		501 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-	add_political_power = -30	
+	add_political_power = -15
     }
 	
 	}
@@ -1623,70 +1621,44 @@ USA = { country_event =  brazil.7  }
 	}
 	
    focus = {
-		id = BRA_industrial_collaboration_with_argentina
-		icon = GFX_goal_focus_industrial_revolution
+		id = BRA_mend_relations_with_argentina
+		icon = GFX_goal_focus_negotiate_argentina
 		cost = 70
 		x = 42
 		y = 16
-
+          
+		available = {
+		ARG = { has_government = centrism }
+		}
+		
 		prerequisite = {
 		focus = BRA_a_new_foreign_policy
 		}
 		
 		
 	completion_reward = {
-			502 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+    BRA = {
+				add_opinion_modifier = {
+    				target = ARG
+    				modifier = usa_improved_relations
 				}
-			}
-	1058 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+	ARG = {
+				add_opinion_modifier = {
+    				target = BRA
+    				modifier = usa_improved_relations
 				}
 			}		
 	}
 	}
 	
-	focus = {
-		id = BRA_industrial_collaboration_with_bolivia
-		icon = GFX_goal_focus_industrial_revolution
-		cost = 70
-		x = 42
-		y = 17
-
-		prerequisite = {
-		focus = BRA_industrial_collaboration_with_argentina
-		}
-		
-		
-	completion_reward = {
-			280 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-	487 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}		
 	}
-	}
+	
 	
 	focus = {
 		id = BRA_propose_the_monroe_alliance
 		icon = GFX_focus_chi_mission_to_the_us
 		cost = 70
-		x = 39
+		x = 40
 		y = 14
 
 		prerequisite = {
@@ -1705,7 +1677,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_expand_the_alliance_on_the_platine
 		icon = GFX_goal_focus_newspapers
 		cost = 70
-		x = 39
+		x = 40
 		y = 15
         
 		available = {
@@ -1721,12 +1693,11 @@ USA = { country_event =  brazil.7  }
 	}
 	}
 	
-	
-    focus = {
-		id = BRA_expand_the_alliance_on_our_north
-		icon = GFX_goal_focus_newspapers
+	focus = {
+		id = BRA_start_a_research_project
+		icon = GFX_goal_tfv_generic_tech_sharing
 		cost = 70
-		x = 39
+		x = 40
 		y = 16
         
 		available = {
@@ -1738,30 +1709,12 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-	add_to_faction = VEN
-	}
-	}
-	
-	
-	focus = {
-		id = BRA_start_a_research_project
-		icon = GFX_goal_tfv_generic_tech_sharing
-		cost = 70
-		x = 39
-		y = 17
-        
-		available = {
-		is_in_faction = yes
-		}
-		prerequisite = {
-		focus = BRA_expand_the_alliance_on_our_north
-		}
-		
-		
-	completion_reward = {
 	every_country = {
 	limit = { is_in_faction_with = BRA }
-	add_research_slot = 1
+	add_timed_idea = {
+	idea = POR_Research 
+	days = 20
+	}
 	}
 	}
 	}

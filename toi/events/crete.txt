@@ -1,262 +1,262 @@
-﻿# add_namespace = GREcrete
+﻿add_namespace = GREcrete
 
-# # cretan revolt begins
+# cretan revolt begins
 
-# country_event = {
-	# id = GREcrete.1
-	# title =  GREcrete.1.t
-	# desc =  GREcrete.1.d
-	# #picture = 
+country_event = {
+	id = GREcrete.1
+	title =  GREcrete.1.t
+	desc =  GREcrete.1.d
+	#picture = 
 
-	# fire_only_once = yes
-	# #is_triggered_only = yes
+	fire_only_once = yes
+	#is_triggered_only = yes
 
-	# trigger = {
-		# tag = OTO
-		# date > 1866.09.21
-		# 182 = { is_owned_and_controlled_by = OTO } #Crete
-	# }
+	trigger = {
+		tag = OTO
+		date > 1866.09.21
+		182 = { is_owned_and_controlled_by = OTO } #Crete
+	}
 
-	# immediate = {
-	# hidden_effect = {
-		# 182 = {
-			# add_core_of = CET
-			# CET = { 
-				# transfer_state = PREV 
-			# }
-		# }
-		# 1241 = {
-			# add_core_of = CET
-			# CET = { 
-				# transfer_state = PREV 
-			# }
-		# }
-        # CET = { 
-			# add_ideas = CET_idea_cretan_fighters
-			# set_cosmetic_tag = CET_Revolt_1 
-			# set_country_flag = CET_cretan_revolt
-		# }
-	# }
-	# }
+	immediate = {
+	hidden_effect = {
+		182 = {
+			add_core_of = CET
+			CET = { 
+				transfer_state = PREV 
+			}
+		}
+		1241 = {
+			add_core_of = CET
+			CET = { 
+				transfer_state = PREV 
+			}
+		}
+        CET = { 
+			add_ideas = CET_idea_cretan_fighters
+			set_cosmetic_tag = CET_Revolt_1 
+			set_country_flag = CET_cretan_revolt
+		}
+	}
+	}
 
-	# option = {
-		# name = GREcrete.1.a #Declare War as Ottomans 
+	option = {
+		name = GREcrete.1.a #Declare War as Ottomans 
 		
-		# hidden_effect = {
-			# CET ={
-				# load_oob = CET_rebellion_1
-				# add_equipment_to_stockpile = {
-					# type = infantry_equipment
-					# amount = 500 
-					# producer = CET
-				# }
-			# }
-			# GRE = { news_event = {id = GREcrete.6 } } 
-		# }
-		# declare_war_on = {
-			# target = CET
-			# type = annex_everything
-		# }
-	# }
-	# option = {
-		# name = GREcrete.1.b #Take Control of the Rebels
+		hidden_effect = {
+			CET ={
+				load_oob = CET_rebellion_1
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500 
+					producer = CET
+				}
+			}
+			GRE = { news_event = {id = GREcrete.6 } } 
+		}
+		declare_war_on = {
+			target = CET
+			type = annex_everything
+		}
+	}
+	option = {
+		name = GREcrete.1.b #Take Control of the Rebels
 		
-		# trigger = {
-			# is_ai = no
-		# }
+		trigger = {
+			is_ai = no
+		}
 		
-		# hidden_effect = {
-			# CET ={
-				# load_oob = CET_rebellion_1
-				# add_equipment_to_stockpile = {
-					# type = infantry_equipment
-					# amount = 500 
-					# producer = CET
-				# }
-				# change_tag_from = ROOT
-			# }
-			# GRE = { news_event = {id = GREcrete.6 } } 
-		# }
-		# declare_war_on = {
-			# target = CET
-			# type = annex_everything
-		# }
-	# }
-# }
+		hidden_effect = {
+			CET ={
+				load_oob = CET_rebellion_1
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500 
+					producer = CET
+				}
+				change_tag_from = ROOT
+			}
+			GRE = { news_event = {id = GREcrete.6 } } 
+		}
+		declare_war_on = {
+			target = CET
+			type = annex_everything
+		}
+	}
+}
 
-# country_event = {#Crete gets aid from Greece - men 
-	# id = GREcrete.2
-	# title =  GREcrete.2.t
-	# desc =  GREcrete.2.d
-	# #picture = 
+country_event = {#Crete gets aid from Greece - men 
+	id = GREcrete.2
+	title =  GREcrete.2.t
+	desc =  GREcrete.2.d
+	#picture = 
 	
-	# is_triggered_only = yes
+	is_triggered_only = yes
 
-	# option = {
-		# name = GREcrete.2.a #great
-	# }
-# }
+	option = {
+		name = GREcrete.2.a #great
+	}
+}
 
-# country_event = {#Arkadi explosision
-	# id = GREcrete.3
-	# title =  GREcrete.3.t
-	# desc =  GREcrete.3.d
-	# #picture = 
+country_event = {#Arkadi explosision
+	id = GREcrete.3
+	title =  GREcrete.3.t
+	desc =  GREcrete.3.d
+	#picture = 
 
-	# fire_only_once = yes
-	# #is_triggered_only = yes
+	fire_only_once = yes
+	#is_triggered_only = yes
 
-	# trigger = {
-		# tag = CET
-		# date > 1866.11.02
-		# exists = yes
-		# has_war_with = OTO
-	# }
+	trigger = {
+		tag = CET
+		date > 1866.11.02
+		exists = yes
+		has_war_with = OTO
+	}
 	
-	    # immediate = {
-			# hidden_effect = {
-	    	# 182={
-	     		# add_manpower = -800
-		    # }
-	 	    # add_manpower = -250
-	    # }
-	    # }
+	    immediate = {
+			hidden_effect = {
+	    	182={
+	     		add_manpower = -800
+		    }
+	 	    add_manpower = -250
+	    }
+	    }
 
-	# option = {
-		# name = GREcrete.3.a 
+	option = {
+		name = GREcrete.3.a 
 		
-		# every_country={
-			# limit = { #change this to great_power when that is in
-				# OR = {
-					# tag = ENG
-					# tag = FRA
-					# tag = RUS
-					# tag = AUS
-					# tag = PIE
-					# tag = USA
-					# tag = SER
-					# tag = PRS
-					# tag = ROM
-					# tag = MNT 
-					# tag = GRE 
-					# }
-					# exists = yes 
-				# }
-				# add_opinion_modifier = {
-					# target = CET
-					# modifier = CET_Opinion_Arkadi_Explosion
-				# }
-				# news_event = {
-					# id = GREcrete.4
-				# }
-			# }
-	# }
+		every_country={
+			limit = { #change this to great_power when that is in
+				OR = {
+					tag = ENG
+					tag = FRA
+					tag = RUS
+					tag = AUS
+					tag = PIE
+					tag = USA
+					tag = SER
+					tag = PRS
+					tag = ROM
+					tag = MNT 
+					tag = GRE 
+					}
+					exists = yes 
+				}
+				add_opinion_modifier = {
+					target = CET
+					modifier = CET_Opinion_Arkadi_Explosion
+				}
+				news_event = {
+					id = GREcrete.4
+				}
+			}
+	}
 	
-# }
+}
 
-# news_event = {#News Event for Arkadi 
-	# id = GREcrete.4
-	# title =  GREcrete.4.t
-	# desc =  GREcrete.4.d
-	# #picture = 
+news_event = {#News Event for Arkadi 
+	id = GREcrete.4
+	title =  GREcrete.4.t
+	desc =  GREcrete.4.d
+	#picture = 
 
-	# is_triggered_only = yes
+	is_triggered_only = yes
 
-	# option = {
-		# ai_chance = {
-			# factor = 75
-		# }
-		# name = GREcrete.4.a #what a tradgety
-	# }
+	option = {
+		ai_chance = {
+			factor = 75
+		}
+		name = GREcrete.4.a #what a tradgety
+	}
 	
-	# option = {
-		# name = GREcrete.4.b #Help Crete - unlocks a decision to help 
-		# ai_chance = {
-			# factor = 25
-		# }
+	option = {
+		name = GREcrete.4.b #Help Crete - unlocks a decision to help 
+		ai_chance = {
+			factor = 25
+		}
 		
-		# hidden_effect = {
-		    # FROM = {
-			# set_country_flag = CET_cretan_help 			
-		    # }
-		# }
-	# }
-# }
+		hidden_effect = {
+		    FROM = {
+			set_country_flag = CET_cretan_help 			
+		    }
+		}
+	}
+}
 
-# country_event = {#If Crete won Annex into Greece 
-	# id = GREcrete.5
-	# title =  GREcrete.5.t
-	# desc =  GREcrete.5.d
-	# #picture = 
+country_event = {#If Crete won Annex into Greece 
+	id = GREcrete.5
+	title =  GREcrete.5.t
+	desc =  GREcrete.5.d
+	#picture = 
 
-	# is_triggered_only = yes
+	is_triggered_only = yes
 
-	# option = {
-		# name = greek_events.5.a #integrate into greece
-		# GRE = {
-			# annex_country = {
-				# target = ROOT
-				# transfer_troops = yes
-			# }
-		# }
-	# }
-	# option = {
-		# name = greek_events.5.a #refuse
-		# set_country_flag = CET_independant_sprit
-	# }
+	option = {
+		name = greek_events.5.a #integrate into greece
+		GRE = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = greek_events.5.a #refuse
+		set_country_flag = CET_independant_sprit
+	}
 	
-# }
+}
 
-# news_event = {#News event for Greece about Cretan Rebellion  
-	# id = GREcrete.6
-	# title =  GREcrete.6.t
-	# desc =  GREcrete.6.d
-	# #picture = 
+news_event = {#News event for Greece about Cretan Rebellion  
+	id = GREcrete.6
+	title =  GREcrete.6.t
+	desc =  GREcrete.6.d
+	#picture = 
 
-	# is_triggered_only = yes
+	is_triggered_only = yes
 
-	# option = {
-		# name = greek_events.6.a #Yes 
+	option = {
+		name = greek_events.6.a #Yes 
 		
-	# }
+	}
 	
-# }
+}
 
-# country_event = {#Crete gets aid from Greece - guns 
-	# id = GREcrete.7
-	# title =  GREcrete.7.t
-	# desc =  GREcrete.7.d
-	# #picture = 
+country_event = {#Crete gets aid from Greece - guns 
+	id = GREcrete.7
+	title =  GREcrete.7.t
+	desc =  GREcrete.7.d
+	#picture = 
 	
-	# is_triggered_only = yes
+	is_triggered_only = yes
 
-	# option = {
-		# name = GREcrete.7.a #great
-	# }
-# }
+	option = {
+		name = GREcrete.7.a #great
+	}
+}
 
-# country_event = {#Greece sends more aid to Crete 
-	# id = GREcrete.8
-	# title =  GREcrete.8.t
-	# desc =  GREcrete.8.d
-	# #picture = 
+country_event = {#Greece sends more aid to Crete 
+	id = GREcrete.8
+	title =  GREcrete.8.t
+	desc =  GREcrete.8.d
+	#picture = 
 	
-	# is_triggered_only = yes
+	is_triggered_only = yes
 
-	# option = {
-		# name = GREcrete.8.a #great
-	# }
-# }
+	option = {
+		name = GREcrete.8.a #great
+	}
+}
 
-# country_event = {#Greece sends alot of aid to Crete 
-	# id = GREcrete.9
-	# title =  GREcrete.9.t
-	# desc =  GREcrete.9.d
-	# #picture = 
+country_event = {#Greece sends alot of aid to Crete 
+	id = GREcrete.9
+	title =  GREcrete.9.t
+	desc =  GREcrete.9.d
+	#picture = 
 	
-	# is_triggered_only = yes
+	is_triggered_only = yes
 
-	# option = {
-		# name = GREcrete.9.a #great
-	# }
-# }
+	option = {
+		name = GREcrete.9.a #great
+	}
+}

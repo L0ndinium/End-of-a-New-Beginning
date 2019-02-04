@@ -123,6 +123,32 @@
 	start_build_tech = 1
 	ornithopter = 1
 	screw_propeller = 1
+	tech_infantry_special_infantry_corps = 1
+	armor_tech_velocipede = 1
+	land_doctrine_victorian = 1
+	tech_naval_1812_sloop = 1
+	tech_naval_1812_corvette = 1
+	tech_naval_1812_troops = 1
+	naval_doctrine_victorian = 1
+	steel_railways = 1
+	interchange_parts = 1
+	factory_industry_1 = 1
+	high_speed_steam_engine = 1
+	steam_locomotive = 1
+	refining = 1
+	inorganic_chemistry = 1
+	industrial_blast_furnace = 1
+	industrial_finery_forge = 1
+	wohler_synthesis = 1
+	early_medicine = 1
+	pre_industrial_farms = 1
+	pyroglycerine_synthesis = 1
+	geissler_tube = 1
+	daguerreotype = 1
+	voltas_battery = 1
+	early_alternators = 1
+	tech_humanities_mercantilism = 1
+	tech_humanities_capitalism = 1
   }
   
   add_equipment_to_stockpile = {
@@ -253,6 +279,8 @@ create_field_marshal = {
   picture = "Portrait_PRS_Friedrich_Graf_von_Wrangel.dds"
   traits = {
 	PRS_prussian_general
+	PRS_pour_le_merite
+	PRS_iron_cross
     war_hero
 	old_guard
   }
@@ -268,6 +296,8 @@ create_field_marshal = {
   picture = "Portrait_PRS_Karl_Friedrich_Emil_zu_Dohna_Schlobitten.dds"
   traits = {
 	PRS_prussian_general
+	PRS_pour_le_merite
+	PRS_iron_cross
     war_hero
 	old_guard
   }

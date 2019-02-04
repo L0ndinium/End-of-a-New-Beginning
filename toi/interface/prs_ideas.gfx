@@ -85,19 +85,19 @@ spriteTypes = {
 		name = "GFX_idea_PRS_theorist_land_moltke"
 		texturefile = "gfx/interface/ideas/PRS/PRS_theorist_moltke.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_idea_PRS_edwin_von_manteuffel"
 		texturefile = "gfx/interface/ideas/PRS/PRS_edwin_von_manteuffel.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_idea_PRS_Karl_Eberhard_von_Bittenfeld"
 		texturefile = "gfx/interface/ideas/PRS/PRS_Karl_Eberhard_von_Bittenfeld.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_idea_PRS_Leonhard_Graf_von_Blumenthal"
 		texturefile = "gfx/interface/ideas/PRS/PRS_Leonhard_Graf_von_Blumenthal.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_idea_PRS_Advisor_Leo_von_Caprivi"
 		texturefile = "gfx/interface/ideas/PRS/PRS_Advisor_Leo_von_Caprivi.dds"
 	}
@@ -108,6 +108,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_PRS_zollverein"
 		texturefile = "gfx/interface/ideas/PRS/idea_PRS_zollverein.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRS_heros_von_borcke"
+		texturefile = "gfx/interface/ideas/PRS/PRS_Heros_von_Borcke.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRS_karl_friedrich_von_steinmetz"
+		texturefile = "gfx/interface/ideas/PRS/PRS_Karl_Friedrich_von_Steinmetz.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRS_hans_alexis_von_biehler"
+		texturefile = "gfx/interface/ideas/PRS/PRS_Hans_Alexis_von_Biehler.dds"
 	}
 }
 

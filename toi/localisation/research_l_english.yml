@@ -1254,7 +1254,7 @@
  steel_railways:0 "Steel Railways"
  steel_railways_desc:0 "Building Railways out of steel will make them more resistant, allowing our trains to go faster."
  standardized_gauge:0 "Standardized Gauge"
- standardized_gauge_desc:0 "Standarization of Gauges will make tool fabrication more efficient and less prone to mistakes."
+ standardized_gauge_desc:0 "Standarization of Gauges will reduce accident rates on our railways and improve construction efficiency by standardizing the process."
  wohler_synthesis:0 "Wohler Synthesis"
  wohler_synthesis_desc:0 "The Process of converting ammonium cyanate into urea."
  organic_chemistry:0 "Organic Chemistry"

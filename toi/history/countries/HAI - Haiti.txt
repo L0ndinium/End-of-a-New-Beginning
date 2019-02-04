@@ -3,7 +3,7 @@
 
   oob = "HAI_1857"
 
-  set_convoys = 0
+  set_convoys = 2
   
   set_research_slots = 2
 
@@ -34,9 +34,12 @@
     privileged_education
     state_religion
 	religion_catholic
+	HAI_idea_humilliation_hispaniola
          #NATIONAL SPIRITS
 	
   }
+  
+  add_opinion_modifier = { target = HAI modifier = EOANB_independence_HAI_war }
 
   set_politics = {
     parties = {
@@ -53,19 +56,19 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 20
       }
       traditional_conservatism = {
-        popularity = 20
+        popularity = 35
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 10
+        popularity = 5
       }
       autocracy = {
-        popularity = 70
+        popularity = 40
       }
       fundamentalism = {
         popularity = 0
@@ -95,6 +98,28 @@
 	}
 }
 
+  create_country_leader = {
+	name = "Fabren Geffard"
+	desc = "POLITICS_STENIO_VINCENT_DESC"
+	picture = "Portrait_HAI_Fabre_Geffrard.dds"
+	expire = "1965.1.1"
+	ideology = conserv_liberal
+	traits = {
+		#
+	}
+}
+
+  create_country_leader = {
+	name = "Jean-Nicolas Saget"
+	desc = "POLITICS_STENIO_VINCENT_DESC"
+	picture = "Portrait_Jean_Nicolas_Nissage_Saget.dds"
+	expire = "1965.1.1"
+	ideology = conserv
+	traits = {
+		#
+	}
+}
+
 create_corps_commander {
   name = "Jean-Nicolas Nissage Saget"
   picture = "Portrait_Jean_Nicolas_Nissage_Saget.dds"
@@ -110,7 +135,7 @@ create_corps_commander {
   name = "Sylvain Salnave"
   picture = "Portrait_HAI_Sylvain_Salnave.dds"
   traits = { }
-  skill = 2
+  skill = 1
   attack_skill = 1
   defense_skill = 1
   planning_skill = 1

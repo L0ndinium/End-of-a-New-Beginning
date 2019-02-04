@@ -37,6 +37,13 @@
          #NATIONAL SPIRITS
 	
   }
+  
+  add_timed_idea = { 
+  idea = DOM_political_disaster
+  days = 2800
+  }
+  
+  add_opinion_modifier = { target = HAI modifier = EOANB_independence_HAI_war }
 
   set_politics = {
     parties = {
@@ -53,19 +60,19 @@
         popularity = 0
       }
       centrism = {
-        popularity = 2.5
+        popularity = 30
       }
       traditional_conservatism = {
-        popularity = 45
+        popularity = 25
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 50
+        popularity = 40
       }
       autocracy = {
-        popularity = 2.5
+        popularity = 15
       }
       fundamentalism = {
         popularity = 0
@@ -92,20 +99,28 @@
     ideology = military_goverment
 }
 
+  create_country_leader = {
+    name = "Jose Salcedo"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_DOM_Jose_Antonio_Salcedo.dds"
+    expire = 1862.7.2
+    ideology = conserv_liberal
+}
+
 create_corps_commander {
   name = "Gregorio Luperón"
   picture = "Portrait_DOM_Gregorio_Luperon.dds"
   traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
+  skill = 3
+  attack_skill = 2
+  defense_skill = 2
   planning_skill = 1
   logistics_skill = 1
 }
 
 create_corps_commander {
   name = "Gaspar Polanco"
-  picture = ""
+  picture = "Portrait_DOM_Gaspar_Polanco"
   traits = { }
   skill = 2
   attack_skill = 1
@@ -114,27 +129,6 @@ create_corps_commander {
   logistics_skill = 1
 }
 
-create_corps_commander {
-  name = "Santiago Rodríguez"
-  picture = ""
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander {
-  name = "Furcy Fondeur"
-  picture = ""
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
 
 
 }

@@ -204,7 +204,13 @@ country_event = {
 		
 		option = {
 			name = portugal.9.a
-			ai_chance = { factor = 20 }
+			ai_chance = { 
+				factor = 20 
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+			}
 			custom_effect_tooltip = POR_1861_Luis3
 			hidden_effect = {
 				POR = { country_event = { days = 5 id = portugal.10 } }

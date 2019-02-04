@@ -2,7 +2,7 @@ state={
 	id=1061
 	name="STATE_1061"
 
-	state_category = city
+	state_category = rural
 
 	history={
 		buildings = {

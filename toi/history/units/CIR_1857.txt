@@ -46,27 +46,6 @@ units = {
 			start_equipment_factor = 1
 		}
 		division= {
-			name = "5th Circassian Infantry"
-			location = 11617 
-			division_template = "Circassian Infantry"
-			start_experience_factor = 0.4
-			start_equipment_factor = 1
-		}
-		division= {
-			name = "6th Circassian Infantry"
-			location = 3698 
-			division_template = "Circassian Infantry"
-			start_experience_factor = 0.4
-			start_equipment_factor = 1
-		}
-		division= {
-			name = "7th Circassian Infantry"
-			location = 9691 
-			division_template = "Circassian Infantry"
-			start_experience_factor = 0.4
-			start_equipment_factor = 1
-		}
-		division= {
 			name = "1st Circassian Cavalry"
 			location = 9691
 			division_template = "Circassian Cavalry"
@@ -104,20 +83,6 @@ units = {
 		division= {
 			name = "6th Caucasian Cavalry"
 			location = 3717
-			division_template = "Circassian Cavalry"
-			start_experience_factor = 0.3
-			start_equipment_factor = 1
-		}
-		division= {
-			name = "7th Caucasian Cavalry"
-			location = 717
-			division_template = "Circassian Cavalry"
-			start_experience_factor = 0.3
-			start_equipment_factor = 1
-		}
-		division= {
-			name = "8th Caucasian Cavalry"
-			location = 11617 
 			division_template = "Circassian Cavalry"
 			start_experience_factor = 0.3
 			start_equipment_factor = 1

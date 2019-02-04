@@ -54,20 +54,6 @@ units = {
 			start_equipment_factor = 1
 		}
 		division= {
-			name = "6th Caucasian Infantry"
-			location = 7554
-			division_template = "Caucasian Infantry"
-			start_experience_factor = 0.4
-			start_equipment_factor = 1
-		}
-		division= {
-			name = "7th Caucasian Infantry"
-			location = 1450
-			division_template = "Caucasian Infantry"
-			start_experience_factor = 0.4
-			start_equipment_factor = 1
-		}
-		division= {
 			name = "1st Caucasian Cavalry"
 			location = 3711 
 			division_template = "Caucasian Cavalry"
@@ -98,20 +84,6 @@ units = {
 		division= {
 			name = "5th Caucasian Cavalry"
 			location = 3668 
-			division_template = "Caucasian Cavalry"
-			start_experience_factor = 0.5
-			start_equipment_factor = 1
-		}
-		division= {
-			name = "6th Caucasian Cavalry"
-			location = 7624  
-			division_template = "Caucasian Cavalry"
-			start_experience_factor = 0.5
-			start_equipment_factor = 1
-		}
-		division= {
-			name = "7th Caucasian Cavalry"
-			location = 6689   
 			division_template = "Caucasian Cavalry"
 			start_experience_factor = 0.5
 			start_equipment_factor = 1

@@ -9,7 +9,7 @@
   
       declare_war_on = {
     target = PRR
-    type = civil_war
+    type = annex_everything
   }
 
   add_ideas = { 

@@ -1799,7 +1799,7 @@ ideas = {
 
 		religion_catholic = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1823,7 +1823,7 @@ ideas = {
 
 		religion_protestant = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 
@@ -1845,7 +1845,7 @@ ideas = {
 
 		religion_orthodox = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1869,7 +1869,7 @@ ideas = {
 
 		religion_coptic = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1893,7 +1893,7 @@ ideas = {
 
 		religion_sunni = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1917,7 +1917,7 @@ ideas = {
 
 		religion_shiite = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1941,7 +1941,7 @@ ideas = {
 
 		religion_ibadi = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1965,7 +1965,7 @@ ideas = {
 
 		religion_jewish = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -1989,7 +1989,7 @@ ideas = {
 
 		religion_mahayana = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2013,7 +2013,7 @@ ideas = {
 
 		religion_gelugpa = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2037,7 +2037,7 @@ ideas = {
 
 		religion_theravada = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2061,7 +2061,7 @@ ideas = {
 		
 		religion_confucian = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2085,7 +2085,7 @@ ideas = {
 
 		religion_hindu = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2109,7 +2109,7 @@ ideas = {
 
 		religion_shinto = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2133,7 +2133,7 @@ ideas = {
 
 		religion_sikh = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2157,7 +2157,7 @@ ideas = {
 
 		religion_animist = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			
@@ -2179,9 +2179,33 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		religion_pagan = {
+						
+			cost = 0
+			removal_cost = -1
+			level = 1
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = eoanb_law_tt_religion_pagan
+				}
+				hidden_trigger = {
+					always = no
+				}
+			}
+
+			modifier = {
+				
+			}
+
+			default = yes
+			
+			cancel_if_invalid = no
+		}
+		
 		religion_secular = {
 						
-			cost = 150
+			cost = 0
 			removal_cost = -1
 			level = 1
 			

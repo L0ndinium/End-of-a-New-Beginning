@@ -80,4 +80,8 @@ opinion_modifiers = { #Latin American Generic FT
 	LAT_generic_Other_Americans1 = {
 		value = 20
 	}
+	
+	EOANB_independence_HAI_war = {
+	value = -60
+	}
 }

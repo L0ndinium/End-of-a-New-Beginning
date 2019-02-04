@@ -270,6 +270,11 @@ spriteTypes = {
 		name = "GFX_idea_religion_secular"
 		texturefile = "gfx/interface/ideas/laws/religion_secular.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_pagan"
+		texturefile = "gfx/interface/ideas/laws/religion_pagan.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_religion_shiite"

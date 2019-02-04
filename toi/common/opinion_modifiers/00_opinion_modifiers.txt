@@ -5,6 +5,8 @@
 # min_trust
 # max_trust
 # decay
+# Decay uses the unit you use for the modifier (timer), and is calculated normally. 
+# This means a positive decay is required to annul negative modifiers, and the other way around applies for positive modifiers.
 # months/years/days = timer
 # trade = yes/no
 

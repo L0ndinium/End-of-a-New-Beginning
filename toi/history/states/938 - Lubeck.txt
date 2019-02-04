@@ -2,7 +2,7 @@ state={
 	id=938
 	name="STATE_938"
 
-	state_category = large_city
+	state_category = town
 	history={
 		buildings = {
 			infrastructure = 5

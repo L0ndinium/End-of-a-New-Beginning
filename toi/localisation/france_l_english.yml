@@ -554,7 +554,7 @@
  nap_france.3.b:0 "We do not need any more glorified french charriots !"
 
  nap_france.4.t:0 "The Orsini Letter"
- nap_france.4.d:0 "A few days after the infamous Orsini affait that shook our country, the perpetrator Felice Orsini himself send a letter to our emperor, asking for their help in the reunification of Italy under one flag. People are suspicious of the authenticity of this letter though, as Napoleon III wanted to intervene in Italy for a while now."
+ nap_france.4.d:0 "A few days after the infamous Orsini affair that shook our country, the perpetrator Felice Orsini himself sent a letter to our emperor, asking for his help in the reunification of Italy under one flag. People are suspicious of the authenticity of this letter though, as Napoleon III wanted to intervene in Italy for a while now."
  nap_france.4.a:0 "There is nothing fishy about this letter !"
 
  nap_france.5.t:0 "The French Empire are supporting republican revolutionaries"
@@ -983,10 +983,10 @@
  nap_france.331.d:0 ""
  nap_france.331.a:0 "Fine"
 
- nap_france.332.t:0 "France wants to expand next to us"
+ nap_france.332.t:0 "France wants to expand next to us!"
  nap_france.332.d:0 ""
- nap_france.332.a:0 "We cannot let that happend !"
- nap_france.332.b:0 "We do not care about Luxemburg"
+ nap_france.332.a:0 "We cannot let that happen!"
+ nap_france.332.b:0 "We do not care about Luxemburg."
 
  nap_france.333.t:0 "The Luxemburg Crisis"
  nap_france.333.d:0 "The dutch accepted our offer, but Prussia has intervened and threathen war if we continue our expantio next to their lands."
@@ -1029,10 +1029,10 @@
  nap_france.345.d:0 ""
  nap_france.345.a:0 "Fine"
 
- nap_france.350.t:0 "France wants to officialy guarenty our independance"
+ nap_france.350.t:0 "France wants to officially guarantee our independence"
  nap_france.350.d:0 ""
- nap_france.350.a:0 "Agree, we need protection in those crazy times"
- nap_france.350.b:0 "Refuse, we want to stay neutral"
+ nap_france.350.a:0 "Agree, we need protection in these crazy times."
+ nap_france.350.b:0 "Refuse, we want to stay neutral."
 
  nap_france.351.t:0 "Switzerland accepts our offer"
  nap_france.351.d:0 ""

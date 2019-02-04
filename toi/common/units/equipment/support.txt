@@ -113,7 +113,7 @@ equipments = {
 		
 		build_cost_ic = 1
 		resources = {
-			cotton = 1
+			fabric = 1
 		}
 	}
 

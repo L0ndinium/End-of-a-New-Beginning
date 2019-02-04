@@ -35,4 +35,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/PRS/PRS_theorist_moltke.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_idea_PRS_theorist_land_moltke"
+		texturefile = "gfx/interface/ideas/PRS/PRS_theorist_moltke.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HAI_hispaniola"
+		texturefile = "gfx/interface/ideas/HISPANIOLA/HAI_hispaniola.dds"
+	}
+	
 }

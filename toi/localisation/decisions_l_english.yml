@@ -133,7 +133,7 @@
  eoanb_category_formables:0 "Formable Nations"
  eoanb_decision_PRS_gerconfed_reforms1:0 "Prussian Reforms"
  eoanb_decision_PRS_gerconfed_reforms1_desc:0 "We will attempt to push some reforms in the German Confederation that would allow us to unify Germany more easily. Austria may be upset at our ambition to do that very thing, but we cannot neglect our own interests just to appease them - we should probably prepare for military conflict if we wish to take this decision.\n\n§Y(This decision leads to the Brother's War)§!"
- eoanb_tt_decision_prussian_reforms_1:0 "§RThis may lead to a conflict with [AUS.GetNameDef]!§!"
+ eoanb_tt_decision_prussian_reforms_1:0 "§RThis may lead to a conflict with [AUS.GetNameDef]!§!\n"
  eoanb_decision_PRS_sending_scheibert:0 "Send captain Justus Scheibert to observe American Civil War"
  eoanb_tt_decision_scheibert:0 "Captain Scheibert will be in America until the war is over or until he learns everything"
  eoanb_decision_generic_abolish_heir_system:0 "Abolish the Hereditary System"
