@@ -304,9 +304,10 @@ focus_tree = {
 		495 = {
 		add_resource = {
 		type = wood
-		amount = 15
+		amount = 3
 		}
 		}
+	add_political_power = -5	
 	}
 	}
 	
@@ -392,7 +393,7 @@ focus_tree = {
 					instant_build = yes
 				}
 		}
-		
+	add_political_power = -15	
 		}
 	}
 	
@@ -1372,7 +1373,7 @@ focus = {
 		id = BRA_diplomatic_visit_to_britain
 		icon = GFX_goal_focus_ally_ENG
 		cost = 70
-		x = 37
+		x = 38
 		y = 12
 
 		prerequisite = {
@@ -1401,11 +1402,11 @@ focus = {
 		id = BRA_diplomatic_visit_to_austria
 		icon = GFX_goal_focus_ally_AUS
 		cost = 70
-		x = 39
-		y = 12
+		x = 38
+		y = 13
 
 		prerequisite = {
-		focus = BRA_diplomatic_visit_to_france
+		focus = BRA_diplomatic_visit_to_britain
 		}
 	   
 	   
@@ -1431,11 +1432,10 @@ focus = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 70
 		x = 38
-		y = 13
+		y = 14
 
 		prerequisite = {
 		focus = BRA_diplomatic_visit_to_austria
-		focus = BRA_diplomatic_visit_to_britain
 		}
 	   
 	   
@@ -1829,8 +1829,8 @@ USA = { country_event =  brazil.7  }
 	}
 	
 	focus = {
-		id = BRA_expand_the_suffrage
-		icon = GFX_goal_focus_elections
+		id = BRA_befriend_entrepreneurs
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 70
 		x = 49
 		y = 11
@@ -1842,10 +1842,7 @@ USA = { country_event =  brazil.7  }
 		
 	completion_reward = {
     add_political_power = -20
-   swap_ideas = {
-	remove_idea = property_owners_suffrage
-	add_idea = universal_male_suffrage
-    }
+
 	}
 	}
 	
@@ -1857,7 +1854,7 @@ USA = { country_event =  brazil.7  }
 		y = 12
         
 		prerequisite = {
-		focus = BRA_expand_the_suffrage
+		focus = BRA_befriend_entrepreneurs
 		}
 		prerequisite = {
 		focus = BRA_ensure_free_slaves_freedom
@@ -1883,7 +1880,7 @@ USA = { country_event =  brazil.7  }
 		
 	completion_reward = {
     army_experience = -30
-	add_manpower = 500000
+	add_manpower = 50000
 	}
 	}
 	
@@ -2226,16 +2223,17 @@ focus = {
 		focus = BRA_learn_from_british_expeditions
 		}
 		
+		available = {
+		MNH = { exists = yes }
+		}
+		
 		
 	completion_reward = {
       create_wargoal = {
     type = annex_everything
     target = MNH
 }
-      create_wargoal = {
-    type = annex_everything
-    target = KAB
-}
+add_political_power = -30
 }
 }
 
@@ -2448,7 +2446,7 @@ focus = {
 	
    focus = {
 		id = BRA_liberalize_the_suffrage
-		icon = GFX_goal_focus_liberal_empire
+		icon = GFX_goal_focus_elections
 		cost = 70
 		x = 34
 		y = 13
@@ -2590,7 +2588,10 @@ focus = {
 	   
 
 	completion_reward = {
-    add_ideas = BRA_reformed_economy
+    add_timed_idea = {
+	idea = BRA_reformed_economy
+	days = 70
+	}
 	}
     }
 	
@@ -2757,7 +2758,7 @@ focus = {
 	completion_reward = {
 	add_tech_bonus = {
     bonus = 0.6
-    uses = 3
+    uses = 1
     category = electronics_devices_tech
     }
    }

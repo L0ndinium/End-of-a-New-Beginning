@@ -1334,3 +1334,5 @@
  ENG_idea_irb_ireland_desc:0 "Founded in 1858, the Irish Republican Brotherhood is a loose organization of Irish Seperatists that seek to end British Rule in Ireland."
  ENG_idea_trade_unions_banned:0 "Banned Trade Unions"
  ENG_idea_trade_unions_banned_desc:0 "This country has banned trade unions."
+ eoanb_idea_generic_focus_resources_nationalized:0 "Nationalization of Resources"
+ eoanb_idea_generic_focus_resources_nationalized_desc:0 "This country is enacting policies to ensure national resources are not being exported when needed at home."

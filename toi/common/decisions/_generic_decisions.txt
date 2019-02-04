@@ -465,7 +465,7 @@ economic_decisions = {
 				has_idea = oil_era
 			}
 			NOT = { has_idea = industrializing }
-			num_of_factories > 10
+			num_of_factories > 5
 		}
 		
 		fire_only_once = no

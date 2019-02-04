@@ -332,6 +332,19 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
+		eoanb_idea_generic_focus_resources_nationalized = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+				min_export = -0.1
+			}
+		}
 	}
 
 	# TECHNOLOGY

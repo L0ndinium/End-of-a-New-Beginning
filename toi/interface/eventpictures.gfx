@@ -2371,17 +2371,17 @@ spriteTypes = {
 	
 	#BRAZILIAN EVENTS
 	spriteType = {
-		name = "GFX_brasiliana"
+		name = "GFX_report_event_brasiliana"
 		texturefile = "gfx/event_pictures/brazil/brasiliana.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_salt"
+		name = "GFX_report_event_salt"
 		texturefile = "gfx/event_pictures/brazil/saltlake.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_ambition"
+		name = "GFX_report_event_ambition"
 		texturefile = "gfx/event_pictures/brazil/ambition.dds"
 	}
 	
