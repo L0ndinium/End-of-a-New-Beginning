@@ -2,39 +2,11 @@ bookmarks = {
   bookmark = {
     name = "BLOOD_AND_IRON_NAME"
     desc = "BLOOD_AND_IRON_DESC"
-    date = 1870.5.10
+    date = 1870.5.19
     picture = "GFX_select_date_1870"
     default_country = "PRS"
     default = yes
 
-    "ENG" = {
-      history = "ENG_BLOOD_AND_IRON_DESC"
-      ideology = centrism
-      ideas={
-        
-      }
-      focuses = {
-        
-      }
-    }
-    "USA" = {
-      history = "USA_BLOOD_AND_IRON_DESC"
-      ideology = traditional_conservatism
-      ideas={
-      }
-      focuses = {
-      }
-    }
-    "FRA" = {
-      history = "FRA_BLOOD_AND_IRON_DESC"
-      ideology = autocracy
-      ideas={
-        
-      }
-      focuses = {
-        
-      }
-    }
     "PRS" = {
       history = "PRS_BLOOD_AND_IRON_DESC"
       ideology = autocracy
@@ -43,14 +15,32 @@ bookmarks = {
       focuses = {
       }
     }
-    "RUS" = {
-      history = "RUS_BLOOD_AND_IRON_DESC"
+	
+    "FRA" = {
+      history = "FRA_BLOOD_AND_IRON_DESC"
       ideology = autocracy
+      ideas={
+      }
+      focuses = {
+      }
+    }
+	
+	"ENG" = {
+      history = "ENG_BLOOD_AND_IRON_DESC"
+      ideology = centrism
 		ideas = {
 		}
     }
-    "AUS" = {
-      history = "AUS_BLOOD_AND_IRON_DESC"
+	
+    "USA" = {
+      history = "USA_BLOOD_AND_IRON_DESC"
+      ideology = traditional_conservatism
+		ideas = {
+		}
+    }
+	
+    "RUS" = {
+      history = "RUS_BLOOD_AND_IRON_DESC"
       ideology = autocracy
       ideas={
       }
@@ -58,8 +48,8 @@ bookmarks = {
       }
     } 
 
-    "PIE" = {
-      history = "PIE_BLOOD_AND_IRON_DESC"
+    "ITA" = {
+      history = "ITA_BLOOD_AND_IRON_DESC"
       ideology = centrism
       ideas={
       }
@@ -72,62 +62,5 @@ bookmarks = {
 			history = "OTHER_EONAB_DESC"
 	}	
 
-  "HOL" = {
-      history = "HOL_BLOOD_AND_IRON_DESC"
-      ideology = traditional_conservatism
-      minor = yes
-      ideas={
-      }
-      focuses = {
-      }
-    } 
-
-  "CHI" = {
-      history = "CHI_BLOOD_AND_IRON_DESC"
-      ideology = autocracy
-      minor = yes
-    } 
-	
-	"BRA" = {
-  	  history = "BRA_BLOOD_AND_IRON_DESC"
-  	  ideology = autocracy
-  	  minor = yes
-	  ideas={
-      }
-    }     
-	
-	"BAV" = {
-      history = "BAV_BLOOD_AND_IRON_DESC"
-      ideology = autocracy
-      minor = yes
-      ideas={
-      }
-      focuses = {
-      }
-    }	
-	
-	"GRE" = {
-      history = "GRE_BLOOD_AND_IRON_DESC"
-      ideology = autocracy
-      minor = yes
-      ideas={
-      }
-      focuses = {
-      }
-    }
-
-    "JAP" = {
-      history = "JAP_BLOOD_AND_IRON_DESC"
-      ideology = fundamentalism
-      minor = yes
-    }
-	
-	"PRU" = {
-  	  history = "PRU_BLOOD_AND_IRON_DESC"
-  	  ideology = centrism
-  	  minor = yes
-	  ideas={
-      }
-    } 
   }
 }
