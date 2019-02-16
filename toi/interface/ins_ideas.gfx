@@ -1,0 +1,12 @@
+spriteTypes = { 
+
+	spriteType = {
+		name = "GFX_idea_INS_advisor_franz_junghuhn"
+		texturefile = "gfx/interface/ideas/INS/advisors/INS_idea_advisor_franz_junghuhn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_INS_advisor_hermann_von_rosenberg"
+		texturefile = "gfx/interface/ideas/INS/advisors/INS_idea_advisor_hermann_von_rosenberg.dds"
+	}
+}

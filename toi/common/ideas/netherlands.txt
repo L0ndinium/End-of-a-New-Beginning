@@ -30,7 +30,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = BEL_treaty_of_london
+			picture = HOL_Loss_of_the_Belgian_Revolution
 			
 			targeted_modifier = { tag = BEL attack_bonus_against = -0.1 }
 			targeted_modifier = { tag = BEL defense_bonus_against = -0.1 }
@@ -276,7 +276,7 @@ ideas = {
 		### MINISTERS ###
 	political_advisor = {
 
-		HOL_A_Vrolik = {
+		HOL_advisor_A_Vrolik = {
 
 		    allowed = { original_tag = HOL }
 
@@ -304,7 +304,7 @@ ideas = {
 			}
 		}
 
-		HOL_H_Forstner = {
+		HOL_advisor_H_Forstner = {
 
 			allowed = {
 				original_tag = HOL
@@ -332,7 +332,7 @@ ideas = {
 			}
 		}
 
-		HOL_C_Meurs = {
+		HOL_advisor_C_Meurs = {
 
 			allowed = {
 				original_tag = HOL

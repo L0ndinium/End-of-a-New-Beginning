@@ -4,4 +4,9 @@ spriteTypes = {
 		name = "GFX_goal_HOL_movement_of_grain"
 		texturefile = "gfx/interface/goals/Netherlands/movement_of_grain.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_HOL_Dutch_trading_spirit"
+		texturefile = "gfx/interface/goals/Netherlands/Dutch_trading_spirit.dds"
+	}
  }

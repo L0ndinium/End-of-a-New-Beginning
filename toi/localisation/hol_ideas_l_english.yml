@@ -28,3 +28,8 @@
  eoanb_HOL_Philips:0 "Philips & Co"
  eoanb_HOL_Shell:0 "N.V. Koninklijke Nederlandse Petroleum Maatschappij"
  eoanb_HOL_staats_spoorwegen:0 "Maatschappij tot Exploitatie van Staatsspoorwegen"
+
+ ###DUTCH EAST-INDIES####
+ INS_advisor_hermann_von_rosenberg:0 "C.B. Hermann baron von Rosenberg"
+ INS_advisor_franz_junghuhn:0 "Franz Wilhelm Junghuhn"
+ tt_idea_INS_rosenberg_resignation:0 "Accepted §WHermann von Rosenberg's§! resignation from the Military to become §Wbiologist§! and conduct §Gresearch§! for our nation."

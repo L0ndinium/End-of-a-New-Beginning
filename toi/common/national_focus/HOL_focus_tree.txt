@@ -25,7 +25,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HOL_trading_spirit
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_HOL_Dutch_trading_spirit
 		cost = 70
 		x = 0
 		y = 3

@@ -19,4 +19,9 @@ spriteTypes = {
 		name = "GFX_idea_HOL_advisor_johannes_willem_bergansius_advisor"
 		texturefile = "gfx/interface/ideas/HOL/advisors/HOL_idea_advisor_johannes_willem_bergansius_advisor.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_Loss_of_the_Belgian_Revolution"
+		texturefile = "gfx/interface/ideas/HOL/Loss_of_the_Belgian_Revolution.dds"
+	}
 }

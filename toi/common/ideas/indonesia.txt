@@ -1,0 +1,52 @@
+ideas = {
+    country = {
+
+	}
+
+	### DESIGNERS ###
+
+		### MINISTERS ###
+	political_advisor = {
+
+		INS_advisor_franz_junghuhn = {
+
+		    allowed = { original_tag = INS }
+
+		    research_bonus = { excavation_tech = 0.05 }
+			research_bonus = { history_archaeology_tech = 0.05 }
+
+			traits = { 
+				renowned_archaeologist
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		INS_advisor_hermann_von_rosenberg = {
+
+		    allowed = { original_tag = INS }
+
+		    available = {
+		    	custom_trigger_tooltip = {
+					tooltip = tt_idea_INS_rosenberg_resignation
+				}
+		    }
+
+		    research_bonus = { humanities_tech = 0.05 }
+		
+			traits = { 
+				renowned_biologist
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+   	### HIGH COMMAND ###
+   	high_command = {
+
+   	}
+}

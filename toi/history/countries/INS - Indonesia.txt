@@ -38,6 +38,8 @@
 	
   }
 
+  set_cosmetic_tag = HOL_INS_colony
+
   set_politics = {
     parties = {
       anarchism = {
@@ -200,4 +202,16 @@
   planning_skill = 1
   logistics_skill = 1
  }
+
+ create_corps_commander = {
+  name = "Hermann von Rosenberg"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+
 }
