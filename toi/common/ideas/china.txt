@@ -14,27 +14,9 @@ ideas = {
 				supply_consumption_factor = 0.1
 			}
 		}
-		ENG_idea_assault_canton = {
-			allowed = {
-				original_tag = ENG
-			}
-			
-			removal_cost = -1
-			
-			picture = generic_intel_bonus
-			
-			targeted_modifier = {
-				tag = CHI 
-				attack_bonus_against = 0.3
-			}
-		}
 		CHI_idea_TAI_defense = {
 			allowed = {
 				original_tag = TAI
-			}
-			
-			cancel = {
-				NOT = { has_global_flag = eoanb_flag_sow_ongoing }
 			}
 			
 			removal_cost = -1
@@ -43,6 +25,7 @@ ideas = {
 			
 			modifier = {
 				ai_focus_defense_factor = 1
+				army_core_defence_factor = 0.3
 			}
 		}
 	}

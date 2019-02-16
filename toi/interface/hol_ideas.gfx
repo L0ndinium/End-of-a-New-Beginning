@@ -1,0 +1,22 @@
+spriteTypes = { 
+
+	spriteType = {
+		name = "GFX_idea_HOL_advisor_pieter_philip_van_bosse"
+		texturefile = "gfx/interface/ideas/HOL/advisors/HOL_idea_advisor_pieter_philip_van_bosse.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_advisor_michel_henry_godefroi"
+		texturefile = "gfx/interface/ideas/HOL/advisors/HOL_idea_advisor_michel_henry_godefroi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_abraham_jacobus_frederik_egter_van_wissekerke"
+		texturefile = "gfx/interface/ideas/HOL/advisors/HOL_abraham_jacobus_frederik_egter_van_wissekerke.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_advisor_johannes_willem_bergansius_advisor"
+		texturefile = "gfx/interface/ideas/HOL/advisors/HOL_idea_advisor_johannes_willem_bergansius_advisor.dds"
+	}
+}

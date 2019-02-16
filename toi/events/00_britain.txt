@@ -1,6 +1,12 @@
 ﻿add_namespace = britain
+add_namespace = britainpolitical
 add_namespace = britainworkerunrest
 add_namespace = britainindia
+add_namespace = britaincanada
+add_namespace = britainafrica
+add_namespace = britainaustralia
+add_namespace = britainoceania
+add_namespace = britainnews
 
 ### NORMAL BRITISH EVENTS BELOW ###
 
@@ -28,6 +34,802 @@ country_event = {
 		hidden_effect = {
 			ENG = { set_country_flag = eoanb_flag_ENG_thames_polluted_stink }
 		}
+	}
+	
+}
+
+#The Sea Cable to America is finished
+country_event = {
+	id = britain.2
+	title = britain.2.t
+	desc = britain.2.d
+	picture = GFX_report_event_generic_sailship
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		NOT = { has_war_with = USA }
+		date > 1857.9.14
+	}
+	
+	option = {
+		name = britain.2.a
+		ai_chance = { factor = 100 }
+		add_political_power = 5
+	}
+	
+}
+
+#The Irish Republican Brotherhood is founded in Dublin on St. Patrick's Day
+country_event = {
+	id = britain.3
+	title = britain.3.t
+	desc = britain.3.d
+	picture = GFX_report_event_iww_demonstration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.3.a
+		ai_chance = { factor = 75 }
+		add_timed_idea = {
+			idea = ENG_idea_irb_ireland
+			days = 365
+		}
+	}
+	
+	option = {
+		name = britain.3.b
+		ai_chance = {
+			factor = 24
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -10
+		add_stability = -0.05
+		add_popularity = { ideology = traditional_conservatism popularity = 0.01 }
+	}
+	
+	option = {
+		name = britain.3.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		release_puppet = IRE
+	}
+	
+}
+
+#Karl Marx publishes "Critique of Political Economy"
+country_event = {
+	id = britain.4
+	title = britain.4.t
+	desc = britain.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		NOT = { has_global_flag = eoanb_flag_karl_marx_dead }
+		date > 1859.1.9
+		NOT = {
+			OR = {
+				has_government = social_egalitarianism
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+			}
+		}
+	}
+	
+	option = {
+		name = britain.4.a
+		ai_chance = { factor = 90 }
+		add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		add_popularity = { ideology = vanguard_communism popularity = 0.01 }
+	}
+	
+	option = {
+		name = britain.4.b
+		ai_chance = {
+			factor = 7
+		}
+		add_stability = -0.01
+		add_political_power = -60
+		add_popularity = { ideology = vanguard_communism popularity = -0.02 }
+		add_popularity = { ideology = social_egalitarianism popularity = -0.02 }
+		add_popularity = { ideology = collectivist_socialism popularity = -0.02 }
+	}
+	
+	option = {
+		name = britain.4.c
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.05
+		add_political_power = -20
+		add_popularity = { ideology = vanguard_communism popularity = 0.03 }
+		add_popularity = { ideology = social_egalitarianism popularity = 0.02 }
+		add_popularity = { ideology = collectivist_socialism popularity = 0.01 }
+	}
+	
+}
+
+#The Matrimonial Causes Act
+country_event = {
+	id = britain.5
+	title = britain.5.t
+	desc = britain.5.d
+	picture = GFX_report_event_uk_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		has_idea = parliamentary_suffrage
+		date > 1857.8.27
+	}
+	
+	option = {
+		name = britain.5.a
+		ai_chance = { factor = 95 }
+		add_political_power = -5
+		add_popularity = { ideology = centrism popularity = 0.01 }
+		add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+		hidden_effect = {
+			ENG = { country_event = { id = britain.6 } }
+		}
+	}
+	
+	option = {
+		name = britain.5.b
+		ai_chance = { 
+			factor = 5 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -5
+		add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+		add_popularity = { ideology = fundamentalism popularity = 0.01 }
+		hidden_effect = {
+			ENG = { country_event = { id = britain.6 } }
+		}
+	}
+	
+}
+
+#The Obscene Publications Act
+country_event = {
+	id = britain.6
+	title = britain.6.t
+	desc = britain.6.d
+	picture = GFX_report_event_uk_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.6.a
+		ai_chance = { factor = 90 }
+		add_political_power = -5
+		add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+	}
+	
+	option = {
+		name = britain.6.b
+		ai_chance = { 
+			factor = 10 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -5
+		add_popularity = { ideology = centrism popularity = 0.02 }
+		add_popularity = { ideology = fundamentalism popularity = -0.02 }
+	}
+	
+}
+
+#The HMS Defence catches fire off Woolwich Coast
+country_event = {
+	id = britain.7
+	title = britain.7.t
+	desc = britain.7.d
+	picture = GFX_report_event_generic_sailship
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1857.7.17
+	}
+	
+	option = {
+		name = britain.7.a
+		ai_chance = { factor = 100 }
+		add_political_power = -5
+		952 = { add_manpower = -17 }
+	}
+	
+}
+
+#Sheffield FC is founded as the worlds first football team
+country_event = {
+	id = britain.8
+	title = britain.8.t
+	desc = britain.8.d
+	picture = GFX_report_event_sheffield_fc
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		controls_state = 130
+		date > 1857.10.23
+	}
+	
+	option = {
+		name = britain.8.a
+		ai_chance = { factor = 80 }
+	}
+	
+	option = {
+		name = britain.8.b
+		ai_chance = { factor = 20 }
+	}
+	
+}
+
+#Big Ben is recast
+country_event = {
+	id = britain.9
+	title = britain.9.t
+	desc = britain.9.d
+	picture = GFX_report_event_big_ben
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		owns_state = 952
+		date > 1858.4.9
+	}
+	
+	option = {
+		name = britain.9.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Charles Dickens starts his reading tour
+country_event = {
+	id = britain.10
+	title = britain.10.t
+	desc = britain.10.d
+	picture = GFX_report_event_charles_dickens
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1858.4.28
+	}
+	
+	option = {
+		name = britain.10.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#26 June 1857 in Hyde Park: Queen Victoria awards the first Victorian Crosses for actions in the Crimean War
+country_event = {
+	id = britain.11
+	title = britain.11.t
+	desc = britain.11.d
+	picture = GFX_report_event_victoria_cross
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1857.6.25
+	}
+	
+	option = {
+		name = britain.11.a
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+		add_war_support = 0.01
+	}
+	
+}
+
+#Lionel de Rothschild becomes first jewish parliament member
+country_event = {
+	id = britain.12
+	title = britain.12.t
+	desc = britain.12.d
+	picture = GFX_report_event_lionel_rothschild
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		NOT = { has_idea = absolutism }
+		date > 1858.7.25
+	}
+	
+	option = {
+		name = britain.12.a
+		ai_chance = { factor = 98 }
+		add_political_power = 1
+		add_popularity = { ideology = centrism popularity = 0.01 }
+	}
+	
+	option = {
+		name = britain.12.b
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		add_stability = -0.01
+		add_popularity = { ideology = chauvinist_populism popularity = 0.01 }
+	}
+	
+	option = {
+		name = britain.12.c
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+		add_stability = -0.01
+		add_popularity = { ideology = fundamentalism popularity = 0.01 }
+	}
+	
+}
+
+#The Medical Act of 1858
+country_event = {
+	id = britain.13
+	title = britain.13.t
+	desc = britain.13.d
+	picture = GFX_report_event_british_belfast
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		NOT = { has_idea = absolutism }
+		date > 1858.8.1
+	}
+	
+	option = {
+		name = britain.13.a
+		ai_chance = { factor = 99 }
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = britain.13.b
+		ai_chance = { factor = 1 }
+		add_stability = -0.01
+		add_popularity = { ideology = fundamentalism popularity = 0.01 }
+	}
+	
+}
+
+#Bradford Sweets Poisoning
+country_event = {
+	id = britain.14
+	title = britain.14.t
+	desc = britain.14.d
+	picture = GFX_report_event_europe_funeral
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		owns_state = 130
+		date > 1858.10.29
+	}
+	
+	option = {
+		name = britain.14.a
+		ai_chance = { factor = 100 }
+		130 = { add_manpower = -21 }
+	}
+	
+}
+
+#Opening of the National Portrait Gallery
+country_event = {
+	id = britain.15
+	title = britain.15.t
+	desc = britain.15.d
+	picture = GFX_report_event_general_post_office
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		owns_state = 952
+		date > 1859.1.14
+	}
+	
+	option = {
+		name = britain.15.a
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
+	
+}
+
+#Charles Dickens: All the Year Round Magazine
+country_event = {
+	id = britain.16
+	title = britain.16.t
+	desc = britain.16.d
+	picture = GFX_report_event_all_the_year_round
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1859.4.29
+	}
+	
+	option = {
+		name = britain.16.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Richard Carrington observes a Solar Flare
+country_event = {
+	id = britain.17
+	title = britain.17.t
+	desc = britain.17.d
+	picture = GFX_report_event_british_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1859.9.1
+	}
+	
+	option = {
+		name = britain.17.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				NOT = { has_tech = early_thermodynamics_theories }
+			}
+			add_tech_bonus = { bonus = 0.2 uses = 1 technology = early_thermodynamics_theories }
+		}
+	}
+	
+}
+
+#"Royal Charter" Storm Disaster
+country_event = {
+	id = britain.18
+	title = britain.18.t
+	desc = britain.18.d
+	picture = GFX_report_event_generic_sailship
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1859.10.24
+	}
+	
+	option = {
+		name = britain.18.a
+		ai_chance = { factor = 100 }
+		add_manpower = -800
+		if = {
+			limit = {
+				has_equipment = { convoy > 100 }
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -70
+			}
+		}
+		add_political_power = -50
+		add_stability = -0.02
+		every_owned_state = {
+			limit = {
+				is_coastal = yes
+				is_in_home_area = yes
+			}
+			random_list = {
+				25 = {
+					damage_building = { type = infrastructure damage = 1 }
+				}
+				50 = {
+					damage_building = { type = infrastructure damage = 0.5 }
+				}
+				25 = {
+					damage_building = { type = infrastructure damage = 0.25 }
+				}
+			}
+		}
+	}
+	
+}
+
+### POLITICAL EVENTS FOR BRITAIN BELOW ###
+
+#Elections of 1859
+country_event = {
+	id = britainpolitical.1
+	title = britainpolitical.1.t
+	desc = britainpolitical.1.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		NOT = { has_idea = absolutism }
+		NOT = { has_idea = no_elections }
+		OR = {
+			has_government = centrism
+			has_government = traditional_conservatism
+		}
+		date > 1859.4.30
+	}
+	
+	option = {
+		name = britainpolitical.1.a
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				traditional_conservatism > 0.5
+			}
+			modifier = {
+				factor = 0.25
+				centrism < 0.5
+			}
+			modifier = {
+				factor = 0.25
+				centrism < 0.4
+			}
+			modifier = {
+				factor = 0.25
+				centrism < 0.3
+			}
+		}
+		if = {
+			limit = {
+				centrism > 0.5
+			}
+			set_politics = { ruling_party = centrism elections_allowed = no }
+			add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
+		}
+		if = {
+			limit = {
+				traditional_conservatism > 0.5
+			}
+			set_politics = { ruling_party = centrism elections_allowed = no }
+			add_popularity = { ideology = traditional_conservatism popularity = -0.02 }
+			add_stability = -0.1
+		}
+		if = {
+			limit = {
+				centrism < 0.5
+				traditional_conservatism < 0.5
+			}
+			set_politics = { ruling_party = centrism elections_allowed = no }
+			add_popularity = { ideology = centrism popularity = 0.05 }
+			add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+		}
+	}
+	
+	option = {
+		name = britainpolitical.1.b
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				centrism > 0.5
+			}
+			modifier = {
+				factor = 0.25
+				traditional_conservatism < 0.5
+			}
+			modifier = {
+				factor = 0.25
+				traditional_conservatism < 0.4
+			}
+			modifier = {
+				factor = 0.25
+				traditional_conservatism < 0.3
+			}
+		}
+		if = {
+			limit = {
+				traditional_conservatism > 0.5
+			}
+			set_politics = { ruling_party = traditional_conservatism elections_allowed = no }
+			add_popularity = { ideology = centrism popularity = -0.05 }
+		}
+		if = {
+			limit = {
+				centrism > 0.5
+			}
+			set_politics = { ruling_party = traditional_conservatism elections_allowed = no }
+			add_popularity = { ideology = centrism popularity = -0.02 }
+			add_stability = -0.1
+		}
+		if = {
+			limit = {
+				centrism < 0.5
+				traditional_conservatism < 0.5
+			}
+			set_politics = { ruling_party = traditional_conservatism elections_allowed = no }
+			add_popularity = { ideology = traditional_conservatism popularity = 0.05 }
+			add_popularity = { ideology = centrism popularity = 0.02 }
+		}
+	}
+	
+}
+
+#The counter-terrorism bill is proposed in reaction to the Orsini Affair
+country_event = {
+	id = britainpolitical.2
+	title = britainpolitical.2.t
+	desc = britainpolitical.2.d
+	picture = GFX_report_event_british_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		has_government = centrism
+		NOT = { has_idea = absolutism }
+		date > 1858.2.1
+		OR = {
+			FRA = { has_country_flag = fra_orsini_success }
+			FRA = { has_country_flag = fra_orsini_failure }
+		}
+	}
+	
+	option = {
+		name = britainpolitical.2.a
+		ai_chance = {
+			factor = 85
+		}
+		add_stability = 0.05
+		add_popularity = { ideology = traditional_conservatism popularity = 0.03 }
+		custom_effect_tooltip = eoanb_tt_ENG_event_2_a_political
+		hidden_effect = {
+			if = {
+				limit = {
+					is_historical_focus_on = yes
+				}
+				ENG = { country_event = { id = britainpolitical.3 random = 12 } }
+			}
+			else = {
+				random_list = {
+					80 = {
+						ENG = { country_event = { id = britainpolitical.3 random = 12 } }
+					}
+					20 = {
+						add_political_power = 1
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = britainpolitical.2.b
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -40
+		add_stability = -0.02
+		add_popularity = { ideology = centrism popularity = 0.01 }
+	}
+	
+}
+
+#Lord Palmerston resigns over the rejection of the counter-terrorism bill
+country_event = {
+	id = britainpolitical.3
+	title = britainpolitical.3.t
+	desc = britainpolitical.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britainpolitical.3.a
+		ai_chance = { factor = 90 }
+		retire_country_leader = yes
+		set_politics = { ruling_party = traditional_conservatism elections_allowed = no }
+		add_popularity = { ideology = traditional_conservatism popularity = 0.02 }
+		custom_effect_tooltip = eoanb_tt_ENG_event_3_a_political
+	}
+	
+	option = {
+		name = britainpolitical.3.b
+		ai_chance = {
+			factor = 8
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.1
+		add_political_power = -100
+		retire_country_leader = yes
+		add_popularity = { ideology = centrism popularity = 0.02 }
+	}
+	
+	option = {
+		name = britainpolitical.3.c
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		country_event = { id = britainpolitical.1 } 
+	}
+	
+}
+
+#Friendship treaty with Japan
+country_event = {
+	id = britainpolitical.4
+	title = britainpolitical.4.t
+	desc = britainpolitical.4.d
+	picture = GFX_report_event_british_museum_reading_room
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		country_exists = JAP
+		NOT = { has_war_with = JAP }
+		date > 1858.8.25
+	}
+	
+	option = {
+		name = britainpolitical.4.a
+		ai_chance = { factor = 90 }
+		add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_friendship }
+		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_friendship }
+	}
+	
+	option = {
+		name = britainpolitical.4.b
+		ai_chance = { factor = 10 }
+		add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_fauxpas }
+		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_fauxpas }
 	}
 	
 }
@@ -65,6 +867,162 @@ country_event = {
 	option = {
 		name = britainworkerunrest.1.a
 		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#The London Trades Council is founded
+country_event = {
+	id = britainworkerunrest.2
+	title = britainworkerunrest.2.t
+	desc = britainworkerunrest.2.d
+	picture = GFX_report_event_generic_rally
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		controls_state = 952
+		has_idea = ENG_idea_working_class_exploitation
+		NOT = {
+			OR = {
+				has_government = social_egalitarianism
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+			}
+		}
+		OR = {	
+			AND = {
+				date > 1858.5.10
+				check_variable = { ENG_worker_unrest > 25 }
+			}
+			AND = {
+				date > 1859.5.10
+				check_variable = { ENG_worker_unrest > 15 }
+			}
+			date > 1860.5.10
+		}
+	}
+
+	option = {
+		name = britainworkerunrest.2.a
+		ai_chance = { factor = 91 }
+		custom_effect_tooltip = eoanb_tt_ENG_event_2_a
+		add_stability = 0.02
+		add_popularity = { ideology = vanguard_communism popularity = 0.01 }
+		add_popularity = { ideology = social_egalitarianism popularity = 0.02 }
+		hidden_effect = {
+			add_to_variable = { var = ENG_worker_unrest value = 1 }
+		}
+	}
+	
+	option = {
+		name = britainworkerunrest.2.b
+		ai_chance = { 
+			factor = 8
+			modifier = {
+				factor = 0.25
+				is_historical_focus_on = yes
+			}
+		}
+		custom_effect_tooltip = eoanb_tt_ENG_event_2_b
+		add_stability = -0.03
+		add_political_power = -10
+		add_popularity = { ideology = vanguard_communism popularity = -0.01 }
+		add_popularity = { ideology = social_egalitarianism popularity = -0.01 }
+		add_popularity = { ideology = collectivist_socialism popularity = -0.01 }
+		hidden_effect = {
+			add_to_variable = { var = ENG_worker_unrest value = 4 }
+		}
+	}
+	
+	option = {
+		name = britainworkerunrest.2.c
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = eoanb_tt_ENG_event_2_c
+		add_political_power = -40
+		add_stability = -0.02
+		add_popularity = { ideology = vanguard_communism popularity = 0.02 }
+		add_popularity = { ideology = social_egalitarianism popularity = 0.04 }
+		add_popularity = { ideology = collectivist_socialism popularity = 0.01 }
+		hidden_effect = {
+			subtract_from_variable = { var = ENG_worker_unrest value = 1 }
+		}
+	}
+	
+}
+	
+### EVENTS RELATING TO BRITISH AFRICA BELOW ###
+
+#Lake Victoria discovered by John Hanning Speke
+country_event = {
+	id = britainafrica.1
+	title = britainafrica.1.t
+	desc = britainafrica.1.d
+	picture = GFX_report_event_lake_victoria
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		has_idea = ENG_Victoria
+		date > 1858.8.2
+	}
+	
+	option = {
+		name = britainafrica.1.a
+		ai_chance = { factor = 100 }
+		add_political_power = 10
+	}
+	
+}
+
+### EVENTS RELATING TO BRITISH CANADA BELOW ###
+
+#Choosing the Capital
+country_event = {
+	id = britaincanada.1
+	title = britaincanada.1.t
+	desc = britaincanada.1.d
+	picture = GFX_report_event_romania_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		has_idea = ENG_Victoria
+		CAN = { is_subject_of = ENG }
+		CAN = { 276 = { is_capital = yes } }
+		date > 1857.12.24
+	}
+	
+	option = {
+		name = britaincanada.1.a
+		ai_chance = { 
+			factor = 5 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = britaincanada.1.b
+		ai_chance = { factor = 80 }
+		CAN = { set_capital = 1310 }
+	}
+	
+	option = {
+		name = britaincanada.1.c
+		ai_chance = { 
+			factor = 15 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		CAN = { set_capital = 1311 }
 	}
 	
 }
@@ -245,6 +1203,140 @@ country_event = {
 	option = {
 		name = britainindia.4.b
 		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Hidden Event that assigns revolt willingness to minors (or not)
+country_event = {
+	id = britainindia.5
+	title = britainindia.5.t
+	desc = britainindia.5.d
+	
+	trigger = {
+		TAG = ENG
+		SRS = { has_war_with = RAJ }
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	hidden = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+			}
+			add_political_power = 1
+		}
+		else_if = {
+			limit = {
+				is_historical_focus_on = no
+			}
+			KAS = { 
+				random_list = {
+					35 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					65 = {
+						add_political_power = 1
+					}
+				}
+			}
+			KAR = { 
+				random_list = {
+					45 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					55 = {
+						add_political_power = 1
+					}
+				}
+			}
+			HYD = { 
+				random_list = {
+					70 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					30 = {
+						add_political_power = 1
+					}
+				}
+			}
+			REW = { 
+				random_list = {
+					50 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					50 = {
+						add_political_power = 1
+					}
+				}
+			}
+			BIK = { 
+				random_list = {
+					45 = {
+						set_country_flag = eoanb_flag_desire_to_join_sepoy
+					}
+					55 = {
+						add_political_power = 1
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = britainindia.5.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+### NEWS EVENTS RELATING TO BRITAIN BELOW ###
+
+#Britain bans Trade Unions
+news_event = {
+	id = britainnews.1
+	title = britainnews.1.t
+	desc = britainnews.1.d
+	picture = GFX_news_event_generic_rally2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britainnews.1.a
+		trigger = { TAG = ENG }
+	}
+	
+	option = {
+		name = britainnews.1.b
+		trigger = { 
+			NOT = { TAG = ENG }
+			OR = {
+				has_government = social_egalitarianism
+				has_government = vanguard_communism
+				has_government = collectivist_socialism
+			}
+		}
+	}
+	
+	option = {
+		name = britainnews.1.c
+		trigger = { 
+			NOT = { TAG = ENG }
+			NOT = {
+				OR = {
+					has_government = social_egalitarianism
+					has_government = vanguard_communism
+					has_government = collectivist_socialism
+				}
+			}
+		}
 	}
 	
 }

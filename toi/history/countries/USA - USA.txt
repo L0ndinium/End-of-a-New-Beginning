@@ -82,6 +82,9 @@
     }
 
     ruling_party = traditional_conservatism
+    last_election = "1856.11.5"
+    election_frequency = 48
+    elections_allowed = yes
   }
   
   add_opinion_modifier = { target = CHI modifier = eoanb_om_USA_CHI_barrier_forts }
@@ -187,7 +190,7 @@
   create_country_leader = {
     name = "Joseph Weydemeyer"
     desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    picture = ""
+    picture = "Portrait_USA_Joseph_Weydemeyer.dds"
     expire = "1947.1.1"
     ideology = marxism
   }
@@ -213,7 +216,7 @@
   create_country_leader = {
     name = "Josiah Warren"
     desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-    picture = ""
+    picture = "Portrait_USA_Josiah_Warren.dds"
     expire = "1886.5.2"
     ideology = anarchism_sub
     traits = {

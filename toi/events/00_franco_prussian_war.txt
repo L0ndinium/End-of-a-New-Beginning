@@ -377,6 +377,7 @@ country_event = {
 			FRA = { transfer_state = 42 }
 			FRA = { transfer_state = 984 }
 			FRA = { transfer_state = 1035 }
+			FRA = { set_country_flag = eoanb_flag_frace_won_fra_prs }
 			WUR = { transfer_state = 744 }
 			WUR = { transfer_state = 870 }
 			WUR = { transfer_state = 1033 }

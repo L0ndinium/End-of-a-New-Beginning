@@ -88,7 +88,7 @@ ideas = {
 			picture = FRA_amateur_tacticians
 			
 			modifier = {
-            conscription = 0.05
+            conscription = 0.025
 			planning_speed = -0.1
 			training_time_factor = 0.1
 			}
@@ -104,7 +104,7 @@ ideas = {
 			picture = FRA_amateur_tacticians
 			
 			modifier = {
-            conscription = 0.07
+            conscription = 0.035
 			planning_speed = -0.15
 			training_time_factor = 0.02
 			army_org_Factor = -0.02
@@ -126,21 +126,6 @@ ideas = {
 			}
 		}
 
-	BRA_southern_economic_boom = {
-			allowed = {
-				TAG = BRA
-			}
-			
-			removal_cost = -1
-			
-			picture = ITA_minor_trade_output
-			
-			modifier = {
-            consumer_goods_factor = -0.02
-			industrial_capacity_factory = 0.05
-			}
-		}
-
 	BRA_railway_connections = {
 			allowed = {
 				TAG = BRA
@@ -148,7 +133,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = state_country_tech_era_machine_era
+			picture = machine_era
 			
 			modifier = {
             consumer_goods_factor = -0.01
@@ -315,11 +300,7 @@ ideas = {
 			picture = military_junta
 			
 			modifier = {
-			conscription = 0.02
-			army_org_Factor = 0.02
-			army_attack_factor = 0.01
-			land_reinforce_rate	= 0.01
-			supply_consumption_factor = -0.15
+			army_org_Factor = 0.055
 			}
 		}
 
@@ -334,12 +315,79 @@ ideas = {
 			
 			modifier = {
 				war_support_factor = -0.10
+				stability_factor = -0.05
 			}
 
 			targeted_modifier = {
 				tag = PAR
 				attack_bonus_against = -0.5
 				defense_bonus_against = -0.3
+			}
+		}
+		
+		BRA_voluntarios_da_patria = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = chi_army_corruption2
+			
+			modifier = {
+	        conscription = 0.05
+			training_time_factor = -0.35
+			army_org_Factor = -0.15
+			}
+		}
+		
+		BRA_voluntarios_da_patria_2 = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = chi_army_corruption2
+			
+			modifier = {
+	        conscription = 0.05
+			training_time_factor = -0.40
+			army_org_Factor = -0.10
+			attack_bonus_against = 0.2
+			}
+		}
+		
+		BRA_post_war_complications = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = border_control
+			
+			modifier = {
+	        stability_factor = -0.15
+			war_support_factor = -0.25
+			political_power_factor = -0.45
+			}
+		}
+		
+		BRA_chaotic_outcome = {
+			allowed = {
+				TAG = BRA
+			}
+			
+			removal_cost = -1
+			
+			picture = anarchy
+			
+			modifier = {
+	        stability_factor = -0.35
+			war_support_factor = 0.15
+			political_power_factor = -0.50
+			army_org_Factor = -0.35
 			}
 		}
 }

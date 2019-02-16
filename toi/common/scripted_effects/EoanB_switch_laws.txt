@@ -1,0 +1,638 @@
+effect_increase_education = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = open_schools
+			}
+			swap_ideas = {
+				remove_idea = open_schools
+				add_idea = compulsory_education
+			}
+		}
+		if = {
+			limit = {
+				has_idea = privileged_education
+			}
+			swap_ideas = {
+				remove_idea = privileged_education
+				add_idea = open_schools
+			}
+		}
+		if = {
+			limit = {
+				has_idea = oral_tradition
+			}
+			swap_ideas = {
+				remove_idea = oral_tradition
+				add_idea = privileged_education
+			}
+		}
+	}
+}
+
+effect_decrease_education = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = privileged_education
+			}
+			swap_ideas = {
+				remove_idea = privileged_education
+				add_idea = oral_tradition
+			}
+		}
+		if = {
+			limit = {
+				has_idea = open_schools
+			}
+			swap_ideas = {
+				remove_idea = open_schools
+				add_idea = privileged_education
+			}
+		}
+		if = {
+			limit = {
+				has_idea = compulsory_education
+			}
+			swap_ideas = {
+				remove_idea = compulsory_education
+				add_idea = open_schools
+			}
+		}
+	}
+}
+
+effect_increase_religion = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = state_religion
+			}
+			swap_ideas = {
+				remove_idea = state_religion
+				add_idea = theocratic_state
+			}
+		}
+		if = {
+			limit = {
+				has_idea = secular_state
+			}
+			swap_ideas = {
+				remove_idea = secular_state
+				add_idea = state_religion
+			}
+		}
+		if = {
+			limit = {
+				has_idea = atheistic_state
+			}
+			swap_ideas = {
+				remove_idea = atheistic_state
+				add_idea = secular_state
+			}
+		}
+	}
+}
+
+effect_decrease_religion = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = secular_state
+			}
+			swap_ideas = {
+				remove_idea = secular_state
+				add_idea = atheistic_state
+			}
+		}
+		if = {
+			limit = {
+				has_idea = state_religion
+			}
+			swap_ideas = {
+				remove_idea = state_religion
+				add_idea = secular_state
+			}
+		}
+		if = {
+			limit = {
+				has_idea = theocratic_state
+			}
+			swap_ideas = {
+				remove_idea = theocratic_state
+				add_idea = state_religion
+			}
+		}
+	}
+}
+
+effect_increase_army_spending = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = five_percent
+			}
+			swap_ideas = {
+				remove_idea = five_percent
+				add_idea = ten_percent
+			}
+		}
+		if = {
+			limit = {
+				has_idea = three_percent
+			}
+			swap_ideas = {
+				remove_idea = three_percent
+				add_idea = five_percent
+			}
+		}
+		if = {
+			limit = {
+				has_idea = two_percent
+			}
+			swap_ideas = {
+				remove_idea = two_percent
+				add_idea = three_percent
+			}
+		}
+		if = {
+			limit = {
+				has_idea = one_percent
+			}
+			swap_ideas = {
+				remove_idea = one_percent
+				add_idea = two_percent
+			}
+		}
+	}
+}
+
+effect_decrease_army_spending = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = two_percent
+			}
+			swap_ideas = {
+				remove_idea = two_percent
+				add_idea = one_percent
+			}
+		}
+		if = {
+			limit = {
+				has_idea = three_percent
+			}
+			swap_ideas = {
+				remove_idea = three_percent
+				add_idea = two_percent
+			}
+		}
+		if = {
+			limit = {
+				has_idea = five_percent
+			}
+			swap_ideas = {
+				remove_idea = five_percent
+				add_idea = three_percent
+			}
+		}
+		if = {
+			limit = {
+				has_idea = ten_percent
+			}
+			swap_ideas = {
+				remove_idea = ten_percent
+				add_idea = five_percent
+			}
+		}
+		if = {
+			limit = {
+				has_idea = prussian_military_spendage
+			}
+			swap_ideas = {
+				remove_idea = prussian_military_spendage
+				add_idea = ten_percent
+			}
+		}
+	}
+}
+
+effect_increase_tax_rates = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = high_taxes
+			}
+			swap_ideas = {
+				remove_idea = high_taxes
+				add_idea = very_high_taxes
+			}
+		}
+		if = {
+			limit = {
+				has_idea = normal_taxes
+			}
+			swap_ideas = {
+				remove_idea = normal_taxes
+				add_idea = high_taxes
+			}
+		}
+		if = {
+			limit = {
+				has_idea = low_taxes
+			}
+			swap_ideas = {
+				remove_idea = low_taxes
+				add_idea = normal_taxes
+			}
+		}
+		if = {
+			limit = {
+				has_idea = very_low_taxes
+			}
+			swap_ideas = {
+				remove_idea = very_low_taxes
+				add_idea = low_taxes
+			}
+		}
+	}
+}
+
+effect_decrease_tax_rates = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = low_taxes
+			}
+			swap_ideas = {
+				remove_idea = low_taxes
+				add_idea = very_low_taxes
+			}
+		}
+		if = {
+			limit = {
+				has_idea = normal_taxes
+			}
+			swap_ideas = {
+				remove_idea = normal_taxes
+				add_idea = low_taxes
+			}
+		}
+		if = {
+			limit = {
+				has_idea = high_taxes
+			}
+			swap_ideas = {
+				remove_idea = high_taxes
+				add_idea = normal_taxes
+			}
+		}
+		if = {
+			limit = {
+				has_idea = very_high_taxes
+			}
+			swap_ideas = {
+				remove_idea = very_high_taxes
+				add_idea = high_taxes
+			}
+		}
+	}
+}
+
+effect_increase_cl_laws = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = cl_restricted
+			}
+			swap_ideas = {
+				remove_idea = cl_restricted
+				add_idea = cl_illegal
+			}
+		}
+		if = {
+			limit = {
+				has_idea = cl_legal
+			}
+			swap_ideas = {
+				remove_idea = cl_legal
+				add_idea =	cl_restricted
+			}
+		}
+	}
+}
+
+effect_decrease_cl_laws = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = cl_restricted
+			}
+			swap_ideas = {
+				remove_idea = cl_restricted
+				add_idea = cl_legal
+			}
+		}
+		if = {
+			limit = {
+				has_idea = cl_illegal
+			}
+			swap_ideas = {
+				remove_idea = cl_illegal
+				add_idea = cl_restricted
+			}
+		}
+	}
+}
+
+effect_increase_workhours = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = fourteen_hour_work_day
+			}
+			swap_ideas = {
+				remove_idea = fourteen_hour_work_day
+				add_idea = unlimited_work_day
+			}
+		}
+		if = {
+			limit = {
+				has_idea = twelve_hour_work_day
+			}
+			swap_ideas = {
+				remove_idea = twelve_hour_work_day
+				add_idea = fourteen_hour_work_day
+			}
+		}
+		if = {
+			limit = {
+				has_idea = ten_hour_work_day
+			}
+			swap_ideas = {
+				remove_idea = ten_hour_work_day
+				add_idea = twelve_hour_work_day
+			}
+		}
+		if = {
+			limit = {
+				has_idea = eight_hour_work_day
+			}
+			swap_ideas = {
+				remove_idea = eight_hour_work_day
+				add_idea = ten_hour_work_day
+			}
+		}
+	}
+}
+
+effect_decrease_workhours = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = ten_hour_work_day
+			}
+			swap_ideas = {
+				remove_idea = ten_hour_work_day
+				add_idea = eight_hour_work_day
+			}
+		}
+		if = {
+			limit = {
+				has_idea = twelve_hour_work_day
+			}
+			swap_ideas = {
+				remove_idea = twelve_hour_work_day
+				add_idea = ten_hour_work_day
+			}
+		}
+		if = {
+			limit = {
+				has_idea = fourteen_hour_work_day
+			}
+			swap_ideas = {
+				remove_idea = fourteen_hour_work_day
+				add_idea = twelve_hour_work_day
+			}
+		}
+		if = {
+			limit = {
+				has_idea = unlimited_work_day
+			}
+			swap_ideas = {
+				remove_idea = unlimited_work_day
+				add_idea = twelve_hour_work_day
+			}
+		}
+	}
+}
+
+effect_increase_growth = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = encouraged_growth
+			}
+			swap_ideas = {
+				remove_idea = encouraged_growth
+				add_idea = enforced_growth
+			}
+		}
+		if = {
+			limit = {
+				has_idea = stagnation_growth
+			}
+			swap_ideas = {
+				remove_idea = stagnation_growth
+				add_idea = encouraged_growth
+			}
+		}
+		if = {
+			limit = {
+				has_idea = disencouraged_growth
+			}
+			swap_ideas = {
+				remove_idea = disencouraged_growth
+				add_idea = stagnation_growth
+			}
+		}
+		if = {
+			limit = {
+				has_idea = restricted_growth
+			}
+			swap_ideas = {
+				remove_idea = restricted_growth
+				add_idea = disencouraged_growth
+			}
+		}
+	}
+}
+
+effect_decrease_growth = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = disencouraged_growth
+			}
+			swap_ideas = {
+				remove_idea = disencouraged_growth
+				add_idea = restricted_growth
+			}
+		}
+		if = {
+			limit = {
+				has_idea = stagnation_growth
+			}
+			swap_ideas = {
+				remove_idea = stagnation_growth
+				add_idea = disencouraged_growth
+			}
+		}
+		if = {
+			limit = {
+				has_idea = encouraged_growth
+			}
+			swap_ideas = {
+				remove_idea = encouraged_growth
+				add_idea = stagnation_growth
+			}
+		}
+		if = {
+			limit = {
+				has_idea = enforced_growth
+			}
+			swap_ideas = {
+				remove_idea = enforced_growth
+				add_idea = encouraged_growth
+			}
+		}
+	}
+}
+
+effect_increase_border = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = border_control
+			}
+			swap_ideas = {
+				remove_idea = border_control
+				add_idea = open_borders
+			}
+		}
+		if = {
+			limit = {
+				has_idea = closed_borders
+			}
+			swap_ideas = {
+				remove_idea = closed_borders
+				add_idea = border_control
+			}
+		}
+	}
+}
+
+effect_decrease_border = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = open_borders
+			}
+			swap_ideas = {
+				remove_idea = open_borders
+				add_idea = border_control
+			}
+		}
+		if = {
+			limit = {
+				has_idea = border_control
+			}
+			swap_ideas = {
+				remove_idea = border_control
+				add_idea = closed_borders
+			}
+		}
+	}
+}
+
+effect_increase_suffrage = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = universal_male_suffrage
+			}
+			swap_ideas = {
+				remove_idea = universal_male_suffrage
+				add_idea = universal_suffrage
+			}
+		}
+		if = {
+			limit = {
+				has_idea = property_owners_suffrage
+			}
+			swap_ideas = {
+				remove_idea = property_owners_suffrage
+				add_idea = universal_male_suffrage
+			}
+		}
+		if = {
+			limit = {
+				has_idea = parliamentary_suffrage
+			}
+			swap_ideas = {
+				remove_idea = parliamentary_suffrage
+				add_idea = property_owners_suffrage
+			}
+		}
+		if = {
+			limit = {
+				has_idea = absolutism
+			}
+			swap_ideas = {
+				remove_idea = absolutism
+				add_idea = parliamentary_suffrage
+			}
+		}
+	}
+}
+
+effect_decrease_suffrage = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = parliamentary_suffrage
+			}
+			swap_ideas = {
+				remove_idea = parliamentary_suffrage
+				add_idea = absolutism
+			}
+		}
+		if = {
+			limit = {
+				has_idea = property_owners_suffrage
+			}
+			swap_ideas = {
+				remove_idea = property_owners_suffrage
+				add_idea = parliamentary_suffrage
+			}
+		}
+		if = {
+			limit = {
+				has_idea = universal_male_suffrage
+			}
+			swap_ideas = {
+				remove_idea = universal_male_suffrage
+				add_idea = property_owners_suffrage
+			}
+		}
+		if = {
+			limit = {
+				has_idea = universal_suffrage
+			}
+			swap_ideas = {
+				remove_idea = universal_suffrage
+				add_idea = universal_male_suffrage
+			}
+		}
+	}
+}

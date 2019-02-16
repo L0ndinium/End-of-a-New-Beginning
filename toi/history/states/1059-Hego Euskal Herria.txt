@@ -19,10 +19,10 @@ state={
 			infrastructure = 6
 		}
 		add_core_of = SPR
-		add_core_of = BAS
+		#add_core_of = BAS
 	}
 
 	provinces={
-		740 932 3735 3737 3933 6756
+		740 3735 6756
 	}
 }

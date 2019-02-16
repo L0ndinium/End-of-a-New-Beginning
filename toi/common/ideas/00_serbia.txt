@@ -1,0 +1,202 @@
+ideas = {
+	country = {
+		SER_idea_Internal_Conflicts = {
+            allowed = {
+				always = yes
+			}
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.05
+			}
+        }
+        
+        SER_idea_1838constitution = {
+            allowed = {
+				always = yes
+			}
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_gain = -0.2
+			}
+        }
+        
+        SER_idea_1838constitution2 = {
+            allowed = {
+				always = yes
+			}
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_gain = -0.1
+			}
+        }
+        
+        SER_idea_serbianarmy = {
+            allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				war_support_factor = 0.2
+			}
+        }
+
+        SER_idea_alliance = {
+            allowed = {
+				always = yes
+			}
+
+			picture = FRA_amateur_tacticians
+			
+            modifier = {}
+        }
+	}
+   
+    #PEOPLE
+   
+    army_chief = {
+        SER_idea_hippolyte_mondain = {
+			
+			picture = generic_army_europe_6
+			
+			allowed = {
+				original_tag = SER
+			}
+						
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+    
+    head_of_state = {
+        SER_idea_blaznavac = {
+			
+			picture = "Portrait_SER_Blaznavac.dds"
+			
+			allowed = {
+				original_tag = SER
+			}
+						
+			traits = { silent_workhorse }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+    
+    #HIDDEN
+    
+    hidden_ideas = {
+        SER_idea_mobilization = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                mobilization_speed = 0.2
+            }
+        }
+        
+        SER_idea_attack = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                army_attack_factor = 0.1
+            }
+        }
+        
+        SER_idea_defense = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                army_defence_factor = 0.1
+            }
+        }
+        
+        SER_idea_moralefactor = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                army_morale_factor = 0.1 
+            }
+        }
+        
+        SER_idea_powergain = {
+            allowed = {
+				always = yes
+			}
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_gain = 0.5 
+			}
+        }
+        
+        SER_idea_factoryoutput = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        SER_idea_factoryef = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                production_factory_max_efficiency_factor = 0.05
+            }
+        }
+        
+        SER_idea_resourcegain = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                local_resources_factor = 0.1
+            }
+        }
+        
+        SER_idea_outofsupply = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                out_of_supply_factor = -0.2
+            }
+        }
+    }
+}

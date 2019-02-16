@@ -216,13 +216,13 @@ ideas = {
 			
 			modifier = {
 				surrender_limit = 0.5
-				army_core_defence_factor = 0.75
+				army_core_defence_factor = 1
 				army_core_attack_factor = 0.25
-				army_org_factor = 0.2
-				army_morale_factor = 0.1
+				army_org_factor = 0.25
+				army_morale_factor = 0.15
 				planning_speed = 1
-				army_defence_factor = 0.4
-				army_attack_factor = 0.2
+				army_defence_factor = 0.5
+				army_attack_factor = 0.25
 				army_speed_factor = 0.2
 			}
 		}
@@ -332,6 +332,19 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
+		eoanb_idea_generic_focus_resources_nationalized = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+				min_export = -0.1
+			}
+		}
 	}
 
 	# TECHNOLOGY
@@ -347,7 +360,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = tank_manufacturer limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA } }
 			}
 
 			cost = 150
@@ -373,7 +386,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = naval_manufacturer limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = ENG } }
 			}
 
 			cost = 150
@@ -390,9 +403,7 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 			
 			allowed = {
-				NOT = {
-					TAG = USA
-				}
+				NOT = { OR = { tag = USA tag = FRA tag = HOL tag = ENG } }
 			}
 			
 			cost = 150
@@ -409,9 +420,7 @@ ideas = {
 			picture = generic_naval_manufacturer_3
 			
 			allowed = {
-				NOT = {
-					TAG = USA
-				}
+				NOT = { OR = { tag = USA tag = FRA tag = ENG } }
 			}
 			
 			cost = 150
@@ -437,7 +446,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA } }
 			}
 
 			cost = 150
@@ -461,7 +470,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = industrial_concern_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = ENG tag = HOL } }
 			}
 
 			cost = 150
@@ -482,7 +491,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = ENG tag = HOL } }
 			}
 
 			cost = 150
@@ -503,7 +512,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern_2 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = HOL tag = ENG } }
 			}
 
 			cost = 150
@@ -524,7 +533,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern_3 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = HOL tag = ENG } }
 			}
 
 			cost = 150
@@ -550,7 +559,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = infantry_equipment_manufacturer_1 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = ENG } }
 			}
 
 			cost = 150
@@ -570,8 +579,8 @@ ideas = {
 			allowed = {
 				NOT = {
 					has_available_idea_with_traits = { idea = artillery_manufacturer_1 limit = 1 }
-				}
-				NOT = { OR = { tag = USA tag = PRS } }
+				}			
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = ENG } }
 			}
 
 			cost = 150
@@ -593,7 +602,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = captain_of_industry_1 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+			NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = HOL tag = OLD tag = ENG } }
 			}
 
 			traits = { captain_of_industry_1 }
@@ -605,7 +614,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = fortification_engineer_1 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = OLD } }
 			}
 			
 			traits = { fortification_engineer_1 }
@@ -617,7 +626,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = war_industrialist_1 limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = HOL tag = OLD } }
 			}
 			
 			traits = { war_industrialist_1 }
@@ -629,7 +638,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_pol_author limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = HOL tag = OLD } }
 			}
 			
 			traits = { eoanb_trait_pol_author }
@@ -641,7 +650,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_road_expert limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = OLD } }
 			}
 			
 			traits = { eoanb_trait_road_expert }
@@ -653,7 +662,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_work_minister limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA tag = BAV tag = OLD } }
 			}
 			
 			traits = { eoanb_trait_work_minister }
@@ -668,7 +677,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = army_chief_offensive_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS } }
 			}
 
 			traits = { army_chief_offensive_1 }
@@ -680,7 +689,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = army_chief_defensive_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS } }
 			}
 
 			traits = { army_chief_defensive_1 }
@@ -695,7 +704,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = navy_chief_decisive_battle_2 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA } }
 			}
 			
 			traits = { navy_chief_decisive_battle_2 }
@@ -710,7 +719,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = air_chief_all_weather_2 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA } }
 			}
 
 			traits = { air_chief_all_weather_2 }
@@ -725,7 +734,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = army_artillery_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS tag = ENG } }
 			}
 
 			traits = { army_artillery_1 }
@@ -737,7 +746,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = army_logistics_2 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS tag = ENG } }
 			}
 
 			traits = { army_logistics_2 }
@@ -749,7 +758,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = navy_fleet_logistics_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS tag = ENG } }
 			}
 
 			traits = { navy_fleet_logistics_1 }
@@ -761,7 +770,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = air_air_combat_training_2 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS tag = ENG } }
 			}
 
 			traits = { air_air_combat_training_2 }
@@ -773,7 +782,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_inf_defence_1 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS tag = ENG } }
 			}
 
 			traits = { eoanb_trait_inf_defence_1 }
@@ -785,7 +794,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = eoanb_trait_cav_general_2 limit = 1 }
 				}
-				NOT = { tag = USA }
+				NOT = { OR = { tag = USA tag = FRA tag = PRS tag = ENG } }
 			}
 
 			traits = { eoanb_trait_cav_general_2 }
@@ -800,7 +809,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = military_theorist limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 
 			research_bonus = {
@@ -816,7 +825,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = naval_theorist limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 
 			research_bonus = {
@@ -832,7 +841,7 @@ ideas = {
 				NOT = {
 					has_available_idea_with_traits = { idea = air_warfare_theorist limit = 1 }
 				}
-				NOT = { OR = { tag = USA tag = PRS } }
+				NOT = { OR = { tag = USA tag = PRS tag = FRA } }
 			}
 
 			research_bonus = {

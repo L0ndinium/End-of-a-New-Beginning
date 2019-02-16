@@ -1,0 +1,99 @@
+﻿1857.1.1 = {
+  capital = 363
+
+  oob = "NCA_1857"
+
+  set_convoys = 0
+
+  set_research_slots = 2
+
+  add_ideas = { 
+  
+    #POLITICS
+		  
+    hos_is_leader
+    pre_industrial_era
+    agrarian
+    no_heir
+    absolute_monarchy
+
+    civilian_economy
+    limited_exports
+    one_percent
+    low_taxes
+	cl_legal
+
+    stagnation_growth
+    closed_borders
+	limited_conscription
+    tribal_slavery
+    absolutism
+
+    no_constitution
+    no_elections
+
+    oral_tradition
+    state_religion
+	religion_protestant
+    #NATIONAL SPIRITS
+	
+  }
+
+  set_politics = {
+    parties = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 100
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 0
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+
+	  ruling_party = traditional_conservatism
+    election_frequency = 48
+    elections_allowed = yes
+  }
+
+  set_technology = {
+	infantry_weapons = 1
+	start_build_tech = 1
+	tech_infantry_napoleonic_uniform = 1
+	tech_naval_1812_frigate = 1
+  }
+
+  # POLITICAL LEADERS
+
+  create_country_leader = {
+	name = "Leader"
+	desc = ""
+	picture = ""
+	expire = "2100.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+}

@@ -1,0 +1,65 @@
+SER_ctg_withdrawal = {
+    SER_decisions_houses = {
+
+		icon = generic_political_discourse
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			TAG = SER
+            has_completed_focus = SER_Turkish_Withdrawal
+		}
+
+		fire_only_once = yes
+		cost = 75
+        days_remove = 60
+         
+        modifier = {
+            industrial_capacity_factory = 0.1
+        }        
+       
+        remove_effect = {
+            add_war_support = 0.02
+        }
+       
+		ai_will_do = {
+			base = 1
+		}
+	}
+    
+    SER_decisions_buy = {
+
+		icon = generic_political_discourse
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			TAG = SER
+            has_completed_focus = SER_Turkish_Withdrawal
+		}
+
+		fire_only_once = yes
+		cost = 100
+        days_remove = 30
+         
+        modifier = {
+            political_power_gain = -0.4
+        }        
+       
+        remove_effect = {
+            add_command_power = 20
+            add_timed_idea = {
+                idea = SER_idea_factoryoutput
+                days = 100
+            }
+        }
+       
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

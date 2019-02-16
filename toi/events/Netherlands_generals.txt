@@ -1,0 +1,308 @@
+﻿add_namespace = holland_generals
+
+####Johannes Willem Berganius promotion
+country_event = {
+	id = holland_generals.1
+	title = holland_generals.1.t
+	desc = holland_generals.1.d
+
+	trigger = {
+	  date < 1887.12.12
+	  date > 1886.12.12
+
+	  original_tag = HOL
+
+	  HOL = {
+	     has_unit_leader = 18151
+	    }
+	}
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	hidden = yes
+	
+	immediate = { 
+	    HOL = {
+         every_unit_leader = {
+         	limit = { has_id = 18151 }
+         	set_unit_leader_flag = promotion
+         	unit_leader_event = {
+         		id = holland_generals.6
+           }
+          }
+        }
+    }
+}
+
+####Johan Wilhelm Blanken promotion
+country_event = {
+	id = holland_generals.2
+	title = holland_generals.2.t
+	desc = holland_generals.2.d
+
+	trigger = {
+	  date < 1861.19.02
+	  date > 1861.19.02
+
+	  original_tag = HOL
+
+	  HOL = {
+	     has_unit_leader = 18152
+	    }
+	}
+	
+	hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+
+	immediate = { 
+	    HOL = {
+         every_unit_leader = {
+         	limit = { has_id = 18152 }
+         	set_unit_leader_flag = promotion
+         	unit_leader_event = {
+         		id = holland_generals.6
+           }
+          }
+        }
+    }
+	
+}
+
+###Huibert Gerard Boumeester promotie
+country_event = {
+	id = holland_generals.3
+	title = holland_generals.3.t
+	desc = holland_generals.3.d
+
+	trigger = {
+	  date < 1878.16.01
+	  date > 1878.16.01
+
+	  original_tag = INS
+
+	  INS = {
+	     has_unit_leader = 18153
+	    }
+	}
+	
+	is_triggered_only = no
+	fire_only_once = yes
+
+	hidden = yes
+
+	immediate = { 
+	    INS = {
+         every_unit_leader = {
+         	limit = { has_id = 18153 }
+         	set_unit_leader_flag = promotion
+         	unit_leader_event = {
+         		id = holland_generals.6
+           	}
+         }
+        }
+    }
+}
+
+### EVENT WHERE DUTCH EAST INDIES GIVES UP A GENERAL ###
+country_event = {
+	id = holland_generals.4
+	title = holland_generals.4.t
+	desc = holland_generals.4.d
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	immediate = {
+	 hidden_effect = {
+	 	HOL = {
+	 		save_event_target_as = netherlands_name
+	  	}
+	 }
+	}
+	
+	option = {
+		name = holland_generals.4.a
+		ai_chance = { factor = 100 }
+
+		INS = {
+         random_unit_leader = {
+         	set_nationality = HOL
+         	set_unit_leader_flag = taken_by_holland
+         	}
+
+         HOL = {
+         	every_unit_leader = {
+         		limit = { has_unit_leader_flag = taken_by_holland }
+         		add_unit_leader_trait = HOL_borrowed_general
+         	unit_leader_event = {
+         		id = holland_generals.5
+           }
+          }
+         }
+        }
+	}
+}
+
+### EVENT WHERE HOL GETS NOTIFIED WHICH GENERAL HE GOT ###
+unit_leader_event = {
+	id = holland_generals.5
+	title = holland_generals.5.t
+	desc = holland_generals.5.d
+	
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	immediate = {
+	 hidden_effect = {
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = taken_by_holland }
+	 		save_event_target_as = taken_by_hol
+	  }
+	 }
+	}
+
+	option = {
+		name = holland_generals.5.a
+
+		custom_effect_tooltip = HOL_took_general
+
+		hidden_effect = {
+		every_unit_leader = {
+		limit = { has_unit_leader_flag = taken_by_holland }
+		clr_unit_leader_flag = taken_by_holland
+		set_unit_leader_flag = taken_by_holland_2
+		}
+	   }
+	}	
+}
+
+#### PROMOTION EVENT DYNAMIC ###
+unit_leader_event = {
+	id = holland_generals.6
+	title = holland_generals.6.t
+	desc = holland_generals.6.d
+	
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	immediate = {
+	 hidden_effect = {
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = promotion }
+	 		save_event_target_as = promotion_name
+	 	}
+	 }
+	}
+
+	option = {
+		name = holland_generals.6.a
+
+		every_unit_leader = {
+         limit = { has_unit_leader_flag = promotion }
+		 	promote_leader = yes
+
+		 clr_unit_leader_flag = promotion
+		}
+	}	
+}
+
+### EVENT WHERE HOL GIVES GENERAL BACK ###
+country_event = {
+	id = holland_generals.7
+	title = holland_generals.7.t
+	desc = holland_generals.7.d
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	hidden = yes
+	
+	immediate = {
+        HOL = {
+         every_unit_leader = {
+         	limit = { has_unit_leader_flag = taken_by_holland_2 }
+         	unit_leader_event = {
+         		id = holland_generals.8
+          	}
+         }
+        }
+	}
+}
+
+### EVENT WHICH SHOWS THAT THE GENERAL IS GOING BYE BYE ###
+unit_leader_event = {
+	id = holland_generals.8
+	title = holland_generals.8.t
+	desc = holland_generals.8.d
+	
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	immediate = {
+	 hidden_effect = {
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = taken_by_holland_2 }
+	 		save_event_target_as = taken_name
+	  	}
+	 }
+	}
+
+	option = {
+		name = holland_generals.8.a
+
+		HOL = {
+		 every_unit_leader = {
+         	limit = { has_unit_leader_flag = taken_by_holland_2 }
+         		remove_unit_leader_trait = HOL_borrowed_general
+		 		set_nationality = INS
+		 	}
+
+		 INS = {
+         every_unit_leader = {
+         	limit = { has_unit_leader_flag = taken_by_holland_2 }
+         		unit_leader_event = {
+         		id = holland_generals.9
+           		}
+		  	}
+		 }
+		}
+	}	
+}
+
+### EAST INDIES GETS TO SEE WHICH LEADER THEY GOT BACK ###
+unit_leader_event = {
+	id = holland_generals.9
+	title = holland_generals.9.t
+	desc = holland_generals.9.d
+	
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	immediate = {
+	 hidden_effect = {
+	 	every_unit_leader = {
+	 		limit = { has_unit_leader_flag = taken_by_holland_2 }
+	 		save_event_target_as = taken_name_2
+	  	}
+	 }
+	}
+
+	option = {
+		name = holland_generals.9.a
+
+		custom_effect_tooltip = HOL_took_general_2
+
+		hidden_effect = {
+		every_unit_leader = {
+			limit = { has_unit_leader_flag = taken_by_holland_2 }
+			clr_unit_leader_flag = taken_by_holland_2
+			}
+	    }
+	}	
+}

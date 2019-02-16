@@ -36,7 +36,8 @@
     state_religion
 	religion_protestant
          #NATIONAL SPIRITS
-	
+	  CSA_strong_aristocrats_3
+    CSA_confederate_government
   }
 
   set_politics = {
@@ -51,10 +52,10 @@
         popularity = 0
       }
       social_egalitarianism = {
-        popularity = 0
+        popularity = 5
       }
       centrism = {
-        popularity = 30
+        popularity = 25
       }
       traditional_conservatism = {
         popularity = 70

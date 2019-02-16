@@ -1,0 +1,10 @@
+﻿l_english:
+ HOL_land_reclaimation:0 "Polders and canals"
+ eoanb_decision_canals_noord_zuid_holland:0 "Dig canals in Noord- and Zuid-Holland"
+ eoanb_decision_canals_limburg_brabant_zeeuw:0 "Dig canals in Brabant, Limburg and Zeeuws-Vlaanderen"
+ eoanb_decision_canals_overijssel_ommelanden_friesland:0 "Dig canals in Overijssel, Ommelanden and Friesland"
+ eoanb_decision_canals_nieuwe_waterweg:0 "Dig the 'Nieuwe Waterweg'"
+ eoanb_decision_canals_amsterdam_rijnkanaal:0 "Dig the 'Amsterdam-Rijnkanaal'"
+ eoanb_decision_canals_noordzee_kanaal:0 "Dig the 'Noordzee Kanaal'"
+ HOL_KNIL_general_exchange:0 "Borrow Generals from the KNIL"
+ eoanb_decision_HOL_take_KNIL_general:0 "Borrow a KNIL General from our East-Indies"

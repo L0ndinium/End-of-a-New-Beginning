@@ -3218,6 +3218,7 @@ focus_tree = {
 			custom_effect_tooltip = 16_USA_tt
 			custom_effect_tooltip = USA_reconstruction_end
 			set_country_flag = USA_Reconstruction_Ended
+			country_event = { id = usa.95 }
 		}
 	}
 	focus = {

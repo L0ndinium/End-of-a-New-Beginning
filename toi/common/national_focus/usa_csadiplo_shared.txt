@@ -12,6 +12,9 @@
 				has_completed_focus = USA_norton_declare_temporary_government
 			}
 		}
+		bypass = {
+			NOT = { has_idea = usa_slavery_law }
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = usa_slavery_law
@@ -38,6 +41,22 @@
 					has_completed_focus = USA_norton_absolute_government
 					has_completed_focus = USA_norton_constitutional_government
 					has_completed_focus = USA_norton_parliamentary_government
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = vanguard_communism
+						has_government = collectivist_socialism
+						has_government = social_egalitarianism
+						has_government = anarchism
+					}
+				}
+				OR = {
+					has_completed_focus = USA_mhc_proletariat_dictatorship
+					has_completed_focus = USA_mhc_proletariat_democracy
+					has_completed_focus = USA_mhc_social_democracy
+					has_completed_focus = USA_mhc_anarchism
 				}
 			}
 		}

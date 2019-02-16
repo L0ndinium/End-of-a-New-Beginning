@@ -15,7 +15,15 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
-
+			1933 = {
+				bunker = 1
+			}
+			556 = {
+				bunker = 1
+			}
+			2022 = {
+				bunker = 1
+			}
 		}
 
 	}

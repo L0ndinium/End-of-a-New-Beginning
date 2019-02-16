@@ -1,0 +1,27 @@
+state={
+	id=1316
+	name="STATE_1316"
+	resources={
+		wood=3
+	}
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		add_claim_by = BEL
+		victory_points = {
+			11562 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		11562 
+	}
+	manpower=204000
+	buildings_max_level_factor=1
+	state_category="rural"
+}

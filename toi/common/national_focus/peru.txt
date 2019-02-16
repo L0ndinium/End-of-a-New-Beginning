@@ -186,7 +186,10 @@ focus_tree = {
 		cost = 70
 		
 	   available = {
+	   AND = {
 	    has_war	= no
+		has_completed_focus = PRU_fuerza_y_gloria
+		}
 	   }
 	   
 		
@@ -198,6 +201,7 @@ focus_tree = {
 		}
 
 	}
+	
 	
 	focus = {
 		id = PRU_solve_external_conflicts
@@ -814,7 +818,44 @@ custom_effect_tooltip = PRU_custom_effect_americanist_tt
 			}
 }
 	}
-	
+
+	focus = {
+		id = PRU_solve_internal_conflicts
+		icon = GFX_goal_generic_national_unity
+		cost = 70
+		
+	  available = {
+	  OR = {
+	  has_completed_focus = PRU_americanist_policy
+	  has_completed_focus = PRU_uniting_our_nation
+	  }
+	  }
+		
+		x = 18
+		y = 8
+		completion_reward = {
+		add_stability = 0.015
+		remove_ideas = PRU_post_cw_instability
+		}
+
+	}
+
+	focus = {
+		id = PRU_finish_congress_reunions
+		icon = GFX_focus_athens_university
+		cost = 70
+		
+	  prerequisite = {
+	  focus = PRU_solve_internal_conflicts
+	  }
+		
+		x = 18
+		y = 9
+		completion_reward = {
+		add_political_power = 10
+		}
+
+	}		
 	
 
 	}	

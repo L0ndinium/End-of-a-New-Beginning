@@ -487,7 +487,7 @@
  ideological_promoter:0 "(Ideological Promoter)"
 
  oil_magnate:0 "Oil Magnate"
- clever_buisnessman:0 "Clever Buisnessman"
+ clever_buisnessman:0 "Clever Businessman"
  railroad_tycoon:0 "Railroad Tycoon"
  influencial_writer:0 "Influencial Writer"
  innovative_engineer:0 "Innovative Engineer"
@@ -506,3 +506,9 @@
   
  hos_trait_partially_paralyzed:0 "Partially Paralyzed"
  hos_trait_colonial_monarch:0 "Colonial Monarch"
+
+ #HOL General traits
+ HOL_borrowed_general:0 "Generaal uit de Tropen"
+ HOL_willems_orde:0 "Militaire Willems-Orde"
+ HOL_orde_nederlandse_leeuw:0 "Orde van de Nederlandse Leeuw"
+ HOL_orde_oranje_nassau:0 "Orde van Oranje-Nassau"

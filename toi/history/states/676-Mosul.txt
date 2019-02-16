@@ -19,6 +19,7 @@ state={
 			10106 1 
 		}
 		add_core_of = OTO
+		add_core_of = IRQ
 	}
 	
 	provinces={

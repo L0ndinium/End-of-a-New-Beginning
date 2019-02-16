@@ -1,0 +1,37 @@
+﻿division_template = {
+  name = "VRC Regiment"
+
+  regiments = {
+    irregular_infantry = { x = 0 y = 0 }
+	irregular_infantry = { x = 0 y = 1 }
+	irregular_infantry = { x = 0 y = 2 }
+	irregular_infantry = { x = 0 y = 3 }
+  }
+}
+
+units = {
+	division= {
+		name = "First VRC Regiment"
+		location = 6103
+		division_template = "VRC Regiment"
+		start_experience_factor = 0.2
+	}
+	division= {
+		name = "Second VRC Regiment"
+		location = 6103
+		division_template = "VRC Regiment"
+		start_experience_factor = 0.2
+	}
+	division= {
+		name = "Third VRC Regiment"
+		location = 6103
+		division_template = "VRC Regiment"
+		start_experience_factor = 0.2
+	}
+	division= {
+		name = "Fourth VRC Regiment"
+		location = 6103
+		division_template = "VRC Regiment"
+		start_experience_factor = 0.2
+	}
+}

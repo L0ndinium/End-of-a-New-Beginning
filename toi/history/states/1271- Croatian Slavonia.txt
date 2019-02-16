@@ -1,0 +1,27 @@
+
+state={
+	id=1271
+	name="STATE_1271" # Croatian Slavonia
+	manpower = 37965
+
+	resources {
+		wood = 2
+		iron = 1
+	}
+
+	state_category = enclave
+
+	history={
+		owner = AUS
+		buildings = {
+		infrastructure = 3 
+		
+		}
+		add_core_of = AUS
+		add_core_of = CRO
+    }
+	
+	provinces={
+		9608
+	}
+}

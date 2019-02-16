@@ -670,5 +670,19 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+	### MILITARY HIGH COMMAND TRAITS
+	
+	eoanb_trait_high_rank_vrc = { 
+		sprite = 6
+		
+		conscription = 0.001
+		out_of_supply_factor = -0.05
+		army_core_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 }

@@ -570,6 +570,60 @@ country_event = { # Monaco votes to join France
   }
 }
 
+country_event = { # Kabyle startup event
+  id = nap_france.21
+  title = nap_france.21.t
+  desc = nap_france.21.d
+  
+  hidden = yes
+
+  is_triggered_only = yes
+
+  fire_only_once = yes
+
+  immediate = {
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		# France Algeria will annex Beni Abbas by event
+		BAB = {
+			set_equipment_fraction = 0
+		}
+		country_event = { id = nap_france.22 days = 10 }
+	}
+	else = {
+		# Get wargoal to play the Grand Kabyle campaign
+		create_wargoal = {
+			type = annex_everything
+			target = BAB
+		}
+	}
+  }
+}
+
+country_event = { # Kabyle startup event
+  id = nap_france.22
+  title = nap_france.22.t
+  desc = nap_france.22.d
+  
+  hidden = yes
+
+  is_triggered_only = yes
+
+  fire_only_once = yes
+
+  immediate = { # Simulate the end of the Grand Kabyle campaign
+	FRA = {
+		army_experience = 10
+	}
+    ALG = {
+		annex_country = { target = BAB }
+	}
+	news_event = { id = nap_france_flavor.22 }
+  }
+}
+
 #----------------------------------------------------------------------------------------------
 # FLAVOR EVENTS - 1857 TO 1870
 #----------------------------------------------------------------------------------------------
@@ -1557,8 +1611,10 @@ country_event = { # Algerian natives discontent with their situation (FRA vision
 
   trigger = {
     tag = FRA
-    has_completed_focus = FRA_submit_kabyle
     has_completed_focus = FRA_keep_authoritarian_empire
+    ALG = {
+		controls_state = 513
+	}
   }
 
   mean_time_to_happen = {
@@ -1695,8 +1751,11 @@ country_event = { # The Kabyle Revolt (ALG version)
 
   immediate = {
     hidden_effect = {
-      ALG = {
-        create_country_leader = {
+      #ALG = {
+      #  declare_war_on = { target = ALG type = annex_everything }
+      #}
+      KBY = {
+		create_country_leader = {
           name = "Abdelkader ibn Muhieddine"
           desc = ""
           picture = "Portrait_KBY_Abdelkader_ibn_Muhieddine.dds"
@@ -1705,9 +1764,6 @@ country_event = { # The Kabyle Revolt (ALG version)
           traits = {
           }
         }
-        declare_war_on = { target = ALG type = annex_everything }
-      }
-      KBY = {
         transfer_state = 460
         load_oob = "KBY_REVOLT"
         declare_war_on= {
@@ -1833,10 +1889,6 @@ country_event = { # The integration of Southern Algeria into our colony
   }
 
   fire_only_once = yes
-
-  mean_time_to_happen = {
-    days = 2
-  }
 
   option = { # As it should be
     name = nap_france.153.a
@@ -1991,90 +2043,6 @@ country_event = { # The Decree for the Assemblée Générale
     name = nap_france.207.a
     gov_change_to_parliamentary_monarchy = yes
   }
-}
-
-#----------------------------------------------------------------------------------------------
-# FRANCO-PRUSSIAN WAR
-#----------------------------------------------------------------------------------------------
-
-country_event = { # Call for Peace
-  id = nap_france.301
-  title = nap_france.301.t
-  desc = nap_france.301.d
-  picture = GFX_report_event_nap_france_peace_prussia
-
-  fire_only_once = yes
-
-  trigger = {
-    has_country_flag = fra_nap_iii_captured
-    tag = FRA
-    PRS = {
-      controls_state = 16
-    }
-  }
-
-    mean_time_to_happen = {
-    days = 10
-    }
-
-  option = {
-      name = nap_france.301.a #Ask for Peace
-      ai_chance = { factor = 99 }
-      PRS = {
-        country_event = { days = 1 id = nap_france.302 }
-      }
-    }
-    option = {
-      name = nap_france.301.b #Continue the War
-      ai_chance = { factor = 1 }
-      add_political_power = -300
-    }
-}
-
-country_event = { # France ask for peace
-  id = nap_france.302
-  title = nap_france.302.t
-  desc = nap_france.302.d
-  is_triggered_only = yes
-  picture = GFX_report_event_nap_france_peace_prussia
-
-  option = {
-      name = nap_france.302.a # OK
-      ai_chance = { factor = 95 }
-      FRA = {
-        country_event = { days = 1 id = nap_france.303 }
-      }
-    }
-    option = {
-      name = nap_france.302.b # No Way
-      ai_chance = { factor = 5 }
-      add_political_power = -300
-    }
-}
-
-country_event = { # Prussian Conditions
-  id = nap_france.303
-  title = nap_france.303.t
-  desc = nap_france.303.d
-  is_triggered_only = yes
-
-  option = {
-      name = nap_france.303.a # Accept
-      ai_chance = { factor = 95 }
-      PRS = { 
-      transfer_state = 28
-      white_peace = {
-        tag = FRA
-      }
-    }
-    set_country_flag = fra_prs_war_defeat
-    #add_ideas = FRA_unstable_government
-    }
-    option = {
-      name = nap_france.303.b # Refuse
-      ai_chance = { factor = 5 }
-      add_political_power = -300
-    }
 }
 
 #----------------------------------------------------------------------------------------------
@@ -3723,12 +3691,6 @@ country_event = { # Orsini Affair
       picture = "Portrait_FRA_Eugenie_de_Montijo.dds"
       ideology = despotism
     }
-    ENG = {
-      country_event = {
-        id = vbritain.3
-        days = 1
-      }
-    }
     add_political_power = -100
     set_country_flag = fra_orsini_success
     add_ideas = FRA_idea_orsini_regency_empress
@@ -3741,12 +3703,6 @@ country_event = { # Orsini Affair
     name = nap_france.398.b
     ai_chance = { factor = 80 }
     add_stability = -0.05
-    ENG = {
-      country_event = {
-        id = vbritain.3
-        days = 1
-      }
-    }
     set_country_flag = fra_orsini_failure
     hidden_effect = { 
       news_event = { id = nap_france_flavor.21 } 
@@ -3756,12 +3712,6 @@ country_event = { # Orsini Affair
     name = nap_france.398.c
     ai_chance = { factor = 15 }
     add_stability = -0.15
-    ENG = {
-      country_event = {
-        id = vbritain.3
-        days = 1
-      }
-    }
     create_country_leader = {
       name = "Regency Council"
       picture = "Portrait_FRA_Regency_Council.dds"

@@ -105,7 +105,6 @@
     name = "Carl Gustaf Rudolf Cederström"
     picture = "Portrait_SAC_Carl_Gustaf_Rudolf_Cederstrom.dds"
     traits = { }
-    id = 18570000
     skill = 3
     attack_skill = 1
     defense_skill = 1

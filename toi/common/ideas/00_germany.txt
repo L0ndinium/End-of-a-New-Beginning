@@ -596,6 +596,38 @@ ideas = {
 				MONTHLY_POPULATION = -0.3
 			}
 		}
+		GER_idea_heligoland_payment = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		GER_idea_heligoland_payment_ENG = {
+			allowed = {
+				original_tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_central_management
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
 	}
 	naval_manufacturer = {
 	

@@ -52,7 +52,10 @@ set_technology = {
     state_religion
 	religion_protestant
          #NATIONAL SPIRITS
-    
+    AST_aboriginal_tribes
+    AST_unexplored_lands
+    AST_eureka
+    AST_gold_rush
   }
 
   ENG = {

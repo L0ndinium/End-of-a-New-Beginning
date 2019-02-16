@@ -15,15 +15,13 @@ ideas = {
 			
 			targeted_modifier = { 
 				tag = RUS 
-				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
 			}
 			
 			modifier = {
-				army_core_attack_factor	= 0.2
-				army_core_defence_factor  = 0.4
-				attrition = -0.2
-                supply_consumption_factor = -0.15
+				army_core_defence_factor  = 0.25
+				attrition = -0.05
+                supply_consumption_factor = -0.1
 				ai_focus_aggressive_factor = -0.5
 			}
 		}
@@ -42,10 +40,8 @@ ideas = {
 			picture = AF_T_small_kingdom
 			
 			modifier = {
-				army_core_attack_factor	= 0.1  
-				army_core_defence_factor  = 0.3
-				attrition = -0.1 
-                supply_consumption_factor = -0.1
+				army_core_defence_factor  = 0.15
+                supply_consumption_factor = -0.05
 			}
 		}
 		

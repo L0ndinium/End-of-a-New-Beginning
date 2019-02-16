@@ -197,6 +197,25 @@ default_peace = {
 				}
 			}
 		}
+		#No puppet China before 1900 for Opium War purposes
+		modifier = {
+			factor = 0
+			date > 1900.1.1
+			FROM = {
+				TAG = CHI
+			}
+		}
+		#Don't puppet if you can take states instead
+		modifier = {
+			factor = 0
+			FROM = {
+				num_claimed_peace_conference_neighbour_states = {
+					owner = ROOT
+					count < 1
+				}
+				num_of_controlled_states > 1
+			}
+		}
 	}
 
 	# ROOT = Taker, FROM = State

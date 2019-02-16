@@ -18,6 +18,27 @@ state={
 		}
 		buildings = {
 			infrastructure = 0
+			4888 = {
+				bunker = 1
+			}
+			7270 = {
+				bunker = 1
+			}
+			12815 = {
+				bunker = 1
+			}
+			4536 = {
+				bunker = 1
+			}
+			12846 = {
+				bunker = 1
+			}
+			10834 = {
+				bunker = 1
+			}
+			10865 = {
+				bunker = 1
+			}
 		}
 	}
 

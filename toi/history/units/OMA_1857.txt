@@ -16,4 +16,14 @@ units = {
 			division_template = "Arabian Infantry"
 			start_experience_factor = 0.2
 		}
+		navy = {
+		name = "Omani Trade Fleet"
+		base = 10760
+		location = 10760  # Wilhemshaven
+		ship = { name = "Jewel of Muscat" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+		ship = { name = "Al Nizwa" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+		ship = { name = "Omani Frigate I" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+		ship = { name = "Omani Frigate II" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+		ship = { name = "Omani Frigate III" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+	}
 }

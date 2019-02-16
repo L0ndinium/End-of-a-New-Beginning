@@ -270,6 +270,11 @@ spriteTypes = {
 		name = "GFX_idea_religion_secular"
 		texturefile = "gfx/interface/ideas/laws/religion_secular.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_pagan"
+		texturefile = "gfx/interface/ideas/laws/religion_pagan.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_religion_shiite"
@@ -546,6 +551,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_usa_slavery_law"
 		texturefile = "gfx/interface/ideas/laws/population_discrimination_laws_usa_slavery_law.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slavery_all_but_name"
+		texturefile = "gfx/interface/ideas/laws/population_discrimination_laws_slavery_all_but_name.dds"
 	}
 
 		# SUFFRAGE LAWS

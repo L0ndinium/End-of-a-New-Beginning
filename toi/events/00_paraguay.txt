@@ -237,10 +237,6 @@ country_event = {
 		
 		option = {
 			name = par.7.a
-			add_timed_idea = {
-				idea = BRA_not_prepared_paraguay
-				days = 500
-			}
 			add_ideas = BRA_not_prepared_paraguay
 		}
 			

@@ -90,6 +90,34 @@ ideas = {
 			}
 		}
 
+
+		CAN_idea_toronto = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+     		conscription = 0.05
+			}
+		}
+
+		CAN_idea_montreal = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+     		research_time_factor = -0.01
+			}
+		}
+
+		
+
+
 		##############
 
 		BCO_idea_fraser_canyon_gold_rush = {
@@ -137,3 +165,5 @@ ideas = {
 		}
 	}
 }
+
+

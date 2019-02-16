@@ -7,6 +7,14 @@
   
   set_research_slots = 2
 
+  JAP = {
+      set_autonomy = {
+        target = TOS
+        autonomous_state = autonomy_puppet
+        freedom_level = 0.3
+      }
+  }
+
   add_ideas = { 
     #POLITICS 
 		  
@@ -33,7 +41,7 @@
 
     privileged_education
     state_religion
-	religion_animist
+	religion_shinto
          #NATIONAL SPIRITS
 	
   }
@@ -62,10 +70,10 @@
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 10
+        popularity = 0
       }
       autocracy = {
-        popularity = 90
+        popularity = 100
       }
       fundamentalism = {
         popularity = 0
@@ -83,15 +91,23 @@
   }
 
   # POLITICAL LEADERS
+  
+  create_country_leader = {
+    name = "Yamauchi Toyonori"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_TOS_yamaouchi_toyonori.dds"
+    expire = "1900.1.1"
+    ideology = despotism
+  }
+
 
   create_country_leader = {
-  name = "Toyonori Yamauchi"
-  desc = "POLITICS_TEMP_DESC"
-  picture = "Portrait_TOS_Toyonori_Yamauchi.dds"
-  expire = "1900.1.1"
-  ideology = despotism
-  traits = {
-
+    name = "Yamauchi Toyoshige"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_TOS_yamauchi_toyoshige.dds"
+    expire = "1900.1.1"
+    ideology = despotism
   }
+
 }
 }

@@ -293,7 +293,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_resource = {
-				type = steel
+				type = iron
 				amount = 3
 				state = 816
 			}
@@ -1350,7 +1350,7 @@ focus_tree = {
 		x = 15
 		y = 8
 		completion_reward = {
-			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2500 producer = POR }
+			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 250 producer = POR }
 		}
 	}
 	
@@ -1371,7 +1371,7 @@ focus_tree = {
 		x = 17
 		y = 8
 		completion_reward = {
-			add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 2500 producer = POR }
+			add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 250 producer = POR }
 		}
 	}
 	

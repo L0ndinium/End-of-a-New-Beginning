@@ -1,0 +1,1097 @@
+﻿add_namespace = freedom_index
+
+news_event = {
+    id = freedom_index.0
+    picture = GFX_report_event_election_vote
+    
+    is_triggered_only = yes
+
+    hidden = yes
+
+    immediate = {
+
+        set_variable = {
+            var = global.global_liberty
+            value = 0
+        }
+
+        set_variable = {
+            var = global.global_industrial_liberty
+            value = 0
+        }
+
+        set_variable = {
+            var = global.global_agrarian_liberty
+            value = 0
+        }
+
+        every_country = {
+
+            #Initial calculation
+            #Whenever this calculation runs, also add modified_liberty, which is a separate variable that stores liberty
+            #from events, decisions and other sources
+            set_variable = {
+                var = liberty
+                value = 50
+            }
+
+            clamp_variable = {
+                var = liberty
+                min = 0
+                max = 100
+            }
+
+            add_to_variable = { liberty = modified_liberty }
+
+            #Education laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = open_schools
+                        has_idea = compulsory_education
+                    }
+                }
+                add_to_variable = { liberty = 2 }
+            }
+
+            #Population laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = encouraged_growth
+                        has_idea = disencouraged_growth
+                    }
+                }
+                add_to_variable = { liberty = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = enforced_growth
+                        has_idea = restricted_growth
+                    }
+                }
+                add_to_variable = { liberty = -10 }
+            }
+
+            #Border laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = closed_borders
+                    }
+                }
+                add_to_variable = { liberty = -10 }
+            }
+
+            #Slavery & racial laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = usa_slavery_law
+                        has_idea = slavery
+                        has_idea = tribal_slavery
+                    }
+                }
+                add_to_variable = { liberty = -20 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = racial_laws
+                    }
+                }
+                add_to_variable = { liberty = -20 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = segregation
+                    }
+                }
+                add_to_variable = { liberty = -15 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = limited_equality
+                    }
+                }
+                add_to_variable = { liberty = -10 }
+            }
+
+            #Conscription laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = limited_conscription
+                    }
+                }
+                add_to_variable = { liberty = -4 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = extensive_conscription
+                    }
+                }
+                add_to_variable = { liberty = -8 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = service_by_requirement
+                    }
+                }
+                add_to_variable = { liberty = -12 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = all_adults_serve
+                    }
+                }
+                add_to_variable = { liberty = -16 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = scraping_the_barrel
+                    }
+                }
+                add_to_variable = { liberty = -20 }
+            }
+
+            #Suffrage laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = absolutism
+                    }
+                }
+                add_to_variable = { liberty = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = property_owners_suffrage
+                    }
+                }
+                add_to_variable = { liberty = 5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = universal_male_suffrage
+                    }
+                }
+                add_to_variable = { liberty = 10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = universal_suffrage
+                    }
+                }
+                add_to_variable = { liberty = 20 }
+            }
+
+            #Governmental laws
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = constitution_adopted
+                    }
+                }
+                add_to_variable = { liberty = 10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = human_rights
+                    }
+                }
+                add_to_variable = { liberty = 10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = totalitarian_dictatorship
+                        has_idea = military_junta
+                    }
+                }
+                add_to_variable = { liberty = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = absolute_monarchy
+                    }
+                }
+                add_to_variable = { liberty = -2 }
+            }
+
+            #Election laws
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = limited_elections
+                    }
+                }
+                add_to_variable = { liberty = 2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = free_elections
+                    }
+                }
+                add_to_variable = { liberty = 5 }
+            }
+
+            #Religious laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = atheistic_state
+                        has_idea = theocratic_state
+                    }
+                }
+                add_to_variable = { liberty = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = secular_state
+                    }
+                }
+                add_to_variable = { liberty = 5 }
+            }
+
+            #Economic control laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = low_economic_mobilisation
+                    }
+                }
+                add_to_variable = { liberty = -2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = partial_economic_mobilisation
+                    }
+                }
+                add_to_variable = { liberty = -4 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = war_economy
+                    }
+                }
+                add_to_variable = { liberty = -6 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = tot_economic_mobilisation
+                    }
+                }
+                add_to_variable = { liberty = -8 }
+            }
+
+            #Trade laws
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = closed_economy
+                    }
+                }
+                add_to_variable = { liberty = -5 }
+            }
+
+            #Tax rates
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = very_high_taxes
+                    }
+                }
+                add_to_variable = { liberty = -4 }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = high_taxes
+                    }
+                }
+                add_to_variable = { liberty = -2 }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = low_taxes
+                    }
+                }
+                add_to_variable = { liberty = 1 }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = very_low_taxes
+                    }
+                }
+                add_to_variable = { liberty = 2 }
+            }
+
+            #Press laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = state_controlled_press
+                    }
+                }
+                add_to_variable = { liberty = -2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = free_press
+                    }
+                }
+                add_to_variable = { liberty = 2 }
+            }
+
+            #Freedom of assembly
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_banned
+                    }
+                }
+                add_to_variable = { liberty = -6 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_state_only
+                    }
+                }
+                add_to_variable = { liberty = -4 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_restricted_attendance
+                    }
+                }
+                add_to_variable = { liberty = -2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_free_assembly
+                    }
+                }
+                add_to_variable = { liberty = 2 }
+            }
+
+            #Trade unions
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = tu_free_unions
+                    }
+                }
+                add_to_variable = { liberty = 5 }
+            }
+
+            #An accountable civilian police force makes civil liberties easier to uphold
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = law_police_force
+                    }
+                }
+                add_to_variable = { liberty = 5 }
+            }
+
+            #Child labor
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = cl_legal
+                    }
+                }
+                add_to_variable = { liberty = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = cl_illegal
+                    }
+                }
+                add_to_variable = { liberty = 2 }
+            }
+
+            #Work hours
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = unlimited_work_day
+                    }
+                }
+                add_to_variable = { liberty = -3 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = fourteen_hour_work_day
+                    }
+                }
+                add_to_variable = { liberty = -2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = twelve_hour_work_day
+                    }
+                }
+                add_to_variable = { liberty = -1 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = eight_hour_work_day
+                    }
+                }
+                add_to_variable = { liberty = 1 }
+            }
+
+            #Land property
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = lp_serfdom
+                    }
+                }
+                add_to_variable = { liberty = -10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = lp_collectivization
+                        has_idea = lp_land_estates
+                    }
+                }
+                add_to_variable = { liberty = -5 }
+            }
+
+            #Justice system - court laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = kangaroo_court
+                    }
+                }
+                add_to_variable = { liberty = -20 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = biased_courtroom
+                    }
+                }
+                add_to_variable = { liberty = -10 }
+            }
+
+            #Now add this country's liberty to the global liberty index.
+            #Scale it for population. Bigger countries have a bigger effect on global liberty average
+            set_variable = { pop_modified_liberty = liberty }
+            
+            #Set a liberty level for all industrial era nations. This is separate to non-industrial nations, which tend to be less free overall, but rely on more traditional systems
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pre_industrial_era
+                    }                
+                }
+            multiply_variable = { pop_modified_liberty = big_calcs_country_pop }
+            add_to_variable = { global.global_industrial_liberty = pop_modified_liberty }
+            add_to_variable = { global.global_liberty = pop_modified_liberty }   
+            }
+
+            #Set a liberty level for all agrarian nations
+            if = {
+                limit = {
+                    has_idea = pre_industrial_era               
+                }
+            multiply_variable = { pop_modified_liberty = big_calcs_country_pop }
+            add_to_variable = { global.global_agrarian_liberty = pop_modified_liberty }
+            add_to_variable = { global.global_liberty = pop_modified_liberty }   
+            }
+        }
+
+        #Now we are done with this country, we can create a global average liberty index
+        divide_variable = { global.global_liberty = global.global_pop }
+        divide_variable = { global.global_industrial_liberty = global.global_industrial_pop }
+        divide_variable = { global.global_agrarian_liberty = global.global_agrarian_pop }
+    }
+}
+
+news_event = {
+    id = freedom_index.1
+    picture = GFX_report_event_election_vote
+    
+    is_triggered_only = yes
+
+    hidden = yes
+
+    immediate = {
+
+        set_variable = {
+            var = global.global_consciousness
+            value = 0
+        }
+
+        set_variable = {
+            var = global.global_industrial_consciousness
+            value = 0
+        }
+
+        set_variable = {
+            var = global.global_agrarian_consciousness
+            value = 0
+        }
+
+        every_country = {
+
+            #Initial calculation
+            #Whenever this calculation runs, also add modified_consciousness, which is a separate variable that stores consciousness
+            #from events, decisions and other sources
+            set_variable = {
+                var = consciousness
+                value = 50
+            }
+
+            clamp_variable = {
+                var = consciousness
+                min = 0
+                max = 100
+            }
+
+            add_to_variable = { consciousness = modified_consciousness }
+
+            #Border laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = closed_borders
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            #Suffrage laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = absolutism
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = property_owners_suffrage
+                    }
+                }
+                add_to_variable = { consciousness = 5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = universal_male_suffrage
+                    }
+                }
+                add_to_variable = { consciousness = 10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = universal_suffrage
+                    }
+                }
+                add_to_variable = { consciousness = 20 }
+            }
+
+            #Governmental laws
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = constitution_adopted
+                    }
+                }
+                add_to_variable = { consciousness = 10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = human_rights
+                    }
+                }
+                add_to_variable = { consciousness = 10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = totalitarian_dictatorship
+                        has_idea = military_junta
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = absolute_monarchy
+                    }
+                }
+                add_to_variable = { consciousness = -2 }
+            }
+
+            #Election laws
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = limited_elections
+                    }
+                }
+                add_to_variable = { consciousness = 3 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = free_elections
+                    }
+                }
+                add_to_variable = { consciousness = 10 }
+            }
+
+            #Religious laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = atheistic_state
+                        has_idea = theocratic_state
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = secular_state
+                    }
+                }
+                add_to_variable = { consciousness = 5 }
+            }
+
+            # Discount the effect of American slavery, because of its deep institutionalisation
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = usa_slavery_law
+                    }
+                }
+                add_to_variable = { consciousness = -10 }
+            }
+
+            #Education laws
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = privileged_education
+                    }
+                    NOT = {
+                        OR = {
+                            has_government = autocracy
+                        }
+                    }
+                }
+                add_to_variable = { consciousness = 5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = open_schools
+                    }
+                    NOT = {
+                        OR = {
+                            has_government = vanguard_communism
+                            has_government = chauvinist_populism
+                        }
+                    }
+                }
+                add_to_variable = { consciousness = 10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = compulsory_education
+                    }
+                    NOT = {
+                        OR = {
+                            has_government = vanguard_communism
+                            has_government = chauvinist_populism
+                        }
+                    }
+                }
+                add_to_variable = { consciousness = 20 }
+            }
+
+            # Negative modifiers for authoritarian education schemes
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = open_schools
+                    }
+                    # Has an authoritarian government type
+                    OR = {
+                        has_government = vanguard_communism
+                        has_government = chauvinist_populism
+                    }
+                    
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = compulsory_education
+                    }
+                    # Has an authoritarian government type
+                    OR = {
+                        has_government = vanguard_communism
+                        has_government = chauvinist_populism
+                    }
+                }
+                add_to_variable = { consciousness = -15 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = privileged_education
+                    }
+                    # Has a monarchist or religious government type
+                    OR = {
+                        has_government = autocracy
+                        has_government = fundamentalism
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            #Economic control laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = low_economic_mobilisation
+                    }
+                }
+                add_to_variable = { consciousness = -2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = partial_economic_mobilisation
+                    }
+                }
+                add_to_variable = { consciousness = -4 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = war_economy
+                    }
+                }
+                add_to_variable = { consciousness = -6 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = tot_economic_mobilisation
+                    }
+                }
+                add_to_variable = { consciousness = -8 }
+            }
+
+            #Trade laws
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = closed_economy
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            #Child labor
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = cl_legal
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = cl_illegal
+                    }
+                }
+                add_to_variable = { consciousness = 2 }
+            }
+
+            #Press laws
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = state_controlled_press
+                    }
+                }
+                add_to_variable = { consciousness = -10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = censored_press
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            #Scientific funding has a small effect on consciousness, as educated professionals receive stability
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = sfund_regular_state_sponsorship
+                    }
+                }
+                add_to_variable = { consciousness = 2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = sfund_excellent_state_sponsorship
+                    }
+                }
+                add_to_variable = { consciousness = 5 }
+            }
+
+            #Freedom of assembly
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_banned
+                    }
+                }
+                add_to_variable = { consciousness = -20 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_state_only
+                    }
+                }
+                add_to_variable = { consciousness = -15 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_restricted_attendance
+                    }
+                }
+                add_to_variable = { consciousness = -10 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = foa_non_socialist
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            #Trade unions
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = tu_prohibited
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = tu_free_unions
+                    }
+                }
+                add_to_variable = { consciousness = 5 }
+            }
+
+            #Work hours
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = unlimited_work_day
+                    }
+                }
+                add_to_variable = { consciousness = -3 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = fourteen_hour_work_day
+                    }
+                }
+                add_to_variable = { consciousness = -2 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = twelve_hour_work_day
+                    }
+                }
+                add_to_variable = { consciousness = -1 }
+            }
+
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = eight_hour_work_day
+                    }
+                }
+                add_to_variable = { consciousness = 2 }
+            }
+
+            #Land property
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = lp_serfdom
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            #Healthcare. Poor healthcare limits the freedom of citizens to be politically active.
+            if = {
+                limit = {
+                    OR = {
+                        has_idea = hc_no_healthcare
+                    }
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+
+            #Now add this country's consciousness to the global consciousness index.
+            #Scale it for population. Bigger countries have a bigger effect on global consciousness average
+            set_variable = { pop_modified_consciousness = consciousness }
+            
+            #Set a consciousness level for all industrial era nations. This is separate to non-industrial nations, which tend to be less free overall, but rely on more traditional systems
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pre_industrial_era
+                    }                
+                }
+            multiply_variable = { pop_modified_consciousness = big_calcs_country_pop }
+            add_to_variable = { global.global_industrial_consciousness = pop_modified_consciousness }
+            add_to_variable = { global.global_consciousness = pop_modified_consciousness }   
+            }
+
+            #Set a consciousness level for all agrarian nations
+            if = {
+                limit = {
+                    has_idea = pre_industrial_era               
+                }
+            multiply_variable = { pop_modified_consciousness = big_calcs_country_pop }
+            add_to_variable = { global.global_agrarian_consciousness = pop_modified_consciousness }
+            add_to_variable = { global.global_consciousness = pop_modified_consciousness }   
+            }
+        }
+
+        #Now we are done with this country, we can create a global average consciousness index
+        divide_variable = { global.global_consciousness = global.global_pop }
+        divide_variable = { global.global_industrial_consciousness = global.global_industrial_pop }
+        divide_variable = { global.global_agrarian_consciousness = global.global_agrarian_pop }
+    }
+}

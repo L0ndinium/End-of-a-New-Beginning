@@ -1673,6 +1673,16 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_goal_focus_develop_cities_berlin"
+		texturefile = "gfx/interface/goals/prussia/focus_develop_cities_berlin.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_handelsgesetz_law"
+		texturefile = "gfx/interface/goals/prussia/focus_handelsgesetz_law.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_goal_focus_prussian_victorian_army"
 		texturefile = "gfx/interface/goals/prussia/focus_prussian_victorian_army.dds"
 	}
@@ -1681,7 +1691,52 @@ spriteTypes = {
 		name = "GFX_goal_focus_crown_of_prussia"
 		texturefile = "gfx/interface/goals/prussia/focus_crown_of_prussia.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussian_economy"
+		texturefile = "gfx/interface/goals/prussia/focus_prussian_economy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_paris_declaration"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_paris_declaration.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_reform"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_reform.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_rhineland_industry"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_rhineland_industry.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_silesian_steel"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_silesian_steel.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_von_moltke"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_von_moltke.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_war_ministers"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_war_ministers.dds"
+	}
 
+	SpriteType = {
+		name = "GFX_goal_focus_berlin_anhalt_rail"
+		texturefile = "gfx/interface/goals/prussia/focus_berlin_anhalt_rail.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_trade_france_focus"
+		texturefile = "gfx/interface/goals/prussia/focus_trade_france_focus.dds"
+	}
+	
 	### United States
 
 	SpriteType = {
@@ -1791,6 +1846,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/brazil/uruguay.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_focus_paraguay"
+		texturefile = "gfx/interface/goals/brazil/paraguay.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_BRA_goal_research_treaty"
 		texturefile = "gfx/interface/goals/brazil/BRA_research_treaty.dds"
@@ -1809,6 +1869,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_focus_germancom"
 		texturefile = "gfx/interface/goals/brazil/germancommunities.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_focus_portugalcom"
+		texturefile = "gfx/interface/goals/brazil/portuguesecommunities.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_focus_caxias_plan"
+		texturefile = "gfx/interface/goals/brazil/caxias_plan.dds"
 	}
 
 	### Belgium
@@ -2625,6 +2695,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/austria/focus_zamg.dds"
 		}
 
+        #Serbia
+        
+    SpriteType = {
+		name = "GFX_focus_SER_Alive_Aleksandar"
+		texturefile = "gfx/interface/goals/serbia/focus_SER_Alive_Aleksandar.dds"
+	}
+    SpriteType = {
+		name = "GFX_focus_SER_Death_Aleksandar"
+		texturefile = "gfx/interface/goals/serbia/focus_SER_Death_Aleksandar.dds"
+	}
+        
 		#New Piedmont Icons
 	SpriteType = {
 		name = "GFX_focus_PIE_Coring"
@@ -2889,4 +2970,72 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/qing/goal_russian_department.dds"
 	}
 	
+	#Japan 
+	
+	SpriteType = {
+		name = "GFX_focus_JAP_agree_to_trade"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_agree_to_trade.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_k"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_k.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_katana_production"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_katana_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_kor-jap_alliance"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_kor-jap_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_path_of_wisdom"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_path_of_wisdom.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_reject_opium"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_reject_opium.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_samurai_never_surrender"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_samurai_never_surrender.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_samurai_tactics"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_samurai_tactics.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_science_eng_navy"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_science_eng_navy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_science_fra_chem"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_science_fra_chem.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_JAP_science_hol_bio"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_science_hol_bio.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_JAP_science_usa_ind"
+		texturefile = "gfx/interface/goals/japan/focus_JAP_science_usa_ind.dds"
+	}	
+	
+	#EoaNB Generics 
+	SpriteType = {
+		name = "GFX_focus_Colonial_Troops"
+		texturefile = "gfx/interface/goals/general/focus_Colonial_Troops.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Usurp_Throne"
+		texturefile = "gfx/interface/goals/general/focus_Usurp_Throne.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_violent_revolution"
+		texturefile = "gfx/interface/goals/general/focus_violent_revolution.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_gunboat_basic"
+		texturefile = "gfx/interface/goals/general/focus_gunboat_basic.dds"
+	}	
 }

@@ -1565,31 +1565,27 @@ focus_tree = {
 		#-----------------------------------------------------------------------------------
 
 	focus = {
-		id = FRA_submit_kabyle
+		id = FRA_stabilize_algeria
 		icon = GFX_goal_focus_expand_french_algeria
 		cost = 70
 		prerequisite = {
 			focus = FRA_french_colonial_empire
 		}
 		available = {
-			date > 1858.6.1
 			has_country_flag = FRA_has_colonial_ambitions
+			ALG = {
+				controls_state = 513
+			}
 		}
 		x = 41
 		y = 1
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = BAB
-			}
-		}
 	}
 	focus = {
 		id = FRA_intervention_lebanon
 		icon = GFX_goal_demand_sudetenland
 		cost = 70
 		prerequisite = {
-			focus = FRA_submit_kabyle
+			focus = FRA_stabilize_algeria
 		}
 		x = 40
 		y = 2
@@ -1600,7 +1596,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 70
 		prerequisite = {
-			focus = FRA_submit_kabyle
+			focus = FRA_stabilize_algeria
 		}
 		x = 42
 		y = 2
@@ -2047,9 +2043,12 @@ focus_tree = {
 		x = 27
 		y = 12
 		available = {
-			NOT = { 
-				country_exists = MOD
-				country_exists = PRM
+			OR = {
+				has_global_flag = PIE_2IW_Victory
+				NOT = { 
+					country_exists = MOD
+					country_exists = PRM
+				}
 			}
 		}
 		completion_reward = {
@@ -2066,8 +2065,9 @@ focus_tree = {
 		x = 29
 		y = 12
 		available = {
-			NOT = { 
-				country_exists = TUS
+			OR = {
+				has_global_flag = PIE_2IW_Victory
+				NOT = { country_exists = TUS }
 			}
 		}
 		completion_reward = {

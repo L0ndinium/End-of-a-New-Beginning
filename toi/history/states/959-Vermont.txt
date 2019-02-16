@@ -12,7 +12,9 @@ state={
 			infrastructure = 3
 			logging_camp = 1
 		}
-
+		victory_points = {
+			4445 3
+		}
 	add_core_of = USA
 	}
 	provinces={

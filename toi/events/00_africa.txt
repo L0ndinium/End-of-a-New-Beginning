@@ -239,7 +239,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1200
+		days = 600
 		modifier = {
 			factor = 0.9
 			has_stability > 0.1

@@ -269,6 +269,28 @@ wargoal_types = {
 		annex_threat_factor = 0.1
 		annex_cost = -75
 	}
+	second_mexican_war_wargoal = { #for unique name and to make it a 'civil war'
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = SECOND_MEXICAN_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+				
+		threat = 1
+		annex_threat_factor = 0.1
+		annex_cost = 20
+	}
 
 	argentine_civil_war_wargoal = { #for unique name and to make it a 'civil war'
 		# PREV = original target country

@@ -1,0 +1,21 @@
+state={
+	id=1273
+	name="STATE_1273"
+	manpower=715210
+	
+	state_category = town
+
+	history={
+		owner = OTO
+		buildings = {
+			infrastructure = 3		
+
+		}
+		add_core_of = OTO
+		add_core_of = GRE
+	}
+	
+	provinces={
+	   6930 3844 966
+	}
+}

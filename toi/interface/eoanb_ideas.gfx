@@ -11,6 +11,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_HAM_hanseatic_heritage"
+		texturefile = "gfx/interface/ideas/HAM/HAM_idea_hanseatic_heritage.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_GER_coin_imperial"
 		texturefile = "gfx/interface/ideas/GER/GER_idea_coin_imperial.dds"
 	}
@@ -28,6 +33,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_PRS_theorist_land_moltke"
 		texturefile = "gfx/interface/ideas/PRS/PRS_theorist_moltke.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PRS_theorist_land_moltke"
+		texturefile = "gfx/interface/ideas/PRS/PRS_theorist_moltke.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HAI_hispaniola"
+		texturefile = "gfx/interface/ideas/HISPANIOLA/HAI_hispaniola.dds"
 	}
 	
 }

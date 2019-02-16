@@ -15,10 +15,13 @@ country_event = {
 		picture = GFX_report_event_election_vote
 		
 		fire_only_once = yes
+
+		is_triggered_only = yes
 		
 		trigger = {
 			TAG = USA
-			date > 1868.11.2
+			date > 1868.1.1
+			date < 1869.1.1
 			NOT = {
 				has_government = autocracy
 				has_government = vanguard_communism
@@ -26,8 +29,6 @@ country_event = {
 				has_government = anarchism
 			}
 		}
-
-		mean_time_to_happen = { days = 2 }
 		
 		option = {
 				name = usa_election.1.a
@@ -120,7 +121,11 @@ country_event = {
   						eoanb_trait_military_leader
     				}
   				}
-			set_politics = { ruling_party = social_egalitarianism }
+			set_politics = {
+				ruling_party = social_egalitarianism
+				election_frequency = 48
+    			elections_allowed = yes
+			}
 		}
 }
 #Seymour Inaugerated
@@ -150,7 +155,11 @@ country_event = {
     				expire = "1947.1.1"
     				ideology = conserv
   				}
-			set_politics = { ruling_party = traditional_conservatism }
+			set_politics = {
+				ruling_party = traditional_conservatism
+				election_frequency = 48
+    			elections_allowed = yes
+			}
 		}
 }
 #Colfax Inaugerated
@@ -180,7 +189,81 @@ country_event = {
     				expire = "1947.1.1"
     				ideology = market_liberal
   				}
-			set_politics = { ruling_party = centrism }
+			set_politics = {
+				ruling_party = centrism
+				election_frequency = 48
+    			elections_allowed = yes
+			}
+		}
+}
+#Generic USA Election
+country_event = {
+		id = usa_election.1000
+		title = usa_election.1000.t
+		desc = usa_election.1000.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = USA
+			date > 1869.1.1
+		}
+		
+		option = {
+			trigger = {
+				centrism > traditional_conservatism
+			}
+			name = usa_election.1000.a
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = centrism
+				election_frequency = 48
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.03
+			}
+			clr_country_flag = USA_generic_president_reelected
+		}
+		option = {
+			trigger = {
+				centrism < traditional_conservatism
+			}
+			name = usa_election.1000.b
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = traditional_conservatism
+				election_frequency = 48
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = centrism
+				popularity = 0.03
+			}
+			clr_country_flag = USA_generic_president_reelected
+		}
+		option = {
+			name = usa_election.1000.c
+			trigger = {
+				NOT = { has_country_flag = USA_generic_president_reelected }
+			}
+			set_country_flag = USA_generic_president_reelected
+			random_list = {
+				50 = {
+					add_popularity = {
+						ideology = centrism
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = traditional_conservatism
+						popularity = 0.03
+					}
+				}
+			}
 		}
 }
 

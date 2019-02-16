@@ -1,7 +1,8 @@
+
 supply_area={
 	id=404
 	name="SUPPLYAREA_404"
-	value=0
+	value=6
 	states={
 		1256 
 	}

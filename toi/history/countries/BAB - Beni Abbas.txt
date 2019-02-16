@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
   capital = 513
 
-  oob = "Africa_1857"
+  oob = "BAB_1857"
 
   set_convoys = 0
   
@@ -80,8 +80,10 @@
   }
   add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = BAB }
   add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = BAB }
+  add_manpower = 12000
 
   set_technology = {
+	infantry_weapons = 1
 	tribaltech = 1
 	start_build_tech = 1
   }

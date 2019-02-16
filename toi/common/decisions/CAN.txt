@@ -1,169 +1,81 @@
-political_actions = {
-  VAN_decision_blockade_fraser_river = {
+CAN_move_capital = {
+	
+	CAN_move_capital_toronto = {
 
-    available = {
-      tag = VAN
-      date < 1859.1.1
-      HBC = {
-        has_idea = BCO_idea_fraser_canyon_gold_rush
-      }
-    }
+		icon = generic_political_discourse
 
-    visible = {
-      tag = VAN
-      date < 1859.1.1
-      HBC = {
-        has_idea = BCO_idea_fraser_canyon_gold_rush
-      }
-    }
+		cost = 0
 
-    fire_only_once = yes
+		fire_only_once = yes
 
-    cost = 50
+		visible = {
+		NOT = {has_decision = CAN_move_capital_ottawa}
+		NOT = {has_decision = CAN_move_capital_montreal}
 
-    complete_effect = {
-      custom_effect_tooltip = VAN_decision_blockade_fraser_river_tt
-      hidden_effect = {
-        country_event = {
-          id = british_columbia.2
-          days = 1
-        }
-      }
-    }
+		}
 
-    ai_will_do = {
-      base = 1000
-    }
-  }
+		complete_effect = {
+		set_capital = 276
+		
+		add_ideas = CAN_idea_toronto
 
-  VAN_decision_ask_colony_columbia = {
+		add_popularity = {
+    	ideology = traditional_conservatism
+   	 	popularity = 0.03
+		}
+		}
+	}
 
-    available = {
-      tag = VAN
-      date < 1859.1.1
-      HBC = {
-        has_idea = BCO_idea_fraser_canyon_gold_rush
-      }
-    }
+	CAN_move_capital_ottawa = {
 
-    visible = {
-      tag = VAN
-      date < 1859.1.1
-      HBC = {
-        has_idea = BCO_idea_fraser_canyon_gold_rush
-      }
-    }
+		icon = generic_political_discourse
 
-    fire_only_once = yes
+		cost = 0
 
-    cost = 50
+		fire_only_once = yes
 
-    complete_effect = {
-      custom_effect_tooltip = VAN_decision_ask_colony_columbia_tt
-      hidden_effect = {
-        ENG = {
-          country_event = {
-            id = british_columbia.4
-            days = 1
-          }
-        }
-      }
-    }
+		visible = {
+		NOT = {has_decision = CAN_move_capital_toronto}
+		NOT = {has_decision = CAN_move_capital_montreal}
 
-    ai_will_do = {
-      base = 1000
-    }
-  }
+		}
 
-  BCO_decision_develop_mining_exploitations = {
 
-    available = {
-      tag = BCO
-    }
+		complete_effect = {
+		set_capital = 1310
+		add_political_power	= 50
+		1310 = { add_extra_state_shared_building_slots = 1 }
+		1310 = { add_building_construction = {
+   		type = logging_camp
+   		level = 1
+    	instant_build = yes } }
+		}
+		}
 
-    visible = {
-      tag = BCO
-    }
+	CAN_move_capital_montreal = {
 
-    fire_only_once = yes
+		icon = generic_political_discourse
 
-    cost = 50
+		cost = 0
 
-    complete_effect = {
-      custom_effect_tooltip = VAN_decision_ask_colony_columbia_tt
-    }
+		fire_only_once = yes
 
-    ai_will_do = {
-      base = 1000
-    }
-  }
+		visible = {
+		NOT = {has_decision = CAN_move_capital_toronto}
+		NOT = {has_decision = CAN_move_capital_ottawa}
 
-  BCO_decision_extand_road_to_mines = {
+		}
 
-    available = {
-      tag = BCO
-    }
+		complete_effect = {
+		set_capital = 1311
+		add_ideas = CAN_idea_montreal
+		add_political_power	= -50
+		add_popularity = {
+    	ideology = traditional_conservatism
+   	 	popularity = 0.05
+		}
 
-    visible = {
-      tag = BCO
-    }
+		}
+	}
 
-    fire_only_once = yes
-
-    cost = 50
-
-    complete_effect = {
-      custom_effect_tooltip = BCO_decision_extand_road_to_mines_tt
-    }
-
-    ai_will_do = {
-      base = 1000
-    }
-  }
-
-  BCO_decision_create_administrative_structure = {
-
-    available = {
-      tag = BCO
-    }
-
-    visible = {
-      tag = BCO
-    }
-
-    fire_only_once = yes
-
-    cost = 50
-
-    complete_effect = {
-      custom_effect_tooltip = BCO_decision_create_administrative_structure_tt
-    }
-
-    ai_will_do = {
-      base = 1000
-    }
-  }
-
-  BCO_decision_create_mining_regulations = {
-
-    available = {
-      tag = BCO
-    }
-
-    visible = {
-      tag = BCO
-    }
-
-    fire_only_once = yes
-
-    cost = 50
-
-    complete_effect = {
-      custom_effect_tooltip = BCO_decision_create_mining_regulations_tt
-    }
-
-    ai_will_do = {
-      base = 1000
-    }
-  }
-}
+}	

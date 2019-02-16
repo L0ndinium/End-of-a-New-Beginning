@@ -284,3 +284,61 @@ news_event = {
 		trigger = { TAG = PIE }
 	}
 }
+
+#News Event 17
+news_event = {
+	id = news.17
+	title = news.17.t
+	desc = news.17.d
+	picture = GFX_news_event_generic_sign_treaty3
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.17.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = news.17.b
+		trigger = { TAG = JAP }
+		add_stability = -0.10
+		add_opinion_modifier = { target = USA modifier = small_decrease }
+	}
+	option = {
+		name = news.17.c
+		trigger = { TAG = USA }
+		add_political_power = 50
+		add_opinion_modifier = { target = JAP modifier = small_increase }
+	}
+	option = {
+		name = news.17.d
+		trigger = { TAG = CHO }
+		add_stability = -0.05
+		add_opinion_modifier = { target = JAP modifier = medium_decrease }
+	}
+	option = {
+		name = news.17.e
+		trigger = { TAG = SAT }
+		add_stability = -0.05
+		add_opinion_modifier = { target = JAP modifier = medium_decrease }
+	}
+	option = {
+		name = news.17.f
+		trigger = { TAG = SAG }
+		add_stability = -0.05
+		add_opinion_modifier = { target = JAP modifier = small_decrease }
+	}
+	option = {
+		name = news.17.g
+		trigger = { TAG = TOS }
+		add_stability = -0.05
+		add_opinion_modifier = { target = JAP modifier = small_decrease }
+	}
+}

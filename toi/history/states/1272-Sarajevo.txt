@@ -1,0 +1,31 @@
+
+state={
+	id=1272
+	name="STATE_1272"
+	manpower =286008
+
+
+	state_category = town
+
+	resources={
+		aluminium=3
+		iron=2
+	}
+
+	history={
+		owner = BOS
+		victory_points = {
+			11899 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			cotton_farm = 1
+		}
+		add_core_of = BOS
+	}
+
+	provinces={
+		9922 11872 11899 6799
+	}
+}

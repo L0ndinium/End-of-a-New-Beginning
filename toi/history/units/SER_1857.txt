@@ -1,19 +1,26 @@
 ﻿division_template = {
-	name = "Serbian Line Infantry"
+	name = "Pešadija"
 
 	regiments = {
 		line_infantry = { x = 0 y = 0 }
 		line_infantry = { x = 1 y = 0 }
 		line_infantry = { x = 0 y = 1 }
 		line_infantry = { x = 1 y = 1 }
+        line_infantry = { x = 0 y = 2 }
 	}
 }
 
 units = {
-		division= {
-			name = "1st Line Infantry"
-			location = 11586
-			division_template = "Serbian Line Infantry"
-			start_experience_factor = 0.1
-		}
+    division= {
+        name = "1st Pešadija"
+        location = 11586
+        division_template = "Pešadija"
+        start_experience_factor = 0.1
+	}
+    division= {
+        name = "2nd Pešadija"
+        location = 11586
+        division_template = "Pešadija"
+        start_experience_factor = 0.1
+	}
 }

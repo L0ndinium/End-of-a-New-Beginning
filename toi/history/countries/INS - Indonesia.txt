@@ -10,10 +10,10 @@
   add_ideas = { 
     #POLITICS 
 		  
-    hos_is_leader
+    HOL_William_III
     pre_industrial_era
     agrarian
-    no_heir
+    has_heir
     absolute_monarchy
 
     civilian_economy
@@ -84,14 +84,120 @@
 
   # POLITICAL LEADERS
 
-  create_country_leader = {
+ create_country_leader = {
 	name = "Charles Ferdinand Pahud"
 	desc = ""
 	picture = "Portrait_INS_Charles_Ferdinand_Pahud.dds"
 	expire = "1953.3.1"
 	ideology = despotism
-	traits = {
-		
-	}
-}
+ }
+	
+  ### GENERALS 
+ create_field_marshal = {
+  name = "Willem Boetje"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+
+ create_corps_commander = {
+  name = "Huibert Gerard Boumeester"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+  id = 18153
+ }
+
+ create_corps_commander = {
+  name = "Désiré Lambert de Brabant"
+  picture = "unit_leaders/Portrait_HOL_Desire_Lambert_de_Brabant.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+
+ create_corps_commander = {
+  name = "Frans David Cochius"
+  picture = "unit_leaders/Portrait_HOL_Frans_David_Cochius.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+
+ create_corps_commander = {
+  name = "Henry Jean Demmeni"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+
+ create_corps_commander = {
+  name = "Jan van Swieten"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+
+ create_corps_commander = {
+  name = "Jan Elias Nicolaas baron Sirtema van Grovestins"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+ create_corps_commander = {
+  name = "Anthonie Haga"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+ create_corps_commander = {
+  name = "Theodoor Johan Arnold van Zijll de Jong"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
+ create_corps_commander = {
+  name = "Karel van der Heijden"
+  picture = ""
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+ }
 }

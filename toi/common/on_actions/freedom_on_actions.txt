@@ -1,0 +1,11 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			random_country = {
+				news_event = {
+					id = freedom_handler.0
+				}
+			}
+		}
+	}
+}

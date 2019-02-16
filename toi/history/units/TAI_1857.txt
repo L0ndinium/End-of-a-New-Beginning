@@ -29,7 +29,7 @@ units = {
     division= {
       name = "2nd Holy Divison"
       location = 11913
-      division_template = "Taiping RebelInfantry"
+      division_template = "Taiping Rebel Infantry"
       start_experience_factor = 0.1
     }
     division= {

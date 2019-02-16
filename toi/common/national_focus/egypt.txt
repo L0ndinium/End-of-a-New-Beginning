@@ -1605,6 +1605,33 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = EGY_vic_found_fabric_mills
+		icon = GFX_goal_anschluss
+		cost = 70
+		prerequisite = {
+			focus = EGY_vic_increase_cotton_investments
+		}
+		x = 21
+		y = 3
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			custom_effect_tooltip = EGY_afr_increase_debt_5
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 5}
+			}
+			446 = {
+				add_building_construction = {
+					type = fabric_weavery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = EGY_vic_encourage_industry_investments
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 70
@@ -1729,6 +1756,116 @@ focus_tree = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_vic_major_industry_investments
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 70
+		prerequisite = {
+			focus = EGY_vic_increase_industry_investments
+		}
+		x = 23
+		y = 3
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			custom_effect_tooltip = EGY_afr_increase_debt_10
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 10}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
 			}

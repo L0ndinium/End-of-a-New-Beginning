@@ -1,0 +1,230 @@
+﻿add_namespace = election
+
+#Generic USA Election
+country_event = {
+		id = election.1
+		title = election.1.t
+		desc = election.1.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		trigger = {
+			NOT = {
+				tag = USA
+				tag = CSA
+			}
+		}
+		
+		option = {
+			trigger = {
+				centrism > 0.3
+			}
+			name = election.1.a
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = centrism
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = centrism
+				popularity = -0.03
+			}
+		}
+		option = {
+			trigger = {
+				traditional_conservatism > 0.3
+			}
+			name = election.1.b
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = traditional_conservatism
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = -0.03
+			}
+		}
+		option = {
+			trigger = {
+				social_egalitarianism > 0.3
+			}
+			name = election.1.c
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = social_egalitarianism
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = -0.03
+			}
+		}
+		option = {
+			trigger = {
+				collectivist_socialism > 0.3
+			}
+			name = election.1.e
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = collectivist_socialism
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = -0.03
+			}
+		}
+		option = {
+			trigger = {
+				vanguard_communism > 0.3
+			}
+			name = election.1.f
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = vanguard_communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = -0.03
+			}
+			add_stability = -0.05
+		}
+		option = {
+			trigger = {
+				autocracy > 0.3
+			}
+			name = election.1.g
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = autocracy
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = autocracy
+				popularity = -0.03
+			}
+			add_stability = -0.05
+		}
+		option = {
+			trigger = {
+				radical_democracy > 0.3
+			}
+			name = election.1.h
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = radical_democracy
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = radical_democracy
+				popularity = -0.03
+			}
+		}
+		option = {
+			trigger = {
+				chauvinist_populism > 0.3
+			}
+			name = election.1.i
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = chauvinist_populism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = chauvinist_populism
+				popularity = -0.03
+			}
+		}
+		option = {
+			trigger = {
+				anarchism > 0.3
+			}
+			name = election.1.j
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = anarchism
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = anarchism
+				popularity = -0.03
+			}
+		}
+		option = {
+			trigger = {
+				fundamentalism > 0.3
+			}
+			name = election.1.k
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = fundamentalism
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = fundamentalism
+				popularity = -0.03
+			}
+		}
+		option = {
+			name = election.1.l
+			random_list = {
+				18 = {
+					add_popularity = {
+						ideology = centrism
+						popularity = 0.03
+					}
+				}
+				18 = {
+					add_popularity = {
+						ideology = traditional_conservatism
+						popularity = 0.03
+					}
+				}
+				7 = {
+					add_popularity = {
+						ideology = social_egalitarianism
+						popularity = 0.03
+					}
+				}
+				7 = {
+					add_popularity = {
+						ideology = collectivist_socialism
+						popularity = 0.03
+					}
+				}
+				6 = {
+					add_popularity = {
+						ideology = vanguard_communism
+						popularity = 0.03
+					}
+				}
+				7 = {
+					add_popularity = {
+						ideology = autocracy
+						popularity = 0.03
+					}
+				}
+				6 = {
+					add_popularity = {
+						ideology = chauvinist_populism
+						popularity = 0.03
+					}
+				}
+				7 = {
+					add_popularity = {
+						ideology = anarchism
+						popularity = 0.03
+					}
+				}
+				7 = {
+					add_popularity = {
+						ideology = fundamentalism
+						popularity = 0.03
+					}
+				}
+			}
+		}
+}

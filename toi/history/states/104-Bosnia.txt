@@ -2,30 +2,26 @@
 state={
 	id=104
 	name="STATE_104"
-	manpower =357510
+	manpower =71502
 
 
 	state_category = town
 
 	resources={
-		aluminium=5
-		iron=3
+		aluminium=2
+		iron=1
 	}
 
 	history={
 		owner = BOS
-		victory_points = {
-			11899 10
-		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
-			cotton_farm = 1
 		}
 		add_core_of = BOS
 	}
 
 	provinces={
-		3985 6614 6799 6957 9586 9922 11872 11899
+		3985 6614 6957 9586
 	}
 }

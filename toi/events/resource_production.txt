@@ -17,7 +17,11 @@ country_event = {#not enough iron or coal to produce steel, close a steel mill
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 20
+		modifier = {
+			factor = 10 # If true multiply 20 by 10 = 200
+			is_ai = yes
+		}
     }
 
     hidden = no 
@@ -59,7 +63,11 @@ country_event = {#not enough steel or coal to produce machine parts, close a man
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 20
+		modifier = {
+			factor = 10 # If true multiply 20 by 10 = 200
+			is_ai = yes
+		}
     }
 
     hidden = no 
@@ -97,7 +105,11 @@ country_event = {#not enough cotton to produce fabric, close a weavery
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 20
+		modifier = {
+			factor = 10 # If true multiply 20 by 10 = 200
+			is_ai = yes
+		}
     }
 
     hidden = no 
@@ -139,7 +151,11 @@ country_event = {#not enough silicates, plastics or rare earth metals to produce
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 20
+		modifier = {
+			factor = 10 # If true multiply 20 by 10 = 200
+			is_ai = yes
+		}
     }
 
     hidden = no 
@@ -177,7 +193,11 @@ country_event = {#not enough silicates to produce ceramics, close a ceramic bune
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 20
+		modifier = {
+			factor = 10 # If true multiply 20 by 10 = 200
+			is_ai = yes
+		}
     }
 
     hidden = no 
@@ -215,7 +235,11 @@ country_event = {#not enough oil to produce plastics, close a plastics manufacto
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 20
+		modifier = {
+			factor = 10 # If true multiply 20 by 10 = 200
+			is_ai = yes
+		}
     }
 
     hidden = no 
@@ -253,7 +277,11 @@ country_event = {#not enough rare earth metals to produce power sources, close a
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 20
+		modifier = {
+			factor = 10 # If true multiply 20 by 10 = 200
+			is_ai = yes
+		}
     }
 
     hidden = no 

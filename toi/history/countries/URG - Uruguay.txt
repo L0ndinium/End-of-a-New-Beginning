@@ -73,19 +73,19 @@ create_country_leader = {
         popularity = 0
       }
       social_egalitarianism = {
-        popularity = 30
-      }
-      centrism = {
-        popularity = 45
-      }
-      traditional_conservatism = {
-        popularity = 20
-      }
-      radical_democracy = {
         popularity = 5
       }
-      chauvinist_populism = {
+      centrism = {
+        popularity = 30
+      }
+      traditional_conservatism = {
+        popularity = 45
+      }
+      radical_democracy = {
         popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 10
       }
       autocracy = {
         popularity = 0
@@ -95,7 +95,7 @@ create_country_leader = {
       }
     }
 
-    ruling_party = centrism
+    ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -112,7 +112,7 @@ create_country_leader = {
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_URG_Gabriel_Antonio_Pereira.dds"
     expire = 1900.1.1
-    ideology = conserv_liberal
+    ideology = conserv
     traits = { }
 
 }
@@ -122,7 +122,7 @@ create_country_leader = {
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_URG_Venancio_Flores.dds"
     expire = 1900.1.1
-    ideology = liberal_social
+    ideology = conserv_liberal
     traits = { }
   }
 

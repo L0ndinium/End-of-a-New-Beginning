@@ -982,6 +982,9 @@ amount = 5
 		prerequisite = {
       focus = CHI_The_Japanese_in_Taiwan
     }
+	available = {
+		has_tech = tech_naval_1865_gunboat
+	}
 	 completion_reward = {
 	 			hidden_effect = {
 					load_oob = "CHI_nanyang"
@@ -1002,6 +1005,10 @@ amount = 5
 		prerequisite = {
       focus = CHI_Form_the_Nanyang_Fleet
     }
+	available = {
+		has_tech = tech_naval_1830_gunboat
+		has_tech = tech_naval_1830_frigate
+	}
 	 completion_reward = {
 	 hidden_effect = {
 		 load_oob = "CHI_nanyangexpansion"
@@ -1022,6 +1029,9 @@ amount = 5
 		prerequisite = {
       focus = CHI_The_Japanese_in_Taiwan
     }
+	available = {
+		has_tech = tech_naval_1830_gunboat
+	}
 	 completion_reward = {
 	 	hidden_effect = {
 		 	load_oob = "CHI_beiyang"
@@ -1064,6 +1074,9 @@ amount = 5
 		prerequisite = {
       focus = CHI_Foreign_Ironclads
     }
+	available = {
+		has_tech = tech_naval_1830_gunboat
+	}
 	 completion_reward = {
 	 hidden_effect = {
 				load_oob = "CHI_gunboats1"

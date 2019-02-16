@@ -88,7 +88,47 @@ country_event = {
 					MOD = { white_peace = LVN }
 					PRM = { white_peace = AUS }
 					PRM = { white_peace = LVN }
-
+					# France and puppets peace
+					FRA = {
+						if = {
+							limit = { has_offensive_war_with = AUS }
+							white_peace = AUS
+						}
+						if = {
+							limit = { has_offensive_war_with = LVN }
+							white_peace = LVN
+						}
+					}
+					ALG = {
+						if = {
+							limit = { has_offensive_war_with = AUS }
+							white_peace = AUS
+						}
+						if = {
+							limit = { has_offensive_war_with = LVN }
+							white_peace = LVN
+						}
+					}
+					GBS = {
+						if = {
+							limit = { has_offensive_war_with = AUS }
+							white_peace = AUS
+						}
+						if = {
+							limit = { has_offensive_war_with = LVN }
+							white_peace = LVN
+						}
+					}
+					SNG = {
+						if = {
+							limit = { has_offensive_war_with = AUS }
+							white_peace = AUS
+						}
+						if = {
+							limit = { has_offensive_war_with = LVN }
+							white_peace = LVN
+						}
+					}
 				}
 		}
 }

@@ -29,11 +29,11 @@ guiTypes = {
 		hide_animation_type = accelerated
 		animation_time = 300
 		orientation = lower_left
-		size = { width=436 height=496 }
+		size = { width=436 height=546 }
 		
 		containerWindowType = {
 			name = "state_info_window"
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = -50 }
 			size = { width=780 height=496 }
 			
 			
@@ -219,7 +219,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "province_info_window"
-			position = { x = 5 y = 435 }
+			position = { x = 5 y = 385 }
 			size = { width=480 height=29%% }
 			
 			iconType = {
@@ -287,11 +287,11 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "province_building_entries"
-				position = { x = 12 y = 52 }
+				position = { x = 12 y = 48 }
 				size = { width = 480 height = 90%% }
 				format = "UPPER_LEFT"
 				slotsize = { width = 130 height = 54 }
-				max_slots_horizontal = 3
+				max_slots_horizontal = 2
 			}
 			
 			buttonType = {
@@ -317,7 +317,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "close_button"
-			position = { x = -36 y = 11 }
+			position = { x = -36 y = -39 }
 			quadTextureSprite ="GFX_closebutton_small"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"

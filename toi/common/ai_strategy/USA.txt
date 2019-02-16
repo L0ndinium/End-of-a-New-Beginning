@@ -55,7 +55,7 @@ USA_ACW_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = garrison
-		value = 3
+		value = 0
 	}
 
 }
@@ -119,6 +119,142 @@ USA_ACW_fsa_isa_mhc = {
 		type = alliance
 		id = ROOT
 		value = -50
+	}
+
+}
+USA_dislike_natives = {
+	enable = {
+		OR = {
+			tag = USA
+			tag = ASA
+			tag = NEG
+			tag = GRL
+			tag = KTY
+			tag = MIO
+			tag = DAK
+			tag = KNS
+			tag = NMX
+			tag = TEX
+			tag = CAL
+		}
+		OR = {
+			is_neighbor_of = COM
+			is_neighbor_of = APA
+			is_neighbor_of = NAV
+			is_neighbor_of = SHO
+			is_neighbor_of = NEZ
+			is_neighbor_of = BFT
+			is_neighbor_of = CRW
+			is_neighbor_of = CHY
+			is_neighbor_of = SIX
+			is_neighbor_of = SEM
+		}
+	}
+
+	abort = {
+		date > 1910.1.1
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = ROOT
+		value = -50
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = ROOT
+		value = -50
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = ROOT
+		value = 25
+	}
+
+}
+USA_disunited_states_attack_natives = {
+	enable = {
+		OR = {
+			tag = ASA
+			tag = NEG
+			tag = GRL
+			tag = KTY
+			tag = MIO
+			tag = DAK
+			tag = KNS
+			tag = NMX
+			tag = TEX
+			tag = CAL
+		}
+		OR = {
+			is_neighbor_of = COM
+			is_neighbor_of = APA
+			is_neighbor_of = NAV
+			is_neighbor_of = SHO
+			is_neighbor_of = NEZ
+			is_neighbor_of = BFT
+			is_neighbor_of = CRW
+			is_neighbor_of = CHY
+			is_neighbor_of = SIX
+			is_neighbor_of = SEM
+		}
+		any_neighbor_country = {
+			OR = {
+				any_state = {
+					is_claimed_by = ROOT
+				}
+				any_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	abort = {
+		NOT = {
+			any_neighbor_country = {
+				OR = {
+					any_state = {
+						is_claimed_by = ROOT
+					}
+					any_state = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = ROOT
+		value = -100
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = ROOT
+		value = -100
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = ROOT
+		value = 50
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = ROOT
+		value = 50
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = ROOT
+		value = 50
 	}
 
 }

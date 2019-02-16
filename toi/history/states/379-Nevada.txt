@@ -18,6 +18,9 @@ state={
 			infrastructure = 1
 		}
 		add_claim_by = USA
+		victory_points = {
+			4607 5
+		}
 	}
 
 	provinces={

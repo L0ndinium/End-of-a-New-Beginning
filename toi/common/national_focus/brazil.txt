@@ -49,7 +49,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BRA_start_interstate_slave_trade
+		id = BRA_start_interprovincial_slave_trade
 		icon = GFX_goal_focus_brazil_slaves_shine
 		cost = 70
 		x = 9
@@ -77,7 +77,7 @@ focus_tree = {
 		x = 3
 		y = 3
 		mutually_exclusive = {
-		focus = BRA_start_interstate_slave_trade
+		focus = BRA_start_interprovincial_slave_trade
 		}
 		prerequisite = {
 		focus = BRA_the_slave_trade_issue
@@ -89,61 +89,69 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BRA_italian_immigration
-		icon = GFX_goal_focus_form_italy
+		id = BRA_portuguese_immigration
+		icon = GFX_goal_focus_merchants_portugese
 		cost = 70
 		x = 2
 		y = 4
-		mutually_exclusive = {
-		focus = BRA_start_interstate_slave_trade
-		}
-		prerequisite = {
-		focus = BRA_support_european_immigration
-		}
-		completion_reward = {
-			add_political_power = 20
-		}
-	}
-	
-	
-	focus = {
-		id = BRA_southern_italian_communities
-		icon = GFX_goal_focus_italycom
-		cost = 70
-		x = 2
-		y = 5
 
 		prerequisite = {
 		focus = BRA_support_european_immigration
 		}
 		completion_reward = {
-		502 = {
+        add_political_power = 10
+		}
+	}
+	
+	
+	focus = {
+		id = BRA_portuguese_communities
+		icon = GFX_goal_focus_portugalcom
+		cost = 70
+		x = 2
+		y = 5
+
+		prerequisite = {
+		focus = BRA_portuguese_immigration
+		}
+		completion_reward = {
+		499 = {
+		add_manpower = 5000
+		}
+		
+		501 = {
 		add_manpower = 10000
 		}
-		503 = {
-		add_manpower = 8000
+		
+	    500 = {
+		add_manpower = 10000
 		}
-		1036 = {
-		add_manpower = 9000 
-		}
+		
+		add_political_power = 15
+		
 		}
 	}
 	
 	focus = {
-		id = BRA_italian_workforce_for_sao_paulo
+		id = BRA_land_for_immigrants
 		icon = GFX_focus_ITA_Farms
 		cost = 70
 		x = 2
 		y = 6
 
 		prerequisite = {
-		focus = BRA_southern_italian_communities
+		focus = BRA_portuguese_communities
 		}
 		completion_reward = {
-		501 = {
-		add_manpower = 10000
+		random_state = {
+		limit = { is_owned_by = BRA }
+		add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+		add_manpower = 3000		
 		}
-		add_timed_idea = { idea = BRA_italian_workforce days = 80 }
 		}
 	}
 	
@@ -231,7 +239,7 @@ focus_tree = {
 		focus = BRA_develop_the_south
 		}
 		prerequisite = {
-		focus = BRA_italian_workforce_for_sao_paulo
+		focus = BRA_land_for_immigrants
 		}
 		completion_reward = {
 		502 = {
@@ -241,7 +249,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		add_timed_idea = { idea = BRA_southern_economic_boom days = 80 }		
+		add_political_power = -15
 		}
 	}
 	
@@ -270,7 +278,7 @@ focus_tree = {
 		y = 4
 
 		prerequisite = {
-		focus = BRA_start_interstate_slave_trade
+		focus = BRA_start_interprovincial_slave_trade
 		}
 		completion_reward = {
 		499 = {
@@ -296,9 +304,10 @@ focus_tree = {
 		495 = {
 		add_resource = {
 		type = wood
-		amount = 15
+		amount = 3
 		}
 		}
+	add_political_power = -5	
 	}
 	}
 	
@@ -316,7 +325,7 @@ focus_tree = {
 		495 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -331,7 +340,7 @@ focus_tree = {
 		y = 4
 
 		prerequisite = {
-		focus = BRA_start_interstate_slave_trade
+		focus = BRA_start_interprovincial_slave_trade
 		}
 		completion_reward = {
 		499 = {
@@ -362,25 +371,14 @@ focus_tree = {
 		completion_reward = {
 		1036 = {
 		add_resource = {
-		type = steel
-		amount = 10
+		type = iron
+		amount = 3
 		}
 		}
 		505 = {
 		add_resource = {
-		type = steel
-		amount = 10
-		}
-		add_building_construction = {
-					type = coal_mine
-					level = 3
-					instant_build = yes
-				}
-		}
-		280 = {
-	add_resource = {
-       type = steel 
-		amount = 10
+		type = iron
+		amount = 9
 		}
 		add_building_construction = {
 					type = coal_mine
@@ -388,7 +386,14 @@ focus_tree = {
 					instant_build = yes
 				}
 		}
-		
+		280 = {
+		add_building_construction = {
+					type = coal_mine
+					level = 1
+					instant_build = yes
+				}
+		}
+	add_political_power = -15	
 		}
 	}
 	
@@ -502,7 +507,7 @@ focus_tree = {
 	   501 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 		}
@@ -524,7 +529,7 @@ focus_tree = {
 	   1037 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -617,21 +622,21 @@ focus_tree = {
 	    500 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
 	    1038 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
 	501 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -653,7 +658,7 @@ focus_tree = {
 	501 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -661,7 +666,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BRA_southern_railways
+		id = BRA_southern_railway
 		icon = GFX_goal_continuous_non_factory_construct
 		cost = 70
 		x = 14
@@ -679,20 +684,6 @@ focus_tree = {
 					instant_build = yes
 				}
 		}
-	    1036 = {
-		add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-		}
-	503 = {
-		add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-		}
 		}
 	}
 	
@@ -704,18 +695,11 @@ focus = {
 		y = 8
 
 		prerequisite = {
-		focus = BRA_southern_railways
+		focus = BRA_southern_railway
 		}
 
 		completion_reward = { 
-		1044 = {
-		add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-		}
-	    499 = {
+	    1041 = {
 		add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -725,7 +709,7 @@ focus = {
 	504 = {
 		add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 		}
@@ -747,7 +731,10 @@ focus = {
 		}
 
 	completion_reward = { 
-		add_ideas = BRA_railway_connections
+		add_timed_idea = {
+		idea = BRA_railway_connections
+		days = 80
+		}
 	}
 	}
 	
@@ -847,7 +834,10 @@ focus = {
 		}
 
 		completion_reward = {
-	    add_ideas = BRA_new_trade
+	    add_timed_idea = {
+ 		idea = BRA_new_trade
+		days = 200
+		}
 		}
 	}
 	
@@ -914,6 +904,7 @@ focus = {
 	    ENG = {
 		country_event = brazil.1 
 		}
+		add_political_power = -25
 		}
 	}
 	
@@ -929,7 +920,7 @@ focus = {
 		}
 
 		completion_reward = {
-	    add_research_slot = 1
+	    add_political_power = 30
 		}
 	}
 	
@@ -981,6 +972,7 @@ focus = {
 		FRA = {
 		country_event = brazil.3
 		}
+		add_stability = -0.01
     }
 	}
 	
@@ -999,8 +991,11 @@ focus = {
 	
 
 	completion_reward = {
-    add_ideas = FRA_idea_new_banks
-	add_stability = 0.01
+    add_timed_idea { 
+	idea = FRA_idea_new_banks
+	days = 50
+	}
+	add_stability = 0.02
     }
 	
 	}
@@ -1022,10 +1017,11 @@ focus = {
     		501 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
+	add_political_power = -15
     }
 	
 	}
@@ -1046,10 +1042,11 @@ focus = {
     		500 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
+	add_political_power = -15		
     }
 	
 	}
@@ -1067,11 +1064,7 @@ focus = {
 	
 
 	completion_reward = {
-    swap_ideas = {
-	add_idea = industrialized
-	remove_idea = industrializing
-    }
-	
+	add_political_power = 15
 	}
 	
 	}
@@ -1380,7 +1373,7 @@ focus = {
 		id = BRA_diplomatic_visit_to_britain
 		icon = GFX_goal_focus_ally_ENG
 		cost = 70
-		x = 37
+		x = 38
 		y = 12
 
 		prerequisite = {
@@ -1409,11 +1402,11 @@ focus = {
 		id = BRA_diplomatic_visit_to_austria
 		icon = GFX_goal_focus_ally_AUS
 		cost = 70
-		x = 39
-		y = 12
+		x = 38
+		y = 13
 
 		prerequisite = {
-		focus = BRA_diplomatic_visit_to_france
+		focus = BRA_diplomatic_visit_to_britain
 		}
 	   
 	   
@@ -1439,17 +1432,19 @@ focus = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 70
 		x = 38
-		y = 13
+		y = 14
 
 		prerequisite = {
 		focus = BRA_diplomatic_visit_to_austria
-		focus = BRA_diplomatic_visit_to_britain
 		}
 	   
 	   
 
 	completion_reward = {
-    add_ideas = BRA_european_infrastructure
+    add_timed_idea = { 
+	idea = BRA_european_infrastructure
+	days = 90
+	}
 	}
 	}
 	
@@ -1626,70 +1621,44 @@ USA = { country_event =  brazil.7  }
 	}
 	
    focus = {
-		id = BRA_industrial_collaboration_with_argentina
-		icon = GFX_goal_focus_industrial_revolution
+		id = BRA_mend_relations_with_argentina
+		icon = GFX_goal_focus_negotiate_argentina
 		cost = 70
 		x = 42
 		y = 16
-
+          
+		available = {
+		ARG = { has_government = centrism }
+		}
+		
 		prerequisite = {
 		focus = BRA_a_new_foreign_policy
 		}
 		
 		
 	completion_reward = {
-			502 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+    BRA = {
+				add_opinion_modifier = {
+    				target = ARG
+    				modifier = usa_improved_relations
 				}
-			}
-	1058 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+	ARG = {
+				add_opinion_modifier = {
+    				target = BRA
+    				modifier = usa_improved_relations
 				}
 			}		
 	}
 	}
 	
-	focus = {
-		id = BRA_industrial_collaboration_with_bolivia
-		icon = GFX_goal_focus_industrial_revolution
-		cost = 70
-		x = 42
-		y = 17
-
-		prerequisite = {
-		focus = BRA_industrial_collaboration_with_argentina
-		}
-		
-		
-	completion_reward = {
-			280 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-	487 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}		
 	}
-	}
+	
 	
 	focus = {
 		id = BRA_propose_the_monroe_alliance
 		icon = GFX_focus_chi_mission_to_the_us
 		cost = 70
-		x = 39
+		x = 40
 		y = 14
 
 		prerequisite = {
@@ -1708,7 +1677,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_expand_the_alliance_on_the_platine
 		icon = GFX_goal_focus_newspapers
 		cost = 70
-		x = 39
+		x = 40
 		y = 15
         
 		available = {
@@ -1724,13 +1693,12 @@ USA = { country_event =  brazil.7  }
 	}
 	}
 	
-	
-    focus = {
-		id = BRA_expand_the_alliance_on_our_north
-		icon = GFX_goal_focus_newspapers
+	focus = {
+		id = BRA_start_a_research_project
+		icon = GFX_goal_tfv_generic_tech_sharing
 		cost = 70
-		x = 39
-		y = 17
+		x = 40
+		y = 16
         
 		available = {
 		is_in_faction = yes
@@ -1741,30 +1709,12 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-	add_to_faction = VEN
-	}
-	}
-	
-	
-	focus = {
-		id = BRA_start_a_research_project
-		icon = GFX_goal_tfv_generic_tech_sharing
-		cost = 70
-		x = 39
-		y = 18
-        
-		available = {
-		is_in_faction = yes
-		}
-		prerequisite = {
-		focus = BRA_expand_the_alliance_on_our_north
-		}
-		
-		
-	completion_reward = {
 	every_country = {
 	limit = { is_in_faction_with = BRA }
-	add_research_slot = 1
+	add_timed_idea = {
+	idea = POR_Research 
+	days = 20
+	}
 	}
 	}
 	}
@@ -1879,8 +1829,8 @@ USA = { country_event =  brazil.7  }
 	}
 	
 	focus = {
-		id = BRA_expand_the_suffrage
-		icon = GFX_goal_focus_elections
+		id = BRA_befriend_entrepreneurs
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 70
 		x = 49
 		y = 11
@@ -1892,10 +1842,7 @@ USA = { country_event =  brazil.7  }
 		
 	completion_reward = {
     add_political_power = -20
-   swap_ideas = {
-	remove_idea = property_owners_suffrage
-	add_idea = universal_male_suffrage
-    }
+
 	}
 	}
 	
@@ -1907,7 +1854,7 @@ USA = { country_event =  brazil.7  }
 		y = 12
         
 		prerequisite = {
-		focus = BRA_expand_the_suffrage
+		focus = BRA_befriend_entrepreneurs
 		}
 		prerequisite = {
 		focus = BRA_ensure_free_slaves_freedom
@@ -1933,7 +1880,7 @@ USA = { country_event =  brazil.7  }
 		
 	completion_reward = {
     army_experience = -30
-	add_manpower = 500000
+	add_manpower = 50000
 	}
 	}
 	
@@ -1972,28 +1919,12 @@ USA = { country_event =  brazil.7  }
 	}
 	}
 	
-	focus = {
-		id = BRA_condemn_febrerista_dictatorship
-		icon = GFX_goal_generic_military_sphere
-		cost = 70
-		x = 56
-		y = 17
-        
-		prerequisite = {
-		focus = BRA_claim_brazilian_natural_borders
-		}
-		
-		
-	completion_reward = {
-    add_political_power = 35
-	}
-	}
 	
 	focus = {
 		id = BRA_reclaim_the_cisplatine_province
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 70
-		x = 54
+		x = 55
 		y = 17
         
 		prerequisite = {
@@ -2002,13 +1933,13 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-    add_state_core = 1097
-	add_state_core = 1096
-	add_state_core = 1095
-	add_state_core = 1081
-	add_state_core = 1082
-	add_state_core = 1094
-	add_state_core = 300
+    add_state_claim = 1097
+	add_state_claim = 1096
+	add_state_claim = 1095
+	add_state_claim = 1081
+	add_state_claim = 1082
+	add_state_claim = 1094
+	add_state_claim = 300
 	URG = { country_event = brazil.15 }
 	 }
 	}
@@ -2017,7 +1948,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_the_second_cisplatine_war
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 70
-		x = 54
+		x = 55
 		y = 18
         
 		prerequisite = {
@@ -2032,31 +1963,6 @@ USA = { country_event =  brazil.7  }
 }
 	 }
 	}
-	
-	focus = {
-		id = BRA_parana_river_claims
-		icon = GFX_goal_generic_amphibious_assault
-		cost = 70
-		x = 56
-		y = 18
-        
-		prerequisite = {
-		focus = BRA_condemn_febrerista_dictatorship
-		}
-		
-		
-	completion_reward = {
-       add_state_core = 1065
-	   add_state_core = 1071
-	   add_state_core = 1072
-	   add_state_core = 1069
-	   add_state_core = 1138
-	   add_state_core = 1139
-	   add_state_core = 1068
-	   add_state_core = 301
-	PAR = { country_event = brazil.16 }
-	}
-	 }
 	 
 
 	 
@@ -2064,7 +1970,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_our_greatest_foe
 		icon = GFX_goal_generic_attack_allies
 		cost = 70
-		x = 52
+		x = 53
 		y = 17
         
 		prerequisite = {
@@ -2099,7 +2005,7 @@ USA = { country_event =  brazil.7  }
 		id = BRA_challenge_the_confederation
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 70
-		x = 52
+		x = 53
 		y = 18
         
 		prerequisite = {
@@ -2108,8 +2014,7 @@ USA = { country_event =  brazil.7  }
 		
 		
 	completion_reward = {
-           add_state_core = 1058
-		   add_state_core = 1062
+		add_state_claim = 1062
 	ARG = { country_event = brazil.17 }
  }
 	}
@@ -2146,26 +2051,8 @@ focus = {
 		
 		
 	completion_reward = {
-  add_state_core = 310
+  add_state_claim = 310
   add_political_power = 35
-}
-}
-
-focus = {
-		id = BRA_claim_the_dutch_guyana
-		icon = GFX_goal_generic_small_arms
-		cost = 70
-		x = 48
-		y = 16
-        
-		prerequisite = {
-		focus = BRA_northern_claims
-		}
-		
-		
-	completion_reward = {
-  add_state_core = 309
-  add_political_power = -15
 }
 }
 
@@ -2175,12 +2062,9 @@ focus = {
 		id = BRA_america_for_the_americans_doctrine
 		icon = GFX_goal_generic_propaganda
 		cost = 70
-		x = 49
+		x = 50
 		y = 17
         
-		prerequisite = {
-		focus = BRA_claim_the_dutch_guyana
-		}
 		prerequisite = {
 		focus = BRA_reclaim_the_portuguese_guyana
 		}
@@ -2193,10 +2077,10 @@ focus = {
 }
 
 focus = {
-		id = BRA_claim_the_british_guyana
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		id = BRA_protest_french_claims
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		cost = 70
-		x = 49
+		x = 50
 		y = 18
         
 		prerequisite = {
@@ -2205,26 +2089,29 @@ focus = {
 		
 		
 	completion_reward = {
-   add_state_core = 687
   add_political_power = -15
+  	    BRA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = protest_action_light
+				}
+			}
 }
 }
 
 focus = {
-		id = BRA_challenge_european_imperialism
+		id = BRA_challenge_french_imperialism
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 70
-		x = 49
+		x = 50
 		y = 19
         
 		prerequisite = {
-		focus = BRA_claim_the_british_guyana
+		focus = BRA_protest_french_claims
 		}
 		
 		
 	completion_reward = {
-   ENG = { country_event = brazil.19 }
-   HOL = { country_event = brazil.19 }
    FRA = { country_event = brazil.19 }
 }
 }
@@ -2259,13 +2146,13 @@ focus = {
 		
 		
 	completion_reward = {
-   add_state_core = 753
+   add_state_claim = 753
    add_political_power = -15
 }
 }
 
 focus = {
-		id = BRA_surprise_attack_bolivia
+		id = BRA_destabilize_bolivian_control
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 70
 		x = 46
@@ -2277,29 +2164,29 @@ focus = {
 		
 		
 	completion_reward = {
-    create_wargoal = {
-    type = take_core_state
-    target = BOL
+   BOL = {
+   remove_state_core = 753
 }
 }
 }
 
+
 focus = {
-		id = BRA_fortify_the_colombian_border
+		id = BRA_fortify_the_bolivian_border
 		icon = GFX_goal_generic_fortify_city
 		cost = 70
 		x = 46
 		y = 19
         
 		prerequisite = {
-		focus = BRA_surprise_attack_bolivia
+		focus = BRA_destabilize_bolivian_control
 		}
 		
 		
 	completion_reward = {
-    495 = { add_building_construction = { type = bunker province = 13083 level = 1 instant_build = yes } }
-	495 = { add_building_construction = { type = bunker province = 12919 level = 1 instant_build = yes } }
-	495 = { add_building_construction = { type = bunker province = 5083 level = 1 instant_build = yes } }
+    495 = { add_building_construction = { type = bunker province = 8254 level = 3 instant_build = yes } }
+	495 = { add_building_construction = { type = bunker province = 12965 level = 3 instant_build = yes } }
+	495 = { add_building_construction = { type = bunker province = 8185 level = 3 instant_build = yes } }
 }
 }
 
@@ -2308,14 +2195,14 @@ focus = {
 		id = BRA_learn_from_british_expeditions
 		icon = GFX_goal_tfv_saf_secure_interests_in_africa
 		cost = 70
-		x = 47
+		x = 48
 		y = 20
         
 		prerequisite = {
-		focus = BRA_fortify_the_colombian_border
+		focus = BRA_fortify_the_bolivian_border
 		}
 		prerequisite = {
-		focus = BRA_challenge_european_imperialism
+		focus = BRA_challenge_french_imperialism
 		}
 		
 		
@@ -2329,11 +2216,15 @@ focus = {
 		id = BRA_our_own_colonial_expeditions
 		icon = GFX_focus_secret_rearmament
 		cost = 70
-		x = 47
+		x = 48
 		y = 21
         
 		prerequisite = {
 		focus = BRA_learn_from_british_expeditions
+		}
+		
+		available = {
+		MNH = { exists = yes }
 		}
 		
 		
@@ -2342,10 +2233,7 @@ focus = {
     type = annex_everything
     target = MNH
 }
-      create_wargoal = {
-    type = annex_everything
-    target = KAB
-}
+add_political_power = -30
 }
 }
 
@@ -2385,7 +2273,7 @@ focus = {
 	completion_reward = {
         add_political_power = -35
 	add_popularity = {
-				ideology = social_egalitarianism
+				ideology = centrism
 				popularity = 0.1
 			}
 	}
@@ -2428,7 +2316,7 @@ focus = {
     add_political_power = 70
 	country_event = brazil.23
 		add_popularity = {
-				ideology = social_egalitarianism
+				ideology = centrism
 				popularity = 0.15
 			}
 	}
@@ -2515,7 +2403,7 @@ focus = {
 	}
 	
 	focus = {
-		id = BRA_laws_for_abolition
+		id = BRA_road_to_reforms
 		icon = GFX_goal_focus_enact_law
 		cost = 70
 		x = 34
@@ -2529,23 +2417,19 @@ focus = {
 
 	completion_reward = {
     add_political_power = -80
-	swap_ideas = {
-	remove_idea = usa_slavery_law
-	add_idea = limited_equality
-    }
 	}
 	
 	}
 	
 	focus = {
-		id = BRA_weaken_the_church
-		icon = GFX_goal_focus_disestablish_church_ireland
+		id = BRA_liberalize_the_market
+		icon = GFX_goal_generic_trade
 		cost = 70
 		x = 36
 		y = 13
 
 		prerequisite = {
-		focus = BRA_laws_for_abolition
+		focus = BRA_road_to_reforms
 		}
 	   
 	   
@@ -2553,8 +2437,8 @@ focus = {
 	completion_reward = {
     add_political_power = 35
 	swap_ideas = {
-	remove_idea = state_religion
-	add_idea = secular_state
+	remove_idea = limited_exports
+	add_idea = free_trade
     }
 	}
 	
@@ -2562,13 +2446,13 @@ focus = {
 	
    focus = {
 		id = BRA_liberalize_the_suffrage
-		icon = GFX_goal_focus_liberal_empire
+		icon = GFX_goal_focus_elections
 		cost = 70
 		x = 34
 		y = 13
 
 		prerequisite = {
-		focus = BRA_laws_for_abolition
+		focus = BRA_road_to_reforms
 		}
 	   
 	   
@@ -2577,7 +2461,7 @@ focus = {
     add_political_power = 35
 	swap_ideas = {
 	remove_idea = property_owners_suffrage
-	add_idea = universal_suffrage
+	add_idea = universal_male_suffrage
     }
 	}
 	
@@ -2591,7 +2475,7 @@ focus = {
 		y = 13
 
 		prerequisite = {
-		focus = BRA_laws_for_abolition
+		focus = BRA_road_to_reforms
 		}
 	   
 	   
@@ -2622,13 +2506,13 @@ focus = {
 		}
 		
 	  prerequisite = {
-		focus = BRA_weaken_the_church
+		focus = BRA_liberalize_the_market
 		}
 	   
 	   
 
 	completion_reward = {
-    add_political_power = 100
+    add_political_power = -150
 	swap_ideas = {
 	remove_idea = limited_constitution
 	add_idea = constitution_adopted
@@ -2638,8 +2522,8 @@ focus = {
 	}
 	
 	focus = {
-		id = BRA_rethink_the_elections
-		icon = GFX_goal_focus_revolutionary_council
+		id = BRA_inspiration_from_the_british_model
+		icon = GFX_goal_focus_house_commons
 		cost = 70
 		x = 34
 		y = 15
@@ -2648,16 +2532,16 @@ focus = {
 		focus = BRA_a_new_constitution
 		}
 		
-		
-	   
-	   
-
+	
 	completion_reward = {
-    add_political_power = 100
-	swap_ideas = {
-	remove_idea = limited_elections
-	add_idea = free_elections
-    }
+    add_political_power = 35
+	add_stability = 0.01
+				ENG = {
+				add_opinion_modifier = {
+					target = BRA
+					modifier = offered_support
+				}
+			}
 	}
 	
 	}
@@ -2666,11 +2550,11 @@ focus = {
 		id = BRA_strenghten_the_parliament
 		icon = GFX_AUS_focus_credit_anstalt
 		cost = 70
-		x = 34
+		x = 35
 		y = 16
 
 		prerequisite = {
-		focus = BRA_rethink_the_elections
+		focus = BRA_inspiration_from_the_british_model
 		}
 		
 		
@@ -2682,7 +2566,7 @@ focus = {
 	add_political_power = 35
 	add_war_support = 0.01
 		add_popularity = {
-				ideology = social_egalitarianism
+				ideology = centrism
 				popularity = 0.15
 			}
 	}
@@ -2692,11 +2576,11 @@ focus = {
 		id = BRA_rethink_the_economy
 		icon = GFX_AUS_focus_civ_economy
 		cost = 70
-		x = 34
-		y = 17
+		x = 33
+		y = 16
 
 		prerequisite = {
-		focus = BRA_strenghten_the_parliament
+		focus = BRA_inspiration_from_the_british_model
 		}
 		
 		
@@ -2704,7 +2588,10 @@ focus = {
 	   
 
 	completion_reward = {
-    add_ideas = BRA_reformed_economy
+    add_timed_idea = {
+	idea = BRA_reformed_economy
+	days = 70
+	}
 	}
     }
 	
@@ -2750,7 +2637,7 @@ focus = {
 	}
 	
 	focus = {
-		id = BRA_limited_abolition
+		id = BRA_free_underaged_slaves
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 70
 		x = 30
@@ -2765,10 +2652,7 @@ focus = {
 		
 	
 	completion_reward = {
-    swap_ideas = {
-	remove_idea = usa_slavery_law
-	add_idea = segregation
-    }
+    add_stability = 0.02
 	add_political_power = -150
 	}
 	
@@ -2784,7 +2668,7 @@ focus = {
 		y = 13
 
 		prerequisite = {
-		focus = BRA_limited_abolition
+		focus = BRA_free_underaged_slaves
 		}
 		
 	
@@ -2812,7 +2696,10 @@ focus = {
 	
 	completion_reward = {
 	add_political_power = 100
-    add_ideas = POR_Research
+    add_timed_idea = {
+	idea = POR_Research 
+	days = 85
+	}
    }
 	
 	}
@@ -2871,7 +2758,7 @@ focus = {
 	completion_reward = {
 	add_tech_bonus = {
     bonus = 0.6
-    uses = 3
+    uses = 1
     category = electronics_devices_tech
     }
    }
@@ -2888,8 +2775,10 @@ focus = {
      
     available = {
 	date > 1863.10.10
+	AND = {
 	NOT = { has_idea = BRA_marques_de_monte_alegre  }
 	NOT = { has_idea = BRA_marques_de_olinda }
+	}
 	}
 	completion_reward = {
     add_war_support = 0.01
@@ -3034,7 +2923,7 @@ focus = {
     add_political_power = 35
 	URG = {
 			add_popularity = {
-				ideology = social_egalitarianism
+				ideology = centrism
 				popularity = 0.15
 			}
 	}		
@@ -3184,7 +3073,10 @@ country_event = brazil.25
 	} 
  
 	completion_reward = {
-    add_ideas = BRA_new_army
+    add_timed_idea = {
+	idea = BRA_new_army
+	days = 150
+	}
 	 add_stability = 0.02
 	}
 	
@@ -3675,7 +3567,355 @@ focus = {
 		}
 	}
 	
+	
+	focus = {
+		id = BRA_the_paraguayan_war
+		icon = GFX_goal_focus_paraguay
+		cost = 25
+		available = {
+		has_country_flag = Paraguayan_War
+		}
+		x = 70
+		y = 0
+		completion_reward = {
+	    add_political_power = 25
+		}
+	}
+	
+	
+	focus = {
+		id = BRA_prepare_the_army
+		icon = GFX_focus_generic_little_entente
+		cost = 25
+		
+		prerequisite = {
+		focus = BRA_the_paraguayan_war
+		}
+		
+		x = 70
+		y = 1
+		completion_reward = {
+	    army_experience = 15
+		}
+	}
+	
+	focus = {
+		id = BRA_reunite_the_imperial_committee
+		icon = GFX_AUS_focus_heritage_sites
+		cost = 25
+		
+		prerequisite = {
+		focus = BRA_prepare_the_army
+		}
+		
+		x = 68
+		y = 2
+		completion_reward = {
+	    502 = {
+		add_manpower = 500
+		}
+		add_political_power = -5
+		navy_experience = 5
+		}
+	}
+	
+	focus = {
+		id = BRA_rearm_rebellion_veterans
+		icon = GFX_focus_secret_rearmament
+		cost = 25
+		
+		prerequisite = {
+		focus = BRA_prepare_the_army
+		}
+		
+		x = 70
+		y = 2
+		completion_reward = {
+	    army_experience = 25
+		add_war_support = -0.012
+		}
+	}
+	
+	focus = {
+		id = BRA_reorganize_the_high_command
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 25
+		
+		prerequisite = {
+		focus = BRA_prepare_the_army
+		}
+		
+		x = 72
+		y = 2
+		completion_reward = {
+	    army_experience = 5
+		add_political_power = -15
+		}
+	}
+	
+	focus = {
+		id = BRA_begin_our_conscription
+		icon = GFX_goal_generic_army_doctrines
+		cost = 45
+		
+		prerequisite = {
+		focus = BRA_reorganize_the_high_command
+		}
+		
+		prerequisite = {
+		focus = BRA_reunite_the_imperial_committee
+		}
+		
+		prerequisite = {
+		focus = BRA_rearm_rebellion_veterans
+		}
+		
+		x = 70
+		y = 3
+		completion_reward = {
+	    army_experience = 25
+		}
+	}
+	
+	focus = {
+		id = BRA_recruit_slaves_to_fight
+		icon = GFX_goal_generic_attack_allies
+		cost = 25
+		
+		prerequisite = {
+		focus = BRA_begin_our_conscription
+		}
+		
+		x = 68
+		y = 4
+		completion_reward = {
+	    add_stability = -0.015
+		add_political_power = 25
+		add_manpower = 5000
+		}
+	}
+	
+	focus = {
+		id = BRA_convoke_the_national_guard
+		icon = GFX_goal_generic_military_deal
+		cost = 25
+		
+		prerequisite = {
+		focus = BRA_begin_our_conscription
+		}
+		
+		x = 70
+		y = 4
+		completion_reward = {
+	    remove_ideas = BRA_national_guard
+		remove_ideas = BRA_national_guard2
+		add_war_support = 0.015
+		}
+	}
+	
+	focus = {
+		id = BRA_recruit_the_police_corps
+		icon = GFX_goal_generic_national_unity
+		cost = 25
+		
+		prerequisite = {
+		focus = BRA_begin_our_conscription
+		}
+		
+		x = 72
+		y = 4
+		completion_reward = {
+	    add_command_power = 10
+		add_political_power = -10
+		}
+	}
+	
+	focus = {
+		id = BRA_voluntarios_da_patria_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 45
+		
+		prerequisite = {
+		focus = BRA_recruit_the_police_corps
+		}
+		
+		prerequisite = {
+		focus = BRA_recruit_slaves_to_fight
+		}
+		
+		prerequisite = {
+		focus = BRA_convoke_the_national_guard
+		}
+		
+		x = 70
+		y = 5
+		completion_reward = {
+	    add_ideas = BRA_voluntarios_da_patria
+		add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = BRA_the_caxias_plan
+		icon = GFX_goal_focus_caxias_plan
+		cost = 45
+		
+		prerequisite = {
+		focus = BRA_voluntarios_da_patria_focus
+		}
+		
+		x = 70
+		y = 6
+		completion_reward = {
+	    	add_command_power = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+		}
+	}
+	
+	focus = {
+		id = BRA_improve_soldiers_medical_attention
+		icon = GFX_goal_focus_medicine_school
+		cost = 45
+		
+		prerequisite = {
+		focus = BRA_the_caxias_plan
+		}
+		
+		x = 70
+		y = 7
+		completion_reward = {
+	  add_tech_bonus = {
+       bonus = 0.5
+        uses = 1
+    technology = hygiene
+    technology = germ_theory
+}
+		}
+	}
+	
+	focus = {
+		id = BRA_learn_from_prussian_tactics
+		icon = GFX_goal_focus_prussian_militarism
+		cost = 45
+		
+		prerequisite = {
+		focus = BRA_the_caxias_plan
+		}
+		
+		x = 72
+		y = 7
+		completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }		
+		}
+	}
+	
+	focus = {
+		id = BRA_save_brazil_save_your_majesty
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 45
+		
+		prerequisite = {
+		focus = BRA_the_caxias_plan
+		}
+		
+		x = 68
+		y = 7
+		completion_reward = {
+    swap_ideas = {
+	add_idea = BRA_voluntarios_da_patria_2
+	remove_idea = BRA_voluntarios_da_patria
+    }
+		}
+	}
+	
+	focus = {
+		id = BRA_brave_and_reorganized_army
+		icon = GFX_goal_SAX_Authoritarian
+		cost = 45
+		
+		prerequisite = {
+		focus = BRA_save_brazil_save_your_majesty
+		}
+		prerequisite = {
+		focus = BRA_improve_soldiers_medical_attention
+		}
+		prerequisite = {
+		focus = BRA_learn_from_prussian_tactics
+		}
+		
+		x = 70
+		y = 8
+		completion_reward = {
+    remove_ideas = BRA_not_prepared_paraguay
+	army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = BRA_victorious_empire
+		icon = GFX_focus_Mine_is_Bigger_Than_Yours
+		cost = 1
+		
+		prerequisite = {
+		focus = BRA_brave_and_reorganized_army
+		}
+		
+	    available = {
+		has_global_flag = Paraguay_Loses_War
+		}
+		
+		mutually_exclusive = {
+		focus = BRA_destroyed_and_defeated
+		}
+		
+		x = 69
+		y = 9
+		completion_reward = {
+    hidden_effect = {
+	remove_ideas = BRA_voluntarios_da_patria_2
+	add_ideas = BRA_post_war_complications
+		}
+	custom_effect_tooltip = 1_Brazil_TT	
+	}
 
+}
+
+
+	focus = {
+		id = BRA_destroyed_and_defeated
+		icon = GFX_goal_focus_orsini_affair
+		cost = 1
+		
+		prerequisite = {
+		focus = BRA_brave_and_reorganized_army
+		}
+		
+	    available = {
+		has_global_flag = Paraguay_Wins_War
+		}
+		
+		x = 71
+		y = 9
+		completion_reward = {
+    hidden_effect = {
+	remove_ideas = BRA_voluntarios_da_patria_2
+	add_ideas = BRA_post_war_complications
+		}
+	custom_effect_tooltip = 1_Brazil_TT	
+	}
+
+}
 	
 	
 	

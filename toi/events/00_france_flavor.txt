@@ -392,3 +392,19 @@ news_event = { # Orsini Affair (both survived)
       name = nap_france_flavor.21.a
     }
 }
+
+news_event = { # Grand Kabyle campaign ending
+    id = nap_france_flavor.22
+    title = nap_france_flavor.22.t
+    desc = nap_france_flavor.22.d
+
+    picture = GFX_france_news_grand_kabyle_campaign
+
+    major = yes
+
+    is_triggered_only = yes
+
+    option = {
+      name = nap_france_flavor.22.a
+    }
+}

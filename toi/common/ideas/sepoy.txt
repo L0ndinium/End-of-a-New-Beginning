@@ -13,18 +13,20 @@ ideas = {
 			
 			targeted_modifier = { 
 				tag = RAJ
-				attack_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.15
 			}
 			
 			targeted_modifier = { 
 				tag = ENG
-				attack_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.15
 			}
 			
 			modifier = {
-				surrender_limit = 0.1
+				surrender_limit = 0.15
 				conscription = 0.01
-				army_core_defence_factor = 0.2
+				army_core_defence_factor = 0.3
 			}
 		}
 	}

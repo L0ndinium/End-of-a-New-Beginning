@@ -117,8 +117,25 @@ opinion_modifiers = {
 	bav_tried_common_policy = {
 		value = 10
 	}
-
 	
+    eoanb_om_LIE_BAV_lowered = {
+	    value = -25
+	}
+	eoanb_om_LIE_BAD_improved = {
+	    value = 10
+	}
+    eoanb_om_LIE_WUR_improved = {
+	    value = 10
+	}	
+    eoanb_om_LIE_AUS_lowered  = {
+	    value = -25
+	}
+	eoanb_om_LIE_PRS_improved = {
+	    value = 25
+	}
+	liechtensteinsaysbye = {
+	    value = -10
+	}
 	king_cotton = {
 		value = -30
 	}

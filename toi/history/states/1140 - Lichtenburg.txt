@@ -16,7 +16,7 @@ state={
 	provinces={
 		13696 2213 13697
 	}
-	manpower=2450
+	manpower=12450
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

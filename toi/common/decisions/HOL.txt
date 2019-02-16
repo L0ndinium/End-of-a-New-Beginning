@@ -1,0 +1,330 @@
+HOL_land_reclaimation = {
+	#Holland: Amsterdam Area Land Reclamation
+	eoanb_decision_land_reclamation_amsterdam = {
+		
+		icon = generic_operation
+		
+		available = {
+			HOL = { has_tech = industrial_era_tools_1 }
+			has_completed_focus = HOL_develop_amsterdam
+		}
+		
+		visible = {
+			7 = { is_controlled_by = HOL }
+			original_tag = HOL
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			7 = { add_extra_state_shared_building_slots = 3 }
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+
+	eoanb_decision_canals_noord_zuid_holland = {
+		
+		icon = generic_operation
+		
+		available = {
+			HOL = { has_tech = industrial_era_tools_2 }
+			7 = { is_controlled_by = HOL }
+			1318 = { is_controlled_by = HOL }
+		}
+		
+		visible = {
+			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			7 = { add_extra_state_shared_building_slots = 1 
+		 add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+          }
+         }
+			1318 = { add_extra_state_shared_building_slots = 1 
+
+	     add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+         }
+        }
+
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+
+	eoanb_decision_canals_limburg_brabant_zeeuw = {
+		
+		icon = generic_operation
+		
+		available = {
+			HOL = { has_tech = industrial_era_tools_2 }
+			35 = { is_controlled_by = HOL }
+			1316 = { is_controlled_by = HOL }
+			1317 = { is_controlled_by = HOL }
+		}
+		
+		visible = {
+			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			35 = { add_extra_state_shared_building_slots = 1 
+		 add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+          }
+         }
+			1316 = { add_extra_state_shared_building_slots = 1 
+
+	      add_building_construction = {
+           type = infrastructure
+           level = 1
+           instant_build = yes
+          }
+         }
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+
+	eoanb_decision_canals_overijssel_ommelanden_friesland = {
+		
+		icon = generic_operation
+		
+		available = {
+			HOL = { has_tech = industrial_era_tools_2 }
+			36 = { is_controlled_by = HOL }
+			1321 = { is_controlled_by = HOL }
+			1320 = { is_controlled_by = HOL }
+		}
+		
+		visible = {
+			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			36 = { add_extra_state_shared_building_slots = 1 
+		 add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+          }
+         }
+			1321 = { add_extra_state_shared_building_slots = 1 
+
+	      add_building_construction = {
+           type = infrastructure
+           level = 1
+           instant_build = yes
+          }
+         }
+
+         1321 = { add_extra_state_shared_building_slots = 1 
+
+	      add_building_construction = {
+           type = infrastructure
+           level = 1
+           instant_build = yes
+          }
+         }
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+
+	eoanb_decision_canals_nieuwe_waterweg = {
+		
+		icon = generic_operation
+		
+		available = {
+			HOL = { has_tech = industrial_era_tools_2 }
+			1318 = { is_controlled_by = HOL }
+		}
+		
+		visible = {
+			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			1318 = { add_extra_state_shared_building_slots = 3 
+		 add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+          }
+         }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+
+	eoanb_decision_canals_amsterdam_rijnkanaal = {
+		
+		icon = generic_operation
+		
+		available = {
+			HOL = { has_tech = industrial_era_tools_2 }
+			7 = { is_controlled_by = HOL }
+		}
+		
+		visible = {
+			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			7 = { add_extra_state_shared_building_slots = 3 
+		 add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+          }
+         }
+		}
+	} 
+
+	eoanb_decision_canals_noordzee_kanaal = {
+		
+		icon = generic_operation
+		
+		available = {
+			HOL = { has_tech = industrial_era_tools_2 }
+			7 = { is_controlled_by = HOL }
+		}
+		
+		visible = {
+			has_completed_focus = HOL_dig_canals
+			original_tag = HOL
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			7 = 
+				{ add_extra_state_shared_building_slots = 3 
+		 		add_building_construction = {
+          			type = infrastructure
+          			level = 2
+          			instant_build = yes
+          		 }
+         	}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+}
+
+HOL_KNIL_general_exchange = {
+
+	eoanb_decision_HOL_take_KNIL_general = {
+		
+		icon = generic_operation
+		
+		available = {
+			INS = { is_subject_of = HOL }
+		}
+		
+		visible = {
+			original_tag = HOL
+		}
+		
+		fire_only_once = no
+
+		days_remove = 180
+		remove_effect = {
+             hidden_effect = {
+             HOL = { country_event = holland_generals.7 }
+            }
+        }
+		
+		cost = 100
+		
+		complete_effect = {
+		 INS = {
+		  country_event = {
+		  id = holland_generals.4
+		  }
+		 }
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				TAG = HOL
+			}
+		}
+	}
+}

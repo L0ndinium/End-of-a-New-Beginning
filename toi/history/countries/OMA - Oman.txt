@@ -3,7 +3,7 @@
 
   oob = "OMA_1857"
 
-  set_convoys = 0
+  set_convoys = 5
   
   set_research_slots = 2
 
@@ -100,6 +100,7 @@
 	tech_infantry_napoleonic_uniform = 1
 	start_build_tech = 1
 	tech_naval_1812_frigate = 1
+	tech_naval_1812_troops = 1
   }
 
   # POLITICAL LEADERS

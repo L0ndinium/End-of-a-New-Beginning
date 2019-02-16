@@ -41,7 +41,11 @@
     theocratic_state
 	religion_catholic
          #NATIONAL SPIRITS
-    CHI_idea_TAI_defense
+  }
+  
+  add_timed_idea = { 
+    idea = CHI_idea_TAI_defense 
+    days = 540 
   }
 
   set_politics = {

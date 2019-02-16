@@ -1,4 +1,38 @@
 spriteTypes = {
+    spriteType = {
+		name = "GFX_idea_ENG_political_advisor_charles_darwin"
+		texturefile = "gfx/interface/ideas/ENG/ENG_political_advisor_charles_darwin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_political_advisor_isambard_kingdom_brunel"
+		texturefile = "gfx/interface/ideas/ENG/ENG_political_advisor_isambard_kingdom_brunel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_political_advisor_crawshay_bailey"
+		texturefile = "gfx/interface/ideas/ENG/ENG_political_advisor_crawshay_bailey.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_political_advisor_sir_john_brown"
+		texturefile = "gfx/interface/ideas/ENG/ENG_political_advisor_sir_john_brown.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_political_advisor_sir_john_thwaites"
+		texturefile = "gfx/interface/ideas/ENG/ENG_political_advisor_sir_john_thwaites.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_political_advisor_sir_pwpw"
+		texturefile = "gfx/interface/ideas/ENG/ENG_political_advisor_sir_pwpw.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_political_advisor_edward_cardwell"
+		texturefile = "gfx/interface/ideas/ENG/ENG_political_advisor_edward_cardwell.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_idea_ENG_british_industrial_revolution"
 		texturefile = "gfx/interface/ideas/ENG/ENG_british_industrial_revolution.dds"

@@ -289,3 +289,53 @@ political_actions = {
 		}
 	}
 }
+foreign_politics={
+
+	eoanb_decision_OFS_western_diplo = {
+
+
+		available = {
+			has_country_flag = OFS_western_diplomacy
+			tag = OFS
+		}
+
+		visible = {
+			tag = OFS
+			has_completed_focus = ofs_vic_establish_diplomacy_with_the_west
+		}
+		
+		target_trigger = {
+			FROM={
+				OR={
+					tag = HOL
+					tag = PRS
+					tag = GER
+					tag = POR
+					tag = USA
+					AND={
+						tag = BRA
+						BRA = {any_owned_state={is_in_colonial_region = yes}}
+					}
+				}
+				exists = yes
+				NOT = {
+					has_country_flag = recognised_ofs
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		complete_effect = {
+			FROM = {country_event = {days = 8 id=boer_states.79}}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+
+}

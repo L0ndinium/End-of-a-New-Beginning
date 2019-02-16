@@ -1,0 +1,27 @@
+state={
+	id=1314
+	name="STATE_1314" # Warszawa
+	manpower = 198451
+	state_category = large_city
+
+	history= {
+		owner = RUS
+		add_core_of = RUS
+
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+	    }
+
+
+	    victory_points = {
+			3544 20
+		}
+			
+	}
+
+	provinces={
+	    3544
+	}
+}

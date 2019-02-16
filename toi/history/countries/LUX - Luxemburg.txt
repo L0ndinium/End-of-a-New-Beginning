@@ -10,22 +10,22 @@
   add_ideas = { 
     #POLITICS 
 		  
-    hos_is_leader
+    HOL_William_III
     victorian_era
-	law_victorian_army
+	  law_victorian_army
     agrarian
-    no_heir
+    weak_heir
     absolute_monarchy
 
     civilian_economy
     limited_exports
     two_percent
     normal_taxes
-	cl_legal
+	  cl_legal
 
     stagnation_growth
     border_control
-	volunteer_only
+	  volunteer_only
     limited_equality
     absolutism
 
@@ -34,7 +34,7 @@
 
     privileged_education
     state_religion
-	religion_catholic
+	  religion_catholic
         #NATIONAL SPIRITS
 	
 	PRS_Zollverein
@@ -103,6 +103,14 @@ create_country_leader = {
     picture = "Portrait_LUX_Charles_Mathias_Simons.dds"
     expire = 1900.1.1
     ideology = despotism
+}
+
+create_country_leader = {
+    name = "Willem Hendrik van Oranje-Nassau"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_LUX_Willem_Frederik.dds"
+    expire = 1900.1.1
+    ideology = conserv
 }
 
 }

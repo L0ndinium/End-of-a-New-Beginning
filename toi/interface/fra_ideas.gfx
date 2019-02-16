@@ -145,7 +145,121 @@ spriteTypes = {
 		name = "GFX_idea_FRA_advisor_leon_gambetta"
 		texturefile = "gfx/interface/ideas/FRA/advisors/FRA_Leon_Gambetta.dds"
 	}
+	
+	# ARMY CHIEFS
+	spriteType = {
+		name = "GFX_idea_FRA_army_chief_francois_achille_bazaine"
+		texturefile = "gfx/interface/ideas/FRA/army_chief/FRA_Francois_Achille_Bazaine.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_army_chief_adolphe_niel"
+		texturefile = "gfx/interface/ideas/FRA/army_chief/FRA_Adolphe_Niel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_army_chief_edmond_leboeuf"
+		texturefile = "gfx/interface/ideas/FRA/army_chief/FRA_Edmond_Leboeuf.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_army_chief_patrice_de_mac_mahon"
+		texturefile = "gfx/interface/ideas/FRA/army_chief/FRA_Patrice_De_Mac_Mahon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_army_chief_charles_auguste_frossard"
+		texturefile = "gfx/interface/ideas/FRA/army_chief/FRA_Charles_Auguste_Frossard.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_army_chief_edmond_le_boeuf"
+		texturefile = "gfx/interface/ideas/FRA/army_chief/FRA_Edmond_Leboeuf.dds"
+	}
+	
+	# HIGH COMMAND
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_charles_cousin_montauban"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Charles_Cousin_Montauban.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_charles_denis_bourbaki"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Charles_Denis_Bourbaki.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_charles_rigault_de_genouilly"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Charles_Rigault_de_Genouilly.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_auguste_regnaud_de_saint_jean_d_angely"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Auguste_Regnaud_de_Saint_Jean_dAngely.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_louis_joseph_lebrun"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Louis_Joseph_Lebrun.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_abel_douay"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Abel_Douay.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_joseph_romain_desfosses"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Joseph_Romain_Desfosses.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_alexandre_ferdinand_parseval_deschenes"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Alexandre_Ferdinand_Parseval_Deschenes.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_elie_frederic_forey"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Elie_Frederic_Forey.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_paul_de_ladmirault"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Paul_de_Ladmirault.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_high_command_felix_charles_douay"
+		texturefile = "gfx/interface/ideas/FRA/high_command/FRA_Felix_Charles_Douay.dds"
+	}
+	
+	# NAVY CHIEF
+	spriteType = {
+		name = "GFX_idea_FRA_navy_chief_ferdinand_hamelin"
+		texturefile = "gfx/interface/ideas/FRA/navy_chief/FRA_Ferdinand_Hamelin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_navy_chief_leonard_victor_charner"
+		texturefile = "gfx/interface/ideas/FRA/navy_chief/FRA_Leonard_Victor_Charner.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_navy_chief_francois_thomas_trehouart"
+		texturefile = "gfx/interface/ideas/FRA/navy_chief/FRA_Francois_Thomas_Trehouart.dds"
+	}
 
+	# THEORIST
+	spriteType = {
+		name = "GFX_idea_FRA_theorist_jean_baptiste_philibert_vaillant"
+		texturefile = "gfx/interface/ideas/FRA/theorists/FRA_Jean_Baptiste_Philibert_Vaillant.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_theorist_gaud_amable_hugon"
+		texturefile = "gfx/interface/ideas/FRA/theorists/FRA_Gaud_Amable_Hugon.dds"
+	}
+	
 	# REWORK ICONS
 
 	SpriteType = {

@@ -13,7 +13,7 @@ state={
 
 		}
 		add_core_of = BUE
-		add_claim_by = ARG
+		add_core_of = ARG
 		add_claim_by = PUE
 		victory_points = {
 			7621 1 

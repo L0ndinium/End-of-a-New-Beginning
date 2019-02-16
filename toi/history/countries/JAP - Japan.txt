@@ -1,5 +1,5 @@
 ﻿1857.1.1 = {
-  capital = 282
+  capital = 1266
 
   oob = "JAP_1857"
 
@@ -71,15 +71,17 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 30
+        popularity = 100
       }
       fundamentalism = {
-        popularity = 70
+        popularity = 0
       }
     }
 
-	  ruling_party = fundamentalism
+	  ruling_party = autocracy
   }
+
+  set_cosmetic_tag = JAP_shogunate
 
   set_technology = {
 	infantry_weapons = 1
@@ -92,10 +94,10 @@
   # POLITICAL LEADERS
 
   create_country_leader = {
-    name = "Emperor Komei"
+    name = "Tokugawa Iesada"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_JAP_Komei.dds"
-    expire = 1867.1.30
+    picture = "Portrait_JAP_Tokugawa_Iesada.dds"
+    expire = 1900.1.1
     ideology = despotism
 }
 

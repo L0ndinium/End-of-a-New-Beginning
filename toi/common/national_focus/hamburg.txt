@@ -20,7 +20,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		
 		completion_reward = {
@@ -36,7 +36,11 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
 		}
 		prerequisite = { focus = HAM_focus_germany_policy }
 		mutually_exclusive = { focus = HAM_focus_stay_neutral focus = HAM_focus_vienna_ambassador }
@@ -49,6 +53,10 @@ focus_tree = {
 				target = PRS
 				modifier = eoanb_om_HAM_PRS_friend
 			}
+			
+			hidden_effect = {
+				set_country_flag = eoanb_flag_sww_side_prs
+			}
 		}
 	}
 	
@@ -60,7 +68,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_berlin_ambassador }
 		
@@ -82,7 +90,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_prussian_weapons }
 		
@@ -99,7 +107,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_germany_policy }
 		mutually_exclusive = { focus = HAM_focus_berlin_ambassador focus = HAM_focus_vienna_ambassador }
@@ -117,7 +125,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_stay_neutral }
 		available = {
@@ -146,7 +154,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_arms_trade }
 		available = {
@@ -181,7 +189,11 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		prerequisite = { focus = HAM_focus_germany_policy }
 		mutually_exclusive = { focus = HAM_focus_berlin_ambassador focus = HAM_focus_stay_neutral }
@@ -205,7 +217,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_vienna_ambassador }
 		
@@ -227,7 +239,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_austrian_weapons }
 		
@@ -244,7 +256,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		
 		completion_reward = {
@@ -260,7 +272,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hanse_legacy }
 		
@@ -277,7 +289,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_money_talks }
 		
@@ -297,7 +309,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hamburg_mint }
 		available = {
@@ -326,7 +338,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hamburg_borse }
 		
@@ -344,7 +356,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hanse_legacy }
 		
@@ -367,7 +379,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_lubeck_bahnhof }
 		
@@ -390,7 +402,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_kloster_bahnhof }
 		
@@ -409,7 +421,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hanse_legacy }
 		
@@ -433,7 +445,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hamburger_hafen }
 		
@@ -451,7 +463,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_kommerzdeputation }
 		
@@ -475,7 +487,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hafen_ausbau }
 		
@@ -499,7 +511,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_hanse_legacy }
 		available = {
@@ -522,7 +534,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_nordseehandel }
 		
@@ -542,7 +554,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		
 		completion_reward = {
@@ -558,7 +570,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_expand_1854_reforms }
 		
@@ -579,7 +591,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_prussian_rifles }
 		
@@ -596,7 +608,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_officers_in_prussia }
 		
@@ -613,7 +625,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_officers_in_prussia }
 		
@@ -630,7 +642,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_tactics_training focus = HAM_focus_recruit_barracks }
 		
@@ -647,7 +659,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_army_drills }
 		
@@ -664,7 +676,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_expand_1854_reforms }
 		
@@ -681,7 +693,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_royal_admiralty }
 		
@@ -705,7 +717,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_naval_dockyard }
 		
@@ -722,7 +734,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_purchase_ships_tech }
 		
@@ -739,7 +751,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		available = {
 			NOT = { has_idea = constitution_adopted }
@@ -764,7 +776,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_adopt_constitution }
 		available = {
@@ -790,7 +802,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_seperate_church }
 		available = {
@@ -816,7 +828,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_full_equality }
 		
@@ -834,7 +846,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_adopt_constitution }
 		available = {
@@ -860,7 +872,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_open_borders }
 		available = {
@@ -886,7 +898,7 @@ focus_tree = {
 		cost = 100
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = { focus = HAM_focus_representative_system }
 		available = {

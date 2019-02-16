@@ -85,12 +85,12 @@ country_event = {
         			1211 = {
         				add_core_of = CSA
         			}
-        			remove_state_core = 1211
-        			add_state_claim = 1211
         		}
             }
         	remove_state_core = 366
         	add_state_claim = 366
+        	remove_state_core = 1211
+        	add_state_claim = 1211
 			hidden_effect = { USA = { country_event = { days = 1 id = csa.3 } } }
 			hidden_effect = { CSA = { country_event = { id = csa.2 } } }
 			add_popularity = { ideology = traditional_conservatism popularity = -0.03 }
@@ -235,7 +235,47 @@ country_event = {
         		}
         	remove_state_core = 375
         	add_state_claim = 375
+        	CSA = {
+        			transfer_state = 1305
+        			1305 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1305
+        	add_state_claim = 1305
+        	CSA = {
+        			transfer_state = 1306
+        			1306 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1306
+        	add_state_claim = 1306
+        	CSA = {
+        			transfer_state = 1304
+        			1304 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1304
+        	add_state_claim = 1304
+        	CSA = {
+        			transfer_state = 1303
+        			1303 = {
+            			add_core_of = CSA
+        			}  
+        		}
+        	remove_state_core = 1303
+        	add_state_claim = 1303
         	hidden_effect = { CSA = { country_event = { id = csa.6 } } }
+        	hidden_effect = {
+        		if = {
+        			limit = {
+        				USA = { has_country_flag = USA_Houston_Revolt_Marked }
+        			}
+        			USA = { country_event = { id = acw.60 days = 5 } }
+        		}
+        	}
 			add_popularity = { ideology = traditional_conservatism popularity = -0.05 }
 			hidden_effect = {
 				if = {
@@ -292,25 +332,7 @@ country_event = {
 			trigger = {
 				tag = USA
 			}
-			CSA = { transfer_state = 362 }
-        	remove_state_core = 362
-        	add_state_claim = 362
-        	362 = { add_core_of = CSA }
-        	CSA = { transfer_state = 372 }
-        	remove_state_core = 372
-        	add_state_claim = 372
-        	372 = { add_core_of = CSA }
-        	CSA = { transfer_state = 368 }
-        	remove_state_core = 368
-        	add_state_claim = 368
-        	368 = { add_core_of = CSA }
-        	CSA = { transfer_state = 363 }
-        	remove_state_core = 363
-        	add_state_claim = 363
-        	363 = { add_core_of = CSA }
-			name = csa.1.a
-			hidden_effect = { CSA = { country_event = { id = csa.8 } } }
-			add_popularity = { ideology = traditional_conservatism popularity = -0.20 }
+			name = csa.8.a
 		}
 		option = {
 			trigger = {
@@ -336,7 +358,10 @@ country_event = {
 			CSA = { controls_state = 367 }
 			CSA = { controls_state = 370 }
 			CSA = { controls_state = 371 }
-			CSA = { controls_state = 375 }
+		}
+
+		mean_time_to_happen = {
+			days = 6
 		}
 		
 		option = {
@@ -357,6 +382,7 @@ country_event = {
 		
 		option = {
 			name = csa.9.a
+			add_ideas = CSA_Civil_War_Scout_Dependency
 			if = {
 				limit = {
 					USA = { has_country_flag = USA_Radical_Coup }
@@ -366,7 +392,6 @@ country_event = {
 			else = {
 				load_oob = CSA_AFTER_SUMTER
 			}
-			add_ideas = CSA_Civil_War_Scout_Dependency
        	}
 }
 #Flag Referendum
@@ -458,5 +483,1863 @@ country_event = {
 				tag = CSA
 			}
 			name = csa.12.b
+		}
+	}
+	#Convention Path Choice
+	country_event = {
+		id = csa.13
+		title = csa.13.t
+		desc = csa.13.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.13.a
+			trigger = {
+				check_variable = {
+					var = CSA_convention
+					value = 2
+					compare = less_than_or_equals
+				}
+			}
+			set_country_flag = CSA_convention_confederation_path
+       	}
+       	option = {
+			name = csa.13.b
+			trigger = {
+				check_variable = {
+					var = CSA_convention
+					value = 2
+					compare = greater_than
+				}
+				check_variable = {
+					var = CSA_convention
+					value = 8
+					compare = less_than
+				}
+			}
+			set_country_flag = CSA_convention_federalism_path
+		}
+		option = {
+			name = csa.13.c
+			trigger = {
+				check_variable = {
+					var = CSA_convention
+					value = 8
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = CSA_convention_unitarian_path
+		}
+	}
+	#Right to Secede
+	country_event = {
+		id = csa.14
+		title = csa.14.t
+		desc = csa.14.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.14.a
+			add_stability = -0.05
+			add_political_power = 25
+			set_country_flag = CSA_secession_legal
+			custom_effect_tooltip = CSA_convention_drift_confed
+			subtract_from_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+       	}
+       	option = {
+			name = csa.14.b
+			add_stability = 0.05
+			add_political_power = -25
+			reverse_add_opinion_modifier = {
+				target = USA
+				modifier = CSA_hypocritical
+			}
+			add_to_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			custom_effect_tooltip = CSA_convention_drift_central
+			set_country_flag = CSA_secession_illegal
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+	}
+	#Landowner Elite
+	country_event = {
+		id = csa.15
+		title = csa.15.t
+		desc = csa.15.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.15.a
+			add_timed_idea = {
+				idea = CSA_aristocrats_encouraged
+				days = 90
+			}
+			subtract_from_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			custom_effect_tooltip = CSA_convention_drift_confed
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+       	}
+       	option = {
+			name = csa.15.b
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+		option = {
+			name = csa.15.c
+			add_timed_idea = {
+				idea = CSA_aristocrats_discouraged
+				days = 90
+			}
+			add_to_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			custom_effect_tooltip = CSA_convention_drift_central
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+	}
+	#Commerce Clause
+	country_event = {
+		id = csa.16
+		title = csa.16.t
+		desc = csa.16.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.16.a
+			swap_ideas = {
+				add_idea = free_trade
+				remove_idea = export_focus
+			}
+			subtract_from_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			custom_effect_tooltip = CSA_convention_drift_confed
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+       	}
+       	option = {
+			name = csa.16.b
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+		option = {
+			name = csa.16.c
+			swap_ideas = {
+				add_idea = limited_exports
+				remove_idea = export_focus
+			}
+			custom_effect_tooltip = CSA_convention_drift_central
+			add_to_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+	}
+	#Slave Trade
+	country_event = {
+		id = csa.17
+		title = csa.17.t
+		desc = csa.17.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.17.a
+			add_political_power = 25
+			custom_effect_tooltip = CSA_convention_drift_confed
+			subtract_from_variable = {
+				var = CSA_convention
+				value = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+       	}
+       	option = {
+			name = csa.17.b
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+		option = {
+			name = csa.17.c
+			add_political_power = -25
+			custom_effect_tooltip = CSA_convention_drift_central
+			add_to_variable = {
+				var = CSA_convention
+				value = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+	}
+	#Taxation Rights
+	country_event = {
+		id = csa.18
+		title = csa.18.t
+		desc = csa.18.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.18.a
+			custom_effect_tooltip = CSA_convention_drift_confed
+			subtract_from_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+       	}
+       	option = {
+			name = csa.18.b
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+		option = {
+			name = csa.18.c
+			custom_effect_tooltip = CSA_convention_drift_central
+			add_to_variable = {
+				var = CSA_convention
+				value = 2
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CSA_convention_taxation
+						has_completed_focus = CSA_convention_trade_of_slaves
+						has_completed_focus = CSA_convention_commerce_clause
+						has_completed_focus = CSA_convention_landowner_elite
+						has_completed_focus = CSA_convention_right_to_secede
+					}
+					country_event = { id = csa.13 hours = 1 }
+				}
+			}
+		}
+	}
+	#Borders for CSA States when Decentralizing
+	country_event = {
+		id = csa.19
+		title = csa.19.t
+		desc = csa.19.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.19.a
+       	}
+       	option = {
+			name = csa.19.b
+			set_country_flag = CSA_group_up_states
+		}
+	}
+	#Finish Decentralization
+	country_event = {
+		id = csa.20
+		title = csa.20.t
+		desc = csa.20.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.20.a
+			trigger = {
+				NOT = { has_country_flag = CSA_group_up_states }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						owns_state = 371
+					}
+					LOU = {
+						transfer_state = 371
+						add_state_core = 371
+					}
+					puppet = LOU
+				}
+				if = {
+					limit = {
+						owns_state = 375
+					}
+					TEX = {
+						transfer_state = 375
+						add_state_core = 375
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1305
+					}
+					TEX = {
+						transfer_state = 1305
+						add_state_core = 1305
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1306
+					}
+					TEX = {
+						transfer_state = 1306
+						add_state_core = 1306
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1304
+					}
+					TEX = {
+						transfer_state = 1304
+						add_state_core = 1304
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1303
+					}
+					TEX = {
+						transfer_state = 1303
+						add_state_core = 1303
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1281
+					}
+					TEX = {
+						transfer_state = 1281
+						add_state_core = 1281
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1280
+					}
+					TEX = {
+						transfer_state = 1280
+						add_state_core = 1280
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 366
+					}
+					FLO = {
+						transfer_state = 366
+						add_state_core = 366
+					}
+					puppet = FLO
+				}
+				if = {
+					limit = {
+						owns_state = 1211
+					}
+					FLO = {
+						transfer_state = 1211
+						add_state_core = 1211
+					}
+					puppet = FLO
+				}
+				if = {
+					limit = {
+						owns_state = 1285
+					}
+					NMX = {
+						transfer_state = 1285
+						add_state_core = 1285
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 1300
+					}
+					NMX = {
+						transfer_state = 1300
+						add_state_core = 1300
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 1297
+					}
+					NMX = {
+						transfer_state = 1297
+						add_state_core = 1297
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 367
+					}
+					ALA = {
+						transfer_state = 367
+						add_state_core = 367
+					}
+					puppet = ALA
+				}
+				if = {
+					limit = {
+						owns_state = 370
+					}
+					MIS = {
+						transfer_state = 370
+						add_state_core = 370
+					}
+					puppet = MIS
+				}
+				if = {
+					limit = {
+						owns_state = 365
+					}
+					USG = {
+						transfer_state = 365
+						add_state_core = 365
+					}
+					puppet = USG
+				}
+				if = {
+					limit = {
+						owns_state = 368
+					}
+					TEN = {
+						transfer_state = 368
+						add_state_core = 368
+					}
+					puppet = TEN
+				}
+				if = {
+					limit = {
+						owns_state = 372
+					}
+					ARK = {
+						transfer_state = 372
+						add_state_core = 372
+					}
+					puppet = ARK
+				}
+				if = {
+					limit = {
+						owns_state = 373
+					}
+					MIO = {
+						transfer_state = 373
+						add_state_core = 373
+					}
+					puppet = MIO
+				}
+				if = {
+					limit = {
+						owns_state = 369
+					}
+					KTY = {
+						transfer_state = 369
+						add_state_core = 369
+					}
+					puppet = KTY
+				}
+				if = {
+					limit = {
+						owns_state = 363
+					}
+					NCA = {
+						transfer_state = 363
+						add_state_core = 363
+					}
+					puppet = NCA
+				}
+				if = {
+					limit = {
+						owns_state = 364
+					}
+					SCA = {
+						transfer_state = 364
+						add_state_core = 364
+					}
+					puppet = SCA
+				}
+			}
+       	}
+       	option = {
+			name = csa.20.b
+			trigger = {
+				has_country_flag = CSA_group_up_states
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						owns_state = 371
+					}
+					LOU = {
+						transfer_state = 371
+						add_state_core = 371
+					}
+					puppet = LOU
+				}
+				if = {
+					limit = {
+						owns_state = 375
+					}
+					TEX = {
+						transfer_state = 375
+						add_state_core = 375
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1305
+					}
+					TEX = {
+						transfer_state = 1305
+						add_state_core = 1305
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1306
+					}
+					TEX = {
+						transfer_state = 1306
+						add_state_core = 1306
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1304
+					}
+					TEX = {
+						transfer_state = 1304
+						add_state_core = 1304
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1303
+					}
+					TEX = {
+						transfer_state = 1303
+						add_state_core = 1303
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1281
+					}
+					TEX = {
+						transfer_state = 1281
+						add_state_core = 1281
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 1280
+					}
+					TEX = {
+						transfer_state = 1280
+						add_state_core = 1280
+					}
+					puppet = TEX
+				}
+				if = {
+					limit = {
+						owns_state = 366
+					}
+					FLO = {
+						transfer_state = 366
+						add_state_core = 366
+					}
+					puppet = FLO
+				}
+				if = {
+					limit = {
+						owns_state = 1211
+					}
+					FLO = {
+						transfer_state = 1211
+						add_state_core = 1211
+					}
+					puppet = FLO
+				}
+				if = {
+					limit = {
+						owns_state = 1285
+					}
+					NMX = {
+						transfer_state = 1285
+						add_state_core = 1285
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 1300
+					}
+					NMX = {
+						transfer_state = 1300
+						add_state_core = 1300
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 1297
+					}
+					NMX = {
+						transfer_state = 1297
+						add_state_core = 1297
+					}
+					puppet = NMX
+				}
+				if = {
+					limit = {
+						owns_state = 367
+					}
+					ALA = {
+						transfer_state = 367
+						add_state_core = 367
+					}
+					puppet = ALA
+				}
+				if = {
+					limit = {
+						owns_state = 370
+					}
+					ALA = {
+						transfer_state = 370
+						add_state_core = 370
+					}
+					puppet = ALA
+				}
+				if = {
+					limit = {
+						owns_state = 365
+					}
+					USG = {
+						transfer_state = 365
+						add_state_core = 365
+					}
+					puppet = USG
+				}
+				if = {
+					limit = {
+						owns_state = 368
+					}
+					TEN = {
+						transfer_state = 368
+						add_state_core = 368
+					}
+					puppet = TEN
+				}
+				if = {
+					limit = {
+						owns_state = 372
+					}
+					LOU = {
+						transfer_state = 372
+						add_state_core = 372
+					}
+					puppet = LOU
+				}
+				if = {
+					limit = {
+						owns_state = 373
+					}
+					MIO = {
+						transfer_state = 373
+						add_state_core = 373
+					}
+					puppet = MIO
+				}
+				if = {
+					limit = {
+						owns_state = 369
+					}
+					TEN = {
+						transfer_state = 369
+						add_state_core = 369
+					}
+					puppet = TEN
+				}
+				if = {
+					limit = {
+						owns_state = 363
+					}
+					SCA = {
+						transfer_state = 363
+						add_state_core = 363
+					}
+					puppet = SCA
+				}
+				if = {
+					limit = {
+						owns_state = 364
+					}
+					SCA = {
+						transfer_state = 364
+						add_state_core = 364
+					}
+					puppet = SCA
+				}
+			}
+		}
+	}
+	#CSA Elections
+	country_event = {
+		id = csa.21
+		title = csa.21.t
+		desc = {
+			text = csa.21.d
+			trigger = {
+				NOT = { has_completed_focus = CSA_convention_unitarian_finish }
+			}
+		}
+		desc = {
+			text = csa.21.d_unitarian
+			trigger = {
+				has_completed_focus = CSA_convention_unitarian_finish
+			}
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.21.a
+			set_politics = {
+				ruling_party = traditional_conservatism
+				elections_allowed = yes
+				election_frequency = 72
+			}
+			set_country_flag = CSA_davis_elected
+       	}
+       	option = {
+			name = csa.21.b
+			set_politics = {
+				ruling_party = traditional_conservatism
+				elections_allowed = yes
+				election_frequency = 72
+			}
+			create_country_leader = {
+				name = "John Breckinridge"
+				desc = ""
+				picture = "Portrait_CSA_John_Breckinridge.dds"
+				expire = "1965.1.1"
+				ideology = federal
+				traits = {
+				}
+			}
+			set_country_flag = CSA_breckinridge_elected
+		}
+		option = {
+			name = csa.21.c
+			set_politics = {
+				ruling_party = traditional_conservatism
+				elections_allowed = yes
+				election_frequency = 72
+			}
+			create_country_leader = {
+				name = "Robert Toombs"
+				desc = ""
+				picture = ""
+				expire = "1965.1.1"
+				ideology = federal
+				traits = {
+				}
+			}
+			set_country_flag = CSA_toombs_elected
+		}
+		option = {
+			name = csa.21.e
+			trigger = {
+				NOT = { has_completed_focus = CSA_convention_unitarian_finish }
+			}
+			set_politics = {
+				ruling_party = traditional_conservatism
+				elections_allowed = yes
+				election_frequency = 72
+			}
+			create_country_leader = {
+				name = "Robert E. Lee"
+				desc = ""
+				picture = "Portrait_CSA_Robert_Lee.dds"
+				expire = "1965.1.1"
+				ideology = federal
+				traits = {
+				}
+			}
+			set_country_flag = CSA_lee_elected
+		}
+	}
+	#Rebirth of the Whigs
+	country_event = {
+		id = csa.22
+		title = csa.22.t
+		desc = csa.22.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		trigger = {
+			tag = CSA
+			date > 1870.1.1
+		}
+
+		mean_time_to_happen = {
+			days = 500
+		}
+
+		fire_only_once = yes
+		
+		option = {
+			name = csa.22.a
+			add_popularity = {
+				ideology = centrism
+				popularity = 0.05
+			}
+			set_country_flag = CSA_whig_party_flag
+			set_party_name = { ideology = centrism long_name = CSA_whig_party name = CSA_whig_party }
+       	}
+	}
+	#Democrat or Dixiecrat
+	country_event = {
+		id = csa.23
+		title = csa.23.t
+		desc = csa.23.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.23.a
+       	}
+       	option = {
+			name = csa.23.b
+			set_party_name = { ideology = traditional_conservatism long_name = CSA_dixiecrat_party name = CSA_dixiecrat_party }
+       	}
+	}
+	#Purchase of Sonora and Chihuahua
+	country_event = {
+		id = csa.24
+		title = csa.24.t
+		desc = csa.24.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.24.a
+			ai_chance = {
+				factor = 80
+				modifier = {
+					add = -30
+					num_of_civilian_factories > 29
+				}
+				modifier = {
+					add = -80
+					num_of_civilian_factories > 39
+				}
+			}
+			if = {
+				limit = {
+					USA = { exists = yes }
+				}
+				USA = { country_event = { id = csa.25 hours = 3 } }
+			}
+			else = {
+				CSA = { country_event = { id = csa.27 hours = 3 } }
+			}
+       	}
+       	option = {
+			name = csa.24.b
+			ai_chance = {
+				factor = 20
+				modifier = {
+					add = 30
+					num_of_civilian_factories > 29
+				}
+				modifier = {
+					add = 80
+					num_of_civilian_factories > 39
+				}
+			}
+			CSA = { country_event = { id = csa.26 hours = 3 } }
+       	}
+	}
+	#USA reacts to purchase of Sonora and Chihuahua
+	country_event = {
+		id = csa.25
+		title = csa.25.t
+		desc = csa.25.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.25.a
+			ai_chance = {
+				factor = 50
+				modifier = {
+					add = 50
+					has_government = centrism
+				}
+				modifier = {
+					add = 100
+					has_government = social_egalitarianism
+				}
+			}
+			CSA = { country_event = { id = csa.28 hours = 3 } }
+       	}
+       	option = {
+			name = csa.25.b
+			ai_chance = {
+				factor = 50
+				modifier = {
+					add = 50
+					has_government = traditional_conservatism
+				}
+				modifier = {
+					add = 50
+					has_war = yes
+				}
+				modifier = {
+					add = 50
+					has_war_support < 0.2
+				}
+			}
+			CSA = { country_event = { id = csa.27 hours = 3 } }
+       	}
+	}
+	#CSA is refused by mexico
+	country_event = {
+		id = csa.26
+		title = csa.26.t
+		desc = csa.26.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.26.a
+			add_political_power = -10
+			set_country_flag = CSA_mexico_refused_purchase
+       	}
+	}
+	#CSA is granted territory by mexico
+	country_event = {
+		id = csa.27
+		title = csa.27.t
+		desc = csa.27.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.27.a
+			add_political_power = 10
+			set_country_flag = CSA_mexico_accepted_purchase_goes
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			MEX = {
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = CSA_payment_for_states
+				days = 120
+			}
+			MEX = {
+				add_timed_idea = {
+					idea = CSA_recieving_payment
+					days = 120
+				}
+			}
+			transfer_state = 482
+			add_state_core = 482
+			transfer_state = 483
+			add_state_core = 483
+       	}
+	}
+	#USA demands CSA to not go with purchase
+	country_event = {
+		id = csa.28
+		title = csa.28.t
+		desc = csa.28.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.28.a
+			ai_chance = {
+				factor = 85
+			}
+			USA = {
+				declare_war_on = {
+					target = CSA
+					type = second_mexican_war_wargoal
+				}
+			}
+			MEX = {
+				add_to_war = {
+					targeted_alliance = CSA
+					enemy = USA
+				}
+			}
+			set_country_flag = CSA_second_mexican_war
+			set_global_flag = ACW_second_mexican_war
+			hidden_effect = { news_event = csa_news.1 }
+       	}
+       	option = {
+			name = csa.28.b
+			ai_chance = {
+				factor = 15
+			}
+       	}
+	}
+	#CSA ask uk and france for aid
+	country_event = {
+		id = csa.29
+		title = csa.29.t
+		desc = csa.29.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		fire_only_once = yes
+
+		trigger = {
+			tag = CSA
+			has_country_flag = CSA_second_mexican_war
+			surrender_progress > 0.05
+		}
+		
+		option = {
+			name = csa.29.a
+			ai_chance = {
+				factor = 90
+			}
+			ENG = {
+				country_event = { id = csa.30 hours = 3 }
+			}
+       	}
+       	option = {
+			name = csa.29.b
+			ai_chance = {
+				factor = 10
+			}
+       	}
+	}
+	#CSA ask uk and france for aid
+	country_event = {
+		id = csa.30
+		title = csa.30.t
+		desc = {
+			text = csa.30.d
+			trigger = { tag = ENG }
+		}
+		desc = {
+			text = csa.30.d_uk
+			trigger = {
+				tag = FRA
+				CSA = { has_country_flag = CSA_UK_second_mexican_war }
+			}
+		}
+		desc = {
+			text = csa.30.d_no_uk
+			trigger = {
+				tag = FRA
+				NOT = {
+					CSA = { has_country_flag = CSA_UK_second_mexican_war }
+				}
+			}
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.30.a
+			ai_chance = {
+				factor = 90
+				modifier = {
+					add = -90
+					AND = {
+						tag = FRA
+						NOT = { CSA = { has_country_flag = CSA_UK_second_mexican_war } }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ENG
+				}
+				CSA = { set_country_flag = CSA_UK_second_mexican_war }
+				FRA = {
+					country_event = { id = csa.30 hours = 3 }
+				}
+			}
+			if = {
+				limit = {
+					tag = FRA
+				}
+				CSA = {
+					country_event = { id = csa.31 hours = 3 }
+				}
+				CSA = { set_country_flag = CSA_FRA_second_mexican_war }
+			}
+       	}
+       	option = {
+			name = csa.30.b
+			ai_chance = {
+				factor = 10
+			}
+			if = {
+				limit = {
+					tag = ENG
+				}
+				FRA = {
+					country_event = { id = csa.30 hours = 3 }
+				}
+			}
+			if = {
+				limit = {
+					tag = FRA
+				}
+				CSA = {
+					country_event = { id = csa.31 hours = 3 }
+				}
+			}
+       	}
+	}
+	#CSA response
+	country_event = {
+		id = csa.31
+		title = csa.31.t
+		desc = csa.31.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.31.a
+			trigger = {
+				AND = {
+					has_country_flag = CSA_UK_second_mexican_war
+					has_country_flag = CSA_FRA_second_mexican_war
+				}
+			}
+			ENG = {
+				add_to_war = {
+					targeted_alliance = CSA
+					enemy = USA
+				}
+			}
+			FRA = {
+				add_to_war = {
+					targeted_alliance = CSA
+					enemy = USA
+				}
+			}
+			swap_ideas = {
+				remove_idea = usa_slavery_law
+				add_idea = slavery_all_but_name
+			}
+       	}
+       	option = {
+			name = csa.31.b
+			trigger = {
+				AND = {
+					has_country_flag = CSA_UK_second_mexican_war
+					NOT = { has_country_flag = CSA_FRA_second_mexican_war }
+				}
+			}
+			ENG = {
+				add_to_war = {
+					targeted_alliance = CSA
+					enemy = USA
+				}
+			}
+			swap_ideas = {
+				remove_idea = usa_slavery_law
+				add_idea = slavery_all_but_name
+			}
+       	}
+       	option = {
+			name = csa.31.c
+			trigger = {
+				AND = {
+					NOT = { has_country_flag = CSA_UK_second_mexican_war }
+					has_country_flag = CSA_FRA_second_mexican_war
+				}
+			}
+			FRA = {
+				add_to_war = {
+					targeted_alliance = CSA
+					enemy = USA
+				}
+			}
+			swap_ideas = {
+				remove_idea = usa_slavery_law
+				add_idea = slavery_all_but_name
+			}
+       	}
+       	option = {
+			name = csa.31.e
+			trigger = {
+				AND = {
+					NOT = { has_country_flag = CSA_UK_second_mexican_war }
+					NOT = { has_country_flag = CSA_FRA_second_mexican_war }
+				}
+			}
+			add_political_power = -25
+       	}
+	}
+	#End of the Second Mexican War
+	country_event = {
+		id = csa.32
+		title = csa.32.t
+		desc = {
+			text = csa.32.d
+			trigger = { tag = CSA }
+		}
+		desc = {
+			text = csa.32.d_usa
+			trigger = {
+				tag = USA
+			}
+		}
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.32.a
+			trigger = {
+				tag = CSA
+			}
+			CSA = { white_peace = USA }
+			MEX = { white_peace = USA }
+			if = {
+				limit = {
+					CSA = { has_country_flag = CSA_UK_second_mexican_war }
+				}
+				ENG = { white_peace = USA }
+			}
+			if = {
+				limit = {
+					CSA = { has_country_flag = CSA_FRA_second_mexican_war }
+				}
+				FRA = { white_peace = USA }
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			MEX = {
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = CSA_payment_for_states
+				days = 120
+			}
+			MEX = {
+				add_timed_idea = {
+					idea = CSA_recieving_payment
+					days = 120
+				}
+			}
+			transfer_state = 482
+			add_state_core = 482
+			transfer_state = 483
+			add_state_core = 483
+			USA = { add_stability = -0.1 }
+       	}
+       	option = {
+			name = csa.32.b
+			trigger = {
+				tag = USA
+			}
+			CSA = { white_peace = USA }
+			MEX = { white_peace = USA }
+			if = {
+				limit = {
+					CSA = { has_country_flag = CSA_UK_second_mexican_war }
+				}
+				ENG = { white_peace = USA }
+			}
+			if = {
+				limit = {
+					CSA = { has_country_flag = CSA_FRA_second_mexican_war }
+				}
+				FRA = { white_peace = USA }
+			}
+			add_stability = 0.1
+       	}
+	}
+	#Purchase of Cuba
+	country_event = {
+		id = csa.33
+		title = csa.33.t
+		desc = csa.33.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.33.a
+			CSA = { country_event = { id = csa.35 } }
+       	}
+       	option = {
+			name = csa.33.b
+			CSA = { country_event = { id = csa.34 } }
+       	}
+	}
+	#Spain Refuses to Sell Cuba
+	country_event = {
+		id = csa.34
+		title = csa.34.t
+		desc = csa.34.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.34.a
+			add_political_power = -10
+       	}
+	}
+	#Spain Sells Cuba
+	country_event = {
+		id = csa.35
+		title = csa.35.t
+		desc = csa.35.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.35.a
+			transfer_state = 315
+			add_state_core = 315
+			transfer_state = 1022
+			add_state_core = 1022
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SPR = {
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = CSA_payment_for_states
+				days = 120
+			}
+			SPR = {
+				add_timed_idea = {
+					idea = CSA_recieving_payment
+					days = 120
+				}
+			}
+       	}
+	}
+	#Seizing Comanche Territory
+	country_event = {
+		id = csa.36
+		title = csa.36.t
+		desc = csa.36.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.36.a
+			ai_chance = {
+				factor = 90
+			}
+			if = {
+				limit = {
+					owns_state = 1281
+				}
+				CSA = {
+					transfer_state = 1281
+					add_state_core = 1281
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 1280
+				}
+				CSA = {
+					transfer_state = 1280
+					add_state_core = 1280
+				}
+			}
+			if = {
+				limit = {
+					CSA = { owns_state = 1285 }
+				}
+				CSA = {
+					transfer_state = 1279
+				}
+			}
+       	}
+       	option = {
+			name = csa.36.b
+			ai_chance = {
+				factor = 10
+			}
+			CSA = { country_event = { id = csa.37 } }
+       	}
+	}
+	#Comanche refuse!
+	country_event = {
+		id = csa.37
+		title = csa.37.t
+		desc = csa.37.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.37.a
+			declare_war_on = {
+				target = COM
+				type = annex_everything
+			}
+       	}
+       	option = {
+			name = csa.37.b
+			add_political_power = -25
+       	}
+	}
+	#Seizing Apache Territory
+	country_event = {
+		id = csa.38
+		title = csa.38.t
+		desc = csa.38.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.38.a
+			ai_chance = {
+				factor = 90
+			}
+			CSA = {
+				transfer_state = 1295
+				transfer_state = 1301
+				transfer_state = 1294
+			}
+       	}
+       	option = {
+			name = csa.38.b
+			ai_chance = {
+				factor = 10
+			}
+			CSA = { country_event = { id = csa.39 } }
+       	}
+	}
+	#Apache refuse!
+	country_event = {
+		id = csa.39
+		title = csa.39.t
+		desc = csa.39.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.39.a
+			declare_war_on = {
+				target = APA
+				type = annex_everything
+			}
+       	}
+       	option = {
+			name = csa.39.b
+			add_political_power = -25
+       	}
+	}
+	#Trade with CSA?
+	country_event = {
+		id = csa.40
+		title = csa.40.t
+		desc = csa.40.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = csa.40.a
+			CSA = { set_country_flag = CSA_USA_reapproach }
+       	}
+       	option = {
+			name = csa.39.b
+			CSA = { set_country_flag = CSA_USA_no_reapproach }
+       	}
+	}
+	#Generic USA Election
+	country_event = {
+		id = csa.1000
+		title = csa.1000.t
+		desc = csa.1000.d
+		picture = GFX_report_event_german_reichstag_gathering
+		
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = CSA
+			date > 1868.1.1
+		}
+		
+		option = {
+			trigger = {
+				has_country_flag = CSA_whig_party_flag
+				centrism > traditional_conservatism
+			}
+			name = csa_election.1000.a
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = centrism
+				election_frequency = 72
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.03
+			}
+			clr_country_flag = CSA_generic_president_reelected
+		}
+		option = {
+			name = csa_election.1000.b
+			trigger = {
+				OR = {
+					NOT = { has_country_flag = CSA_whig_party_flag }
+					centrism < traditional_conservatism
+				}
+				has_country_flag = CSA_whig_party_flag
+				centrism < traditional_conservatism
+			}
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = traditional_conservatism
+				election_frequency = 72
+    			elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = centrism
+				popularity = 0.03
+			}
+			clr_country_flag = CSA_generic_president_reelected
+		}
+		option = {
+			name = csa_election.1000.c
+			trigger = {
+				NOT = { has_country_flag = CSA_generic_president_reelected }
+			}
+			set_country_flag = CSA_generic_president_reelected
+			random_list = {
+				50 = {
+					add_popularity = {
+						ideology = centrism
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = traditional_conservatism
+						popularity = 0.03
+					}
+				}
+			}
+		}
+	}
+add_namespace = csa_news
+#Second Mexican War
+news_event = {
+		id = csa_news.1
+		title = csa_news.1.t
+		desc = csa_news.1.d
+
+		picture = GFX_news_event_generic_army
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = csa_news.1.a
+			trigger = {
+				NOT = {
+					tag = USA
+					tag = CSA
+					tag = MEX
+				}
+			}
+		}
+		option = {
+			name = csa_news.1.b
+			trigger = {
+				tag = USA
+			}
+		}
+		option = {
+			name = csa_news.1.c
+			trigger = {
+				OR = {
+					tag = CSA
+					tag = MEX
+				}
+			}
 		}
 }

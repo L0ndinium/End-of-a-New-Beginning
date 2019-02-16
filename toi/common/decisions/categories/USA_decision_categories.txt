@@ -5,6 +5,13 @@ USA_grant_statehood = {
 		tag = USA
 	}
 }
+USA_foreign_policy = {
+	icon = generic_political_actions
+
+	available = {
+		tag = USA
+	}
+}	
 USA_american_civil_war_descision = {
 	icon = power_struggle
 
@@ -34,6 +41,49 @@ USA_reconstruction_period = {
 				has_country_flag = USA_first_kkk
 				has_country_flag = USA_enforcement_act
 			}
+		}
+	}
+}
+USA_return_from_ashes = {
+	icon = generic_political_actions
+
+	available = {
+		OR = {
+			USA = { exists = no }
+			has_country_flag = USA_returned_from_ash
+		}
+		NOT = { has_global_flag = ACWAmerican_Civil_War }
+	}
+
+	visible = {
+		OR = {
+			USA = { exists = no }
+			has_country_flag = USA_returned_from_ash
+		}
+		NOT = { has_global_flag = ACWAmerican_Civil_War }
+		OR = {
+			tag = USA
+			tag = CSA
+			tag = ASA
+			tag = NEG
+			tag = CAL
+			tag = TEX
+			tag = ORE
+			tag = DAK
+			tag = NMX
+			tag = KTY
+			tag = KNS
+			tag = MIO
+			tag = GRL
+			tag = LOU
+			tag = FLO
+			tag = ALA
+			tag = MIS
+			tag = USG
+			tag = TEN
+			tag = ARK
+			tag = NCA
+			tag = SCA
 		}
 	}
 }

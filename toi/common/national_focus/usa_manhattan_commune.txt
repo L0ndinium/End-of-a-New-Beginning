@@ -1,0 +1,722 @@
+focus_tree = {
+	id = usa_manhattan_commune
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			AND = {
+				tag = USA
+				has_country_flag = usa_mhc_won_war
+				OR = {
+					has_government = anarchism
+					has_government = vanguard_communism
+					has_government = social_egalitarianism
+					has_government = collectivist_socialism
+				}
+			}
+		}
+	}
+	default = no
+	shared_focus = USA_foreign_diplomacy
+	shared_focus = USA_research_civil_war
+	shared_focus = USA_research_civilian
+	shared_focus = USA_csadiplo_end_slavery
+	focus = {
+		id = USA_mhc_rise
+		icon = GFX_goal_focus_revolutionary_council
+		cost = 10
+		x = 8
+		y = 0
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = USA_mhc_propaganda
+		icon = GFX_goal_focus_newspapers
+		cost = 15
+		x = 6
+		y = 1
+		prerequisite = {
+			focus = USA_mhc_rise
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = USA_mhc_overturn_gov
+		icon = GFX_goal_focus_reform_administration
+		cost = 15
+		x = 8
+		y = 1
+		prerequisite = {
+			focus = USA_mhc_rise
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = USA_mhc_social_ideas
+		icon = GFX_goal_focus_socialist_regime
+		cost = 15
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = USA_mhc_rise
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = USA_mhc_revolutionary_government
+		icon = GFX_goal_focus_revolutionary_government
+		cost = 15
+		x = 8
+		y = 2
+		prerequisite = {
+			focus = USA_mhc_propaganda
+		}
+		prerequisite = {
+			focus = USA_mhc_overturn_gov
+		}
+		prerequisite = {
+			focus = USA_mhc_social_ideas
+		}
+		completion_reward = {
+			custom_effect_tooltip = USA_mhc_election_tt
+		}
+	}
+	focus = {
+		id = USA_mhc_estates
+		icon = GFX_goal_fight_the_elite
+		cost = 15
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = USA_mhc_revolutionary_government
+		}
+		completion_reward = {
+			country_event = { id = usa.117 }
+		}
+	}
+	focus = {
+		id = USA_mhc_executive
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 15
+		x = 6
+		y = 3
+		prerequisite = {
+			focus = USA_mhc_revolutionary_government
+		}
+		completion_reward = {
+			country_event = { id = usa.118 }
+		}
+	}
+	focus = {
+		id = USA_mhc_socialist_ideals
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 15
+		x = 8
+		y = 3
+		prerequisite = {
+			focus = USA_mhc_revolutionary_government
+		}
+		completion_reward = {
+			country_event = { id = usa.119 }
+		}
+	}
+	focus = {
+		id = USA_mhc_political_parties
+		icon = GFX_goal_focus_stop_fund_partisans
+		cost = 15
+		x = 10
+		y = 3
+		prerequisite = {
+			focus = USA_mhc_revolutionary_government
+		}
+		completion_reward = {
+			country_event = { id = usa.120 }
+		}
+	}
+	focus = {
+		id = USA_mhc_democratic_spirit
+		icon = GFX_goal_focus_popularize
+		cost = 15
+		x = 12
+		y = 3
+		prerequisite = {
+			focus = USA_mhc_revolutionary_government
+		}
+		completion_reward = {
+			country_event = { id = usa.121 }
+		}
+	}
+	focus = {
+		id = USA_mhc_dietzgen
+		icon = GFX_goal_focus_elections
+		cost = 10
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = USA_mhc_estates
+		}
+		prerequisite = {
+			focus = USA_mhc_executive
+		}
+		prerequisite = {
+			focus = USA_mhc_socialist_ideals
+		}
+		prerequisite = {
+			focus = USA_mhc_political_parties
+		}
+		prerequisite = {
+			focus = USA_mhc_democratic_spirit
+		}
+		available = {
+			has_country_flag = USA_mhc_dietzgen_flag
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_mhc_sorge
+		icon = GFX_goal_focus_elections
+		cost = 10
+		x = 6
+		y = 4
+		prerequisite = {
+			focus = USA_mhc_estates
+		}
+		prerequisite = {
+			focus = USA_mhc_executive
+		}
+		prerequisite = {
+			focus = USA_mhc_socialist_ideals
+		}
+		prerequisite = {
+			focus = USA_mhc_political_parties
+		}
+		prerequisite = {
+			focus = USA_mhc_democratic_spirit
+		}
+		available = {
+			has_country_flag = USA_mhc_sorge_flag
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_mhc_uriah
+		icon = GFX_goal_focus_elections
+		cost = 10
+		x = 10
+		y = 4
+		prerequisite = {
+			focus = USA_mhc_estates
+		}
+		prerequisite = {
+			focus = USA_mhc_executive
+		}
+		prerequisite = {
+			focus = USA_mhc_socialist_ideals
+		}
+		prerequisite = {
+			focus = USA_mhc_political_parties
+		}
+		prerequisite = {
+			focus = USA_mhc_democratic_spirit
+		}
+		available = {
+			has_country_flag = USA_mhc_uriah_flag
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_mhc_warren
+		icon = GFX_goal_focus_elections
+		cost = 10
+		x = 14
+		y = 4
+		prerequisite = {
+			focus = USA_mhc_estates
+		}
+		prerequisite = {
+			focus = USA_mhc_executive
+		}
+		prerequisite = {
+			focus = USA_mhc_socialist_ideals
+		}
+		prerequisite = {
+			focus = USA_mhc_political_parties
+		}
+		prerequisite = {
+			focus = USA_mhc_democratic_spirit
+		}
+		available = {
+			has_country_flag = USA_mhc_warren_flag
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_mhc_form_ussa
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 20
+		x = 4
+		y = 5
+		prerequisite = {
+			focus = USA_mhc_dietzgen
+			focus = USA_mhc_sorge
+		}
+		completion_reward = {
+			add_political_power = 25
+			set_cosmetic_tag = USA_mhc_ussa_cosmetic
+		}
+	}
+	focus = {
+		id = USA_mhc_democratic_socialism
+		icon = GFX_focus_generic_soviet_politics
+		cost = 20
+		x = 8
+		y = 5
+		prerequisite = {
+			focus = USA_mhc_uriah
+			focus = USA_mhc_sorge
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.02
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_reform_usa
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 20
+		x = 12
+		y = 5
+		prerequisite = {
+			focus = USA_mhc_uriah
+			focus = USA_mhc_warren
+		}
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = socialist_state
+				add_idea = presidential_republic
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_proletariat_dictatorship
+		icon = GFX_goal_focus_revolutionary_government
+		cost = 70
+		x = 2
+		y = 6
+		prerequisite = {
+			focus = USA_mhc_dietzgen
+		}
+		prerequisite = {
+			focus = USA_mhc_form_ussa
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = free_elections
+				add_idea = no_elections
+			}
+			swap_ideas = {
+				remove_idea = universal_male_suffrage
+				add_idea = absolutism
+			}
+			swap_ideas = {
+				remove_idea = lp_land_purchase
+				add_idea = lp_collectivization
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_loyal_government
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 30
+		x = 1
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_proletariat_dictatorship
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = anarchism
+				popularity = -0.02
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_consolidate_power
+		icon = GFX_focus_generic_self_management
+		cost = 70
+		x = 1
+		y = 8
+		prerequisite = {
+			focus = USA_mhc_loyal_government
+		}
+		mutually_exclusive = {
+			focus = USA_mhc_marx_ruler
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = constitution_adopted
+				add_idea = limited_constitution
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_invite_marx
+		icon = GFX_goal_tripartite_pact
+		cost = 30
+		x = 3
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_proletariat_dictatorship
+		}
+		completion_reward = {
+			country_event = { id = usa.123 }
+		}
+	}
+	focus = {
+		id = USA_mhc_marx_ruler
+		icon = GFX_goal_support_communism
+		cost = 70
+		x = 3
+		y = 8
+		prerequisite = {
+			focus = USA_mhc_invite_marx
+		}
+		mutually_exclusive = {
+			focus = USA_mhc_consolidate_power
+		}
+		available = {
+			has_country_flag = USA_mhc_marx_leader
+		}
+		completion_reward = {
+			create_country_leader = {
+				name = "Karl Marx"
+				desc = ""
+				picture = ""
+				expire = "1883.4.4"
+				ideology = marxism
+				traits = {
+
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_proletariat_democracy
+		icon = GFX_focus_generic_join_comintern
+		cost = 70
+		x = 6
+		y = 6
+		prerequisite = {
+			focus = USA_mhc_sorge
+		}
+		prerequisite = {
+			focus = USA_mhc_form_ussa
+		}
+		prerequisite = {
+			focus = USA_mhc_democratic_socialism
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = 0.02
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_socialist_policies
+		icon = GFX_goal_focus_socialist_regime
+		cost = 30
+		x = 5
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_proletariat_democracy
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = twelve_hour_work_day
+				}
+				swap_ideas = {
+					remove_idea = twelve_hour_work_day
+					add_idea = eight_hour_work_day
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ten_hour_work_day
+					add_idea = eight_hour_work_day
+				}
+			}
+			if = {
+				limit = {
+					has_idea = cl_restricted
+				}
+				swap_ideas = {
+					remove_idea = cl_restricted
+					add_idea = cl_illegal
+				}
+			}
+			if = {
+				limit = {
+					has_idea = cl_legal
+				}
+				swap_ideas = {
+					remove_idea = cl_legal
+					add_idea = cl_illegal
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_socialist_republic
+		icon = GFX_goal_focus_republican_spirit
+		cost = 30
+		x = 7
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_proletariat_democracy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = socialist_state
+				add_idea = socialist_republic
+			}
+			swap_ideas = {
+				remove_idea = universal_male_suffrage
+				add_idea = universal_suffrage
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_socialist_welfare
+		icon = GFX_goal_focus_increase_wages
+		cost = 70
+		x = 6
+		y = 8
+		prerequisite = {
+			focus = USA_mhc_socialist_republic
+		}
+		prerequisite = {
+			focus = USA_mhc_socialist_policies
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = lp_land_purchase
+				add_idea = lp_collectivization
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_social_democracy
+		icon = GFX_goal_focus_support_social_egalitarianism
+		cost = 70
+		x = 10
+		y = 6
+		prerequisite = {
+			focus = USA_mhc_uriah
+		}
+		prerequisite = {
+			focus = USA_mhc_reform_usa
+		}
+		prerequisite = {
+			focus = USA_mhc_democratic_socialism
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = 0.02
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_increase_wages
+		icon = GFX_goal_focus_increase_wages
+		cost = 30
+		x = 9
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_social_democracy
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = USA_mhc_increased_wages
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_improve_workforce
+		icon = GFX_goal_focus_working_hours
+		cost = 30
+		x = 11
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_social_democracy
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = twelve_hour_work_day }
+				swap_ideas = {
+					remove_idea = twelve_hour_work_day
+					add_idea = ten_hour_work_day
+				}
+			}
+			if = {
+				limit = { has_idea = fourteen_hour_work_day }
+				swap_ideas = {
+					remove_idea = fourteen_hour_work_day
+					add_idea = twelve_hour_work_day
+				}
+			}
+			if = {
+				limit = { has_idea = unlimited_work_day }
+				swap_ideas = {
+					remove_idea = unlimited_work_day
+					add_idea = ten_hour_work_day
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_humanize_capitalism
+		icon = GFX_goal_focus_fund_partisans
+		cost = 70
+		x = 10
+		y = 8
+		prerequisite = {
+			focus = USA_mhc_improve_workforce
+		}
+		prerequisite = {
+			focus = USA_mhc_increase_wages
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = cl_restricted }
+				swap_ideas = {
+					remove_idea = cl_restricted
+					add_idea = cl_illegal
+				}
+			}
+			if = {
+				limit = { has_idea = cl_legal }
+				swap_ideas = {
+					remove_idea = cl_legal
+					add_idea = cl_restricted
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_anarchism
+		icon = GFX_goal_focus_stop_fund_partisans
+		cost = 70
+		x = 14
+		y = 6
+		prerequisite = {
+			focus = USA_mhc_warren
+		}
+		prerequisite = {
+			focus = USA_mhc_reform_usa
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.02
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_autonomy
+		icon = GFX_goal_focus_gerrymandering
+		cost = 30
+		x = 13
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_anarchism
+		}
+		completion_reward = {
+			add_ideas = USA_mhc_increased_autonomy1
+		}
+	}
+	focus = {
+		id = USA_mhc_decentralize
+		icon = GFX_goal_focus_decentralisation_power
+		cost = 30
+		x = 13
+		y = 8
+		prerequisite = {
+			focus = USA_mhc_autonomy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_mhc_increased_autonomy1
+				add_idea = USA_mhc_increased_autonomy2
+			}
+		}
+	}
+	focus = {
+		id = USA_mhc_empathize_capitalism
+		icon = GFX_goal_focus_support_liberalism
+		cost = 30
+		x = 15
+		y = 7
+		prerequisite = {
+			focus = USA_mhc_anarchism
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = USA_mhc_appease_socialists
+		icon = GFX_goal_focus_banks2
+		cost = 30
+		x = 15
+		y = 8
+		prerequisite = {
+			focus = USA_mhc_empathize_capitalism
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_egalitarianism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = collectivist_socialism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = vanguard_communism
+				popularity = -0.02
+			}
+		}
+	}
+}

@@ -10,7 +10,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -33,7 +33,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -56,7 +56,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -79,7 +79,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -101,7 +101,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -124,7 +124,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -147,7 +147,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -170,7 +170,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -193,7 +193,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -216,7 +216,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -390,7 +390,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 			
@@ -452,7 +452,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -477,7 +477,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -502,7 +502,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -527,13 +527,18 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
 			removal_cost = -1
 
 			picture = yarrow_shipbuilders
+
+			targeted_modifier = {
+				tag = CSA
+				min_export = -0.3
+			}
 			
 			modifier = {
 				convoy_raiding_efficiency_factor = 0.4
@@ -551,7 +556,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -575,7 +580,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -587,6 +592,7 @@ ideas = {
 				army_attack_factor = -0.1
 				max_planning = -0.1
 				planning_speed = -0.1
+				ai_focus_aggressive_factor = -0.25
 			}
 		}
 	USA_Civil_War_Cons = {
@@ -599,7 +605,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -621,7 +627,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -645,7 +651,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -668,7 +674,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -693,7 +699,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -716,7 +722,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -740,7 +746,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -764,7 +770,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -788,7 +794,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -815,7 +821,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -839,7 +845,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -863,7 +869,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -890,7 +896,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -912,7 +918,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -935,7 +941,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -959,7 +965,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -982,7 +988,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1006,7 +1012,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1031,7 +1037,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1055,7 +1061,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1083,7 +1089,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1108,7 +1114,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1133,7 +1139,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1158,7 +1164,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1182,7 +1188,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1206,7 +1212,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1230,7 +1236,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1254,7 +1260,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1278,7 +1284,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1302,7 +1308,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1325,7 +1331,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1349,7 +1355,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1372,7 +1378,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1395,7 +1401,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1418,7 +1424,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1441,7 +1447,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1464,7 +1470,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1490,7 +1496,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1512,7 +1518,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1534,7 +1540,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1559,7 +1565,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1580,7 +1586,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1602,7 +1608,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1624,7 +1630,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1646,7 +1652,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1668,7 +1674,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1690,7 +1696,7 @@ ideas = {
 				NOT = {
 					has_government = autocracy
 					has_government = radical_democracy
-					has_government = national_populism
+					has_government = chauvinist_populism
 				}
 			}
 
@@ -1907,6 +1913,110 @@ ideas = {
 				political_power_factor = -0.05
 			}
 		}
+		USA_civil_war_over_by_christmas = {
+			allowed = {
+				TAG = USA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				army_attack_factor = -0.5
+			}
+		}
+		USA_mhc_increased_wages = {
+			allowed = {
+				TAG = USA
+				has_government = social_egalitarianism
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		USA_mhc_increased_autonomy1 = {
+			allowed = {
+				TAG = USA
+				has_government = anarchism
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				drift_defence_factor = -0.2
+				political_power_factor = -0.1
+				justify_war_goal_time = 0.25
+				consumer_goods_factor = -0.05
+			}
+		}
+		USA_mhc_increased_autonomy2 = {
+			allowed = {
+				TAG = USA
+				has_government = anarchism
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				drift_defence_factor = -0.3
+				political_power_factor = -0.15
+				justify_war_goal_time = 0.4
+				consumer_goods_factor = -0.1
+			}
+		}
+	}
+	hidden_ideas = {
+		USA_civil_war_historical_buff_hidden = {
+				
+				allowed = {
+					TAG = USA
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = generic_morale_bonus
+				
+				modifier = {
+					army_org_Factor = 0.1
+					army_morale_factor = 0.1
+					army_core_defence_factor = 0.2
+					supply_consumption_factor = -0.2
+					industrial_capacity_factory = 0.1
+				}
+			}
 	}
 }
 

@@ -14,10 +14,4 @@ units = {
 		division_template = "Hong Kong Regiment"
 		start_experience_factor = 0.1
 	}
-	division= {
-		name = "2nd French Chinese Regiment"
-		location = 10062
-		division_template = "Hong Kong Regiment"
-		start_experience_factor = 0.1
-	}
 }

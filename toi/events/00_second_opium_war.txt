@@ -158,12 +158,7 @@ country_event = {
 	option = {
 		name = secondopiumwar.6.a
 		ai_chance = { factor = 100 }
-		FRA = {
-			add_to_war = { 
-				targeted_alliance = ENG 
-				enemy = CHI 
-			}
-		}
+		custom_effect_tooltip = eoanb_tt_sow_event_6_a
 		hidden_effect = {
 			set_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
 		}
@@ -333,63 +328,7 @@ country_event = {
 	
 }
 
-#Hidden Event that checks if China still controls Guangzhou after the Battle lasted for one month
-country_event = {
-	id = secondopiumwar.12
-	title = secondopiumwar.12.t
-	desc = secondopiumwar.12.d
-	
-	hidden = yes
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		if = {
-			limit = {
-				CHI = { controls_state = 592 }
-			}
-			CHI = { country_event = { id = secondopiumwar.13 } }
-			ENG = { country_event = { id = secondopiumwar.14 } }
-			if = {
-				limit = {
-					has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
-				}
-				FRA = { country_event = { id = secondopiumwar.14 } }
-			}
-			592 = { clr_state_flag = eoanb_flag_battle_for_canton_ongoing }
-		}
-		if = {
-			limit = {
-				NOT = { 592 = { has_state_flag = eoanb_flag_battle_for_canton_ongoing } }
-			}
-			#Do Nothing
-		}
-		if = {
-			limit = {
-				CHI = { controls_state = 592 }
-				CHI = { is_ai = yes }
-				ENG = { is_ai = yes }
-				FRA = { is_ai = yes }
-				is_historical_focus_on = yes
-			}
-			CHI = { country_event = { id = secondopiumwar.15 } }
-			ENG = { country_event = { id = secondopiumwar.16 } }
-			if = {
-				limit = {
-					has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
-				}
-				FRA = { country_event = { id = secondopiumwar.16 } }
-			}
-			592 = { clr_state_flag = eoanb_flag_battle_for_canton_ongoing }
-		}
-	}
-	
-	option = {
-		name = secondopiumwar.12.a
-		ai_chance = { factor = 100 }
-	}
-	
-}
+#EVENT 12 WAS PURGED
 
 #CHI: Victory at Guangzhou
 country_event = {
@@ -488,6 +427,22 @@ country_event = {
 		hidden_effect = {
 			ENG = { set_country_flag = eoanb_flag_sow_ENG_won_at_canton }
 		}
+	}
+	
+}
+
+#Battle of Guangzhou ends in a draw
+country_event = {
+	id = secondopiumwar.17
+	title = secondopiumwar.17.t
+	desc = secondopiumwar.17.d
+	picture = GFX_report_event_yugoslavian_cavalry
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = secondopiumwar.17.a
+		ai_chance = { factor = 100 }
 	}
 	
 }

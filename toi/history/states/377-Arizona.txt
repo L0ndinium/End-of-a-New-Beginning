@@ -2,20 +2,11 @@
 state={
 	id=377
 	name="STATE_377"
-	manpower = 34557
-	
-	state_category = rural
-	
-	resources={
-		iron=2
-		aluminium=2
-	}
-
 	history={
 		controller = USA
 		buildings = {
 			infrastructure = 1
-			
+
 		}
 		victory_points = {
 			853 3 
@@ -24,6 +15,9 @@ state={
 	}
 
 	provinces={
-		850 853 1793 3834 4796 6897 7747 7821 7920 8115 10573 10783 11814 12765 
+		853 3834 7920 8115 10783
 	}
+	manpower=18250
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

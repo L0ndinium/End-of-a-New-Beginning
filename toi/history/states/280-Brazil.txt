@@ -10,7 +10,19 @@ state={
 			infrastructure = 1
 		}
 		add_core_of = BRA
-
+        
+		victory_points = {
+			2111 3
+		}
+		
+		victory_points = {
+			10959 1
+		}
+	}
+	
+	resources = {
+		wood = 78
+		iron = 30
 	}
 
 	provinces={

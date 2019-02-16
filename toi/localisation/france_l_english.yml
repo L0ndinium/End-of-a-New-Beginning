@@ -92,7 +92,7 @@
  FRA_niel_plan:0 "The Niel Plan"
  FRA_niel_plan_desc:0 "The Niel Plan was proposed by field marshall Adolphe Niel, his proposal was to modernize our armies. Our officiers are very inefficient, and our tactics dated. In case of an attack, we are ill-prepared, enacting this plan will give our nation some breathing space."
  FRA_modern_war_logistics:0 "Modern War Logistics"
- FRA_modern_war_logistics_desc:0 "Even if we have one of the most advanced military equiments, we still lack innovation in our logistics, stuck in the Napoleonic Wars, and in regulations too strictely followed among our generals and commanders."
+ FRA_modern_war_logistics_desc:0 "Even if we have one of the most advanced military equipments, we still lack innovation in our logistics, stuck in the Napoleonic Wars, and in regulations too strictely followed among our generals and commanders."
  FRA_loi_niel:0 "Enact the Loi Niel"
  FRA_economics_second_empire:0 "The Economics of the Empire"
  FRA_new_public_works:0 "New Public Works"
@@ -125,7 +125,7 @@
  FRA_french_expeditionary_troops:0 "French Expeditionary Forces"
  FRA_condemn_french_volunteers:0 "Condemn the French Volunteers"
  FRA_french_colonial_empire:0 "Chasseloup-Laubat's Colonial Plans"
- FRA_submit_kabyle:0 "Submit the Kabyle"
+ FRA_stabilize_algeria:0 "Stabilize the Algerian conquests"
  FRA_intervention_lebanon:0 "Intervention in Lebanon"
  FRA_expand_algeria:0 "Expand in Algeria"
  FRA_full_control_senegal:0 "Full Control of Senegal"
@@ -329,6 +329,7 @@
 #          NATIONAL SPIRITS AND ADVISORS
 ##################################################
 
+ # National spirits
  FRA_idea_authoritarian_empire:0 "The Authoritarian Empire"
  FRA_idea_authoritarian_empire_desc:0 "Politics of the Second Empire is marked by an authoritarian regime caracterized by the complete control of both the social life and the political spheres."
  FRA_idea_republican_spirit:0 "Republican Spirit"
@@ -390,6 +391,10 @@
  FRA_CBI_idea_french_industries:0 "French Industries"
  FRA_CBI_idea_recognized_prime_minister:0 "Recognized Prime Minister"
 
+ # Leaders
+ POLITICS_NAPOLEON_III_DESC:0 "Charles-Louis-Napoleon Bonaparte, also called Louis-Napoleon Bonaparte, is a nephew of the Emperor Napoleon the First as the 3rd son of Louis-Napoleon Bonaparte, called Louis Bonaparte, the King of Holland. Napoleon the First considered him as a grand-son as a son of Hortense de Beauharnais the daughter of Josephine. In 1816, all the Bonaparte are banned from France, Charles-Louis-Napoleon Bonaparte is exiled in Arenenberg (Switzerland) with his mother. In 1832 he get the Swiss nationality. 1832 is also the year of the death of the son of Napoleon the First. Charles-Louis-Napoleon Bonaparte became the leader of the Bonaparte dynasty like his brothers are also dead. He attempted several uprising, Strasbourg (1836) and Boulogne-sur-Mer (1840). The 1848 Revolution allowed him to run for deputation. He became the first universal elected president in 1848. In December 1851 he organized a coup d’état and in December 1852 he became the Emperor Napoleon III. Napoleon III is married in 1853 with Eugénie de Montijo and has got a son in March 1856 who is the godchild of the Pope Pie IX."
+
+ # Political adivors
  FRA_advisor_victor_hugo:0 "Victor Hugo"
  FRA_advisor_emile_zola:0 "Emile Zola"
  FRA_advisor_baron_haussmann:0 "Baron Haussmann"
@@ -400,6 +405,35 @@
  FRA_advisor_michel_chevalier:0 "Michel Chevalier"
  FRA_advisor_adolphe_thiers:0 "Adolphe Thiers"
  FRA_advisor_leon_gambetta:0 "Léon Gambetta"
+ 
+ # Military staff
+ FRA_army_chief_francois_achille_bazaine:0 "François Achille Bazaine"
+ FRA_army_chief_patrice_de_mac_mahon:0 "Patrice de Mac-Mahon"
+ FRA_army_chief_charles_auguste_frossard:0 "Charles Auguste Frossard"
+ FRA_army_chief_adolphe_niel:0 "Adolphe Niel"
+ FRA_army_chief_edmond_le_boeuf:0 "Edmond Le Bœuf"
+ FRA_navy_chief_francois_thomas_trehouart:0 "François Thomas Tréhouart"
+ FRA_navy_chief_leonard_victor_charner:0 "Léonard Victor Charner"
+ FRA_navy_chief_ferdinand_hamelin:0 "Ferdinand Hamelin"
+ FRA_high_command_auguste_regnaud_de_saint_jean_d_angely:0 "Auguste Regnaud de Saint-Jean d'Angély"
+ FRA_high_command_louis_joseph_lebrun:0 "Louis Joseph Lebrun"
+ FRA_high_command_abel_douay:0 "Abel Douay"
+ FRA_high_command_charles_rigault_de_genouilly:0 "Charles Rigault de Genouilly"
+ FRA_high_command_joseph_romain_desfosses:0 "Joseph Romain-Desfossés"
+ FRA_high_command_alexandre_ferdinand_parseval_deschenes:0 "Alexandre Ferdinand Parseval-Deschênes"
+ FRA_high_command_elie_frederic_forey:0 "Élie Frédéric Forey"
+ FRA_high_command_felix_charles_douay:0 "Félix Charles Douay"
+ FRA_high_command_paul_de_ladmirault:0 "Paul de Ladmirault"
+ FRA_high_command_charles_denis_bourbaki:0 "Charles-Denis Bourbaki"
+ FRA_high_command_charles_cousin_montauban:0 "Charles Cousin-Montauban"
+
+ # Designers and theorists
+ FRA_AMX:0 "AMX"
+ denain:0 "Société des hauts fourneaux et des forges de Denain et d'Anzin"
+ saint_gobain:0 "Saint-Gobain"
+ gramme:0 "Ateliers Gramme"
+ FRA_theorist_jean_baptiste_philibert_vaillant:0 "Jean-Baptiste Philibert Vaillant"
+ FRA_theorist_gaud_amable_hugon:0 "Gaud-Amable Hugon"
 
 ##################################################
 #               EVENT TEXTS
@@ -498,6 +532,10 @@
  nap_france_flavor.21.d:0 ""
  nap_france_flavor.21.a:0 "How will the French Empire react?"
 
+ nap_france_flavor.22.t:0 "Grand Kabyle campaign ending"
+ nap_france_flavor.22.d:0 "The conquest of the Grand Kabyle region is finished. Marshal Randon, the France Algeria governor have successfully manage this conquest to make the French colony bigger."
+ nap_france_flavor.22.a:0 "How the inhabitants will react to the European colonization?"
+
   # Event Text
 
  nap_france.1.t:0 "The Future of our Empire"
@@ -516,7 +554,7 @@
  nap_france.3.b:0 "We do not need any more glorified french charriots !"
 
  nap_france.4.t:0 "The Orsini Letter"
- nap_france.4.d:0 "A few days after the infamous Orsini affait that shook our country, the perpetrator Felice Orsini himself send a letter to our emperor, asking for their help in the reunification of Italy under one flag. People are suspicious of the authenticity of this letter though, as Napoleon III wanted to intervene in Italy for a while now."
+ nap_france.4.d:0 "A few days after the infamous Orsini affair that shook our country, the perpetrator Felice Orsini himself sent a letter to our emperor, asking for his help in the reunification of Italy under one flag. People are suspicious of the authenticity of this letter though, as Napoleon III wanted to intervene in Italy for a while now."
  nap_france.4.a:0 "There is nothing fishy about this letter !"
 
  nap_france.5.t:0 "The French Empire are supporting republican revolutionaries"
@@ -945,10 +983,10 @@
  nap_france.331.d:0 ""
  nap_france.331.a:0 "Fine"
 
- nap_france.332.t:0 "France wants to expand next to us"
+ nap_france.332.t:0 "France wants to expand next to us!"
  nap_france.332.d:0 ""
- nap_france.332.a:0 "We cannot let that happend !"
- nap_france.332.b:0 "We do not care about Luxemburg"
+ nap_france.332.a:0 "We cannot let that happen!"
+ nap_france.332.b:0 "We do not care about Luxemburg."
 
  nap_france.333.t:0 "The Luxemburg Crisis"
  nap_france.333.d:0 "The dutch accepted our offer, but Prussia has intervened and threathen war if we continue our expantio next to their lands."
@@ -991,10 +1029,10 @@
  nap_france.345.d:0 ""
  nap_france.345.a:0 "Fine"
 
- nap_france.350.t:0 "France wants to officialy guarenty our independance"
+ nap_france.350.t:0 "France wants to officially guarantee our independence"
  nap_france.350.d:0 ""
- nap_france.350.a:0 "Agree, we need protection in those crazy times"
- nap_france.350.b:0 "Refuse, we want to stay neutral"
+ nap_france.350.a:0 "Agree, we need protection in these crazy times."
+ nap_france.350.b:0 "Refuse, we want to stay neutral."
 
  nap_france.351.t:0 "Switzerland accepts our offer"
  nap_france.351.d:0 ""
@@ -1399,6 +1437,26 @@
  army_france.1003.d:0 "François Louis Alfred Durrieu, the nephew of the general Antoine Simon Durrieu, has shown in Algeria that he could be a good general."
  army_france.1003.a:0 "He is appointed general !"
  army_france.1003.b:0 "We have enough generals"
+
+ army_france.1004.t:0 "Pierre Charles Dejean becomes general ?"
+ army_france.1004.d:0 "Pierre Charles Dejean, the son of the general Pierre François Marie Auguste Dejean, has shown in the fortification committee that he could be a good general."
+ army_france.1004.a:0 "He is appointed general !"
+ army_france.1004.b:0 "We have enough generals"
+
+ army_france.1005.t:0 "Camille Clément de La Roncière-Le Noury becomes amiral ?"
+ army_france.1005.d:0 "Camille Clément de La Roncière-Le Noury, the son of the general de la Roncière, a war hero in Napoleon's war, has shown in Mexico that he could be a good amiral."
+ army_france.1005.a:0 "He is appointed amiral !"
+ army_france.1005.b:0 "We have enough amirals"
+
+ army_france.1006.t:0 "Charles de Lorencez becomes general ?"
+ army_france.1006.d:0 "Charles de Lorencez has been appointed major general in 1855 after the Battle of Malakoff during the Crimean War. He could be a good general to be sent in Mexico."
+ army_france.1006.a:0 "He is appointed general !"
+ army_france.1006.b:0 "We have enough generals"
+
+ army_france.1007.t:0 "Charles Joseph François Wolff becomes general ?"
+ army_france.1007.d:0 "Charles Joseph François Wolff has served in Algeria since 1843 and has come back in metropole for European wars. He could be a good general."
+ army_france.1007.a:0 "He is appointed general !"
+ army_france.1007.b:0 "We have enough generals"
 
  # Tooltips
 

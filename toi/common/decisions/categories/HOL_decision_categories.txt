@@ -1,0 +1,15 @@
+HOL_land_reclaimation = {
+	icon = generic_political_actions
+
+	available = {
+		tag = HOL
+	}
+}
+
+HOL_KNIL_general_exchange = {
+	icon = generic_political_actions
+
+	available = {
+		tag = HOL
+	}
+}

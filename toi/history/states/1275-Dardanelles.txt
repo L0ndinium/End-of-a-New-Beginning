@@ -1,0 +1,31 @@
+
+state={
+	id=1275
+	name="STATE_1275"
+	resources={
+		chromium=7
+		iron=5
+		oil=1
+	}
+
+	history={
+		owner = OTO
+		victory_points = {
+			849 5
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+			cotton_farm=1
+		}
+		add_core_of = OTO
+	}
+
+	provinces={
+		849 3879 6895
+	}
+	manpower=662975
+	buildings_max_level_factor=1.000
+	state_category=city
+}

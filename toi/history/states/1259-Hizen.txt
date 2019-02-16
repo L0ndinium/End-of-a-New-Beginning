@@ -11,8 +11,9 @@ state={
 	}
 
 	history={
-		owner = JAP
+		owner = SAG
 		add_core_of = JAP
+		add_core_of = SAG
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

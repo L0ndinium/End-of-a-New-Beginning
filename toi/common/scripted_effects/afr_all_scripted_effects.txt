@@ -96,11 +96,7 @@ afr_send_event_to_voting_nations = {
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
 				exists = yes
-				OR = {
-					has_cosmetic_tag = PRS_GER_liberal
-					has_cosmetic_tag = PRS_GER_bismarck
-					has_cosmetic_tag = PRS_GER_socialist
-				}
+				PRS_trigger_formed_germany = yes
 				GER = {
 					exists = no
 				}
@@ -167,6 +163,9 @@ afr_send_event_to_voting_nations = {
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
 				exists = yes
+				NOT = {
+					CSA = {exists = yes}
+				}
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}
@@ -222,7 +221,7 @@ afr_send_event_to_voting_nations = {
 			limit = {
 				NOT = {has_country_flag = berlin_conferance_voter}
 				exists = yes
-				has_cosmetic_tag = ITA
+				Country_formed_ITA = yes
 			}
 			country_event = { id = EDC_berlin_con.6 hours = 20 }
 		}

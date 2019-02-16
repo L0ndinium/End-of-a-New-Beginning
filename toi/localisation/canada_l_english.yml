@@ -1,0 +1,8 @@
+﻿l_english:
+ #Focuses#
+ CAN_move_capital:0 "Move Our Capital"
+ CAN_move_capital_toronto:0 "Stay in Toronto"
+ CAN_move_capital_ottawa:0 "Move to Ottawa"
+ CAN_move_capital_montreal:0 "Move to Montreal"
+ CAN_idea_toronto:0 "Capital Stayed in Toronto"
+ CAN_idea_montreal:0 "Capital Moved to Montreal"

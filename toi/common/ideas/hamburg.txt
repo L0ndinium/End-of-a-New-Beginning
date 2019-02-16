@@ -26,7 +26,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = generic_local_self_management
+			picture = HAM_hanseatic_heritage
 			
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
@@ -41,7 +41,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = generic_local_self_management
+			picture = HAM_hanseatic_heritage
 			
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
@@ -56,7 +56,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = generic_local_self_management
+			picture = HAM_hanseatic_heritage
 			
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
@@ -71,7 +71,7 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = generic_local_self_management
+			picture = HAM_hanseatic_heritage
 			
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05

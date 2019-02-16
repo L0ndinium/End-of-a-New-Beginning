@@ -92,7 +92,7 @@
     ideology = conserv
 }
 
-create_corps_commander = {
+create_field_marshal = {
   name = "Cornelio Saavedra Rodríguez"
   picture = "Portrait_CHL_Cornelio_Saavedra_Rodriguez.dds"
   traits = { }

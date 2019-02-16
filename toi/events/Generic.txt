@@ -7,13 +7,13 @@
 #		desc = generic.1.d
 #
 #		hidden = yes
-#		
+#
 #		trigger = {
 #				date > 1857.6.1
 #				has_idea = AF_T_unorganized_tribal_nation
 #				NOT = { has_tech = tribaltech }
 #		}
-#		
+#
 #		option = {
 #				name = generic.1.a
 #				hidden_effect = {
@@ -27,15 +27,15 @@
 #		id = generic.2
 #		title = generic.2.t
 #		desc = generic.2.d
-#		
+#
 #		hidden = yes
-#		
+#
 #		trigger = {
 #				date > 1857.6.1
 #				has_idea = AF_T_organized_tribal_nation
 #				NOT = { has_tech = tribaltech }
 #		}
-#		
+#
 #		option = {
 #				name = generic.2.a
 #				hidden_effect = {
@@ -49,15 +49,15 @@
 #		id = generic.3
 #		title = generic.3.t
 #		desc = generic.3.d
-#		
+#
 #		hidden = yes
-#		
+#
 #		trigger = {
 #				date > 1857.6.1
 #				has_idea = AF_T_small_kingdom
 #				NOT = { has_tech = tribaltech }
 #		}
-#		
+#
 #		option = {
 #				name = generic.3.a
 #				hidden_effect = {
@@ -73,27 +73,45 @@ country_event = {
 		title = generic.4.t
 		desc = generic.4.d
 		picture = GFX_report_event_generic_eoanb_logo
-		
+
 		is_triggered_only = yes
-		
+
+		immediate = {
+			ROOT = {
+				set_variable = {
+					var = pol_stability
+					value = 0
+				}
+
+				set_variable = {
+					var = pol_stab_accident_factor
+					value = 0
+				}
+				
+				hidden_effect = {
+					country_event = { id = generic.18 days = 3 }
+				}
+			}
+		}
+
 		option = {
 			name = generic.4.a
 			ai_chance = { factor = 100 }
 			custom_effect_tooltip = eoanb_tt_generic_4_a
 		}
-		
+
 		option = {
 			name = generic.4.b
 			ai_chance = { factor = 0 }
 			country_event = { id = generic.5 }
 		}
-		
+
 		option = {
 			name = generic.4.c
 			ai_chance = { factor = 0 }
 			country_event = { id = generic.6 }
 		}
-		
+
 }
 
 #Summary
@@ -101,9 +119,9 @@ country_event = {
 		id = generic.5
 		title = generic.5.t
 		desc = generic.5.d
-		
+
 		is_triggered_only = yes
-		
+
 		option = {
 			name = generic.5.a
 			custom_effect_tooltip = eoanb_tt_generic_4_a
@@ -115,9 +133,9 @@ country_event = {
 		id = generic.6
 		title = generic.6.t
 		desc = generic.6.d
-		
+
 		is_triggered_only = yes
-		
+
 		option = {
 			name = generic.6.a
 			custom_effect_tooltip = eoanb_tt_generic_4_a
@@ -130,9 +148,9 @@ country_event = {
 #		title = generic.7.t
 #		desc = generic.7.d
 #		picture = GFX_report_event_soviet_in_riga
-#		
+#
 #		is_triggered_only = yes
-#		
+#
 #		option = {
 #			name = generic.7.a
 #			ai_chance = { factor = 0 }
@@ -141,7 +159,7 @@ country_event = {
 #				set_global_flag = is_eoanb_music_custom_true
 #			}
 #		}
-#		
+#
 #		option = {
 #			name = generic.7.b
 #			ai_chance = { factor = 100 }
@@ -154,32 +172,32 @@ country_event = {
 	id = generic.8
 	title = generic.8.t
 	desc = generic.8.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.8.a
 		ai_chance = { factor = 0 }
 		country_event = { id = generic.9 }
 	}
-	
+
 	option = {
 		name = generic.8.b
 		ai_chance = { factor = 0 }
 		country_event = { id = generic.11 }
 	}
-	
+
 	option = {
 		name = generic.8.c
 		ai_chance = { factor = 0 }
 		country_event = { id = generic.13 }
 	}
-	
+
 	option = {
 		name = generic.8.e
 		ai_chance = { factor = 100 }
 	}
-	
+
 }
 
 #Custom Music Options
@@ -187,9 +205,9 @@ country_event = {
 	id = generic.9
 	title = generic.9.t
 	desc = generic.9.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.9.a
 		ai_chance = { factor = 0 }
@@ -199,7 +217,7 @@ country_event = {
 			set_global_flag = is_eoanb_music_custom_true
 		}
 	}
-	
+
 	option = {
 		name = generic.9.b
 		ai_chance = { factor = 100 }
@@ -209,7 +227,7 @@ country_event = {
 			clr_global_flag = is_eoanb_music_custom_true
 		}
 	}
-	
+
 }
 
 #Controversial Content Options
@@ -217,9 +235,9 @@ country_event = {
 	id = generic.10
 	title = generic.10.t
 	desc = generic.10.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.10.a
 		ai_chance = { factor = 0 }
@@ -229,7 +247,7 @@ country_event = {
 			set_global_flag = is_eoanb_controversy_custom_true
 		}
 	}
-	
+
 	option = {
 		name = generic.10.b
 		ai_chance = { factor = 100 }
@@ -239,7 +257,7 @@ country_event = {
 			clr_global_flag = is_eoanb_controversy_custom_true
 		}
 	}
-	
+
 }
 
 #Historical Flavor Options
@@ -247,9 +265,9 @@ country_event = {
 	id = generic.11
 	title = generic.11.t
 	desc = generic.11.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.11.a
 		ai_chance = { factor = 0 }
@@ -259,7 +277,7 @@ country_event = {
 			set_global_flag = is_eoanb_flavor_custom_true
 		}
 	}
-	
+
 	option = {
 		name = generic.11.b
 		ai_chance = { factor = 100 }
@@ -269,7 +287,7 @@ country_event = {
 			clr_global_flag = is_eoanb_flavor_custom_true
 		}
 	}
-	
+
 }
 
 #Picking future of current administration
@@ -278,9 +296,9 @@ country_event = {
 	title = generic.12.t
 	desc = generic.12.d
 	picture = GFX_report_event_generic_sign_treaty1
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.12.a
 		ai_chance = { factor = 70 }
@@ -289,7 +307,7 @@ country_event = {
 			complete_national_focus = generic_focus_gov_centralized
 		}
 	}
-	
+
 	option = {
 		name = generic.12.b
 		ai_chance = { factor = 30 }
@@ -298,7 +316,7 @@ country_event = {
 			complete_national_focus = generic_focus_gov_decentralized
 		}
 	}
-	
+
 }
 
 #Options Menu - Page #2
@@ -306,33 +324,33 @@ country_event = {
 	id = generic.13
 	title = generic.13.t
 	desc = generic.13.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.13.a
 		ai_chance = { factor = 0 }
 		country_event = { id = generic.10 }
 	}
-	
+
 	option = {
 		name = generic.13.b
 		ai_chance = { factor = 0 }
 		country_event = { id = generic.14 }
 	}
-	
+
 	option = {
 		name = generic.13.c
 		ai_chance = { factor = 0 }
-		country_event = { id = generic.15 }
+		country_event = { id = generic.16 }
 	}
-	
+
 	option = {
 		name = generic.13.e
 		ai_chance = { factor = 100 }
 		country_event = { id = generic.8 }
 	}
-	
+
 }
 
 #Custom Tutorial Options
@@ -340,9 +358,9 @@ country_event = {
 	id = generic.14
 	title = generic.14.t
 	desc = generic.14.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.14.a
 		ai_chance = { factor = 0 }
@@ -352,7 +370,7 @@ country_event = {
 			set_global_flag = is_eoanb_tutorial_custom_true
 		}
 	}
-	
+
 	option = {
 		name = generic.14.b
 		ai_chance = { factor = 100 }
@@ -362,7 +380,7 @@ country_event = {
 			clr_global_flag = is_eoanb_tutorial_custom_true
 		}
 	}
-	
+
 }
 
 #Easter Egg Options
@@ -370,27 +388,579 @@ country_event = {
 	id = generic.15
 	title = generic.15.t
 	desc = generic.15.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.15.a
 		ai_chance = { factor = 0 }
-		country_event = { id = generic.13 }
+		country_event = { id = generic.16 }
 		custom_effect_tooltip = eoanb_tt_generic_15_a
 		hidden_effect = {
 			set_global_flag = is_eoanb_jokes_custom_true
 		}
 	}
-	
+
 	option = {
 		name = generic.15.b
 		ai_chance = { factor = 100 }
-		country_event = { id = generic.13 }
+		country_event = { id = generic.16 }
 		custom_effect_tooltip = eoanb_tt_generic_15_b
 		hidden_effect = {
 			clr_global_flag = is_eoanb_jokes_custom_true
 		}
 	}
+
+}
+
+#Options Menu - Page #3
+country_event = {
+	id = generic.16
+	title = generic.16.t
+	desc = generic.16.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = generic.16.c
+		ai_chance = { factor = 0 }
+		country_event = { id = generic.15 }
+	}
+
+	option = {
+		name = generic.16.b
+		ai_chance = { factor = 0 }
+		trigger = {
+			NOT = {
+				has_global_flag = is_eoanb_united_africa_true
+			}
+		}
+		country_event = { id = generic.17 }
+	}
+
+	option = {
+		name = generic.16.a
+		ai_chance = { factor = 0 }
+		trigger = {
+			has_global_flag = is_eoanb_united_africa_true
+		}
+		country_event = { id = generic.13 }
+	}
+
+	option = {
+		name = generic.16.e
+		ai_chance = { factor = 100 }
+		country_event = { id = generic.13 }
+	}
+}
+
+#Unite Africa Option
+country_event = {
+	id = generic.17
+	title = generic.17.t
+	desc = generic.17.d
+
+	is_triggered_only = yes
 	
+	option = {
+		name = generic.17.a
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_generic_17_a
+		hidden_effect = {
+			set_global_flag = is_eoanb_united_africa_true
+
+			#Annex all tags
+			AFR = {
+				annex_country = {
+					target = KAA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = SAL
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MNH
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MDR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = EQA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = YEK
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BKW
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LUB
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BKM
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BUG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BNG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = SAA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TRZ
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KAG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TUG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = SNS
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KBO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = RDL
+					transfer_troops = no
+				}
+				annex_country = {
+					target = OGD
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BOR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MOM
+					transfer_troops = no
+				}
+				annex_country = {
+					target = FTT
+					transfer_troops = no
+				}
+				annex_country = {
+					target = SNG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BAO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = SIN
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KAB
+					transfer_troops = no
+				}
+				annex_country = {
+					target = FTJ
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TOU
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BAM
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KOY
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MND
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KOG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = AKA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = GBS
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MSN
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MOS
+					transfer_troops = no
+				}
+				annex_country = {
+					target = DDI
+					transfer_troops = no
+				}
+				annex_country = {
+					target = DAH
+					transfer_troops = no
+				}
+				annex_country = {
+					target = ASH
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BRG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = SKT
+					transfer_troops = no
+				}
+				annex_country = {
+					target = OYO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = GBG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = WDD
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TKN
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KKY
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MMA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MOM
+					transfer_troops = no
+				}
+				annex_country = {
+					target = IJB
+					transfer_troops = no
+				}
+				annex_country = {
+					target = ARO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BMM
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BET
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KTK
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BAG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BDA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = GBY
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LNG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = NYG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TOR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BNY
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MAA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LUO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = NKO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KRG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = SUK
+					transfer_troops = no
+				}
+				annex_country = {
+					target = NYW
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LGR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = ZAN
+					transfer_troops = no
+				}
+				annex_country = {
+					target = UJJ
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BUR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = RWD
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TIP
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TTL
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TEK
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BLU
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KTA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = FNG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = PUN
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MSG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LOA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = NGY
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TYO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = HLO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LUN
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KUB
+					transfer_troops = no
+				}
+				annex_country = {
+					target = CKW
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LOZ
+					transfer_troops = no
+				}
+				annex_country = {
+					target = WYO
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KND
+					transfer_troops = no
+				}
+				annex_country = {
+					target = MRN
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KBD
+					transfer_troops = no
+				}
+				annex_country = {
+					target = OVD
+					transfer_troops = no
+				}
+				annex_country = {
+					target = AHR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = GGL
+					transfer_troops = no
+				}
+				annex_country = {
+					target = KVG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BAT
+					transfer_troops = no
+				}
+				annex_country = {
+					target = OVB
+					transfer_troops = no
+				}
+				annex_country = {
+					target = HMB
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BTS
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BMG
+					transfer_troops = no
+				}
+				annex_country = {
+					target = NDE
+					transfer_troops = no
+				}
+				annex_country = {
+					target = BST
+					transfer_troops = no
+				}
+				annex_country = {
+					target = HER
+					transfer_troops = no
+				}
+				annex_country = {
+					target = OOR
+					transfer_troops = no
+				}
+
+				set_rule = {
+					can_boost_other_ideologies = no
+					can_create_factions = no
+					can_declare_war_on_same_ideology = no
+					can_declare_war_without_wargoal_when_in_war = no
+					can_decline_call_to_war = yes
+					can_force_government = no
+					can_generate_female_aces = no
+					can_guarantee_other_ideologies = no
+					can_join_factions = no
+					can_join_opposite_factions = no
+					can_lower_tension = no
+					can_not_declare_war = yes
+					can_occupy_non_war = no
+					can_only_justify_war_on_threat_country = yes
+				}
+
+				add_ideas = AFR_opt_debuffs
+
+				add_manpower = -30000
+			}
+		}
+		country_event = { id = generic.16 }
+	}
+
+	option = {
+		name = generic.17.b
+		ai_chance = { factor = 100 }
+		country_event = { id = generic.16 }
+	}
+
+}
+
+#GitHub notice
+country_event = {
+	id = generic.18
+	title = generic.18.t
+	desc = generic.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = generic.18.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Help Menu
+country_event = {
+	id = generic.19
+	title = generic.19.t
+	desc = generic.19.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = generic.19.a
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = generic.19.b
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = generic.19.c
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = generic.19.e
+		ai_chance = { factor = 100 }
+	}
 }

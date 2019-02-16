@@ -429,6 +429,7 @@ ideas = {
 			picture = ger_rebuild_the_nation
 			
 			modifier = {
+				ai_get_ally_desire_factor = -1000
 				ai_focus_aggressive_factor = 0.25
 				war_support_factor = 0.15
 				army_core_defence_factor = 0.15
@@ -768,6 +769,31 @@ ideas = {
 			}
 		}
 	}
+	navy_chief = {
+		PRS_jan_schroeder = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			traits = { navy_chief_decisive_battle_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		PRS_prince_adalbert = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			traits = { navy_chief_maneuver_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
 	high_command = {
 		
 	
@@ -793,6 +819,32 @@ ideas = {
 			}
 			
 			traits = { army_artillery_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_heros_von_borcke = {
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			traits = { army_cavalry_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_karl_friedrich_von_steinmetz = {
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			traits = { army_chief_maneuver_2 }
 			
 			ai_will_do = {
 				factor = 1

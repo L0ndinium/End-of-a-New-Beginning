@@ -2,7 +2,7 @@
 state={
 	id=1264
 	name="STATE_1264" # Kii
-	manpower = 6000000
+	manpower = 779579
 	state_category = town
 	resources={
 		aluminium=2

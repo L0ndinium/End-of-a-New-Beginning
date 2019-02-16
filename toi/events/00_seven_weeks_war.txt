@@ -56,10 +56,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
-		TAG = PRS
-		has_country_flag = eoanb_flag_PRS_made_reforms
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = sevenweekswar.2.a
@@ -86,11 +83,24 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		TAG = PRS
-		has_country_flag = eoanb_flag_PRS_made_reforms
-		date > 1866.3.20
-		PRS = { owns_state = 66 }
-		PRS = { owns_state = 67 }
+		OR = {
+			AND = {
+				TAG = PRS
+				has_country_flag = eoanb_flag_PRS_made_reforms
+				date > 1866.3.20
+				PRS = { owns_state = 66 }
+				PRS = { owns_state = 67 }
+				NOT = { has_country_flag = eoanb_flag_won_7_weeks_war }
+			}
+			AND = {
+				TAG = PRS
+				date > 1866.6.20
+				PRS = { owns_state = 66 }
+				PRS = { owns_state = 67 }
+				NOT = { has_country_flag = eoanb_flag_PRS_made_reforms }
+				NOT = { has_country_flag = eoanb_flag_won_7_weeks_war }
+			}
+		}
 	}
 	
 	option = {
@@ -249,17 +259,94 @@ country_event = {
 		create_faction = faction_prussian_allies
 		custom_effect_tooltip = eoanb_tt_PRS_invites_allies
 		hidden_effect = {	
-			MCK = { country_event = { days = 1 id = sevenweekswar.10 } }
-			LCK = { country_event = { days = 2 id = sevenweekswar.10 } }
-			OLD = { country_event = { days = 3 id = sevenweekswar.10 } }
-			BRE = { country_event = { days = 4 id = sevenweekswar.10 } }
-			HAM = { country_event = { days = 5 id = sevenweekswar.10 } }
+			#MCK = { country_event = { days = 1 id = sevenweekswar.10 } }
+			#LCK = { country_event = { days = 2 id = sevenweekswar.10 } }
+			#OLD = { country_event = { days = 3 id = sevenweekswar.10 } }
+			#BRE = { country_event = { days = 4 id = sevenweekswar.10 } }
+			#HAM = { country_event = { days = 5 id = sevenweekswar.10 } }
+			#ITA = { country_event = { days = 7 id = sevenweekswar.10 } }
+			#PRS = { country_event = { days = 11 id = sevenweekswar.11 } }
+			every_country = {
+				limit = {
+					has_country_flag = eoanb_flag_sww_side_prs
+				}
+				country_event = { days = 5 id = sevenweekswar.10 }
+			}
 			ITA = { country_event = { days = 7 id = sevenweekswar.10 } }
 			PRS = { country_event = { days = 11 id = sevenweekswar.11 } }
 			set_global_flag = eoanb_flag_bundestag_meeting_pending
 		}
 	}
+}
+
+country_event = {
+	id = sevenweekswar.99
+	title = sevenweekswar.99.t
+	desc = sevenweekswar.99.d
 	
+	is_triggered_only = yes
+	
+	option = {
+		name = sevenweekswar.99.a
+		
+		PRS = {
+			create_faction = faction_prussian_allies
+			custom_effect_tooltip = eoanb_tt_PRS_invites_allies	
+			#MCK = { country_event = { days = 1 id = sevenweekswar.10 } }
+			#LCK = { country_event = { days = 2 id = sevenweekswar.10 } }
+			#OLD = { country_event = { days = 3 id = sevenweekswar.10 } }
+			#BRE = { country_event = { days = 4 id = sevenweekswar.10 } }
+			#HAM = { country_event = { days = 5 id = sevenweekswar.10 } }
+			#ITA = { country_event = { days = 7 id = sevenweekswar.10 } }
+			#PRS = { country_event = { days = 11 id = sevenweekswar.11 } }
+			every_country = {
+				limit = {
+					has_country_flag = eoanb_flag_sww_side_prs
+				}
+				country_event = { days = 5 id = sevenweekswar.10 }
+			}
+			ITA = { country_event = { days = 7 id = sevenweekswar.10 } }
+			PRS = { country_event = { days = 11 id = sevenweekswar.11 } }
+			set_global_flag = eoanb_flag_bundestag_meeting_pending
+		}
+		
+		AUS = {
+			create_faction = faction_austrian_allies
+			custom_effect_tooltip = eoanb_tt_AUS_invites_allies
+			#BAV = { country_event = { days = 1 id = sevenweekswar.13 } }
+			#BAD = { country_event = { days = 2 id = sevenweekswar.13 } }
+			#WUR = { country_event = { days = 3 id = sevenweekswar.13 } }
+			#HSD = { country_event = { days = 4 id = sevenweekswar.13 } }
+			#FRK = { country_event = { days = 5 id = sevenweekswar.13 } }
+			#HAN = { country_event = { days = 7 id = sevenweekswar.13 } }
+			#AUS = { country_event = { days = 12 id = sevenweekswar.14 } }
+			every_country = {
+				limit = {
+					has_country_flag = eoanb_flag_sww_side_aus
+					if = {
+						limit = {
+							TAG = HLS
+						}
+						NOT = {
+							is_puppet_of = PRS
+						}
+						owns_state = 949
+					}
+				}
+				country_event = { days = 5 id = sevenweekswar.13 }
+			}
+			AUS = { country_event = { days = 12 id = sevenweekswar.14 } }
+			#if = {
+			#	limit = {
+			#		not = {
+			#			HLS =  { is_puppet_of = PRS }
+			#		}
+			#		HLS = { owns_state = 949 }
+			#	}
+			#	HLS = { country_event = { days = 8 id = sevenweekswar.13 } }
+			#}
+		}
+	}
 }
 
 #Invited by Prussia
@@ -324,22 +411,38 @@ country_event = {
 		create_faction = faction_austrian_allies
 		custom_effect_tooltip = eoanb_tt_AUS_invites_allies
 		hidden_effect = {	
-			BAV = { country_event = { days = 1 id = sevenweekswar.13 } }
-			BAD = { country_event = { days = 2 id = sevenweekswar.13 } }
-			WUR = { country_event = { days = 3 id = sevenweekswar.13 } }
-			HSD = { country_event = { days = 4 id = sevenweekswar.13 } }
-			FRK = { country_event = { days = 5 id = sevenweekswar.13 } }
-			HAN = { country_event = { days = 7 id = sevenweekswar.13 } }
-			AUS = { country_event = { days = 12 id = sevenweekswar.14 } }
-			if = {
+			#BAV = { country_event = { days = 1 id = sevenweekswar.13 } }
+			#BAD = { country_event = { days = 2 id = sevenweekswar.13 } }
+			#WUR = { country_event = { days = 3 id = sevenweekswar.13 } }
+			#HSD = { country_event = { days = 4 id = sevenweekswar.13 } }
+			#FRK = { country_event = { days = 5 id = sevenweekswar.13 } }
+			#HAN = { country_event = { days = 7 id = sevenweekswar.13 } }
+			#AUS = { country_event = { days = 12 id = sevenweekswar.14 } }
+			every_country = {
 				limit = {
-					not = {
-						HLS =  { is_puppet_of = PRS }
+					has_country_flag = eoanb_flag_sww_side_aus
+					if = {
+						limit = {
+							TAG = HLS
+						}
+						NOT = {
+							is_puppet_of = PRS
+						}
+						owns_state = 949
 					}
-					HLS = { owns_state = 949 }
 				}
-				HLS = { country_event = { days = 8 id = sevenweekswar.13 } }
+				country_event = { days = 5 id = sevenweekswar.13 }
 			}
+			AUS = { country_event = { days = 12 id = sevenweekswar.14 } }
+			#if = {
+			#	limit = {
+			#		not = {
+			#			HLS =  { is_puppet_of = PRS }
+			#		}
+			#		HLS = { owns_state = 949 }
+			#	}
+			#	HLS = { country_event = { days = 8 id = sevenweekswar.13 } }
+			#}
 		}
 	}
 }
@@ -859,6 +962,9 @@ country_event = {
 			PRS = { annex_country = { target = BRE transfer_troops = no } }
 			PRS = { annex_country = { target = OLD transfer_troops = no } }
 			PRS = { set_cosmetic_tag = GER_north_confederation }
+			PRS = {
+				add_ideas = PRS_idea_rapid_expansion
+			}
 		}
 	}
 	

@@ -125,9 +125,19 @@ spriteTypes = {
 	}		
 	
 	SpriteType = {
+		name = "GFX_tech_support_2_medium"
+		texturefile = "gfx/interface/technologies/support/support_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_support_3_medium"
+		texturefile = "gfx/interface/technologies/support/support_equipment_3.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_tech_support_medium"
-		texturefile = "gfx/interface/technologies/support_equipment_1.dds"
-	}		
+		texturefile = "gfx/interface/technologies/support/support_equipment_1.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_motorized_rocket_unit_medium"
@@ -1873,6 +1883,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_tech_naval_1830_gunboat_medium"
 		texturefile = "gfx/interface/technologies/ships/tech_naval_1830_gunboat.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_naval_1830_frigate_medium"
+		texturefile = "gfx/interface/technologies/ships/tech_naval_1830_frigate.dds"
 	}
 	
 	SpriteType = {
@@ -6028,6 +6043,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_tech_infantry_infantry_helmets_medium"
 		texturefile = "gfx/interface/technologies/infantry/helmet_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_infantry_equipment_rifle_2_medium"
+		texturefile = "gfx/interface/technologies/infantry/FRA_infantry_equipment_rifle_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_rifle_equipment2_medium"
+		texturefile = "gfx/interface/technologies/infantry/FRA_infantry_equipment_rifle_2.dds"
 	}
 	
 	SpriteType = {

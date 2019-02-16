@@ -2,6 +2,9 @@ state={
 	id=1080
 	name="STATE_1080" # Auckand
 	manpower = 75019#
+	resources={
+		wood = 5
+	}
 	
 	state_category = city
 	

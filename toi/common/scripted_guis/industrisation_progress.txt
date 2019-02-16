@@ -3,8 +3,12 @@ scripted_gui = {
        window_name = "industrisation_progress_container"
  
        context_type = country_context
+	   ai_enabled={
+		always = no
+	}
  
        visible = {
+			is_ai = no
 			OR = {
 				# has_idea = AF_T_unorganized_tribal_nation
 				# has_idea = AF_T_unorganized_tribal_nation_2
@@ -42,6 +46,9 @@ scripted_gui = {
 			has_country_flag = berlin_conferance_voter
 			has_country_flag = berlin_conferance_voting
 			#NOT = {check_variable = {berlin_conferance_voted = 1}}
+		}
+		ai_enabled={
+			always = no
 		}
 		effects = {
 			#industrisation_progress_bg_click = {
@@ -378,7 +385,24 @@ scripted_gui = {
        context_type = selected_state_context
 	   parent_window_token = selected_state_view 
 	   ai_enabled={
-		always = yes
+			OR={
+				tag = PRS
+				tag = GER
+				tag = ENG
+				tag = HOL
+				tag = FRA
+				tag = BEL
+				tag = POR
+				tag = SPA
+				tag = RUS
+				tag = AUS
+				tag = OTO
+				tag = ITA
+				tag = PIE
+			}
+	   }
+	   ai_check={
+			is_colonial_nation = yes
 	   }
 		
        visible = {
@@ -456,9 +480,14 @@ scripted_gui = {
 			colonisation_stage_5_bg_click = {
 				add_to_variable = { ROOT.colonisation_progress_@THIS = 1 }
 				subtract_from_variable = {ROOT.colonial_power = 190}
-				##send event to owner nation-will lock out any other power within the NATIONS borders
-				owner = {
-					country_event = {id = EDC_afr.19}#ask for fealty/only trader etc
+				##send event to owner nation if player run-will lock out any other power within the NATIONS borders
+				if={
+					limit ={
+						owner = {is_ai = no}
+					}
+					owner = {
+						country_event = {id = EDC_afr.19}#ask for fealty/only trader etc
+					}
 				}
 			}
 			colonisation_stage_6_bg_click = {
@@ -468,7 +497,8 @@ scripted_gui = {
 				add_claim_by = ROOT
 			}
 			colonisation_stage_7_bg_click = {
-				#add_to_variable = { ROOT.colonisation_progress_@THIS = 1 }
+				#add_to_variable ={ ROOT.colonisation_progress_@THIS = 1 }
+				clear_variable = ROOT.colonisation_progress_@THIS 
 				subtract_from_variable = {ROOT.colonial_power = 260}
 				ROOT = {
 					set_state_owner = PREV
@@ -536,12 +566,15 @@ scripted_gui = {
 			colonisation_stage_5_bg_click_enabled={
 				check_variable = {ROOT.colonisation_progress_@THIS = 4}
 				check_variable = {ROOT.colonial_power >189}
-				owner = { 
-					OR = {
-						has_country_flag = @ROOT_colonial_deals
-						NOT = {has_country_flag = in_colonal_sphere}
+				OR = {
+					owner = { 
+						OR = {
+							has_country_flag = @ROOT_colonial_deals
+							NOT = {has_country_flag = in_colonal_sphere}
+						}
+						NOT = {has_country_flag = colonal_state}
 					}
-					NOT = {has_country_flag = colonal_state}
+					is_claimed_by = ROOT
 				}
 			}
 			colonisation_stage_6_bg_click_enabled={
@@ -594,9 +627,9 @@ scripted_gui = {
 				check_variable = {ROOT.colonisation_progress_@THIS >6}
 			}
         }
-		ai_test_interval= 24
+		ai_test_interval= 168
 		ai_test_variance = 24
-		ai_max_weight_taken_per_test = 2
+		ai_max_weight_taken_per_test = 6
 		ai_weights = {
 			colonisation_stage_1_bg_click = {
 				ai_will_do = {
@@ -1140,7 +1173,7 @@ scripted_gui = {
             		    any_state = {
 							check_variable = {ROOT.colonisation_progress_@THIS > 6}
 						}
-						add = -20
+						add = -30
             		}
         		}
    			}

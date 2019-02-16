@@ -2,7 +2,7 @@ state={
 	id=870
 	name="STATE_870"
 
-	state_category = large_city
+	state_category = town
 
 	history={
 		buildings = {
@@ -10,6 +10,12 @@ state={
 		}
 		victory_points = {
 			589 5
+		}
+		victory_points = {
+			11560 3
+		}
+		victory_points = {
+			6444 1
 		}
 		owner = HSD
 		add_core_of = HSD

@@ -2,7 +2,7 @@ state=
 {
 	id=318
 	name="STATE_318"
-	manpower = 1570800
+	manpower = 293024
 	
 	state_category = town
 	
@@ -16,8 +16,7 @@ state=
 		owner = HAI
 		buildings = {
 			infrastructure = 2
-			arms_factory = 1
-			industrial_complex = 2 
+			industrial_complex = 1
 			
 			4641 = {
 				naval_base = 3

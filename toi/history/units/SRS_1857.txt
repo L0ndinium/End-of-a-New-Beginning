@@ -39,6 +39,19 @@ division_template = {
   }
 }
 
+division_template = {
+  name = "Indian Rebels"
+
+  regiments = {
+    irregular_infantry = { x = 0 y = 0}
+    irregular_infantry = { x = 0 y = 1}
+	irregular_infantry = { x = 1 y = 0}
+	irregular_infantry = { x = 1 y = 1}
+	irregular_infantry = { x = 2 y = 0}
+	irregular_infantry = { x = 2 y = 1}
+  }
+}
+
 units = {
 		#Delhi
 		division= {
@@ -132,5 +145,59 @@ units = {
 			location = 1199
 			division_template = "Line Infantry"
 			start_experience_factor = 0.2
+		}
+		division= {
+			name = "1st Indian Rebel Regiment"
+			location = 2032
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "2nd Indian Rebel Regiment"
+			location = 12041
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "3rd Indian Rebel Regiment"
+			location = 2092
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "4th Indian Rebel Regiment"
+			location = 4410
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "5th Indian Rebel Regiment"
+			location = 10801
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "6th Indian Rebel Regiment"
+			location = 2005
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "7th Indian Rebel Regiment"
+			location = 1569
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "8th Indian Rebel Regiment"
+			location = 10751
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
+		}
+		division= {
+			name = "9th Indian Rebel Regiment"
+			location = 5040
+			division_template = "Indian Rebels"
+			start_experience_factor = 0.15
 		}
 }

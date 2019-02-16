@@ -19,7 +19,7 @@ equipments = {
 
 		build_cost_ic = 8
 		resources = {
-			aluminium = 1
+			wood = 1
 			steel = 1
 		}
 	}
@@ -27,6 +27,33 @@ equipments = {
 	support_equipment_1 = {
 		archetype = support_equipment
 		priority = 20
+	}
+	
+	support_equipment_2 = {
+		archetype = support_equipment
+		parent = support_equipment_1
+		priority = 20
+		
+		defense = 0.1
+		
+		build_cost_ic = 9
+		resources = {
+			steel = 2
+		}
+	}
+	
+	support_equipment_3 = {
+		archetype = support_equipment
+		parent = support_equipment_2
+		priority = 20
+		
+		defense = 0.15
+		
+		build_cost_ic = 10
+		resources = {
+			aluminium = 1
+			steel = 1
+		}
 	}
 
 	pre_modern_support_equipment = {
@@ -75,9 +102,6 @@ equipments = {
 		lend_lease_cost = 0.10
 
 		build_cost_ic = 1
-		resources = {
-			fabric = 1
-		}
 	}
 
 	uniform_equipment_0 = {

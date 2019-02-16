@@ -64,10 +64,10 @@
         popularity = 0
       }
       social_egalitarianism = {
-        popularity = 60
+        popularity = 25
       }
       centrism = {
-        popularity = 25
+        popularity = 60
       }
       traditional_conservatism = {
         popularity = 10
@@ -86,7 +86,7 @@
       }
     }
 
-    ruling_party = social_egalitarianism
+    ruling_party = centrism
   }
 
   set_technology = {
@@ -103,7 +103,7 @@
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_URC_Venancio_Flores.dds"
     expire = 1900.1.1
-    ideology = liberal_social
+    ideology = conserv_liberal
     traits = { }
   }
 

@@ -2,6 +2,8 @@
   capital = 291
 
   oob = "IRQ_1857"
+  
+  set_cosmetic_tag = IRQ_mesopotamia
 
   set_convoys = 0
   

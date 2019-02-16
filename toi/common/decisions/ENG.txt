@@ -40,6 +40,260 @@ economic_decisions = {
 	
 }
 
+eoanb_category_worker_unrest_ENG = {
+	
+	#Improve Conditions for Workers
+	eoanb_decision_ENG_improve_worker_conditions = {
+		
+		icon = generic_decision
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_ttt_ENG_decision_improve_worker_conditions
+			}
+			hidden_trigger = {
+				check_variable = { ENG_worker_unrest > 0 }
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			check_variable = { ENG_worker_unrest > 0 }
+		}
+		
+		fire_only_once = no
+		
+		cost = 75
+		
+		days_re_enable = 270
+		
+		days_remove = 90
+		
+		complete_effect = {
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			custom_effect_tooltip = eoanb_tt_ENG_decision_improve_worker_conditions
+			hidden_effect = {
+				subtract_from_variable = { var = ENG_worker_unrest value = 1 }
+			}
+		}
+		
+		remove_effect = {
+			add_stability = 0.02
+		}
+		
+		modifier = {
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.25
+				check_variable = { ENG_worker_unrest < 20 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ENG_worker_unrest < 10 }
+			}
+		}
+		
+	}
+	
+	#Shorten the Workday
+	eoanb_decision_ENG_shorten_workday = {
+		
+		icon = generic_decision
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_ttt_ENG_decision_shorten_workday
+			}
+			hidden_trigger = {
+				check_variable = { ENG_worker_unrest > 10 }
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			NOT = { has_idea = eight_hour_work_day }
+			check_variable = { ENG_worker_unrest > 0 }
+		}
+		
+		fire_only_once = no
+		
+		cost = 200
+		
+		days_re_enable = 1000
+		
+		complete_effect = {
+			add_popularity = { ideology = social_egalitarianism popularity = 0.03 }
+			custom_effect_tooltip = eoanb_tt_ENG_decision_shorten_workday
+			if = {
+				limit = {
+					has_idea = unlimited_work_day
+				}
+				swap_ideas = {
+					remove_idea = unlimited_work_day
+					add_idea = fourteen_hour_work_day
+				}
+			}
+			if = {
+				limit = {
+					has_idea = fourteen_hour_work_day
+				}
+				swap_ideas = {
+					remove_idea = fourteen_hour_work_day
+					add_idea = twelve_hour_work_day
+				}
+			}
+			if = {
+				limit = {
+					has_idea = twelve_hour_work_day
+				}
+				swap_ideas = {
+					remove_idea = twelve_hour_work_day
+					add_idea = ten_hour_work_day
+				}
+			}
+			if = {
+				limit = {
+					has_idea = ten_hour_work_day
+				}
+				swap_ideas = {
+					remove_idea = ten_hour_work_day
+					add_idea = eight_hour_work_day
+				}
+			}
+			hidden_effect = {
+				subtract_from_variable = { var = ENG_worker_unrest value = 10 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.1
+				check_variable = { ENG_worker_unrest < 30 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ENG_worker_unrest < 50 }
+			}
+		}
+		
+	}
+	
+	#Ban Trade Unions
+	eoanb_decision_ENG_trade_unions_ban = {
+		
+		icon = generic_civil_support
+		
+		available = {
+			NOT = {
+				OR = {
+					has_government = social_egalitarianism
+					has_government = vanguard_communism
+					has_government = collectivist_socialism
+				}
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			NOT = { has_idea = ENG_idea_trade_unions_banned }
+		}
+		
+		fire_only_once = no
+		
+		cost = 100
+		
+		days_re_enable = 30
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_ENG_decision_trade_unions_ban
+			add_ideas = ENG_idea_trade_unions_banned
+			hidden_effect = {
+				add_to_variable = { var = ENG_worker_unrest value = 3 }
+				news_event = { id = britainnews.1 random = 24 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				social_egalitarianism < 0.4
+			}
+			modifier = {
+				factor = 0.25
+				social_egalitarianism < 0.35
+			}
+			modifier = {
+				factor = 0
+				social_egalitarianism < 0.3
+			}
+		}
+		
+	}
+	
+	#Lift the Ban on Trade Unions
+	eoanb_decision_ENG_trade_unions_reallow = {
+		
+		icon = generic_decision
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = eoanb_ttt_ENG_decision_trade_unions_reallow
+			}
+			hidden_trigger = {
+				check_variable = { ENG_worker_unrest > 5 }
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			has_idea = ENG_idea_trade_unions_banned
+			check_variable = { ENG_worker_unrest > 0 }
+		}
+		
+		fire_only_once = no
+		
+		cost = 100
+		
+		days_re_enable = 30
+		
+		complete_effect = {
+			add_popularity = { ideology = social_egalitarianism popularity = 0.01 }
+			custom_effect_tooltip = eoanb_tt_ENG_decision_trade_unions_reallow
+			remove_ideas = ENG_idea_trade_unions_banned
+			hidden_effect = {
+				subtract_from_variable = { var = ENG_worker_unrest value = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = social_egalitarianism
+						has_government = vanguard_communism
+						has_government = collectivist_socialism
+					}
+				}
+			}
+		}
+		
+	}
+	
+}
+
 war_measures = {
 	
 	#Draft Emergency Regiments in India to fight the Sepoy
@@ -73,6 +327,315 @@ war_measures = {
 			base = 1000
 		}
 		
+	}
+	
+	#Call the VRC to defend Britain
+	eoanb_decision_ENG_emergency_call_vrc = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			controls_state = 952
+			ENG_being_invaded = yes
+		}
+		
+		visible = {
+			TAG = ENG
+			has_completed_focus = ENG_focus_the_vrc
+			OR = {
+				has_idea = ENG_idea_volunteer_movement
+				has_idea = ENG_idea_volunteer_movement_2
+				has_idea = ENG_idea_volunteer_movement_3
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			custom_effect_tooltip = eoanb_tt_ENG_decision_emergency_call_vrc
+			hidden_effect = {
+				load_oob = "ENG_emergency_vrc_deployment"
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+}
+
+eoanb_category_military = {
+	
+	#Send a Royal Commission to the VRC
+	eoanb_decision_ENG_commission_vrc = {
+		
+		icon = generic_decision
+		
+		available = {
+			has_completed_focus = ENG_focus_vrc_reforms
+		}
+		
+		visible = {
+			TAG = ENG
+			has_completed_focus = ENG_focus_vrc_reforms
+			OR = {
+				has_idea = ENG_idea_volunteer_movement
+				has_idea = ENG_idea_volunteer_movement_2
+				has_idea = ENG_idea_volunteer_movement_3
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		complete_effect = {
+			add_political_power = 10
+			army_experience = 5
+			add_war_support = 0.02
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1862.6.1
+			}
+		}
+	}
+	
+	#The Volunteer Act
+	eoanb_decision_ENG_vrc_volunteer_act = {
+		
+		icon = generic_decision
+		
+		available = {
+			has_completed_focus = ENG_focus_vrc_reforms
+			threat > 0.05
+		}
+		
+		visible = {
+			TAG = ENG
+			has_completed_focus = ENG_focus_vrc_reforms
+			OR = {
+				has_idea = ENG_idea_volunteer_movement
+				has_idea = ENG_idea_volunteer_movement_2
+				has_idea = ENG_idea_volunteer_movement_3
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		complete_effect = {
+			add_manpower = 12000
+			army_experience = 20
+			add_war_support = 0.02
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1863.6.1
+			}
+		}
+	}
+	
+	#Finance military equipment for Canada
+	eoanb_decision_ENG_finance_military_CAN = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = CAN
+			CAN = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = CAN
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		days_re_enable = 365
+		
+		complete_effect = {
+			CAN = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				CAN = { num_divisions > 5 }
+			}
+		}
+	}
+	
+	#Finance military equipment for Australia
+	eoanb_decision_ENG_finance_military_AST = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = AST
+			AST = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = AST
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		days_re_enable = 365
+		
+		complete_effect = {
+			AST = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				AST = { num_divisions > 5 }
+			}
+		}
+	}
+	
+	#Finance military equipment for New Zealand
+	eoanb_decision_ENG_finance_military_NZL = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = NZL
+			NZL = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = NZL
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		days_re_enable = 365
+		
+		complete_effect = {
+			NZL = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				NZL = { num_divisions > 5 }
+			}
+		}
+	}
+	
+	#Finance military equipment for South Africa
+	eoanb_decision_ENG_finance_military_SAF = {
+		
+		icon = generic_industry
+		
+		available = {
+			country_exists = SAF
+			SAF = { is_subject_of = ENG }
+		}
+		
+		visible = {
+			tag = ENG
+			country_exists = SAF
+			has_completed_focus = ENG_focus_new_military_colonial_policy
+		}
+		
+		fire_only_once = no
+		
+		cost = 50
+		
+		days_re_enable = 365
+		
+		complete_effect = {
+			SAF = {
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+		}
+		
+		#Only when the colonies are weak
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				SAF = { num_divisions > 5 }
+			}
+		}
 	}
 	
 }
@@ -167,6 +730,246 @@ political_actions = {
 			}
 		}
 		
+	}
+	
+}
+
+eoanb_category_projects = {
+	
+	#Construct Fortifications in key areas
+	eoanb_decision_ENG_fortify_land_strategic = {
+		
+		icon = generic_construction
+		
+		available = {
+			has_full_control_of_state = 126
+			has_full_control_of_state = 127
+			num_of_available_civilian_factories > 3
+		}
+		
+		visible = {
+			TAG = ENG
+			has_completed_focus = ENG_focus_strategic_fortifications
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		days_remove = 90
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_ENG_decision_strategic_fortifications
+			hidden_effect = {
+				126 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 11374 } }
+				127 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 3501 } }
+				127 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 507 } }
+			}
+		}
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1859.1.1
+			}
+		}
+	}
+	
+	#Construct Fortifications on the coast
+	eoanb_decision_ENG_fortify_land_coast = {
+		
+		icon = generic_construction
+		
+		available = {
+			has_full_control_of_state = 123
+			has_full_control_of_state = 127
+			num_of_available_civilian_factories > 3
+		}
+		
+		visible = {
+			TAG = ENG
+			has_completed_focus = ENG_focus_fortify_coast
+		}
+		
+		fire_only_once = yes
+		
+		cost = 20
+		
+		days_remove = 90
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_ENG_decision_coastal_fortifications
+			hidden_effect = {
+				123 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 540 } }
+				127 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 9458 } }
+				127 = { add_building_construction = { type = bunker level = 1 instant_build = yes province = 11446 } }
+			}
+		}
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1859.1.1
+			}
+		}
+	}
+	
+	#Construct Coastal Batteries in the East
+	eoanb_decision_ENG_fortify_coast_east = {
+		
+		icon = generic_construction
+		
+		available = {
+			has_full_control_of_state = 126
+			has_full_control_of_state = 127
+			num_of_available_civilian_factories > 5
+		}
+		
+		visible = {
+			TAG = ENG
+			has_completed_focus = ENG_focus_coastal_batteries_east
+		}
+		
+		fire_only_once = yes
+		
+		cost = 40
+		
+		days_remove = 150
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_ENG_decision_coastal_batteries_east
+			hidden_effect = {
+				126 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 11374 } }
+				127 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 9458 } }
+				127 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 11446 } }
+				127 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 3501 } }
+			}
+		}
+		
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1860.1.1
+			}
+		}
+	}
+	
+	#Construct Coastal Batteries in the Wast
+	eoanb_decision_ENG_fortify_coast_west = {
+		
+		icon = generic_construction
+		
+		available = {
+			has_full_control_of_state = 123
+			num_of_available_civilian_factories > 5
+		}
+		
+		visible = {
+			TAG = ENG
+			has_completed_focus = ENG_focus_coastal_batteries_west
+		}
+		
+		fire_only_once = yes
+		
+		cost = 40
+		
+		days_remove = 150
+		
+		remove_effect = {
+			custom_effect_tooltip = eoanb_tt_ENG_decision_coastal_batteries_west
+			hidden_effect = {
+				123 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 3422 } }
+				123 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 3463 } }
+				123 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 540 } }
+				123 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 6526 } }
+			}
+		}
+		
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1860.1.1
+			}
+		}
+	}
+	
+}
+
+eoanb_category_sepoy_rebellion = {
+	
+	#KAS, KAR, HYD, REW, BIK: Decision to join the Sepoy Rebellion
+	eoanb_decision_ENG_indian_minors_join_sepoy = {
+		
+		icon = generic_civil_support
+		
+		available = {
+			has_war_support > 0.3
+			NOT = { has_idea = disarmed_nation }
+		}
+		
+		visible = {
+			SRS = { has_war_with = RAJ }
+			OR = {
+				TAG = KAS
+				TAG = KAR
+				TAG = HYD
+				TAG = REW
+				TAG = BIK
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			hidden_effect = {
+				ENG = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+				}
+				ROOT = {
+					add_to_war = { 
+						targeted_alliance = SRS 
+						enemy = RAJ
+					}
+				}
+				add_named_threat = { 
+					threat = 1
+					name = eoanb_threat_joined_SRS_rebellion
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = eoanb_flag_desire_to_join_sepoy }
+			}
+		}
 	}
 	
 }

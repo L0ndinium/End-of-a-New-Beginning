@@ -1,23 +1,16 @@
 state={
 	id=10
 	name="STATE_10"
-	manpower = 1767000
+	manpower = 1514549
 
-	state_category = large_city
+	state_category = large_town
 
 	history={
 		owner = RUS
 		add_core_of = RUS
-		victory_points = {
-			3544 20
-		}
-		victory_points = {
-			402 3
-		}
+		
 		buildings = {
-			infrastructure = 4
-			arms_factory = 1
-			industrial_complex = 1
+			infrastructure = 3
 			logging_camp = 1
 		}
 	}
@@ -28,6 +21,6 @@ state={
 	}
 
 	provinces={
-		402 467 524 3482 3544 6511 9400 11492 12562
+		467 524 3482 6511 9400 11492 12562
 	}
 }

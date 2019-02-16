@@ -2,7 +2,7 @@
 state={
 	id=1263
 	name="STATE_1263" # Kawachi
-	manpower = 6000000
+	manpower = 232986
 	state_category = metropolis
 	resources={
 		aluminium=2

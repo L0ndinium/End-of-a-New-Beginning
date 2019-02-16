@@ -135,7 +135,7 @@
  EFFECT_SET_POLITICS:0 "Politics will change:"
  EFFECT_SET_POLITICS_RULING_PARTY:0 "$PARTY|Y$ becomes the ruling party."
  EFFECT_SET_POLITICS_ELECTIONS:0 "Public elections will be held."
- EFFECT_SET_POLITICS_NO_ELECTIONS:0 "Public elections will not be held."
+ EFFECT_SET_POLITICS_NO_ELECTIONS:0 "Public elections will either be held by event or not at all."
  EFFECT_SET_POLITICS_ELECTION_FREQUENCY:0 "Elections will take place every $MONTHS|H$ years."
  EFFECT_ADD_EXTRA_STATE_SHARED_BUILDING_SLOTS:0 "Add $COUNT|G$ Building Slots."
  EFFECT_REMOVE_EXTRA_STATE_SHARED_BUILDING_SLOTS:0 "Remove $COUNT|R$ Building Slots."

@@ -7,15 +7,9 @@ state={
 
 	history={
 		owner = OTO
-		victory_points = {
-			11818 5 
-		}
+
 		buildings = {
 			infrastructure = 3		
-			11818 = {
-				naval_base = 2
-
-			}
 
 		}
 		add_core_of = OTO
@@ -23,6 +17,6 @@ state={
 	}
 	
 	provinces={
-		895 936 966 3526 3844 3936 10163 11818 6930
+		936 3526 10163
 	}
 }

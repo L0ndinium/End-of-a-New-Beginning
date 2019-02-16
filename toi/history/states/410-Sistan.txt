@@ -12,14 +12,15 @@ state={
 	state_category = rural
 
 	history={
-		owner = PER
+		owner = KLT
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = PER
+		add_core_of = KLT
+		add_claim_by = PER
 	}
 
 	provinces={
-		1889 2039 2070 4891 10782 13082 13528 13529 13530 13531 13532 13533 13534 13535
+		2039 2070 4891 10782 13082 13528 13529 13530 13531 13532 13533 13534 13535
 	}
 }

@@ -1,0 +1,21 @@
+state={
+	id=1280
+	name="STATE_1280"
+	provinces={
+		2055 3875 3972 9908 12848 12893 
+	}
+	manpower=8430
+	history={
+		owner = COM
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = COM
+		add_claim_by = USA
+		victory_points = {
+			12893 3
+		}
+	}
+	state_category = town
+	buildings_max_level_factor=1.000
+}

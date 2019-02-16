@@ -104,20 +104,40 @@
 	expire = "1873.1.1"
 	ideology = despotism
 	traits = {	
-		}
 	}
+}
 	
 	create_corps_commander = {
 		name = "Karl von Heygendorff"
-		portrait_path = "gfx/leaders/Europe/Portrait_Europe_generic_military_general_1.dds"
+		portrait_path = " "
 		skill = 2
 		attack_skill = 2
 		defense_skill = 2
 		planning_skill = 1
 		logistics_skill = 1
-		traits = {
-			organizer
-		}		
+		traits = { }		
+	}
+	
+	create_corps_commander = {
+		name = "Thuisko von Stieglitz"
+		portrait_path = "gfx/leaders/SAX/Portrait_SAX_Thuisko_von_Stieglitz.dds"
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 1
+		traits = { }		
+	}
+	
+	create_corps_commander = {
+		name = "Bernhard von Radenhorst"
+		portrait_path = "gfx/leaders/SAX/Portrait_SAX_Bernhard_von_Radenhorst.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 1
+		traits = { }		
 	}
 
 }

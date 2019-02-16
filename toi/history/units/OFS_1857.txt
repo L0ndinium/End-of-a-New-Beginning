@@ -12,36 +12,36 @@ units = {
 			name = "1st Line Infantry"
 			location = 13250
 			division_template = "Free Orange State Line Infantry"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.1
 		}
 		division= {
 			name = "2nd Line Infantry"
 			location = 13255
 			division_template = "Free Orange State Line Infantry"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.1
 		}
 		division= {
 			name = "3rd Line Infantry"
 			location = 13247
 			division_template = "Free Orange State Line Infantry"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.1
 		}
 		division= {
 			name = "4th Line Infantry"
 			location = 13256
 			division_template = "Free Orange State Line Infantry"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.1
 		}
 		division= {
 			name = "5th Line Infantry"
 			location = 13254
 			division_template = "Free Orange State Line Infantry"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.1
 		}
 		division= {
 			name = "6th Line Infantry"
 			location = 13249
 			division_template = "Free Orange State Line Infantry"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.1
 		}
 }

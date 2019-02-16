@@ -1,0 +1,132 @@
+political_actions = {
+	
+	#Administration of Ceylon
+	eoanb_decision_RAJ_core_ceylon = {
+
+		icon = generic_decision
+
+		available = {
+			SRS = { exists = no }
+			has_war = no
+		}
+
+		visible = {
+			TAG = RAJ
+			has_full_control_of_state = 422
+			NOT = { 422 = { is_core_of = RAJ } }
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			422 = { add_core_of = RAJ }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+	#Join the Sepoy Rebellion (for minors)
+	eoanb_decision_minors_join_sepoy = {
+		
+		icon = generic_nationalism
+		
+		available = {
+			has_war_support > 0.25
+		}
+		
+		visible = {
+			OR = {
+				TAG = TRA
+				TAG = HYD
+				TAG = REW
+				TAG = BIK
+				TAG = KAR
+				TAG = KAS
+			}
+			SRS = { exists = yes }
+			SRS = { has_war_with = ENG }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			add_stability = -0.1
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+			ROOT = { add_to_war = { targeted_alliance = SRS enemy = RAJ } }
+		}
+		
+		ai_will_do = {
+			base = 4
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_war = no
+			}
+			modifier = {
+				factor = 0.05
+				has_opinion = {
+					target = ENG
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_opinion = {
+					target = ENG
+					value = 0
+				}
+			}
+		}
+	}
+	
+}
+
+war_measures = {
+	
+	#India Officer Program
+	eoanb_decision_RAJ_officer_program = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 5
+		}
+
+		visible = {
+			TAG = RAJ
+			RAJ = { has_war_with = SRS }
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+		
+		days_remove = 30
+		
+		complete_effect = {
+			army_experience = -5
+		}
+		
+		modifier = {
+			military_leader_cost_factor = -0.50
+			command_power_gain_mult = 0.25
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	
+}

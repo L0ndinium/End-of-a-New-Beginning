@@ -1025,4 +1025,517 @@ ideas = {
 			}
 		}
 	}
+		
+	# MILITARY
+	army_chief = {		
+		FRA_army_chief_francois_achille_bazaine = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_army_chief_patrice_de_mac_mahon = {		
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+		
+		FRA_army_chief_charles_auguste_frossard = {
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { army_chief_maneuver_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_army_chief_adolphe_niel = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 50			
+
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_army_chief_edmond_le_boeuf = {		
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 50			
+
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	navy_chief = {
+		FRA_navy_chief_francois_thomas_trehouart = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_navy_chief_leonard_victor_charner = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_navy_chief_ferdinand_hamelin = {
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	high_command = {		
+		FRA_high_command_auguste_regnaud_de_saint_jean_d_angely = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_high_command_louis_joseph_lebrun = {
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { army_logistics_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_high_command_abel_douay = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		FRA_high_command_charles_rigault_de_genouilly = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_capital_ship_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_high_command_joseph_romain_desfosses = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_high_command_alexandre_ferdinand_parseval_deschenes = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_high_command_elie_frederic_forey = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_cavalry_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_high_command_felix_charles_douay = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_commando_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_high_command_paul_de_ladmirault = {			
+			allowed = {
+				original_tag = FRA
+			}
+		
+			traits = { army_infantry_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_high_command_charles_denis_bourbaki = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_regrouping_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		FRA_high_command_charles_cousin_montauban = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { army_artillery_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	tank_manufacturer = {
+
+		designer = yes
+	
+		# TECHNOLOGY
+		renault_fra = {
+		
+			picture = renault
+
+			available = {
+				#year = 1899
+				has_tech = armor_tech_steam_car
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				armor = 0.10
+			}
+			
+
+			traits = { heavy_tank_manufacturer }
+		}
+	
+		FRA_AMX = {
+		
+			picture = generic_tank_manufacturer_2
+
+			available = {
+				#year = 1936
+				has_tech = armor_tech_steam_car
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				armor = 0.10
+			}
+			
+
+			traits = { fast_tank_manufacturer }
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		somua = {
+			available = {
+				#year = 1916
+				has_tech = armor_tech_steam_car
+			}
+		
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+
+		}
+		
+		mas = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer_1 }
+		}
+	
+		schneider = {
+						
+			allowed = {
+				original_tag = FRA
+			}		
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer_1 }
+		}
+	}
+	
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		morane_saulnier = {
+			available = {
+				#year = 1910
+				has_tech = wright_flyer
+			}
+			
+			allowed = {
+				original_tag = FRA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+		
+		bloch = {
+			available = {
+				#year = 1929
+				has_tech = wright_flyer
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		
+		amiot = {
+			available = {
+				#year = 1914
+				has_tech = wright_flyer
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+		
+		levasseur = {
+			available = {
+				#year = 1914
+				has_tech = wright_flyer
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+		
+	}
+	naval_manufacturer = {
+
+		designer = yes
+		
+		fcm = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	
+	industrial_concern = {
+		
+		famh = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern_1 }
+		}
+
+		denain = {
+
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				process_engineering = 0.05
+			}
+
+			traits = { electronics_concern_1 }
+		}
+		
+		saint_gobain = {
+
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				biochemistry = 0.05
+			}
+
+			traits = { electronics_concern_2 }
+		}
+		
+		gramme = {
+
+			picture = generic_electronics_concern_3
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				electronics_devices = 0.05
+			}
+
+			traits = { electronics_concern_3 }
+		}
+	}
+		
+	theorist = {		
+		FRA_theorist_jean_baptiste_philibert_vaillant= {
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		FRA_theorist_gaud_amable_hugon = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
 }

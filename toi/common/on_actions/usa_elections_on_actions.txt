@@ -1,0 +1,16 @@
+on_actions = {
+
+	#So that elections have more accurate dates and generic elections and whatever
+	on_new_term_election = {
+		random_events = {
+			100 = usa.10 #1860
+			100 = usa.36 #1864 - War
+			100 = usa.38 #1864 - No War
+			100 = usa_election.1 #1868
+			100 = usa_election.1000 #Generic USA Election
+		}
+		random_events = {
+			100 = csa.1000 #Generic CSA Election
+		}
+	}
+}

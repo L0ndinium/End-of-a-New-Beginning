@@ -1,0 +1,29 @@
+state={
+	id=1310
+	name="STATE_1310"
+	resources={
+		aluminium=3.000
+		wood=5
+		coal=3
+	}
+
+
+
+	provinces={
+		605 3605 3608 3635 3661 3778 4270 6625 6630 11567 11585 
+	}
+
+	state_category = city
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+		3778 20 
+		}
+		owner = CAN
+		add_core_of = CAN
+	}
+	manpower=210447
+	buildings_max_level_factor=1.000
+}

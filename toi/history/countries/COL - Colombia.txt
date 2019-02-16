@@ -52,10 +52,10 @@
         popularity = 0
       }
       centrism = {
-        popularity = 20
+        popularity = 45
       }
       traditional_conservatism = {
-        popularity = 80
+        popularity = 55
       }
       radical_democracy = {
         popularity = 0
@@ -84,57 +84,63 @@
   # POLITICAL LEADERS
 
 
-create_country_leader = {
-    name = "Manuel Maria Mallarino"
-    desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_COL_Manuel_Maria_Mallarino.dds"
-    expire = 1857.4.1
-    ideology = conserv
+create_country_leader = {	
+name = "Mariano Ospina"
+	desc = "POLITICS_OSPINA_DESC"
+	picture = "Portrait_COL_Mariano_Ospina_Rodriguez.dds"
+	expire = "1862.1.1"
+	ideology = conserv
+}
+create_country_leader = {	
+name = "Antionio Herran y Martinez"
+	desc = "POLITICS_OSPINA_DESC"
+	picture = "Portrait_COL_Antonio_Herran_y_Martinez.dds"
+	expire = "1862.1.1"
+	ideology = christian 
+}
+
+create_country_leader = {	
+name = "Tomas Cipriano de Mosquera"
+	desc = "POLITICS_OSPINA_DESC"
+	picture = "Portrait_COL_Tomas_Cipriano_de_Mosquera.dds"
+	expire = "1864.4.8"
+	ideology = conserv_liberal 
+}
+	
+
+create_corps_commander = {
+  name = "Julio Arboleda"
+  picture = "Portrait_COL_Julio_Arboleda.dds"
+  traits = { }
+  skill = 2
+  attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+  name = "Leonardo Canal"
+  picture = "Portrait_COL_Leonardo_Canal.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
-  name = "Braulio Henao"
-  picture = "Portrait_COL_Braulio_Henao.dds"
+  name = "Eustorgio Salgar"
+  picture = "Portrait_COL_Eustorgio_Salgar.dds"
   traits = { }
-  skill = 3
+  skill = 1
   attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
 }
 
-create_corps_commander = {
-  name = "Leonardo Canal"
-  picture = "Portrait_COL_Leonardo_Canal.dds"
-  traits = { }
-  skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander {
-  name = "Braulio Henao"
-  picture = ""
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
-
-create_corps_commander {
-  name = "Leonardo Canal"
-  picture = "Portrait_COL_Leonardo_Canal.dds"
-  traits = { }
-  skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
-}
 
 
 }

@@ -672,3 +672,50 @@ country_event = {
 	}
 	
 }
+
+#Startup Event: German or English state names?
+country_event = {
+	id = prussia.29
+	title = prussia.29.t
+	desc = prussia.29.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.29.a
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = eoanb_tt_PRS_event_29_a
+		hidden_effect = {
+			5 = { set_state_name = "Ostpreussen" }
+			50 = { set_state_name = "Württemberg" }
+			51 = { set_state_name = "Rheinland" }
+			52 = { set_state_name = "Oberbayern" }
+			53 = { set_state_name = "Niederbayern" }
+			55 = { set_state_name = "Ost-Hessen" }
+			57 = { set_state_name = "Westfalen" }
+			60 = { set_state_name = "Thüringen" }
+			62 = { set_state_name = "Pommern" }
+			63 = { set_state_name = "Hinterpommern" }
+			65 = { set_state_name = "Sachsen" }
+			66 = { set_state_name = "Niederschlesien" }
+			67 = { set_state_name = "Oberschlesien" }
+			85 = { set_state_name = "Pomerellen" }
+			938 = { set_state_name = "Lübeck" }
+			1001 = { set_state_name = "Königsberg" }
+			1003 = { set_state_name = "Ost-Berlin" }
+			1009 = { set_state_name = "Ost-Rheinland" }
+			1061 = { set_state_name = "West-Hessen" }
+			set_province_name = { id = 587 name = "Köln" }
+			set_province_name = { id = 692 name = "München" }
+			set_province_name = { id = 11331 name = "Lübeck" }
+			set_province_name = { id = 11544 name = "Nürnberg" }
+			set_province_name = { id = 13497 name = "Ost-Berlin" }
+		}
+	}
+	
+	option = {
+		name = prussia.29.b
+		ai_chance = { factor = 100 }
+	}
+	
+}

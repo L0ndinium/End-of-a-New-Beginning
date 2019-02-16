@@ -760,3 +760,199 @@ country_event = {
 	}
 	
 }
+
+#What should we offer for Heligoland
+country_event = {
+	id = germany.20
+	title = germany.20.t
+	desc = germany.20.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.20.a
+		ai_chance = { factor = 15 }
+		ENG = { country_event = { id = germany.21 days = 1 } }
+		hidden_effect = {
+			set_country_flag = eoanb_flag_GER_heligoland_offer_power
+		}
+	}
+	
+	option = {
+		name = germany.20.b
+		ai_chance = { factor = 55 }
+		ENG = { country_event = { id = germany.21 days = 1 } }
+		hidden_effect = {
+			set_country_flag = eoanb_flag_GER_heligoland_offer_industry
+		}
+		trigger = {
+			num_of_factories > 25
+		}
+	}
+	
+	option = {
+		name = germany.20.c
+		ai_chance = { factor = 30 }
+		ENG = { country_event = { id = germany.21 days = 1 } }
+		hidden_effect = {
+			set_country_flag = eoanb_flag_GER_heligoland_offer_curacao
+		}
+		trigger = {
+			owns_state = 695
+		}
+	}
+	
+}
+
+#The German offer
+country_event = {
+	id = germany.21
+	title = germany.21.t
+	desc = germany.21.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.21.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_power }
+			}
+			modifier = {
+				factor = 10
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_industry }
+			}
+			modifier = {
+				factor = 90
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_curacao }
+			}
+		}
+		PRS = { country_event = { id = germany.23 days = 1 } }
+		if = {
+			limit = {
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_power }
+			}
+			add_political_power = 200
+			add_stability = 0.05
+		}
+		if = {
+			limit = {
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_industry }
+			}
+			add_timed_idea = {
+				idea = GER_idea_heligoland_payment_ENG
+				days = 365
+			}
+		}
+		if = {
+			limit = {
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_curacao }
+			}
+			custom_effect_tooltip = eoanb_tt_ger_event_21_a
+		}
+	}
+	
+	option = {
+		name = germany.21.b
+		ai_chance = { factor = 90 }
+		PRS = { country_event = { id = germany.22 days = 1 } }
+		hidden_effect = {
+			if = {
+				limit = {
+					PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_power }
+				}
+				PRS = { clr_country_flag = eoanb_flag_GER_heligoland_offer_power }
+			}
+			if = {
+				limit = {
+					PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_industry }
+				}
+				PRS = { clr_country_flag = eoanb_flag_GER_heligoland_offer_industry }
+			}
+			if = {
+				limit = {
+					PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_curacao }
+				}
+				PRS = { clr_country_flag = eoanb_flag_GER_heligoland_offer_curacao }
+			}
+		}
+	}
+	
+}
+
+#Britain denies
+country_event = {
+	id = germany.22
+	title = germany.22.t
+	desc = germany.22.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.22.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#Britain accepts
+country_event = {
+	id = germany.23
+	title = germany.23.t
+	desc = germany.23.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.23.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_power }
+			}
+			add_political_power = -200
+		}
+		if = {
+			limit = {
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_industry }
+			}
+			add_timed_idea = {
+				idea = GER_idea_heligoland_payment
+				days = 365
+			}
+		}
+		if = {
+			limit = {
+				PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_curacao }
+			}
+			ENG = { transfer_state = 695 }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_power }
+				}
+				PRS = { clr_country_flag = eoanb_flag_GER_heligoland_offer_power }
+			}
+			if = {
+				limit = {
+					PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_industry }
+				}
+				PRS = { clr_country_flag = eoanb_flag_GER_heligoland_offer_industry }
+			}
+			if = {
+				limit = {
+					PRS = { has_country_flag = eoanb_flag_GER_heligoland_offer_curacao }
+				}
+				PRS = { clr_country_flag = eoanb_flag_GER_heligoland_offer_curacao }
+			}
+		}
+	}
+	
+}

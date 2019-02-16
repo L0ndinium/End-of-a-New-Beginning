@@ -17,13 +17,19 @@ state={
 			9894 3 
 		}
 		
-		buildings = {   
+		buildings = {
+
+            13782 = {
+				naval_base = 1
+			}
+			
 			infrastructure = 3
+			
 			}
 		add_core_of = BOS
 	}
 
 	provinces={
-		 9894 6942 13781
+		 9894 6942 13781 13782
 	}
 }

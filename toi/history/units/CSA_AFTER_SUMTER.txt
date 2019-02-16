@@ -151,3 +151,59 @@ units = {
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
+	division= {	
+		name = "21st Confederate Regimental"
+		location = 5001
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "22nd Confederate Regimental"
+		location = 9829
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "23rd Confederate Regimental"
+		location = 2082
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "24th Confederate Regimental"
+		location = 5085
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "25th Confederate Regimental"
+		location = 5001
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "26th Confederate Regimental"
+		location = 10894
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "27th Confederate Regimental"
+		location = 10894
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "28th Confederate Regimental"
+		location = 10740
+		division_template = "Confederate Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}

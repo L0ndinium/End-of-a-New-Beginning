@@ -1411,7 +1411,7 @@ country_event = {##territorial disputes on tribal border
 	title = EDC_afr.23.t
 	desc = EDC_afr.23.d
 	picture = GFX_report_event_chinese_army_training
-	#hidden = yes
+	hidden = yes
 	mean_time_to_happen = {
 		days = 720
 		modifier = {
@@ -1522,11 +1522,6 @@ country_event = {##territorial disputes on tribal border
 			}
 		}
 	}
-		
-	option = {
-		name = EDC_afr.23.a
-		#tester
-	}
 }
 country_event = { #A tribal state is in dispute
 	id = EDC_afr.24
@@ -1575,6 +1570,7 @@ country_event = { #A border dispute
 		event_target:contested_state={
 			add_claim_by = ROOT
 		}
+		custom_effect_tooltip = EDC_afr_allows_agaitate_war
 	}
 	option = { # offer to settle the claim - small tribes may submit to large tribes
 		name = EDC_afr.25.b

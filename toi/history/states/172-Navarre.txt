@@ -5,6 +5,7 @@ state={
 	manpower = 450000
 	
 	state_category = town #fucking change the damn category cunts
+	#So fucking true, THE NAMES DON'T ADD UP WITH WHAT IT ACTUALLY IS
 	
 	resources={
 		iron = 1
@@ -23,6 +24,6 @@ state={
 	}
 
 	provinces={
-	3931 9857 
+	3931 9857 932 3933 3737 13825 
 	}
 }

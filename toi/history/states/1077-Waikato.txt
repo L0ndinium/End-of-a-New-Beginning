@@ -2,6 +2,9 @@ state={
 	id=1077
 	name="STATE_1077" # Waikato
 	manpower = 20909#time for spliting
+	resources={
+		wood = 6
+	}
 	
 	state_category = city
 	

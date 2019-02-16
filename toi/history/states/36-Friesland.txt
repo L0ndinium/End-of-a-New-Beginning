@@ -2,26 +2,31 @@
 state={
 	id=36
 	name="STATE_36"
-	manpower = 1560240
-
-	state_category = city
-
 	resources={
-		wood=4
+		wood=4.000
+		iron=2.000
 	}
 
 	history={
 		owner = HOL
+		add_core_of = HOL
+		victory_points = {
+			6336 5
+		}
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 2
 			6336 = {
 				naval_base = 2
+
 			}
-		} 
+		}
 	}
 
 	provinces={
-		6241 6286 6336 9309 9335 9363 9403 11318 
+		6336 9335
 	}
+	manpower=248000
+	buildings_max_level_factor=1.000
+	state_category=city
 }

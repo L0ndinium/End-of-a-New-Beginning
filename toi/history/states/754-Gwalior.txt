@@ -12,6 +12,7 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 		}
+		add_core_of = RAJ
 	}
 	manpower=76924
 	buildings_max_level_factor=1.000

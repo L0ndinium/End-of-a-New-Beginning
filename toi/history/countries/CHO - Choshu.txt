@@ -41,7 +41,7 @@
 
     privileged_education
     state_religion
-	religion_animist
+	religion_shinto
          #NATIONAL SPIRITS
 	
   }

@@ -1,8 +1,8 @@
 state=
 {
 	id=796
-	name="STATE_796"
-	manpower = 2346
+	name="STATE_796" 
+	manpower = 11807
 	
 	state_category = rural
 	resources={
@@ -16,10 +16,16 @@ state=
 			infrastructure = 1
 		}
 		victory_points = {
-			13331 5 
+			13331 1
+		}
+		victory_points = {
+			13330 1
+		}
+		victory_points = {
+			13329 5 
 		}
 	}
 	provinces={
-		 13331
+		 13331 13330 13329
 	}
 }

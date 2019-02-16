@@ -4509,71 +4509,6 @@ focus_tree = {
 		y = 12
 		completion_reward = {
 			custom_effect_tooltip = LAT_generic_Nobles_Across_Americas
-			hidden_effect = {
-				WLL = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				MEX = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				GUA = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				HON = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				ELS = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				NIC = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				COS = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				COL = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				HAI = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				BRA = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				VEN = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				ECU = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				PRU = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				BOL = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				ARG = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				CHL = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				URG = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				PAR = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				BUE = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				DOM = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-				CUB = {
-					add_ideas = LAT_generic_Send_Nobles_the_Americas
-				}
-			}
 		}
 
 	}
@@ -6028,10 +5963,8 @@ focus_tree = {
 			has_idea = industrialized
 		}
 		completion_reward = {
-			swap_ideas = {
-				add_idea = industrialized
-				remove_idea = industrializing
-			}
+       add_stability = 0.025
+	   add_political_power = 15
 		}
 
 	}

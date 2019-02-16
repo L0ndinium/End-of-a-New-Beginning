@@ -54,6 +54,7 @@ political_actions = {
 				AND = {
 					TAG = PRS
 					date > 1871.6.1
+					NOT = { has_country_flag = eoanb_flag_won_7_weeks_war }
 				}
 			}
 		}
@@ -67,6 +68,7 @@ political_actions = {
 			PRS = { country_event = { days = 1 id = sevenweekswar.1 } }
 			hidden_effect = {
 				set_country_flag = eoanb_flag_PRS_made_reforms
+				PRS = { country_event = { days = 12 id = sevenweekswar.2 } }
 			}
 		}
 		
@@ -331,6 +333,21 @@ political_actions = {
 				HAN = { remove_state_core = 56 }
 				HAN = { remove_state_core = 59 }
 				OLD = { remove_state_core = 1035 }
+			}
+			if = {
+				limit = {
+					PRS = { has_cosmetic_tag = GER_north_confederation }
+				}
+				MCK = { remove_state_core = 61 }
+				MCK = { remove_state_core = 1034 }
+				LCK = { remove_state_core = 938 }
+				HAM = { remove_state_core = 868 }
+				BRE = { remove_state_core = 867 }
+				OLD = { remove_state_core = 745 }
+				FRK = { remove_state_core = 869 }
+				HES = { remove_state_core = 55 }
+				THU = { remove_state_core = 60 }
+				SAX = { remove_state_core = 65 }
 			}
 		}
 		
@@ -1274,9 +1291,9 @@ political_actions = {
 		cost = 25
 
 		complete_effect = {
-			BAD = { give_military_access = PRS }
-			WUR = { give_military_access = PRS }
-			HSD = { give_military_access = PRS }
+			PRS = { give_military_access = BAD }
+			PRS = { give_military_access = WUR }
+			PRS = { give_military_access = HSD }
 			custom_effect_tooltip = eoanb_tt_decision_PRS_southern_access
 			hidden_effect = {
 				PRS = { country_event = { days = 30 id = prussia.18 } }

@@ -8,6 +8,7 @@ state={
 			infrastructure = 2
 			arms_factory = 1
 		}
+		add_core_of = RAJ
 	}
 	provinces={
 		1983 4299 7064 8082 9973

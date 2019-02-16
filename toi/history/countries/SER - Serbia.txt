@@ -5,8 +5,10 @@
 
   set_convoys = 0
   
-  set_research_slots = 3
+  set_research_slots = 2
 
+  add_stability = -0.05
+  
   add_ideas = { 
     #POLITICS 
 		  
@@ -14,7 +16,7 @@
     victorian_era
 	law_victorian_army
     agrarian
-    no_heir
+    has_heir
     absolute_monarchy
 
     civilian_economy
@@ -29,14 +31,16 @@
     limited_equality
     absolutism
 
-    no_constitution
+    limited_constitution
     no_elections
 
     privileged_education
     state_religion
 	religion_orthodox
-        #NATIONAL SPIRITS
-	
+        #NATIONAL SPIRITS	
+        
+    SER_idea_Internal_Conflicts
+    SER_idea_1838constitution
   }
 
   OTO = {
@@ -70,10 +74,10 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 20
       }
       traditional_conservatism = {
-        popularity = 0
+        popularity = 45
       }
       radical_democracy = {
         popularity = 0
@@ -82,14 +86,14 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 100
+        popularity = 35
       }
       fundamentalism = {
         popularity = 0
       }
     }
 
-	  ruling_party = autocracy
+	ruling_party = traditional_conservatism
   }
   
   set_technology = {
@@ -115,7 +119,7 @@
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_SER_Aleksandar_Karadordevic.dds"
     expire = 2000.09.10
-    ideology = despotism
+    ideology = conserv
   }
 
   create_corps_commander = {

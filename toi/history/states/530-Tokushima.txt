@@ -2,7 +2,7 @@ state=
 {
 	id=530
 	name="STATE_530" # Iyo
-	manpower = 981079
+	manpower = 753956
 	state_category = large_town
 	history=
 	{

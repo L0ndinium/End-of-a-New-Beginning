@@ -38,6 +38,9 @@
          #NATIONAL SPIRITS
 	
 	ENG_colonial_Victoria
+  AST_aboriginal_tribes
+  AST_unexplored_lands
+  AST_last_prisoners_britain
   }
 
   set_politics = {

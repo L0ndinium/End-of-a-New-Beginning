@@ -1,0 +1,26 @@
+state={
+	id= 1315
+	name="STATE_1315" # Łódź
+	manpower = 27890
+	state_category = city
+
+	history= {
+		owner = RUS
+		add_core_of = RUS
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+	    }
+
+        victory_points = {
+			9508 10
+		}
+	    
+			
+	}
+
+	provinces={
+	    9508
+	}
+}

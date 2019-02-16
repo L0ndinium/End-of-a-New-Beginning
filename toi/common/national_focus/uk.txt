@@ -85,18 +85,18 @@ focus_tree = {
 				limit = {
 					RAJ = { has_idea = religion_sikh }
 				}
-				add_stability = 0.05
+				RAJ = { add_stability = 0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
 			}
 			if = {
 				limit = {
 					RAJ = { has_idea = religion_sunni }
 				}
-				add_stability = -0.05
+				RAJ = { add_stability = -0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
 			}
 			else = {
-				add_stability = 0.02
+				RAJ = { add_stability = 0.02 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_muslims_offended
 			}
 		}
@@ -121,18 +121,18 @@ focus_tree = {
 				limit = {
 					RAJ = { has_idea = religion_sikh }
 				}
-				add_stability = -0.05
+				RAJ = { add_stability = -0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
 			}
 			if = {
 				limit = {
 					RAJ = { has_idea = religion_sunni }
 				}
-				add_stability = 0.05
+				RAJ = { add_stability = 0.05 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
 			}
 			else = {
-				add_stability = 0.02
+				RAJ = { add_stability = 0.02 }
 				custom_effect_tooltip = eoanb_tt_focus_ENG_sikhs_offended
 			}
 		}
@@ -425,6 +425,10 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		prerequisite = { focus = ENG_focus_repeal_regulatory_act }
 		mutually_exclusive = { focus = ENG_focus_stop_lapse_doctrine }
@@ -652,6 +656,1139 @@ focus_tree = {
 				RAJ = { drop_cosmetic_tag = yes }
 				RAJ = { set_cosmetic_tag = RAJ_ENG_british_dominion }
 			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_british_army
+		icon = GFX_goal_focus_british_military_government
+		x = 23
+		y = 0
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_royal_defence_commision
+		icon = GFX_goal_focus_british_isolationism
+		x = 20
+		y = 1
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_british_army }
+		available = {
+			OR = {
+				FRA = { has_country_flag = fra_orsini_failure }
+				FRA = { has_country_flag = fra_orsini_success }
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 75
+			army_experience = 5
+			navy_experience = 5
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_strategic_fortifications
+		icon = GFX_goal_focus_napoleonic_tactics
+		x = 19
+		y = 2
+		cost = 30
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_royal_defence_commision }
+		
+		completion_reward = {
+			army_experience = 5
+			custom_effect_tooltip = eoanb_tt_focus_ENG_strategic_fortifications
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_fortify_coast
+		icon = GFX_focus_generic_coastal_fort
+		x = 19
+		y = 3
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_strategic_fortifications }
+		
+		completion_reward = {
+			army_experience = 5
+			custom_effect_tooltip = eoanb_tt_focus_ENG_fortify_coast
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_coastal_batteries_east
+		icon = GFX_goal_generic_amphibious_assault
+		x = 21
+		y = 2
+		cost = 45
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_royal_defence_commision }
+		
+		completion_reward = {
+			navy_experience = 5
+			custom_effect_tooltip = eoanb_tt_focus_ENG_coastal_batteries_east
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_coastal_batteries_west
+		icon = GFX_goal_generic_amphibious_assault
+		x = 21
+		y = 3
+		cost = 45
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_coastal_batteries_east }
+		
+		completion_reward = {
+			navy_experience = 5
+			custom_effect_tooltip = eoanb_tt_focus_ENG_coastal_batteries_west
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_viceroy_india_investigate
+		icon = GFX_focus_generic_home_defense
+		x = 16
+		y = 0
+		cost = 30
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = { SRS = { exists = no } }
+		
+		completion_reward = {
+			add_political_power = -25
+			RAJ = { add_stability = 0.02 }
+			custom_effect_tooltip = eoanb_tt_focus_ENG_viceroy_india_investigate
+			hidden_effect = {
+				RAJ = {
+					add_autonomy_score = {
+						value = -50
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_peel_commission
+		icon = GFX_goal_focus_peel_comission
+		x = 16
+		y = 1
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_viceroy_india_investigate }
+		
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.05
+			custom_effect_tooltip = eoanb_tt_focus_ENG_peel_commision
+			hidden_effect = {
+				if = {
+					limit = {
+						RAJ = {
+							check_variable = {
+								var = ENG_RAJ_revolt_risk
+								value = 1
+								compare = greater_than_or_equals
+							}
+						}
+					}
+					RAJ = {
+						subtract_from_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+						}
+					}
+				}
+				else = {
+					RAJ = { add_political_power = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_india_regional_recruitment
+		icon = GFX_goal_focus_fund_partisans
+		x = 15
+		y = 2
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = ENG_focus_peel_commission }
+		mutually_exclusive = { focus = ENG_focus_india_european_recruitment }
+		
+		completion_reward = {
+			RAJ = { add_ideas = ENG_idea_RAJ_army_indian }
+			add_political_power = 50
+			custom_effect_tooltip = eoanb_tt_focus_ENG_india_regional_recruitment
+			hidden_effect = {
+				if = {
+					limit = {
+						RAJ = {
+							check_variable = {
+								var = ENG_RAJ_revolt_risk
+								value = 1
+								compare = greater_than_or_equals
+							}
+						}
+					}
+					RAJ = {
+						subtract_from_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+						}
+					}
+				}
+				else = {
+					RAJ = { add_political_power = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_mixed_regiments
+		icon = GFX_focus_generic_military_academy
+		x = 15
+		y = 3
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_india_regional_recruitment }
+		
+		completion_reward = {
+			RAJ = {
+				swap_ideas = {
+					remove_idea = ENG_idea_RAJ_army_indian
+					add_idea = ENG_idea_RAJ_army_indian_2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_india_nation_law
+		icon = GFX_goal_focus_enact_law
+		x = 15
+		y = 4
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_mixed_regiments }
+		
+		completion_reward = {
+			RAJ = {
+				swap_ideas = {
+					remove_idea = ENG_idea_RAJ_army_indian_2
+					add_idea = ENG_idea_RAJ_army_indian_3
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_india_nation_law
+			hidden_effect = {
+				if = {
+					limit = {
+						RAJ = {
+							check_variable = {
+								var = ENG_RAJ_revolt_risk
+								value = 1
+								compare = greater_than_or_equals
+							}
+						}
+					}
+					RAJ = {
+						subtract_from_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+						}
+					}
+				}
+				else = {
+					RAJ = { add_political_power = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_respect_indian_culture
+		icon = GFX_goal_focus_form_british_raj
+		x = 15
+		y = 5
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_india_nation_law }
+		
+		completion_reward = {
+			RAJ = {
+				swap_ideas = {
+					remove_idea = ENG_idea_RAJ_army_indian_3
+					add_idea = ENG_idea_RAJ_army_indian_4
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_respect_indian_culture
+			hidden_effect = {
+				if = {
+					limit = {
+						RAJ = {
+							check_variable = {
+								var = ENG_RAJ_revolt_risk
+								value = 1
+								compare = greater_than_or_equals
+							}
+						}
+					}
+					RAJ = {
+						subtract_from_variable = {
+							var = ENG_RAJ_revolt_risk
+							value = 1
+						}
+					}
+				}
+				else = {
+					RAJ = { add_political_power = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_india_european_recruitment
+		icon = GFX_goal_focus_colonial_empire_uk
+		x = 17
+		y = 2
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_peel_commission }
+		mutually_exclusive = { focus = ENG_focus_india_regional_recruitment }
+		
+		completion_reward = {
+			RAJ = { add_ideas = ENG_idea_RAJ_army_european }
+			add_political_power = -50
+			custom_effect_tooltip = eoanb_tt_focus_ENG_india_european_recruitment
+			hidden_effect = {
+				RAJ = {
+					add_to_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 2
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_homogenous_regiments
+		icon = GFX_focus_generic_little_entente
+		x = 17
+		y = 3
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_india_european_recruitment }
+		
+		completion_reward = {
+			RAJ = {
+				swap_ideas = {
+					remove_idea = ENG_idea_RAJ_army_european
+					add_idea = ENG_idea_RAJ_army_european_2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_india_european_law
+		icon = GFX_focus_generic_military_mission
+		x = 17
+		y = 4
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_homogenous_regiments }
+		
+		completion_reward = {
+			RAJ = {
+				swap_ideas = {
+					remove_idea = ENG_idea_RAJ_army_european_2
+					add_idea = ENG_idea_RAJ_army_european_3
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_india_european_law
+			hidden_effect = {
+				RAJ = {
+					add_to_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_european_army_traditions_india
+		icon = GFX_goal_focus_valient_kingdom
+		x = 17
+		y = 5
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_india_european_law }
+		
+		completion_reward = {
+			RAJ = {
+				swap_ideas = {
+					remove_idea = ENG_idea_RAJ_army_european_3
+					add_idea = ENG_idea_RAJ_army_european_4
+				}
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_european_army_traditions_india
+			hidden_effect = {
+				RAJ = {
+					add_to_variable = {
+						var = ENG_RAJ_revolt_risk
+						value = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_oriental_uniforms_india
+		icon = GFX_focus_secret_rearmament
+		x = 16
+		y = 6
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_european_army_traditions_india focus = ENG_focus_respect_indian_culture }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_RAJ_oriental_uniforms
+			hidden_effect = {
+				RAJ = {
+					set_technology = {
+						tech_infantry_raj_oriental_uniforms = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_volunteer_movement
+		icon = GFX_goal_focus_popularize
+		x = 23
+		y = 1
+		cost = 100
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_british_army }
+		available = {
+			OR = {
+				FRA = { has_country_flag = fra_orsini_failure }
+				FRA = { has_country_flag = fra_orsini_success }
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_volunteer_movement
+			add_ideas = ENG_idea_volunteer_movement
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_the_vrc
+		icon = GFX_focus_generic_support_the_left_right
+		x = 23
+		y = 2
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_volunteer_movement }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_the_vrc
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_volunteer_regulations
+		icon = GFX_goal_focus_military_reforms
+		x = 23
+		y = 3
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_the_vrc }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_consolidate_vrc
+		icon = GFX_goal_focus_support_conservatism
+		x = 23
+		y = 4
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_volunteer_regulations }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_idea_volunteer_movement
+				add_idea = ENG_idea_volunteer_movement_2
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_volunteer_cadet_corps
+		icon = GFX_goal_generic_small_arms
+		x = 22
+		y = 5
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_consolidate_vrc }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_idea_volunteer_movement_2
+				add_idea = ENG_idea_volunteer_movement_3
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_vrc_reforms
+		icon = GFX_focus_generic_treaty
+		x = 24
+		y = 5
+		cost = 30
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_consolidate_vrc }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_vrc_reforms
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_military_reforms
+		icon = GFX_focus_generic_military_mission
+		x = 25
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_british_army }
+		
+		completion_reward = {
+			add_political_power = 20
+			army_experience = 20
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_new_doctrines_adaptation
+		icon = GFX_goal_generic_army_doctrines
+		x = 25
+		y = 2
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_military_reforms }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_reform_regimental_structure
+		icon = GFX_focus_generic_little_entente
+		x = 25
+		y = 3
+		cost = 100
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_new_doctrines_adaptation }
+		
+		completion_reward = {
+			add_manpower = 40000
+			add_political_power = 5
+			army_experience = 5
+			add_stability = 0.01
+			add_war_support = 0.01
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_support_battalions
+		icon = GFX_goal_generic_construction2
+		x = 25
+		y = 4
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_reform_regimental_structure }
+		
+		completion_reward = {
+			add_tech_bonus = { ahead_reduction = 1 uses = 1 category = support_tech }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_new_modern_weapons
+		icon = GFX_goal_generic_small_arms
+		x = 27
+		y = 2
+		cost = 80
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_military_reforms }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.3 uses = 2 category = infantry_weapons }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_the_gatling_gun
+		icon = GFX_goal_generic_army_artillery
+		x = 27
+		y = 3
+		cost = 60
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_new_modern_weapons }
+		
+		completion_reward = {
+			add_tech_bonus = { ahead_reduction = 0.5 uses = 1 category = gatling_gun_tech }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_artillery_support
+		icon = GFX_goal_generic_army_artillery2
+		x = 27
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_the_gatling_gun }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_new_army_plan
+		icon = GFX_goal_generic_military_sphere
+		x = 30
+		y = 1
+		cost = 50
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_british_army }
+		
+		completion_reward = {
+			add_political_power = 20
+			army_experience = 5
+			add_stability = 0.02
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_wolseley_plan
+		icon = GFX_focus_secret_rearmament
+		x = 29
+		y = 2
+		cost = 100
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_new_army_plan }
+		mutually_exclusive = { focus = ENG_focus_jones_plan }
+		available = {
+			has_idea = ENG_hc_garnet_wolseley
+		}
+		bypass = {
+			NOT = { has_idea = law_victorian_army }
+		}
+		
+		completion_reward = {
+			add_ideas = ENG_idea_wolseley_plan
+			custom_effect_tooltip = eoanb_tt_focus_ENG_mil_plan_will_go
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_command_structure_organization
+		icon = GFX_goal_generic_position_armies
+		x = 29
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_wolseley_plan }
+		bypass = {
+			NOT = { has_idea = law_victorian_army }
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_idea_wolseley_plan
+				add_idea = ENG_idea_wolseley_plan_2
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_mil_plan_will_go
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_jones_plan
+		icon = GFX_goal_demand_sudetenland
+		x = 31
+		y = 2
+		cost = 100
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = ENG_focus_new_army_plan }
+		mutually_exclusive = { focus = ENG_focus_wolseley_plan }
+		available = {
+			has_idea = ENG_hc_thomas_jones
+		}
+		bypass = {
+			NOT = { has_idea = law_victorian_army }
+		}
+		
+		completion_reward = {
+			add_ideas = ENG_idea_jones_plan
+			custom_effect_tooltip = eoanb_tt_focus_ENG_mil_plan_will_go
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_army_of_citizens
+		icon = GFX_goal_focus_popularize
+		x = 31
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_jones_plan }
+		bypass = {
+			NOT = { has_idea = law_victorian_army }
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_idea_jones_plan
+				add_idea = ENG_idea_jones_plan_2
+			}
+			custom_effect_tooltip = eoanb_tt_focus_ENG_mil_plan_will_go
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_regiment_training_exercises
+		icon = GFX_goal_focus_napoleonic_tactics
+		x = 30
+		y = 4
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_army_of_citizens focus = ENG_focus_command_structure_organization }
+		
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 0.02
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_initial_military_reforms
+		icon = GFX_goal_focus_military_reforms
+		x = 35
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_british_army }
+		available = {
+			OR = {
+				date > 1870.1.1
+				PRS = { has_country_flag = eoanb_flag_won_7_weeks_war }
+				AUS = { has_country_flag = AUS_flag_won_sww }
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 5
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_abolition_of_flogging
+		icon = GFX_goal_generic_military_deal
+		x = 33
+		y = 2
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_initial_military_reforms }
+		
+		completion_reward = {
+			add_political_power = -25
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_new_military_colonial_policy
+		icon = GFX_goal_generic_territory_or_war
+		x = 35
+		y = 2
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_initial_military_reforms }
+		
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_focus_ENG_new_mil_colony
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_abolition_of_bounties
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 37
+		y = 2
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_initial_military_reforms }
+		
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.02
+			add_war_support = 0.02
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_cardwells_reforms
+		icon = GFX_goal_focus_military_reforms
+		x = 35
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_abolition_of_bounties focus = ENG_focus_new_military_colonial_policy focus = ENG_focus_abolition_of_flogging }
+		available = {
+			has_idea = ENG_political_advisor_edward_cardwell
+			OR = {
+				date > 1875.1.1
+				PRS = { has_country_flag = eoanb_flag_won_fra_prs_war }
+				FRA = { has_country_flag = eoanb_flag_frace_won_fra_prs }
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = ENG_idea_cardwell_reforms
+			add_ideas = ENG_idea_army_reforms
+			custom_effect_tooltip = eoanb_tt_focus_ENG_cardwell_reforms
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_war_office_act
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 33
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_cardwells_reforms }
+		
+		completion_reward = {
+			add_war_support = 0.05
+			swap_ideas = {
+				remove_idea = ENG_idea_army_reforms
+				add_idea = ENG_idea_army_reforms_2
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_centralized_sections
+		icon = GFX_goal_generic_alliance
+		x = 33
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_war_office_act }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_idea_army_reforms_2
+				add_idea = ENG_idea_army_reforms_3
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_create_new_military_offices
+		icon = GFX_goal_generic_cavalry
+		x = 33
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_centralized_sections }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_idea_army_reforms_3
+				add_idea = ENG_idea_army_reforms_4
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_army_enlistment_act
+		icon = GFX_focus_generic_support_the_left_right
+		x = 35
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_cardwells_reforms }
+		
+		completion_reward = {
+			add_political_power = -20
+			add_manpower = 40000
+			add_war_support = 0.02
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_overseas_service
+		icon = GFX_focus_generic_navy_battleship2
+		x = 35
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_army_enlistment_act }
+		available = {
+			has_completed_focus = ENG_focus_create_new_military_offices
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_idea_army_reforms_4
+				add_idea = ENG_idea_army_reforms_5
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_new_service_weapons
+		icon = GFX_goal_generic_build_tank
+		x = 35
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_overseas_service }
+		
+		completion_reward = {
+			add_tech_bonus = { ahead_reduction = 0.5 bonus = 0.25 uses = 1 category = infantry_weapons }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_minor_structural_reforms
+		icon = GFX_focus_generic_treaty
+		x = 37
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_cardwells_reforms }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.1 uses = 1 category = infantry_weapons }
+			add_tech_bonus = { bonus = 0.1 uses = 1 category = support_tech }
+			add_tech_bonus = { bonus = 0.1 uses = 1 category = land_doctrine }
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_end_purchase_of_ranks
+		icon = GFX_focus_rom_handle_king
+		x = 37
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_minor_structural_reforms }
+		
+		completion_reward = {
+			add_political_power = 80
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_regimental_organization
+		icon = GFX_focus_generic_self_management
+		x = 37
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_end_purchase_of_ranks }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.3 uses = 1 category = land_doctrine }
 		}
 	}
 	

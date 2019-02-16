@@ -1,5 +1,5 @@
 #Generic FT, Victorian Era
-#Takes around 7 1/2 years to complete, making most countries complete it in late 1864
+#Takes around ### years to complete, making most countries complete it in ###
 focus_tree = {
 	id = generic
 	#continuous_focus_position = {x = 600 y = 1000 }
@@ -509,6 +509,39 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = generic_focus_locate_iron_deposits
+		icon = GFX_focus_generic_steel
+		x = 5
+		y = 6
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_coal_mine }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_resource = {
+					type = iron
+					amount = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = generic_focus_logging_camp
 		icon = GFX_goal_generic_construct_civilian
 		x = 7
@@ -556,6 +589,65 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_manage_national_forests
+		icon = GFX_focus_generic_treaty
+		x = 7
+		y = 6
+		cost = 90
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_logging_camp }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_resource = {
+					type = wood
+					amount = 4
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_focus_nationalize_resources
+		icon = GFX_goal_generic_construction2
+		x = 6
+		y = 7
+		cost = 100
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_manage_national_forests }
+		prerequisite = { focus = generic_focus_locate_iron_deposits }
+		bypass = {
+			any_owned_state = {
+				AND = {
+					has_state_category = enclave
+					is_capital = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_timed_idea = { idea = eoanb_idea_generic_focus_resources_nationalized days = 3650 }
 		}
 	}
 	
@@ -675,6 +767,23 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.3 uses = 1 category = artillery }
 			add_tech_bonus = { bonus = 0.3 uses = 1 category = support_tech }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_cavalry_tech
+		icon = GFX_goal_generic_cavalry
+		x = 9
+		y = 6
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_support_corps }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = tech_category_cavalry }
 		}
 	}
 	
@@ -835,6 +944,45 @@ focus_tree = {
 		
 		completion_reward = {
 			air_experience = 25
+		}
+	}
+	
+	focus = {
+		id = generic_focus_aviation_projects
+		icon = GFX_goal_generic_construction
+		x = 11
+		y = 5
+		cost = 125
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_victorian_air_corps }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = aviation_tech }
+		}
+	}
+	
+	focus = {
+		id = generic_focus_victorian_industrial_society
+		icon = GFX_focus_focus_generic_industry_1
+		x = 11
+		y = 9
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = generic_focus_limited_constitution }
+		prerequisite = { focus = generic_focus_nationalize_resources }
+		available = {
+			has_tech = tech_humanities_industrial_society
+		}
+		
+		completion_reward = {
+			add_stability = 0.02
+			add_tech_bonus = { bonus = 0.25 uses = 1 category = humanities_tech }
 		}
 	}
 	

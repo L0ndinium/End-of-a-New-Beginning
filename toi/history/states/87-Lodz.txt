@@ -7,13 +7,9 @@ state={
 		owner = RUS
 		add_core_of = RUS
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
-
+			infrastructure = 3
 		}
-		victory_points = {
-			9508 3 
-		}
+		
 		victory_points = {
 			9439 3 
 		}
@@ -24,9 +20,10 @@ state={
 	}
 
 	provinces={
-		493 584 9439 9508 9546 11428 11515 
+		493 584 9439 9546 11428 11515 
 	}
-	manpower=1832000
+	
+	manpower=1632073
 	buildings_max_level_factor=1.000
 	state_category=town
 }

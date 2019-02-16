@@ -37,6 +37,8 @@
     state_religion
 	  religion_protestant
          #NATIONAL SPIRITS
+		 trv_idea_occupied_swazi_territory
+		 trv_idea_disjointed_government
 	
   }
 

@@ -1,14 +1,11 @@
 
 state={
 	id=35
-	name="STATE_35" # Brabant
-	manpower = 954360
-	
-	state_category = city
-
+	name="STATE_35"
 	resources={
-		wood=5
-		iron=5
+		wood=5.000
+		iron=11.000
+		cotton=30.000
 	}
 
 	history={
@@ -16,14 +13,24 @@ state={
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 2
+			fabric_weavery=4
+			cotton_farm=1
+			9431 = {
+				naval_base = 4
+			}
 		}
 		victory_points = {
-			6496 5
+			6496 15 
 		}
-
+		victory_points = {
+			9431 3
+		}
 	}
 
 	provinces={
-		3262 6496 6500 11456 11562 
+		3262 6496 6500 9431 
 	}
+	manpower=553000
+	buildings_max_level_factor=1.000
+	state_category=city
 }

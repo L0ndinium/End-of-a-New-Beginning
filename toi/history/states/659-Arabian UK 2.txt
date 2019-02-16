@@ -18,14 +18,11 @@ state={
 			5074 = {
 				naval_base = 2
 			}
-			8000 = {
-				naval_base = 1
-			}
 		}
 		add_core_of = ADN
 	}
 
 	provinces={
-		5074 8000 13773
+		5074 13773
 	}
 }

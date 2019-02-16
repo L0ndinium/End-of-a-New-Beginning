@@ -90,6 +90,12 @@ PRS_trigger_formed_germany = {
 	}
 }
 
+#Basically does the same thing as "TAG = GER", but has to be used since Germany is a cosmetic tag
+trigger_is_germany = {
+	TAG = PRS
+	PRS_trigger_formed_germany = yes
+}
+
 nation_owns_chinese_trade_port = {
 	OR = {
 		owns_state = 326
@@ -132,6 +138,30 @@ PRS_is_in_1873_crisis = {
 	PRS_trigger_formed_germany = yes
 	OR = {
 		has_idea = GER_idea_1873_crash_gold
+	}
+}
+
+ENG_being_invaded = {
+	TAG = ENG
+	any_country = {
+		has_war_with = ENG
+		OR = {
+			controls_state = 123
+			controls_state = 126
+			controls_state = 127
+			controls_state = 338
+			controls_state = 122
+			controls_state = 125
+			controls_state = 128
+			controls_state = 129
+			controls_state = 130
+			controls_state = 131
+			controls_state = 132
+			controls_state = 121
+			controls_state = 133
+			controls_state = 120
+			controls_state = 136
+		}
 	}
 }
 

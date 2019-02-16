@@ -1,0 +1,95 @@
+ideas = { 
+        
+        country = { 
+            AST_gold_rush = { 
+                allowed = { 
+                    always = no
+                }
+
+                removal_cost = -1
+
+                picture = generic_production_bonus
+
+                modifier = {
+                stability_factor = -0.05
+                MONTHLY_POPULATION = 0.2
+                local_resources_factor = 0.15
+                }
+            }
+            AST_minor_gold_rush = {
+                allowed = {
+                    always = no
+                }
+
+                removal_cost = -1
+
+                picture = generic_production_bonus
+
+                modifier = {
+                stability_factor = -0.02
+                MONTHLY_POPULATION = 0.1
+                local_resources_factor = 0.05
+                }
+            }
+            AST_last_prisoners_britain = {
+                allowed = {
+                    always = no
+                }
+
+                removal_cost = -1
+
+                picture = generic_manpower_bonus
+
+                modifier = {
+                stability_factor = -0.05
+                MONTHLY_POPULATION = 0.02
+                consumer_goods_factor = -0.02
+                }
+            }
+            AST_eureka = {
+                allowed = {
+                    always = no
+                }
+
+                removal_cost = -1
+
+                picture = generic_war_preparation
+
+                modifier = {
+                local_resources_factor = 0.05
+                political_power_gain = -0.1
+                }
+            }
+            AST_unexplored_lands = {
+               allowed = {
+                    always = no
+                }
+                
+                removal_cost = -1
+
+                picture = generic_manpower_bonus
+
+                modifier = {
+                local_resources_factor = -0.10
+                army_speed_factor = -0.2
+                production_speed_buildings_factor = -0.15
+                }
+            }
+            AST_aboriginal_tribes = {
+                allowed = { 
+                    always = no
+                }
+
+               removal_cost = -1
+               
+               picture = generic_oppression
+
+               modifier = {
+               stability_factor = -0.05
+               local_resources_factor = -0.10
+               production_speed_buildings_factor = -0.1
+               MONTHLY_POPULATION = -0.05
+               }
+            }
+        }
+    }

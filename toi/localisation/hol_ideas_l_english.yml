@@ -1,0 +1,30 @@
+﻿l_english:
+ HOL_idea_loss_belgium:0 "Loss of Belgium"
+ HOL_idea_treaty_of_london:0 "Treaty of London"
+ HOL_idea_tiendaagse_veldtocht:0 "The half success of the Tiendaagse Veldtocht"
+ HOL_idea_dutch_trading:0 "Dutch Trading Spirit"
+ HOL_idea_rise_steamtrain:0 "Rise of the Steam Train"
+ HOL_idea_rise_steamtrain_1:0 "Rise of the Steam Train"
+ HOL_idea_will_industrialize:0 "Lack of Industrialisation"
+ HOL_idea_will_industrialize_1:0 "Will to Industrialize"
+ HOL_idea_will_industrialize_2:0 "Will to Industrialize"
+ tt_idea_HOL_war_minister_1857:0 "Must've §Ychosen§! §Ga new budget for the Military§! and to §Ykeep or replace§! Minister Forstner"
+
+ ####OPINION MODIFIERS###
+ HOL_dutch_trading_spirit:0 "Dutch Trading Spirit"
+ HOL_political_tension:0 "Political Tension"
+
+ ####POLITICAL AND OTHER ADVISORS####
+ HOL_abraham_jacobus_frederik_egter_van_wissekerke:0 "A.J.F.E. van Wissekerke"
+ HOL_H_Forstner:0 "H.F.Ch. baron Forstner van Dambenoy"
+ HOL_C_Meurs:0 "Cornelis Theodorus van Meurs"
+ eoanb_HOL_Thorbecke:0 "Johan Rudolph Thorbecke"
+ HOL_A_Vrolik:0 "Agnites Vrolik"
+ HOL_advisor_pieter_philip_van_bosse:0 "Pieter Philip van Bosse"
+ HOL_advisor_johannes_willem_bergansius_advisor:0 "Johannes Willem Bergansius"
+
+ ####COMPANIES ####
+ eoanb_HOL_naval_Fijenoord:0 "Fijenoord"
+ eoanb_HOL_Philips:0 "Philips & Co"
+ eoanb_HOL_Shell:0 "N.V. Koninklijke Nederlandse Petroleum Maatschappij"
+ eoanb_HOL_staats_spoorwegen:0 "Maatschappij tot Exploitatie van Staatsspoorwegen"

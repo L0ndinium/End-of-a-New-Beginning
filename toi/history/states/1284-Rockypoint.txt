@@ -1,0 +1,16 @@
+state={
+	id=1284
+	name="STATE_1284"
+	provinces={
+		4610 
+	}
+	state_category = pastoral
+	history={
+		controller = USA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=920
+	buildings_max_level_factor=1.000
+}

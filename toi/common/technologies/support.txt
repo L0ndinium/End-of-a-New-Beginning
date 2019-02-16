@@ -11,6 +11,8 @@ technologies = {
 	@1878 = 16
 	@1880 = 18
 	@1882 = 20
+	@1885 = 22
+	@1912 = 40
 
 
 	tech_support = {
@@ -34,6 +36,10 @@ technologies = {
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_support_2
 			research_cost_coeff = 1
 		}
 		research_cost = 1.0
@@ -66,6 +72,97 @@ technologies = {
 			}
 		}
 	}
+	
+	tech_support_2 = {
+
+		enable_equipments = {
+			support_equipment_2
+		}
+		
+		dependencies = {
+			dynamite = 1
+			telephone = 1
+		}
+
+		path = {
+			leads_to_tech = tech_support_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.2
+		start_year = 1885
+		folder = {
+			name = support_folder
+			position = { x = 0 y = @1885 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+
+			modifier = {
+				factor = 2
+				date > "1888.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1890.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1893.1.1"
+			}
+		}
+	}
+	
+	tech_support_3 = {
+
+		enable_equipments = {
+			support_equipment_3
+		}
+		
+		dependencies = {
+			photographic_film = 1
+			cinematograph = 1
+			wireless_telegraphy = 1
+			tech_infantry_early_grenades = 1
+			tech_infantry_protective_gear = 1
+		}
+
+		research_cost = 1.3
+		start_year = 1912
+		folder = {
+			name = support_folder
+			position = { x = 0 y = @1912 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+
+			modifier = {
+				factor = 2
+				date > "1915.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1917.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1920.1.1"
+			}
+		}
+	}
 
 
 	tech_engineers = {
@@ -83,7 +180,7 @@ technologies = {
 		start_year = 1860
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1860 }
+			position = { x = 2 y = @1860 }
 		}
 
 		categories = {
@@ -137,7 +234,7 @@ technologies = {
 		start_year = 1868
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1868 }
+			position = { x = 2 y = @1868 }
 		}
 
 		categories = {
@@ -183,7 +280,7 @@ technologies = {
 		start_year = 1875
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1875 }
+			position = { x = 2 y = @1875 }
 		}
 
 		categories = {
@@ -225,7 +322,7 @@ technologies = {
 		start_year = 1882
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1882 }
+			position = { x = 2 y = @1882 }
 		}
 
 		categories = {
@@ -268,7 +365,7 @@ technologies = {
 		start_year = 1860
 		folder = {
 			name = support_folder
-			position = { x = 2 y = @1860 }
+			position = { x = 4 y = @1860 }
 		}
 
 		categories = {
@@ -316,7 +413,7 @@ technologies = {
 		start_year = 1868
 		folder = {
 			name = support_folder
-			position = { x = 2 y = @1868 }
+			position = { x = 4 y = @1868 }
 		}
 
 		categories = {
@@ -358,7 +455,7 @@ technologies = {
 		start_year = 1875
 		folder = {
 			name = support_folder
-			position = { x = 2 y = @1875 }
+			position = { x = 4 y = @1875 }
 		}
 
 		categories = {
@@ -395,7 +492,7 @@ technologies = {
 		start_year = 1882
 		folder = {
 			name = support_folder
-			position = { x = 2 y = @1882 }
+			position = { x = 4 y = @1882 }
 		}
 
 		categories = {
@@ -438,7 +535,7 @@ technologies = {
 		start_year = 1860
 		folder = {
 			name = support_folder
-			position = { x = 4 y = @1860 }
+			position = { x = 6 y = @1860 }
 		}
 
 		categories = {
@@ -497,7 +594,7 @@ technologies = {
 		start_year = 1868
 		folder = {
 			name = support_folder
-			position = { x = 4 y = @1868 }
+			position = { x = 6 y = @1868 }
 		}
 
 		categories = {
@@ -529,7 +626,7 @@ technologies = {
 		start_year = 1875
 		folder = {
 			name = support_folder
-			position = { x = 4 y = @1875 }
+			position = { x = 6 y = @1875 }
 		}
 
 		categories = {
@@ -556,7 +653,7 @@ technologies = {
 		start_year = 1882
 		folder = {
 			name = support_folder
-			position = { x = 4 y = @1882 }
+			position = { x = 6 y = @1882 }
 		}
 
 		categories = {
@@ -589,7 +686,7 @@ technologies = {
 		start_year = 1860
 		folder = {
 			name = support_folder
-			position = { x = 6 y = @1860 }
+			position = { x = 8 y = @1860 }
 		}
 
 		categories = {
@@ -633,7 +730,7 @@ technologies = {
 		start_year = 1868
 		folder = {
 			name = support_folder
-			position = { x = 6 y = @1868 }
+			position = { x = 8 y = @1868 }
 		}
 
 		categories = {
@@ -675,7 +772,7 @@ technologies = {
 		start_year = 1875
 		folder = {
 			name = support_folder
-			position = { x = 6 y = @1875 }
+			position = { x = 8 y = @1875 }
 		}
 
 		categories = {
@@ -712,7 +809,7 @@ technologies = {
 		start_year = 1882
 		folder = {
 			name = support_folder
-			position = { x = 6 y = @1882 }
+			position = { x = 8 y = @1882 }
 		}
 
 		categories = {

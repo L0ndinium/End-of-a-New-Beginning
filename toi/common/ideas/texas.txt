@@ -1,0 +1,47 @@
+ideas = {
+	country = {
+		houston_revolt = {
+			
+			allowed = {
+				TAG = TEX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		unprepared_defense_TX = {
+			
+			allowed = {
+				TAG = TEX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				army_core_defence_factor = -0.1
+				dig_in_speed_factor = -0.25
+				army_org_Factor = -0.1
+				army_morale_factor = -0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+﻿division_template = {
+  name = "Arabian Infantry"
+
+  regiments = {
+    light_infantry = { x = 0 y = 0}
+	light_infantry = { x = 1 y = 0}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "1st Zanzibar Infantry"
+			location = 2196
+			division_template = "Arabian Infantry"
+			start_experience_factor = 0.0
+		}
+		navy = {
+		name = "Omani Zanzibar Fleet"
+		base = 13439
+		location = 13439  # Wilhemshaven
+		ship = { name = "Mombasa's Glory" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+		ship = { name = "Omani Frigate IV" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+		ship = { name = "Omani Frigate V" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OMA } } } 
+	}
+}

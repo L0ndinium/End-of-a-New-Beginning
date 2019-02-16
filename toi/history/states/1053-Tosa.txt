@@ -2,11 +2,11 @@ state=
 {
 	id=1053
 	name="STATE_1053" # Shikoku
-	manpower = 628921
+	manpower = 510792
 	state_category = large_town
 	history=
 	{
-		owner = JAP
+		owner = TOS
 		add_core_of = JAP
 		add_core_of = TOS
 		buildings = {

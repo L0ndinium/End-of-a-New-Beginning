@@ -15,12 +15,13 @@ state={
 		victory_points = {
 			6923 5
 		}
+		
 		victory_points = {
 			9902 3
 		}
 		buildings = {
 			infrastructure = 4
-			9902 = {
+				9902 = {
 				naval_base = 1
 
 			}
@@ -30,6 +31,6 @@ state={
 	}
 
 	provinces={
-		  3908 6982 3937 6923 6952 6814 6967 9888 9902 9919
+		  3908 6982 3937 6923 6952 6814 6967 9888 9902 9919 13817 13818
 	}
 }

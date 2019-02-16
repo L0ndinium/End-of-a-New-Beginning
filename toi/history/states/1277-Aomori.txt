@@ -1,0 +1,35 @@
+
+state={
+	id=1277
+	name="STATE_1277" # Aomori
+	manpower = 3275000
+	state_category = town
+	resources={
+		iron=12
+		wood=4
+	}
+
+	history={
+		owner = JAP
+		add_core_of = JAP
+		add_core_of = NOA
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 1
+			infrastructure = 2
+			
+			9859 = {
+				naval_base = 3
+			}
+		}
+		
+		victory_points = {
+			6994 5
+		}
+
+	}
+
+	provinces={
+	    6873 6994 9859 
+	}
+}

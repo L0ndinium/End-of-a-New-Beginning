@@ -93,6 +93,7 @@
   set_technology = {
 	  tribaltech = 1
 	start_build_tech = 1
+	infantry_weapons = 1
   }
 
   # POLITICAL LEADERS

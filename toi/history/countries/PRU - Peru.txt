@@ -9,7 +9,7 @@
   
       declare_war_on = {
     target = PRR
-    type = civil_war
+    type = annex_everything
   }
 
   add_ideas = { 
@@ -99,6 +99,14 @@ create_country_leader = {
     picture = "Portrait_PRU_Ramon_Castilla.dds"
     expire = 1900.1.1
     ideology = conserv_liberal
+}
+
+create_country_leader = {
+    name = "Juan Pezet"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_PRU_Juan_Pezet.dds"
+    expire = 1900.1.1
+    ideology = conserv
 }
 
 create_field_marshal {

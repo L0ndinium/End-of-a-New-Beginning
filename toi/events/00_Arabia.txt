@@ -1,0 +1,279 @@
+﻿add_namespace = arab_events
+
+# Oman - Question of the brother
+country_event = {
+	id = arab_events.1
+	title = arab_events.1.t
+	desc = arab_events.1.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##Demand Reduced Autonomy
+		name = arab_events.1.a
+		ZAN = {country_event = {id = arab_events.2}}
+		
+	}
+	option = { ##Offer an Alliance
+		name = arab_events.1.b
+		ZAN = {country_event = {id = arab_events.3}}
+	}
+	option = { ##We afford to do do nothing
+		name = arab_events.1.c
+		set_country_flag = OMA_abanoned_colonial_empire
+	}
+}
+country_event = {##ZAN - Oman demands we fall in line
+	id = arab_events.2
+	title = arab_events.2.t
+	desc = arab_events.2.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##Accept
+		name = arab_events.2.a
+		ai_chance = { 
+            factor = 40
+        }
+		set_country_flag = accepted_OMA_lordship
+		OMA = {
+			complete_national_focus = oma_vic_question_of_the_brother
+			country_event = {id = arab_events.4}
+		}
+	}
+	option = { ##Declare Independance
+		name = arab_events.2.b
+		ai_chance = { 
+            factor = 60 
+            modifier = {
+                factor = 90
+                is_historical_focus_on = yes
+            }
+        }
+		OMA = {
+			set_autonomy = {
+				target = ZAN
+				autonomy_state = autonomy_free
+			}
+			release_puppet = ZAN
+			country_event = {id = arab_events.5}
+		}
+	}
+}
+country_event = {##ZAN - Oman offers an Alliance for our freedom
+	id = arab_events.3
+	title = arab_events.3.t
+	desc = arab_events.3.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##Accept
+		name = arab_events.3.a
+		ai_chance = { 
+            factor = 40
+        }
+		set_country_flag = accepted_OMA_alliance
+		give_guarantee = FROM
+		FROM = {
+			give_guarantee = ROOT
+			release = ROOT
+			country_event = {id = arab_events.6}
+		}
+	}
+	option = { ##Decline
+		name = arab_events.3.b
+		ai_chance = { 
+            factor = 60
+        }
+	}
+}
+country_event = {##OMA - ZAN falls in line
+	id = arab_events.4
+	title = arab_events.4.t
+	desc = arab_events.4.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##ok
+		name = arab_events.4.a
+	}
+}
+country_event = {##OMA - ZAN Declares Independance
+	id = arab_events.5
+	title = arab_events.5.t
+	desc = arab_events.5.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##Bring them to Heel
+		name = arab_events.5.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+	option = { ##We don't have the power
+		name = arab_events.5.b
+		add_stability = -0.05
+	}
+}
+country_event = {##OMA - ZAN accepts alliance
+	id = arab_events.6
+	title = arab_events.6.t
+	desc = arab_events.6.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##ok
+		name = arab_events.6.a
+	}
+}
+country_event = {##ENG - OMA Declares Colonial Attention
+	id = arab_events.7
+	title = arab_events.7.t
+	desc = arab_events.7.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##send warning
+		name = arab_events.7.a
+		trigger={
+			has_completed_focus = ENG_focus_restore_peace_india
+		}
+		OMA={
+			set_country_flag = OMA_warned_over_TCS
+			country_event = {id = arab_events.8}
+		}
+	}
+	option = { ##India Currently Conserns us more
+		name = arab_events.7.b
+		trigger={
+			NOT = {has_completed_focus = ENG_focus_restore_peace_india}
+		}
+	}
+}
+country_event = {##OMA - ENG warns us to stay out of TCS
+	id = arab_events.8
+	title = arab_events.8.t
+	desc = arab_events.8.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##ok
+		name = arab_events.8.a
+	}
+}
+
+country_event = {##OMA - policy towards Arabian Territory
+	id = arab_events.9
+	title = arab_events.9.t
+	desc = arab_events.9.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##Matain Claims
+		name = arab_events.9.a
+		add_state_claim = 1192
+		add_state_claim = 1193
+		add_state_claim = 1196
+		add_state_claim = 658
+	}
+	option = { ##Demand return of TCS territories
+		name = arab_events.9.b
+		trigger = {
+			NOT = {has_country_flag = OMA_warned_over_TCS}
+		}
+		add_state_core = 658
+		add_state_claim = 1192
+		add_state_claim = 1193
+		ENG={country_event = {id = arab_events.10} }
+	}
+	option = { ##the TCS is lost to us
+		name = arab_events.9.c
+	}
+}
+country_event = {##ENG - OMA demands we hand over TCS
+	id = arab_events.10
+	title = arab_events.10.t
+	desc = arab_events.10.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##No
+		name = arab_events.8.a
+		ai_chance = { 
+            factor = 90
+        }
+	}
+	option = { ##Yes
+		name = arab_events.8.b
+		ai_chance = { 
+            factor = 10
+        }
+		FROM={
+			set_autonomy = {
+				target = TCS
+				autonomy_state = autonomy_colony
+			}
+			TCS={
+				set_political_party = {
+					ideology = autocracy
+					popularity = 100
+				}
+			}
+		}
+	}
+}
+country_event = {##OMA - policy towards Persian Territory
+	id = arab_events.11
+	title = arab_events.11.t
+	desc = arab_events.11.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##Matain Claims
+		name = arab_events.11.a
+		add_state_claim = 412
+	}
+	option = { ##Demand return of Laristan territories
+		name = arab_events.11.b
+		add_state_core = 412
+		PER={country_event = {id = arab_events.12} }
+	}
+	option = { ##Laristan is lost to us
+		name = arab_events.11.c
+	}
+}
+
+country_event = {##PER - OMA demands Laristan
+	id = arab_events.12
+	title = arab_events.12.t
+	desc = arab_events.12.d
+	#picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { ##no
+		name = arab_events.12.a
+		ai_chance = { 
+            factor = 100
+        }
+	}
+	option = { ##hand it over
+		name = arab_events.12.b
+		ai_chance = { 
+            factor = 0
+        }
+		FROM={transfer_state = 412}
+	}
+}

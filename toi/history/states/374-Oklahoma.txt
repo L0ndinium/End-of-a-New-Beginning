@@ -2,27 +2,27 @@
 state={
 	id=374
 	name="STATE_374"
-	manpower = 50372
-
-	state_category = city
-
 	resources={
-		aluminium=2
-		wood = 2
+		aluminium=2.000
+		wood=2.000
 	}
-
 
 	history={
 		controller = USA
 		buildings = {
 			infrastructure = 2
+
 		}
 		victory_points = {
-			1806 1
+			1806 1 
 		}
+
 	}
 
 	provinces={
-		1618 1806 2043 4919 5103 6803 7762 7904 7945 8025 9822 10702 10798 11743 11802 12624
+		1618 1806 2043 4919 5103 6803 7762 7904 7945 8025 9822 10702 10798 11743 11802 
 	}
+	manpower=50372
+	buildings_max_level_factor=1.000
+	state_category=city
 }

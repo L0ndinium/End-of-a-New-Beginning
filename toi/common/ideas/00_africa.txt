@@ -522,7 +522,7 @@ ideas = {
 		}
 		ofs_SAR_partisans = {
 			allowed = {
-				always = yes
+				TRV={exists = yes}
 			}
 
 			removal_cost = -1
@@ -660,6 +660,32 @@ ideas = {
 				trade_opinion_factor = 0.2
 			}
 		}	
+		ofs_funding_rhodesian_industrialisation = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_ofs_bluebacks #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		ofs_recovering_economy = {##attempt to justify free fac
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge #get a blueback gfx
+
+			modifier = {
+				consumer_goods_factor = 0.25
+			}
+		}
 		afr_supply_methods = {
 			allowed = {
 				always = yes
@@ -841,5 +867,111 @@ ideas = {
 				army_org_Factor = -0.5
 			}
 		}
-	}
+		trv_idea_annoyed_church={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				stability_weekly = -0.002
+			}
+		}
+		trv_idea_god_fairing_people={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+			
+			modifier = {
+				defensive_war_stability_factor = 0.20
+				offensive_war_stability_factor = 0.15
+			}
+		}
+		trv_idea_disjointed_government={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_unstable_government
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.02
+			}
+		}
+		trv_idea_occupied_swazi_territory={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				conscription_factor = -0.05
+				political_power_gain = -0.02
+			}
+		}
+		SWZ_idea_bigger_than_it_looks={
+			allowed = {
+				TRV = {exists = yes}
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				conscription_factor = 0.25
+				political_power_gain = 0.02
+			}
+		}
+		EGY_ENG_controlled_government={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				political_power_gain = -0.02
+			}
+			targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+			
+		}
+		EGY_FRA_controlled_government={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			#picture = generic_purge
+			
+			modifier = {
+				political_power_gain = -0.02
+			}
+			targeted_modifier = {
+				tag = FRA
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+			
+		}
 }

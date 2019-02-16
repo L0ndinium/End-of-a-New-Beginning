@@ -647,7 +647,7 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "support_year2"
+					name = "support_year1"
 					position = { x = 90 y = 50 }
 					textureFile = ""
 					font = "hoi_36header"
@@ -660,7 +660,7 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "support_year3"
+					name = "support_year2"
 					position = { x = 243 y = 50 }
 					textureFile = ""
 					font = "hoi_36header"
@@ -673,7 +673,7 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "support_year7"
+					name = "support_year3"
 					position = { x = 650 y = 50 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
@@ -685,7 +685,7 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "support_year10"
+					name = "support_year4"
 					position = { x = 1070 y = 50 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
@@ -697,7 +697,7 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "support_year13"
+					name = "support_year5"
 					position = { x = 1490 y = 50 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
@@ -707,7 +707,30 @@ guiTypes = {
 					format = left
 					Orientation = "UPPER_LEFT"
 				}				
-					
+				
+				instantTextBoxType = {
+					name = "support_year6"
+					position = { x = 1640 y = 50 }
+					font = "hoi_36header"
+					borderSize = { x = 0 y = 0}
+					text = "1885"
+					maxWidth = 170
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "support_year7"
+					position = { x = 2900 y = 50 }
+					font = "hoi_36header"
+					borderSize = { x = 0 y = 0}
+					text = "1912"
+					maxWidth = 170
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
 			}	
 
 			gridboxtype = {

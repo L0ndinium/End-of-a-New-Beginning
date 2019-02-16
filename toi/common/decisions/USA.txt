@@ -7,7 +7,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 383 }
-			383 = { state_population > 40000 }
+			383 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -15,8 +18,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 383 }
 			383 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -40,13 +41,19 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 376 }
-			376 = { state_population > 40000 }
+			376 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
 			TAG = USA
 			USA = { controls_state = 376 }
-			376 = { state_population > 40000 }
+			376 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		fire_only_once = yes
@@ -55,6 +62,13 @@ USA_grant_statehood = {
 
 		complete_effect = {
 		376 = { add_core_of = USA }
+		1300 = { add_core_of = USA }
+		1279 = { add_core_of = USA }
+		1295 = { add_core_of = USA }
+		1301 = { add_core_of = USA }
+		1288 = { add_core_of = USA }
+		1302 = { add_core_of = USA }
+		1278 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -69,7 +83,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 377 }
-			377 = { state_population > 40000 }
+			377 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -78,12 +95,14 @@ USA_grant_statehood = {
 			377 = { state_population > 20000 }
 		}
 
-		fire_only_once = yes
-
 		cost = 50
 
 		complete_effect = {
 		377 = { add_core_of = USA }
+		1294 = { add_core_of = USA }
+		1297 = { add_core_of = USA }
+		1286 = { add_core_of = USA }
+		1287 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -98,7 +117,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 379 }
-			379 = { state_population > 40000 }
+			379 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -106,8 +128,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 379 }
 			379 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -131,7 +151,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 380 }
-			380 = { state_population > 40000 }
+			380 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -139,8 +162,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 380 }
 			380 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -163,7 +184,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 381 }
-			381 = { state_population > 40000 }
+			381 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -171,8 +195,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 381 }
 			381 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -186,6 +208,8 @@ USA_grant_statehood = {
 			remove_claim_by = USA
 			add_core_of = USA
 		}
+		1291 = { add_core_of = USA }
+		1299 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -202,11 +226,19 @@ USA_grant_statehood = {
 			OR = {
 				AND = {
 					USA = { controls_state = 382 }
-					382 = { state_population > 40000 }
+					382 = {
+						state_population > 40000
+						NOT = { is_core_of = USA }
+					}
+
 				}
 				AND = {
 					USA = { controls_state = 1051 }
-					1051 = { state_population > 40000 }
+					1051 = {
+						state_population > 40000
+						NOT = { is_core_of = USA }
+					}
+
 				}
 			}
 		}
@@ -236,6 +268,8 @@ USA_grant_statehood = {
 			add_core_of = USA
 		}
 		1092 = { add_core_of = USA }
+		1298 = { add_core_of = USA }
+		1292 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -250,7 +284,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 384 }
-			384 = { state_population > 40000 }
+			384 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -258,8 +295,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 384 }
 			384 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -287,7 +322,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 385 }
-			385 = { state_population > 40000 }
+			385 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -295,8 +333,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 385 }
 			385 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -306,6 +342,7 @@ USA_grant_statehood = {
 				remove_claim_by = USA
 				add_core_of = USA
 			}
+			1289 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -320,7 +357,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 386 }
-			386 = { state_population > 40000 }
+			386 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -328,8 +368,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 386 }
 			386 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -353,7 +391,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 387 }
-			387 = { state_population > 40000 }
+			387 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -361,8 +402,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 387 }
 			387 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -390,7 +429,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 388 }
-			388 = { state_population > 40000 }
+			388 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -398,8 +440,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 388 }
 			388 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -409,6 +449,8 @@ USA_grant_statehood = {
 			remove_claim_by = USA
 			add_core_of = USA
 		}
+		1282 = { add_core_of = USA }
+		1292 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -423,7 +465,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 389 }
-			389 = { state_population > 40000 }
+			389 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -432,12 +477,11 @@ USA_grant_statehood = {
 			389 = { state_population > 20000 }
 		}
 
-		fire_only_once = yes
-
 		cost = 50
 
 		complete_effect = {
 		389 = { add_core_of = USA }
+		1290 = { add_core_of = USA }
 		}
 
 		ai_will_do = {
@@ -452,7 +496,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 390 }
-			390 = { state_population > 40000 }
+			390 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -460,8 +507,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 390 }
 			390 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -485,7 +530,10 @@ USA_grant_statehood = {
 
 		available = {
 			USA = { controls_state = 391 }
-			391 = { state_population > 40000 }
+			391 = {
+				state_population > 40000
+				NOT = { is_core_of = USA }
+			}
 		}
 
 		visible = {
@@ -493,8 +541,6 @@ USA_grant_statehood = {
 			USA = { controls_state = 391 }
 			391 = { state_population > 20000 }
 		}
-
-		fire_only_once = yes
 
 		cost = 50
 
@@ -507,81 +553,108 @@ USA_grant_statehood = {
 		}
 	}
 }
+USA_foreign_policy = {
+    
+    #Harris Treaty
+    eoanb_decision_USA_harris_treaty = {
+    
+        icon = generic_political_discourse
+
+        available = {
+            date > 1858.07.20
+        }
+
+        visible = {
+            TAG = USA
+        }
+
+        fire_only_once = yes
+
+        cost = 25
+
+        complete_effect = {
+             JAP = { country_event = { id = shogunate_japan.1 } }
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }    
+}
 #American Civil War
 USA_american_civil_war_descision = {
 
 	#Surrender
-	eoanb_descision_USA_ACW_surrender = {
-
-		icon = generic_political_discourse
-
-		available = {
-			has_global_flag = ACWAmerican_Civil_War
-			has_war_with = CSA
-			OR = {
-				USA = { surrender_progress > 0.2 }
-				date > 1863.7.4
-			}
-		}
-
-		visible = {
-			tag = USA
-			has_global_flag = ACWAmerican_Civil_War
-			has_war_with = CSA
-		}
-
-		fire_only_once = yes
-
-		cost = 0
-
-		complete_effect = {
-			country_event = { id = acw.16 }
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-                factor = 0
-                is_historical_focus_on = yes
-            }
-            modifier = {
-                factor = 5
-                has_war_support < 0.6
-            }
-            modifier = {
-                factor = 10
-                has_war_support < 0.4
-            }
-            modifier = {
-                factor = 20
-                has_war_support < 0.3
-            }
-            modifier = {
-                factor = 30
-                has_war_support < 0.2
-            }
-            modifier = {
-                factor = 40
-                has_war_support < 0.15
-            }
-            modifier = {
-                factor = 60
-                has_war_support < 0.1
-            }
-            modifier = {
-                factor = 80
-                has_war_support < 0.05
-            }
-            modifier = {
-                factor = 100
-                has_war_support < 0.01
-            }
-            modifier = {
-                factor = 0
-                CSA = { surrender_progress > 0.1 }
-            }
-		}
-	}
+	#eoanb_descision_USA_ACW_surrender = {
+	#
+	#	icon = generic_political_discourse
+	#
+	#	available = {
+	#		has_global_flag = ACWAmerican_Civil_War
+	#		has_war_with = CSA
+	#		OR = {
+	#			USA = { surrender_progress > 0.2 }
+	#			date > 1863.7.4
+	#		}
+	#	}
+	#
+	#	visible = {
+	#		tag = USA
+	#		has_global_flag = ACWAmerican_Civil_War
+	#		has_war_with = CSA
+	#	}
+	#
+	#	fire_only_once = yes
+	#
+	#	cost = 0
+	#
+	#	complete_effect = {
+	#		country_event = { id = acw.16 }
+	#	}
+	#
+	#	ai_will_do = {
+	#		base = 0
+	#		modifier = {
+    #           factor = 0
+    #            is_historical_focus_on = yes
+    #        }
+    #        modifier = {
+    #            factor = 5
+    #            has_war_support < 0.6
+    #        }
+    #        modifier = {
+    #            factor = 10
+    #            has_war_support < 0.4
+    #        }
+    #        modifier = {
+    #            factor = 20
+    #            has_war_support < 0.3
+    #        }
+    #        modifier = {
+    #            factor = 30
+    #            has_war_support < 0.2
+    #        }
+    #        modifier = {
+    #            factor = 40
+    #            has_war_support < 0.15
+    #        }
+    #        modifier = {
+    #            factor = 60
+    #            has_war_support < 0.1
+    #        }
+    #        modifier = {
+    #            factor = 80
+    #            has_war_support < 0.05
+    #        }
+    #        modifier = {
+    #            factor = 100
+    #            has_war_support < 0.01
+    #        }
+    #        modifier = {
+    #            factor = 0
+    #            CSA = { surrender_progress > 0.1 }
+    #        }
+	#	}
+	#}
 #Confiscate Weapons
 	eoanb_descision_USA_ACW_confiscate = {
 
@@ -616,7 +689,7 @@ USA_american_civil_war_descision = {
 			}
 		}
 
-		cost = 100
+		cost = 75
 
 		days_re_enable = 5
 
@@ -628,7 +701,7 @@ USA_american_civil_war_descision = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 100000
 			modifier = {
 				factor = 0
 				OR = {
@@ -653,12 +726,10 @@ USA_american_civil_war_descision = {
 				AND = {
 					tag = CSA
 					has_war_with = USA
-					controls_state = 371
 				}
 				AND = {
 					tag = USA
 					has_war_with = CSA
-					controls_state = 954
 				}
 			}
 			date < 1865.1.1
@@ -684,7 +755,102 @@ USA_american_civil_war_descision = {
 
 		complete_effect = {
 			add_war_support = -0.1
-			add_manpower = 50000
+			add_manpower = 40000
+			if = {
+				limit = {
+					tag = USA
+				}
+				random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            	is_core_of = ROOT
+		            }
+		            create_unit = { 
+		                division = "name = \"Union Regimental\" division_template = \"Union Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+			}
+	        if = {
+	            limit = {
+	            	tag = CSA
+	            }
+	            random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+		        random_owned_controlled_state = {
+		            limit = {
+		                is_fully_controlled_by = ROOT
+		            }
+	            	create_unit = { 
+		                division = "name = \"Confederate Regimental\" division_template = \"Confederate Regimental\" start_experience_factor = 0.0" owner = ROOT
+		            }
+		        }
+	        }
 		}
 
 		ai_will_do = {
@@ -700,6 +866,12 @@ USA_american_civil_war_descision = {
 			modifier = {
 				factor = 0
 				num_divisions > 79
+				tag = CSA
+			}
+			modifier = {
+				factor = 0
+				num_divisions > 99
+				tag = USA
 			}
 			modifier = {
 				add = 100
@@ -996,4 +1168,1041 @@ USA_reconstruction_period = {
 		}
 
 	}
+}
+USA_return_from_ashes = {
+    
+    #Reform the United States
+    eoanb_decision_USA_return_from_ashes_reform = {
+    
+        icon = generic_political_discourse
+
+        available = {
+            owns_state = 1091
+            owns_state = 360
+            owns_state = 954
+            owns_state = 357
+            owns_state = 395
+            owns_state = 393
+            owns_state = 261
+            owns_state = 396
+            owns_state = 362
+            owns_state = 383
+            owns_state = 373
+            owns_state = 369
+            owns_state = 364
+            OR = {
+            	owns_state = 385
+            	owns_state = 378
+            }
+            OR = {
+            	owns_state = 375
+            	owns_state = 371
+            }
+            OR = {
+            	owns_state = 388
+            	owns_state = 1297
+            }
+        }
+
+        visible = {
+            USA = { exists = no }
+        }
+
+        complete_effect = {
+        	custom_effect_tooltip = USA_return_from_ashes_custom_tt
+        	hidden_effect = {
+        		every_state = {
+        			limit = { is_core_of = ROOT }
+        			add_core_of = USA
+        		}
+        		if = {
+	            	limit = {
+	            		has_government = centrism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = centrism
+		            		elections_allowed = yes
+		            		election_frequency = 48
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = traditional_conservatism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = traditional_conservatism
+		            		elections_allowed = yes
+		            		election_frequency = 48
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = social_egalitarianism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = social_egalitarianism
+		            		elections_allowed = yes
+		            		election_frequency = 48
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = collectivist_socialism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = collectivist_socialism
+		            		elections_allowed = yes
+		            		election_frequency = 48
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = vanguard_communism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = vanguard_communism
+		            		elections_allowed = no
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = autocracy
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = autocracy
+		            		elections_allowed = no
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = chauvinist_populism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = chauvinist_populism
+		            		elections_allowed = no
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = anarchism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = anarchism
+		            		elections_allowed = yes
+		            		election_frequency = 48
+		            	}
+	            	}
+	            }
+	            if = {
+	            	limit = {
+	            		has_government = fundamentalism
+	            	}
+	            	USA = {
+	            		set_politics = {
+		            		ruling_party = fundamentalism
+		            		elections_allowed = yes
+		            		election_frequency = 48
+		            	}
+	            	}
+	            }
+        		USA = {
+	            	annex_country = {
+	            		target = ROOT
+	            		transfer_troops = yes
+	            	}
+	            	set_country_flag = USA_returned_from_ash
+	            }
+	            if = {
+	            	limit = {
+	            		is_ai = no
+	            	}
+	            	USA = { change_tag_from = ROOT }
+	            }
+	            load_focus_tree = generic
+	            ROOT = { USA = { transfer_technology = yes } }
+	            every_state = {
+	            	limit = {
+	            		OR = {
+	            			region = 117
+	            			region = 197
+	            			region = 198
+	            			region = 119
+	            			region = 120
+	            			region = 199
+	            			region = 118
+	            		}
+	            		NOT = {
+	            			OR = {
+	            				state = 465
+	            				state = 464
+	            			}
+	            		}
+	            		NOT = { is_core_of = USA }
+	            	}
+	            	add_claim_by = USA
+	            }
+        	}
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
+
+    #Reintegrate the East Coast
+    eoanb_decision_USA_return_reintegrate_east_coast = {
+    
+        icon = generic_political_discourse
+
+        available = {
+        	OR = {
+        		owns_state = 367
+		    	owns_state = 365
+		   		owns_state = 366
+	       		owns_state = 1211
+		    	owns_state = 364
+				owns_state = 363
+		   		owns_state = 362
+	       		owns_state = 746
+	       		owns_state = 361
+		   		owns_state = 1091
+	    		owns_state = 360
+        		owns_state = 359
+        	}
+        }
+
+        visible = {
+            tag = USA
+            NOT = {
+        		OR = {
+        			367 = { is_core_of = USA }
+        			365 = { is_core_of = USA }
+        			366 = { is_core_of = USA }
+        			1211 = { is_core_of = USA }
+        			364 = { is_core_of = USA }
+        			363 = { is_core_of = USA }
+        			362 = { is_core_of = USA }
+        			746 = { is_core_of = USA }
+        			361 = { is_core_of = USA }
+        			1091 = { is_core_of = USA }
+        			360 = { is_core_of = USA }
+        			359 = { is_core_of = USA }
+        		}
+        	}
+        }
+
+        cost = 75
+
+        complete_effect = {
+        	every_owned_state = {
+        		limit = {
+        			OR = {
+        				state = 367
+			        	state = 365
+			        	state = 366
+			        	state = 1211
+			        	state = 364
+			        	state = 363
+			        	state = 362
+			        	state = 746
+			        	state = 361
+			        	state = 1091
+			        	state = 360
+			        	state = 359
+        			}
+        		}
+        		add_core_of = USA
+        		if = {
+        			limit = {
+        				is_core_of = CSA
+        			}
+        			remove_core_of = CSA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ASA
+        			}
+        			remove_core_of = ASA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NEG
+        			}
+        			remove_core_of = NEG
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = GRL
+        			}
+        			remove_core_of = GRL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = DAK
+        			}
+        			remove_core_of = DAK
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KNS
+        			}
+        			remove_core_of = KNS
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ORE
+        			}
+        			remove_core_of = ORE
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NMX
+        			}
+        			remove_core_of = NMX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = TEX
+        			}
+        			remove_core_of = TEX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = CAL
+        			}
+        			remove_core_of = CAL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = OKL
+        			}
+        			remove_core_of = OKL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KTY
+        			}
+        			remove_core_of = KTY
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = MIO
+        			}
+        			remove_core_of = MIO
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = UTA
+        			}
+        			remove_core_of = UTA
+        		}
+        	}
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
+
+    #Reintegrate New England
+    eoanb_decision_USA_return_reintegrate_new_england = {
+    
+        icon = generic_political_discourse
+
+        available = {
+        	OR = {
+        		owns_state = 954
+	        	owns_state = 358
+	        	owns_state = 958
+	        	owns_state = 1031
+	        	owns_state = 357
+	        	owns_state = 959
+	        	owns_state = 960
+	        	owns_state = 961
+        	}
+        }
+
+        visible = {
+            tag = USA
+            NOT = {
+        		OR = {
+        			954 = { is_core_of = USA }
+        			358 = { is_core_of = USA }
+        			958 = { is_core_of = USA }
+        			1031 = { is_core_of = USA }
+        			357 = { is_core_of = USA }
+        			959 = { is_core_of = USA }
+        			960 = { is_core_of = USA }
+        			961 = { is_core_of = USA }
+        		}
+        	}
+        }
+
+        cost = 50
+
+        complete_effect = {
+        	every_owned_state = {
+        		limit = {
+        			OR = {
+        				state = 954
+	        			state = 358
+	        			state = 958
+	        			state = 1031
+	        			state = 357
+	        			state = 959
+	        			state = 960
+	        			state = 961
+        			}
+        		}
+        		add_core_of = USA
+        		if = {
+        			limit = {
+        				is_core_of = CSA
+        			}
+        			remove_core_of = CSA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ASA
+        			}
+        			remove_core_of = ASA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NEG
+        			}
+        			remove_core_of = NEG
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = GRL
+        			}
+        			remove_core_of = GRL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = DAK
+        			}
+        			remove_core_of = DAK
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KNS
+        			}
+        			remove_core_of = KNS
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ORE
+        			}
+        			remove_core_of = ORE
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NMX
+        			}
+        			remove_core_of = NMX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = TEX
+        			}
+        			remove_core_of = TEX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = CAL
+        			}
+        			remove_core_of = CAL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = OKL
+        			}
+        			remove_core_of = OKL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KTY
+        			}
+        			remove_core_of = KTY
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = MIO
+        			}
+        			remove_core_of = MIO
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = UTA
+        			}
+        			remove_core_of = UTA
+        		}
+        	}
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
+    #Reintegrate the Midwest
+    eoanb_decision_USA_return_reintegrate_midwest = {
+    
+        icon = generic_political_discourse
+
+        available = {
+        	OR = {
+        		owns_state = 371
+	        	owns_state = 370
+	        	owns_state = 372
+	        	owns_state = 368
+	        	owns_state = 369
+	        	owns_state = 373
+	        	owns_state = 392
+	        	owns_state = 391
+	        	owns_state = 395
+	        	owns_state = 394
+	        	owns_state = 396
+	        	owns_state = 393
+	        	owns_state = 261
+        	}
+        }
+
+        visible = {
+            tag = USA
+            NOT = {
+        		OR = {
+        			371 = { is_core_of = USA }
+        			370 = { is_core_of = USA }
+        			372 = { is_core_of = USA }
+        			368 = { is_core_of = USA }
+        			369 = { is_core_of = USA }
+        			373 = { is_core_of = USA }
+        			392 = { is_core_of = USA }
+        			391 = { is_core_of = USA }
+        			395 = { is_core_of = USA }
+        			394 = { is_core_of = USA }
+        			396 = { is_core_of = USA }
+        			393 = { is_core_of = USA }
+        			261 = { is_core_of = USA }
+        		}
+        	}
+        }
+
+        cost = 100
+
+        complete_effect = {
+        	every_owned_state = {
+        		limit = {
+        			OR = {
+        				state = 371
+			        	state = 370
+			        	state = 372
+			        	state = 368
+			        	state = 369
+			        	state = 373
+			        	state = 392
+			        	state = 391
+			        	state = 395
+			        	state = 394
+			        	state = 396
+			        	state = 393
+			        	state = 261
+        			}
+        		}
+        		add_core_of = USA
+        		if = {
+        			limit = {
+        				is_core_of = CSA
+        			}
+        			remove_core_of = CSA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ASA
+        			}
+        			remove_core_of = ASA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NEG
+        			}
+        			remove_core_of = NEG
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = GRL
+        			}
+        			remove_core_of = GRL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = DAK
+        			}
+        			remove_core_of = DAK
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KNS
+        			}
+        			remove_core_of = KNS
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ORE
+        			}
+        			remove_core_of = ORE
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NMX
+        			}
+        			remove_core_of = NMX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = TEX
+        			}
+        			remove_core_of = TEX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = CAL
+        			}
+        			remove_core_of = CAL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = OKL
+        			}
+        			remove_core_of = OKL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KTY
+        			}
+        			remove_core_of = KTY
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = MIO
+        			}
+        			remove_core_of = MIO
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = UTA
+        			}
+        			remove_core_of = UTA
+        		}
+        	}
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
+    #Reintegrate the South West
+    eoanb_decision_USA_return_reintegrate_southwest = {
+    
+        icon = generic_political_discourse
+
+        available = {
+        	OR = {
+        		owns_state = 375
+        		owns_state = 1305
+        		owns_state = 1306
+        		owns_state = 1304
+        		owns_state = 1303
+        		owns_state = 1281
+        		owns_state = 1280
+        		owns_state = 374
+        		owns_state = 1293
+        		owns_state = 375
+        		owns_state = 1285
+        		owns_state = 1300
+        		owns_state = 1301
+        		owns_state = 1295
+        		owns_state = 1279
+        		owns_state = 1278
+        		owns_state = 1288
+        		owns_state = 1302
+        		owns_state = 376
+        	}
+        }
+
+        visible = {
+            tag = USA
+            NOT = {
+        		OR = {
+        			371 = { is_core_of = USA }
+        			1305 = { is_core_of = USA }
+        			1306 = { is_core_of = USA }
+        			1304 = { is_core_of = USA }
+	        		1303 = { is_core_of = USA }
+	        		1281 = { is_core_of = USA }
+	        		1280 = { is_core_of = USA }
+	        		374 = { is_core_of = USA }
+	        		1293 = { is_core_of = USA }
+	        		375 = { is_core_of = USA }
+	        		1285 = { is_core_of = USA }
+	        		1300 = { is_core_of = USA }
+	        		1301 = { is_core_of = USA }
+	        		1295 = { is_core_of = USA }
+	        		1279 = { is_core_of = USA }
+	        		1278 = { is_core_of = USA }
+	        		1288 = { is_core_of = USA }
+	        		1302 = { is_core_of = USA }
+	        		376 = { is_core_of = USA }
+        		}
+        	}
+        }
+
+        cost = 100
+
+        complete_effect = {
+        	every_owned_state = {
+        		limit = {
+        			OR = {
+        				state = 375
+		        		state = 1305
+		        		state = 1306
+		        		state = 1304
+		        		state = 1303
+		        		state = 1281
+		        		state = 1280
+		        		state = 374
+		        		state = 1293
+		        		state = 375
+		        		state = 1285
+		        		state = 1300
+		        		state = 1301
+		        		state = 1295
+		        		state = 1279
+		        		state = 1278
+		        		state = 1288
+		        		state = 1302
+		        		state = 376
+        			}
+        		}
+        		add_core_of = USA
+        		if = {
+        			limit = {
+        				is_core_of = CSA
+        			}
+        			remove_core_of = CSA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ASA
+        			}
+        			remove_core_of = ASA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NEG
+        			}
+        			remove_core_of = NEG
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = GRL
+        			}
+        			remove_core_of = GRL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = DAK
+        			}
+        			remove_core_of = DAK
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KNS
+        			}
+        			remove_core_of = KNS
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ORE
+        			}
+        			remove_core_of = ORE
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NMX
+        			}
+        			remove_core_of = NMX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = TEX
+        			}
+        			remove_core_of = TEX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = CAL
+        			}
+        			remove_core_of = CAL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = OKL
+        			}
+        			remove_core_of = OKL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KTY
+        			}
+        			remove_core_of = KTY
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = MIO
+        			}
+        			remove_core_of = MIO
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = UTA
+        			}
+        			remove_core_of = UTA
+        		}
+        	}
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
+    #Reintegrate the West Coast
+    eoanb_decision_USA_return_reintegrate_west_coast = {
+    
+        icon = generic_political_discourse
+
+        available = {
+        	OR = {
+        		owns_state = 378
+        		owns_state = 1296
+        		owns_state = 385
+        		owns_state = 1289
+        		owns_state = 1075
+        		owns_state = 386
+        		owns_state = 1073
+        	}
+        }
+
+        visible = {
+            tag = USA
+            NOT = {
+        		OR = {
+        			378 = { is_core_of = USA }
+        			1296 = { is_core_of = USA }
+        			385 = { is_core_of = USA }
+        			1289 = { is_core_of = USA }
+	        		1075 = { is_core_of = USA }
+	        		386 = { is_core_of = USA }
+	        		1073 = { is_core_of = USA }
+        		}
+        	}
+        }
+
+        cost = 50
+
+        complete_effect = {
+        	every_owned_state = {
+        		limit = {
+        			OR = {
+        				state = 378
+		        		state = 1296
+		        		state = 385
+		        		state = 1289
+		        		state = 1075
+		        		state = 386
+		        		state = 1073
+        			}
+        		}
+        		add_core_of = USA
+        		if = {
+        			limit = {
+        				is_core_of = CSA
+        			}
+        			remove_core_of = CSA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ASA
+        			}
+        			remove_core_of = ASA
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NEG
+        			}
+        			remove_core_of = NEG
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = GRL
+        			}
+        			remove_core_of = GRL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = DAK
+        			}
+        			remove_core_of = DAK
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KNS
+        			}
+        			remove_core_of = KNS
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = ORE
+        			}
+        			remove_core_of = ORE
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = NMX
+        			}
+        			remove_core_of = NMX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = TEX
+        			}
+        			remove_core_of = TEX
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = CAL
+        			}
+        			remove_core_of = CAL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = OKL
+        			}
+        			remove_core_of = OKL
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = KTY
+        			}
+        			remove_core_of = KTY
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = MIO
+        			}
+        			remove_core_of = MIO
+        		}
+        		if = {
+        			limit = {
+        				is_core_of = UTA
+        			}
+        			remove_core_of = UTA
+        		}
+        	}
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
+    #Establish Ourself
+    eoanb_decision_USA_return_reintegrate_establish_ourself = {
+    
+        icon = generic_political_discourse
+
+        available = {
+        	owns_state = 1091
+        	1091 = { is_core_of = USA }
+            owns_state = 360
+            360 = { is_core_of = USA }
+            owns_state = 954
+            954 = { is_core_of = USA }
+            owns_state = 357
+            357 = { is_core_of = USA }
+            owns_state = 395
+            395 = { is_core_of = USA }
+            owns_state = 393
+            393 = { is_core_of = USA }
+            owns_state = 261
+            261 = { is_core_of = USA }
+            owns_state = 396
+            396 = { is_core_of = USA }
+            owns_state = 362
+            362 = { is_core_of = USA }
+            owns_state = 383
+            383 = { is_core_of = USA }
+            owns_state = 373
+            373 = { is_core_of = USA }
+            owns_state = 369
+            369 = { is_core_of = USA }
+            owns_state = 364
+            364 = { is_core_of = USA }
+        }
+
+        visible = {
+            tag = USA
+            has_country_flag = USA_returned_from_ash
+        }
+
+        cost = 50
+
+        complete_effect = {
+        	clr_country_flag = USA_returned_from_ash
+        	add_political_power = 100
+        	add_stability = 0.05
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
+
+    #Change Capital back to D.C.
+    eoanb_decision_USA_return_reintegrate_washington = {
+    
+        icon = generic_political_discourse
+
+        available = {
+        	owns_state = 1091
+        	1091 = {
+        		is_capital = no
+        	}	
+        }
+
+        visible = {
+            tag = USA
+            1091 = {
+        		is_capital = no
+        	}
+        }
+
+        cost = 50
+
+        complete_effect = {
+        	set_capital = 1091
+        }
+        ai_will_do = {
+            base = 4000
+        }
+    }
 }

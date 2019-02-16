@@ -45,6 +45,11 @@
 	
   }
 
+  add_opinion_modifier = {
+    target = HOL
+    modifier = HOL_political_tension
+  }
+
   set_politics = {
     parties = {
       anarchism = {

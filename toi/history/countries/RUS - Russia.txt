@@ -44,6 +44,7 @@
 		RUS_idea_lost_crimea_war
   }
   
+  give_guarantee = GRE 
       #Colective guarantee of the 7 great power
   give_guarantee = ROM
   give_guarantee = MOL

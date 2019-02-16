@@ -10,38 +10,38 @@
 units = {
 		division= {
 			name = "1st Line Infantry"
-			location = 10400
+			location = 13696
 			division_template = "South African Line Division"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.12
 		}
 		division= {
 			name = "2nd Line Infantry"
-			location = 10400
+			location = 13697
 			division_template = "South African Line Division"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.12
 		}
 		division= {
 			name = "3rd Line Infantry"
-			location = 10400
+			location = 13701
 			division_template = "South African Line Division"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.12
 		}
 		division= {
 			name = "4th Line Infantry"
-			location = 10400
+			location = 13703
 			division_template = "South African Line Division"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.12
 		}
 		division= {
 			name = "5th Line Infantry"
-			location = 10400
+			location = 13704
 			division_template = "South African Line Division"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.12
 		}
 		division= {
 			name = "6th Line Infantry"
 			location = 10400
 			division_template = "South African Line Division"
-			start_experience_factor = 0.2
+			start_experience_factor = 0.12
 		}
 }

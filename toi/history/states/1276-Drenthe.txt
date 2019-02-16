@@ -1,0 +1,33 @@
+
+state={
+	id=1276
+	name="STATE_1276"
+	resources={
+		iron=2.000
+	}
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		victory_points = {
+			9309 1 
+		}
+		victory_points = {
+			11318 10 
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+			11318 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		9309 11318 
+	}
+	manpower=268000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

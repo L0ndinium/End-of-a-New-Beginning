@@ -16,7 +16,12 @@ state={
 
 		}
 		add_core_of = BAV
-
+		victory_points = {
+			3558 3 
+		}
+		victory_points = {
+			563 1
+		}
 	}
 
 	provinces={

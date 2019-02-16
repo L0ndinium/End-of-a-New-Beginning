@@ -1,0 +1,36 @@
+
+state={
+	id=1232
+	name="STATE_1232"
+	resources={
+		iron=5.000
+		cotton=15.000
+	}
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		victory_points = {
+			9363 5
+		}
+		victory_points = {
+			11456 10 
+		}
+		victory_points = {
+			6241 20
+		}
+		buildings = {
+			infrastructure = 4 
+			arms_factory = 1
+			industrial_complex = 1
+			fabric_weavery = 2
+		}
+	}
+
+	provinces={
+		6241 9363 11456 
+	}
+	manpower=518000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

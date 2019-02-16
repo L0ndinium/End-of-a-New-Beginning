@@ -11,7 +11,7 @@
 	# Number reservation system will tie to another group.
 	#link_numbering_with = {  }
 
-	fallback_name = "%. Infanterie-Brigade"
+	fallback_name = "%d. Infanterie-Brigade"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -78,7 +78,7 @@
 		58 = { "84. Rheinisches Infanterie-Brigade" }
 		59 = { "85. Rheinisches Infanterie-Brigade" }
 		60 = { "86. Thϋringisches Infanterie-Brigade" }
-		61 = { "87. Thϋringisches Infanterie-Brigade" }
+		61 = { "%d. Thϋringisches Infanterie-Brigade" }
 	}
 }
 
@@ -96,52 +96,52 @@ PRS_CAV_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = {  }
 
-	fallback_name = "%. Kavallerie-Brigade"
+	fallback_name = "%d. Kavallerie-Brigade"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
 		1 = { "1. Ostpreussisches Kavallerie-Brigade" }
-		2 = { "2. Pommersches Kavallerie-Brigade" }
-		3 = { "3. Ostpreussisches Kavallerie-Brigade" }
-		4 = { "4. Ostpreussisches Kavallerie-Brigade" }
-		5 = { "5. Ostpreussisches Kavallerie-Brigade" }
-		6 = { "6. Westpreussisches Kavallerie-Brigade" }
-		7 = { "7. Westpreussisches Kavallerie-Brigade" }
-		8 = { "8. Westpreussisches Kavallerie-Brigade" }
-		9 = { "9. Pommersches Kavallerie-Brigade" }
-		10 = { "1. Brandenburgisches Garde-Kavallerie-Brigade" }
-		11 = { "10. Schlesisches Kavallerie-Brigade" }
-		12 = { "11. Schlesisches Kavallerie-Brigade" }
-		13 = { "12. Westfälisches Kavallerie-Brigade" }
-		14 = { "13. Pommersches  Kavallerie-Brigade" }
-		15 = { "14. Pommersches Kavallerie-Brigade" }
-		16 = { "17. Pommersches Kavallerie-Brigade" }
-		17 = { "18. Pommersches Kavallerie-Brigade" }
+		2 = { "2. Pommersche Kavallerie-Brigade" }
+		3 = { "3. Ostpreussische Kavallerie-Brigade" }
+		4 = { "4. Ostpreussische Kavallerie-Brigade" }
+		5 = { "5. Ostpreussische Kavallerie-Brigade" }
+		6 = { "6. Westpreussische Kavallerie-Brigade" }
+		7 = { "7. Westpreussische Kavallerie-Brigade" }
+		8 = { "8. Westpreussische Kavallerie-Brigade" }
+		9 = { "9. Pommersche Kavallerie-Brigade" }
+		10 = { "1. Brandenburgische Garde-Kavallerie-Brigade" }
+		11 = { "10. Schlesische Kavallerie-Brigade" }
+		12 = { "11. Schlesische Kavallerie-Brigade" }
+		13 = { "12. Westfälische Kavallerie-Brigade" }
+		14 = { "13. Pommersche  Kavallerie-Brigade" }
+		15 = { "14. Pommersche Kavallerie-Brigade" }
+		16 = { "17. Pommersche Kavallerie-Brigade" }
+		17 = { "18. Pommersche Kavallerie-Brigade" }
 		18 = { "19. Posen Kavallerie-Brigade" }
-		19 = { "2. Brandenburgisches Garde-Kavallerie-Brigade" }
+		19 = { "2. Brandenburgische Garde-Kavallerie-Brigade" }
 		20 = { "20. Posen Kavallerie-Brigade" }
-		21 = { "21. Pommersches Kavallerie-Brigade" }
-		22 = { "22. Oberschlesisches Kavallerie-Brigade" }
-		23 = { "28. Oberschlesisches Kavallerie-Brigade" }
-		24 = { "29. Rheinisches Kavallerie-Brigade" }
-		25 = { "3. Brandenburgisches Garde-Kavallerie-Brigade" }
-		26 = { "30. Magdeburgisches Kavallerie-Brigade" }
-		27 = { "31. Magdeburgisches Kavallerie-Brigade" }
-		28 = { "33. Rheinisches Kavallerie-Brigade" }
-		29 = { "34. Rheinisches Kavallerie-Brigade" }
-		30 = { "35. Rheinisches Kavallerie-Brigade" }
+		21 = { "21. Pommersche Kavallerie-Brigade" }
+		22 = { "22. Oberschlesische Kavallerie-Brigade" }
+		23 = { "28. Oberschlesische Kavallerie-Brigade" }
+		24 = { "29. Rheinische Kavallerie-Brigade" }
+		25 = { "3. Brandenburgische Garde-Kavallerie-Brigade" }
+		26 = { "30. Magdeburgische Kavallerie-Brigade" }
+		27 = { "31. Magdeburgische Kavallerie-Brigade" }
+		28 = { "33. Rheinische Kavallerie-Brigade" }
+		29 = { "34. Rheinische Kavallerie-Brigade" }
+		30 = { "35. Rheinische Kavallerie-Brigade" }
 		31 = { "Leib-Husaren-Brigade" }
-		32 = { "37. Thϋringisches Kavallerie-Brigade" }
-		33 = { "38. Thϋringisches Kavallerie-Brigade" }
-		34 = { "39. Thϋringisches Kavallerie-Brigade" }
-		35 = { "4. Brandenburgisches Garde-Kavallerie-Brigade" }
-		36 = { "41. Schlesisches Kavallerie-Brigade" }
-		37 = { "42. Schlesisches Kavallerie-Brigade" }
-		38 = { "43. Schlesisches Kavallerie-Brigade" }
-		39 = { "44. Schlesisches Kavallerie-Brigade" }
-		40 = { "45. Pommersches Kavallerie-Brigade" }
+		32 = { "37. Thϋringische Kavallerie-Brigade" }
+		33 = { "38. Thϋringische Kavallerie-Brigade" }
+		34 = { "39. Thϋringische Kavallerie-Brigade" }
+		35 = { "4. Brandenburgische Garde-Kavallerie-Brigade" }
+		36 = { "41. Schlesische Kavallerie-Brigade" }
+		37 = { "42. Schlesische Kavallerie-Brigade" }
+		38 = { "43. Schlesische Kavallerie-Brigade" }
+		39 = { "44. Schlesische Kavallerie-Brigade" }
+		40 = { "%d. Pommersche Kavallerie-Brigade" }
 	}
 }
 
@@ -158,7 +158,7 @@ PRS_ART_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = {  }
 
-	fallback_name = "%. Feldartillerie-Brigade"
+	fallback_name = "%d. Feldartillerie-Brigade"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -206,7 +206,7 @@ PRS_ART_01 =
 		40 = { "41. Magdeburgisches Feldartillerie-Brigade" }
 		41 = { "42. Pommersches Feldartillerie-Brigade" }
 		42 = { "1. Brandenburgisches Garde-Feldartillerie-Brigade" }
-		43 = { "2. Brandenburgisches Garde-Feldartillerie-Brigade" }
+		43 = { "%d. Brandenburgisches Garde-Feldartillerie-Brigade" }
 	}
 }
 
@@ -224,7 +224,7 @@ PRS_GAR_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = {  }
 
-	fallback_name = "%. Garde-Brigade"
+	fallback_name = "%d. Garde-Brigade"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -234,6 +234,6 @@ PRS_GAR_01 =
 		2 = { "2. Garde-Infanterie-Brigade" }
 		3 = { "3. Garde-Infanterie-Brigade" }
 		4 = { "4. Garde-Infanterie-Brigade" }
-		5 = { "5. Garde-Infanterie-Brigade" }
+		5 = { "%d. Garde-Infanterie-Brigade" }
 	}
 }

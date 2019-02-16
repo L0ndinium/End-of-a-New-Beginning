@@ -1,0 +1,544 @@
+﻿l_english:
+    #FOCUS TREE
+    
+    SER_Saint_Andrew_Assembly:0 "Saint Andrew Assembly"
+    SER_Saint_Andrew_Assembly_desc:0 "This is an Assembly that will mark the end of the current internal conflicts that are damaging the stability of our nation. Who will be chosen?"
+    
+    SER_Return_Of_Obrenovic_Dynasty:0 "Return Of Obrenovic Dynasty"
+    SER_Return_Of_Obrenovic_Dynasty_desc:0 "Obrenovic dynasty stopped rulling in 1842 after Mihailo Obrenovic was overthrown. But they came back and they're ready to rule Serbia once more."
+    
+    SER_Karadjordjevic_Dynasty_Remains:0 "Karadordevic Dynasty Remains"
+    SER_Karadjordjevic_Dynasty_Remains_desc:0 "Karadordevic dynasty was brought back on throne after Mihailo Obrenovic was overthrown. Aleksandar Karadordevic's reign is marked by a lot of recent internal conflicts and power struggle with Defenders. If he manages to stay on throne, he will need to make a compromise with them in order to stay there."
+    
+    SER_Restore_Your_Reputation:0 "Restore Your Reputation"
+    SER_Restore_Your_Reputation_desc:0 "Aleksandar managed to stay on throne. He now needs to make sure people will like him and respect him once again."
+    
+    SER_Compromise_With_Defenders:0 "Compromise With Defenders"
+    SER_Compromise_With_Defenders_desc:0 "A compromise is definetly needed. The Assembly may have passed, but the fire is still burning."
+    
+    SER_Liberals_Question:0 "Liberals Question"
+    SER_Liberals_Question_desc:0 "Liberals played a role in the attempt to bring back Milos Obrenovic. We can choose to forgive them and be on good terms. But we don't have to."
+    
+    SER_Change_Turkish_Constitution:0 "Change The Turkish Constitution"
+    SER_Change_Turkish_Constitution_desc:0 "Changing the Turkish Constitution through clever diplomatic ways will make it weaker and give us more power."
+    
+    SER_First_Uprising_Anniversary:0 "First Uprising Anniversary"
+    SER_First_Uprising_Anniversary_desc:0 "First Serbian Uprising was an uprising of Serbs in Sanjak of Smederevo. It's been 60 years."
+    
+    SER_Father_Of_Modern_Serbia:0 "Father Of Modern Serbia"
+    SER_Father_Of_Modern_Serbia_desc:0 "Your father, Karadjordje, set the foundation of the modern Serbian state, even though his revolt failed. He needs to be remembered."
+    
+    SER_Assassination_Attempt:0 "Assassination Attempt"
+    SER_Assassination_Attempt_desc:0 "Someone shot our Knez!"
+    
+    SER_Knez_Survives:0 "Knez Survives"
+    SER_Knez_Survives_desc:0 "Knez Aleksandar survived and he is still recovering. We need to make sure this doesn't happen again."
+    
+    SER_Improve_Royal_Security:0 "Improve Royal Security"
+    SER_Improve_Royal_Security_desc:0 "Improving Knez's security will greatly reduce the chances of similiar event happening again."
+    
+    SER_Execute_Conspirators:0 "Execute Conspirators"
+    SER_Execute_Conspirators_desc:0 "We need to execute the conspirators. This will set an example that things like these result in death of the ones who did them."
+    
+    SER_Knez_Dies:0 "Knez Dies"
+    SER_Knez_Dies_desc:0 "Our Knez died from the wounds! We need to crown his son, Peter, as fast as possible!"
+    
+    SER_Crown_Petar:0 "Crown Petar"
+    SER_Crown_Petar_desc:0 ""
+    
+    SER_Karadordevic_Constitution:0 "Karadordevic Constitution"
+    SER_Karadordevic_Constitution_desc:0 ""
+    
+    SER_Better_Living_Standard:0 "Better Living Standard"
+    SER_Better_Living_Standard_desc:0 ""
+    
+    SER_New_Ministers:0 "New Ministers"
+    SER_New_Ministers_desc:0 ""
+    
+    SER_Old_Man_Dies:0 "Old Man Dies"
+    SER_Old_Man_Dies_desc:0 "Milos Obrenovic dies at the age of 80. It's now up to his son, Mihailo Obrenovic, to rule Serbia and free Serbian people."
+    
+    SER_Increase_Popularity_Among_People:0 "Increase Popularity Among People"
+    SER_Increase_Popularity_Among_People_desc:0 "Now that Obrenovic dynasty is the ruling dynasty, we need to increase our popularity among people. That'll make sure we don't get overthrown again."
+    
+    SER_State_Council_Reform:0 "State Council Reform"
+    SER_State_Council_Reform_desc:0 "State Council reform will weaken the Turkish Constitution and the State Council itself."
+    
+    SER_Stronger_Absolutist_Rule:0 "Stronger Absolutist Rule"
+    SER_Stronger_Absolutist_Rule_desc:0 "Mihailo, as his father, is an autocrat. We need to make sure he can't get overthrown as it did last time and we'll do that through strengthening his absolutist rule."
+    
+    SER_Loyal_Politicians:0 "Loyal Politicians"
+    SER_Loyal_Politicians_desc:0 "The first step in having a secure political position is having loyal politicians in power."
+    
+    SER_Abolish_Opposing_Societies:0 "Abolish Opposing Societies"
+    SER_Abolish_Opposing_Societies_desc:0 "We need to abolish societies that are opposing our rule. They are dangerous."
+    
+    SER_Second_Uprising_Anniversary:0 "Second Uprising Anniversary"
+    SER_Second_Uprising_Anniversary_desc:0 "Second Serbian Uprising was led by Mihailo's father, Milos. It's been 50 years since then."
+    
+    SER_National_Theatre:0 "National Theatre"
+    SER_National_Theatre_desc:0 "In order to become a true European country, we need to behave like them. Building a national theatre in Belgrade will help us in gaining our goal."
+    
+    SER_Day_In_Woods:0 "Day In The Woods"
+    SER_Day_In_Woods_desc:0 ""
+    
+    SER_Lucky_Day:0 "Lucky Day"
+    SER_Lucky_Day_desc:0 ""
+    
+    SER_Punish_The_Involved:0 "Punish The Involved"
+    SER_Punish_The_Involved_desc:0 ""
+    
+    SER_Improve_Police_Force:0 "Improve Police Force"
+    SER_Improve_Police_Force_desc:0 ""
+    
+    SER_Anti_Liberal_Raids:0 "Anti-Liberal Raids"
+    SER_Anti_Liberal_Raids_desc:0 ""
+    
+    SER_Reforming_Government:0 "Reform Government"
+    SER_Reforming_Government_desc:0 ""
+    
+    SER_Mihailos_Constitution:0 "Mihailo's Constitution"
+    SER_Mihailos_Constitution_desc:0 ""
+    
+    SER_Tripartite_Governorship:0 "Tripartite Governorship"
+    SER_Tripartite_Governorship_desc:0 "Mihailo has been assassinated! He doesn't have any kids. That means his cousin Milan will have to inherit the throne. He is too young, so a tripartite governorship has been set up and they will rule until he is old enough to do so."
+    
+    SER_New_Constitution:0 "New Constitution"
+    SER_New_Constitution_desc:0 "We need to write a new constitution. It will strengthen our power and distance us from the Ottoman rule."
+    
+    SER_Blaznavacs_Regency:0 "Blaznavac's Regency"
+    SER_Blaznavacs_Regency_desc:0 ""
+    
+    SER_Governorship_Remains:0 "Governorship Remains"
+    SER_Governorship_Remains_desc:0 ""
+    
+    SER_Improve_Government:0 "Improve Government"
+    SER_Improve_Government_desc:0 "Improving our government structure by reforming some parts of it and hiring better politicians will surely benefit our cause."
+    
+    SER_Improve_Milans_Security:0 "Improve Milan's Security"
+    SER_Improve_Milans_Security_desc:0 "Improving MIlan's personal security will make sure he doesn't end up like Mihailo."
+    
+    SER_Serbian_Republic:0 "Serbian Republic"
+    SER_Serbian_Republic_desc:0 ""
+    
+    SER_Milan_Takes_Throne:0 "Milan Takes The Throne"
+    SER_Milan_Takes_Throne_desc:0 "Milan is old enough to rule Serbia. He abolishes the tripartite governorship that's been ruling Serbia since death of Mihailo."
+    
+    SER_Modern_Serbian_State:0 "Modern Serbian State"
+    SER_Modern_Serbian_State_desc:0 "Serbia fought bravely to gain it's semi-independence from the Ottoman Empire. We will try to make it become a full independence."
+    
+    SER_Satisfy_People:0 "Satisfy People"
+    SER_Satisfy_People_desc:0 "Satisfying our people's needs will make them support our cause and increase our stability."
+    
+    SER_First_Balkan_Alliance:0 "First Balkan Alliance"
+    SER_First_Balkan_Alliance_desc:0 ""
+    
+    SER_Faster_Judical_Proceedings:0 "Faster Judical Proceedings"
+    SER_Faster_Judical_Proceedings_desc:0 "People are complaining about our judical system being really slow. If we make it faster, they will hopefully like us more."
+    
+    SER_Red_Cross_Of_Serbia:0 "Red Cross Of Serbia"
+    SER_Red_Cross_Of_Serbia_desc:0 "Red Cross is a great movement. We need to make a Serbian branch. That will help our people."
+    
+    SER_Reforms:0 "Reforms"
+    SER_Reforms_desc:0 "Reforms are needed to strengthen our rule."
+    
+    SER_National_Assembly_Reform:0 "National Assembly Reform"
+    SER_National_Assembly_Reform_desc:0 "Reforming the National Assembly will grant us more power over it, or at least more influense."
+    
+    SER_State_Administration_Reform:0 "State Administration Reform"
+    SER_State_Administration_Reform_desc:0 "Reforming the State Administration will give us more influense in placing ministers. That means we will have more political power."
+    
+    SER_Invest_In_Education:0 "Invest In Education"
+    SER_Invest_In_Education_desc:0 ""
+    
+    SER_Schooling_Abroad:0 "Schooling Abroad"
+    SER_Schooling_Abroad_desc:0 ""
+    
+    SER_Military_Missions:0 "Military Missions"
+    SER_Military_Missions_desc:0 ""
+    
+    SER_Cukur_Fountain:0 "Chukur Fountain Incident"
+    SER_Cukur_Fountain_desc:0 "One seemingly normal hot summer day gets really intense."
+    
+    SER_Turkish_Withdrawal:0 "Turkish Withdrawal"
+    SER_Turkish_Withdrawal_desc:0 "Turks and Turkish soldiers are going to retreat from our lands."
+    
+    SER_Complete_Withdrawal:0 "Complete Withdrawal"
+    SER_Complete_Withdrawal_desc:0 "Not all of the Turks have left our country. Some of the soldiers stayed. We will ask the Ottoman Empire for them to leave too."
+    
+    SER_Herzegovina_Uprising:0 "Herzegovina Uprising"
+    SER_Herzegovina_Uprising_desc:0 ""
+    
+    SER_Serbian_Military:0 "Serbian Military"
+    SER_Serbian_Military_desc:0 ""
+    
+    SER_Artillery_Effort:0 "Artillery Effort"
+    SER_Artillery_Effort_desc:0 ""
+    
+    SER_New_Guns:0 "New Guns"
+    SER_New_Guns_desc:0 ""
+    
+    SER_Army_Training:0 "Training Our Army"
+    SER_Army_Training_desc:0 ""
+    
+    SER_New_Era_Cavalry:0 "New Era Cavalry"
+    SER_New_Era_Cavalry_desc:0 ""
+    
+    SER_Equipment_Modernization:0 "Equipment Modernization"
+    SER_Equipment_Modernization_desc:0 ""
+    
+    SER_Engineer_Corps:0 "Engineer Corps"
+    SER_Engineer_Corps_desc:0 ""
+    
+    SER_New_Army_Tactics:0 "New Tactics"
+    SER_New_Army_Tactics_desc:0 ""
+    
+    SER_Study_New_Strategies:0 "Study New Strategies"
+    SER_Study_New_Strategies_desc:0 ""
+    
+    SER_Improve_Strategies:0 "Improve Strategies"
+    SER_Improve_Strategies_desc:0 ""
+    
+    SER_National_Army_Law:0 "National Army Law"
+    SER_National_Army_Law_desc:0 ""
+    
+    SER_Foreign_Officers_Law:0 "Foreign Officers Law"
+    SER_Foreign_Officers_Law_desc:0 ""
+    
+    SER_Foreign_Military_Schooling:0 "Foreign Military Schooling"
+    SER_Foreign_Military_Schooling_desc:0 ""
+    
+    SER_First_Minister_Of_Military:0 "First Minister Of Military"
+    SER_First_Minister_Of_Military_desc:0 ""
+    
+    SER_Mobilization_Speed:0 "Mobilization Speed"
+    SER_Mobilization_Speed_desc:0 ""
+    
+    SER_Military_Pension_Fund:0 "Military Pension Fund"
+    SER_Military_Pension_Fund_desc:0 ""
+    
+    SER_French_Military_Rules:0 "French Military Rules"
+    SER_French_Military_Rules_desc:0 ""
+    
+    SER_Reorganize_Medical_Corps:0 "Reorganize Medical Corps"
+    SER_Reorganize_Medical_Corps_desc:0 ""
+    
+    SER_Reborn_Army:0 "Reborn Army"
+    SER_Reborn_Army_desc:0 ""
+    
+    SER_Build_Our_Army:0 "Build Our Army"
+    SER_Build_Our_Army_desc:0 ""
+    
+    SER_Faster_Recruitment:0 "Faster Recruitment"
+    SER_Faster_Recruitment_desc:0 ""
+    
+    SER_Recruit_More_Men:0 "Recruit More Men"
+    SER_Recruit_More_Men_desc:0 ""
+    
+    SER_Officer_Training:0 "Officer Training"
+    SER_Officer_Training_desc:0 ""
+    
+    SER_New_Artillery:0 "New Artillery"
+    SER_New_Artillery_desc:0 ""
+    
+    SER_Better_Infantry_Weapons:0 "Better Infantry Weapons"
+    SER_Better_Infantry_Weapons_desc:0 ""
+    
+    SER_European_Tactics:0 "European Tactics"
+    SER_European_Tactics_desc:0 ""
+    
+    SER_Serbian_Warrior:0 "Serbian Warrior"
+    SER_Serbian_Warrior_desc:0 ""
+    
+    SER_Study_Ottoman_Army:0 "Study Ottoman Army"
+    SER_Study_Ottoman_Army_desc:0 ""
+    
+    SER_Train_Our_Warriors:0 "Train Our Warriors"
+    SER_Train_Our_Warriors_desc:0 ""
+    
+    SER_Support_Roles:0 "Support Roles"
+    SER_Support_Roles_desc:0 ""
+    
+    SER_Improve_Cavalry:0 "Improve Cavalry"
+    SER_Improve_Cavalry_desc:0 ""
+    
+    SER_Better_Uniforms:0 "Better Uniforms"
+    SER_Better_Uniforms_desc:0 ""
+    
+    SER_Serbian_General_Staff:0 "Serbian General Staff"
+    SER_Serbian_General_Staff_desc:0 ""
+    
+    SER_Prepare_For_War:0 "Prepare For War"
+    SER_Prepare_For_War_desc:0 ""
+    
+    SER_Serbian_Economy:0 "Serbian Economy"
+    SER_Serbian_Economy_desc:0 ""
+    
+    SER_Serbian_Roads:0 "Serbian Roads"
+    SER_Serbian_Roads_desc:0 ""
+    
+    SER_Promote_Trade:0 "Promote Trade"
+    SER_Promote_Trade_desc:0 ""
+    
+    SER_Improve_Roads:0 "Improve Roads"
+    SER_Improve_Roads_desc:0 ""
+    
+    SER_Post_Service_Law:0 "Post Service Law"
+    SER_Post_Service_Law_desc:0 ""
+    
+    SER_Serbian_Industry:0 "Serbian Industry"
+    SER_Serbian_Industry_desc:0 ""
+    
+    SER_Modernize_Factories:0 "Modernize Factories"
+    SER_Modernize_Factories_desc:0 ""
+    
+    SER_Expand_Research_Potential:0 "Expand Research Potential"
+    SER_Expand_Research_Potential_desc:0 ""
+    
+    SER_Better_Resource_Management:0 "Better Resource Management"
+    SER_Better_Resource_Management_desc:0 ""
+    
+    SER_Promote_Agriculture:0 "Promote Agriculture"
+    SER_Promote_Agriculture_desc:0 ""
+    
+    SER_Livestock_Industry:0 "Livestock Industry"
+    SER_Livestock_Industry_desc:0 ""
+    
+    SER_Farming_Methods:0 "Farming Methods"
+    SER_Farming_Methods_desc:0 ""
+    
+    SER_Agriculture_Schools:0 "Agriculture Schools"
+    SER_Agriculture_Schools_desc:0 ""
+    
+    SER_Encourage_City_Life:0 "Encourage City Life"
+    SER_Encourage_City_Life_desc:0 ""
+    
+    SER_Plum_Production:0 "Plum Production"
+    SER_Plum_Production_desc:0 ""
+    
+    SER_Serbian_Coins:0 "Serbian Coins"
+    SER_Serbian_Coins_desc:0 ""
+    
+    SER_Build_Foundries:0 "Build Foundries"
+    SER_Build_Foundries_desc:0 ""
+    
+    SER_Future_Of_People:0 "Future Of Our People"
+    SER_Future_Of_People_desc:0 ""
+    
+    SER_Invest_In_Education:0 "Invest In Education"
+    SER_Invest_In_Education_desc:0 ""
+    
+    SER_Wake_Serb_Spirit:0 "Wake The Serb Spirit"
+    SER_Wake_Serb_Spirit_desc:0 ""
+    
+    SER_Promote_Crafts:0 "Promote Crafts"
+    SER_Promote_Crafts_desc:0 ""
+    
+    #EVENTS
+    
+    SERsai.1.t:0 "A Conspiracy"
+    SERsai.1.d:0 ""
+    SERsai.1.a:0 "Find them"
+    
+    SERsai.2.t:0 "Conspirators Found"
+    SERsai.2.d:0 ""
+    SERsai.2.a:0 "Arrest them"
+    
+    SERsai.3.t:0 "Conspirators Arrested"
+    SERsai.3.d:0 ""
+    SERsai.3.a:0 "They'll pay for this"
+    
+    SERsai.4.t:0 "Punishments"
+    SERsai.4.d:0 ""
+    SERsai.4.a:0 "Execution"
+    SERsai.4.b:0 "Life sentences"
+    
+    SERsai.5.t:0 "Foreign Pressure"
+    SERsai.5.d:0 ""
+    SERsai.5.a:0 "Life sentences"
+    SERsai.5.b:0 "Kill them anyway"
+    
+    SERsai.6.t:0 "Coup"
+    SERsai.6.d:0 ""
+    SERsai.6.a:0 "Scare them into resignation"
+    
+    SERsai.7.t:0 "The Porte's Demands"
+    SERsai.7.d:0 ""
+    SERsai.7.a:0 "We will have to accept"
+    
+    SERsai.8.t:0 "Tensions"
+    SERsai.8.d:0 ""
+    SERsai.8.a:0 "Opposition is reorganizing"
+    
+    SERsai.9.t:0 "Rumors"
+    SERsai.9.d:0 ""
+    SERsai.9.a:0 "Hope it won't come to that"
+    
+    SERsai.10.t:0 "Pressure"
+    SERsai.10.d:0 ""
+    SERsai.10.a:0 "We have no other choice"
+    
+    SERsai.11.t:0 "Elections"
+    SERsai.11.d:0 ""
+    SERsai.11.a:0 "This is getting bad"
+    
+    SERsai.12.t:0 "Assembly Law"
+    SERsai.12.d:0 ""
+    SERsai.12.a:0 "Will this be the end?"
+    
+    SERsai.13.t:0 "Saint Andrew Assembly"
+    SERsai.13.d:0 ""
+    SERsai.13.a:0 "We can only hope now"
+    
+    SERsai.14.t:0 "Saint Andrew Assembly: The Choice"
+    SERsai.14.d:0 ""
+    SERsai.14.a:0 "Obrenovic dynasty"
+    SERsai.14.b:0 "Karadordevic dynasty"
+    
+    SERobr.1.t:0 "Reorganize the council"
+    SERobr.1.d:0 "We should reorganize the council. Fire some of the old ministers and have more loyal people work for us."
+    SERobr.1.a:0 "Yes, do it"
+    
+    SERobr.2.t:0 "Heir question"
+    SERobr.2.d:0 "We need to ask the High Porte to recognize Mihailo as Milos' legitimate heir. It will probably take some time for them to answer, but we expect it to happen in the next 30 days."
+    SERobr.2.a:0 "Send a letter"
+    
+    SERobr.3.t:0 "Dynastic right to the title of Knez"
+    SERobr.3.d:0 "The High Porte accepted our request! Mihailo's position as a Knez is ensured. The Obrenovic dynasty will remain on throne. But to make sure that it stays that way in the future, we should also ask them to accept Obrenovic dynasty's right for the title of Knez."
+    SERobr.3.a:0 "Of course we should"
+    
+    SERobr.4.t:0 "The High Porte declines"
+    SERobr.4.d:0 "Sadly, the High Porte has declined our request to grant our dynasty the right for the title of Knez."
+    SERobr.4.a:0 "At least they accepted one request"
+    
+    SERobr.5.t:0 "Milos Obrenovic dies"
+    SERobr.5.d:0 ""
+    SERobr.5.a:0 "Sad"
+    
+    SERobr.6.t:0 "Go to Kosutnjak"
+    SERobr.6.d:0 ""
+    SERobr.6.a:0 "Go"
+    SERobr.6.b:0 "Don't go"
+    
+    SERkar.1.t:0 "Restoring people's faith in us"
+    SERkar.1.d:0 "That was close! We need to restore people's faith in us, they let us stay. The best and quickest way to do that is by accepting whichever demands they have. It will cost us some legislative power, but we will gain stability and war support."
+    SERkar.1.a:0 "Work on that"
+    SERkar.1.b:0 "Who cares about people"
+    
+    SERkar.2.t:0 "Villagers want changes"
+    SERkar.2.d:0 "Villagers want some of the things different. They are unhappy and still angry with us. For example, we can lower some taxes. That will make them happy. We can always choose to not do it, but it won't be smart to turn our backs now because we promised to help them."
+    SERkar.2.a:0 "Lower the taxes"
+    SERkar.2.b:0 "Don't lower the taxes"
+    
+    SERkar.3.t:0 "Townsfolk want lower taxes"
+    SERkar.3.d:0 "Even though townsfolk are a minority in agrarian country, we should still respect them the same. Traders and people of other "city" occupations want their taxes lower as well."
+    SERkar.3.a:0 "Lower the taxes"
+    SERkar.3.b:0 "Don't lower the taxes"
+    
+    SERkar.4.t:0 "Liberals question"
+    SERkar.4.d:0 ""
+    SERkar.4.a:0 "Be good to them"
+    SERkar.4.b:0 "Pressure them"
+    
+    SERkar.8.t:0 "Aleksandar's Walk"
+    SERkar.8.d:0 "Knez Aleksandar wants to take a walk around the city."
+    SERkar.8.a:0 "What could go wrong?"
+    
+    SERkar.5.t:0 "Assassination attempt!"
+    SERkar.5.d:0 "Someone shot our Knez while he was taking a walk around Belgrade! He is currently in a somewhat stable condition, but he may not make it."
+    SERkar.5.a:0 "Will Aleksandar survive?"
+    
+    SERkar.6.t:0 "Aleksandar Karadordevic survives!"
+    SERkar.6.d:0 "Our Knez has survived the assassination attempt! We need to make sure this doesn't happen again."
+    SERkar.6.a:0 "Thank God!"
+    
+    SERkar.7.t:0 "Aleksandar Karadordevic dies!"
+    SERkar.7.d:0 "Our Knez has succumbed to the wounds. He was a great leader. His son, Peter, will inherit the throne."
+    SERkar.7.a:0 "Hopefully he won't die"
+    
+    SERmisc.1.t:0 "First Serbian Uprising Anniversary"
+    SERmisc.1.d:0 "First Serbian Uprising was an uprising of Serbs in Sanjak of Smederevo. It evolved into an independence war. It started in 1804 and ended in 1813. And its leader was your father, Djordje Petrovic, better known as Karadjordje. We should celebrate 60th anniversary of its start."
+    SERmisc.1.a:0 "He will be remembered"
+    
+    SERmisc.2.t:0 "Second Serbian Uprising Anniversary"
+    SERmisc.2.d:0 ""
+    SERmisc.2.a:0 "He will be remembered"
+    
+    SERmisc.3.t:0 "Vuk Karadzic Dies"
+    SERmisc.3.d:0 ""
+    SERmisc.3.a:0 "A great man"
+    
+    SERmisc.5.t:0 "WARNING: Serbia is WIP"
+    SERmisc.5.d:0 "Serbia is currently not really playable. So if you decide to play it anyway, remember that it will probably not work very well or even at all in some parts.\n-Serbian dev"
+    SERmisc.5.a:0 "Ok"
+    
+    SERcuk.1.t:0 "Chukur Fountain Incident"
+    SERcuk.1.d:0 "A hot summer day. Both Serbs and Turkish soldiers are drinking water from a well in Belgrade. An argument started about who will drink/take the water first. And in that heated moment, a Serbian boy named Sava Petkovic accidentaly broke a water jug belonging to a Turkish soldier. The soldier hit the boy in the head and wounded him. Serbian police sent some gendarmes to arrest the soldier. Other Turkish soldiers shot at and killed two Serb policemen. The shots could be heard around the city the whole night."
+    SERcuk.1.a:0 "Outrageous!"
+    
+    SERcuk.2.t:0 "Negotiate a truce"
+    SERcuk.2.d:0 "The riots took dozens of lives and we need to put a stop to it. We need to negotiate a peace and calm the situation down before it grows into an even bigger problem."
+    SERcuk.2.a:0 "Hurry!"
+    
+    SERcuk.3.t:0 "Truce accepted"
+    SERcuk.3.d:0 "They accepted the truce. Situation has calmed, at least a little bit. We should organize a funeral for those that died. It will be held tomorrow."
+    SERcuk.3.a:0 "Good"
+    
+    SERcuk.4.t:0 "Bombardment of Belgrade"
+    SERcuk.4.d:0 "This morning during the funeral, Turks started bombarding the city of Belgrade! People ran away and the coffins were left in the middle of the street. It lasted a few hours and it left 50 people dead, 20 houses destroyed and 350 houses damaged. Thanks to the British consul, the shelling has stopped."
+    SERcuk.4.a:0 "Unbelievable!"
+    
+    SERcuk.5.t:0 "Peace conference"
+    SERcuk.5.d:0 "Negotiations started near Tsarigrad with the participation of Russia, Austria, France and United Kingdom. After some time, it was decided that:\n\n  -the Turkish population must leave Serbia, except from Belgrade, Šabac, Smederevo and Kladovo\n  -Užice and Soko forts are to be demolished\n  -Serbian government will pay reparations to Turkish government for their people are leaving their properties."
+    SERcuk.5.a:0 "We will accept"
+    
+    SERcuk.6.t:0 "Ask for full withdrawal"
+    SERcuk.6.d:0 ""
+    SERcuk.6.a:0 "Send it"
+    
+    SERcuk.7.t:0 "Ottoman Empire accepts"
+    SERcuk.7.d:0 ""
+    SERcuk.7.a:0 "Excellent"
+    
+    #GOVERNMENT
+    
+    SER_idea_hippolyte_mondain:0 "Hippolyte Mondain"
+    SER_idea_blaznavac:0 "Milivoje Blaznavac"
+    
+    #DECISIONS
+    
+    SER_ctg_withdrawal:0 "Turkish Withdrawal"    
+    SER_decisions_houses:0 "Sell Turkish Houses"
+    SER_decisions_houses_desc:0 "We got the Turkish population's houses for a low price. Now we can sell it for a bit higher price to our people in order to fill our budget."
+    SER_decisions_buy:0 "Buy Some Land"
+    SER_decisions_buy_desc:0 "Buy land for state and military use."
+    
+    #SPIRITS
+    
+    SER_idea_Internal_Conflicts:0 "Internal Conflicts"
+    SER_idea_1838constitution:0 "1838 Constitution"
+    SER_idea_1838constitution_desc:0 "1838 Constitution of Serbia, also known as Turkish Constitution, is a constitution through which the Ottoman Empire shows that Serbia is subservient to it. It replaced Sretenje Constitution and Milos Obrenovic abdicated in favor of his son, Mihailo, because of it. This constitution is the foundation of the current government's regime."
+    SER_idea_1838constitution2:0 "Weakened 1838 Constitution"
+    SER_idea_1838constitution2_desc:0 "The Turkish Constitution has been weakened through smart diplomacy."
+    SER_idea_serbianarmy:0 "Serbian Army"
+    SER_idea_alliance:0 "The Balkan Alliance"
+    SER_idea_alliance_desc:0 "An alliance created by Serbia, Montenegro, Greece and Wallachia for the purpose of defeating the Ottomans and freeing their people from their rule."
+    
+    #CUSTOM EFFECT TOOLTIPS
+    
+    eoanb_tt_SER_obrenovic:0 "§HMilos Obrenovic §!becomes the leader of Serbia.\n§HObrenovic dynasty §!(Autocracy) becomes the rulling party." 
+    eoanb_tt_SER_blaznavac:0 "§HMilivoje Blaznavac §!becomes the head of state of Serbia.\n" 
+    
+    eoanb_tt_SER_alliance:0 "Serbia, Montenegro, Greece and Wallachia §Hcreate an alliance§! and §Hguarantee§! each other."
+    eoanb_tt_SER_withdrawal:0 "This focus will unlock §H2 new decisions§!."
+    eoanb_tt_SER_milosdies:0 "§HMihailo Obrenovic§! inherits the throne and becomes new Knez of Serbia."
+    
+    eoanb_tt_SER_focus_mobilization:0 "Mobilization Speed: §G+20% §! "
+    eoanb_tt_SER_focus_attack:0 "Division Attack: §G+10% §! "
+    eoanb_tt_SER_focus_defense:0 "Division Defense: §G+10% §! "
+    eoanb_tt_SER_moralefactor:0 "Division Recovery Rate: §G+10% §! "
+    eoanb_tt_SER_powergain:0 "Legislative Power Gain: §G+5% §! "
+    eoanb_tt_SER_factoryoutput:0 "Factory Output: §G+5% §! "
+    eoanb_tt_SER_factoryef:0 "Factory Efficiency: §G+5% §! "
+    eoanb_tt_SER_focus_resourcegain:0 "Resource Gain: §G+10% §! "
+    eoanb_tt_SER_focus_outofsupply:0 "Out Of Supply: §G-20% §! "

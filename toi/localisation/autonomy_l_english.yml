@@ -46,6 +46,7 @@
  EXPORT_FREEDOM_EFFECT:0 "Subject exporting to overlord"
  WAR_SCORE_FREEDOM_EFFECT:0 "Subject contributed war score"
  EFFECT_FREEDOM_EFFECT:0 "Subject received"
+ ACTIVE_ATTACHES_EFFECT:0 "Active Attaches"
  MASTER_SURRENDER_FREEDOM_EFFECT:0 "Master capitulated"
  MISSING_AUTONOMY_SCORE:0 "Need £autonomy_texticon $VAL|2Y$ more autonomy"
  TOO_MUCH_AUTONOMY_SCORE:0 "Has $VAL|2Y$ too much autonomy"

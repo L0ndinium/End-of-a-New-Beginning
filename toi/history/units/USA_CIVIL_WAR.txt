@@ -160,14 +160,49 @@ units = {
 	}
 	division= {	
 		name = "22nd Union Regimental"
-		location = 1806
+		location = 6803
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "23rd Union Regimental"
-		location = 7904
+		location = 7945
+		division_template = "Union Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "24th Union Regimental"
+		location = 8025
+		division_template = "Union Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "25th Union Regimental"
+		location = 11743
+		division_template = "Union Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "26th Union Regimental"
+		location = 4919
+		division_template = "Union Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "27th Union Regimental"
+		location = 3867
+		division_template = "Union Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "28th Union Regimental"
+		location = 12791
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1

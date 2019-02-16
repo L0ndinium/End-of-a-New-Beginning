@@ -266,7 +266,8 @@ focus_tree = {
 			focus = ofs_vic_continue_constitutional_reforms
 		}
 		available = {
-			has_war = no
+			#has_war = no
+			always = no
 		}
 		x = 7
 		y = 3
@@ -422,7 +423,16 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_economic_focus
 		}
+		available={
+			NOT = {
+				has_idea = ofs_recovering_economy
+			}
+		}
 		completion_reward = {
+			add_timed_idea = {
+				days = 90
+				idea = ofs_recovering_economy
+			}
 			random_owned_controlled_state = {
 				limit = {
 					NOT ={
@@ -472,7 +482,16 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_industrialising_our_nation
 		}
+		available={
+			NOT = {
+				has_idea = ofs_recovering_economy
+			}
+		}
 		completion_reward = {
+			add_timed_idea = {
+				days = 90
+				idea = ofs_recovering_economy
+			}
 			random_owned_controlled_state = {
 				limit = {
 					NOT ={
@@ -522,6 +541,11 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_begin_military_production
 		}
+		available={
+			NOT = {
+				has_idea = ofs_recovering_economy
+			}
+		}
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -532,6 +556,10 @@ focus_tree = {
 		x = 12
 		y = 3
 		completion_reward = {
+			add_timed_idea = {
+				days = 90
+				idea = ofs_recovering_economy
+			}
 			random_owned_controlled_state = {
 				limit = {
 					NOT ={
@@ -578,6 +606,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		available={
+			NOT = {
+				has_idea = ofs_recovering_economy
+			}
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = has_more_than_150k_pop	
@@ -586,6 +619,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_timed_idea = {
+				days = 90
+				idea = ofs_recovering_economy
+			}
 			random_owned_controlled_state = {
 				limit = {
 					NOT ={
@@ -870,11 +907,9 @@ focus_tree = {
 		id = ofs_vic_build_coal_mines
 		icon = GFX_goal_focus_coal_mines
 		cost = 70
+		dynamic =yes
 		prerequisite = {
 			focus = ofs_vic_invest_in_resource_discovery
-		}
-		allow_branch = {
-			has_country_flag = ofs_discovered_coal
 		}
 		available = {
 			has_country_flag = ofs_discovered_coal
@@ -901,11 +936,9 @@ focus_tree = {
 		id = ofs_vic_open_gold_mines
 		icon = GFX_nzl_goal_gold_otago
 		cost = 70
+		dynamic =yes
 		prerequisite = {
 			focus = ofs_vic_invest_in_resource_discovery
-		}
-		allow_branch = {
-			has_country_flag = ofs_discovered_gold
 		}
 		available = {
 			has_country_flag = ofs_discovered_gold
@@ -951,9 +984,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_invest_in_resource_discovery
 		}
-		allow_branch = {
-			has_country_flag = ofs_discovered_diamonds
-		}
+		dynamic =yes
 		available = {
 			has_country_flag = ofs_discovered_diamonds
 		}
@@ -1015,7 +1046,7 @@ focus_tree = {
 			factor = 1
 		}
 		x = 19
-		y = 4
+		y = 5
 		completion_reward = {
 			swap_ideas = {
 				add_idea = ofs_national_campbell_diamonds
@@ -1039,7 +1070,7 @@ focus_tree = {
 			factor = 1
 		}
 		x = 21
-		y = 4
+		y = 5
 		completion_reward = {
 			1149={
 				add_manpower = 500
@@ -1060,6 +1091,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_external_focus
 		}
+		dynamic =yes
 		available ={
 			TRV = {
 				exists = yes
@@ -1361,129 +1393,47 @@ focus_tree = {
 		prerequisite = {
 			focus = ofs_vic_external_focus
 		}
+		mutually_exclusive={
+			focus = ofs_vic_remain_isolated
+		}
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+		}
+		available={
+			custom_trigger_tooltip={
+				tooltip = ofs_vic_establish_diplomacy_with_the_west_no_britian
+				NOT={has_country_flag = britian_accepts_re_annexation}
+			}
 		}
 		x = 35
 		y = 1
 		completion_reward = {
-			add_political_power = 75
+			custom_effect_tooltip = OFS_western_diplomacy.desc
+			hidden_effect = {
+				set_country_flag = OFS_western_diplomacy
+			}
 		}
 
 	}
-	focus = {
-		id = ofs_vic_send_emissaries_to_the_netherlands
-		icon = GFX_goal_generic_improve_relations
+	focus =	{
+		id = ofs_vic_remain_isolated
+		icon = GFX_goal_focus_
 		cost = 70
-		prerequisite = {
+		mutually_exclusive={
 			focus = ofs_vic_establish_diplomacy_with_the_west
+		}
+		prerequisite = {
+			focus = ofs_vic_external_focus
 		}
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
-		}
-		completion_reward = {
-			HOL ={
-				country_event = {days = 8 id=boer_states.79}
-			}
 		}
 		x = 33
-		y = 2
-
-	}
-	focus = {
-		id = ofs_vic_send_emissaries_to_portugal
-		icon = GFX_goal_generic_improve_relations
-		cost = 70
-		prerequisite = {
-			focus = ofs_vic_establish_diplomacy_with_the_west
-		}
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
+		y = 1
 		completion_reward = {
-			POR ={
-				country_event = {days = 8 id=boer_states.79}
-			}
-		}
-		x = 35
-		y = 2
-
-	}
-	focus = {
-		id = ofs_vic_send_emissaries_to_the_USA
-		icon = GFX_goal_generic_improve_relations
-		cost = 70
-		prerequisite = {
-			focus = ofs_vic_establish_diplomacy_with_the_west
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			USA ={
-				country_event = {days = 8 id=boer_states.79}
-			}
-		}
-		available = {
-			USA = {
-				has_war = no
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		x = 37
-		y = 2
-
-	}
-	focus = {
-		id = ofs_vic_send_emissaries_to_germany
-		icon = GFX_goal_generic_improve_relations
-		cost = 70
-		prerequisite = {
-			focus = ofs_vic_send_emissaries_to_the_USA
-			focus = ofs_vic_send_emissaries_to_portugal
-			focus = ofs_vic_send_emissaries_to_the_netherlands
-		}
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			if={
-				limit = {
-					PRS = {
-						OR = {
-							has_cosmetic_tag = PRS_GER_liberal
-							has_cosmetic_tag = PRS_GER_bismarck
-							has_cosmetic_tag = PRS_GER_socialist
-						}
-					}
-				}
-				PRS ={
-					country_event = {days = 8 id=boer_states.79}
-				}
-			}
-			else={
-				GER ={
-					country_event = {days = 8 id=boer_states.79}
-				}
-			}
-		}
-		x = 35
-		y = 3
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = ofs_germany_exists
-				PRS = {
-					OR = {
-						has_cosmetic_tag = PRS_GER_liberal
-						has_cosmetic_tag = PRS_GER_bismarck
-						has_cosmetic_tag = PRS_GER_socialist
-					}
-				}
-			}
+			add_political_power = 75
 		}
 
 	}
@@ -1788,6 +1738,7 @@ focus_tree = {
 		y = 8
 		completion_reward = {
 			add_research_slot = 1
+			set_country_flag = ofs_research_foundation
 		}
 	}
 	focus = {
@@ -1937,15 +1888,15 @@ focus_tree = {
 			focus = ofs_vic_develop_independant_indentity
 		}
 		available_if_capitulated = no
-		#allow_branch = {
-		#	OR = {
-		#		owns_state = 841
-		#		owns_state = 1143
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				owns_state = 1142
+				owns_state = 1143
+			}
+		}
 		available={
 			OR = {
-				owns_state = 841
+				owns_state = 1142
 				owns_state = 1143
 			}
 		}
@@ -1973,7 +1924,7 @@ focus_tree = {
 		#	}
 		#}
 		available={
-			owns_state = 841
+			owns_state = 1142
 			841={
 				owner = {
 					NOT = {
@@ -2009,12 +1960,6 @@ focus_tree = {
 			focus = ofs_vic_exspand_influence_north
 		}
 		available_if_capitulated = no
-		#allow_branch = {
-		#	OR = {
-		#		owns_state = 841
-		#		owns_state = 1143
-		#	}
-		#}
 		available={
 			owns_state = 1143
 		}
@@ -2036,7 +1981,7 @@ focus_tree = {
 		icon = GFX_goal_focus_industrial_revolution
 		cost = 70
 		prerequisite = {
-			focus = ofs_vic_exspand_influence_north
+			focus = ofs_vic_influence_rhodesia
 		}
 		available_if_capitulated = no
 		#allow_branch = {
@@ -2070,6 +2015,10 @@ focus_tree = {
 		x = 31
 		y = 6
 		completion_reward = {
+			add_timed_idea={
+				idea = ofs_funding_rhodesian_industrialisation
+				days = 210
+			}
 			545={
 				add_building_construction = {
 					type = infrastructure
@@ -2110,6 +2059,14 @@ focus_tree = {
 					owns_state = 545
 				}
 			}
+			OR = {
+				has_idea = ofs_bluebacks
+				has_idea = ofs_bluebacks_valued
+				has_idea = ofs_bluebacks_heavly_valued
+			}
+			NOT={
+				has_idea = ofs_funding_rhodesian_industrialisation
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2117,6 +2074,10 @@ focus_tree = {
 		x = 30
 		y = 7
 		completion_reward = {
+			add_timed_idea={
+				idea = ofs_funding_rhodesian_industrialisation
+				days = 210
+			}
 			545={
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2155,6 +2116,14 @@ focus_tree = {
 					owns_state = 545
 				}
 			}
+			OR = {
+				has_idea = ofs_bluebacks
+				has_idea = ofs_bluebacks_valued
+				has_idea = ofs_bluebacks_heavly_valued
+			}
+			NOT={
+				has_idea = ofs_funding_rhodesian_industrialisation
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2162,6 +2131,10 @@ focus_tree = {
 		x = 32
 		y = 7
 		completion_reward = {
+			add_timed_idea={
+				idea = ofs_funding_rhodesian_industrialisation
+				days = 210
+			}
 			545={
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2200,6 +2173,14 @@ focus_tree = {
 				check_variable = {THIS.industrisation_progress > 74.9}
 				has_idea = afr_reforming_kingdom
 			}
+			OR = {
+				has_idea = ofs_bluebacks
+				has_idea = ofs_bluebacks_valued
+				has_idea = ofs_bluebacks_heavly_valued
+			}
+			NOT={
+				has_idea = ofs_funding_rhodesian_industrialisation
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2207,6 +2188,10 @@ focus_tree = {
 		x = 31
 		y = 8
 		completion_reward = {
+			add_timed_idea={
+				idea = ofs_funding_rhodesian_industrialisation
+				days = 210
+			}
 			545={
 				owner = {
 					custom_effect_tooltip = afr_become_industrialised

@@ -1,0 +1,38 @@
+ideas = {
+	hidden_ideas = {
+		AFR_opt_debuffs = {
+			allowed = {
+				original_tag = AFR
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+		
+			modifier = {
+				political_power_gain = -2
+				trade_opinion_factor = -999
+				justify_war_goal_time = 999
+				guarantee_cost = 999
+				license_purchase_cost = 999
+				military_leader_cost_factor = 999
+				ai_get_ally_desire_factor = -999
+				ai_join_ally_desire_factor = -999 
+				ai_focus_aggressive_factor = -999
+				conscription = -999
+				conscription_factor = -100
+				training_time_factor = 999
+				production_factory_max_efficiency_factor = -999
+				production_speed_buildings_factor = -999
+				consumer_goods_factor = 999
+				local_resources_factor = -999
+				global_building_slots_factor = -999
+				foreign_subversive_activites = -999
+				enemy_justify_war_goal_time = 999
+				autocracy_drift = 100
+			}
+		}
+	}
+}

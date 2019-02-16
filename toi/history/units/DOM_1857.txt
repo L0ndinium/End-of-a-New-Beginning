@@ -9,8 +9,15 @@
 
 units = {
 		division= {
-			name = "1st South American Infantry"
+			name = "1st Dominican Infantry"
 			location = 7660
+			division_template = "South American Infantry"
+			start_experience_factor = 0.1
+		}
+		
+		division= {
+			name = "1st Dominican Infantry"
+			location = 4598
 			division_template = "South American Infantry"
 			start_experience_factor = 0.1
 		}

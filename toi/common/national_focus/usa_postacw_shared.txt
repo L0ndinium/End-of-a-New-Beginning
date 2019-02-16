@@ -9,7 +9,7 @@
 				has_country_flag = USA_Civil_War_Avoided
 			}
 		}
-		x = 27
+		x = 29
 		y = 13
 		completion_reward = {
 			add_political_power = 25
@@ -22,7 +22,7 @@
 		prerequisite = {
 			focus = USA_foreign_diplomacy
 		}
-		x = 27
+		x = 29
 		y = 14
 		completion_reward = {
 			add_political_power = 25
@@ -41,7 +41,7 @@
 		prerequisite = {
 			focus = USA_foreign_diplomacy
 		}
-		x = 33
+		x = 37
 		y = 14
 		completion_reward = {
 			add_political_power = -25
@@ -57,7 +57,7 @@
 		bypass = {
 			SIX = { exists = no }
 		}
-		x = 31
+		x = 33
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -82,12 +82,12 @@
 		bypass = {
 			SIX = { exists = no }
 		}
-		x = 31
+		x = 33
 		y = 16
 		completion_reward = {
 			declare_war_on = {
 				target = SIX
-				type = take_claimed_state
+				type = annex_everything
 			}
 		}
 	}
@@ -101,7 +101,7 @@
 		bypass = {
 			CHY = { exists = no }
 		}
-		x = 33
+		x = 35
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -126,12 +126,12 @@
 		bypass = {
 			CHY = { exists = no }
 		}
-		x = 33
+		x = 35
 		y = 16
 		completion_reward = {
 			declare_war_on = {
 				target = CHY
-				type = take_claimed_state
+				type = annex_everything
 			}
 		}
 	}
@@ -145,7 +145,7 @@
 		bypass = {
 			NEZ = { exists = no }
 		}
-		x = 35
+		x = 37
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -170,12 +170,276 @@
 		bypass = {
 			NEZ = { exists = no }
 		}
-		x = 35
+		x = 37
 		y = 16
 		completion_reward = {
 			declare_war_on = {
 				target = NEZ
-				type = take_claimed_state
+				type = annex_everything
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_com
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 15
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			COM = { exists = no }
+		}
+		x = 39
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+				target = NEZ
+				modifier = usa_bad_relations
+			}
+			COM = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_attack_com
+		icon = GFX_goal_focus_imperialism
+		cost = 25
+		prerequisite = {
+			focus = USA_diplomacy_com
+		}
+		bypass = {
+			COM = { exists = no }
+		}
+		x = 39
+		y = 16
+		completion_reward = {
+			declare_war_on = {
+				target = COM
+				type = annex_everything
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_nav
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 15
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			NAV = { exists = no }
+		}
+		x = 38
+		y = 17
+		completion_reward = {
+			add_opinion_modifier = {
+				target = NAV
+				modifier = usa_bad_relations
+			}
+			NAV = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_attack_nav
+		icon = GFX_goal_anschluss
+		cost = 25
+		prerequisite = {
+			focus = USA_diplomacy_nav
+		}
+		bypass = {
+			NAV = { exists = no }
+		}
+		x = 38
+		y = 18
+		completion_reward = {
+			declare_war_on = {
+				target = NAV
+				type = annex_everything
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_apa
+		icon = GFX_goal_generic_defence
+		cost = 15
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			APA = { exists = no }
+		}
+		x = 36
+		y = 17
+		completion_reward = {
+			add_opinion_modifier = {
+				target = APA
+				modifier = usa_bad_relations
+			}
+			APA = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_attack_apa
+		icon = GFX_goal_generic_political_pressure
+		cost = 25
+		prerequisite = {
+			focus = USA_diplomacy_apa
+		}
+		bypass = {
+			APA = { exists = no }
+		}
+		x = 36
+		y = 18
+		completion_reward = {
+			declare_war_on = {
+				target = APA
+				type = annex_everything
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_sho
+		icon = GFX_goal_tripartite_pact
+		cost = 15
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			SHO = { exists = no }
+		}
+		x = 34
+		y = 17
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SHO
+				modifier = usa_bad_relations
+			}
+			SHO = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_attack_sho
+		icon = GFX_goal_generic_small_arms
+		cost = 25
+		prerequisite = {
+			focus = USA_diplomacy_sho
+		}
+		bypass = {
+			SHO = { exists = no }
+		}
+		x = 34
+		y = 18
+		completion_reward = {
+			declare_war_on = {
+				target = SHO
+				type = annex_everything
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_crw
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 15
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			CRW = { exists = no }
+		}
+		x = 40
+		y = 17
+		completion_reward = {
+			add_opinion_modifier = {
+				target = CRW
+				modifier = usa_bad_relations
+			}
+			CRW = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_attack_crw
+		icon = GFX_goal_generic_army_artillery
+		cost = 25
+		prerequisite = {
+			focus = USA_diplomacy_crw
+		}
+		bypass = {
+			CRW = { exists = no }
+		}
+		x = 40
+		y = 18
+		completion_reward = {
+			declare_war_on = {
+				target = CRW
+				type = annex_everything
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_bft
+		icon = GFX_goal_continuous_suppression
+		cost = 15
+		prerequisite = {
+			focus = USA_diplomacy_natives
+		}
+		bypass = {
+			BFT = { exists = no }
+		}
+		x = 41
+		y = 15
+		completion_reward = {
+			add_opinion_modifier = {
+				target = BFT
+				modifier = usa_bad_relations
+			}
+			BFT = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_bad_relations
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_attack_bft
+		icon = GFX_goal_generic_army_artillery2
+		cost = 25
+		prerequisite = {
+			focus = USA_diplomacy_bft
+		}
+		bypass = {
+			BFT = { exists = no }
+		}
+		x = 41
+		y = 16
+		completion_reward = {
+			declare_war_on = {
+				target = BFT
+				type = annex_everything
 			}
 		}
 	}
@@ -187,6 +451,12 @@
 			focus = USA_diplomacy_attack_sioux
 			focus = USA_diplomacy_attack_cheyenne
 			focus = USA_diplomacy_attack_nez
+			focus = USA_diplomacy_attack_com
+			focus = USA_diplomacy_attack_bft
+			focus = USA_diplomacy_attack_sho
+			focus = USA_diplomacy_attack_apa
+			focus = USA_diplomacy_attack_nav
+			focus = USA_diplomacy_attack_crw
 		}
 		bypass = {
 			SEM = { exists = no }
@@ -196,8 +466,8 @@
 				is_neighbor_of = SEM
 			}
 		}
-		x = 31
-		y = 17
+		x = 34
+		y = 19
 		completion_reward = {
 			declare_war_on = {
 				target = SEM
@@ -212,15 +482,21 @@
 		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 70
 		prerequisite = {
-			focus = USA_diplomacy_attack_nez
-			focus = USA_diplomacy_attack_cheyenne
 			focus = USA_diplomacy_attack_sioux
+			focus = USA_diplomacy_attack_cheyenne
+			focus = USA_diplomacy_attack_nez
+			focus = USA_diplomacy_attack_com
+			focus = USA_diplomacy_attack_bft
+			focus = USA_diplomacy_attack_sho
+			focus = USA_diplomacy_attack_apa
+			focus = USA_diplomacy_attack_nav
+			focus = USA_diplomacy_attack_crw
 		}
 		bypass = {
 			UTA = { exists = no }
 		}
-		x = 35
-		y = 17
+		x = 40
+		y = 19
 		completion_reward = {
 			declare_war_on = {
 				target = UTA
@@ -241,15 +517,39 @@
 		prerequisite = {
 			focus = USA_diplomacy_attack_nez
 		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_com
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_bft
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_sho
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_apa
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_nav
+		}
+		prerequisite = {
+			focus = USA_diplomacy_attack_crw
+		}
 		available = {
 			AND = {
 				SIX = { exists = no }
 				CHY = { exists = no }
 				NEZ = { exists = no }
+				COM = { exists = no }
+				BFT = { exists = no }
+				SHO = { exists = no }
+				APA = { exists = no }
+				NAV = { exists = no }
+				CRW = { exists = no }
 			}
 		}
-		x = 33
-		y = 17
+		x = 37
+		y = 19
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -261,7 +561,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_monroe
 		}
-		x = 25
+		x = 27
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -283,7 +583,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_mexico
 		}
-		x = 25
+		x = 27
 		y = 16
 		completion_reward = {
 			MEX = { country_event = { id = usa.63 } }
@@ -296,7 +596,7 @@
 		prerequisite = {
 			focus = USA_foreign_diplomacy
 		}
-		x = 21
+		x = 23
 		y = 14
 		completion_reward = {
 			add_political_power = 25
@@ -309,7 +609,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_europe
 		}
-		x = 21
+		x = 23
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -343,7 +643,7 @@
 				USA = { has_war_with = ENG }
 			}
 		}
-		x = 21
+		x = 23
 		y = 16
 		completion_reward = {
 			country_event = { id = usa.27 }
@@ -357,7 +657,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_europe
 		}
-		x = 19
+		x = 21
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -380,12 +680,39 @@
 			focus = USA_diplomacy_russia
 		}
 		available = {
-			463 = { is_owned_by = RUS }
+			NOT = { owns_state = 463 }
 		}
-		x = 19
+		bypass = {
+			owns_state = 463
+		}
+		x = 21
 		y = 16
 		completion_reward = {
 			country_event = { id = usa.40 }
+		}
+	}
+	shared_focus = {
+		id = USA_diplomacy_greenland
+		icon = GFX_goal_focus_imperialism
+		cost = 35
+		prerequisite = {
+			focus = USA_diplomacy_alaska
+		}
+		available = {
+			owns_state = 463
+			OR = {
+				NOT = {
+					owns_state = 101
+				}
+				NOT = {
+					owns_state = 100
+				}
+			}
+		}
+		x = 19
+		y = 17
+		completion_reward = {
+			country_event = { id = usa.146 }
 		}
 	}
 	shared_focus = {
@@ -395,7 +722,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_europe
 		}
-		x = 23
+		x = 25
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -417,7 +744,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_france
 		}
-		x = 23
+		x = 25
 		y = 16
 		completion_reward = {
 			FRA = { country_event = { id = usa.63 } }
@@ -430,7 +757,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_monroe
 		}
-		x = 27
+		x = 29
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -452,7 +779,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_monroe
 		}
-		x = 29
+		x = 31
 		y = 15
 		completion_reward = {
 			add_opinion_modifier = {
@@ -477,7 +804,7 @@
 		mutually_exclusive = {
 			focus = USA_diplomacy_conservatives
 		}
-		x = 25
+		x = 27
 		y = 17
 		completion_reward = {
 			MEX = { country_event = { id = usa.60 } }
@@ -493,7 +820,7 @@
 		mutually_exclusive = {
 			focus = USA_diplomacy_liberals
 		}
-		x = 23
+		x = 25
 		y = 17
 		completion_reward = {
 			FRA = { country_event = { id = usa.60 } }
@@ -506,7 +833,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_brazil
 		}
-		x = 27
+		x = 29
 		y = 16
 		completion_reward = {
 			custom_effect_tooltip = USA_Brazil_trade
@@ -531,7 +858,7 @@
 		prerequisite = {
 			focus = USA_diplomacy_argentina
 		}
-		x = 29
+		x = 31
 		y = 16
 		completion_reward = {
 			ARG = {
@@ -572,7 +899,7 @@
 		mutually_exclusive = {
 			focus = USA_diplomacy_pick_argentina
 		}
-		x = 27
+		x = 29
 		y = 17
 		completion_reward = {
 			BRA = { country_event = { id = usa.63 } }
@@ -588,7 +915,7 @@
 		mutually_exclusive = {
 			focus = USA_diplomacy_pick_brazil
 		}
-		x = 29
+		x = 31
 		y = 17
 		completion_reward = {
 			ARG = { country_event = { id = usa.63 } }
@@ -619,7 +946,7 @@
 				}
 			}
 		}
-		x = 21
+		x = 23
 		y = 17
 		completion_reward = {
 			country_event = { id = usa.61 }
@@ -652,7 +979,7 @@
 				}
 			}
 		}
-		x = 19
+		x = 21
 		y = 17
 		completion_reward = {
 			RUS = { country_event = { id = usa.63 } }

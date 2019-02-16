@@ -1,4 +1,4 @@
-add_namespace = two_sicilies
+﻿add_namespace = two_sicilies
 
 #1860 Elections
 country_event = {

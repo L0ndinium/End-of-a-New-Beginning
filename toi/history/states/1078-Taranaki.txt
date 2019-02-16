@@ -2,6 +2,9 @@ state={
 	id=1078
 	name="STATE_1078" # Taranaki
 	manpower = 10480#
+	resources={
+		wood = 4
+	}
 	
 	state_category = rural
 	

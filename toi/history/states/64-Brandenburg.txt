@@ -29,11 +29,14 @@ state={
 			6487 1 
 		}
 		victory_points = {
+			9496 1 
+		}
+		victory_points = {
 			11402 5
 		}
 		buildings = {
 			infrastructure = 5
-			arms_factory = 1
+			arms_factory = 3
 			industrial_complex = 1
 			fabric_weavery = 1
 			3522 = {

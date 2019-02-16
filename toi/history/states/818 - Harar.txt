@@ -6,6 +6,8 @@ state=
 	
 	state_category = rural
 	resources={
+		cotton = 3
+		wood = 1
 	}	
 	
 

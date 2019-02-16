@@ -9,7 +9,7 @@
 
 #######################################################################
 
-country_event = { #Truce with South African Republic
+country_event = { #TRV - Truce with South African Republic
 	id = boer_states.1
 	title = boer_states.1.t
 	desc = boer_states.1.d
@@ -17,33 +17,29 @@ country_event = { #Truce with South African Republic
 	fire_only_once = yes
 	
 	trigger = {
-		TAG = OFS
-		OFS = { has_war_with = TRV }
+		TAG = TRV
+		has_war_with = OFS
 		OR = {
-			date > 1858.1.1
-			AND = {
-				date > 1857.11.1
-				OR = {
-					TRV= {surrender_progress > 0.15}
-				}
-			}
+			date > 1857.6.2
+			surrender_progress > 0.15
 		}
 	}
 		
 	option = {
-		name = boer_states.1.a
+		name = boer_states.1.a##give in
 		ai_chance = { factor = 100 }
-		custom_effect_tooltip = OFS_TRV_Truce
-		hidden_effect = { white_peace = TRV }
+		OFS={country_event={id=boer_states.91}}
+		#custom_effect_tooltip = OFS_TRV_Truce
+		#hidden_effect = { white_peace = TRV }
 	}
 		
-	option = {
+	option = {##fight on
 		name = boer_states.1.b
 		ai_chance = { factor = 0 }
 	}
 }
 
-country_event = { #War on SAF
+country_event = { #War on OFS- imprisoned our loyalists
 	id = boer_states.2
 	title = boer_states.2.t
 	desc = boer_states.2.d
@@ -52,12 +48,17 @@ country_event = { #War on SAF
 		
 	trigger = {
 		TAG = TRV
-		date > 1857.6.26
+		date > 1857.5.26
 	}
 		
-	option = {
+	option = {# invade them
 		name = boer_states.2.a
 		declare_war_on = { target = OFS type = annex_everything }
+		set_country_flag = TRV_OFS_war
+	}
+	option = {
+		name = boer_states.2.b
+		add_political_power = -50
 	}
 }
 
@@ -87,7 +88,26 @@ country_event = { # OFS - Boshoff Resigns !
 country_event = { # OFS - The Presidency of Pretorius
 	id = boer_states.4
 	title = boer_states.4.t
-	desc = boer_states.4.d
+	desc = {
+		text = boer_states.4.d
+		trigger = {
+			TRV={
+				exists = yes
+				has_country_leader = {
+					name = "Marthinus Wessel Pretorius"
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = boer_states.4.d2
+		trigger = {
+			TRV={
+				exists =no
+			}
+		}
+	}
 		
 	fire_only_once = yes
 		
@@ -99,6 +119,36 @@ country_event = { # OFS - The Presidency of Pretorius
 		
 	option = { # Isn't he the president of the South African Republic already ?
 		name = boer_states.4.a
+		trigger={
+			TRV={
+				exists = yes
+				has_country_leader = {
+					name = "Marthinus Wessel Pretorius"
+					ruling_only = yes
+				}
+			}
+		}
+		create_country_leader = {
+			name = "Marthinus Wessel Pretorius"
+			picture = "Portrait_OFS_Marthinus_Wessel_Pretorius.dds"
+			ideology = conserv
+		}
+	}
+	option = { # He will make a fine leader
+		name = boer_states.4.b
+		trigger={
+			TRV={
+				OR={
+					exists = no
+					NOT={
+						has_country_leader = {
+							name = "Marthinus Wessel Pretorius"
+							ruling_only = yes
+						}
+					}
+				}
+			}
+		}
 		create_country_leader = {
 			name = "Marthinus Wessel Pretorius"
 			picture = "Portrait_OFS_Marthinus_Wessel_Pretorius.dds"
@@ -119,6 +169,14 @@ country_event = { # OFS - Pretorius left the Orange Free State !
 		date > 1863.3.18
 		TRV= {
 			exists = yes
+			has_country_leader = {
+				name = "Marthinus Wessel Pretorius"
+				ruling_only = yes
+			}
+		}
+		has_country_leader = {
+			name = "Marthinus Wessel Pretorius"
+			ruling_only = yes
 		}
 	}
 		
@@ -1506,6 +1564,7 @@ country_event = { #diamonds discovered in the campbell state
 		set_country_flag = ofs_discovered_diamonds
 		if = {
 			limit = {
+				GQW = {exists = yes}
 				1149={
 					is_core_of = GQW
 				}
@@ -1686,7 +1745,10 @@ news_event = { # Anglo - Freestate War
 			}
 			if = {
 				limit = {
-					has_completed_focus = ofs_vic_send_emissaries_to_germany
+					OR={
+						PRS = {has_country_flag = recognised_ofs}
+						GER = {has_country_flag = recognised_ofs}
+					}
 				}
 				country_event = {id = boer_states.61 days = 5}# request GER abratration
 			}
@@ -2281,7 +2343,7 @@ country_event = { #boers demand submition
 				has_completed_focus = afr_wes_govermental_westernisation
 			}
 		}
-		puppet = FROM
+		FROM = {puppet = PREV}
 	}
 	option = {
 		name = boer_states.83.b #refuse
@@ -2451,5 +2513,70 @@ country_event = { #GQE - ask britian for protection
 	option = {
 		name = boer_states.87.a #no, we value our autonomy
 		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { #question of church and state
+	id = boer_states.90
+	title = boer_states.90.t
+	desc = boer_states.90.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.90.a #they must be joined
+		ai_chance = { factor = 50 }
+		set_country_flag = trv_settled_church_question
+	}
+	option = {
+		name = boer_states.90.b #there must be seperation
+		ai_chance = { factor = 50 }
+		set_country_flag = trv_settled_church_question
+		swap_ideas={
+			add_idea = secular_state
+			remove_idea = state_religion
+		}
+		add_ideas={
+			trv_idea_annoyed_church
+		}
+	}
+}
+country_event = { #OFS - TRV backs down
+	id = boer_states.91
+	title = boer_states.91.t
+	desc = boer_states.91.d
+		
+	is_triggered_only = yes
+		
+	option = {#Accept their proposal
+		name = boer_states.91.a
+		ai_chance = { factor = 100 }
+		
+		custom_effect_tooltip = OFS_TRV_Truce
+		hidden_effect = { white_peace = TRV }
+	}
+		
+	option = {##pursue them
+		name = boer_states.91.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.12
+	}
+}
+
+country_event = { #our british policy
+	id = boer_states.92
+	title = boer_states.92.t
+	desc = boer_states.92.d
+	
+	is_triggered_only=yes
+	option = {
+		name = boer_states.92.a #remain in the british sphere
+		ai_chance = { factor = 50 }
+		set_country_flag = trv_british_loyalty
+	}
+	option = {
+		name = boer_states.92.b #there must be seperation
+		ai_chance = { factor = 50 }
+		set_country_flag = trv_ignore_british
+		
 	}
 }

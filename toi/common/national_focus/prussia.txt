@@ -14,7 +14,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_Economy
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_focus_prussian_economy
 		x = 6
 		y = 0
 		cost = 70
@@ -136,7 +136,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_berlin_anhalt_rail
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_focus_berlin_anhalt_rail
 		x = 3
 		y = 2
 		cost = 70
@@ -152,17 +152,22 @@ focus_tree = {
 			} 
 		}
 		bypass = {
-			60 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+			OR = {
+				AND = {
+					60 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					64 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
 				}
-			}
-			64 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
-				}
+				has_completed_focus = PRS_focus_socialism_rise
 			}
 		}
 		
@@ -193,35 +198,40 @@ focus_tree = {
 			} 
 		}
 		bypass = {
-			5 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+			OR = {
+				AND = {
+					5 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					63 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					64 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					68 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					85 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
 				}
-			}
-			63 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
-				}
-			}
-			64 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
-				}
-			}
-			68 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
-				}
-			}
-			85 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
-				}
+				has_completed_focus = PRS_focus_socialism_rise
 			}
 		}
 		
@@ -252,17 +262,22 @@ focus_tree = {
 			} 
 		}
 		bypass = {
-			66 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+			OR = {
+				AND = {
+					66 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					67 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
 				}
-			}
-			67 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
-				}
+				has_completed_focus = PRS_focus_socialism_rise
 			}
 		}
 		
@@ -290,17 +305,22 @@ focus_tree = {
 			} 
 		}
 		bypass = {
-			56 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
+			OR = {
+				AND = {
+					56 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
+					57 = {
+						free_building_slots = { 
+							building = infrastructure 
+							size < 1
+						}
+					}
 				}
-			}
-			57 = {
-				free_building_slots = { 
-					building = infrastructure 
-					size < 1
-				}
+				has_completed_focus = PRS_focus_socialism_rise
 			}
 		}
 		
@@ -329,7 +349,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_rheinland_steel
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_focus_prussia_rhineland_industry
 		x = 5
 		y = 2
 		cost = 70
@@ -351,7 +371,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_silesian_steel
-		icon = GFX_goal_generic_production2
+		icon = GFX_goal_focus_prussia_silesian_steel
 		x = 5
 		y = 3
 		cost = 70
@@ -432,13 +452,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_spandau_arsenal }
 		available = { 
 			PRS = { 
-				controls_state = 85
+				controls_state = 1002
 			} 
 		}
 		
 		completion_reward = {
-			85 = { add_extra_state_shared_building_slots = 1 }
-			85 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			1002 = { add_extra_state_shared_building_slots = 1 }
+			1002 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -484,7 +504,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_handelsgesetz_law
-		icon = GFX_goal_generic_trade
+		icon = GFX_goal_focus_handelsgesetz_law
 		x = 9
 		y = 1
 		cost = 70
@@ -501,7 +521,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_paris_declare_marlaw
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_goal_focus_prussia_paris_declaration
 		x = 9
 		y = 2
 		cost = 70
@@ -518,7 +538,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_trade_france_focus
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_focus_trade_france_focus
 		x = 9
 		y = 3
 		cost = 70
@@ -540,7 +560,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_make_big_city
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_goal_focus_city_development
 		x = 11
 		y = 1
 		cost = 70
@@ -557,7 +577,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_berlin_factory_focus
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_focus_develop_cities_berlin
 		x = 11
 		y = 2
 		cost = 70
@@ -568,13 +588,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_make_big_city }
 		available = { 
 			PRS = { 
-				controls_state = 64
+				controls_state = 951
 			} 
 		}
 		
 		completion_reward = {
-			64 = { add_extra_state_shared_building_slots = 1 }
-			64 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			951 = { add_extra_state_shared_building_slots = 1 }
+			951 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -591,13 +611,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_berlin_factory_focus }
 		available = { 
 			PRS = { 
-				controls_state = 85
+				controls_state = 1002
 			} 
 		}
 		
 		completion_reward = {
-			85 = { add_extra_state_shared_building_slots = 1 }
-			85 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			1002 = { add_extra_state_shared_building_slots = 1 }
+			1002 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -614,13 +634,13 @@ focus_tree = {
 		prerequisite = { focus = PRS_danzig_factory_focus }
 		available = { 
 			PRS = { 
-				controls_state = 62
+				controls_state = 63
 			} 
 		}
 		
 		completion_reward = {
-			62 = { add_extra_state_shared_building_slots = 1 }
-			62 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			63 = { add_extra_state_shared_building_slots = 1 }
+			63 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 		}
 	}
 	
@@ -681,7 +701,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_manteuffel_reform
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_focus_prussia_reform
 		x = 15
 		y = 2
 		cost = 70
@@ -715,7 +735,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_minister_albrecht
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_goal_focus_prussia_war_ministers
 		x = 17
 		y = 2
 		cost = 70
@@ -784,7 +804,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_minister_moltke
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_goal_focus_prussia_von_moltke
 		x = 18
 		y = 4
 		cost = 70
@@ -800,7 +820,9 @@ focus_tree = {
 				create_corps_commander = {
 					name = "General von Moltke"
 					picture = "Portrait_PRS_Helmuth_Karl_Bernhard_von_Moltke.dds"
-					traits = { } 
+					traits = {
+						PRS_prussian_general
+					} 
 					skill = 5
 					attack_skill = 2
 					defense_skill = 2
@@ -2517,7 +2539,6 @@ focus_tree = {
 		
 		completion_reward = {
 			add_war_support = 0.1
-			add_offsite_building = { type = arms_factory level = 1 }
 		}
 	}
 	
@@ -2566,6 +2587,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_aussenpolitik }
+		bypass = {
+			AUS = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = AUS modifier = eoanb_om_PRS_NGC_improved }
@@ -2584,6 +2608,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_befriend_aus }
+		bypass = {
+			PRS_trigger_formed_germany = yes
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_PRS_focus_ngc_friendsouth
@@ -2611,6 +2638,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_aussenpolitik }
+		bypass = {
+			ENG = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = ENG modifier = eoanb_om_PRS_NGC_improved }
@@ -2629,6 +2659,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_ngc_befriend_eng }
+		bypass = {
+			RUS = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = RUS modifier = eoanb_om_PRS_NGC_improved }
@@ -2954,6 +2987,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_foreign_politics_europe }
+		bypass = {
+			AUS = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = AUS modifier = eoanb_om_PRS_focus_like }
@@ -2972,6 +3008,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = PRS_focus_foreign_politics_europe }
+		bypass = {
+			SWI = { exists = no }
+		}
 		
 		completion_reward = {
 			add_opinion_modifier = { target = SWI modifier = eoanb_om_PRS_focus_like }

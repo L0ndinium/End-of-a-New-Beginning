@@ -352,7 +352,13 @@ country_event = {
 	
 	option = {
 		name = secschwar.12.a
-		ai_chance = { factor = 1 }
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		AUS = { country_event = { days = 1 id = secschwar.13 } }
 		set_global_flag = eoanb_flag_PRS_supported_russel
 		custom_effect_tooltip = eoanb_tt_event_secschwar_12
@@ -368,7 +374,13 @@ country_event = {
 	
 	option = {
 		name = secschwar.12.c
-		ai_chance = { factor = 10 }
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		AUS = { country_event = { days = 1 id = secschwar.13 } }
 		set_global_flag = eoanb_flag_PRS_supported_GER_conf
 		custom_effect_tooltip = eoanb_tt_event_secschwar_14
@@ -386,7 +398,13 @@ country_event = {
 	
 	option = {
 		name = secschwar.13.a
-		ai_chance = { factor = 1 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		DEN = { country_event = { days = 1 id = secschwar.14 } }
 		set_global_flag = eoanb_flag_AUS_supported_russel
 		custom_effect_tooltip = eoanb_tt_event_secschwar_12
@@ -394,7 +412,13 @@ country_event = {
 	
 	option = {
 		name = secschwar.13.b
-		ai_chance = { factor = 10 }
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		DEN = { country_event = { days = 1 id = secschwar.14 } }
 		set_global_flag = eoanb_flag_AUS_supported_bismarck
 		custom_effect_tooltip = eoanb_tt_event_secschwar_13
@@ -477,7 +501,13 @@ country_event = {
 	
 	option = {
 		name = secschwar.14.b
-		ai_chance = { factor = 1 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		set_global_flag = eoanb_flag_DEN_supported_bismarck
 		custom_effect_tooltip = eoanb_tt_event_secschwar_13
 		hidden_effect = {
@@ -534,7 +564,13 @@ country_event = {
 	
 	option = {
 		name = secschwar.14.c
-		ai_chance = { factor = 10 }
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 		set_global_flag = eoanb_flag_DEN_supported_GER_conf
 		custom_effect_tooltip = eoanb_tt_event_secschwar_14
 		hidden_effect = {

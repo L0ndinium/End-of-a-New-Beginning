@@ -258,55 +258,13 @@ units = {
 	}
 	division= {	
 		name = "36th Confederate Regimental"
-		location = 12624
-		division_template = "Confederate Regimental"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division= {	
-		name = "37th Confederate Regimental"
-		location = 9908
-		division_template = "Confederate Regimental"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division= {	
-		name = "38th Confederate Regimental"
-		location = 12893
-		division_template = "Confederate Regimental"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division= {	
-		name = "39th Confederate Regimental"
-		location = 9773
-		division_template = "Confederate Regimental"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division= {	
-		name = "40th Confederate Regimental"
-		location = 1998
-		division_template = "Confederate Regimental"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division= {	
-		name = "41st Confederate Regimental"
-		location = 4955
-		division_template = "Confederate Regimental"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division= {	
-		name = "42nd Confederate Regimental"
 		location = 10894
 		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "43rd Confederate Regimental"
+		name = "37th Confederate Regimental"
 		location = 10740
 		division_template = "Confederate Regimental"
 		start_experience_factor = 0.1

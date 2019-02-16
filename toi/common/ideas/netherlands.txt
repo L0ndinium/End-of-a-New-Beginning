@@ -1,0 +1,412 @@
+ideas = {
+    country = {
+		HOL_idea_treaty_of_london = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+			
+			modifier = {
+				war_support_factor = -0.35
+				political_power_gain = -0.3
+				consumer_goods_factor = 0.05
+			}
+		}
+		HOL_idea_loss_belgium = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+			
+			targeted_modifier = { tag = BEL attack_bonus_against = -0.1 }
+			targeted_modifier = { tag = BEL defense_bonus_against = -0.1 }
+			
+			modifier = {
+				generate_wargoal_tension = 0.4
+			}
+		}
+		HOL_idea_tiendaagse_veldtocht = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+
+			targeted_modifier = { tag = FRA attack_bonus_against = -0.1 }
+			targeted_modifier = { tag = FRA defense_bonus_against = -0.1 }
+			
+			modifier = {
+				generate_wargoal_tension = 0.4
+				planning_speed = -0.2
+				army_morale_factor = -0.1
+				minimum_training_level = 0.2
+			}
+		}
+		HOL_idea_dutch_trading = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+
+			targeted_modifier = { tag = BEL trade_opinion_factor = 0.05 }
+			targeted_modifier = { tag = LUX trade_opinion_factor = 0.05 }
+			targeted_modifier = { tag = FRA trade_opinion_factor = 0.05 }
+			targeted_modifier = { tag = PRS trade_opinion_factor = 0.05 }
+			targeted_modifier = { tag = ENG trade_opinion_factor = 0.05 }
+			
+			modifier = {
+				trade_opinion_factor = 0.2
+			}
+		}
+		HOL_idea_rise_steamtrain = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		HOL_idea_rise_steamtrain_1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+			
+			modifier = {
+				consumer_goods_factor = 0.01
+				production_speed_infrastructure_factor = 0.2
+				army_speed_factor = 0.02
+			}
+		}
+
+		HOL_idea_will_industrialize = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ENG_poor_worker_conditions
+			
+			modifier = {
+				political_power_gain = -0.035
+				stability_factor = -0.05
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+				production_speed_infrastructure_factor = -0.05
+			}
+		}
+
+		HOL_idea_will_industrialize_1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = 0.025
+				stability_factor = 0.05
+				production_speed_industrial_complex_factor = 0.03
+				production_speed_arms_factory_factor = 0.03
+				production_speed_infrastructure_factor = 0.03
+			}
+		}
+
+		HOL_idea_will_industrialize_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = BEL_treaty_of_london
+			
+			modifier = {
+				consumer_goods_factor = 0.07
+				political_power_gain = 0.025
+				stability_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+	}
+
+	### DESIGNERS ###
+
+	naval_manufacturer = {
+
+		designer = yes
+
+		eoanb_HOL_naval_Fijenoord = {
+			
+			picture = generic_naval_manufacturer_2
+
+			allowed = { original_tag = HOL }
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+			
+			traits = { eoanb_naval_manufacturer_light }
+		}
+	}
+	
+	industrial_concern = {
+		eoanb_HOL_Philips = {
+
+			picture = generic_electronics_concern_3
+
+			allowed = { original_tag = HOL }
+
+			available = { has_completed_focus = HOL_philips }
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				electronics_devices_tech = 0.1
+			}
+
+			traits = { electronics_concern_3 }
+		}
+
+		eoanb_HOL_Shell = {
+
+			picture = generic_industrial_concern_2
+
+		    allowed = { original_tag = HOL }
+
+		    available = { has_completed_focus = HOL_shell }
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				biochemistry_tech = 0.1
+			}
+
+			traits = { electronics_concern_2 }
+		}
+
+		eoanb_HOL_staats_spoorwegen = {
+
+			picture = generic_industrial_concern_1
+
+		    allowed = { original_tag = HOL }
+
+		    available = { has_completed_focus = HOL_staats_spoorwegen }
+
+			cost = 150
+			removal_cost = 10
+
+			research_bonus = {
+				mechanical_engineering = 0.1
+			}
+
+			traits = { industrial_concern_1 }
+		}
+	}
+
+		### MINISTERS ###
+	political_advisor = {
+
+		HOL_A_Vrolik = {
+
+		    allowed = { original_tag = HOL }
+
+			traits = { 
+				captain_of_industry_1
+				traditional_conservatism_alignment
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		eoanb_HOL_Thorbecke = {
+
+		    allowed = { original_tag = HOL }
+			
+			traits = { 
+				eoanb_trait_pol_author
+			 	centrism_alignment
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		HOL_H_Forstner = {
+
+			allowed = {
+				original_tag = HOL
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = tt_idea_HOL_war_minister_1857
+				}
+				hidden_trigger = {
+						has_completed_focus = HOL_ministry_war_budget
+					 NOT = {
+						has_completed_focus = HOL_replace_forstner
+					}
+				}
+			}
+			
+			traits = { 
+				war_industrialist_1 
+				traditional_conservatism_alignment
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		HOL_C_Meurs = {
+
+			allowed = {
+				original_tag = HOL
+			}
+			
+			traits = { 
+				war_industrialist_1 
+				neutral_party
+			}
+			
+			available = {
+			custom_trigger_tooltip = {
+					tooltip = tt_idea_HOL_war_minister_1857
+				}
+				hidden_trigger = {
+						has_completed_focus = HOL_ministry_war_budget
+					 NOT = {
+						has_completed_focus = HOL_keep_forstner
+					}
+				}
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		HOL_advisor_pieter_philip_van_bosse = {
+
+			allowed = {
+				original_tag = HOL
+			}
+
+			picture = HOL_advisor_pieter_philip_van_bosse
+			
+			traits = { 
+				efficient_administrator
+				social_egalitarianism_alignment
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+   	}
+
+   	### HIGH COMMAND ###
+   	high_command = {
+
+   		HOL_abraham_jacobus_frederik_egter_van_wissekerke = {
+
+   			allowed = { original_tag = HOL }
+
+   			picture = HOL_abraham_jacobus_frederik_egter_van_wissekerke
+
+   			traits = { army_artillery_1 }
+
+   			ai_will_do = {
+				factor = 1
+			}
+   		}
+
+   		HOL_advisor_johannes_willem_bergansius_advisor = {
+
+   			allowed = { original_tag = HOL }
+
+   			picture = HOL_advisor_johannes_willem_bergansius_advisor
+
+   			traits = { eoanb_trait_high_rank_vrc }
+
+   			ai_will_do = {
+				factor = 1
+			}
+   		}
+
+   	}
+}

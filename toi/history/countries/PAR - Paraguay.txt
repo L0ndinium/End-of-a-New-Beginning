@@ -105,7 +105,7 @@ create_country_leader = {
     ideology = tropical
 }
 
-create_corps_commander {
+create_field_marshal {
   name = "Francisco Solano López"
   picture = "Portrait_PAR_Francisco_Antonio_Lopez.dds"
   traits = { }

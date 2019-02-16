@@ -11,15 +11,18 @@ country_event = {
   option = { 
     name = brazil.1.a
     BRA = {
-	add_ideas = BRA_anglo_brazilian_research_treaty
+	add_timed_idea = { 
+	idea = BRA_anglo_brazilian_research_treaty
+	days = 100
   }
-  add_ideas = BRA_anglo_brazilian_research_treaty
+  }
   }
   option = { 
     name = brazil.1.b
     add_political_power = 50
     BRA = { country_event = brazil.2 }
   }
+
 }
 
 country_event = { 
@@ -48,9 +51,11 @@ country_event = {
   option = { 
     name = brazil.3.a
     BRA = {
-	add_ideas = BRA_franco_brazilian_economic_treaty
+	add_timed_idea = { 
+	idea = BRA_franco_brazilian_economic_treaty
+	days = 100
   }
-  add_ideas = BRA_franco_brazilian_economic_treaty
+  }
   }
   option = { 
     name = brazil.3.b
@@ -97,7 +102,7 @@ option = { #  Empire
   id = brazil.6
   title = brazil.6.t
   desc = brazil.6.d
-  picture = report_event_brasiliana
+  picture = GFX_report_event_brasiliana
 
   is_triggered_only = yes
 
@@ -120,7 +125,7 @@ option = { #  Empire
   id = brazil.7
   title = brazil.7.t
   desc = brazil.7.d
-  picture = report_event_salt
+  picture = GFX_report_event_salt
 
   is_triggered_only = yes
 
@@ -229,7 +234,7 @@ country_event = {
   id = brazil.14
   title = brazil.14.t
   desc = brazil.14.d
-  picture = report_event_ambition
+  picture = GFX_report_event_ambition
 
   is_triggered_only = yes
 
@@ -313,64 +318,31 @@ country_event = {
 
  }
  
-   country_event = { 
+  country_event = { 
   id = brazil.19
   title = brazil.19.t
-  desc = brazil.18.d
+  desc = brazil.19.d
   picture = report_event_sepoy2
 
   is_triggered_only = yes
-  hidden = yes
   
  
   option = {
     name = brazil.19.a
 	trigger = { 
-	original_tag = ENG
+	original_tag = FRA
 	}
-	BRA = { transfer_state = 687 }
+	BRA = { transfer_state = 310 }
  }
  
  option = {
     name = brazil.19.b
 	trigger = { 
-	original_tag = ENG
+	original_tag = FRA
 	}
 	BRA = { country_event = brazil.20 }
  }
- 
-  option = {
-    name = brazil.19.c
-	trigger = { 
-	original_tag = FRA
-	}
-   BRA = { transfer_state = 310 }
- }
- 
-   option = {
-    name = brazil.19.d
-	trigger = { 
-	original_tag = FRA
-	}
-   
- }
- 
-   option = {
-    name = brazil.19.e
-	trigger = { 
-	original_tag = HOL
-	}
-	BRA = { transfer_state = 309 }
- }
- 
-    option = {
-    name = brazil.19.f
-	trigger = { 
-	original_tag = HOL
-	}
-	BRA = { country_event = brazil.20 }
- }
-
+  
 
  }
  
@@ -379,15 +351,19 @@ country_event = {
   title = brazil.20.t
   desc = brazil.20.d
 
-  is_triggered_only = yes
+  fire_only_once = yes
   
  
   option = { #  Empire
     name = brazil.20.a
 	create_wargoal = {
-    type = take_core_state
-    target = FROM
+    type = take_claimed_state 
+    target = FRA
 	}
+hidden_effect = { 
+set_country_flag = BRA_guyana_war_1857	
+FRA = { set_country_flag = BRA_guyana_war_1857 }
+}
 
  }
 
@@ -398,13 +374,27 @@ country_event = {
   title = brazil.21.t
   desc = brazil.21.d
 
-  is_triggered_only = yes
-  trigger = { owns_state = 310 }
+  fire_only_once = yes
+  
+  trigger = {
+  AND = {
+  has_country_flag = BRA_guyana_war_1857
+  tag = BRA
+  controls_state = 310
+  }
+  }
   hidden = yes
  
   option = { #  Empire
     name = brazil.21.a
 	310 = { set_state_name = "Caiena" }
+	set_province_name = {
+    id = 12885
+    name = "Caiena"
+}
+	white_peace	= FRA
+	transfer_state = 310
+	clr_country_flag = BRA_guyana_war_1857
  }
 
  }
@@ -415,12 +405,21 @@ country_event = {
   desc = brazil.22.d
 
   is_triggered_only = yes
-  trigger = { owns_state = 687 }
+  trigger = { 
+  AND = {
+  has_country_flag = BRA_guyana_war_1857
+  tag = FRA
+  controls_state = 1108
+  }
+  }
   hidden = yes
  
   option = { #  Empire
     name = brazil.22.a
-	687 = { set_state_name = "Guiana" }
+	1108 = { set_state_name = "French Para" }
+	white_peace = BRA
+	transfer_state = 1108
+	clr_country_flag = BRA_guyana_war_1857
  }
 
  }
@@ -451,11 +450,11 @@ swap_ideas = {
  }
  retire_country_leader = yes
  add_popularity = {
-    ideology = social_egalitarianism
+    ideology = centrism
     popularity = 0.25
 }
 set_politics = {
-ruling_party =  social_egalitarianism
+ruling_party =  centrism
 }
 remove_ideas = BRA_vinsconde_de_sinimbu
 set_cosmetic_tag = BRA_empire_constitutional

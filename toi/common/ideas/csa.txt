@@ -1,5 +1,22 @@
 ideas = {
 	country = {
+	CSA_civil_war_cotton_dismay = {
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				army_attack_factor = -0.5
+			}
+		}
 	CSA_Civil_War_Scout_Dependency = {
 			
 			allowed = {
@@ -20,13 +37,8 @@ ideas = {
 				army_defence_factor = -0.1
 				army_attack_factor = -0.1
 				recon_factor = 0.05
-				ai_focus_aggressive_factor = -0.25
 			}
 		}
-	}
-}
-ideas = {
-	country = {
 	CSA_Civil_War_Scout_Dependency2 = {
 			
 			allowed = {
@@ -49,13 +61,9 @@ ideas = {
 				army_org_factor = -0.05
 				army_speed_factor = -0.1
 				recon_factor = 0.1
-				ai_focus_aggressive_factor = -0.3
+				ai_focus_aggressive_factor = -0.1
 			}
 		}
-	}
-}
-ideas = {
-	country = {
 	CSA_Civil_War_Industry1 = {
 			
 			allowed = {
@@ -75,10 +83,6 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 			}
 		}
-	}
-}
-ideas = {
-	country = {
 	CSA_Civil_War_Industry2 = {
 			
 			allowed = {
@@ -98,10 +102,6 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
-	}
-}
-ideas = {
-	country = {
 	CSA_Civil_War_Industry3 = {
 			
 			allowed = {
@@ -122,10 +122,6 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
-	}
-}
-ideas = {
-	country = {
 	CSA_Civil_War_Conscription = {
 			
 			allowed = {
@@ -144,10 +140,6 @@ ideas = {
 				conscription = 0.03
 			}
 		}
-	}
-}
-ideas = {
-	country = {
 	CSA_Civil_War_Total_War = {
 			
 			allowed = {
@@ -167,10 +159,6 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 			}
 		}
-	}
-}
-ideas = {
-	country = {
 	ACW_observer = {
 			
 			allowed = {
@@ -192,5 +180,223 @@ ideas = {
 				experience_gain_army = 0.05
 			}
 		}
+	CSA_strong_aristocrats_3 = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				production_speed_industrial_complex_factor = -0.4
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.15
+				min_export = 0.15
+				stability_factor = 0.1
+				political_power_gain = 0.15
+			}
+		}
+	CSA_strong_aristocrats_2 = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				production_speed_industrial_complex_factor = -0.3
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.1
+				min_export = 0.1
+				stability_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+	CSA_strong_aristocrats_1 = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_speed_industrial_complex_factor = -0.2
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				min_export = 0.05
+				political_power_gain = 0.05
+			}
 	}
+	CSA_confederate_government = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				justify_war_goal_time = 0.75
+				political_power_factor = -0.1
+				generate_wargoal_tension = 0.2
+			}
+	}
+	CSA_federal_government = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				justify_war_goal_time = 0.5
+				political_power_factor = -0.05
+				generate_wargoal_tension = 0.1
+			}
+	}
+	CSA_aristocrats_discouraged = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+	CSA_aristocrats_encouraged = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		CSA_payment_for_states = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		CSA_recieving_payment = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		CSA_paying_civilwar_debt = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		CSA_greyback_currency = {
+			
+			allowed = {
+				TAG = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
 }

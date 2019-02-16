@@ -42,6 +42,19 @@ eoanb_category_second_opium_war = {
 	
 }
 
+eoanb_category_worker_unrest_ENG = {
+	icon = saf_anti_colonialist_crusade
+
+	visible = {
+		has_idea = ENG_idea_working_class_exploitation
+	}
+}
+
+eoanb_category_sepoy_rebellion = {
+	icon = generic_propaganda
+	
+}
+
 economic_decisions = {
 	icon = generic_economy
 

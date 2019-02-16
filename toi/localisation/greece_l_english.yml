@@ -380,6 +380,10 @@
  GRE_tt_eng_help_crete_1:0 "The §YBritish§! might help us depending on our standing with them"
  GRE_tt_aus_help_crete_1:0 "The §YAustrians§! might help us depending on our standing with them"
  
+ eoanb_decision_ENG_cede_ION:0 "Cede the Ionian Islands to Greece"
+ eoanb_decision_ENG_cede_ION_desc:0 "The Ionian Islands, an island chain from Epirus to the North to the Peloponnese to the South has been our protectorate since the Congress of Vienna in 1815. The Ionian Islands have been a prosperous territory of ours, but their strategic value is low since we already have control over the Mediterranean and ceding them would boost the popularity of the new King of Greece, bringing Greece closer to us."
+
+ 
  ###################
  # Greek Ideas     #
  ###################

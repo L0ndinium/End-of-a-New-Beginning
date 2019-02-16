@@ -142,6 +142,8 @@ technology_categories = {
 	tech_category_handguns
 	tech_category_naval_infantry
 	kiel_canal_tech
+	gatling_gun_tech
+	tech_category_uniforms
 }
 
 technology_folders = {

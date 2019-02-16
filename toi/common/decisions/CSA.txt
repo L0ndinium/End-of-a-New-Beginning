@@ -1,0 +1,310 @@
+CSA_whig_reform_decision = {
+
+	#Aristo
+	eoanb_descision_CSA_aristocracy = {
+
+		icon = generic_political_discourse
+
+		available = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_strong_aristocrats_1
+				has_idea = CSA_strong_aristocrats_2
+				has_idea = CSA_strong_aristocrats_3
+			}
+			has_government = centrism
+			has_completed_focus = CSA_postwar_internal_whig_aristocracy_reforms
+			has_stability > 0.4
+		}
+
+		visible = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_strong_aristocrats_1
+				has_idea = CSA_strong_aristocrats_2
+				has_idea = CSA_strong_aristocrats_3
+			}
+		}
+
+		cost = 100
+		days_re_enable = 5
+		days_remove = 100
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = CSA_strong_aristocrats_1
+				}
+				remove_ideas = CSA_strong_aristocrats_1
+			}
+			if = {
+				limit = {
+					has_idea = CSA_strong_aristocrats_2
+				}
+				swap_ideas = {
+					remove_idea = CSA_strong_aristocrats_2
+					add_idea = CSA_strong_aristocrats_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = CSA_strong_aristocrats_3
+				}
+				swap_ideas = {
+					remove_idea = CSA_strong_aristocrats_3
+					add_idea = CSA_strong_aristocrats_2
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#Central
+	eoanb_descision_CSA_central = {
+
+		icon = generic_political_discourse
+
+		available = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_confederate_government
+				has_idea = CSA_federal_government
+			}
+			has_government = centrism
+			has_completed_focus = CSA_postwar_internal_whig_central_reforms
+			has_stability > 0.4
+		}
+
+		visible = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_confederate_government
+				has_idea = CSA_federal_government
+			}
+		}
+
+		cost = 100
+		days_re_enable = 5
+		days_remove = 100
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = CSA_federal_government
+				}
+				remove_ideas = CSA_federal_government
+			}
+			if = {
+				limit = {
+					has_idea = CSA_confederate_government
+				}
+				swap_ideas = {
+					remove_idea = CSA_confederate_government
+					add_idea = CSA_federal_government
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#Integrate
+	eoanb_descision_CSA_integrate = {
+
+		icon = generic_political_discourse
+
+		available = {
+			TAG = CSA
+			NOT = {
+				has_idea = CSA_confederate_government
+				has_idea = CSA_federal_government
+			}
+			has_government = centrism
+			has_completed_focus = CSA_postwar_internal_whig_central_reforms
+			has_stability > 0.4
+		}
+
+		visible = {
+			TAG = CSA
+			OR = {
+				ALA = { is_subject_of = CSA }
+				USG = { is_subject_of = CSA }
+				MIS = { is_subject_of = CSA }
+				SCA = { is_subject_of = CSA }
+				MIO = { is_subject_of = CSA }
+				NCA = { is_subject_of = CSA }
+				TEX = { is_subject_of = CSA }
+				LOU = { is_subject_of = CSA }
+				ARK = { is_subject_of = CSA }
+				KTY = { is_subject_of = CSA }
+				TEN = { is_subject_of = CSA }
+				FLO = { is_subject_of = CSA }
+				NMX = { is_subject_of = CSA }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+		days_remove = 365
+
+		remove_effect = {
+			if = {
+				limit = {
+					ALA = { is_subject_of = CSA }
+				}
+				annex_country = { target = ALA }
+			}
+			if = {
+				limit = {
+					USG = { is_subject_of = CSA }
+				}
+				annex_country = { target = USG }
+			}
+			if = {
+				limit = {
+					MIS = { is_subject_of = CSA }
+				}
+				annex_country = { target = MIS }
+			}
+			if = {
+				limit = {
+					SCA = { is_subject_of = CSA }
+				}
+				annex_country = { target = SCA }
+			}
+			if = {
+				limit = {
+					MIO = { is_subject_of = CSA }
+				}
+				annex_country = { target = MIO }
+			}
+			if = {
+				limit = {
+					NCA = { is_subject_of = CSA }
+				}
+				annex_country = { target = NCA }
+			}
+			if = {
+				limit = {
+					TEX = { is_subject_of = CSA }
+				}
+				annex_country = { target = TEX }
+			}
+			if = {
+				limit = {
+					LOU = { is_subject_of = CSA }
+				}
+				annex_country = { target = LOU }
+			}
+			if = {
+				limit = {
+					ARK = { is_subject_of = CSA }
+				}
+				annex_country = { target = ARK }
+			}
+			if = {
+				limit = {
+					KTY = { is_subject_of = CSA }
+				}
+				annex_country = { target = KTY }
+			}
+			if = {
+				limit = {
+					TEN = { is_subject_of = CSA }
+				}
+				annex_country = { target = TEN }
+			}
+			if = {
+				limit = {
+					FLO = { is_subject_of = CSA }
+				}
+				annex_country = { target = FLO }
+			}
+			if = {
+				limit = {
+					NMX = { is_subject_of = CSA }
+				}
+				annex_country = { target = NMX }
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#Slavery
+	eoanb_descision_CSA_slavery = {
+
+		icon = generic_political_discourse
+
+		available = {
+			TAG = CSA
+			OR = {
+				has_idea = usa_slavery_law
+				has_idea = slavery_all_but_name
+			}
+			has_government = centrism
+			has_completed_focus = CSA_postwar_internal_whig_slavery_reforms
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = CSA
+			OR = {
+				has_idea = CSA_confederate_government
+				has_idea = CSA_federal_government
+			}
+		}
+
+		cost = 100
+		days_re_enable = 10
+		days_remove = 365
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = slavery_all_but_name
+				}
+				remove_ideas = slavery_all_but_name
+			}
+			if = {
+				limit = {
+					has_idea = usa_slavery_law
+				}
+				swap_ideas = {
+					remove_idea = usa_slavery_law
+					add_idea = slavery_all_but_name
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = centrism
+				popularity = -0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

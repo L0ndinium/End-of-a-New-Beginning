@@ -244,7 +244,7 @@ units = {
 	}
 	division= {	
 		name = "34th Union Regimental"
-		location = 4811
+		location = 2043
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
@@ -258,105 +258,105 @@ units = {
 	}
 		division= {	
 		name = "36th Union Regimental"
-		location = 10340
+		location = 6803
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "37th Union Regimental"
-		location = 4586
+		location = 7945
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "38th Union Regimental"
-		location = 1738
+		location = 8025
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "39th Union Regimental"
-		location = 2102
+		location = 11743
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "40th Union Regimental"
-		location = 10867
+		location = 4919
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "41st Union Regimental"
-		location = 12720
-		division_template = "Union Regimental"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division= {	
-		name = "42nd Union Regimental"
 		location = 3867
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
-		name = "43rd Union Regimental"
+		name = "42nd Union Regimental"
 		location = 12791
+		division_template = "Union Regimental"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "43rd Union Regimental"
+		location = 3687
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "44th Union Regimental"
-		location = 7315
+		location = 9662
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "45th Union Regimental"
-		location = 7315
+		location = 9836
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "46th Union Regimental"
-		location = 6845
+		location = 3697
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "47th Union Regimental"
-		location = 6845
+		location = 894
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "48th Union Regimental"
-		location = 12791
+		location = 3897
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "49th Union Regimental"
-		location = 9450
+		location = 891
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division= {	
 		name = "50th Union Regimental"
-		location = 6710
+		location = 3693
 		division_template = "Union Regimental"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1

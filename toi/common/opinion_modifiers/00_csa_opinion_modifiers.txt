@@ -24,4 +24,59 @@ opinion_modifiers = {
 		value = -50
 		trade = yes
 	}
+
+	CSA_hypocritical = {
+		value = -20
+		days = 10
+		decay = 1
+	}
+
+	CSA_embassy = {
+		value = 20
+		days = 20
+		decay = 1
+	}
+
+	CSA_king_cotton = {
+		value = 20
+		trade = yes
+	}
+
+	CSA_slave_trade_bra = {
+		value = 20
+		trade = yes
+	}
+
+	CSA_slave_trade_bra_britain = {
+		value = -30
+		days = 30
+		decay = 1
+	}
+
+	CSA_reapproach_trade = {
+		value = 20
+		trade = yes
+	}
+
+	CSA_reapproach = {
+		value = 30
+		days = 20
+		decay = 1
+	}
+
+	CSA_reapproach_no_trade = {
+		value = -20
+		trade = yes
+	}
+
+	CSA_reapproach_no = {
+		value = -30
+		days = 20
+		decay = 1
+	}
+
+	CSA_use_currency = {
+		value = 10
+		trade = yes
+	}
 }

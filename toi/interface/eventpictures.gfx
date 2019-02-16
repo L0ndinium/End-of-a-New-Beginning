@@ -1975,6 +1975,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/france/france_news_orsini_affair.dds"
 	}
 
+	spriteType = {
+		name = "GFX_france_news_grand_kabyle_campaign"
+		texturefile = "gfx/event_pictures/france/france_news_grand_kabyle_campaign.dds"
+	}
+
 	#SEPOY EVENTS
 
 	spriteType = {
@@ -2094,6 +2099,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_news_event_bell_elected"
+		texturefile = "gfx/event_pictures/usa/usa_news_bell.dds"
+	}
+
+	spriteType = {
 		name = "GFX_news_event_south_carolina"
 		texturefile = "gfx/event_pictures/usa/usa_news_south_carolina.dds"
 	}
@@ -2131,6 +2141,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_chicago_surrender_acw"
 		texturefile = "gfx/event_pictures/usa/acw_news_chicago_surrender.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_dakota_war"
+		texturefile = "gfx/event_pictures/usa/acw_news_dakota_war.dds"
 	}
 
 	spriteType = {
@@ -2243,6 +2258,16 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/usa/usa_news_election_colfax.dds"
 	}
 
+	spriteType = {
+		name = "GFX_news_event_usa_texas"
+		texturefile = "gfx/event_pictures/usa/usa_news_texas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_usa_washington_rally"
+		texturefile = "gfx/event_pictures/usa/usa_news_washington_rally.dds"
+	}
+
 	#UTAH
 
 	spriteType = {
@@ -2346,17 +2371,17 @@ spriteTypes = {
 	
 	#BRAZILIAN EVENTS
 	spriteType = {
-		name = "GFX_brasiliana"
+		name = "GFX_report_event_brasiliana"
 		texturefile = "gfx/event_pictures/brazil/brasiliana.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_salt"
+		name = "GFX_report_event_salt"
 		texturefile = "gfx/event_pictures/brazil/saltlake.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_ambition"
+		name = "GFX_report_event_ambition"
 		texturefile = "gfx/event_pictures/brazil/ambition.dds"
 	}
 	
@@ -2565,6 +2590,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_generic_eoanb_logo"
 		texturefile = "gfx/event_pictures/generic/report_event_generic_eoanb_logo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_generic_sailship"
+		texturefile = "gfx/event_pictures/generic/report_event_generic_sailship.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_uk_parliament"
+		texturefile = "gfx/event_pictures/uk/report_event_uk_parliament.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_sepoy_lucknow_surrender"
+		texturefile = "gfx/event_pictures/uk/report_event_sepoy_lucknow_surrender.dds"
 	}
 	
     ### Greek Events ###

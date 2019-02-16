@@ -9,11 +9,6 @@
   
   set_research_slots = 4
   
-   declare_war_on = {
-    target = CHI
-    type = annex_everything
-  }
-  
   create_import = {
     resource = cotton
     amount = 8
@@ -27,8 +22,9 @@
 
   give_guarantee = BEL
   give_guarantee = POR
+  give_guarantee = GRE 
   
-      #Colective guarantee of the 7 great power
+    #Collective guarantee of the 7 great powers
   give_guarantee = ROM
   give_guarantee = MOL
   
@@ -193,7 +189,6 @@
 		name = "Colin Campbell"
 		picture = "Portrait_ENG_Colin_Campbell.dds"
 		traits = { }
-		id = 18570000
 		skill = 3
 		attack_skill = 1
 		defense_skill = 1
@@ -298,26 +293,6 @@
 		defense_skill = 1
 		planning_skill = 1
 		logistics_skill = 1
-	}
-	create_corps_commander = {
-        name = "Samuel Benjamin Auchmuty"
-  		picture = ""
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
-	}
-	create_corps_commander = {
-        name = "Prince George Duke of Cambridge"
-  		picture = ""
-  		traits = { }
-  		skill = 2
-  		attack_skill = 1
-  		defense_skill = 1
-  		planning_skill = 1
- 		 logistics_skill = 1
 	}
 
 	create_field_marshal = {
@@ -456,11 +431,6 @@
 		freedom_level = 0.4
 	}
 	set_autonomy = {
-		target = AST
-		autonomous_state = autonomy_colony
-		freedom_level = 0.2
-	}
-	set_autonomy = {
 		target = NZL
 		autonomous_state = autonomy_colony
 		freedom_level = 0.2
@@ -470,13 +440,8 @@
 		autonomous_state = autonomy_colony
 		freedom_level = 0.2
 	}
-	set_autonomy = {
-		target = IOM
-		autonomous_state = autonomy_integrated_puppet
-	}
 	else = {
 		puppet = RAJ
-		puppet = IOM
 		puppet = NAT
 	}
 }
@@ -537,11 +502,6 @@ if = {
 		}
 		set_autonomy = {
 			target = NVS
-			autonomous_state = autonomy_colony
-			freedom_level = 0.2
-		}
-		set_autonomy = {
-			target = AST
 			autonomous_state = autonomy_colony
 			freedom_level = 0.2
 		}
@@ -611,7 +571,6 @@ if = {
 			puppet = CAN
 			puppet = NFL
 			puppet = BRK
-			puppet = AST
 			puppet = NZL
 			puppet = ION
 			puppet = NSW

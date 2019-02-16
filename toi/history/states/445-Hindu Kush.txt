@@ -12,7 +12,7 @@ state={
 	state_category = wasteland
 
 	history={
-		owner = RAJ
+		owner = AFG
 		buildings = {
 			infrastructure = 1
 			

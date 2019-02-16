@@ -209,3 +209,175 @@ country_event = { # François Louis Alfred Durrieu becomes general
 	ai_chance = { factor = 0 }
   }
 }
+
+country_event = { # Pierre Charles Dejean becomes general
+  id = army_france.1004
+  title = army_france.1004.t
+  desc = army_france.1004.d
+  picture = GFX_france_kepi_general
+
+  trigger = {
+    tag = FRA
+	date > 1867.1.1
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+    days = 200
+  }
+
+  option = {
+    name = army_france.1004.a
+	ai_chance = { factor = 100 }
+	create_corps_commander = {
+		# https://fr.wikipedia.org/wiki/Pierre_Charles_Dejean
+		name = "Pierre Charles Dejean"
+		picture = "Portrait_France_Generic_land_5.dds"
+		id = 178932
+		traits = { }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	add_command_power = -20 
+  }
+
+  option = {
+    name = army_france.1004.b
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = { # Camille Clément de La Roncière-Le Noury becomes amiral
+  id = army_france.1005
+  title = army_france.1005.t
+  desc = army_france.1005.d
+  picture = GFX_france_kepi_general
+
+  trigger = {
+    tag = FRA
+	date > 1868.1.1
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+    days = 200
+  }
+
+  option = {
+    name = army_france.1005.a
+	ai_chance = { factor = 100 }
+	create_navy_leader = {
+		# https://fr.wikipedia.org/wiki/Camille_Cl%C3%A9ment_de_La_Ronci%C3%A8re-Le_Noury
+		name = "Camille Clément de La Roncière-Le Noury"
+		picture = "Portrait_FRA_Camille_Clement_de_La_Ronciere_Le_Noury.dds"
+		id = 178933
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	add_command_power = -20 
+  }
+
+  option = {
+    name = army_france.1005.b
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = { # Charles de Lorencez becomes general
+  id = army_france.1006
+  title = army_france.1006.t
+  desc = army_france.1006.d
+  picture = GFX_france_kepi_general
+
+  trigger = {
+    tag = FRA
+	date > 1862.1.1
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+    days = 200
+  }
+
+  option = {
+    name = army_france.1006.a
+	ai_chance = { factor = 100 }
+	create_corps_commander = {
+		# https://fr.wikipedia.org/wiki/Charles_de_Lorencez
+		name = "Charles de Lorencez"
+		picture = "Portrait_FRA_Charles_de_Lorencez.dds"
+		id = 178934
+		traits = {
+			career_officer
+		}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	add_command_power = -20 
+  }
+
+  option = {
+    name = army_france.1006.b
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = { # Charles Joseph François Wolff becomes general
+  id = army_france.1007
+  title = army_france.1007.t
+  desc = army_france.1007.d
+  picture = GFX_france_kepi_general
+
+  trigger = {
+    tag = FRA
+	date > 1871.1.1
+  }
+
+  fire_only_once = yes
+
+  mean_time_to_happen = {
+    days = 500
+	modifier = {
+		factor = 0.3
+		has_war_with = PRS
+	}
+  }
+
+  option = {
+    name = army_france.1007.a
+	ai_chance = { factor = 100 }
+	create_corps_commander = {
+		# https://fr.wikipedia.org/wiki/Charles_Joseph_Fran%C3%A7ois_Wolff
+		name = "Charles Joseph François Wolff"
+		picture = "Portrait_France_Generic_land_10.dds"
+		id = 178935
+		traits = {
+			career_officer
+		}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+	add_command_power = -20 
+  }
+
+  option = {
+    name = army_france.1007.b
+	ai_chance = { factor = 0 }
+  }
+}

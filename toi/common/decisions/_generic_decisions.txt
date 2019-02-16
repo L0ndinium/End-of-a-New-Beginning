@@ -465,7 +465,7 @@ economic_decisions = {
 				has_idea = oil_era
 			}
 			NOT = { has_idea = industrializing }
-			num_of_factories > 10
+			num_of_factories > 5
 		}
 		
 		fire_only_once = no
@@ -532,38 +532,6 @@ economic_decisions = {
 			}
 		}
 	}
-	
-	#Holland: Amsterdam Area Land Reclamation
-	eoanb_decision_land_reclamation_amsterdam = {
-		
-		icon = generic_operation
-		
-		available = {
-			HOL = { has_tech = industrial_era_tools_1 }
-		}
-		
-		visible = {
-			TAG = HOL
-			7 = { is_controlled_by = HOL }
-		}
-		
-		fire_only_once = yes
-		
-		cost = 75
-		
-		complete_effect = {
-			7 = { add_extra_state_shared_building_slots = 3 }
-		}
-		
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 100
-				TAG = HOL
-			}
-		}
-	}
-	
 }
 
 #Internal Politics
@@ -1162,6 +1130,14 @@ political_actions = {
 					has_autonomy_state = autonomy_protectorate
 					has_autonomy_state = autonomy_imperial_protectorate
 					has_autonomy_state = autonomy_personal_union
+				}
+			}
+			NOT = {
+				OR = {
+					TAG = RAJ
+					TAG = CAN
+					TAG = AST
+					TAG = SAF
 				}
 			}
 		}
@@ -2029,6 +2005,34 @@ eoanb_category_traditions_celebrations = {
 }
 
 eoanb_category_options = {
+	
+	eoanb_decision_open_help = {
+		
+		icon = generic_decision
+		
+		available = {
+			always = yes
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = eoanb_flag_options_disabled
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			country_event = { id = generic.19 }
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+		
+	}
 	
 	eoanb_decision_open_options = {
 		

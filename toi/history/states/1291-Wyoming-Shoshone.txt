@@ -1,0 +1,21 @@
+state={
+	id=1291
+	name="STATE_1291"
+	provinces={
+		7688 7888 12561 12633 12651 
+	}
+	state_category = pastoral
+	history = {
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SHO
+		add_core_of = SHO
+		add_claim_by = USA
+		victory_points = {
+			12633 1
+		}
+	}
+	manpower=7090
+	buildings_max_level_factor=1.000
+}

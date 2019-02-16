@@ -1,0 +1,10 @@
+focus_tree = {
+	id = africa_opt_united
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			tag = AFR
+		}
+	}
+}

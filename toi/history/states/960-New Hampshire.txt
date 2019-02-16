@@ -11,7 +11,9 @@ state={
 		buildings = {
 			infrastructure = 4
 		}
-
+		victory_points = {
+			3712 3
+		}
 	add_core_of = USA
 	}
 	provinces={

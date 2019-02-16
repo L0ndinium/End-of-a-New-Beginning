@@ -560,6 +560,10 @@ D15 = {
 }
 
 ##################################
+AFR = {
+  color = rgb { 211 181 29 }
+  color_ui = rgb { 211 181 29 }
+}
 OTO = {
 	color = rgb { 156 126 97 }
 	color_ui = rgb { 255 153 51 }
@@ -839,4 +843,28 @@ MHC = {
 KBY = {
 	color = rgb { 122  122  83 }
 	color_ui = rgb { 122  122  83 }
+}
+ASA = {
+	color = rgb { 22 135 235 }
+	color_ui = rgb { 87 160 255 }
+}
+GRL = {
+	color = rgb { 100 120 106 }
+	color_ui = rgb { 120 190 166 }
+}
+DAK = {
+	color = rgb { 160 100 20 }
+	color_ui = rgb { 121 105 66 }
+}
+KNS = {
+	color = rgb { 180 180 10 }
+	color_ui = rgb { 151 155 96 }
+}
+ORE = {
+	color = rgb { 200 200 220 }
+	color_ui = rgb { 126 165 62 }
+}
+OKL = {
+	color = rgb { 200 255 200 }
+	color_ui = rgb { 128 168 68 }
 }

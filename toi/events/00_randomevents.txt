@@ -128,7 +128,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 1800
+		days = 2800
 		modifier = {
 			factor = 0.8
 			num_of_civilian_factories > 20
@@ -424,7 +424,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 2000
+		days = 5000
 		modifier = {
 			factor = 0.9
 			centrism > 0.3
@@ -515,6 +515,8 @@ country_event = {
 		random_owned_controlled_state = { 
 			limit = {
 				is_capital = no
+				is_island_state = no
+				is_in_home_area = yes
 			}
 			add_manpower = -1000 
 		}

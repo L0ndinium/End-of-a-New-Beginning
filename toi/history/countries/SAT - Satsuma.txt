@@ -15,6 +15,12 @@
       }
   }
 
+      set_autonomy = {
+        target = RYU
+        autonomous_state = autonomy_puppet
+        freedom_level = 0.3
+      }
+
   add_ideas = { 
     #POLITICS 
 		  
@@ -41,7 +47,7 @@
 
     privileged_education
     state_religion
-	religion_animist
+	religion_shinto
          #NATIONAL SPIRITS
 	
   }
