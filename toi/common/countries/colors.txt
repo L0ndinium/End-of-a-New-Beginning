@@ -57,6 +57,14 @@ SPR = {
 	color = rgb { 242 205 94 }
 	color_ui = rgb { 255 255 122 }
 }
+MDN = {
+    color = rgb { 125 139 246 }
+	color_ui = rgb (255 255 121}
+}
+SPH = {
+    color = { 230 230 80 }
+	color_ui = rgb (255 255 123}
+}
 ITA = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 87 165 82 }

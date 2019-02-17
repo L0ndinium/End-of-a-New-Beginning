@@ -8,7 +8,7 @@ state=
 
 	history=
 	{
-		owner = SPR
+		owner = SPH
 		buildings = {
 			infrastructure = 2
 			12118 = {
@@ -19,7 +19,7 @@ state=
 		victory_points = {
 			12118 1
 		}
-		add_core_of = SPR
+		add_core_of = SPH
 	}
 
 	provinces={

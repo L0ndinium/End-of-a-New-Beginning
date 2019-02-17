@@ -190,6 +190,8 @@ ARM = "countries/Armenia.txt"
 BOH = "countries/Bohemia.txt"
 SAR = "countries/Sardinia.txt"
 KRA = "countries/Krakow.txt"
+SPH = "countries/Spanish Philippines"
+MDN = "countries/Maguindanao"
 
 # Below, countries which color are not important
 

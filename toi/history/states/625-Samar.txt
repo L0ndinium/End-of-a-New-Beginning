@@ -7,11 +7,11 @@ state=
 	state_category = rural
 	history=
 	{
-		owner = SPR
+		owner = SPH
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = SPR
+		add_core_of = SPH
 	}
 	provinces={
 		1224 1311 1340 4269 4373

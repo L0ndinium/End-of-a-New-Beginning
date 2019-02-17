@@ -12,7 +12,7 @@ state=
 	state_category = town
 	history=
 	{
-		owner = SPR
+		owner = SPH
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
@@ -28,7 +28,7 @@ state=
 		victory_points = {
 			1221 1
 		}
-		add_core_of = SPR
+		add_core_of = SPH
 	}
 
 	provinces={
