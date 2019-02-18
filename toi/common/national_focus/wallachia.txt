@@ -1,0 +1,352 @@
+focus_tree = {
+	id = wallachia
+	continuous_focus_position = {x = 60 y = 1000 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ROM
+		}
+	}
+	default = no
+	focus = {
+		id = Wallachian_Industry
+		icon = GFX_goal_focus_industrial_revolution
+		x = 2
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = mechanical_engineering_tech }
+		}
+	}
+	focus = {
+		id = Funding_Industrial_Development
+		icon = GFX_goal_generic_construction
+		x = 1
+		y = 1
+		cost = 70
+		prerequisite = {
+			focus = Wallachian_Industry
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			ROM = {
+        	set_variable = {
+            	var = wal_civ_facs
+        		value = ROM.num_of_civilian_factories
+    		}
+    		add_to_variable = {
+        		var = wal_civ_facs
+        		value = 1
+   			}
+   			}
+   			add_ideas = industrial_funding
+		
+		}
+	}
+	focus = {
+		id = Expand_Our_Roads
+		icon = GFX_goal_generic_construction2
+		x = 3
+		y = 1
+		cost = 90
+		prerequisite = {
+			focus = Wallachian_Industry
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			ROM = {
+        	set_variable = {
+    			var = infra_total_bonus
+   				value = 0
+				}
+
+				#getting the total number of infra inside a our country into a infra_total_bonus variable
+				every_owned_state = {
+    				add_to_variable = {
+       					var = PREV.infra_total_bonus
+        				value = infrastructure_level
+   						}
+					}
+
+			#adding the desired number of infra we want the bonus to apply to, in this case the bonus will apply for the next 1 infra
+			add_to_variable = {
+   				var = PREV.infra_total_bonus
+    			value = 1
+				}
+
+			#adding of the idea with the construction modifier itself
+			add_ideas = {
+    		infrastructure_funding
+				}
+			}
+		}
+	}
+	focus = {
+		id = Oltenian_Iron_Mines
+		icon = GFX_goal_focus_industrial_revolution
+		x = 1
+		y = 2
+		cost = 70
+		prerequisite = {
+			focus = Funding_Industrial_Development
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			81 = {
+		add_resource = {
+		type = iron
+		amount = 2
+		}
+		}
+		}
+	}
+	focus = {
+		id = Improving_Rural_Infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 2
+		cost = 90
+		prerequisite = {
+			focus = Expand_Our_Roads
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			ROM = {
+        	set_variable = {
+    			var = infra_total_bonus
+   				value = 0
+				}
+
+				#getting the total number of infra inside a our country into a infra_total_bonus variable
+				every_owned_state = {
+    				add_to_variable = {
+       					var = PREV.infra_total_bonus
+        				value = infrastructure_level
+   						}
+					}
+
+			#adding the desired number of infra we want the bonus to apply to, in this case the bonus will apply for the next 1 infra
+			add_to_variable = {
+   				var = PREV.infra_total_bonus
+    			value = 1
+				}
+
+			#adding of the idea with the construction modifier itself
+			add_ideas = {
+    		infrastructure_funding
+				}
+			}
+		}
+	}
+	focus = {
+		id = Wallachia_and_Moldovia_Grow_Closer
+		icon = GFX_goal_generic_improve_relations
+		x = 8
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = .05	
+		}
+	}
+	focus = {
+		id = Vote_Against_the_People
+		icon = GFX_goal_focus_elections
+		x = 8
+		y = 1
+		cost = 60
+		prerequisite = {
+			focus = Wallachia_and_Moldovia_Grow_Closer
+			}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.1
+			add_ideas = Protests_in_Bucharest
+		}
+	}
+	focus = {
+		id = Quell_Protests_in_Bucharest
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 8
+		y = 2
+		cost = 60
+		prerequisite = {
+				focus = Vote_Against_the_People
+			}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -75
+			add_stability = 0.05
+			remove_ideas = Protests_in_Bucharest
+		}
+	}
+	focus = {
+		id = Alexander_Ioan_Cuza_Appointed_Domnitor
+		icon = GFX_goal_generic_improve_relations
+		x = 8
+		y = 3
+		cost = 90
+		prerequisite = {
+				focus = Quell_Protests_in_Bucharest
+			}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Alexandru Ioan Cuza"
+				desc = "POLITICS_GENERIC_EOANB_DESC"
+				picture = ""
+				expire = "1866.1.1"
+				ideology = conserv
+				traits = {
+
+				}
+			}
+		}
+	}
+	focus = {
+		id = Promote_Romanian_Unity
+		icon = GFX_goal_generic_improve_relations
+		x = 7
+		y = 4
+		cost = 70
+		prerequisite = {
+				focus = Alexander_Ioan_Cuza_Appointed_Domnitor
+			}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = Appease_the_Conservatives
+		icon = GFX_goal_focus_the_elite
+		x = 9
+		y = 4
+		cost = 70
+		prerequisite = {
+				focus = Alexander_Ioan_Cuza_Appointed_Domnitor
+			}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = Prepare_for_Unification
+		icon = GFX_goal_focus_gerrymandering
+		x = 8
+		y = 5
+		cost = 100
+		prerequisite = {focus = Promote_Romanian_Unity} 
+		prerequisite = {focus = Appease_the_Conservatives}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = Modernized_Tactics
+		icon = GFX_focus_generic_little_entente
+		x = 14
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.50 uses = 1 category = land_doctrine }
+		}
+	}
+	focus = {
+		id = Improved_Military_Command
+		icon = GFX_goal_generic_improve_relations
+		x = 14
+		y = 1
+		cost = 90
+		prerequisite = {
+				focus = Modernized_Tactics
+			}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+				army_experience = 10
+		}
+	}
+	focus = {
+		id = Improved_Calvary_Equipment
+		icon = GFX_goal_generic_cavalry
+		x = 14
+		y = 2
+		cost = 70
+		prerequisite = {
+				focus = Improved_Military_Command
+			}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = tech_category_cavalry }
+		}
+	}
+	#still need to do icons for most of these as well as portriats and localization for names. The only ones that aren't "feature complete" are Improved_Military_Command and Alexander_Ioan_Cuza_Appointed_Domnitor.

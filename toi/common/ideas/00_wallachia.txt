@@ -21,7 +21,41 @@ ideas = {
 				stability_factor = 0.20
 			}
 		}
-		
+		industrial_funding = {
+    		cancel = {
+        		ROM = {
+            		check_variable = { num_of_civilian_factories > wal_civ_facs }
+        			}
+    			}
+    
+    			removal_cost = -1
+
+    			modifier = {
+        			production_speed_industrial_complex_factor = 0.5
+    			}
+		}
+		infrastructure_funding = {
+    		cancel = {
+       			NOT = {
+            		has_variable = infra_total_bonus
+        		}
+   			}
+            
+   			removal_cost = -1
+
+    		modifier = {
+       			production_speed_infrastructure_factor = 0.5
+    			}
+			}
+		Protests_in_Bucharest = {
+
+			removal_cost = -1
+
+    		modifier = {
+        			research_time_factor = +0.1
+        			industrial_capacity_factory  = -0.1
+    			}
+		}
 		ROM_battleground = {
 			allowed = {
 				always = no

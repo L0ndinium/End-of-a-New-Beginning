@@ -1,5 +1,40 @@
 on_actions = {
-
+	on_daily = {
+    effect = {
+        ROOT = {    
+            #on_action does not apply to countries without the infra_total_bonus variable because of performance reasons
+            if = {
+                limit = {
+                    has_variable = infra_total_bonus
+                }
+                
+                #getting the current total number of infra inside a country
+                set_variable = {
+                    var = infra_total
+                    value = 0
+                }
+                every_owned_state = {
+                    add_to_variable = {
+                        var = PREV.infra_total
+                        value = infrastructure_level
+                    }
+                }
+                
+                #if the current total number of infra inside a country equals or exceeds the bonus number, clear the variable
+                if = {
+                    limit = {
+                        OR = {
+                            check_variable = { infra_total = infra_total_bonus }
+                            check_variable = { infra_total > infra_total_bonus }
+                        }
+                    }
+                    clear_variable = infra_total_bonus
+                }
+                clear_variable = infra_total
+            }
+        }
+    }
+}
 	#DESIGNED FOR 1857 START DATE - EFFECTS APPLY TO ALL START DATES, REMOVE EVERYTHING BUT GENERIC CONTENT WHEN SECOND START DATE IS ADDED
 	#MAYBE HAVE THIS TRIGGER A SEPERATE HIDDEN STARTING EVENT WITH AN IF TRIGGER ASKING WHICH DATE IT IS
 	#PUTTING AN IF TRIGGER INTO THIS BRACKET DOESN'T WORK
