@@ -1,229 +1,289 @@
 spriteTypes = {	
 
+	spriteType = { 
+    name = "GFX_unit_armed_peasants_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_armed_peasants_icon.dds"
+    noOfFrames = 2
+   }
+
    spriteType = { 
-    name = "GFX_bicycle_signal_company_icon_medium"				
+    name = "GFX_unit_armed_peasants_icon_medium_white"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_armed_peasants_icon.dds" 
+    noOfFrames = 2
+   }
+   
+   spriteType = { 
+    name = "GFX_unit_mounted_infantry_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_mounted_infantry_icon.dds"
+    noOfFrames = 2
+   }
+
+   spriteType = { 
+    name = "GFX_unit_mounted_infantry_icon_medium_white"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mounted_infantry_icon.dds" 
+    noOfFrames = 2
+   }
+   
+   spriteType = { 
+    name = "GFX_unit_dragoon_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_dragoon_icon.dds"
+    noOfFrames = 2
+   }
+
+   spriteType = { 
+    name = "GFX_unit_dragoon_icon_medium_white"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_dragoon_icon.dds" 
+    noOfFrames = 2
+   }
+   
+   spriteType = { 
+    name = "GFX_unit_machine_gun_company_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_machine_gun_company_icon.dds"
+    noOfFrames = 2
+   }
+
+   spriteType = { 
+    name = "GFX_unit_machine_gun_company_icon_medium_white"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_machine_gun_company_icon.dds" 
+    noOfFrames = 2
+   }
+   
+   spriteType = { 
+    name = "GFX_unit_armor_train_company_icon_medium"				
+    textureFile = "gfx/interface/counters/divisions_large/unit_armor_train_company_icon.dds"
+    noOfFrames = 2
+   }
+
+   spriteType = { 
+    name = "GFX_unit_armor_train_company_icon_medium_white"						
+    textureFile = "gfx/interface/counters/divisions_small/onmap_unit_armor_train_company_icon.dds" 
+    noOfFrames = 2
+   }
+
+   spriteType = { 
+    name = "GFX_unit_bicycle_signal_company_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_bicycle_signal_company_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_bicycle_signal_company_icon_medium_white"						
+    name = "GFX_unit_bicycle_signal_company_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_bicycle_signal_company_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_motorcycle_signal_company_icon_medium"				
+    name = "GFX_unit_motorcycle_signal_company_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_motorcycle_signal_company_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_motorcycle_signal_company_icon_medium_white"						
+    name = "GFX_unit_motorcycle_signal_company_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_motorcycle_signal_company_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_bicycle_infantry_icon_medium"				
+    name = "GFX_unit_bicycle_infantry_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_bicycle_infantry_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_bicycle_infantry_icon_medium_white"						
+    name = "GFX_unit_bicycle_infantry_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_bicycle_infantry_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_irregular_infantry_icon_medium"				
+    name = "GFX_unit_irregular_infantry_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_irregular_infantry_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_irregular_infantry_icon_medium_white"						
+    name = "GFX_unit_irregular_infantry_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_irregular_infantry_icon.dds" 
     noOfFrames = 2
    }
    
     spriteType = { 
-    name = "GFX_great_war_infantry_icon_medium"				
+    name = "GFX_unit_great_war_infantry_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_great_war_infantry_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_great_war_infantry_icon_medium_white"						
+    name = "GFX_unit_great_war_infantry_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_great_war_infantry_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_great_war_cavalry_icon_medium"				
+    name = "GFX_unit_great_war_cavalry_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_great_war_cavalry_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_great_war_cavalry_icon_medium_white"						
+    name = "GFX_unit_great_war_cavalry_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_great_war_cavalry_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_shock_troops_icon_medium"				
+    name = "GFX_unit_shock_troops_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_shock_troops_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_shock_troops_icon_medium_white"						
+    name = "GFX_unit_shock_troops_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_shock_troops_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_flamethrower_support_company_icon_medium"				
+    name = "GFX_unit_flamethrower_support_company_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_flamethrower_support_company_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_flamethrower_support_company_icon_medium_white"						
+    name = "GFX_unit_flamethrower_support_company_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_flamethrower_support_company_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_sniper_team_support_icon_medium"				
+    name = "GFX_unit_sniper_team_support_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_sniper_team_support_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_sniper_team_support_icon_medium_white"						
+    name = "GFX_unit_sniper_team_support_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_sniper_team_support_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_early_marine_icon_medium"				
+    name = "GFX_unit_early_marine_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_early_marine_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_early_marine_icon_medium_white"						
+    name = "GFX_unit_early_marine_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_early_marine_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_cannon_artillery_icon_medium"				
+    name = "GFX_unit_cannon_artillery_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_cannon_artillery_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_cannon_artillery_icon_medium_white"						
+    name = "GFX_unit_cannon_artillery_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_cannon_artillery_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_cannon_artillery_towed_icon_medium"				
+    name = "GFX_unit_cannon_artillery_towed_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_cannon_artillery_towed_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_cannon_artillery_towed_icon_medium_white"						
+    name = "GFX_unit_cannon_artillery_towed_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_cannon_artillery_towed_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_cannon_artillery_support_icon_medium"				
+    name = "GFX_unit_cannon_artillery_support_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_cannon_artillery_support_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_cannon_artillery_support_icon_medium_white"						
+    name = "GFX_unit_cannon_artillery_support_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_cannon_artillery_support_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_howitzer_artillery_icon_medium"				
+    name = "GFX_unit_howitzer_artillery_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_howitzer_artillery_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_howitzer_artillery_icon_medium_white"						
+    name = "GFX_unit_howitzer_artillery_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_howitzer_artillery_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_howitzer_artillery_towed_icon_medium"				
+    name = "GFX_unit_howitzer_artillery_towed_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_howitzer_artillery_towed_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_howitzer_artillery_towed_icon_medium_white"						
+    name = "GFX_unit_howitzer_artillery_towed_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_howitzer_artillery_towed_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_howitzer_artillery_support_icon_medium"				
+    name = "GFX_unit_howitzer_artillery_support_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_howitzer_artillery_support_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_howitzer_artillery_support_icon_medium_white"						
+    name = "GFX_unit_howitzer_artillery_support_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_howitzer_artillery_support_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_siege_artillery_icon_medium"				
+    name = "GFX_unit_siege_artillery_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_siege_artillery_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_siege_artillery_icon_medium_white"						
+    name = "GFX_unit_siege_artillery_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_siege_artillery_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_siege_artillery_towed_icon_medium"				
+    name = "GFX_unit_siege_artillery_towed_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_siege_artillery_towed_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_siege_artillery_towed_icon_medium_white"						
+    name = "GFX_unit_siege_artillery_towed_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_siege_artillery_towed_icon.dds" 
     noOfFrames = 2
    }
    
    spriteType = { 
-    name = "GFX_siege_artillery_support_icon_medium"				
+    name = "GFX_unit_siege_artillery_support_icon_medium"				
     textureFile = "gfx/interface/counters/divisions_large/unit_siege_artillery_support_icon.dds"
     noOfFrames = 2
    }
 
    spriteType = { 
-    name = "GFX_siege_artillery_support_icon_medium_white"						
+    name = "GFX_unit_siege_artillery_support_icon_medium_white"						
     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_siege_artillery_support_icon.dds" 
     noOfFrames = 2
    }

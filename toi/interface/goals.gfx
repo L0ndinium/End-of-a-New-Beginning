@@ -2362,6 +2362,16 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_goal_focus_ally_URG"
+		texturefile = "gfx/interface/goals/general/focus_ally_URG.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_ally_PRU"
+		texturefile = "gfx/interface/goals/general/focus_ally_PRU.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_goal_focus_religious_prayers"
 		texturefile = "gfx/interface/goals/general/focus_religious_prayers.dds"
 	}

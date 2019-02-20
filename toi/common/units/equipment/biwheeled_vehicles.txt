@@ -15,7 +15,7 @@ equipments = {
 		}
 
 		reliability = 0.85
-		maximum_speed = 12
+		maximum_speed = 6
 
 		defense = 0
 		breakthrough = 0

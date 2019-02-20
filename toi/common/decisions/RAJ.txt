@@ -105,6 +105,92 @@ political_actions = {
 	
 }
 
+foreign_politics = {
+	
+	#Friendship Treaty with ENG
+	eoanb_decision_RAJ_bonds_with_ENG = {
+		
+		icon = generic_operation
+		
+		available = {
+			RAJ = { is_subject_of = ENG }
+			NOT = { has_country_flag = eoanb_flag_RAJ_draw_away_from_ENG }
+		}
+		
+		visible = {
+			TAG = RAJ
+			ENG = { exists = yes }
+			NOT = { SRS = { has_war_with = ENG } }
+			NOT = { has_country_flag = eoanb_flag_RAJ_draw_away_from_ENG }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			add_opinion_modifier = { target = ENG modifier = eoanb_om_RAJ_ENG_friendship }
+			reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_RAJ_ENG_friendship }
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				ENG = { has_completed_focus = ENG_focus_humiliation_by_sepoy }
+			}
+			modifier = {
+				factor = 0.005
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	#Seek Distance from ENG
+	eoanb_decision_RAJ_distance_from_ENG = {
+		
+		icon = generic_operation
+		
+		available = {
+			RAJ = { is_subject_of = ENG }
+			NOT = { has_opinion_modifier = eoanb_om_RAJ_ENG_friendship }
+		}
+		
+		visible = {
+			TAG = RAJ
+			ENG = { exists = yes }
+			NOT = { SRS = { has_war_with = ENG } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+		
+		complete_effect = {
+			ENG = { country_event = { id = britainindia.6 days = 1 } }
+			hidden_effect = {
+				set_country_flag = eoanb_flag_RAJ_draw_away_from_ENG
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = ENG
+					value > -100
+				}
+			}
+		}
+	}
+	
+}
+
 war_measures = {
 	
 	#India Officer Program

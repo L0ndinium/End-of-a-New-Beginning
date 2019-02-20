@@ -2395,6 +2395,12 @@ focus_tree = {
 			focus = LAT_generic_Free_Land
 			focus = LAT_generic_Keep_Abolishment
 		}
+		available = {
+		TAG = ARG
+		TAG = BUE 
+		TAG = CHL
+		TAG = MEX
+		}
 		x = 42
 		y = 4
 		bypass = {

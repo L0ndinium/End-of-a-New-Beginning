@@ -1340,44 +1340,16 @@ focus = {
 	}
 	}
 	
-	focus = {
-		id = BRA_diplomatic_visit_to_france
-		icon = GFX_goal_focus_ally_FRA
-		cost = 70
-		x = 38
-		y = 11
-
-		prerequisite = {
-		focus = BRA_dom_pedro_diplomatic_travels
-		}
-	   
-	   
-
-	completion_reward = {
-    FRA = {
-      add_opinion_modifier = {
-        target = BRA
-        modifier = offered_support 
-      }
-    }
-    BRA = {
-      add_opinion_modifier = {
-        target = FRA
-        modifier = offered_support 
-      }
-    }
-	}
-	}
 	
 	focus = {
 		id = BRA_diplomatic_visit_to_britain
 		icon = GFX_goal_focus_ally_ENG
 		cost = 70
-		x = 38
-		y = 12
+		x = 41
+		y = 11
 
 		prerequisite = {
-		focus = BRA_diplomatic_visit_to_france
+		focus = BRA_dom_pedro_diplomatic_travels
 		}
 	   
 	   
@@ -1398,44 +1370,16 @@ focus = {
 	}
 	}
 	
-   focus = {
-		id = BRA_diplomatic_visit_to_austria
-		icon = GFX_goal_focus_ally_AUS
-		cost = 70
-		x = 38
-		y = 13
-
-		prerequisite = {
-		focus = BRA_diplomatic_visit_to_britain
-		}
-	   
-	   
-
-	completion_reward = {
-    AUS = {
-      add_opinion_modifier = {
-        target = BRA
-        modifier = offered_support 
-      }
-    }
-    BRA = {
-      add_opinion_modifier = {
-        target = AUS
-        modifier = offered_support 
-      }
-    }
-	}
-	}
 	
 	focus = {
 		id = BRA_learn_from_european_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 70
-		x = 38
-		y = 14
+		x = 41
+		y = 12
 
 		prerequisite = {
-		focus = BRA_diplomatic_visit_to_austria
+		focus = BRA_diplomatic_visit_to_britain
 		}
 	   
 	   
@@ -1453,7 +1397,7 @@ focus = {
 		id = BRA_trade_relations_with_our_neighbors
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 70
-		x = 41
+		x = 39
 		y = 11
 
 		prerequisite = {
@@ -1518,7 +1462,7 @@ focus = {
 		id = BRA_trade_relations_with_north_america
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 70
-		x = 41
+		x = 39
 		y = 12
 
 		prerequisite = {
@@ -1528,12 +1472,6 @@ focus = {
 	   
 
 	completion_reward = {
-	USA = {
-				add_opinion_modifier = {
-					target = BRA
-					modifier = FRA_cobden_chevalier_treaty
-				}
-			}
 	MEX = {
 				add_opinion_modifier = {
 					target = BRA
@@ -1546,55 +1484,21 @@ focus = {
 	}
 	
 	
-	focus = {
-		id = BRA_visit_the_united_states
-		icon = GFX_goal_generic_small_arms
-		cost = 70
-		x = 41
-		y = 13
-
-		prerequisite = {
-		focus = BRA_trade_relations_with_north_america
-		}
-	   
-	   
-
-	completion_reward = {
-	USA = {
-				add_opinion_modifier = {
-					target = BRA
-					modifier = usa_bra_visit
-				}
-			}
-		BRA = {
-				add_opinion_modifier = {
-					target = USA
-					modifier = usa_bra_visit
-				}
-			}
-
-USA = { country_event =  brazil.7  }			
-			
-			
-	}
-	}
 	
 	focus = {
 		id = BRA_careful_cooperation
 		icon = GFX_goal_generic_position_armies
 		cost = 70
-		x = 42
-		y = 14
+		x = 40
+		y = 13
 
 		prerequisite = {
-		focus = BRA_visit_the_united_states
+		focus = BRA_trade_relations_with_north_america
 		}
-		
-		mutually_exclusive = {
-		focus = BRA_propose_the_monroe_alliance
+	    prerequisite = {
+		focus = BRA_learn_from_european_infrastructure
 		}
-	   
-	   
+			   
 
 	completion_reward = {
 	add_political_power = 50		
@@ -1606,8 +1510,8 @@ USA = { country_event =  brazil.7  }
 		id = BRA_a_new_foreign_policy
 		icon = GFX_goal_focus_newspapers
 		cost = 70
-		x = 42
-		y = 15
+		x = 40
+		y = 14
 
 		prerequisite = {
 		focus = BRA_careful_cooperation
@@ -1624,8 +1528,8 @@ USA = { country_event =  brazil.7  }
 		id = BRA_mend_relations_with_argentina
 		icon = GFX_goal_focus_negotiate_argentina
 		cost = 70
-		x = 42
-		y = 16
+		x = 40
+		y = 15
           
 		available = {
 		ARG = { has_government = centrism }
@@ -1653,71 +1557,71 @@ USA = { country_event =  brazil.7  }
 	
 	}
 	
-	
 	focus = {
-		id = BRA_propose_the_monroe_alliance
-		icon = GFX_focus_chi_mission_to_the_us
+		id = BRA_mend_relations_with_uruguay
+		icon = GFX_goal_focus_ally_URG
 		cost = 70
-		x = 40
-		y = 14
-
-		prerequisite = {
-		focus = BRA_visit_the_united_states
-		}
-		mutually_exclusive = {  focus = BRA_careful_cooperation }		
-		
-	completion_reward = {
-	USA = { country_event = brazil.8 }
-	}
-	}
-	
-	
-	
-   focus = {
-		id = BRA_expand_the_alliance_on_the_platine
-		icon = GFX_goal_focus_newspapers
-		cost = 70
-		x = 40
-		y = 15
-        
-		available = {
-		is_in_faction = yes
-		}
-		prerequisite = {
-		focus = BRA_propose_the_monroe_alliance
-		}
-		
-		
-	completion_reward = {
-	add_to_faction = URC
-	}
-	}
-	
-	focus = {
-		id = BRA_start_a_research_project
-		icon = GFX_goal_tfv_generic_tech_sharing
-		cost = 70
-		x = 40
+		x = 39
 		y = 16
-        
-		available = {
-		is_in_faction = yes
-		}
+          		
 		prerequisite = {
-		focus = BRA_expand_the_alliance_on_the_platine
+		focus = BRA_mend_relations_with_argentina
 		}
 		
 		
 	completion_reward = {
-	every_country = {
-	limit = { is_in_faction_with = BRA }
-	add_timed_idea = {
-	idea = POR_Research 
-	days = 20
+    URC = {
+				add_opinion_modifier = {
+    				target = BRA
+    				modifier = usa_improved_relations
+				}
+	BRA = {
+				add_opinion_modifier = {
+    				target = URC
+    				modifier = usa_improved_relations
+				}
+			}		
 	}
 	}
+	
+	}
+	
+	focus = {
+		id = BRA_mend_relations_with_peru
+		icon = GFX_goal_focus_ally_PRU
+		cost = 70
+		x = 41
+		y = 16
+		
+		available = {
+		PRU = { has_government = centrism }
+		}
+          		
+		prerequisite = {
+		focus = BRA_mend_relations_with_argentina
+		}
+
+		
+		
+	completion_reward = {
+    PRU = {
+				add_opinion_modifier = {
+    				target = BRA
+    				modifier = usa_improved_relations
+				}
+	BRA = {
+				add_opinion_modifier = {
+    				target = PRU
+    				modifier = usa_improved_relations
+				}
+			}		
 	}
 	}
+	
+	}
+	
+		
+	
 	
 	focus = {
 		id = BRA_ambition_and_tradition

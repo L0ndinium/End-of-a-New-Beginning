@@ -3,12 +3,13 @@ state={
 	name="STATE_587"
 
 	history={
-		owner = RUS
+		owner = KHI
 		buildings = {
 			infrastructure = 1
 			cotton_farm=1
 		}
-		add_core_of = RUS
+		add_core_of = KHI
+		add_claim_by = RUS
 	}
 
 	provinces={

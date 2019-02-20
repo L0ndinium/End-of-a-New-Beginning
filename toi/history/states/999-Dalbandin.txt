@@ -15,6 +15,9 @@ state={
 			infrastructure = 2
 		}
 		add_core_of = KLT
+		victory_points = {
+			8013 1
+		}
 	}
 
 	provinces={

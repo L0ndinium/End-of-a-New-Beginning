@@ -169,7 +169,7 @@ guiTypes = {
    }
    containerWindowType = {
        name = "progress_in_colonial_area_container"
-       position = { x = 0 y = -95}
+       position = { x = 0 y = -45}
 		moveable = yes
 		iconType = {
            name ="colonisation_progress_bg"

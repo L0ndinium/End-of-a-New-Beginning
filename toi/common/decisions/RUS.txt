@@ -130,7 +130,114 @@ internal_politics_eoanb = {
 				         remove_core_of = CAU }
 				1008 = { add_core_of = RUS 
 				         remove_core_of = CAU }						 
-          }
-     }
-	 
+        }
+    }
+	
+}
+
+foreign_politics = {
+
+	eoanb_decision_RUS_send_tsushima_ship = {
+		
+		icon = generic_operation
+		
+		available = {
+			has_navy_size = { size > 0 }
+		}
+		
+		visible = {
+			TAG = RUS
+			JAP = { exists = yes }
+			JAP = { has_full_control_of_state = 1231 }
+			date > 1861.1.1
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			JAP = { country_event = { id = tsushima.1 days = 1 } }
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0.005
+				is_historical_focus_on = no
+			}
+			modifier = {
+				factor = 0
+				date < 1861.3.12
+			}
+		}
+	}
+	
+	eoanb_decision_RUS_send_tsushima_ship2 = {
+		
+		icon = generic_operation
+		
+		available = {
+			has_navy_size = { size > 0 }
+		}
+		
+		visible = {
+			TAG = RUS
+			JAP = { exists = yes }
+			JAP = { has_full_control_of_state = 1231 }
+			date > 1861.5.1
+			OR = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			JAP = { country_event = { id = tsushima.5 days = 1 } }
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1861.5.12
+			}
+		}
+	}
+	
+	eoanb_decision_RUS_tsushima_coastline_charter = {
+		
+		icon = generic_decision
+		
+		available = {
+			has_navy_size = { size > 0 }
+		}
+		
+		visible = {
+			TAG = RUS
+			JAP = { exists = yes }
+			JAP = { has_full_control_of_state = 1231 }
+			OR = {
+				has_global_flag = eoanb_flag_tsushima_incident_1
+				has_global_flag = eoanb_flag_tsushima_incident_2
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			JAP = { country_event = { id = tsushima.6 days = 1 } }
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
 }

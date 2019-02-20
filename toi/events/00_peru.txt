@@ -5,12 +5,7 @@ country_event = {
 	desc = peru.1.d
 	picture = GFX_report_event_amazonas
 
-	fire_only_once = yes
-	
-	trigger = {
-	tag = ECU
-	has_stability < 0.01
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = peru.1.a
@@ -28,12 +23,13 @@ country_event = {
 	desc = peru.2.d
 	picture = GFX_report_event_worker_strikes
 	
-	is_triggered_only = yes
 	fire_only_once = yes
 	
 	trigger = {
+    AND = {
 	tag = ECU
 	has_stability < 0.01
+	}
 	}
 	
 	option = {
@@ -57,11 +53,6 @@ country_event = {
 	desc = peru.3.d
 	
 	is_triggered_only = yes
-	fire_only_once = yes
-	trigger = {
-	tag = ECU
-	has_stability < 0.01
-	}
 	
 	option = {
 		name = peru.3.a

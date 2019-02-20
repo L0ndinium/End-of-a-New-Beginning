@@ -346,6 +346,11 @@ ideologies = {
 			military_junta = {
 
 			}
+			
+			
+			military_goverment = {
+
+			}
 
 			reactionary ={
 
@@ -408,10 +413,6 @@ ideologies = {
 
 			}
 
-			neofascism = {
-
-			}
-
 			cleric_fascism = {
 
 			}
@@ -428,19 +429,11 @@ ideologies = {
 
 			}
 
-			tropical = {
-
-			}
-
 			social_fascism = {
 
 			}
 
-			dictator = {
-
-			}
-
-			military_goverment = {
+			national_populism = {
 
 			}
 

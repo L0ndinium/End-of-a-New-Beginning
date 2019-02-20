@@ -438,6 +438,18 @@
  eoanb_decision_RAJ_officer_program_desc:0 "The war with the Sepoy is taxing, and it is becoming clear that our officers are not trained well enough - and that we do not have enough of them. We will send out requests to our military academies to find the most promising, talented students and have them join us in the war effort."
  eoanb_decision_form_nation_upca:0 "Form the UPCA"
  eoanb_decision_form_nation_upca_desc:0 "From 1823 to 1841, the Federal Republic of Central America reigned in the region, securing stability and the existence of a strong nation state for the Central American people. We need to reform this state, as we already own the necessary territories to call ourselves its successor."
+ eoanb_om_RAJ_ENG_friendship:0 "Friendship Treaty"
+ eoanb_decision_RAJ_bonds_with_ENG:0 "Reaffirm our Friendship with [ENG.GetNameDef]"
+ eoanb_decision_RAJ_bonds_with_ENG_desc:0 "We are and will always remain a loyal subject state to [ENG.GetNameDef], and we should sign a celebratory treaty to affirm this!"
+ eoanb_flag_RAJ_draw_away_from_ENG:0 "India is distancing itself from Britain"
+ eoanb_decision_RAJ_distance_from_ENG:0 "Seek distance from [ENG.GetNameDef]"
+ eoanb_decision_RAJ_distance_from_ENG_desc:0 "We will try to gain more independence for [RAJ.GetNameDef] by distancing ourselves from [ENG.GetNameDef]! We will of course have to be aware of the risks involved..."
+ eoanb_decision_RUS_send_tsushima_ship:0 "Send a ship to Tsushima"
+ eoanb_decision_RUS_send_tsushima_ship_desc:0 "The Island of Tsushima, currently belonging to the [JAP.GetAdjective], is an important strategic asset between the Sea of Japan and the Yellow Sea. We should aim to obtain control over it - thus we should send a ship.\n\n§R[JAP.GetNameDef] may be angered by this!§!"
+ eoanb_decision_RUS_send_tsushima_ship2:0 "Send a second ship to Tsushima"
+ eoanb_decision_RUS_send_tsushima_ship2_desc:0 "We will send a second ship to Tsushima, to resolve the situation there and further establish a hold over the island."
+ eoanb_decision_RUS_tsushima_coastline_charter:0 "Tsushima Coastline Charter"
+ eoanb_decision_RUS_tsushima_coastline_charter_desc:0 "We have drafted a charter stating that [RUS.GetNameDef] will be allowed to use the coastline of Tsushima for naval operations - now let's see if the Japanese, and the Tsushima authorities agree."
  
  #### USA Statehood Decisions ####
  USA_grant_statehood:0 "Admit States into the Union"

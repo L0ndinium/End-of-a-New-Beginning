@@ -102,7 +102,7 @@ create_country_leader = {
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_PAR_Francisco_Antonio_Lopez.dds"
     expire = 1900.7.10
-    ideology = tropical
+    ideology = national_populism
 }
 
 create_field_marshal {

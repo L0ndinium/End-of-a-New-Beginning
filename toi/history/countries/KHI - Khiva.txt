@@ -1,5 +1,5 @@
 ﻿1857.1.1 = {
-  capital = 584
+  capital = 1322
 
   oob = "KHI_1857"
 

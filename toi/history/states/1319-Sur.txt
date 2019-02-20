@@ -2,13 +2,13 @@ state=
 {
 	id=1319
 	name="STATE_1319"
-	manpower = 828960
+	manpower = 43123
 	
 	state_category = town
 	
 	resources={
 
-		chromium=1
+		iron=1
 	}
 	history=
 	{
@@ -22,6 +22,7 @@ state=
 			}
 		}
 		add_core_of = DOM
+		add_claim_by = HAI
 		victory_points = {
 			7660 5 
 		}

@@ -66,10 +66,10 @@
         popularity = 25
       }
       radical_democracy = {
-        popularity = 0
+        popularity = 40
       }
       chauvinist_populism = {
-        popularity = 40
+        popularity = 0
       }
       autocracy = {
         popularity = 15
@@ -79,7 +79,7 @@
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = radical_democracy
   }
 
   set_technology = {
@@ -120,7 +120,7 @@ create_corps_commander {
 
 create_corps_commander {
   name = "Gaspar Polanco"
-  picture = "Portrait_DOM_Gaspar_Polanco"
+  picture = "Portrait_DOM_Gaspar_Polanco.dds"
   traits = { }
   skill = 2
   attack_skill = 1

@@ -342,6 +342,7 @@ country_event = {
 		}
 		#End of the chain for now
 		#Figure out how to trigger the next one at the 1st January 1872 in case this event was triggered by system.18 (due to 20-day inaccuracies)
+		#Perhaps use MTTH?
 	}
 	
 }
