@@ -19,7 +19,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = mechanical_engineering_tech }
 		}
@@ -37,7 +37,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			ROM = {
         	set_variable = {
@@ -50,7 +50,7 @@ focus_tree = {
    			}
    			}
    			add_ideas = industrial_funding
-		
+
 		}
 	}
 	focus = {
@@ -66,7 +66,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			ROM = {
         	set_variable = {
@@ -108,7 +108,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			81 = {
 		add_resource = {
@@ -131,7 +131,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			ROM = {
         	set_variable = {
@@ -170,10 +170,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_political_power = 100
-			add_stability = .05	
+			add_stability = .05
 		}
 	}
 	focus = {
@@ -189,7 +189,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_political_power = -50
 			add_stability = -0.1
@@ -209,7 +209,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_political_power = -75
 			add_stability = 0.05
@@ -229,7 +229,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			retire_country_leader = yes
 			create_country_leader = {
@@ -237,7 +237,7 @@ focus_tree = {
 				desc = "POLITICS_GENERIC_EOANB_DESC"
 				picture = ""
 				expire = "1866.1.1"
-				ideology = conserv
+				ideology = centrism
 				traits = {
 
 				}
@@ -257,7 +257,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_political_power = -50
 			add_stability = 0.05
@@ -276,7 +276,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_political_power = -50
 			add_stability = 0.05
@@ -288,13 +288,13 @@ focus_tree = {
 		x = 8
 		y = 5
 		cost = 100
-		prerequisite = {focus = Promote_Romanian_Unity} 
+		prerequisite = {focus = Promote_Romanian_Unity}
 		prerequisite = {focus = Appease_the_Conservatives}
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 		}
 	}
@@ -308,7 +308,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.50 uses = 1 category = land_doctrine }
 		}
@@ -326,7 +326,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 				army_experience = 10
 		}
@@ -344,9 +344,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = tech_category_cavalry }
 		}
 	}
-	#still need to do icons for most of these as well as portriats and localization for names. The only ones that aren't "feature complete" are Improved_Military_Command and Alexander_Ioan_Cuza_Appointed_Domnitor.
+	#still need to do icons for some of these as well as portriats and localization for names. The only ones that aren't "feature complete" are Improved_Military_Command and Alexander_Ioan_Cuza_Appointed_Domnitor.
