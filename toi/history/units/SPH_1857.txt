@@ -1,0 +1,51 @@
+﻿division_template = {
+  name = "Spanish Native Infantry"
+
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+	line_infantry = { x = 0 y = 1}
+	line_infantry = { x = 1 y = 0}
+	line_infantry = { x = 1 y = 1}
+  }
+}
+
+division_template = {
+  name = "Spanish Recruit Grenadiers"
+
+  regiments = {
+    light_infantry = { x = 0 y = 0}
+	light_infantry = { x = 1 y = 0}
+	light_infantry = { x = 2 y = 0}
+  }
+}
+
+division_template = {
+  name = "Spanish Recruit Cavalry"
+
+  regiments = {
+    dragoon = { x = 0 y = 0}
+	light_cavalry = { x = 1 y = 0}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "1er Regmiento de Reclutas Ibéricos"
+			location = 10265
+			division_template = "Spanish Recruit Grenadiers"
+			start_experience_factor = 0.4
+		}
+		division= {
+			name = "2o Regimiento de Reclutas Ibéricos"
+			location = 10265
+			division_template = "Spanish Recruit Grenadiers"
+			start_experience_factor = 0.3
+		}
+		division= {
+			name = "Brigadas Tagalas"
+			location = 10265
+			division_template = "Spanish Native Infantry"
+			start_experience_factor = 0.2
+		}
+}
