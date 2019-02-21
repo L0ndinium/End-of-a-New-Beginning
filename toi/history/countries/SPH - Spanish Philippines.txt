@@ -97,8 +97,8 @@
 
   create_country_leader = {
   name = "Fernando de Norzagaray"
-  desc = "POLITICS_GEORGE_V_DESC"
-  picture = ""
+  desc = ""
+  picture = "Fernando_de_Norzagaray.dds"
   expire = "1900.1.1"
   ideology = despotism
   traits = {
