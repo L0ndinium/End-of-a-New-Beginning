@@ -1,0 +1,38 @@
+ideas = {
+	country = {
+  infrastructure_funding = {
+      cancel = {
+          NOT = {
+              has_variable = infra_total_bonus
+          }
+      }
+
+      removal_cost = -1
+
+      modifier = {
+          production_speed_infrastructure_factor = 0.5
+        }
+    }
+  war_industry_funding = {
+    cancel = {
+        MOL = {
+            check_variable = { num_of_arms_factories > mol_arms_facs }
+          }
+      }
+
+      removal_cost = -1
+
+      modifier = {
+          production_speed_arms_factory_factor = 0.5
+    }
+  }
+  farming_in_budjak = {
+    removal_cost = -1
+    modifier = {
+      MONTHLY_POPULATION = 0.1
+    }
+  }
+  arms_production_funding = {
+    removal_cost = -1
+    industrial_capacity_factory = 0.1
+  }

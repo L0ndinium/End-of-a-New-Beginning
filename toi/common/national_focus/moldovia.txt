@@ -1,0 +1,185 @@
+focus_tree = {
+	id = moldovia
+	continuous_focus_position = {x = 60 y = 1000 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MOL
+		}
+	}
+	default = no
+	focus = {
+		id = Moldovian_Industry
+		icon = GFX_goal_focus_industrial_revolution
+		x = 3
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = process_engineering_tech }
+		}
+	}
+  focus = {
+		id = Develop_Budjak
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 1
+		cost = 100
+		prerequisite = {
+			focus = Moldovian_Industry
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			MOL = {
+      set_variable = {
+      var = infra_total_bonus
+      value = 0
+    }
+      every_owned_state = {
+          add_to_variable = {
+              var = PREV.infra_total_bonus
+              value = infrastructure_level
+          }
+      }
+      add_to_variable = {
+        var = PREV.infra_total_bonus
+        value = 2
+      }
+   		add_ideas = infrastructure_funding
+		}
+	}
+  focus = {
+    id = Moldovian_Arms
+    icon = GFX_goal_generic_construction
+    x = 2
+    y = 1
+    cost = 90
+    prerequisite = {
+      focus = Moldovian_Industry
+    }
+    available_if_capitulated = no
+    ai_will_do = {
+      factor = 1
+    }
+
+    completion_reward = {
+      MOL = {
+          set_variable = {
+              var = mol_arms_facs
+            value = MOL.num_of_arms_factories
+        }
+        add_to_variable = {
+            var = mol_arms_facs
+            value = 1
+        }
+        }
+        add_ideas = war_industry_funding
+    }
+  }
+  focus = {
+		id = Coal_in_Budjak
+		icon = GFX_goal_focus_industrial_revolution
+		x = 4
+		y = 2
+		cost = 70
+		prerequisite = {
+			focus = Develop_Budjak
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			1126 = {
+		add_resource = {
+		type = coal
+		amount = 2
+		    }
+		  }
+		}
+	}
+  focus = {
+    id = Farming_in_Budjak
+    icon = GFX_goal_focus_industrial_revolution
+    x = 2
+    y = 2
+    cost = 70
+    prerequisite = {
+      focus = Moldovian_Arms
+    }
+    available_if_capitulated = no
+    ai_will_do = {
+      factor = 1
+    }
+
+    completion_reward = {
+      add_timed_idea = {
+        idea = farming_in_budjak
+        days = 730
+      }
+    }
+  }
+  focus = {
+    id = Moldovian_Rearmamnet
+    icon = GFX_goal_focus_industrial_revolution
+    x = 1
+    y = 2
+    cost = 70
+    prerequisite = {
+      focus = Moldovian_Arms
+    }
+    available_if_capitulated = no
+    ai_will_do = {
+      factor = 1
+    }
+
+    completion_reward = {
+      add_timed_idea = {
+        add_tech_bonus = { bonus = 0.25 uses = 2 category = infantry_weapons }
+        idea = arms_production_funding
+        days = 730
+      }
+    }
+  }
+  focus = {
+		id = Infantry_Support
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 3
+		cost = 75
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = Moldovian_Rearmamnet }
+
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.35 uses = 1 category = artillery }
+			add_tech_bonus = { bonus = 0.35 uses = 1 category = support_tech }
+		}
+	}
+  focus = {
+    id = Learning_from_the_Seimeni
+    icon = GFX_focus_generic_little_entente
+    x = 1
+    y = 4
+    cost = 70
+    available_if_capitulated = no
+    ai_will_do = {
+      factor = 1
+    }
+	   prerequisite = { focus = Infantry_Support }
+    completion_reward = {
+      add_tech_bonus = { bonus = 0.50 uses = 1 category = land_doctrine }
+    }
+  }
