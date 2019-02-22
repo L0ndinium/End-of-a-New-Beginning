@@ -571,7 +571,7 @@ country_event = {
 		}
 	}
 	
-}
+} 
 
 #Walker is found in Honduras
 country_event = {
@@ -582,10 +582,12 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
+trigger = {
+	AND = {
 		TAG = ENG
 		date > 1859.8.6
-	}
+	}	
+    }
 	
 	option = { 
 		name = britain.19.a
@@ -649,6 +651,7 @@ country_event = {
 			OR = {
 				TAG = NIC
 				TAG = ELS
+				TAG = COS
 			}
 		}
 		declare_war_on = {

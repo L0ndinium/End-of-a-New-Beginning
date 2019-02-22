@@ -16,22 +16,19 @@ state=
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
-            
-			7660 = {
-				naval_base = 2
-			}
 		}
 		add_core_of = DOM
 		add_claim_by = HAI
 
 		victory_points = {
-			4598 1 
+			13304 5
 		}
-        victory_points = {
-			7660 5 
+		
+		victory_points = {
+			4598 3
 		}
 	}
 	provinces={
-		4598 13304 13306 7632 7660
+		4598 13304 13306 7632
 	}
 }

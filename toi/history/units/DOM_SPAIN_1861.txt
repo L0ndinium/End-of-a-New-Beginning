@@ -9,15 +9,15 @@
 
 units = {
 		division= {
-			name = "1st Dominican Infantry"
-			location = 13308
+			name = "1st Dominican Colonial Garrison"
+			location = 10484
 			division_template = "South American Infantry"
 			start_experience_factor = 0.1
 		}
 		
 		division= {
-			name = "2nd Dominican Infantry"
-			location = 13308
+			name = "2nd Dominican Colonial Garrison"
+			location = 10484
 			division_template = "South American Infantry"
 			start_experience_factor = 0.1
 		}
