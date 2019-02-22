@@ -1,5 +1,5 @@
 ﻿1857.1.1 = {
-  capital = 1319
+  capital = 319
 
   oob = "DOM_1857"
 

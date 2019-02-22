@@ -1,7 +1,7 @@
 
 state={
-	id=1321 
-	name="STATE_1321" # Sarata 
+	id=791 
+	name="STATE_791" # Sarata 
 	manpower = 15000
 
 	state_category = rural
@@ -17,4 +17,3 @@ state={
 	provinces={
 	 6727 13679 
 	}
-}

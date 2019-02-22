@@ -789,7 +789,7 @@
  STATE_788:0 "Senari"
  STATE_789:0 "Kulango-Nord"
  STATE_790:0 "Port-de-Paix"
- STATE_791:0 "Les Cayes"
+ STATE_791:0 "Sarata"
  STATE_792:0 "Ankole"
  STATE_793:0 "Tio"
  STATE_794:0 "Anziku"
@@ -1318,7 +1318,6 @@
  STATE_1316:0 "Limburg"
  STATE_1317:0 "Zeeuws-Vlaanderen"
  STATE_1318:0 "Este"
- STATE_1319:0 "Sur"
+ STATE_1319:0 "Khwarazm"
  STATE_1320:0 "Syrmia"
- STATE_1321:0 "Sarata"
- STATE_1322:0 "Khwarazm"
+ 
