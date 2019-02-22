@@ -1,0 +1,38 @@
+focus_tree = {
+    id = Spain
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SPR
+		}
+	}
+	default = no
+	focus = {
+	    id = SPR_downfallingcountry
+		icon = GFX_SPR_placeholder
+		cost = 75
+		x = 15
+		y = 0
+		
+		completion_reward = {
+		    add_political_power = -50
+		    add_ideas = SPR_downfallingcountry
+		}
+	}
+	focus = {
+	    id = SPR_justthebegining
+		icon = GFX_SPR_placeholder
+		cost = 75
+		x = 15
+		y = 1
+		prerequisite = {
+		focus = SPR_downfallingcountry
+		}
+		
+		completion_reward = {
+		    add_ideas = SPR_eightrevolution
+		}
+	}
+	
+}

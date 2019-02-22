@@ -1,0 +1,23 @@
+ideas = {
+
+     country = { 
+	     SPR_downfallingcountry = {	
+		           picture = generic_pp_unity_bonus					
+				   removal_cost = -1		   
+				   modifier ={
+                         autocracy_drift = 0.02
+						 stability_factor = -0.2
+						 war_support_factor = -0.2
+						 conscription_factor = -0.2
+					}
+				}
+		 SPR_eightrevolution = {	
+		           picture = generic_pp_unity_bonus					
+				   removal_cost = -1		   
+				   modifier ={
+						 stability_factor = -0.1
+						 production_factory_max_efficiency_factor = -0.02
+					}
+				}
+		}
+	}
