@@ -12,6 +12,7 @@ state={
 			infrastructure = 1
 		}
 		add_core_of = VAN
+		victory_points = { 7259 1 }
 	}
 
 	provinces={

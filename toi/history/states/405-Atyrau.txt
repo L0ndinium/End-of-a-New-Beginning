@@ -13,6 +13,12 @@ state={
 		victory_points = {
 			1459 3 
 		}
+		victory_points = {
+			1919 3 
+		}
+		victory_points = {
+			1573 5 
+		}
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 3
@@ -23,9 +29,9 @@ state={
 	}
 
 	provinces={
-		756 1216 1384 1459 1573 1632 1919 2058 7639 9605 10187 10205 10488 10601 10671 11687 12239 12581 12722 
+		756 1216 1384 1459 1573 1632 1919 7639 9605 10187 10205 10488 10601 10671 11687 12239 12722 
 	}
-	manpower=4142041
+	manpower=3142041
 	buildings_max_level_factor=1.000
 	state_category=city
 }

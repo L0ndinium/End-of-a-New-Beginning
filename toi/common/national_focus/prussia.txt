@@ -119,7 +119,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_state_rail_0
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_focus_prussian_state_rail
 		x = 3
 		y = 1
 		cost = 70
@@ -441,7 +441,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_danzig_rifles
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_focus_prussia_milfactory_danzig
 		x = 7
 		y = 3
 		cost = 70
@@ -464,7 +464,7 @@ focus_tree = {
 	
 	focus = {
 		id = PRS_erfurt_rifles
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_focus_prussia_milfactory_erfurt
 		x = 7
 		y = 4
 		cost = 70

@@ -14,7 +14,7 @@
     pre_industrial_era
     agrarian
     non_monarchical_system
-    military_junta
+    presidential_republic
 
     civilian_economy
     limited_exports
@@ -26,7 +26,7 @@
     border_control
 	limited_conscription
     segregation
-    absolutism
+    universal_male_suffrage
 
     human_rights
     limited_elections
@@ -57,13 +57,13 @@
         popularity = 0
       }
       traditional_conservatism = {
-        popularity = 40
+        popularity = 60
       }
       radical_democracy = {
         popularity = 0
       }
       chauvinist_populism = {
-        popularity = 60
+        popularity = 40
       }
       autocracy = {
         popularity = 0
@@ -73,7 +73,7 @@
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -86,10 +86,10 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-    name = "William Walker"
+    name = "Tomás Martínez"
     desc = "#"
-    picture = "Portrait_NIC_William_Walker.dds"
-    expire = 1857.10.12
-    ideology = dictator
+    picture = "Portrait_NIC_Tomas_Martinez.dds"
+    expire = 1867.10.19
+    ideology = conserv
 }
 }

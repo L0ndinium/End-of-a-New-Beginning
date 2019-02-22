@@ -14,7 +14,7 @@
     pre_industrial_era
     agrarian
     non_monarchical_system
-    military_junta
+    presidential_republic
 
     civilian_economy
     limited_exports
@@ -26,10 +26,10 @@
     border_control
 	limited_conscription
     segregation
-    absolutism
+    universal_male_suffrage
 
-    no_constitution
-    no_elections
+    human_rights
+    limited_elections
 
     privileged_education
     state_religion
@@ -53,16 +53,16 @@
         popularity = 0
       }
       centrism = {
-        popularity = 5
+        popularity = 45
       }
       traditional_conservatism = {
-        popularity = 40
+        popularity = 60
       }
       radical_democracy = {
-        popularity = 0
+        popularity = 3
       }
       chauvinist_populism = {
-        popularity = 55
+        popularity = 2
       }
       autocracy = {
         popularity = 0
@@ -72,7 +72,7 @@
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -88,8 +88,15 @@
     name = "Rafael Campo"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_ELS_Rafael_Campo.dds"
-    expire = 1900.1.1
-    ideology = dictator
+    expire = 1858.6.24
+    ideology = conserv
+}
+  create_country_leader = {
+    name = "Gerardo Barrios"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_ELS_Gerardo_Barrios.dds"
+    expire = 1863.10.26
+    ideology = conserv_liberal
 }
 
 create_corps_commander {

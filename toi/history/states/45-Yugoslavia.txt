@@ -2,7 +2,7 @@
 state={
 	id=45
 	name="STATE_45" # Vajdaság
-	manpower = 726200
+	manpower = 652200
 
 	state_category = rural
 
@@ -19,6 +19,6 @@ state={
 	}
 
 	provinces={
-		619 3617 3623 9621 11580
+		619 3617 3623 9621
 	}
 }

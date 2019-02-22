@@ -3172,3 +3172,7 @@
  eoanb_tt_focus_ENG_mil_plan_will_go:0 "\n\nThe national spirit will disappear as soon as you advance to an §YIndustrial Army§!."
  eoanb_tt_focus_ENG_new_mil_colony:0 "Unlocks §YDecisions§! for financing the military in our colonies."
  eoanb_tt_focus_ENG_cardwell_reforms:0 "\n\nThe national spirit \"§YThe Cardwell Reforms§!\" will disappear when all of the nine focuses below are completed."
+ ENG_focus_develop_RAJ_factory:0 "Industrial Buildup in [RAJ.GetNameDef]"
+ ENG_focus_develop_RAJ_factory_desc:0 "We will aid our subject, [RAJ.GetNameDef], by sending funds to aid industrial development in their territory."
+ ENG_focus_develop_RAJ_infrastructure:0 "Roadbuilding in [RAJ.GetNameDef]"
+ ENG_focus_develop_RAJ_infrastructure_desc:0 "We will aid our subject, [RAJ.GetNameDef], by helping to fund and administrate roadbuilding efforts in their territory."

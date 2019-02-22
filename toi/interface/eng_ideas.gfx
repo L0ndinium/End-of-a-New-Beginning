@@ -52,4 +52,44 @@ spriteTypes = {
 		name = "GFX_idea_ENG_sun_never_sets"
 		texturefile = "gfx/interface/ideas/ENG/ENG_sun_never_sets.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_thomas_jones"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_thomas_jones.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_garnet_wolseley"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_garnet_wolseley.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_john_fox_burgoyne"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_john_fox_burgoyne.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_william_codrington"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_william_codrington.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_james_simpson"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_james_simpson.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_thomas_graham_balfour"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_thomas_graham_balfour.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_george_bingham"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_george_bingham.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ENG_hc_charles_napier"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hc_charles_napier.dds"
+	}
 }

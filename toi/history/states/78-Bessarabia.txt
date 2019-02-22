@@ -2,7 +2,7 @@ state=
 {
 	id=78
 	name="STATE_78"
-	manpower = 100274
+	manpower = 85274
 
 	state_category = town
 
@@ -10,15 +10,12 @@ state=
 	{
 		owner = RUS
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3 
 			industrial_complex = 1
-			13679 = {
-				naval_base = 1
-			}
 		}
 		add_core_of = RUS
 	}
 	provinces=
 	{
-414 565 3407 3577 3707 6600 6727 6743 9683 11686 11705 13679 13681 	}
+414 565 3577 3707 6600 6743 9683 11686 11705 13681 	}
 }

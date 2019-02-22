@@ -16,7 +16,7 @@
     no_heir
     absolute_monarchy
 
-    civilian_economy
+    isolation
     closed_economy
     two_percent
     normal_taxes

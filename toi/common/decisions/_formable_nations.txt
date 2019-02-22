@@ -1,5 +1,85 @@
 eoanb_category_formables = {
 	
-	#Formable Nation Decisions go in here
+	#Form the UPCA
+	eoanb_decision_form_nation_upca = {
+		
+		icon = generic_form_nation
+		
+		available = {
+			is_subject = no
+			has_full_control_of_state = 312
+			has_full_control_of_state = 313
+			has_full_control_of_state = 314
+			has_full_control_of_state = 316
+			has_full_control_of_state = 317
+		}
+		
+		visible = {
+			OR = {
+				TAG = COS
+				TAG = NIC
+				TAG = HON
+				TAG = ELS
+				TAG = GUA
+			}
+			NOT = {
+				any_country = {
+					has_cosmetic_tag = UPCA_cosmetic
+				}
+			}
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			set_cosmetic_tag = UPCA_cosmetic
+			if = {
+				limit = {
+					NOT = { 312 = { is_core_of = ROOT } }
+				}
+				add_state_core = 312
+			}
+			if = {
+				limit = {
+					NOT = { 313 = { is_core_of = ROOT } }
+				}
+				add_state_core = 313
+			}
+			if = {
+				limit = {
+					NOT = { 314 = { is_core_of = ROOT } }
+				}
+				add_state_core = 314
+			}
+			if = {
+				limit = {
+					NOT = { 316 = { is_core_of = ROOT } }
+				}
+				add_state_core = 316
+			}
+			if = {
+				limit = {
+					NOT = { 317 = { is_core_of = ROOT } }
+				}
+				add_state_core = 317
+			}
+			if = {
+				limit = {
+					NOT = { 1154 = { is_core_of = ROOT } }
+				}
+				add_state_core = 1154
+			}
+			if = {
+				limit = {
+					NOT = { 1155 = { is_core_of = ROOT } }
+				}
+				add_state_core = 1155
+			}
+		}
+		
+		ai_will_do = {
+			base = 1000
+		}
+	}
 	
 }

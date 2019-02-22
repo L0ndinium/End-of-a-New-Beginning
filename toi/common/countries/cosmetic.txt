@@ -105,3 +105,7 @@ RRP = {
  color = rgb { 103 29 32 }
  color_ui = rgb { 103 29 32 }
 }
+UPCA_cosmetic = {
+	color = rgb { 164 247 249 }
+	color_ui = rgb { 164 247 249 }
+}

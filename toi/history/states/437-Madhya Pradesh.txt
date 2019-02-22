@@ -16,6 +16,9 @@ state={
 		}
 		add_core_of = SRS
 		add_core_of = RAJ
+		victory_points = {
+			10807 1
+		}
 	}
 
 	provinces={

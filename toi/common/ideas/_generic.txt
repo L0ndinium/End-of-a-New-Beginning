@@ -215,7 +215,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				surrender_limit = 0.5
 				army_core_defence_factor = 1
 				army_core_attack_factor = 0.25
 				army_org_factor = 0.25

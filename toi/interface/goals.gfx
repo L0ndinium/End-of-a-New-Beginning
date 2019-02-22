@@ -1737,6 +1737,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/prussia/focus_trade_france_focus.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_focus_prussian_state_rail"
+		texturefile = "gfx/interface/goals/prussia/focus_prussian_state_rail.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_milfactory_erfurt"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_milfactory_erfurt.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_prussia_milfactory_danzig"
+		texturefile = "gfx/interface/goals/prussia/focus_prussia_milfactory_danzig.dds"
+	}
+	
 	### United States
 
 	SpriteType = {
@@ -2344,6 +2359,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_focus_ally_SWI"
 		texturefile = "gfx/interface/goals/general/focus_ally_SWI.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_ally_URG"
+		texturefile = "gfx/interface/goals/general/focus_ally_URG.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_ally_PRU"
+		texturefile = "gfx/interface/goals/general/focus_ally_PRU.dds"
 	}
 	
 	SpriteType = {

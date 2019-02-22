@@ -60,3 +60,73 @@ country_event = {
 	}
 	
 }
+
+#RAJ gets message ENG will warn them
+country_event = {
+	id = britishindia.2
+	title = britishindia.2.t
+	desc = britishindia.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishindia.2.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_event_britishindia_2_a
+		hidden_effect = {
+			RAJ = {
+				add_autonomy_score = {
+					value = -100
+				}
+			}
+		}
+	}
+	
+}
+
+#RAJ gets message ENG threatened war
+country_event = {
+	id = britishindia.3
+	title = britishindia.3.t
+	desc = britishindia.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishindia.3.a
+		ai_chance = { factor = 97 }
+		add_political_power = -50
+		add_war_support = -0.05
+	}
+	
+	option = {
+		name = britishindia.3.b
+		ai_chance = { factor = 3 }
+		declare_war_on = { target = ENG type = independence_wargoal }
+		hidden_effect = {
+			ENG = { set_autonomy = { target = RAJ autonomy_state = autonomy_free } }
+		}
+	}
+	
+}
+
+#RAJ gets message ENG released them
+country_event = {
+	id = britishindia.4
+	title = britishindia.4.t
+	desc = britishindia.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishindia.4.a
+		ai_chance = { factor = 100 }
+		ENG = { set_autonomy = { target = RAJ autonomy_state = autonomy_free } }
+		add_opinion_modifier = { target = ENG modifier = eoanb_om_RAJ_ENG_friendly_release }
+		reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_RAJ_ENG_friendly_release }
+	}
+	
+}

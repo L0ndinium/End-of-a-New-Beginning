@@ -220,7 +220,15 @@ country_event = {
 				news_event = { id = par_news.1 }
 			}
 			set_country_flag = Paraguayan_War
-			BRA = { country_event = { id = par.7 } }
+			BRA = { country_event = { id = par.7 } 
+			set_country_flag = Paraguayan_War
+			}
+			ARG = {
+			set_country_flag = Paraguayan_War
+			}
+			URC = {
+			set_country_flag = Paraguayan_War
+			}
 		}
 }
  
@@ -544,6 +552,9 @@ country_event = { #Paraguay Loses the War AUTOMATED
 		option = {
 			name = par.15.a
 			clr_country_flag = Paraguayan_War
+			ARG = { clr_country_flag = Paraguayan_War }
+			BRA = { clr_country_flag = Paraguayan_War }
+			URC = { clr_country_flag = Paraguayan_War }
 			set_global_flag = Paraguay_Loses_War
 			BRA = {
 				transfer_state = 1065
@@ -598,6 +609,9 @@ country_event = { #Paraguay Wins the War AUTOMATED
 		option = {
 			name = par.16.a
 			clr_country_flag = Paraguayan_War
+			ARG = { clr_country_flag = Paraguayan_War }
+			BRA = { clr_country_flag = Paraguayan_War }
+			URC = { clr_country_flag = Paraguayan_War }
 			set_global_flag = Paraguay_Wins_War
 			transfer_state = 1036
 			transfer_state = 503

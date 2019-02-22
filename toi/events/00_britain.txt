@@ -573,6 +573,109 @@ country_event = {
 	
 }
 
+#Walker is found in Honduras
+country_event = {
+	id = britain.19
+	title = britain.19.t
+	desc = britain.19.d
+	picture = GFX_report_event_generic_sailship
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		date > 1859.8.6
+	}
+	
+	option = { 
+		name = britain.19.a
+		ai_chance = { factor = 50 }
+		add_political_power = 5
+		hidden_effect = {	
+			HON = {
+				create_country_leader = {
+					name = "Fernando Caudillo"
+					desc = "POLITICS_CAUDILLO_DESC"
+					expire = "1861.1.1"
+					ideology = national_populism
+					traits = {
+		
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = britain.19.b 
+		ai_chance = { factor = 50 }
+		add_political_power = -5
+		hidden_effect = {
+			ENG = { country_event = britain.20 }
+			HON = { country_event = britain.20 }
+			NIC = { country_event = britain.20 }
+			USA = { country_event = britain.20 }
+			ELS = { country_event = britain.20 }
+		}	
+	}
+
+}
+
+country_event = {
+	id = britain.20
+	title = britain.20.t
+	desc = britain.20.d
+	picture = GFX_event_nicaragua_1
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = britain.20.a
+		ai_chance = { factor = 60 }
+		trigger = {
+			OR = {
+				TAG = USA 
+				TAG = ENG 
+			}
+		}
+		add_political_power = -5
+	}
+	
+	option = {
+		name = britain.20.b
+		ai_chance = { factor = 20 }
+		trigger = {
+			OR = {
+				TAG = NIC
+				TAG = ELS
+			}
+		}
+		declare_war_on = {
+			target = HON
+			type = topple_government
+		}
+	} 
+
+	option = {
+		name = britain.20.c
+		ai_chance = { factor = 20 }
+		trigger = {
+			TAG = HON
+		}
+		set_politics = { ruling_party = chauvinist_populism elections_allowed = no }
+		set_political_party = {
+			ideology = chauvinist_populism
+			popularity = 55
+		}
+		custom_effect_tooltip = eoanb_tt_ENG_event_20_b
+		hidden_effect = {
+			load_oob = "HON_Walker"
+		}
+	}
+
+}
+
 ### POLITICAL EVENTS FOR BRITAIN BELOW ###
 
 #Elections of 1859
@@ -1166,18 +1269,14 @@ country_event = {
 				1006 = { is_controlled_by = SRS }
 			}
 			AND = {
-				431 = { is_controlled_by = OUD }
-				435 = { is_controlled_by = OUD }
-				433 = { is_controlled_by = OUD }
-				436 = { is_controlled_by = OUD }
-				1006 = { is_controlled_by = OUD }
-			}
-			AND = {
-				431 = { is_controlled_by = GWA }
-				435 = { is_controlled_by = GWA }
-				433 = { is_controlled_by = GWA }
-				436 = { is_controlled_by = GWA }
-				1006 = { is_controlled_by = GWA }
+				any_country = {
+					has_war_together_with = SRS 
+					controls_state = 431
+					controls_state = 435
+					controls_state = 433
+					controls_state = 436
+					controls_state = 1006
+				}
 			}
 		}
 	}
@@ -1291,6 +1390,53 @@ country_event = {
 	option = {
 		name = britainindia.5.a
 		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#ENG gets message RAJ is trying to distance itself
+country_event = {
+	id = britainindia.6
+	title = britainindia.6.t
+	desc = britainindia.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	#Send them a warning
+	option = {
+		name = britainindia.6.a
+		ai_chance = { factor = 90 }
+		RAJ = { country_event = { id = britishindia.2 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_a
+	}
+	
+	#Threaten War
+	option = {
+		name = britainindia.6.b
+		ai_chance = { 
+			factor = 8 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.3 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_b
+	}
+	
+	#Release them
+	option = {
+		name = britainindia.6.c
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.4 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_c
 	}
 	
 }

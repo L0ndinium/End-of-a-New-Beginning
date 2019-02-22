@@ -1336,3 +1336,7 @@
  ENG_idea_trade_unions_banned_desc:0 "This country has banned trade unions."
  eoanb_idea_generic_focus_resources_nationalized:0 "Nationalization of Resources"
  eoanb_idea_generic_focus_resources_nationalized_desc:0 "This country is enacting policies to ensure national resources are not being exported when needed at home."
+ eoanb_idea_tsushima_paying_reparations:0 "Paying War Reparations"
+ eoanb_idea_tsushima_paying_reparations_desc:0 "This country is paying war reparations after the Tsushima War."
+ eoanb_idea_tsushima_receiving_reparations:0 "Receiving War Reparations"
+ eoanb_idea_tsushima_receiving_reparations_desc:0 "This country is receiving war reparations after the Tsushima War."

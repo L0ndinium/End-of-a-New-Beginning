@@ -1,0 +1,20 @@
+state={
+	id=1319
+	name="STATE_1319"
+
+	history={
+		owner = KHI
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = KHI
+		victory_points = { 12465 1 }
+	}
+
+	provinces={
+		1479 1576 1614 7541 10395 10435 12233 12324 12454 12465  
+	}
+	manpower=225932
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

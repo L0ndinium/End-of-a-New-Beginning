@@ -9,13 +9,13 @@ state={
 
 		}
 		add_core_of = KOK
-		victory_points = { 1483 1 }
+		victory_points = { 12581 1 }
 
 	}
 
 	provinces={
-		1483 4316 4467 4923 10408 10530 12370 
+		1483 2058 4316 4467 4923 10408 10530 12370 12581
 	}
-	manpower=83340 
+	manpower=1083340 
 	state_category=wasteland
 }

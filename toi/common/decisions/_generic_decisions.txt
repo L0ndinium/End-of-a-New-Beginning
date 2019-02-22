@@ -974,7 +974,6 @@ eoanb_religious_affairs = {
 	#Try to Secularize
 	eoanb_decision_generic_change_secular = {
 		
-		
 		icon = generic_nationalism
 		
 		available = {
