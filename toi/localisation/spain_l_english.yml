@@ -1,6 +1,8 @@
-l_english:
+﻿l_english:
 
   SPR_downfallingcountry:0 "A downfalling country"
   SPR_downfallingcountry_desc:0 ""
   SPR_eightrevolution:0 "1855 Revolution"
   SPR_eightrevolution_desc:0 ""
+  SPR_carlistmenace:0 "Carlist menace"
+  SPR_carlistmenace_desc:0 ""

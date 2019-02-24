@@ -1,0 +1,96 @@
+1857.1.1 = {
+  capital = 804
+
+  oob = "CSP_1857"
+
+  set_convoys = 25
+  
+  set_research_slots = 3
+
+  add_ideas = { 
+    #POLITICS 
+		  
+    hos_is_leader
+    victorian_era
+	law_victorian_army
+    agrarian
+    no_heir
+    parliamentary_republic
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+	cl_restricted
+	fourteen_hour_work_day
+
+    stagnation_growth
+    border_control
+	volunteer_only
+    limited_equality
+    parliamentary_suffrage
+
+    human_rights
+    no_elections
+
+    privileged_education
+    state_religion
+	religion_catholic
+         #NATIONAL SPIRITS
+    }
+
+  set_politics = {
+    parties = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 25
+      }
+      traditional_conservatism = {
+        popularity = 25
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 50
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+
+	  ruling_party = autocracy
+  }
+  
+  set_technology = {
+	start_build_tech = 1
+	}
+
+  # POLITICAL LEADERS
+
+  create_country_leader = {
+	name = "Juan III"
+	desc = ""
+	picture = "Portrait_SPR_Juan_de_Borbon.dds"
+	expire = "1965.1.1"
+	ideology = autocracy
+	traits = {
+
+	}
+}
+
+}

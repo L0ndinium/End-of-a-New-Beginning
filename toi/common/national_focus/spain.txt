@@ -11,8 +11,8 @@ focus_tree = {
 	focus = {
 	    id = SPR_downfallingcountry
 		icon = GFX_SPR_placeholder
-		cost = 75
-		x = 15
+		cost = 50
+		x = 16
 		y = 0
 		
 		completion_reward = {
@@ -23,8 +23,8 @@ focus_tree = {
 	focus = {
 	    id = SPR_justthebegining
 		icon = GFX_SPR_placeholder
-		cost = 75
-		x = 15
+		cost = 50
+		x = 16
 		y = 1
 		prerequisite = {
 		focus = SPR_downfallingcountry
@@ -35,4 +35,98 @@ focus_tree = {
 		}
 	}
 	
+
+###### Carlist Branch ######
+
+    focus = {
+	    id = SPR_legitimemonarch
+		icon = GFX_SPR_placeholder
+		cost = 75
+		x = 20
+		y = 2
+		prerequisite = {
+		focus = SPR_justthebegining
+		}
+		
+		completion_reward = {
+		    add_ideas = SPR_carlistmenace
+		}
+	}
+	focus = {
+	    id = SPR_nopeaceaccords
+		icon = GFX_SPR_placeholder
+		cost = 50
+		x = 20
+		y = 3
+		prerequisite = {
+		focus = SPR_legitimemonarch
+		}
+		
+		completion_reward = {
+		    add_political_power = -25
+		}
+	}
+	focus = {
+	    id = SPR_laesperanza
+		icon = GFX_SPR_placeholder
+		cost = 50
+		x = 22
+		y = 3
+		prerequisite = {
+		focus = SPR_legitimemonarch
+		}
+		
+		completion_reward = {
+		    add_political_power = -25
+		}
+	}
+	focus = {
+	    id = SPR_balearuprising
+		icon = GFX_SPR_placeholder
+		cost = 10
+		x = 21
+		y = 4
+		available = {
+			date > 1860.4.1
+		}
+		bypass = { date > 1860.4.1 }
+		prerequisite = {
+		focus = SPR_laesperanza focus = SPR_nopeaceaccords
+		}
+		
+		completion_reward = {
+		}
+	}
+	focus = {
+	    id = SPR_successfulortegada
+		icon = GFX_SPR_placeholder
+		cost = 10
+		x = 22
+		y = 5
+		bypass = { has_country_flag = balearuprising }
+		mutually_exclusive = { focus = SPR_mutinyception }
+		prerequisite = {
+		focus = SPR_balearuprising
+		}
+		
+		completion_reward = {
+		complete_national_focus = SPR_successfulortegada
+		SPR = { country_event = { id = carlistbalears.2 days = 1 } }
+		}
+	}
+	focus = {
+	    id = SPR_mutinyception
+		icon = GFX_SPR_placeholder
+		cost = 10
+		x = 20
+		y = 5
+		bypass = { has_country_flag = nobalear }
+		mutually_exclusive = { focus = SPR_successfulortegada }
+		prerequisite = {
+		focus = SPR_balearuprising
+		}
+		
+		completion_reward = {
+		}
+	}
 }

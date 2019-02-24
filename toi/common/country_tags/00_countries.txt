@@ -193,6 +193,7 @@ SAR = "countries/Sardinia.txt"
 KRA = "countries/Krakow.txt"
 SPH = "countries/Spanish Philippines"
 MDN = "countries/Maguindanao"
+CSP = "countries/Carlist Spain"
 
 # Below, countries which color are not important
 

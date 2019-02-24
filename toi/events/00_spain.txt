@@ -1,0 +1,75 @@
+add_namespace = carlistbalears
+
+#1860 uprising
+country_event = {
+	id = carlistbalears.1
+	title = carlistbalears.1.t
+	desc = carlistbalears.1.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = SPR
+		date > 1860.4.1
+	}
+	
+	option = {
+		name = carlistbalears.1.a
+		ai_chance = { factor = 80 }
+		add_political_power = 100
+		hidden_effect = {
+			SPR = { set_country_flag = nobalear }
+		}
+	}
+	option = {
+		name = carlistbalears.1.b
+		ai_chance = { factor = 20 }
+		add_political_power = -100
+		hidden_effect = {
+			SPR = { set_country_flag = balearuprising }
+		}
+	}
+	
+}
+
+# Continuation
+
+country_event = {
+	id = carlistbalears.2
+	title = carlistbalears.2.t
+	desc = carlistbalears.2.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = SPR
+		date > 1860.4.1
+	}
+	
+	option = {
+			trigger = {
+				tag = SPR
+			}
+			name = carlistbalears.2.a
+			ai_chance = {
+                factor = 100
+            }
+            CSP = {
+        		transfer_state = 172
+        		172 = {
+            		add_core_of = CSP
+        		}  
+        	}
+			CSP = {
+        		transfer_state = 177
+        		177 = {
+            		add_core_of = CSP
+        		}  
+        	}
+        	remove_state_core = 172
+        	add_state_claim = 172
+			remove_state_core = 177
+        	add_state_claim = 177
+			hidden_effect = { CSP = { country_event = { id = carlistbalears.3 } } }
+		}
+}

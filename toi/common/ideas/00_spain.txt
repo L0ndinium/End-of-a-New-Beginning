@@ -19,5 +19,16 @@ ideas = {
 						 production_factory_max_efficiency_factor = -0.02
 					}
 				}
+		  SPR_carlistmenace = {	
+		           picture = generic_pp_unity_bonus					
+				   removal_cost = -1		   
+				   modifier ={
+						 stability_factor = -0.1
+						 industrial_capacity_factory = -0.1
+						 army_attack_factor = -0.1
+						 army_defense_factor = -0.1
+						 conscription_factor = -0.05
+					}
+				}
 		}
 	}
