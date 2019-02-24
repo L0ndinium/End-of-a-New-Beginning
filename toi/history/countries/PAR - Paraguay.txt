@@ -86,6 +86,8 @@
 	horse_transport = 1
 	start_build_tech = 1
   }
+  
+   give_guarantee = URG
 
   # POLITICAL LEADERS
 

@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+		VIN_FRA_war = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_VIN_war
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+	}
+}

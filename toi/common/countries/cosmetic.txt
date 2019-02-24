@@ -109,3 +109,15 @@ UPCA_cosmetic = {
 	color = rgb { 164 247 249 }
 	color_ui = rgb { 164 247 249 }
 }
+CAN_province = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 119 48 39 }
+}
+CAN_confederation = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 119 48 39 }
+}
+BCO_united = {
+	color = rgb { 24 49 89 }
+	color_ui = rgb { 24 49 89 }
+}

@@ -3220,11 +3220,6 @@ focus_tree = {
 					}
 				}
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}
@@ -4632,11 +4627,6 @@ focus_tree = {
 		}
 		complete_tooltip = {
 			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}	
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -4663,11 +4653,6 @@ focus_tree = {
 					}
 				}
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 
@@ -5852,36 +5837,6 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 					instant_build = yes
 				}

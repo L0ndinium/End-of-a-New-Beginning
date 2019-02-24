@@ -809,6 +809,24 @@ ideas = {
 			}		
 		}
 		
+		RUS_JAP_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_foreign_trade
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		
 	}
 	political_advisor = {
 		RUS_alexander_gorchakov = {

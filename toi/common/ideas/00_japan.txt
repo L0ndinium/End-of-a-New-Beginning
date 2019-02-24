@@ -103,6 +103,23 @@ ideas = {
 				army_attack_factor = 0.1
 			}
 		}
+		JAP_foreign_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_foreign_trade
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
 	}
 }
 	

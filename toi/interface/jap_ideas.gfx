@@ -1,0 +1,6 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_JAP_foreign_trade"
+		texturefile = "gfx/interface/ideas/JAP/JAP_foreign_trade.dds"
+	}
+}

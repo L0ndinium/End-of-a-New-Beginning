@@ -1980,6 +1980,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/france/france_news_grand_kabyle_campaign.dds"
 	}
 
+	spriteType = {
+		name = "GFX_france_news_cochinchina_campaign"
+		texturefile = "gfx/event_pictures/france/france_news_cochinchina_campaign.dds"
+	}
+
 	#SEPOY EVENTS
 
 	spriteType = {
@@ -2675,6 +2680,14 @@ spriteTypes = {
 		name = "GFX_event_NSC_University_Garden1"
 		texturefile = "gfx/event_pictures/italy/NSC_University_Garden1.dds"
 	}
+	
+	### Spain Events ###
+	
+	spriteType = {
+		name = "GFX_report_event_dominican_restoration"
+		texturefile = "gfx/event_pictures/spain/report_event_dominican_restoration.dds"
+	}
+	
 
 	
 }

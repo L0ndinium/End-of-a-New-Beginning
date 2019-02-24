@@ -195,6 +195,61 @@ ideas = {
 			}
 		}
 		
+		eoanb_continuous_military_administration = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				command_power_gain_mult = 0.25
+				military_leader_cost_factor = -0.25
+				planning_speed = 0.1
+				max_planning = 0.1
+				mobilization_speed = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		
+		eoanb_continuous_resource_management = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.05
+				min_export = -0.1
+			}
+		}
+		
+		eoanb_continuous_austerity_consumer = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
 		hidden_idea_never_surrender = {
 			allowed = {
 				always = no

@@ -475,6 +475,7 @@ country_event = {
 				}
 				white_peace = ENG
 				white_peace = NWT
+				white_peace = BCO
 			}
 			clr_global_flag = eoanb_flag_tsushima_war_ongoing
 			if = {
@@ -613,6 +614,7 @@ country_event = {
 				}
 				white_peace = ENG
 				white_peace = NWT
+				white_peace = BCO
 			}
 			clr_global_flag = eoanb_flag_tsushima_war_ongoing
 			if = {

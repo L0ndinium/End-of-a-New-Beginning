@@ -44,7 +44,10 @@ country_event = {
 		add_political_power = -15
 		annex_country = {
 		target = DOM
-		transfer_troops = yes
+		transfer_troops = no
+		}
+		hidden_effect = {
+		load_oob = "DOM_SPAIN_1861"
 		}
 	    HAI = { country_event = hispaniola.3 }
 	}
@@ -149,6 +152,7 @@ country_event = {
 		add_political_power = 30
 		HAI = {
 		remove_ideas = HAI_liberation_of_hispaniola
+		clr_country_flag = HAI_spain_war
 		}
 		white_peace = HAI
 	}
@@ -195,6 +199,134 @@ remove_idea = absolutism
 }	
 }
 
+country_event = {
+	id = hispaniola.7
+	title = hispaniola.7.t
+	desc = hispaniola.7.d
+	picture = GFX_report_event_dominican_restoration
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		AND = {
+			TAG = SPR
+			controls_state = 1318
+			controls_state = 319
+			date > 1863.8.16
+		}
+	}
+    
+    option = {
+		name = hispaniola.7.a
+			DOM = {
+				transfer_state = 319
+				hidden_effect = {
+					load_oob = "DOM_1863_REVOLT"
+				}	
+				declare_war_on = {
+					target = SPR
+					type = annex_everything
+				}
+				set_politics = {
+					ruling_party = centrism
+                }
+			   add_popularity = {
+					ideology = centrism
+					popularity = 0.5
+				}
+				swap_ideas = {
+					add_idea = presidential_republic
+					remove_idea = absolute_monarchy
+				}
+				swap_ideas = {
+					add_idea = universal_male_suffrage
+					remove_idea = absolutism
+				}
+                add_ideas = {
+					DOM_restoration_war
+				}				
+		add_political_power = -10
+		add_war_support = 0.015
+	}    
+}
+
+}
+
+country_event = {
+	id = hispaniola.8
+	title = hispaniola.8.t
+	desc = hispaniola.8.d
+	
+	fire_only_once = yes 
+	
+	hidden = yes
+	
+	trigger = {
+		AND = {
+			TAG = DOM
+			date > 1865.3.1
+			has_war_with = SPR
+		}
+	}
+    
+    option = {
+		name = hispaniola.8.a
+	    add_ideas = DOM_restoration_war2
+		remove_ideas = DOM_restoration_war
+	}    
+}
+
+country_event = {
+	id = hispaniola.9
+	title = hispaniola.9.t
+	desc = hispaniola.9.d
+	
+	fire_only_once = yes 
+	
+	hidden = yes
+	
+	trigger = {
+		AND = {
+			TAG = DOM
+			has_war_with = SPR
+			controls_state = 1318
+		}
+	}
+    
+    option = {
+		name = hispaniola.9.a
+	    remove_ideas = DOM_restoration_war2
+		remove_ideas = DOM_restoration_war
+		transfer_state = 1318
+		white_peace = SPR
+	}    
+}
+
+country_event = {
+	id = hispaniola.10
+	title = hispaniola.10.t
+	desc = hispaniola.10.d
+	
+	fire_only_once = yes 
+	
+	hidden = yes
+	
+	trigger = {
+		AND = {
+			TAG = SPR
+			has_war_with = DOM
+			controls_state = 319
+			controls_state = 1318
+		}
+	}
+    
+    option = {
+		name = hispaniola.10.a
+		transfer_state = 319
+		transfer_state = 1318
+		white_peace = DOM
+	}    
+}				
 
 	
 	

@@ -101,6 +101,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0.25
 		}
+		available = {  OR = { has_idea = industrializing has_idea = industrialized } }
 		prerequisite = { focus = generic_focus_industry }
 		bypass = {
 			any_owned_state = {

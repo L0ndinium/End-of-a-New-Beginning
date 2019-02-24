@@ -302,18 +302,28 @@ news_event = {
 			NOT = {
 				TAG = JAP
 				TAG = USA
+				TAG = CHO
+				TAG = SAT
+				TAG = SAG
+				TAG = TOS 
+				TAG = ENG
+				TAG = FRA
+				TAG = RUS
+				TAG = HOL 
 			}
 		}
 	}
 	option = {
 		name = news.17.b
 		trigger = { TAG = JAP }
+		add_ideas = JAP_foreign_trade
 		add_stability = -0.10
 		add_opinion_modifier = { target = USA modifier = small_decrease }
 	}
 	option = {
 		name = news.17.c
 		trigger = { TAG = USA }
+		add_ideas = USA_JAP_trade
 		add_political_power = 50
 		add_opinion_modifier = { target = JAP modifier = small_increase }
 	}
@@ -340,6 +350,35 @@ news_event = {
 		trigger = { TAG = TOS }
 		add_stability = -0.05
 		add_opinion_modifier = { target = JAP modifier = small_decrease }
+	}
+	option = {
+		name = news.17.h
+		trigger = {
+			OR = {
+				TAG = ENG
+				TAG = FRA
+				TAG = RUS
+				TAG = HOL
+			}
+		}
+		if = {
+			limit = { tag = ENG }
+			add_ideas = ENG_JAP_trade
+		}
+		if = {
+			limit = { tag = FRA }
+			add_ideas = FRA_JAP_trade
+		}
+		if = {
+			limit = { tag = RUS }
+			add_ideas = RUS_JAP_trade
+		}
+		if = {
+			limit = { tag = HOL }
+			add_ideas = HOL_JAP_trade
+		}
+		add_political_power = 50
+		add_opinion_modifier = { target = JAP modifier = small_increase }
 	}
 }
 
@@ -444,6 +483,29 @@ news_event = {
 				} 
 			} 
 		}
+	}
+	
+}
+
+#The Maritime Treaty (CAN, NVS, BRK)
+news_event = {
+	id = news.21
+	title = news.21.t
+	desc = news.21.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.21.a
+		trigger = { TAG = CAN }
+	}
+	
+	option = {
+		name = news.21.b
+		trigger = { NOT = { TAG = CAN } }
 	}
 	
 }

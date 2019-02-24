@@ -252,4 +252,107 @@ continuous_focus_palette = {
 		available_if_capitulated = yes
 	}
 	
+	focus = {
+		id = eoanb_focus_continuous_boost_military_administration
+		
+		icon = GFX_goal_continuous_def_against_influence
+		
+		available = {
+			
+		}
+		
+		idea = eoanb_continuous_military_administration
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = eoanb_focus_continuous_national_resource_management
+		
+		icon = GFX_goal_continuous_repairments
+		
+		available = {
+			
+		}
+		
+		idea = eoanb_continuous_resource_management
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = eoanb_focus_continuous_goods_austerity
+		
+		icon = GFX_goal_continuous_increase_nu
+		
+		available = {
+			
+		}
+		
+		idea = eoanb_continuous_austerity_consumer
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = eoanb_focus_continuous_share_technology
+		
+		icon = GFX_goal_continuous_research
+		
+		available = {
+			hidden_trigger = { has_dlc = "Together for Victory" }
+		}
+
+		enabled = {
+			is_in_faction = yes
+			num_faction_members > 1
+			custom_trigger_tooltip = {
+				tooltip = NO_OTHER_SHARING_GROUPS
+				OR = {
+					AND = {
+						is_in_tech_sharing_group = continuous_tech_share
+						num_tech_sharing_groups < 2
+					}
+					num_tech_sharing_groups < 1
+				}				
+			}
+		}
+		
+		select_effect = {
+			add_to_tech_sharing_group = continuous_tech_share
+		}
+		
+		cancel_effect = {
+			remove_from_tech_sharing_group = continuous_tech_share	
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
 }

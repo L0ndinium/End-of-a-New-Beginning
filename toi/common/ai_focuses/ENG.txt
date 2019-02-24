@@ -57,6 +57,6 @@ ai_historical_focus_list_ENG = {
 		ENG_focus_the_gatling_gun
 		ENG_focus_artillery_support
 		ENG_focus_regiment_training_exercises
-		#After the UK completes all of these focuses, it should be around December 1866/January 1867
+		#After the UK completes all of these focuses, it should be around October/November 1867
 	}
 }

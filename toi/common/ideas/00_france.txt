@@ -913,6 +913,60 @@ ideas = {
 				stability_factor = 0.2
 			}
 		}
+
+		FRA_VIN_war = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_VIN_war
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		FRA_VIN_victory = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_VIN_war
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		FRA_JAP_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_foreign_trade
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
 	}
 	political_advisor = {
 		FRA_advisor_victor_hugo = {

@@ -9,6 +9,7 @@ state={
 		}
 		owner = RUS
 		add_core_of = RUS
+		add_core_of = LIT
 	}
 
 	provinces={

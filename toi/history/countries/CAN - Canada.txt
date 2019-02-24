@@ -1,12 +1,14 @@
 ﻿1857.1.1 = {
   capital = 276
-
+  
   oob = "CAN_1857"
 
   set_convoys = 0
   
   set_research_slots = 3
 
+  set_cosmetic_tag = CAN_province
+  
   add_ideas = { 
     #POLITICS 
 		  

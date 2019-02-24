@@ -450,6 +450,12 @@
  eoanb_decision_RUS_send_tsushima_ship2_desc:0 "We will send a second ship to Tsushima, to resolve the situation there and further establish a hold over the island."
  eoanb_decision_RUS_tsushima_coastline_charter:0 "Tsushima Coastline Charter"
  eoanb_decision_RUS_tsushima_coastline_charter_desc:0 "We have drafted a charter stating that [RUS.GetNameDef] will be allowed to use the coastline of Tsushima for naval operations - now let's see if the Japanese, and the Tsushima authorities agree."
+ eoanb_decision_ENG_grant_CAN_HBC_land:0 "The Canadian Land Transfer"
+ eoanb_decision_ENG_grant_CAN_HBC_land_desc:0 "The newly formed [CAN.GetName] is an administrative and economic union allowing the dominion to grow, and for greater efficiency it should include some more land - land which is currently owned by [HBC.GetNameDef]. We will arrange a transfer."
+ eoanb_decision_CAN_purchase_ruperts_land:0 "Rupert's Land Purchase"
+ eoanb_decision_CAN_purchase_ruperts_land_desc:0 "We will ask the British whether we will be allowed to acquire Rupert's Land, which is currently owned by [HBC.GetNameDef]."
+ eoanb_decision_CAN_core_ruperts_land:0 "Provincial Administration of Rupert's Land"
+ eoanb_decision_CAN_core_ruperts_land_desc:0 "We have acquired Rupert's Land, but we have not set up an official administration and provincial government yet. As Rupert's Land is a large area, doing so would cost us quite a bit of legislative power - but we will probably have to do it at some point nonetheless."
  
  #### USA Statehood Decisions ####
  USA_grant_statehood:0 "Admit States into the Union"

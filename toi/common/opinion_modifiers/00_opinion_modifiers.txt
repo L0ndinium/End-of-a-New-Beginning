@@ -8,6 +8,7 @@
 # Decay uses the unit you use for the modifier (timer), and is calculated normally. 
 # This means a positive decay is required to annul negative modifiers, and the other way around applies for positive modifiers.
 # Further Research implies decay is always per month (?) and can use non-whole numbers (like 2.3)
+# If a unit of time is put, but no decay - is the modifier removed after that time? Further testing required
 # months/years/days = timer
 # trade = yes/no
 
@@ -1010,37 +1011,67 @@ opinion_modifiers = {
 	eoanb_om_tsushima_ENG_didnt_help = {
 		value = -10
 		years = 10
-		decay = 1
+		#decay = 1
 	}
 	
 	eoanb_om_tsushima_ENG_did_help = {
 		value = 25
 		years = 5
-		decay = -5
+		#decay = -5
 	}
 	
 	eoanb_om_tsushima_clashes = {
 		value = -10
 		years = 10
-		decay = 1
+		#decay = 1
 	}
 	
 	eoanb_om_tsushima_incident = {
 		value = -10
 		years = 10
-		decay = 1
+		#decay = 1
 	}
 	
 	eoanb_om_ENG_supports_against_RUS = {
 		value = -25
 		years = 5
-		decay = 5
+		#decay = 5
 	}
 	
 	eoanb_om_tsushima_JAP_broke_treaty = {
 		value = -75
 		years = 75
-		decay = 1
+		#decay = 1
+	}
+	
+	eoanb_om_canada_negotiation_failure = {
+		value = -25
+		years = 10
+	}
+	
+	eoanb_om_canada_negotiation_failure_severe = {
+		value = -75
+		years = 25
+	}
+	
+	eoanb_om_ENG_CAN_endorsed = {
+		value = 25
+		years = 50
+	}
+	
+	eoanb_om_ENG_CAN_denounced = {
+		value = -25
+		years = 50
+	}
+	
+	eoanb_om_CAN_pro_ENG_quebec = {
+		value = 10
+		years = 100
+	}
+	
+	eoanb_om_ENG_CAN_no_recognition = {
+		value = -25
+		years = 25
 	}
 
 }

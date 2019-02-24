@@ -548,6 +548,23 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
+		ENG_JAP_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_foreign_trade
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
 	}
 	political_advisor = {
 		ENG_political_advisor_crawshay_bailey = {

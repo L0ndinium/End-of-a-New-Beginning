@@ -407,12 +407,14 @@ MAL = {
 	color = rgb { 213  169  121 }
 	color_ui = rgb { 213  169  121 }
 }
-
 MNT = {
 	color = rgb { 77  90  105 }
 	color_ui = rgb { 77  90  105 }
 }
-
+GRN = {
+	color = rgb { 239  244  252 }
+	color_ui = rgb { 239  244  252 }
+}
 BLR = {
 	color = rgb { 180 220 190 }
 	color_ui = rgb { 180 220 190 }
@@ -875,4 +877,8 @@ ORE = {
 OKL = {
 	color = rgb { 200 255 200 }
 	color_ui = rgb { 128 168 68 }
+}
+CCH = {
+	color = rgb { 54 102 168 }
+	color_ui = rgb { 54 102 168 }
 }

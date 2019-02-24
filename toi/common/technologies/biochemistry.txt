@@ -684,6 +684,13 @@ technologies = {
 		consumer_goods_factor = -0.04
 		MONTHLY_POPULATION = 0.02
 		
+		dependencies = {
+			petrol_combustion_engine = 1
+			stainless_steel = 1
+			agricultural_engineering = 1
+			electrical_engineering = 1
+		}
+		
 		research_cost = 2
 		start_year = 1890
 		folder = {
