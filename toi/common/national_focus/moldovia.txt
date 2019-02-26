@@ -183,3 +183,190 @@ focus_tree = {
       add_tech_bonus = { bonus = 0.50 uses = 1 category = land_doctrine }
     }
   }
+	focus = {
+		id = Moldovia_and_Wallachia_Grow_Closer
+		icon = GFX_goal_generic_improve_relations
+		x = 7
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = .05
+		}
+	}
+	focus = {
+		id = Great_Power_Tutelage
+		icon = GFX_goal_generic_improve_relations
+		x = 7
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = Moldovia_and_Wallachia_Grow_Closer }
+		completion_reward = {
+			add_political_power = 75
+			add_stability = .02
+		}
+	}
+	focus = {
+		id = Alexander_Ioan_Cuza_Appointed_Domnitor
+		icon = GFX_goal_generic_improve_relations
+		x = 7
+		y = 2
+		cost = 90
+		prerequisite = { focus = Great_Power_Tutelage }
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Alexandru Ioan Cuza"
+				desc = "POLITICS_GENERIC_EOANB_DESC"
+				picture = ""
+				expire = "1866.1.1"
+				ideology = centrism
+				traits = {}
+				}
+			}
+		}
+		focus = {
+			id = Promote_Romanian_Unity
+			icon = GFX_goal_generic_improve_relations
+			x = 7
+			y = 3
+			cost = 70
+			prerequisite = { focus = Alexander_Ioan_Cuza_Appointed_Domnitor }
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 1
+			}
+
+			completion_reward = {
+				add_political_power = -50
+				add_stability = 0.05
+			}
+		}
+		focus = {
+			id = Prepare_for_Unification
+			icon = GFX_goal_focus_gerrymandering
+			x = 7
+			y = 4
+			cost = 100
+			prerequisite = {focus = Promote_Romanian_Unity}
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 1
+				}
+			completion_reward = {
+			}
+		}
+		focus = {
+			id = Internationalization_of_the_Danube_River
+			icon = GFX_goal_generic_improve_relations
+			x = 6
+			y = 2
+			cost = 60
+			prerequisite = { focus = Great_Power_Tutelag }
+			available_if_capitulated = no
+			ai_will_do = {
+				factor = 1
+			}
+
+			completion_reward = {
+					add_ideas = internationalization_of_the_danube_river
+					}
+				}
+				focus = {
+			    id = Naval_Rearmament
+			    icon = GFX_goal_generic_construction
+			    x = 9
+			    y = 0
+			    cost = 90
+			    available_if_capitulated = no
+			    ai_will_do = {
+			      factor = 1
+			    }
+
+			    completion_reward = {
+			      MOL = {
+			          set_variable = {
+			              var = mol_nav_base
+			            value = MOL.num_of_naval_bases
+			        }
+			        add_to_variable = {
+			            var = mol_nav_base
+			            value = 1
+			        }
+			        }
+			        add_ideas = forming_a_navy
+			    }
+			  }
+				focus = {
+			    id = Funding_Moldovian_Shipyards
+			    icon = GFX_goal_generic_construction
+			    x = 9
+			    y = 1
+			    cost = 70
+			    prerequisite = {
+			      focus = Naval_Rearmament
+			    }
+			    available_if_capitulated = no
+			    ai_will_do = {
+			      factor = 1
+			    }
+
+			    completion_reward = {
+			      MOL = {
+			          set_variable = {
+			              var = mol_dockyards
+			            value = MOL.num_of_dockyards
+			        }
+			        add_to_variable = {
+			            var = mol_dockyards
+			            value = 1
+			        }
+			        }
+			        add_ideas = naval_industry_funding
+							add_political_power = -50
+			    	}
+			  }
+				focus = {
+					id = Modern_Naval_Tactics
+					icon = GFX_focus_generic_little_entente
+					x = 9
+					y = 3
+					cost = 50
+					available_if_capitulated = no
+					ai_will_do = {
+						factor = 1
+					}
+					 prerequisite = { focus = Funding_Moldovian_Shipyards }
+					completion_reward = {
+						add_tech_bonus = { bonus = 0.40 uses = 2 category = naval_doctrine }
+					}
+				}
+				focus = {
+					id = Modern_Naval_Tactics
+					icon = GFX_focus_generic_little_entente
+					x = 10
+					y = 3
+					cost = 50
+					available_if_capitulated = no
+					ai_will_do = {
+						factor = 1
+					}
+					 prerequisite = { focus = Funding_Moldovian_Shipyards }
+					completion_reward = {
+						add_tech_bonus = { bonus = 0.30 uses = 2 category = naval_technolgy }
+					}
+				}

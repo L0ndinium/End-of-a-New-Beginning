@@ -12,7 +12,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = ROM_unity
-			
+
 			modifier = {
 				centrism_drift = 0.1
 				drift_defence_factor = 0.15
@@ -27,7 +27,7 @@ ideas = {
             		check_variable = { num_of_civilian_factories > wal_civ_facs }
         			}
     			}
-    
+
     			removal_cost = -1
 
     			modifier = {
@@ -40,7 +40,7 @@ ideas = {
             		has_variable = infra_total_bonus
         		}
    			}
-            
+
    			removal_cost = -1
 
     		modifier = {
@@ -68,7 +68,7 @@ ideas = {
 			removal_cost = -1
 
 			picture = ROM_battlegroundgfx
-			
+
 			modifier = {
 				war_support_factor = -1
 				autonomy_gain = -1
@@ -90,8 +90,8 @@ ideas = {
 				has_country_flag = costaforu_active
 			}
 
-			traits = { 
-				friend_of_capitalism				
+			traits = {
+				friend_of_capitalism
 				centrist
 			}
 		}

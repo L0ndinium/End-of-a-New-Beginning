@@ -36,3 +36,39 @@ ideas = {
     removal_cost = -1
     industrial_capacity_factory = 0.1
   }
+	internationalization_of_the_danube_river = {
+      cancel = { }
+
+      removal_cost = -1
+
+      modifier = {
+          industrial_capacity_factory = 0.05
+					political_power_gain = 0.05
+        }
+    }
+		forming_a_navy = {
+	    cancel = {
+	        MOL = {
+	            check_variable = { num_of_naval_bases > mol_nav_base}
+	          }
+	      }
+
+	      removal_cost = -1
+
+	      modifier = {
+	          production_speed_naval_base_factor = 0.5
+	    }
+	  }
+		naval_industry_funding = {
+	    cancel = {
+	        MOL = {
+	            check_variable = { num_of_dockyards > mol_dockyards}
+	          }
+	      }
+
+	      removal_cost = -1
+
+	      modifier = {
+	          production_speed_dockyard_factor = 0.5
+	    }
+	  }
