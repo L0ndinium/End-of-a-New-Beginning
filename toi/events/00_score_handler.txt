@@ -1,0 +1,65 @@
+﻿add_namespace = score_handler 
+
+news_event = {
+	id = score_handler.0
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+
+		# Give every country a set of modifiable freedom values if they haven't already.
+		# Useful for first-time setup or newly independent nations
+		every_country = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = modified_score_set 
+					}
+				}
+				set_variable = {
+					var = modified_military_score 
+					value = 0
+				}
+				set_variable = {
+					var = modified_industrial_score
+					value = 0
+				}
+				set_country_flag = modified_score_set 
+			}
+		}
+
+		news_event = {
+			# Get industrial level
+			id = score_index.0
+		}
+
+		news_event = {
+			#Fire the freedom handler repeater event again in 30 days
+			id = score_handler.1
+		}
+
+	}
+}
+
+news_event = {
+	id = score_handler.1
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {	
+		random_country = {
+			news_event = {
+				#Fire the freedom handler again in 30 days
+				id = score_handler.0
+				days = 15   
+			}
+		}
+
+	}
+}

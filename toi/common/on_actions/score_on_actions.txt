@@ -1,0 +1,51 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			random_country = {
+				news_event = {
+					id = score_handler.0
+				}
+			}
+		}
+	}
+	
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			FROM = {
+			    set_temp_variable = { modified_military_score_temp2 = modified_military_score }
+				set_temp_variable = { modified_industrial_score_temp = modified_industrial_score }
+			}	
+			ROOT = {
+				multiply_temp_variable = { modified_military_score_temp2 = 0.50 }
+			    add_to_variable = { modified_military_score_temp2 = modified_military_score }
+				multiply_temp_variable = { modified_industrial_score_temp = 0.50 }
+			    add_to_variable = { modified_industrial_score_temp = modified_industrial_score }
+			}
+		}
+	}
+	
+	#FROM is the one that joins the faction
+	on_create_faction = {
+		effect = {
+			FROM = {
+			    add_to_variable = { modified_military_score = 25 }
+			}		
+		}
+	}
+	
+	on_peaceconference_ended = {
+		effect = {
+			FROM = {
+			    set_temp_variable = { modified_military_score_temp = modified_military_score }
+				multiply_temp_variable = { modified_military_score_temp = 1.25 }
+			    add_to_variable = { modified_military_score_temp = modified_military_score }
+			}	
+			ROOT = {
+			    set_temp_variable = { modified_military_score_temp1 = modified_military_score }
+				multiply_temp_variable = { modified_military_score_temp1 = 0.75 }
+			    add_to_variable = { modified_military_score_temp1 = modified_military_score }
+			}			    			
+	    }
+	}
+}
