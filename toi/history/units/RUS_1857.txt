@@ -32,6 +32,14 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Border Customs Regiment"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0}
+	}
+}
+
 units = {
 		#Capital
 		division= {

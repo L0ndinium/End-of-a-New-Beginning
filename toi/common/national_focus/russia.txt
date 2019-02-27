@@ -8,1641 +8,2423 @@ focus_tree = {
 		}
 	}
 	default = no
+    
 	focus = {
-		id = RUS_ec_ref_1857
-		x = 5
-		y = 0
-		available_if_capitulated = yes
-		cost = 70
+		id = RUS_multi_ethnical_empire
+        icon = GFX_focus_hun_elect_a_king       
+        cost = 70
+		x = 9
+		y = 0				
 		ai_will_do = {
 			factor = 1
-		}
-		icon = GFX_goal_generic_consumer_goods
-		available = {
-			has_war = no
-		}
+		}	      
+		
+        available_if_capitulated = yes        
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 50
 		}
 	}
-	
-	focus = {
-		id = RUS_land_to_farms_1857
-		x = 1
-		y = 1
-		icon = GFX_goal_focus_tomato_farming
-		prerequisite = {
-			focus = RUS_ec_ref_1857
-		}
-		cost = 70
-		ai_will_do = { factor = 1 }
-		available_if_capitulated = no
-		completion_reward = {
-			203 = { add_extra_state_shared_building_slots = 1 }
-			203 = { add_building_construction = { type = cotton_farm level = 1 instant_build = yes } }
-		}
-	}
-	
-	focus = {
-		id = RUS_log_ind_1857
-		x = 1
-		y = 2
-		icon = GFX_goal_generic_production2
-		prerequisite = {
-			focus = RUS_land_to_farms_1857
-		}
-		cost = 70
+    
+    focus = {
+		id = RUS_finnish_question
+        icon = GFX_goal_support_democracy       
+        cost = 70
+		x = 4
+		y = 1				
+        prerequisite = { focus = RUS_multi_ethnical_empire }       
 		ai_will_do = {
 			factor = 1
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			220 = { add_extra_state_shared_building_slots = 1 }
-			220 = { add_building_construction = { type = logging_camp level = 1 instant_build = yes } }
-		}
-	}
-	
-	focus = {
-		id = RUS_mat_transfer_1857
-		x = 1 
-		y = 3
-		prerequisite = {
-			focus = RUS_log_ind_1857
-		}
-		icon = GFX_goal_generic_positive_trade_relations
-		ai_will_do = { 
-			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {	
-			203 = { add_extra_state_shared_building_slots = 1 }
-			220 = { add_extra_state_shared_building_slots = 1 }
-			242 = { add_extra_state_shared_building_slots = 1 }
-			203 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			220 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			242 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-		}
-	}
-	
-	focus = {
-		id = RUS_mine_eff_1857
-		x = 3
-		y = 1
-		icon = GFX_goal_generic_production
-		ai_will_do = {
-			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = no
-		prerequisite = {
-			focus = RUS_ec_ref_1857
-		}
-		completion_reward = {
-			add_timed_idea = {
-				idea = RUS_idea_mining
-				days = 180
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_steel_1857
-		x = 3
-		y = 2
-		icon = GFX_focus_generic_steel
-		ai_will_do = {
-			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = no
-		prerequisite = {
-			focus = RUS_mine_eff_1857
-		}
-		completion_reward = {
-			add_resource = {
-				type = iron
-				amount = 10
-				state = 242
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_coal_1857
-		x = 3
-		y = 3
-		icon = GFX_goal_focus_coal_mines
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_steel_1857
-		}
-		available_if_capitulated = no
-		cost = 70
-		completion_reward = {
-			add_resource = {
-				type = coal
-				amount = 16
-				state = 145
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_connect_country_1857
-		x = 5
-		y = 1
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = {
-			focus = RUS_ec_ref_1857
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		cost = 70
-		completion_reward = {
-			add_timed_idea = {
-				idea = RUS_idea_construction
-				days = 180
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_pet_mos_road_1857
-		x = 5
-		y = 2
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = {
-			focus = RUS_connect_country_1857
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		cost = 250
-		completion_reward = {
-			add_political_power = -150
-			195 = { add_extra_state_shared_building_slots = 1 }
-			195 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			208 = { add_extra_state_shared_building_slots = 1 }
-			208 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			263 = { add_extra_state_shared_building_slots = 1 }
-			263 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			246 = { add_extra_state_shared_building_slots = 1 }
-			246 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			219 = { add_extra_state_shared_building_slots = 1 }
-			219 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-		}
-	}
-	
-	focus = {
-		id = RUS_POL_inf_1857
-		x = 5
-		y = 3
-		prerequisite = {
-			focus = RUS_pet_mos_road_1857
-		}
-		icon = GFX_goal_generic_construct_infrastructure
-		ai_will_do = {
-			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = -50
-			87 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			10 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			90 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			98 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-		}
-	}
-	
-	focus = {
-		id = RUS_cau_road_1857
-		x = 5
-		y = 4
-		prerequisite = {
-			focus = RUS_POL_inf_1857
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = -100
-			231 = { add_extra_state_shared_building_slots = 1 }
-			231 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			230 = { add_extra_state_shared_building_slots = 1 } 
-			230 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			229 = { add_extra_state_shared_building_slots = 1 }
-			229 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-		}
-	}
-	
-	focus = {
-		id = RUS_finish_connecting_1857
-		x = 5 
-		y = 5
-		prerequisite = {
-			focus = RUS_cau_road_1857
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = -100
-			remove_ideas = RUS_idea_disconnected_country
-		}
-	}
-	
-	focus = {
-		id = RUS_mil_1_1857
-		x = 7
-		y = 1
-		prerequisite = { 
-			focus = RUS_ec_ref_1857
-		}
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = -50
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			}
 			
 		}
 	}
-	
-	focus = {
-		id = RUS_mil_2_1857
-		x = 7
-		y = 2
-		prerequisite = {
-			focus = RUS_mil_1_1857
-		}
+    
+    focus = {
+		id = RUS_push_for_freedoms
+        icon = GFX_goal_focus_decentralisation_power       
+        cost = 70
+		x = 3
+		y = 2		
+        prerequisite = { focus = RUS_finnish_question }       
 		ai_will_do = {
 			factor = 1
-		}
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = -50
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			}
+			add_stability = 0.05
+            add_manpower = -10000
 		}
 	}
 	
-	focus = {
-		id = RUS_mil_3_1857
-		x = 7
-		y = 3
-		prerequisite = {
-			focus = RUS_mil_2_1857
-		}
+    focus = {
+		id = RUS_keep_it_in_borders
+        icon = GFX_focus_rom_royal_dictatorship       
+        cost = 70
+		x = 5
+		y = 2				
+        prerequisite = { focus = RUS_finnish_question }       
 		ai_will_do = {
 			factor = 1
-		}
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = -50
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			}
+			add_stability = -0.05
+            add_manpower = 10000
 		}
 	}
-	
-	focus = {
-		id = RUS_mil_4_1857
-		x = 7
-		y = 4
+    
+    focus = {
+		id = RUS_abolish_grand_duchy
+        icon = GFX_focus_generic_treaty       
+        cost = 70
+		x = 6
+		y = 3				
+        prerequisite = { focus = RUS_keep_it_in_borders }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_mil_3_1857
-		}
-		icon = GFX_goal_generic_construct_mil_factory
-		available_if_capitulated = no
-		cost = 70
+		}	       
+		
+        available_if_capitulated = yes      
+        mutually_exclusive = { focus = RUS_autonomy_for_finland }
+        mutually_exclusive = { focus = RUS_diet_for_finnish_language }
 		completion_reward = {
-			add_political_power = -50
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			}
+			add_stability = -0.05
+            add_political_power = 150
 		}
 	}
-	
-	focus = {
-		id = RUS_ind_cities_1857
+    
+    focus = {
+		id = RUS_diet_for_finnish_language
+        icon = GFX_focus_generic_concessions       
+        cost = 70
+		x = 4
+		y = 3				
+        prerequisite = { focus = RUS_keep_it_in_borders focus = RUS_push_for_freedoms }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes    
+        mutually_exclusive = { focus = RUS_abolish_grand_duchy }
+        mutually_exclusive = { focus = RUS_autonomy_for_finland }
+		completion_reward = {
+			add_stability = 0.05
+            add_political_power = -50
+		}
+	}
+    
+    focus = {
+		id = RUS_autonomy_for_finland
+        icon = GFX_goal_focus_support_conservatism       
+        cost = 70
+		x = 2
+		y = 3				
+        prerequisite = { focus = RUS_push_for_freedoms }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes     
+        mutually_exclusive = { focus = RUS_abolish_grand_duchy }
+        mutually_exclusive = { focus = RUS_diet_for_finnish_language }
+		completion_reward = {
+			add_stability = 0.1
+            add_political_power = -100
+            RUS = {
+                if = {
+                    limit = { has_dlc = "Together for Victory" }
+                    set_autonomy = {
+                        target = FIN
+                        autonomous_state = autonomy_dominion
+                        freedom_level = 0.2
+                    }
+                }
+            }
+		}
+	}
+    
+    focus = {
+		id = RUS_keep_finland
+        icon = GFX_goal_continuous_restrict_freedom       
+        cost = 70
+		x = 2
+		y = 4				
+        prerequisite = { focus = RUS_autonomy_for_finland }    
+        mutually_exclusive = { focus = RUS_treaty_of_stockholm }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+    
+    focus = {
+		id = RUS_treaty_of_stockholm
+        icon = GFX_focus_generic_treaty       
+        cost = 70
+		x = 0
+		y = 4				
+        prerequisite = { focus = RUS_autonomy_for_finland }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes   
+        mutually_exclusive = { focus = RUS_keep_finland }
+		completion_reward = {
+			#sweden event
+		}
+	}
+    
+    focus = {
+		id = RUS_small_russia
+        icon = GFX_focus_generic_self_management       
+        cost = 70
 		x = 9
-		y = 1
-		prerequisite = {
-			focus = RUS_ec_ref_1857
-		}
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 70
+		y = 1				
+        prerequisite = { focus = RUS_multi_ethnical_empire }       
 		ai_will_do = {
 			factor = 1
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = -150
-			add_manpower = -1000
-			953 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
+			
 		}
 	}
-	
-	focus = {
-		id = RUS_moscow_civ_1857
-		x = 9
-		y = 2
-		prerequisite = {
-			focus = RUS_ind_cities_1857
-		}
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 70
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			swap_ideas = {
-				add_idea = RUS_idea_agrarian1
-				remove_idea = RUS_idea_agrarian
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_wars_civ_1857
-		x = 9
-		y = 3
-		cost = 70
-		prerequisite = {
-			focus = RUS_moscow_civ_1857
-		}
-		icon = GFX_goal_generic_construct_civ_factory
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			swap_ideas = {
-				add_idea = RUS_idea_agrarian2
-				remove_idea = RUS_idea_agrarian1
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_tsar_civ_1857
-		x = 9
-		y = 4
-		cost = 70
-		prerequisite = {
-			focus = RUS_wars_civ_1857
-		}
-		icon = GFX_goal_generic_construct_civ_factory
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		completion_reward = {
-			swap_ideas = {
-				add_idea = RUS_idea_agrarian3
-				remove_idea = RUS_idea_agrarian2
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_industrialize_1857
+    
+    focus = {
+		id = RUS_support_mykhailo
+        icon = GFX_focus_generic_self_management       
+        cost = 70
 		x = 8
-		y = 5
-		icon = GFX_focus_ITA_Industry
-		prerequisite = {
-			focus = RUS_tsar_civ_1857
-		}
-		prerequisite = {
-			focus = RUS_mil_4_1857
-		}
+		y = 2				
+        prerequisite = { focus = RUS_small_russia }
+        mutually_exclusive = { focus = RUS_russification }
 		ai_will_do = {
 			factor = 1
-		}
-		available_if_capitulated = yes
-		cost = 140
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			remove_ideas = RUS_idea_agrarian3
-			swap_ideas = {
-				add_idea = industrializing
-				remove_idea = agrarian
-			}
+			add_stability = 0.05
+            add_manpower = -50000
 		}
 	}
-	
-	focus = {
-		id = RUS_crimean_war_outcome_1857
-		x = 14
-		y = 0
+    
+    focus = {
+		id = RUS_granary_of_europe
+        icon = GFX_focus_ITA_Wheat       
+        cost = 70
+		x = 8
+		y = 3				
+        prerequisite = { focus = RUS_support_mykhailo }       
 		ai_will_do = {
 			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = yes
-		available = {
-			has_war = no
-		}
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			swap_ideas = {
-				add_idea = RUS_idea_lost_crimea_war1
-				remove_idea = RUS_idea_lost_crimea_war
-			}
+            add_timed_idea = { idea = RUS_idea_granary days = 180 }
 		}
 	}
-	
-	focus = {
-		id = RUS_rebuild_crimea_1857
-		x = 14
-		y = 1
-		prerequisite = {
-			focus = RUS_crimean_war_outcome_1857
-		}
+
+    focus = {
+		id = RUS_russification
+        icon = GFX_goal_generic_propaganda       
+        cost = 70
+		x = 10
+		y = 2		
+        prerequisite = { focus = RUS_small_russia }       
+        mutually_exclusive = { focus = RUS_support_mykhailo }
 		ai_will_do = {
 			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			137 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			}
+            add_stability = -0.05
+            add_manpower = 50000
 		}
 	}
-	
-	focus = {
-		id = RUS_study_land_1857
-		x = 12
-		y = 2
-		prerequisite = {
-			focus = RUS_rebuild_crimea_1857
-		}
-		ai_will_do = {
-			factor = 0.5
-		}
-		mutually_exclusive = {	
-			focus = RUS_study_sea_1857
-		}
-		completion_reward = {
-			army_experience = 25
-		}
-		cost = 70
-	}
-	
-	focus = {
-		id = RUS_study_sea_1857
-		x = 16
-		y = 2
-		prerequisite = {
-			focus = RUS_rebuild_crimea_1857
-		}
-		ai_will_do = {
-			factor = 0.5
-		}
-		mutually_exclusive = {
-			focus = RUS_study_land_1857
-		}
-		available_if_capitulated = yes
-		cost = 70
-		completion_reward = {
-			navy_experience = 25
-		}
-	}
-	
-	focus = {
-		id = RUS_land_research_1857
-		x = 12
+    
+    focus = {
+		id = RUS_military_outpost
+        icon = GFX_goal_generic_allies_build_infantry       
+        cost = 70
+		x = 10
 		y = 3
-		prerequisite = {
-			focus = RUS_study_land_1857
-		}
+        prerequisite = { focus = RUS_russification }       
 		ai_will_do = {
 			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = yes
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = land_doctrine
-			}
+            add_timed_idea = { idea = RUS_idea_miloutpost days = 180 }
 		}
 	}
-	
-	focus = {
-		id = RUS_sea_research_1857
-		x = 16
-		y = 3
-		prerequisite = {
-			focus = RUS_study_sea_1857
-		}
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_milyutin_1857
-		x = 14
+    
+    focus = {
+		id = RUS_protect_the_peninsula
+        icon = GFX_goal_generic_defence       
+        cost = 70
+		x = 9
 		y = 4
-		prerequisite = {
-			focus = RUS_sea_research_1857
-			focus = RUS_land_research_1857
-		}
-		cost = 70
+        prerequisite = { focus = RUS_military_outpost focus = RUS_granary_of_europe }       
 		ai_will_do = {
 			factor = 1
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			create_corps_commander = {
-				name = "Dmitry Milyutin"
-				picture = "Portrait_RUS_Dmitry_Milyutin.dds"
-				traits = { }
-				skill = 4
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 1
-				logistics_skill = 2
-			}
+            137 = {
+                add_building_construction = {
+                    type = coastal_bunker
+                    level = 1
+                    instant_build = yes              
+                    province = {
+                        all_provinces = yes
+                        limit_to_coastal = yes
+                    }
+                }
+            }
 		}
 	}
-	
-	focus = {	
-		id = RUS_eu_army_1857
+    
+    focus = {
+		id = RUS_establish_okhrana
+        icon = GFX_goal_generic_secret_weapon       
+        cost = 70
 		x = 14
-		y = 5
-		prerequisite = {
-			focus = RUS_milyutin_1857
-		}
-		cost = 70
+		y = 1				
+        prerequisite = { focus = RUS_multi_ethnical_empire }       
 		ai_will_do = {
 			factor = 1
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			add_tech_bonus ={
-				bonus = 0.75
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-	
-	focus = {
-		id = RUS_end_ref_1857
-		x = 14
-		y = 6
-		prerequisite = {
-			focus = RUS_eu_army_1857
-		}
-		cost = 70
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
+		}	       
+		available = { date > 1881.1.1 }
+        available_if_capitulated = yes       
 		completion_reward = {
 			add_political_power = -100
-			remove_ideas = RUS_idea_lost_crimea_war
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			}
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_establishokhrana days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_establishokhrana
 		}
 	}
-	focus = {
-		id = RUS_vic_implement_greater_military_reforms
-		x = 22
-		y = 0
+    
+    focus = {
+		id = RUS_combat_political_terrorism
+        icon = GFX_goal_continuous_suppression       
+        cost = 70
+		x = 13
+		y = 2		
+        prerequisite = { focus = RUS_establish_okhrana }       
 		ai_will_do = {
 			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = no
-		available = {
-			has_war = no
-		}
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			army_experience = 25
+			add_timed_idea = { idea = RUS_idea_combat_political_terrorism days = 365 }
 		}
 	}
-	focus = {
-		id = RUS_vic_research_better_long_rifles
-		x = 19
-		y = 1
+    
+    focus = {
+		id = RUS_investigate_assassination
+        icon = GFX_focus_rom_parties_end     
+        cost = 70
+		x = 12
+		y = 3				
+        prerequisite = { focus = RUS_combat_political_terrorism }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_implement_greater_military_reforms
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = infantry_tech }
+		}	       
+		available = { always = no }
+        available_if_capitulated = yes       
+		completion_reward = {			
+            add_political_power = -50
+            swap_ideas = {
+                remove_idea = RUS_idea_assassination_of_alexander
+                add_idea = RUS_idea_assassination_of_alexander1
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_reinstate_levy_conscription
-		x = 22
-		y = 1
+    
+    focus = {
+		id = RUS_arrest_tsars_assassins
+        icon = GFX_focus_conspiracy_murder_act       
+        cost = 70
+		x = 12
+		y = 4				
+        prerequisite = { focus = RUS_investigate_assassination }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_implement_greater_military_reforms
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_ideas = {
-				RUS_idea_levy_conscription
-			}
-			add_timed_idea = {
-				idea = RUS_idea_outrage_over_levy_conscription
-				days = 180
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_reduce_conscription_years_from_25_to_6
-		x = 22
-		y = 2
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reinstate_levy_conscription
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_ideas = {
-				RUS_idea_boosted_army_morale_1
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_build_better_barracks_for_troops
-		x = 22
-		y = 3
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reduce_conscription_years_from_25_to_6
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = RUS_idea_boosted_army_morale_1
-				add_idea = RUS_idea_boosted_army_morale_2
-			}
+                remove_idea = RUS_idea_assassination_of_alexander1
+                add_idea = RUS_idea_assassination_of_alexander2
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_abolish_nobility_only_officers
-		x = 22
-		y = 4
+    
+    focus = {
+		id = RUS_hand_out_arrests
+        icon = GFX_goal_generic_political_pressure       
+        cost = 70
+		x = 12
+		y = 5				
+        prerequisite = { focus = RUS_arrest_tsars_assassins }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_build_better_barracks_for_troops
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_idea_improved_officer_corp
-			}
+			add_manpower = -1000
+            add_popularity = { ideology = collectivist_socialism popularity = 0.05 }
+            add_timed_idea = { idea = RUS_idea_hand_out_arrests days = 365 }
 		}
 	}
-	focus = {
-		id = RUS_vic_abolish_inhumane_punishment
+    
+    focus = {
+		id = RUS_domestic_political_terrorists
+        icon = GFX_focus_generic_strike_at_democracy2       
+        cost = 70
+		x = 14
+		y = 3		
+        prerequisite = { focus = RUS_combat_political_terrorism }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = -50
+            add_stability = 0.02
+		}
+	}
+    
+    focus = {
+		id = RUS_investigate_the_peoples_will
+        icon = GFX_goal_generic_demand_territory       
+        cost = 70
+		x = 14
+		y = 4				
+        prerequisite = { focus = RUS_domestic_political_terrorists }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = -100
+            
+            add_timed_idea = { idea = RUS_idea_investigate_the_peoples_will days = 150 }
+		}
+	}
+    
+    focus = {
+		id = RUS_combat_political_terrorism_abroad
+        icon = GFX_focus_prc_infiltration       
+        cost = 70
+		x = 16
+		y = 2
+        prerequisite = { focus = RUS_establish_okhrana }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_combatpoliticalterrorismabroad days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_combatpoliticalterrorismabroad
+            SWI = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_combatterrorismabroad } }
+            FRA = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_combatterrorismabroad } }
+            AUS = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_combatterrorismabroad } }
+		}
+	}
+    
+    focus = {
+		id = RUS_plant_okhrana_agents
+        icon = GFX_goal_generic_intelligence_exchange       
+        cost = 70
+		x = 16
+		y = 3				
+        prerequisite = { focus = RUS_combat_political_terrorism_abroad }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = -100
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_plantokhranaagents days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_plantokhranaagents
+		}
+	}
+    
+    ##################### MILITARY ##############
+    
+    focus = {
+		id = RUS_outcome_of_crimean_war
+        icon = GFX_focus_generic_provoke_border_clashes       
+        cost = 70
+		x = 25
+		y = 0			      
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_crimeanwar days = 1825 }
+            }           
+            custom_effect_tooltip = eoanb_tt_RUS_crimeanwar
+		}
+	}
+    
+    focus = {
+		id = RUS_implement_greater_military_reforms
+        icon = GFX_goal_focus_military_reforms       
+        cost = 70
+		x = 25
+		y = 1
+        prerequisite = { focus = RUS_outcome_of_crimean_war }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            army_experience = -25
+		}
+	}
+    
+    focus = {
+		id = RUS_research_better_rifles
+        icon = GFX_goal_generic_small_arms       
+        cost = 70
 		x = 22
+		y = 2
+        prerequisite = { focus = RUS_implement_greater_military_reforms }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = infantry_weapons }
+		}
+	}
+    
+    focus = {
+		id = RUS_introduce_longer_sabres
+        icon = GFX_focus_RAJ_lions_of_the_great_war       
+        cost = 70
+		x = 18
+		y = 3
+        prerequisite = { focus = RUS_research_better_rifles }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_longersabres days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_longersabres
+		}
+	}
+    
+    focus = {
+		id = RUS_cavalry_saddles
+        icon = GFX_goal_generic_cavalry       
+        cost = 70
+		x = 18
+		y = 4
+        prerequisite = { focus = RUS_introduce_longer_sabres }       
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_saddles days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_saddles
+		}
+	}
+    
+    focus = {
+		id = RUS_finer_horses
+        icon = GFX_goal_generic_cavalry       
+        cost = 70
+		x = 18
 		y = 5
+        prerequisite = { focus = RUS_cavalry_saddles }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_abolish_nobility_only_officers
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = RUS_idea_boosted_army_morale_2
-				add_idea = RUS_idea_boosted_army_morale_3
-			}
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_finerhorses days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_finerhorses
 		}
 	}
-	focus = {
-		id = RUS_vic_finish_military_reforms
-		x = 22
-		y = 6
+    
+    focus = {
+		id = RUS_appoint_aleksander_baratsov
+        icon = GFX_focus_generic_self_management       
+        cost = 70
+		x = 21
+		y = 3
+        prerequisite = { focus = RUS_research_better_rifles }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_abolish_inhumane_punishment
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			army_experience = 25
-		}
-	}
-	focus = {
-		id = RUS_vic_appoint_aleksander_barantsov_as_arillery_director
-		x = 18
-		y = 2
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_research_better_long_rifles
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 2 category = artillery }
-			add_ideas = {
-				RUS_idea_aleksander_barantsov
-			}
-		}
+            hidden_effect = { add_ideas = RUS_idea_barantsov }
+            custom_effect_tooltip = eoanb_tt_RUS_barantsov
+		}        
 	}
-	focus = {
-		id = RUS_vic_develop_new_siege_guns
-		x = 18
+    
+    focus = {
+		id = RUS_test_experimental_rifle
+        icon = GFX_goal_continuous_reduce_training_time       
+        cost = 70
+		x = 23
 		y = 3
+        prerequisite = { focus = RUS_research_better_rifles }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_appoint_aleksander_barantsov_as_arillery_director
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = artillery }
+			add_tech_bonus = { ahead_reduction = 1 uses = 1 category = infantry_weapons }
 		}
 	}
-	focus = {
-		id = RUS_vic_test_6_lines_rifles
-		x = 20
-		y = 2
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_research_better_long_rifles
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_tech_bonus = { bonus = 1.00 uses = 1 category = infantry_weapons }
-		}
-	}
-	focus = {
-		id = RUS_vic_fund_nicholas_academy
-		x = 20
-		y = 3
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_test_6_lines_rifles
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = land_doctrine }
-		}
-	}
-	focus = {
-		id = RUS_vic_develop_berdan_rifle
+    
+    focus = {
+		id = RUS_develop_new_siege_guns
+        icon = GFX_goal_generic_army_artillery2       
+        cost = 70
 		x = 20
 		y = 4
+        prerequisite = { focus = RUS_appoint_aleksander_baratsov }  
+        mutually_exclusive = { focus = RUS_develop_berdan_rifle focus = RUS_shorten_rifle_length }
 		ai_will_do = {
 			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = artillery }
 		}
-		prerequisite = {
-			focus = RUS_vic_fund_nicholas_academy
-		}
-		cost = 70
-		available_if_capitulated = no
+	}
+    
+    focus = {
+		id = RUS_develop_berdan_rifle
+        icon = GFX_focus_secret_rearmament       
+        cost = 70
+		x = 22
+		y = 4
+        prerequisite = { focus = RUS_appoint_aleksander_baratsov }
+        prerequisite = { focus = RUS_test_experimental_rifle }
+        mutually_exclusive = { focus = RUS_develop_new_siege_guns focus = RUS_shorten_rifle_length }
+		ai_will_do = {
+			factor = 1
+		}	       
 		available = {
-			date > 1865.01.01
+            date > 1865.1.1
 		}
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas={
-				RUS_idea_berdan_rifles
-			}
+			hidden_effect = { add_ideas = RUS_idea_berdanrifles }
+            custom_effect_tooltip = eoanb_tt_RUS_berdanrifles
 		}
 	}
-	focus = {
-		id = RUS_vic_shorten_rifle_length
-		x = 20
-		y = 5
+    
+    focus = {
+		id = RUS_shorten_rifle_length
+        icon = GFX_focus_secret_rearmament       
+        cost = 70
+		x = 24
+		y = 4
+        prerequisite = { focus = RUS_test_experimental_rifle }       
+        mutually_exclusive = { focus = RUS_develop_berdan_rifle focus = RUS_develop_new_siege_guns }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_develop_berdan_rifle
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = infantry_weapons }
 		}
 	}
-	focus = {
-		id = RUS_vic_introduce_longer_sabers
-		x = 24
-		y = 1
+    
+    focus = {
+		id = RUS_fund_academy
+        icon = GFX_focus_generic_military_academy       
+        cost = 70
+		x = 22
+		y = 5
+        prerequisite = { focus = RUS_develop_new_siege_guns focus = RUS_develop_berdan_rifle focus = RUS_shorten_rifle_length }       
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_implement_greater_military_reforms
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_idea_longer_sabers
-			}
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = land_doctrine }
 		}
 	}
-	focus = {
-		id = RUS_vic_increase_saddles_production
+
+    focus = {
+		id = RUS_study_charge
+        icon = GFX_focus_Make_a_Man_Out_Of_You       
+        cost = 70
+		x = 20
+		y = 6
+        prerequisite = { focus = RUS_finer_horses }
+        prerequisite = { focus = RUS_fund_academy }
+        mutually_exclusive = { focus = RUS_study_black_sea_front }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+    
+    focus = {
+		id = RUS_study_black_sea_front
+        icon = GFX_goal_focus_gerrymandering       
+        cost = 70
 		x = 24
+		y = 6
+        prerequisite = { focus = RUS_finer_horses }
+        prerequisite = { focus = RUS_fund_academy }    
+        mutually_exclusive = { focus = RUS_study_charge }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+    
+    focus = {
+		id = RUS_adopt_more_advanced_weapons
+        icon = GFX_goal_generic_military_sphere       
+        cost = 70
+		x = 20
+		y = 7
+        prerequisite = { focus = RUS_study_charge }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = infantry_weapons }
+		}
+	}
+    
+    focus = {
+		id = RUS_rebuild_navy
+        icon = GFX_goal_generic_amphibious_assault       
+        cost = 70
+		x = 24
+		y = 7
+        prerequisite = { focus = RUS_study_black_sea_front }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_equipment }
+		}
+	}
+    
+    focus = {
+		id = RUS_dmitry_milyutin
+        icon = GFX_focus_generic_self_management       
+        cost = 70
+		x = 22
+		y = 8
+        prerequisite = { focus = RUS_adopt_more_advanced_weapons focus = RUS_rebuild_navy }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_ideas = RUS_idea_dmitry_milyutin
+		}
+	}
+    
+    focus = {
+		id = RUS_model_other_european_armies
+        icon = GFX_focus_generic_little_entente       
+        cost = 70
+		x = 22
+		y = 9
+        prerequisite = { focus = RUS_dmitry_milyutin }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {           
+            93 = {
+                create_unit = {
+                    division = "name = \"Russian Line Infantry\" division_template = \"Russian Line Infantry\" start_experience_factor = 0.5 start_equipment_factor = 0"
+                    owner = RUS
+                }
+                create_unit = {
+                    division = "name = \"Russian Line Infantry\" division_template = \"Russian Line Infantry\" start_experience_factor = 0.5 start_equipment_factor = 0"
+                    owner = RUS
+                }
+            }
+		}
+	}
+    
+    focus = {
+		id = RUS_end_of_reforms
+        icon = GFX_goal_generic_army_doctrines       
+        cost = 70
+		x = 22
+		y = 10
+        prerequisite = { focus = RUS_model_other_european_armies }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			remove_ideas = RUS_idea_lost_crimea_war
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_endofreforms days = 180 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_endofreforms
+		}
+	}
+    
+    focus = {
+		id = RUS_build_better_barracks
+        icon = GFX_goal_rhineland       
+        cost = 70
+		x = 27
 		y = 2
+        prerequisite = { focus = RUS_implement_greater_military_reforms }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_introduce_longer_sabers
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = RUS_idea_longer_sabers
-				add_idea = RUS_idea_cav_poduction
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_breed_finer_horses
-		x = 24
-		y = 3
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_increase_saddles_production
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = RUS_idea_cav_poduction
-				add_idea = RUS_idea_fine_cavalry
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_end_of_the_nesselrode_administration
-		x = 30
-		y = 0
-		ai_will_do = {
-			factor = 1
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
 		available = {
-			has_war = no
+			has_war = no 
 		}
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_barracks days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_barracks
+		}
+	}
+    
+    focus = {
+		id = RUS_abolish_nobility_only_officer_rule
+        icon = GFX_focus_rom_handle_king       
+        cost = 70
+		x = 26
+		y = 3
+        prerequisite = { focus = RUS_build_better_barracks }
+        mutually_exclusive = { focus = RUS_keep_nobles_in_power }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_timed_idea = { idea = RUS_idea_improved_officer_corp days = 1825 }
+		}
+	}
+    
+    focus = {
+		id = RUS_abolish_inhumane_punishments
+        icon = GFX_focus_prc_infiltration       
+        cost = 70
+		x = 26
+		y = 4
+        prerequisite = { focus = RUS_abolish_nobility_only_officer_rule }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_abolishinhumane days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_abolishinhumane
+            add_war_support = 0.05
+		}
+	}
+    
+    focus = {
+		id = RUS_keep_nobles_in_power
+        icon = GFX_focus_rom_royal_dictatorship       
+        cost = 70
+		x = 28
+		y = 3
+        prerequisite = { focus = RUS_build_better_barracks }
+        mutually_exclusive = { focus = RUS_abolish_nobility_only_officer_rule }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_keepnobles days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_keepnobles
+            add_stability = 0.05
+		}
+	}
+    
+    focus = {
+		id = RUS_harsh_punity_line
+        icon = GFX_goal_generic_political_pressure       
+        cost = 70
+		x = 28
+		y = 4
+        prerequisite = { focus = RUS_keep_nobles_in_power }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_harshpunity days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_harshpunity
+            add_stability = -0.02
+		}
+	}
+    
+    focus = {
+		id = RUS_finish_military_reforms
+        icon = GFX_focus_generic_military_mission       
+        cost = 70
+		x = 27
+		y = 5
+        prerequisite = { focus = RUS_harsh_punity_line }
+        prerequisite = { focus = RUS_abolish_inhumane_punishments }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+    
+    ######### POLITICAL REFORMATION ###############
+    
+    focus = {
+		id = RUS_reforming_imperial_government
+        icon = GFX_goal_focus_reform_administration       
+        cost = 140
+		x = 5
+		y = 6
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available = { has_completed_focus = RUS_begin_implementing_societal_reforms }
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+    
+    focus = {
+		id = RUS_reforms_pushed_by_tsar
+        icon = GFX_focus_hun_elect_a_king       
+        cost = 70
+		x = 6
+		y = 7
+        prerequisite = { focus = RUS_reforming_imperial_government }
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = 100
+            add_timed_idea = { idea = RUS_idea_reforms_pushed_by_tsar days = 140 }
+		}
+	}
+    
+    focus = {
+		id = RUS_remove_trial_by_jury_pol
+        icon = GFX_goal_generic_forceful_treaty       
+        cost = 70
+		x = 6
+		y = 8
+        prerequisite = { focus = RUS_reforms_pushed_by_tsar }
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = 150
+            add_timed_idea = { idea = RUS_idea_remove_trial_by_jury days = 150 }
+		}
+	}
+    
+    focus = {
+		id = RUS_dumas_urban_areas
+        icon = GFX_AUS_focus_credit_anstalt       
+        cost = 70
+		x = 6
+		y = 9
+        prerequisite = { focus = RUS_remove_trial_by_jury_pol }
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_dumas days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_dumas
+		}
+	}
+    
+    focus = {
+		id = RUS_dumas_rural_areas
+        icon = GFX_AUS_focus_public_schools       
+        cost = 70
+		x = 6
+		y = 10
+        prerequisite = { focus = RUS_dumas_urban_areas }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_dumasrural days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_dumasrural
+		}
+	}
+    
+    focus = {
+		id = RUS_rehabilitate_judical_system
+        icon = GFX_focus_generic_treaty       
+        cost = 70
+		x = 0
+		y = 7
+        prerequisite = { focus = RUS_reforming_imperial_government }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = 50
+            add_timed_idea = { idea = RUS_idea_judicalsystem days = 140 }
+		}
+	}
+    
+    focus = {
+		id = RUS_form_zemstva
+        icon = GFX_goal_focus_decentralisation_power       
+        cost = 70
+		x = 0
+		y = 8
+        prerequisite = { focus = RUS_rehabilitate_judical_system }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = -100
+            add_timed_idea = { idea = RUS_idea_zemstva days = 1825 }
+		}
+	}
+    
+    focus = {
+		id = RUS_reform_court_systems
+        icon = GFX_focus_generic_self_management       
+        cost = 70
+		x = 0
+		y = 9
+        prerequisite = { focus = RUS_form_zemstva }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			
+		}
+	}
+    
+    focus = {
+		id = RUS_closed_court_sessions
+        icon = GFX_goal_generic_intelligence_exchange       
+        cost = 70
+		x = 0
+		y = 10
+        prerequisite = { focus = RUS_reform_court_systems }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_stability = -0.03
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_closedcourt days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_closedcourt
+		}
+	}
+    
+    focus = {
+		id = RUS_reforms_pushed_by_finance_ministry
+        icon = GFX_goal_focus_banks       
+        cost = 70
+		x = 3
+		y = 7
+        prerequisite = { focus = RUS_reforming_imperial_government }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            add_political_power = 50
+			add_timed_idea = { idea = RUS_idea_reforms_pushed_by_financem days = 140 }
+		}
+	}
+    
+    focus = {
+		id = RUS_establish_state_bank
+        icon = GFX_goal_focus_the_elite       
+        cost = 70
+		x = 2
+		y = 8
+        prerequisite = { focus = RUS_reforms_pushed_by_finance_ministry }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = -50
+            add_timed_idea = { idea = RUS_idea_state_bank_russian_empire days = 1825 }
+            hidden_effect = { country_event = { id = russiamisc.1 } }
+		}
+	}
+    
+    focus = {
+		id = RUS_fund_railroad_construction
+        icon = GFX_goal_generic_construct_infrastructure       
+        cost = 70
+		x = 2
+		y = 9
+        prerequisite = { focus = RUS_establish_state_bank }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_timed_idea = { idea = RUS_idea_fund_railroad_construction days = 120 }
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_fund_railroad_constructionb days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_fundrailroadconstructionb
+		}
+	}
+    
+    focus = {
+		id = RUS_peasant_land_bank
+        icon = GFX_goal_focus_the_workers        
+        cost = 70
+		x = 2
+		y = 10
+        prerequisite = { focus = RUS_fund_railroad_construction }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_stability = 0.15
+            add_timed_idea = { idea = RUS_idea_peasant_land_bank days = 150 }
+		}
+	}
+    
+    focus = {
+		id = RUS_expand_silver_gold_reserves
+        icon = GFX_goal_focus_fund_partisans       
+        cost = 70
+		x = 4
+		y = 8
+        prerequisite = { focus = RUS_reforms_pushed_by_finance_ministry }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_expandsilvergold days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_expandsilvergold
+		}
+	}
+    
+    focus = {
+		id = RUS_use_monetary_reserves
+        icon = GFX_goal_focus_increase_wages       
+        cost = 70
+		x = 4
+		y = 9
+        prerequisite = { focus = RUS_expand_silver_gold_reserves }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_war_support = 0.05
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_reservesmilspending days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_reservemilspending
+		}
+	}
+    
+    focus = {
+		id = RUS_nobles_land_bank
+        icon = GFX_goal_focus_the_elite       
+        cost = 70
+		x = 4
+		y = 10
+        prerequisite = { focus = RUS_use_monetary_reserves }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            RUS = {
+                every_owned_state = {
+                    add_extra_state_shared_building_slots = 1
+                }
+            }
+		}
+	}
+    
+    focus = {
+		id = RUS_push_education_and_censorship_reforms
+        icon = GFX_focus_research2       
+        cost = 70
+		x = 8
+		y = 7
+        prerequisite = { focus = RUS_reforming_imperial_government }
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = 50
+            add_timed_idea = { idea = RUS_idea_push_education_and_censorship_reforms days = 140 }
+		}
+	}
+    
+    focus = {
+		id = RUS_universities_self_governing
+        icon = GFX_focus_athens_university       
+        cost = 70
+		x = 8
+		y = 8
+        prerequisite = { focus = RUS_push_education_and_censorship_reforms }
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_timed_idea = { idea = RUS_idea_universities_self_governing days = 360 }
+            hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_universities_self_governingb days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_uniselfgoverning
+		}
+	}
+    
+    focus = {
+		id = RUS_reduce_censorship_laws
+        icon = GFX_focus_newspapers       
+        cost = 70
+		x = 8
+		y = 9
+        prerequisite = { focus = RUS_universities_self_governing }
+		ai_will_do = {
+			factor = 1
+		}	       	
+        available_if_capitulated = yes       
+		completion_reward = {
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_reducecensorshiplaws days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_reducecensorshiplaws
+		}
+	}
+    
+    focus = {
+		id = RUS_end_of_nesselrode
+        icon = GFX_focus_generic_self_management       
+        cost = 70
+		x = 14
+		y = 6
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
 		completion_reward = {
 			add_political_power = 150
 		}
 	}
-	focus = {
-		id = RUS_vic_promote_gorchakov_to_foreign_minister
-		x = 30
-		y = 1
+    
+    focus = {
+		id = RUS_promote_mikhail_von_reutern
+        icon = GFX_focus_generic_self_management       
+        cost = 70
+        prerequisite = { focus = RUS_end_of_nesselrode }
+		x = 11
+		y = 7
 		ai_will_do = {
 			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_RUS_mikhailvonreutern
 		}
-		prerequisite = {
-			focus = RUS_vic_end_of_the_nesselrode_administration
-		}
-		cost = 70
-		available = {
-			has_political_power > 49
-		}
-		available_if_capitulated = no
+	}
+    
+    focus = {
+		id = RUS_reintroduce_brandy_excise_tax
+        icon = GFX_goal_generic_positive_trade_relations       
+        cost = 70
+        prerequisite = { focus = RUS_promote_mikhail_von_reutern }
+		x = 10
+		y = 8
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
 		completion_reward = {
 			add_political_power = -50
-			add_ideas = {
-				RUS_alexander_gorchakov
-			}
+            add_timed_idea = { idea = RUS_idea_reintroduce_brandy_excise_tax days = 180 }
 		}
 	}
-	focus = {
-		id = RUS_vic_la_russie_ne_boude_pas_elle_se_recueille
-		x = 30
-		y = 2
+    
+    focus = {
+		id = RUS_introduce_public_accounting
+        icon = GFX_focus_generic_treaty   
+        cost = 70
+        prerequisite = { focus = RUS_promote_mikhail_von_reutern }
+		x = 12
+		y = 8
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_promote_gorchakov_to_foreign_minister
-		}
-		cost = 70
-		available = {
-			has_political_power > 49
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = -50
-			every_country={
-				limit = {
-					OR = {
-						tag = ENG
-						tag = FRA
-						tag = PIE
-						tag = NSC
-						tag = PAP
-						tag = TUS
-						tag = AUS
-						tag = MOD
-						tag = PRM
-						tag = LVN
-						tag = PRS
-						OR = {# the NGC while i wait for the correct trigger
-							tag = HAN
-							tag = OLD
-							tag = BRE
-							tag = MCK
-							tag = LCK
-						}
-					}
-					exists = yes 
-				}
-				add_opinion_modifier = {
-					target = RUS
-					modifier = medium_increase
-				}
-				RUS ={
-					add_opinion_modifier = {
-						target = PREV
-						modifier = medium_increase
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_push_for_alaska_sale
-		x = 30
-		y = 3
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_la_russie_ne_boude_pas_elle_se_recueille
-		}
-		cost = 70
-		available_if_capitulated = no
-		completion_reward = {
-			##do alska event chain
-		}
-	}
-	focus = {
-		id = RUS_vic_promote_mikhail_to_finance_minister
-		x = 27
-		y = 1
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_end_of_the_nesselrode_administration
-		}
-		cost = 70
-		available = {
-			has_political_power > 49
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = -50
-			add_ideas = {
-				RUS_mikhail_von_reutern
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_re-introduce_brandy_excise_tax
-		x = 26
-		y = 2
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_promote_mikhail_to_finance_minister
-		}
-		cost = 70
-		available_if_capitulated = no
-		available = {
-			has_political_power > 49
-		}
-		completion_reward = {
-			add_political_power = -50
-			add_timed_idea = {
-				idea = RUS_brandy_excise_tax
-				days = 180
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_introduce_public_accounting
-		x = 28
-		y = 2
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_promote_mikhail_to_finance_minister
-		}
-		cost = 70	
-		available_if_capitulated = no
+		}	       		
+        available_if_capitulated = yes       
 		completion_reward = {
 			add_political_power = 50
 		}
 	}
-	focus = {
-		id = RUS_vic_liberalize_finance_ministry
-		x = 27
-		y = 3
+    
+    focus = {
+		id = RUS_liberalize_finance_ministry
+        icon = GFX_goal_generic_neutrality_focus       
+        cost = 70
+        prerequisite = { focus = RUS_introduce_public_accounting }
+        prerequisite = { focus = RUS_reintroduce_brandy_excise_tax }
+		x = 11
+		y = 9
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_introduce_public_accounting
-		}
-		prerequisite = {
-			focus = RUS_vic_re-introduce_brandy_excise_tax
-		}
-		cost = 70	
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_liberizing_finance_ministry
-			}
+			add_timed_idea = { idea = RUS_idea_liberalize_finance_ministry days = 360 }
 		}
 	}
-	focus = {
-		id = RUS_vic_give_viktor_panin_title_of_count
-		x = 33
+    
+    focus = {
+		id = RUS_promote_gorchakov_to_foreign_minister
+        icon = GFX_focus_generic_self_management       
+        cost = 70
+        prerequisite = { focus = RUS_end_of_nesselrode }
+		x = 14
+		y = 7
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_RUS_gorchakov
+		}
+	}
+    
+    focus = {
+		id = RUS_la_russie_ne_boude_pas
+        icon = GFX_goal_tripartite_pact       
+        cost = 70
+        prerequisite = { focus = RUS_promote_gorchakov_to_foreign_minister }
+		x = 14
+		y = 8
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = -50
+            hidden_effect = {
+                PRS = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+                FRA = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+                AUS = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+                ENG = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+                HAN = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+                PIE = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+                PAP = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+                NSC = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_larussie
+		}
+	}
+    
+    focus = {
+		id = RUS_sale_of_alaska
+        icon = GFX_goal_focus_gerrymandering       
+        cost = 70
+        prerequisite = { focus = RUS_la_russie_ne_boude_pas }
+		x = 14
+		y = 9
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			country_event = { id = usa.41 }
+		}
+	}
+    
+    focus = {
+		id = RUS_give_viktor_panin_count_title
+        icon = GFX_focus_generic_self_management       
+        cost = 70
+        prerequisite = { focus = RUS_end_of_nesselrode }
+		x = 17
+		y = 7
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			custom_effect_tooltip = eoanb_tt_RUS_viktorpanin
+		}
+	}
+    
+    focus = {
+		id = RUS_educate_serfs
+        icon = GFX_focus_generic_military_academy       
+        cost = 70
+        prerequisite = { focus = RUS_give_viktor_panin_count_title }
+		x = 16
+		y = 8
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = -150
+            add_stability = 0.05
+		}
+	}
+    
+    focus = {
+		id = RUS_promote_emancipation_with_nobility
+        icon = GFX_goal_focus_the_elite       
+        cost = 70
+        prerequisite = { focus = RUS_give_viktor_panin_count_title }
+		x = 18
+		y = 8
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            add_timed_idea = { idea = RUS_idea_promote_emancipation_with_nobility days = 360 }
+            #custom_effect_tooltip = eoanb_tt_RUS_emancipationnobility
+		}
+	}
+    
+    focus = {
+		id = RUS_liberalize_justice_ministry
+        icon = GFX_goal_generic_neutrality_focus       
+        cost = 70
+        prerequisite = { focus = RUS_educate_serfs }
+        prerequisite = { focus = RUS_promote_emancipation_with_nobility }
+		x = 17
+		y = 9
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_timed_idea = { idea = RUS_idea_liberalize_justice_ministry days = 360 }
+		}
+	}
+    
+    focus = {
+		id = RUS_consolidate_foreign_ministry
+        icon = GFX_focus_generic_support_the_left_right       
+        cost = 70
+        prerequisite = { focus = RUS_liberalize_finance_ministry }
+        prerequisite = { focus = RUS_sale_of_alaska }
+        prerequisite = { focus = RUS_liberalize_justice_ministry }
+		x = 14
+		y = 10
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_timed_idea = { idea = RUS_idea_consolidate_foreign_ministry days = 180 }
+		}
+	}
+    
+    focus = {
+		id = RUS_begin_implementing_societal_reforms
+        icon = GFX_goal_generic_national_unity       
+        cost = 70
+        prerequisite = { focus = RUS_consolidate_foreign_ministry }
+		x = 14
+		y = 11
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			unlock_national_focus = RUS_reforming_imperial_government
+		}
+	}
+    
+    ###### FOREIGN AFFAIRS ################
+    
+    focus = {
+		id = RUS_an_european_tsardom
+        icon = GFX_focus_hun_elect_a_king       
+        cost = 70
+		x = 34
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+    
+    focus = {
+		id = RUS_anglo_trade_problems
+        icon = GFX_goal_focus_british_isolationism       
+        cost = 70
+        prerequisite = { focus = RUS_an_european_tsardom }
+		x = 31
 		y = 1
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_end_of_the_nesselrode_administration
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_vicktor_panin
-			}
+			
 		}
 	}
-	focus = {
-		id = RUS_vic_educate_the_serfs
+    
+    focus = {
+		id = RUS_join_opium_wars
+        icon = GFX_goal_generic_more_territorial_claims       
+        cost = 70
+        prerequisite = { focus = RUS_anglo_trade_problems }
+        mutually_exclusive = { focus = RUS_support_qing }
+		x = 30
+		y = 2
+		ai_will_do = {
+			factor = 1
+		}	       		
+        available_if_capitulated = yes       
+		completion_reward = {
+			#
+		}
+	}
+    
+    focus = {
+		id = RUS_support_qing
+        icon = GFX_goal_generic_more_territorial_claims       
+        cost = 70
+        prerequisite = { focus = RUS_anglo_trade_problems }
+        mutually_exclusive = { focus = RUS_join_opium_wars }
 		x = 32
 		y = 2
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_give_viktor_panin_title_of_count
-		}
-		cost = 70
-		available = {
-			has_political_power > 149
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = -150
-			add_stability = 0.05
+			CHI = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+            RUS = { set_rule = { can_send_volunteers = yes } }
 		}
 	}
-	focus = {
-		id = RUS_vic_promote_amancipation_with_nobility
-		x = 34
-		y = 2
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_give_viktor_panin_title_of_count
-		}
-		cost = 70
-		available = {
-			has_political_power > 149
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = -150
-			add_timed_idea = {
-				idea = RUS_idea_promoting_emancipation
-				days = 360
-			}
-		}
-	}
-	focus = {
-		id = RUS_vic_liberalize_justice_ministry
-		x = 33
+    
+    focus = {
+		id = RUS_colonial_rivalry
+        icon = GFX_goal_continuous_suppression       
+        cost = 70
+        prerequisite = { focus = RUS_support_qing focus = RUS_join_opium_wars }
+        mutually_exclusive = { focus = RUS_respect_colonial_empires }
+		x = 30
 		y = 3
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_promote_amancipation_with_nobility
-		}
-		prerequisite = {
-			focus = RUS_vic_educate_the_serfs
-		}
-		cost = 70	
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_liberizing_justice_ministry
-			}
+			ENG = { add_opinion_modifier = { target = RUS modifier = small_decrease } }
+            FRA = { add_opinion_modifier = { target = RUS modifier = small_decrease } }
 		}
 	}
-	focus = {
-		id = RUS_vic_consolidate_foreign_ministry
+    
+    focus = {
+		id = RUS_respect_colonial_empires
+        icon = GFX_focus_generic_diplomatic_treaty       
+        cost = 70
+        prerequisite = { focus = RUS_support_qing focus = RUS_join_opium_wars }
+        mutually_exclusive = { focus = RUS_colonial_rivalry }
+		x = 32
+		y = 3
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			ENG = { add_opinion_modifier = { target = RUS modifier = small_increase } }
+            FRA = { add_opinion_modifier = { target = RUS modifier = small_increase } }
+		}
+	}
+    
+    focus = {
+		id = RUS_reinforce_navy
+        icon = GFX_focus_generic_navy_battleship2       
+        cost = 70
+        prerequisite = { focus = RUS_colonial_rivalry }
 		x = 30
 		y = 4
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_liberalize_justice_ministry
-		}
-		prerequisite = {
-			focus = RUS_vic_liberalize_finance_ministry
-		}
-		prerequisite = {
-			focus = RUS_vic_push_for_alaska_sale
-		}
-		cost = 70	
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_timed_idea = {
-				idea = RUS_idea_consolidated_foreign_ministry
-				days = 180
-			}
+			add_timed_idea = { idea = RUS_idea_reinforce_navy days = 180 }
 		}
 	}
-	focus = {
-		id = RUS_vic_begin_implementing_societal_reforms
+    
+    focus = {
+		id = RUS_demand_pass_through_denmark
+        icon = GFX_goal_generic_construct_naval_dockyard       
+        cost = 70
+        prerequisite = { focus = RUS_reinforce_navy }
 		x = 30
 		y = 5
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_consolidate_foreign_ministry
-		}
-		cost = 70	
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
+			DEN = { country_event = { id = russiapolitical.3 } }
 		}
 	}
-	focus = {
-		id = RUS_vic_reforming_the_imperial_government
-		x = 30
+    
+    focus = {
+		id = RUS_slavic_brotherhood
+        icon = GFX_goal_continuous_increase_nu       
+        cost = 70
+        prerequisite = { focus = RUS_an_european_tsardom }
+		x = 35
+		y = 1
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			SER = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+            AUS = { add_opinion_modifier = { target = RUS modifier = small_decrease } }
+		}
+	}
+    
+    focus = {
+		id = RUS_protect_wallachia
+        icon = GFX_goal_generic_defence       
+        cost = 70
+        prerequisite = { focus = RUS_slavic_brotherhood }
+		x = 35
+		y = 2
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			ROM = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+            OTO = { add_opinion_modifier = { target = RUS modifier = medium_decrease } }
+		}
+	}
+    
+    focus = {
+		id = RUS_avoid_coalitions
+        icon = GFX_focus_generic_little_entente       
+        cost = 70
+        prerequisite = { focus = RUS_protect_wallachia }
+        mutually_exclusive = { focus = RUS_uprisings_in_balkans }
+		x = 34
+		y = 3
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_stability = -0.05
+            add_political_power = 150
+		}
+	}
+    
+    focus = {
+		id = RUS_restore_holy_alliance
+        icon = GFX_focus_PIE_Casus_Belli       
+        cost = 70
+        prerequisite = { focus = RUS_avoid_coalitions }
+		x = 34
+		y = 4
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			AUS = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+            PRS = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+		}
+	}
+    
+    focus = {
+		id = RUS_passive_participation
+        icon = GFX_goal_generic_intelligence_exchange       
+        cost = 70
+        prerequisite = { focus = RUS_restore_holy_alliance }
+		x = 34
+		y = 5
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            add_stability = -0.05
+			ENG = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+            FRA = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+		}
+	}
+    
+    focus = {
+		id = RUS_uprisings_in_balkans
+        icon = GFX_focus_RAJ_lions_of_the_great_war       
+        cost = 70
+        prerequisite = { focus = RUS_protect_wallachia }
+        mutually_exclusive = { focus = RUS_restore_holy_alliance }
+		x = 37
+		y = 3
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			OTO = { add_opinion_modifier = { target = RUS modifier = large_decrease } }
+            AUS = { add_opinion_modifier = { target = RUS modifier = large_decrease } }
+            SER = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+            GRE = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+		}
+	}
+    
+    focus = {
+		id = RUS_bulgaria_national_support
+        icon = GFX_focus_reach_bulgaria       
+        cost = 70
+        prerequisite = { focus = RUS_uprisings_in_balkans }
+		x = 37
+		y = 4
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            OTO = { add_stability = -0.05 }
+			OTO = { add_opinion_modifier = { target = RUS modifier = large_decrease } }
+		}
+	}
+    
+    focus = {
+		id = RUS_ally_with_romania
+        icon = GFX_focus_PIE_Coring       
+        cost = 70
+        prerequisite = { focus = RUS_bulgaria_national_support }
+		x = 36
+		y = 5
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			ROM = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+		}
+	}
+    
+    focus = {
+		id = RUS_hellenic_friendship
+        icon = GFX_focus_greek_army       
+        cost = 70
+        prerequisite = { focus = RUS_bulgaria_national_support }
+		x = 38
+		y = 5
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			GRE = { add_opinion_modifier = { target = RUS modifier = large_increase } }
+		}
+	}
+    
+    focus = {
+		id = RUS_conflicts_in_black_sea
+        icon = GFX_goal_generic_more_territorial_claims       
+        cost = 70
+        prerequisite = { focus = RUS_hellenic_friendship }
+        prerequisite = { focus = RUS_ally_with_romania }
+		x = 37
 		y = 6
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_begin_implementing_societal_reforms
-		}
-		cost = 140	
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 350
+			add_stability = 0.05
 		}
 	}
-	focus = {
-		id = RUS_vic_reforms_pushed_by_finance
-		x = 29
+    
+    focus = {
+		id = RUS_freedom_war
+        icon = GFX_focus_generic_provoke_border_clashes       
+        cost = 70
+        prerequisite = { focus = RUS_conflicts_in_black_sea }
+		x = 37
 		y = 7
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reforming_the_imperial_government
-		}
-		cost = 70
-		available = {
-			NOT = {
-				has_idea = RUS_pushed_reforms
-			}
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 50
-			add_timed_idea = {
-				idea = RUS_pushed_reforms
-				days = 140
-			}
+			declare_war_on = {
+                target = OTO
+                type = annex_everything
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_establish_state_bank
-		x = 28
-		y = 8
+    
+    #################### ECONOMY ################
+    
+    focus = {
+		id = RUS_russian_economy
+        icon = GFX_goal_focus_support_liberalism       
+        cost = 70
+		x = 44
+		y = 0
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reforms_pushed_by_finance
-		}
-		cost = 70
-		available = {
-			has_political_power > 49
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 50
-			add_ideas = {
-				RUS_monetary_security
-			}
+			add_political_power = 100
 		}
 	}
-	focus = {
-		id = RUS_vic_finance_minister_fund_railroad_construction
-		x = 28
-		y = 9
+    
+    focus = {
+		id = RUS_convert_abandoned_land
+        icon = GFX_goal_generic_construction2       
+        cost = 70
+		x = 40
+		y = 1
+        prerequisite = { focus = RUS_russian_economy }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_establish_state_bank
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
 			
-			add_ideas = {
-				RUS_railroads # use small scale railroads here?
-			}
-			add_timed_idea={
-				idea = RUS_minister_funding_development
-				days = 120
-			}
 		}
 	}
-	focus = {
-		id = RUS_vic_peasant_land_bank_established
-		x = 28
-		y = 10
+    
+    focus = {
+		id = RUS_develop_logging_industry
+        icon = GFX_goal_generic_construction2       
+        cost = 70
+		x = 40
+		y = 2
+        prerequisite = { focus = RUS_convert_abandoned_land }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_finance_minister_fund_railroad_construction
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
 			
-			add_stability = 0.15
-			add_timed_idea={
-				idea = RUS_minister_funding_development
-				days = 150
-			}
 		}
-	}
-	focus = {
-		id = RUS_vic_expand_silver_and_gold_reserves
-		x = 30
-		y = 8
+    }
+    
+    focus = {
+		id = RUS_transfer_of_minerals
+        icon = GFX_goal_generic_construction2       
+        cost = 70
+		x = 40
+		y = 3
+        prerequisite = { focus = RUS_develop_logging_industry }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reforms_pushed_by_finance
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_expanded_gold_and_silver_reserves
-			}
+			220 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            203 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            242 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            145 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
 		}
-	}
-	focus = {
-		id = RUS_vic_use_reserves_to_increase_military_spending
-		x = 30
-		y = 9
+    }
+    
+    focus = {
+		id = RUS_improve_russian_mining
+        icon = GFX_goal_generic_air_production       
+        cost = 70
+		x = 42
+		y = 1
+        prerequisite = { focus = RUS_russian_economy }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_expand_silver_and_gold_reserves
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_reserves_fund_military
-			}
+			hidden_effect = {
+                add_timed_idea = { idea = RUS_idea_russianmining days = 1825 }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_russianmining
 		}
 	}
-	focus = {
-		id = RUS_vic_nobles_land_bank ## seems OP
-		x = 30
-		y = 10
+    
+    focus = {
+		id = RUS_donetsk_mining_operation
+        icon = GFX_goal_generic_construction2       
+        cost = 70
+		x = 42
+		y = 2
+        prerequisite = { focus = RUS_improve_russian_mining }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_use_reserves_to_increase_military_spending
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-			}
+			add_resource = {
+                type = iron
+                amount = 32
+                state = 227
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_rehabilitate_judicial_system
-		x = 26
-		y = 7
+    
+    focus = {
+		id = RUS_invest_coal_mining
+        icon = GFX_goal_generic_construction2       
+        cost = 70
+		x = 42
+		y = 3
+        prerequisite = { focus = RUS_donetsk_mining_operation }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reforming_the_imperial_government
-		}
-		cost = 70
-		available = {
-			NOT = {
-				has_idea = RUS_pushed_reforms
-			}
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 50
-			add_timed_idea = {
-				idea = RUS_pushed_reforms
-				days = 140
-			}
+			add_resource = {
+                type = coal
+                amount = 18
+                state = 145
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_form_the_zemstva
-		x = 26
-		y = 8
+    
+    focus = {
+		id = RUS_oil_pumped_in_baku
+        icon = GFX_goal_generic_oil_refinery       
+        cost = 70
+		x = 41
+		y = 4
+        prerequisite = { focus = RUS_transfer_of_minerals }
+        prerequisite = { focus = RUS_invest_coal_mining }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_rehabilitate_judicial_system
-		}
-		cost = 70
-		available = {
-			has_political_power > 99
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = -100
-			add_ideas = {
-				RUS_zamstva
-			}
+			add_resource = {
+                type = oil
+                amount = 18
+                state = 229
+            }
 		}
-	}
-	focus = {
-		id = RUS_vic_reform_court_systems_separate_jurisdiction
-		x = 26
-		y = 9
+    }
+    
+    focus = {
+		id = RUS_connect_the_country
+        icon = GFX_focus_ITA_Industry       
+        cost = 70
+		x = 44
+		y = 1
+        prerequisite = { focus = RUS_russian_economy }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_form_the_zemstva
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
+			add_timed_idea = { idea = RUS_idea_russian_railroads days = 1825 }
 		}
 	}
-	focus = {
-		id = RUS_vic_closed_court_without_juries_reintroduced
-		x = 26
-		y = 10
+    
+    focus = {
+		id = RUS_stp_moscow_railroad
+        icon = GFX_goal_focus_berlin_anhalt_rail       
+        cost = 70
+		x = 44
+		y = 2
+        prerequisite = { focus = RUS_connect_the_country }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reform_court_systems_separate_jurisdiction
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = -100
-			add_ideas = {
-				RUS_closed_courts
-			}
+			195 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                }
+            }
+            208 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                }
+            }
+            263 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                }
+            }
+            246 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                }
+            }
+            219 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                }
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_reforms_pushed_by_tsar
-		x = 32
-		y = 7
+    
+    focus = {
+		id = RUS_develop_polish_territories
+        icon = GFX_goal_focus_berlin_anhalt_rail       
+        cost = 70
+		x = 44
+		y = 3
+        prerequisite = { focus = RUS_stp_moscow_railroad }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reforming_the_imperial_government
-		}
-		cost = 70
-		available = {
-			NOT = {
-				has_idea = RUS_pushed_reforms
-			}
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 50
-			add_timed_idea = {
-				idea = RUS_pushed_reforms
-				days = 140
-			}
+			98 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            10 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            90 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            1316 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_remove_trial_by_jury_for_political_crimes
-		x = 32
-		y = 8
+    
+    focus = {
+		id = RUS_build_caucasian_raliroad
+        icon = GFX_goal_focus_berlin_anhalt_rail       
+        cost = 70
+		x = 44
+		y = 4
+        prerequisite = { focus = RUS_develop_polish_territories }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reforms_pushed_by_tsar
-		}
-		cost = 5
-		available = {
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 150
-			add_timed_idea = {
-				idea = RUS_removed_trial_by_jury
-				days = 150
-			}
+			230 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            229 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
+            1121 = {
+                add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+                }
+            }
 		}
 	}
-	focus = {
-		id = RUS_vic_create_dumas_in_urban_areas
-		x = 32
-		y = 9
+    
+    focus = {
+		id = RUS_finish_connecting
+        icon = GFX_goal_generic_construct_infrastructure       
+        cost = 70
+		x = 44
+		y = 5
+        prerequisite = { focus = RUS_build_caucasian_raliroad }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_remove_trial_by_jury_for_political_crimes
-		}
-		cost = 70
-		available = {
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 150
-			add_ideas = {
-				RUS_dumas
-			}
+			remove_ideas = RUS_idea_disconnected_country
 		}
 	}
-	focus = {
-		id = RUS_vic_push_education_reforms
-		x = 34
-		y = 7
+    
+    focus = {
+		id = RUS_main_artillery_administration
+        icon = GFX_goal_generic_army_artillery2       
+        cost = 70
+		x = 46
+		y = 1
+        prerequisite = { focus = RUS_russian_economy }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_reforming_the_imperial_government
-		}
-		cost = 70
-		available = {
-			NOT = {
-				has_idea = RUS_pushed_reforms
-			}
-		}
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_political_power = 50
-			add_timed_idea = {
-				idea = RUS_pushed_reforms
-				days = 140
-			}
+			add_timed_idea = { idea = RUS_idea_main_artillery_administration days = 180 }
 		}
 	}
-	focus = {
-		id = RUS_vic_allow_universities_to_self_govern
-		x = 34
-		y = 8
+    
+    focus = {
+		id = RUS_research_better_long_rifles
+        icon = GFX_goal_continuous_reduce_training_time       
+        cost = 70
+		x = 46
+		y = 2
+        prerequisite = { focus = RUS_main_artillery_administration }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_push_education_reforms
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_self_governing_universities
-			}
-			add_timed_idea = {
-				idea = RUS_syndicalist_drift
-				days = 360
-			}
+			add_timed_idea = { idea = RUS_idea_research_better_long_rifles days = 180 }
 		}
 	}
-	focus = {
-		id = RUS_vic_reduce_censorship
-		x = 34
-		y = 9
+    
+    focus = {
+		id = RUS_stockpile_M1854
+        icon = GFX_goal_generic_small_arms       
+        cost = 70
+		x = 46
+		y = 3
+        prerequisite = { focus = RUS_research_better_long_rifles }
 		ai_will_do = {
 			factor = 1
-		}
-		prerequisite = {
-			focus = RUS_vic_allow_universities_to_self_govern
-		}
-		cost = 70
-		available_if_capitulated = no
+		}	       
+		
+        available_if_capitulated = yes       
 		completion_reward = {
-			add_ideas = {
-				RUS_reduced_censorship
-			}
+			add_timed_idea = { idea = RUS_idea_stockpile_M1854 days = 180 }
 		}
 	}
-}	
+    
+    focus = {
+		id = RUS_moscow_rifle_factory
+        icon = GFX_goal_generic_construct_mil_factory       
+        cost = 70
+		x = 46
+		y = 4
+        prerequisite = { focus = RUS_stockpile_M1854 }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			add_timed_idea = { idea = RUS_idea_moscow_rifle_factory days = 180 }
+		}
+	}
+    
+    focus = {
+		id = RUS_industrialize_cities
+        icon = GFX_goal_generic_production       
+        cost = 70
+		x = 48
+		y = 1
+        prerequisite = { focus = RUS_russian_economy }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			swap_ideas = {
+                remove_idea = RUS_idea_agrarian
+                add_idea = RUS_idea_agrarian1
+            }
+		}
+	}
+    
+    focus = {
+		id = RUS_construct_factories_in_moscow
+        icon = GFX_goal_generic_construct_mil_factory       
+        cost = 70
+		x = 48
+		y = 2
+        prerequisite = { focus = RUS_industrialize_cities }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			swap_ideas = {
+                remove_idea = RUS_idea_agrarian1
+                add_idea = RUS_idea_agrarian2
+            }
+		}
+	}
+    
+    focus = {
+		id = RUS_construct_factories_in_warsaw
+        icon = GFX_goal_generic_construct_mil_factory       
+        cost = 70
+		x = 48
+		y = 3
+        prerequisite = { focus = RUS_construct_factories_in_moscow }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			swap_ideas = {
+                remove_idea = RUS_idea_agrarian2
+                add_idea = RUS_idea_agrarian3
+            }
+		}
+	}
+    
+    focus = {
+		id = RUS_construct_factories_in_tsaritsyn
+        icon = GFX_goal_generic_construct_mil_factory       
+        cost = 70
+		x = 48
+		y = 4
+        prerequisite = { focus = RUS_construct_factories_in_warsaw }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+			swap_ideas = {
+                remove_idea = RUS_idea_agrarian3
+                add_idea = RUS_idea_agrarian4
+            }
+		}
+	}
+    
+    focus = {
+		id = RUS_industrialize_the_empire
+        icon = GFX_goal_focus_city_development       
+        cost = 140
+		x = 47
+		y = 5
+        prerequisite = { focus = RUS_construct_factories_in_tsaritsyn }
+        prerequisite = { focus = RUS_moscow_rifle_factory }
+		ai_will_do = {
+			factor = 1
+		}	       
+		
+        available_if_capitulated = yes       
+		completion_reward = {
+            add_timed_idea = { idea = RUS_idea_industrialize_the_empire days = 360 }
+            remove_ideas = RUS_idea_agrarian4
+		}
+	}

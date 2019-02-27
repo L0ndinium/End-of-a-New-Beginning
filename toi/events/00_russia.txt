@@ -1,137 +1,11 @@
 ﻿add_namespace = russia
-add_namespace = russian_protest
-add_namespace = russia_construction
-	###Beijing Treaty
-	country_event = {
+add_namespace = russiapolitical
+add_namespace = russiamisc
+
+    country_event = {  #Krenholm 
 		id = russia.1
 		title = russia.1.t
 		desc = russia.1.d
-		
-		fire_only_once = yes
-		
-		trigger = {
-			tag = RUS
-			date > 1860.09.14
-		}
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty	
-		
-		option = {
-			name = russia.1.a
-			add_political_power = -25
-			CHI = {
-				country_event = { id = russia.2 days = 1 }
-			}
-		}
-	}
-	
-	country_event = {
-		id = russia.2
-		title = russia.2.t
-		desc = russia.2.d
-		
-		is_triggered_only = yes
-		
-		
-		option = {
-			ai_chance = { factor = 95 }
-			name = russia.2.a
-			RUS = {
-				country_event = { id = russia.3	days = 2 }
-			}
-		}
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty
-		
-		option = {
-			name = russia.2.b
-			ai_chance = { factor = 5 }
-			RUS = {
-				country_event = { id = russia.4	days = 2 }
-			}
-		}
-	}
-	
-	country_event = {
-		id = russia.3
-		title = russia.3.t
-		desc = russia.3.d
-		
-		is_triggered_only = yes
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty
-		
-		option = {
-			name = russia.3.a
-			add_political_power = -125
-			RUS = {
-				transfer_state = 561
-				transfer_state = 657
-				transfer_state = 560
-				transfer_state = 409
-				transfer_state = 408
-				transfer_state = 944
-				transfer_state = 943
-				transfer_state = 946
-				transfer_state = 945
-				add_state_core = 561
-				add_state_core = 657
-				add_state_core = 560
-				add_state_core = 409
-				add_state_core = 408
-				add_state_core = 944
-				add_state_core = 943
-				add_state_core = 946
-				add_state_core = 945
-			}
-			hidden_effect = {
-				set_country_flag = rus_qing_accepted
-			}
-		}
-	}
-	
-	country_event = {
-		id = russia.4
-		title = russia.4.t
-		desc = russia.4.d
-		
-		picture = GFX_report_event_second_opium_war_tianjin_treaty
-		
-		is_triggered_only = yes
-		
-		option = {	
-			name = russia.4.a
-			add_political_power = -50
-			hidden_effect = {
-				set_country_flag = rus_qing_declined
-			}
-		}
-	}
-	
-	country_event = {
-		id = russian_protest.1
-		title = russian_protest.1.t
-		desc = russian_protest.1.d
-		
-		picture = GFX_report_event_russian_protests
-		
-		fire_only_once = yes
-		
-		trigger = {
-			date > 1858.09.13
-			tag = RUS
-		}
-		
-		option = {
-			name = russian_protest.1.a
-			add_stability = -0.03
-		}
-	}
-	
-	country_event = {  #Krenholm 
-		id = russia.5
-		title = russia.5.t
-		desc = russia.5.d
 		
 		picture = GFX_report_event_krenholm_manufacture
 		
@@ -143,404 +17,250 @@ add_namespace = russia_construction
 		}
 		
 		option = {
-			name = russia.5.a
+			name = russia.1.a
 			add_political_power = -75
-            add_manpower = -10000 
-			191 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = cotton_farm
-					level = 1
-					instant_build = yes
-				}
-			}
+            add_manpower = -12000 
+			add_timed_idea = { idea = RUS_idea_krenholm days = 180 }
 		}
 	}
-
-	country_event = { #Maykop 
-		id = russia.6
-		title = russia.6.t
-		desc = russia.6.d
+    
+    country_event = { #Maykop 
+		id = russia.2
+		title = russia.2.t
+		desc = russia.2.d
 
 		picture = GFX_report_event_krenholm_manufacture
 
 		fire_only_once = yes
 
 		trigger = {
-		AND = {
-		date > 1857.08.01
-		tag = RUS
-		234 = {
-		is_controlled_by = RUS	}
-		}
+            AND = {
+                date > 1857.08.01
+                tag = RUS
+                234 = { is_controlled_by = RUS}
+            }
 		}
 
 		option = {
-			name = russia.6.a
+			name = russia.2.a
 			234 = {
 				add_building_construction = {
-   		    	type = bunker
-    			level = 2
-    			instant_build = yes
-   		    	province = 3720
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 3720
 				}
 			}
 		}
 	}
-	
-	country_event = { #Gorky Library 
+    
+    country_event = {  #Gorky Library 
+		id = russia.3
+		title = russia.3.t
+		desc = russia.3.d
+		
+		picture = GFX_report_event_krenholm_manufacture
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date > 1858.03.01
+		    tag = RUS
+		}
+		
+		option = {
+			name = russia.3.a
+            add_timed_idea = { idea = RUS_idea_gorky_library days = 365 }
+		}
+	}
+    
+    country_event = {  #Kiev PD
+		id = russia.4
+		title = russia.4.t
+		desc = russia.4.d
+		
+		picture = GFX_report_event_krenholm_manufacture
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date > 1858.06.01
+		    tag = RUS
+		}
+		
+		option = {
+			name = russia.4.a
+		}
+	}
+    
+    country_event = {  #K. Rudzki
+		id = russia.5
+		title = russia.5.t
+		desc = russia.5.d
+		
+		picture = GFX_report_event_krenholm_manufacture
+		
+		fire_only_once = yes
+		
+		trigger = {
+			date > 1858.10.01
+		    tag = RUS
+		}
+		
+		option = {
+			name = russia.5.a
+            add_timed_idea = { idea = RUS_idea_krudzki days = 180 }
+		}
+	}
+    
+    #country_event = {  #Vodka Protests
+	#	id = russia.6
+	#	title = russia.6.t
+	#	desc = russia.6.d
+	#	
+	#	picture = GFX_report_event_krenholm_manufacture
+	#	
+	#	fire_only_once = yes
+	#	
+	#	trigger = {
+	#		date > 1858.09.13
+	#	    tag = RUS
+	#	}
+	#	
+	#	option = {
+	#		name = russia.6.a
+    #        add_stability = -0.03
+	#	}
+	#}
+    
+    country_event = {  #Iskra
 		id = russia.7
 		title = russia.7.t
 		desc = russia.7.d
-
+		
 		picture = GFX_report_event_krenholm_manufacture
-
+		
 		fire_only_once = yes
-
+		
 		trigger = {
-		date > 1858.03.01
-		tag = RUS
+			date > 1859.03.01
+		    tag = RUS
 		}
-
-	option = {
+		
+		option = {
 			name = russia.7.a
-		RUS = {
-		add_timed_idea = {
-        idea = RUS_idea_gorky_library
-        days = 360 
-		    }
+            add_popularity = { ideology = collectivist_socialism popularity = 0.03 }
 		}
 	}
-}
-	country_event = { #Kiev? 
+    
+    country_event = {  #Vilnius railway
 		id = russia.8
 		title = russia.8.t
-		desc = russia.8.d
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		fire_only_once = yes
-
+		desc = russia.8.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
 		trigger = {
-		date > 1858.06.01
-		tag = RUS
-		}
-
+			date > 1859.10.02
+		    tag = RUS
+		}		
 		option = {
 			name = russia.8.a
 		}
 	}
-
-	country_event = { #Konstantin Ruski & Co. Ltd.
-		id = russia.9 
+    
+    country_event = {  #Vilnius railway ends
+		id = russia.9
 		title = russia.9.t
-		desc = russia.9.d
-		
-		picture = GFX_report_event_krenholm_manufacture
-
-		fire_only_once = yes
-
+		desc = russia.9.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
 		trigger = {
-		date > 1858.10.01
-		tag = RUS
-		}
-
+			date > 1862.3.25
+		    tag = RUS
+		}		
 		option = {
 			name = russia.9.a
-			add_political_power = -100
-            add_manpower = -15000
-            10 = {
-            	add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-				type = machine_parts_factory
-				level = 1
-				instant_build = yes
-            } 
-		}				
-	}
-}
-
-	country_event = { #Iskra Magazine 
-		id = russia.10
-		title = russia.10.t
-		desc = russia.10.d
-		
-		picture = GFX_report_event_krenholm_manufacture
-
-		fire_only_once = yes
-
-		trigger = {
-		date > 1859.3.1
-		tag = RUS
-		}
-
-		option = {
-			name = russia.10.a
-		RUS = {
-		add_timed_idea = {
-        idea = RUS_idea_iskra
-        days = 180
-		}
-            }
-		}
-	}
-
-	country_event = { #Vilnus-Kaunas Railway Start
-		id = russia_construction.1
-		title = russia_construction.1.t
-		desc = russia_construction.1.d
-		
-		picture = GFX_report_event_krenholm_manufacture
-
-		fire_only_once = yes
-
-		trigger = {
-		date > 1859.2.10 
-		tag = RUS
-		}
-
-		option = {
-			name = russia_construction.1.a
-		}
-
-	}
-
-	country_event = { #Vilnus-Kaunas Railway Ends 
-		id = russia_construction.2
-		title = russia_construction.2.t
-		desc = russia_construction.2.d
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		fire_only_once = yes	
-
-		trigger = {
-		date > 1862.3.25
-		tag = RUS
-		}
-
-		option = {
-			name = russia_construction.2.a
-			11 = {
+            11 = {
 				add_building_construction = {
 				type = infrastructure
 				level = 1
 				instant_build = yes
-            }
+                }
 			}
-		}	
-	}
-
-	country_event = { #Circassian Maijilis? 
-		id = russia.11
-		title = russia.11.t
-		desc = russia.11.d
-
-		is_triggered_only = yes	
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		option = {
-			name = russia.11.a
-			add_stability = -0.02
-		}	
-	}
-
-	country_event = { 
-		id = russia.12
-		title = russia.12.t
-		desc = russia.12.d
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		fire_only_once = yes	
-
-		trigger = {
-		date > 1857.8.1
-		tag = CAU
-		}
-
-		option = {
-			name = russia.12.a
-			custom_effect_tooltip = cau_maj_tt
-			hidden_effect = {
-			RUS = {
-				country_event = { id = russia.11 days = 1 }
-				}
-			load_oob = "CAU_MAJ"
-			}
-		}	
-	}
-
-	country_event = {
-		id = russia.13
-		title = russia.13.t
-		desc = russia.13.d
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		is_triggered_only = yes	
-
-		option = {
-			name = russia.13.a
 		}
 	}
-
-	country_event = {
-		id = russian_protest.2 # Russian Troops fire on a crowd in Warsaw
-		title = russian_protest.2.t
-		desc = russian_protest.2.d
-		
-		picture = GFX_report_event_russian_protests
-		
-		fire_only_once = yes
-		
+    
+    country_event = {  #Warsaw
+		id = russia.10
+		title = russia.10.t
+		desc = russia.10.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
 		trigger = {
 			date > 1861.02.27
-			tag = RUS
-		}
-		
+		    tag = RUS
+		}		
 		option = {
-			name = russian_protest.2.a
-			add_stability = -0.01
-			add_manpower = -500
+			name = russia.10.a
+            add_stability = -0.01
+            add_manpower = -500
 		}
 	}
 
-	country_event = { #Tsushima Incident 
+    country_event = {  #Bezdna
+		id = russia.11
+		title = russia.11.t
+		desc = russia.11.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1861.04.24
+		    tag = RUS
+		}		
+		option = {
+			name = russia.11.a
+            add_stability = -0.02
+            add_manpower = -5000
+		}
+	}
+    
+    country_event = {  #Pavel Military School
+		id = russia.12
+		title = russia.12.t
+		desc = russia.12.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1863.12.04
+		    tag = RUS
+		}		
+		option = {
+			name = russia.12.a
+            army_experience = +5
+            add_manpower = -1000
+		}
+	}
+    
+    country_event = {  #Les Miserables
+		id = russia.13
+		title = russia.13.t
+		desc = russia.13.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1862.01.01
+		    tag = RUS
+		}		
+		option = {
+			name = russia.13.a
+            add_timed_idea = { idea = RUS_idea_les_miserables days = 365 }
+		}
+	}
+        
+    country_event = { #What is to be done    
 		id = russia.14
 		title = russia.14.t
 		desc = russia.14.d
-
-		picture = GFX_report_event_krenholm_manufacture
-		
-		fire_only_once = yes
-
-		trigger = {
-			date > 1861.03.13
-			tag = RUS
-		}
-
-		option = {
-			name = russia.14.a
-		}
-	}
-
-	country_event = { #Bezdna Uprising 
-		id = russian_protest.3
-		title = russian_protest.3.t
-		desc = russian_protest.3.d
-		
-		picture = GFX_report_event_russian_protests
-		
-		fire_only_once = yes
-		
-		trigger = {
-			date > 1861.04.24
-			tag = RUS
-		}
-		
-		option = {
-			name = russian_protest.3.a
-			add_stability = -0.02
-			add_manpower = -5000
-		}
-	}
-
-	country_event = { #Tsushima part 2 
-		id = russia.15
-		title = russia.15.t
-		desc = russia.15.d
-		
-		fire_only_once = yes
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		trigger = {
-			date > 1861.05.21
-			tag = RUS
-		}
-
-		option = {
-			name = russia.15.a
-		}
-	}
-	
-	country_event = { #State Bank of Russia 
-		id = russia.16
-		title = russia.16.t
-		desc = russia.16.d
-		
-		fire_only_once = yes
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		trigger = {
-			date > 1860.06.12
-			tag = RUS
-		}
-
-		option = {
-			name = russia.16.a
-		}
-	}
-	
-	country_event = { #Young Russia  
-		id = russia.17
-		title = russia.17.t
-		desc = russia.17.d
-		
-		fire_only_once = yes
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		trigger = {
-			date > 1862.02.05 
-			tag = RUS
-		}
-
-		option = {
-			name = russia.17.a
-			add_stability = -0.01
-			RUS = {
-            add_popularity = {
-                ideology = anarchism
-                popularity = 0.02 
-				}
-            }
-		}
-	}
-	
-	country_event = { #Les Miserables   
-		id = russia.18 
-		title = russia.18.t
-		desc = russia.18.d
-		
-		fire_only_once = yes
-
-		picture = GFX_report_event_krenholm_manufacture
-
-		trigger = {
-			date > 1862.09.20
-			tag = RUS
-		}
-
-		option = {
-			name = russia.18.a
-			add_stability = 0.02
-			RUS = {
-			add_timed_idea = {
-                idea = RUS_idea_miserables 
-                days = 360 
-				}
-            }
-		}
-	}
-	
-	country_event = { #What is to be done    
-		id = russia.19
-		title = russia.19.t
-		desc = russia.19.d
 
 		picture = GFX_report_event_krenholm_manufacture
 		
@@ -552,43 +272,37 @@ add_namespace = russia_construction
 		}
 
 		option = {
-			name = russia.19.a
+			name = russia.14.a
 			add_stability = -0.02
 			RUS = {
-            add_popularity = {
-                ideology = collectivist_socialism
-                popularity = 0.01 
+                add_popularity = {
+                    ideology = collectivist_socialism
+                    popularity = 0.01 
 				}
             }
 		}
-	}
-	
-	country_event = {  #St. Isaac's Cathedral  
-		id = russia_construction.3
-		title = russia_construction.3.t
-		desc = russia_construction.3.d
-		
-		picture = GFX_report_event_krenholm_manufacture
-
-		fire_only_once = yes
-
+	}    
+    
+    country_event = {  #Young Russia
+		id = russia.15
+		title = russia.15.t
+		desc = russia.15.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
 		trigger = {
-		date > 1858.6.25 
-		tag = RUS
-		}
-
+			date > 1862.04.01
+		    tag = RUS
+		}		
 		option = {
-			name = russia_construction.3.a
-			add_stability = 0.01 
-
+			name = russia.15.a
+            add_stability = -0.03
 		}
-
 	}
-	
-	country_event = {  #St. Petersburg - Warsaw Railway Ends   
-		id = russia_construction.4
-		title = russia_construction.4.t
-		desc = russia_construction.4.d
+    
+    country_event = {  #St. Petersburg - Warsaw Railway Ends   
+		id = russia.16
+		title = russia.16.t
+		desc = russia.16.d
 		
 		picture = GFX_report_event_krenholm_manufacture
 
@@ -600,7 +314,7 @@ add_namespace = russia_construction
 		}
 
 		option = {
-			name = russia_construction.4.a
+			name = russia.16.a
 			10 = {
 				add_building_construction = {
 				type = infrastructure
@@ -632,4 +346,298 @@ add_namespace = russia_construction
 
 		}
 
+	}
+    
+    country_event = {  #Federal customs
+		id = russia.17
+		title = russia.17.t
+		desc = russia.17.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1865.06.01
+		    tag = RUS
+		}		
+		option = {
+			name = russia.17.a
+            add_manpower = 10000
+            230 = {
+                create_unit = {
+                    division = "name = \"Border Customs Regiment\" division_template = \"Border Customs Regiment\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+                    owner = RUS
+                }
+                create_unit = {
+                    division = "name = \"Border Customs Regiment\" division_template = \"Border Customs Regiment\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+                    owner = RUS
+                }
+            }
+		}
+	}
+    
+    country_event = {  #Kalinin Machine Building
+		id = russia.18
+		title = russia.18.t
+		desc = russia.18.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1866.03.01
+		    tag = RUS
+		}		
+		option = {
+			name = russia.18.a
+            add_timed_idea = { idea = RUS_idea_kalinin_machine days = 180 }
+            add_political_power = -100
+            add_manpower = -5000
+		}
+	}
+    
+    country_event = {  #Siberian district
+		id = russia.19
+		title = russia.19.t
+		desc = russia.19.d	
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1864.08.06
+		    tag = RUS
+		}		
+		option = {
+			name = russia.19.a
+            add_war_support = 0.05
+            army_experience = 5
+		}
+	}
+    
+    country_event = { #Assassination of Alexander II 
+		id = russia.20
+		title = russia.20.t
+		desc = russia.20.d
+		
+		picture = GFX_report_event_krenholm_manufacture
+
+		fire_only_once = yes
+
+		trigger = {
+            date > 1881.3.1
+            tag = RUS
+		}
+
+		option = {
+			name = russia.20.a
+            RUS = {
+                add_timed_idea = { idea = RUS_idea_assassination_of_alexander days = 180 }
+            }
+		}
+	}
+    
+    country_event = {  #Geneva
+		id = russiapolitical.1
+		title = russiapolitical.1.t
+		desc = russiapolitical.1.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1864.08.22
+		    tag = RUS
+		}		
+		option = {
+			name = russiapolitical.1.a
+            add_stability = 0.03
+            add_timed_idea = { idea = RUS_idea_geneva_signed days = 180 }
+		}
+        option = {
+			name = russiapolitical.1.b
+            add_stability = 0.01
+            add_timed_idea = { idea = RUS_idea_geneva_notsigned days = 180 }
+		}
+        option = {
+			name = russiapolitical.1.c
+            hidden_effect = {
+                SWI = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                BAD = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                BEL = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                DEN = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                FRA = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                HES = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                ITA = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                HOL = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                POR = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                PRS = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                SPR = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                WUR = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                ENG = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+                SWE = { add_opinion_modifier = { target = RUS modifier = eoanb_om_RUS_genevanotattended } }
+            }
+            custom_effect_tooltip = eoanb_tt_RUS_genevaconv
+            add_timed_idea = { idea = RUS_idea_geneva_notattended days = 180 }
+		}
+	}
+    
+    #country_event = {  #Demand Karachi
+	#	id = russiapolitical.2
+	#	title = russiapolitical.2.t
+	#	desc = russiapolitical.2.d		
+	#	picture = GFX_report_event_krenholm_manufacture		
+	#	fire_only_once = yes		
+    #    is_triggered_only = yes
+	#	option = {
+	#		name = russiapolitical.2.a
+    #        RUS = { transfer_state = 1000 }
+	#	}
+    #    option = {
+	#		name = russiapolitical.2.b
+    #        1000 = { add_claim_by = RUS }
+	#	}
+	#}
+    
+    country_event = {  #Demand Pass Denmark
+		id = russiapolitical.3
+		title = russiapolitical.3.t
+		desc = russiapolitical.3.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+        is_triggered_only = yes
+		option = {
+			name = russiapolitical.3.a
+            ai_chance = { factor = 50 }
+            DEN = { give_military_access = RUS }
+		}
+        option = {
+			name = russiapolitical.3.b
+            ai_chance = { factor = 50 }
+            RUS = { add_opinion_modifier = { target = DEN modifier = eoanb_om_RUS_denmarkdeniedaccess } }
+		}
+	}
+        
+    country_event = {  #State bank
+		id = russiamisc.1
+		title = russiamisc.1.t
+		desc = russiamisc.1.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		is_triggered_only = yes	
+		option = {
+			name = russiamisc.1.a
+		}
+	}
+    
+    country_event = {  #Tsushima Incident
+		id = russiamisc.2
+		title = russiamisc.2.t
+		desc = russiamisc.2.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1861.03.13
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.2.a
+		}
+	}
+    
+    country_event = {  #Tsushima Incident 2
+		id = russiamisc.3
+		title = russiamisc.3.t
+		desc = russiamisc.3.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1861.05.21
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.3.a
+		}
+	}
+    
+    country_event = {  #St Isaac
+		id = russiamisc.4
+		title = russiamisc.4.t
+		desc = russiamisc.4.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1858.06.25
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.4.a
+		}
+	}
+    
+    country_event = {  #Red Cross
+		id = russiamisc.5
+		title = russiamisc.5.t
+		desc = russiamisc.5.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1863.10.29
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.5.a
+		}
+	}
+           
+    country_event = {  #Moscow zoo
+		id = russiamisc.6
+		title = russiamisc.6.t
+		desc = russiamisc.6.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1864.06.01
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.6.a
+		}
+	}
+    
+    country_event = {  #Epoch
+		id = russiamisc.7
+		title = russiamisc.7.t
+		desc = russiamisc.7.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1864.03.01
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.8.a
+		}
+	}
+    
+    country_event = {  #Michael palace
+		id = russiamisc.8
+		title = russiamisc.8.t
+		desc = russiamisc.8.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1862.07.01
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.8.a
+		}
+	}
+    
+    country_event = {  #Heir dies
+		id = russiamisc.9
+		title = russiamisc.9.t
+		desc = russiamisc.9.d		
+		picture = GFX_report_event_krenholm_manufacture		
+		fire_only_once = yes		
+		trigger = {
+			date > 1865.04.24
+		    tag = RUS
+		}		
+		option = {
+			name = russiamisc.9.a
+		}
 	}

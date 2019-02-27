@@ -81,6 +81,82 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.25
 			}
 		}
+        
+        RUS_idea_agrarian1 = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.20
+			}
+		}
+        
+        RUS_idea_agrarian2 = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+        
+        RUS_idea_agrarian3 = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+        
+        RUS_idea_agrarian4 = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = RUS_agrarian
+			
+			modifier = {
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
 		
 		RUS_idea_disconnected_country = {
 			allowed = {
@@ -121,185 +197,7 @@ ideas = {
 			}
 		}
 		
-		RUS_idea_lost_crimea_war1 = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			picture = generic_morale_bonus
-			
-			modifier = {
-				army_defence_factor = -0.1
-				army_attack_factor = -0.1
-				army_org_Factor = -0.1
-				army_morale_factor = -0.1
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-			}
-		}
-		
-		RUS_idea_mining = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = 50
-			
-			picture = RUS_mining
-			
-			modifier = {
-				local_resources_factor = 0.1
-			}
-		}
-		
-		RUS_idea_construction = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = 50
-			picture = RUS_construction
-			modifier = {
-				production_speed_infrastructure_factor = 0.1
-			}
-		}
-		
-		RUS_idea_agrarian1 = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_agrarian
-			
-			modifier = {
-				production_factory_start_efficiency_factor = -0.20
-			}
-		}
-		
-		RUS_idea_agrarian2 = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_agrarian
-			
-			modifier = {
-				production_factory_start_efficiency_factor = -0.15
-			}
-		}
-
-		RUS_idea_agrarian3 = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_agrarian
-			
-			modifier = {
-				production_factory_start_efficiency_factor = -0.10
-			}
-		}		
-		RUS_idea_aleksander_barantsov = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_aleksander_barantsov
-			
-			equipment_bonus = {
-				cannon_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-		RUS_idea_levy_conscription = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_levy_conscription
-			
-			modifier = {
-				conscription_factor = 0.05
-			}
-		}	
-		RUS_idea_outrage_over_levy_conscription = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_levy_conscription
-			
-			modifier = {
-				war_support_factor = -0.25
-			}
-		}	
-		RUS_idea_berdan_rifles = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_levy_conscription
-			
-			modifier = {
-				army_infantry_attack_factor = 0.05
-			}
-		}
-		RUS_idea_improved_officer_corp = {
+        RUS_idea_improved_officer_corp = {
 			allowed = {
 				always = yes
 			}
@@ -316,521 +214,460 @@ ideas = {
 				planning_speed = 0.10
 				supply_consumption_factor = -0.05
 			}
-		}		
-		RUS_idea_boosted_army_morale_1 = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_boosted_army_morale
-			
-			modifier = {
-				army_infantry_attack_factor = 0.10
-				army_org_factor = 0.1
-				army_speed_factor= 0.05
-			}
 		}
-		RUS_idea_boosted_army_morale_2 = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_boosted_army_morale
-			
-			modifier = {
-				army_infantry_attack_factor = 0.10
-				army_org_factor = 0.15
-				army_speed_factor= 0.1
-			}
-		}
-		RUS_idea_boosted_army_morale_3 = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_boosted_army_morale
-			
-			modifier = {
-				army_infantry_attack_factor = 0.11
-				army_org_factor = 0.15
-				army_speed_factor= 0.1
-				war_support_factor = 0.05
-			}
-		}
-		RUS_idea_longer_sabers= {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_longer_sabers
-			
-			modifier = {
-				cavalry_attack_factor = 0.05
-			}
-		}
-		RUS_idea_cav_poduction= {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_longer_sabers
-			
-			equipment_bonus = {
-				cavalry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-			
-			modifier = {
-				cavalry_attack_factor = 0.05
-			}
-		}
-		RUS_idea_fine_cavalry= {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_longer_sabers
-			
-			equipment_bonus = {
-				cavalry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-			
-			modifier = {
-				cavalry_attack_factor = 0.05
-				army_speed_factor = 0.05
-			}
-		}
-		RUS_brandy_excise_tax={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_brandy_tax
-			
-			modifier = {
-				consumer_goods_factor = -0.02
-			}
-		}
-		RUS_liberizing_finance_ministry={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_brandy_tax##find liberal gfx
-			
-			modifier = {
-				centrism_drift = 0.01
-			}
-		}
-		RUS_liberizing_justice_ministry={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_brandy_tax##find liberal gfx
-			
-			modifier = {
-				centrism_drift = 0.01
-			}
-		}
-		RUS_idea_promoting_emancipation={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_brandy_tax##find gfx
-			
-			modifier = {
-				political_power_gain = 0.02
-			}
-		}
-		RUS_idea_consolidated_foreign_ministry={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_brandy_tax##find gfx
-			
-			modifier = {
-				political_power_gain = 0.02
-			}
-		}
-		RUS_pushed_reforms={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_pushed_reforms##find gfx
-			
-			modifier = {
-				stability_factor = -0.05
-			}
-		}
-		RUS_zamstva={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_zamstva##find gfx
-			
-			modifier = {
-				local_resources_factor = 0.02
+        
+        RUS_idea_granary = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.14
+            }
+        }
+        
+        RUS_idea_miloutpost = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.14
+            }
+        }
+        
+        RUS_idea_reforms_pushed_by_tsar = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                stability_factor = -0.05 
+            }
+        }
+        
+        RUS_idea_remove_trial_by_jury = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                stability_factor = -0.05 
+            }
+        }
+        
+        RUS_idea_judicalsystem = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                stability_factor = -0.05 
+            }
+        }
+        
+        RUS_idea_zemstva = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                local_resources_factor = 0.02
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-			}
-		}
-		RUS_closed_courts={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_pushed_reforms##find gfx
-			
-			modifier = {
-				stability_factor = -0.03
-				political_power_factor = 0.05
-			}
-		}
-		RUS_monetary_security={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_pushed_reforms##find gfx
-			
-			modifier = {
-				stability_factor = 0.1
-			}
-		}	
-		RUS_minister_funding_development={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_railroads##find gfx
-			
-			modifier = {
-				political_power_factor = -0.05
-			}
-		}
-		RUS_expanded_gold_and_silver_reserves={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_expanded_reserves##find gfx
-			
-			modifier = {
-				production_speed_buildings_factor = 0.05
-			}
-		}
-		RUS_reserves_fund_military={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_expanded_reserves##find gfx
-			
-			modifier = {
-				war_support_factor = 0.05
-				training_time_army_factor = -0.1
-			}
-		}
-		RUS_removed_trial_by_jury={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_pushed_reforms##find gfx
-			
-			modifier = {
-				stability_factor = -0.05
-			}
-		}
-		RUS_dumas={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_pushed_reforms##find gfx
-			
-			modifier = {
-				industrial_capacity_factory = 0.05
-				political_power_factor = -0.02
-			}
-		}
-		RUS_syndicalist_drift={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_brandy_tax##find liberal gfx
-			
-			modifier = {
-				collectivist_socialism_drift = 0.01
-			}
-		}
-		RUS_self_governing_universities={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_pushed_reforms##find gfx
-			
-			modifier = {
-				planning_speed = 0.1
-			}
-		}
-		RUS_reduced_censorship={
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = RUS_pushed_reforms##find gfx
-			
-			modifier = {
-				political_power_factor = 0.05
-				political_advisor_cost_factor = -0.1
-			}
-		}
-		RUS_railroads = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = generic_build_infrastructure
-			
-			modifier = {
-				army_speed_factor = 0.05
-			}
-		}
-		
-		RUS_idea_iskra = {
-			allowed = {
-				always = yes
-			}
+                production_factory_max_efficiency_factor = 0.05
+            }
+        }
+        
+        RUS_idea_reforms_pushed_by_financem = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                stability_factor = -0.05 
+            }
+        }
+        
+        RUS_idea_state_bank_russian_empire = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                stability_factor = 0.1 
+            }
+        }
+        
+        RUS_idea_fund_railroad_construction = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.05                
+            }
+        }
+        
+        RUS_idea_peasant_land_bank = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.05                
+            }
+        }
+        
+        RUS_idea_push_education_and_censorship_reforms = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                stability_factor = -0.05 
+            }
+        }        
 
-			allowed_civil_war = {
-				always = yes
-			}
+        RUS_idea_universities_self_governing = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                collectivist_socialism_drift = 0.01
+            }
+        }   
+        
+        RUS_idea_reintroduce_brandy_excise_tax = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                consumer_goods_factor = -0.02
+            }
+        }
+        
+        RUS_idea_liberalize_finance_ministry = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                centrism_drift = 0.01
+            }
+        } 
 
-			removal_cost = -1
-
-			picture = RUS_idea_iskra
-
-			modifier = {
-			anarchism_drift = 0.02
-			collectivist_socialism_drift = 0.01
-			}	
-		}	
-		
-		RUS_idea_miserables = {
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = RUS_idea_miserables
-
-			modifier = {
-			collectivist_socialism_drift = 0.01
-			}	
-		}
-		
-		RUS_idea_gorky_library = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = ?
-
-			modifier = {
-			planning_speed = 0.02
-			}		
-		}
-		
-	}
+        RUS_idea_liberalize_justice_ministry = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                centrism_drift = 0.01
+            }
+        }
+        
+        RUS_idea_promote_emancipation_with_nobility = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = 0.02
+            }
+        }
+        
+        RUS_idea_consolidate_foreign_ministry = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = 0.02
+            }
+        }
+        
+        RUS_idea_reinforce_navy = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_dockyard = 0.14
+            }
+        }
+        
+        RUS_idea_russian_railroads = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                production_speed_infrastructure_factor = 0.1
+            }
+        }
+        
+        RUS_idea_main_artillery_administration = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.07
+            }
+        }
+        
+        RUS_idea_research_better_long_rifles = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.07
+            }
+        }
+        
+        RUS_idea_stockpile_M1854 = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.07
+            }
+        }
+        
+        RUS_idea_moscow_rifle_factory = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.07
+            }
+        }
+        
+        RUS_idea_industrialize_the_empire = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.14
+                production_speed_buildings_factor = 0.14
+            }
+        }
+        
+        RUS_idea_combat_political_terrorism = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.1
+                industrial_capacity_factory = 0.02
+            }
+        }
+        
+        RUS_idea_assassination_of_alexander = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.2
+                stability_factor = -0.25
+                war_support_factor = -0.25
+            }
+        }
+        
+        RUS_idea_assassination_of_alexander1 = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.2
+                stability_factor = -0.20
+                war_support_factor = -0.15
+            }
+        }
+        
+        RUS_idea_assassination_of_alexander2 = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.1
+                stability_factor = -0.1
+                war_support_factor = -0.05
+            }
+        }
+        
+        RUS_idea_hand_out_arrests = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                stability_factor = -0.02
+            }
+        }
+        
+        RUS_idea_investigate_the_peoples_will = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.01
+            }
+        }
+        
+        RUS_idea_gorky_library = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                planning_speed = 0.02
+            }
+        }
+        
+        RUS_idea_geneva_signed = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.05
+            }
+        }
+        
+        RUS_idea_geneva_notsigned = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.02
+            }
+        }
+        
+        RUS_idea_geneva_notattended = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = 0.05
+            }
+        }
+        
+        RUS_idea_les_miserables = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = -0.01
+                stability_factor = 0.05
+            }
+        }
+        
+        RUS_idea_kalinin_machine = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.07                
+            }
+            equipment_bonus = {
+                artillery = { build_cost_ic = -0.02 instant = yes }
+            }
+        }
+        
+        RUS_idea_krenholm = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.07
+            }
+        }
+        
+        RUS_idea_krudzki = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.07
+            }
+        }
+    }
+    #PEOPLE
+    
 	political_advisor = {
-		RUS_alexander_gorchakov = {
-			
-			
+		RUS_idea_alexander_gorchakov = {						
 			allowed = {
-				original_tag = "RUS"
+				original_tag = RUS
 			}
 			available = {
-				has_completed_focus = RUS_vic_promote_gorchakov_to_foreign_minister
+				has_completed_focus = RUS_promote_gorchakov_to_foreign_minister
 			}
 			
 			traits = { popular_figurehead }
 		}
-		RUS_mikhail_von_reutern= {
-			
-			
+		RUS_idea_mikhail_von_reutern= {						
 			allowed = {
-				original_tag = "RUS"
+				original_tag = RUS
 			}
 			available = {
-				has_completed_focus = RUS_vic_promote_mikhail_to_finance_minister
+				has_completed_focus = RUS_promote_mikhail_von_reutern
 			}
 			
 			traits = { 
@@ -838,14 +675,12 @@ ideas = {
 				tax_collector
 			}
 		}
-		RUS_vicktor_panin= {
-			
-			
+		RUS_idea_vicktor_panin = {						
 			allowed = {
-				original_tag = "RUS"
+				original_tag = RUS
 			}
 			available = {
-				has_completed_focus = RUS_vic_promote_mikhail_to_finance_minister
+				has_completed_focus = RUS_give_viktor_panin_count_title
 			}
 			
 			traits = { 
@@ -854,5 +689,316 @@ ideas = {
 			}
 		}
 	}
+    
+    army_chief = {
+        RUS_idea_dmitry_milyutin = {
+			
+			picture = generic_army_europe_6
+			
+			allowed = {
+				original_tag = RUS
+			}
+            
+            available = { always = no }  #gets auto removed
+						
+			traits = { army_chief_offensive_2 army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+    
+    #HIDDEN
+    
+    hidden_ideas = {                               
+        RUS_idea_crimeanwar = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = -0.1
+                industrial_capacity_dockyard = -0.1
+            }
+        }
+        
+        RUS_idea_longersabres = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                cavalry_attack_factor = 0.05
+            }
+        }
+        
+        RUS_idea_finerhorses = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                army_speed_factor = 0.05
+            }
+        }
+        
+        RUS_idea_berdanrifles = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                army_infantry_attack_factor = 0.05 
+            }
+        }
+        
+        RUS_idea_barantsov = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                
+            }
+            equipment_bonus = {
+                artillery = { build_cost_ic = -0.1 instant = yes }
+            }
+        } 
+
+        RUS_idea_endofreforms = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.14
+            }
+        }
+        
+        RUS_idea_saddles = {
+			allowed = {
+				always = yes
+			}					
+			removal_cost = -1			
+			picture = RUS_longer_sabers			
+            modifier = {}           
+			equipment_bonus = {
+				cavalry_equipment = { build_cost_ic = -0.1 instant = yes }								
+			}					
+		}
+        
+        RUS_idea_barracks = {
+			allowed = { always = yes }					
+			removal_cost = 0			
+			picture = RUS_boosted_army_morale			
+			modifier = {
+				army_org_factor = 0.05
+				army_speed_factor= 0.05
+			}
+		}
+        
+        RUS_idea_abolishinhumane = {
+			allowed = { always = yes }	
+			removal_cost = 0			
+			picture = RUS_boosted_army_morale			
+			modifier = {
+				army_attack_factor = 0.01 
+			}
+		}
+        
+        RUS_idea_keepnobles = {
+			allowed = { always = yes }	
+			removal_cost = 0			
+			picture = RUS_boosted_army_morale			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05 
+			}
+		}
+        
+        RUS_idea_harshpunity = {
+			allowed = { always = yes }					
+			removal_cost = 0			
+			picture = RUS_boosted_army_morale			
+			modifier = {
+				army_org_factor = 0.02
+			}
+		}
+        
+        RUS_idea_rebuildcrimea = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                industrial_capacity_factory = 0.14
+                production_speed_buildings_factor = 0.07
+                industrial_capacity_dockyard = 0.14
+            }
+        }
+        
+        RUS_idea_dumas = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = 0
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				political_power_factor = -0.02
+			}
+		}
+        
+        RUS_idea_dumasrural = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = 0
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				local_resources_factor = 0.05
+				political_power_factor = -0.02
+			}
+		}
+        
+        RUS_idea_closedcourt = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = 0
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+        
+        RUS_idea_fund_railroad_constructionb = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                army_speed_factor = 0.05               
+            }
+        }
+        
+        RUS_idea_expandsilvergold = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.05               
+            }
+        }
+        
+        RUS_idea_reservesmilspending = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                training_time_army_factor = -0.1              
+            }
+        }
+        
+        RUS_idea_universities_self_governingb = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                planning_speed = 0.1
+            }
+        }
+        
+        RUS_idea_reducecensorshiplaws = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                political_power_gain = 0.05
+                political_advisor_cost_factor = -0.1
+            }
+        }
+        
+        RUS_idea_russianmining = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                local_resources_factor = 0.1
+            }
+        }
+        
+        RUS_idea_establishokhrana = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                enemy_partisan_effect = -0.2
+            }
+        }
+        
+        RUS_idea_combatpoliticalterrorismabroad = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                enemy_partisan_effect = -0.1
+            }
+        }
+        
+        RUS_idea_plantokhranaagents = { 
+            allowed = {
+                always = yes
+            }
+            removal_cost = 0
+            picture = generic_pp_unity_bonus
+            modifier = {
+                decryption_factor = 0.03
+            }
+        }
+    }
 }
 	

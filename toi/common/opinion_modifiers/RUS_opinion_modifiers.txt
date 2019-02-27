@@ -1,0 +1,18 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	eoanb_om_RUS_genevanotattended = { value = -15 months = 24 }
+    eoanb_om_RUS_combatterrorismabroad = { value = -10 months = 12 }
+    eoanb_om_RUS_russianinfluence = { value = 15 months = 60 }
+    eoanb_om_RUS_leaveindia = { value = 15 months = 24 }
+    eoanb_om_RUS_attackedafghanistan = { value = -30 months = 36 }
+    eoanb_om_RUS_denmarkdeniedaccess = { value = -80 months = 60 }
+}

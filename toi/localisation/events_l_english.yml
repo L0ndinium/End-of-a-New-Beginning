@@ -2818,21 +2818,6 @@
  mahtra.2.d:0 "The Russian army has stopped the disasterous revolts in the Mahtra estate. The rebellious slaves were dealt with."
  mahtra.2.a:0 "Finally!"
 
- #Russia
- russia.1.t:0 "Beijing Treatise"
- russia.1.d:0 "We have sent an envoy with count Nikolay Ignatiev in it's lead to the Qing empire to meet with Duke Gun of Aisin Goro. The treaty will decide on the exact boundaries between the Russian and the Qing Empires. We propose to decide the borders with the Amur river."
- russia.1.a:0 "Best of luck to the count!"
- russia.2.t:0 "Beijing Treatise"
- russia.2.d:0 "Russian empire has sent an envoy to decide the borders between the empires. They propose to decide the borders by their side of the Amur river."
- russia.2.a:0 "We agree."
- russia.2.b:0 "We disagree."
- russia.3.t:0 "The Qing Agrees!"
- russia.3.d:0 "The Qing empire has agreed to our proposal of the borders!"
- russia.3.a:0 "A glorious day for the empire."
- russia.4.t:0 "The Qing Refuses!"
- russia.4.d:0 "The Qing empire has refused our proposal of the borders!"
- russia.4.a:0 "We will remember this!"
-
  #French-Belgian Rail Crisis
  eoanb_tt_BEL_prepare_rail_law:0 "We will prepare a law against foreign investment in our state railways."
  eoanb_tt_FRA_call_rail_conference:0 "We will call Belgium and representatives of other major nations to a conference about the issue."
