@@ -1,4 +1,4 @@
-1857.1.1 = {
+﻿1857.1.1 = {
   capital = 804
 
   oob = "CSP_1857"
@@ -83,14 +83,13 @@
   # POLITICAL LEADERS
 
   create_country_leader = {
-	name = "Juan III"
-	desc = ""
-	picture = "Portrait_SPR_Juan_de_Borbon.dds"
-	expire = "1965.1.1"
-	ideology = autocracy
-	traits = {
+  name = "Juan III"
+  desc = ""
+  picture = "Portrait_SPR_Juan_de_Borbon.dds"
+  expire = "1900.1.1"
+  ideology = despotism
+  traits = {
 
-	}
+  }
 }
-
 }
