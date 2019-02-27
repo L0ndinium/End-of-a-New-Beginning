@@ -1,0 +1,113 @@
+scripted_gui = {
+	overview_enable_info = {
+		context_type = selected_country_context
+		
+		window_name = "overview_button_enable_info"
+		
+		visible = {
+		} 
+		 
+		effects = {
+            overview_button_enable_info_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_info }
+                set_variable = { show_overview_info = show }
+            }
+		}
+		
+		triggers = {
+            overview_button_enable_info_click = {
+                always = yes
+            }
+		}
+
+		ai_weights = {
+		}
+	}
+	
+	overview_info_ = {
+		context_type = selected_country_context
+		
+		window_name = "overview_info"
+		
+		visible = {
+			check_variable = {
+			    show_overview_info > 0 
+			} 
+		} 
+		 
+		effects = {
+            overview_button_enable_nation_info_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_info }
+                set_variable = { show_overview_info = show }
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_nation_info }
+                set_variable = { show_overview_nation_info = show }
+				
+            }
+            overview_button_enable_mechanics_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_nation_info }
+                set_variable = { show_overview_nation_info = show }
+            }
+            overview_button_enable_credits_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_nation_info }
+                set_variable = { show_overview_nation_info = show }
+            }
+		}
+		
+		triggers = {
+            overview_button_enable_info_click = {
+                always = yes
+            }
+		}
+
+		ai_weights = {
+		}
+	}
+	
+	overview_nation_info_ = {
+		context_type = selected_country_context
+		
+		window_name = "overview_enable_nation_info"
+		
+		visible = {
+			check_variable = {
+			    show_overview_nation_info > 0 
+			} 
+		} 
+		 
+		effects = {
+            overview_button_enable_nation_info_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_info }
+                set_variable = { show_overview_info = show }
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_nation_info }
+                set_variable = { show_overview_nation_info = show }
+				
+            }
+            overview_button_enable_mechanics_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_nation_info }
+                set_variable = { show_overview_nation_info = show }
+            }
+            overview_button_enable_credits_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_nation_info }
+                set_variable = { show_overview_nation_info = show }
+            }
+		}
+		
+		triggers = {
+            overview_button_enable_nation_info_click = {
+                always = yes
+            }
+		}
+
+		ai_weights = {
+		}
+	}
+}
