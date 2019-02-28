@@ -10,7 +10,6 @@ state= {
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
-			dockyard = 1
 		}
 		add_core_of = SCH
 		add_core_of = DEN

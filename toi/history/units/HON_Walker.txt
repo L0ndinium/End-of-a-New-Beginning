@@ -1,0 +1,16 @@
+﻿division_template = {
+  name = "Mesoamerican Infantry"
+
+  regiments = {
+    light_infantry = { x = 0 y = 0}
+  }
+}
+
+units = {
+		division= {
+			name = "Walker's Militia"
+			location = 12865
+			division_template = "Mesoamerican Infantry"
+			start_experience_factor = 0.1
+		}
+}

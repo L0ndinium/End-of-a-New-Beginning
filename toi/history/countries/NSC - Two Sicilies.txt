@@ -105,5 +105,34 @@ create_country_leader = {
 
   }
 }
-
+create_corps_commander = {
+  name = "Giovan Luca Von Mechel"
+  picture = "Portrait_NSC_Giovan_Luca_Von_Mechel.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Carlo Filangieri"
+  picture = "Portrait_NSC_Carlo_Filangieri.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Vincenzo Polizzy"
+  picture = "Portrait_NSC_Vincenzo_Polizzy.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
 }

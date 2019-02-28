@@ -1993,6 +1993,24 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		
+		USA_TSH_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_foreign_trade
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
 	}
 	hidden_ideas = {
 		USA_civil_war_historical_buff_hidden = {

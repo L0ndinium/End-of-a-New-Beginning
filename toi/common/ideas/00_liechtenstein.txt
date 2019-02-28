@@ -1,0 +1,39 @@
+ideas = {
+
+     country = { 
+	     LIE_legacyofrheinbund = {	
+		           picture = generic_pp_unity_bonus					
+				   removal_cost = -1		   
+				   modifier ={
+				      political_power_gain = 0.01
+					  industrial_capacity_factory = 0.1
+					}
+				}
+		        LIE_austrianpartnership = {		           
+				   modifier ={
+					  industrial_capacity_factory = 0.05
+					  research_time_factor = -0.02
+					}
+				}
+				LIE_newage = {		           
+				   modifier ={
+					  stability_weekly = 0.002
+					}
+				}
+				LIE_newnewage = {		           
+				   modifier ={
+					   production_factory_max_efficiency_factor = 0.07
+					}
+				}
+				LIE_warobserver = {
+				   modifier ={
+				       army_org_factor = 0.05
+					   army_core_defence_factor = 0.03
+					   war_support_factor = 0.01
+					    experience_gain_army = 0.01
+				}
+			}
+		}
+	}
+		
+		 

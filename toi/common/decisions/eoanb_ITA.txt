@@ -62,16 +62,8 @@ ITA_Referendum_category_decisions = {
 
 	icon = generic_political_actions
 
-	available = {
-			 NOT = {
-        	AND = {
-        		    has_idea = ITA_Unorganized_Army
-        			has_idea = ITA_Unorganized_Navy
-
-        	}
-
-        }
-		}
+	#available = {
+		#}
 	visible = {
 			always = yes
 		}
@@ -88,5 +80,28 @@ ITA_Referendum_category_decisions = {
 
 
 	}
+
+}
+
+ITA_brigindage_category_decisions = {
+	
+	ITA_decision_deal_with_brigindage = {
+
+	icon = ita_skull
+
+	available = {
+			has_completed_focus = ITA_Deal_with_Brigandage
+	}
+
+	visible = {
+		always = yes
+	}
+
+
+
+	cost = 25
+
+	}	
+
 
 }

@@ -1,0 +1,35 @@
+state=
+{
+	id=1318
+	name="STATE_1318"
+	manpower = 85120
+	
+	state_category = town
+	
+	resources={
+
+		chromium=1
+	}
+	history=
+	{
+		owner = DOM
+		buildings = {
+			infrastructure = 2
+            7660 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = DOM
+		add_claim_by = HAI
+
+	
+	
+	victory_points = {
+			7660 5
+		}
+		
+	}
+	provinces={
+		13309 13300 10484 13308 7660
+	}
+}

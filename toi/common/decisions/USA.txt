@@ -566,6 +566,7 @@ USA_foreign_policy = {
 
         visible = {
             TAG = USA
+            country_exists = TSH
         }
 
         fire_only_once = yes
@@ -573,7 +574,7 @@ USA_foreign_policy = {
         cost = 25
 
         complete_effect = {
-             JAP = { country_event = { id = shogunate_japan.1 } }
+             TSH = { country_event = { id = shogunate_japan.1 } }
         }
         ai_will_do = {
             base = 4000

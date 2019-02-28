@@ -974,7 +974,6 @@ eoanb_religious_affairs = {
 	#Try to Secularize
 	eoanb_decision_generic_change_secular = {
 		
-		
 		icon = generic_nationalism
 		
 		available = {
@@ -1130,6 +1129,14 @@ political_actions = {
 					has_autonomy_state = autonomy_protectorate
 					has_autonomy_state = autonomy_imperial_protectorate
 					has_autonomy_state = autonomy_personal_union
+				}
+			}
+			NOT = {
+				OR = {
+					TAG = RAJ
+					TAG = CAN
+					TAG = AST
+					TAG = SAF
 				}
 			}
 		}

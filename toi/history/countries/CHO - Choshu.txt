@@ -7,7 +7,7 @@
   
   set_research_slots = 2
   
-  JAP = {
+  TSH = {
       set_autonomy = {
         target = CHO
         autonomous_state = autonomy_puppet

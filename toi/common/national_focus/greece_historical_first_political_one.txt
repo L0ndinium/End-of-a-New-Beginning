@@ -1,0 +1,622 @@
+focus_tree = {
+	id = greece_historical_focus_first_political_one 
+country = {
+		factor = 0
+		
+	modifier = {
+			add = 10
+			tag = GRE
+		}
+	}
+		shared_focus = GRE_agrarian_nation
+		shared_focus = GRE_hellenic_army
+		shared_focus = GRE_hellenic_navy
+		shared_focus = GRE_culture_revival
+	
+#Start - Politics
+
+	focus = {
+		id = GRE_Matters_of_Realm_1857 
+		icon = GFX_focus_government_icon 
+		x = 6   
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Succession_Issue 
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2         
+		y = 1 
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Matters_of_Realm_1857
+		}
+		
+		completion_reward = {
+		    GRE = { 
+			    country_event = GRE_succession.1 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_A_Visit_Munchen  
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2       
+		y = 2  
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Succession_Issue
+		}
+		
+		completion_reward = {
+		    GRE = { 
+			    country_event = GRE_succession.2 
+			}		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_A_New_Heir   
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -3         
+		y = 3  
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_A_Visit_Munchen
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Deadlock_Persists
+		}
+		
+		completion_reward = {
+		    GRE = {
+		        swap_ideas = {
+                    remove_idea = GRE_idea_uncertain_succession 
+                    add_idea = GRE_idea_certain_succession			    
+			    }	
+            }			
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Deadlock_Persists    
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1               
+		y = 3  
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_A_Visit_Munchen
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_A_New_Heir
+		}
+		
+		completion_reward = {
+		    add_stability = -0.05 
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Ludwigs_Conversion     
+		icon = GFX_focus_generic_treaty
+		relative_position_id = GRE_Matters_of_Realm_1857
+		dynamic = yes 
+		x = -3                      
+		y = 4  
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_A_New_Heir
+		}
+		
+		completion_reward = {
+		    country_event = {
+			   id = GRE_succession.3 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Amalia_Succession      
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1              
+		y = 4  
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Deadlock_Persists
+		}
+		
+		completion_reward = {
+		    GRE = {
+		        swap_ideas = {
+                    remove_idea = GRE_idea_uncertain_succession 
+                    add_idea = GRE_idea_Amalia_succession 			    
+			    }	
+            }		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Otto_Death       
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2               
+		y = 5   
+		cost = 70
+		available_if_capitulated = no
+	
+        available = {
+		    GRE = {
+			    has_country_flag = w 
+			}
+		}	
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		        focus = GRE_Ludwigs_Conversion
+		    	focus = GRE_Amalia_Succession
+		}
+		prerequisite = {
+		    focus = GRE_Monarchy_Stands_Strong
+		}
+		
+		completion_reward = {
+		    
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Old_Order_Continues       
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 2                 
+		y = 1   
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Matters_of_Realm_1857
+		}
+		
+		completion_reward = {
+		    add_political_power = 50 			
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Censorship_Autocracy        
+		icon = GFX_goal_focus_controlled_press
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 2                
+		y = 2    
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Old_Order_Continues
+		}
+		
+		completion_reward = {
+		    GRE = {
+		        add_ideas = GRE_idea_ottos_despotism
+            }			
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Enlightened_Despotism         
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 2               
+		y = 3     
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Censorship_Autocracy 
+		}
+		
+		completion_reward = {
+		    GRE = {
+		        add_ideas = GRE_idea_Enlightened_Despotism 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Monarchy_Stands_Strong          
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1               
+		y = 4      
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Enlightened_Despotism  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Old_Order_Overthrown
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Old_Order_Overthrown           
+		icon = GFX_goal_focus_brutal_end_monarchy
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 3                 
+		y = 4      
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Enlightened_Despotism  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Monarchy_Stands_Strong
+		}
+		
+		completion_reward = {
+		    load_focus_tree = greece_historical_focus_first_political_two		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Ludwigs_Coronation            
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -4                        
+		y = 6       
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Otto_Death  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Amalias_Regency 
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Amalias_Regency            
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 0                        
+		y = 6       
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Otto_Death  
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Ludwigs_Coronation 
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Royal_Tour             
+		icon = GFX_goal_focus_railroad_development
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -5                           
+		y = 7         
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Ludwigs_Coronation  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_German_Customs              
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -3                             
+		y = 7         
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Ludwigs_Coronation  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Search_for_Bride                
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -5                                 
+		y = 8          
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Royal_Tour   
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Look_Landstag               
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -3                                
+		y = 8          
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_German_Customs  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Liberal_Administration                
+		icon = GFX_goal_focus_support_liberalism
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1                                  
+		y = 7           
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Amalias_Regency  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Search_New_King                 
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1                                   
+		y = 7           
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Amalias_Regency  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Queen_Victorias_Model                 
+		icon = GFX_goal_focus_queen_return
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -1                                  
+		y = 8            
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Liberal_Administration  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Prepare_Succession                 
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1                                   
+		y = 8            
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Search_New_King  
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Regent_Steps_Down                   
+		icon = GFX_goal_focus_elections
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = 1                                     
+		y = 9            
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Prepare_Succession  
+		}
+		
+		completion_reward = {
+		    load_focus_tree = greece_historical_focus_first_political_two		
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Elections_of_Date_1                    
+		icon = GFX_goal_focus_elections
+		dynamic = yes 
+		relative_position_id = GRE_Matters_of_Realm_1857
+		x = -2                                      
+		y = 9             
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Look_Landstag  
+		    focus = GRE_Queen_Victorias_Model
+		}
+		
+		completion_reward = {
+		    		
+	    }	
+	}
+
+}

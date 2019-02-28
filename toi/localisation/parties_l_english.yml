@@ -206,7 +206,7 @@
  NSC_fundamentalism_party:0 "Chiesa Cattolica Romana"
 
  PAP_fundamentalism_party:0 "Ecclesia Catholica Romana"
- PAP_radical_democracy_party:0 "Repubblicani Romani"
+ PAP_radical_democracy_party:0 "Roman Triumvirate"
  PAP_anarchism_party:0 "Anarchisti Contro il Clero"
 
  BEL_vanguard_communism_party:0 "Syndacalist Proudhonistes"
@@ -364,6 +364,12 @@
  JAP_centrism_party:0 "Taiseikai"
  JAP_anarchism_party:0 "Anakizumu"
 
+ TSH_autocracy_party:0 "Tokugawa Bakufu"
+ TSH_fundamentalism_party:0 "Shogun Council"
+ TSH_social_egalitarianism_party:0 "Liberal Party"
+ TSH_centrism_party:0 "Taiseikai"
+ TSH_anarchism_party:0 "Anakizumu"
+
  SAT_anarchism_party:0 "Satsuma Daimyo"
 
  TOS_anarchism_party:0 "Tosa Daimyo"
@@ -410,8 +416,13 @@
  COS_anarchism_party:0 "Anarquistas Centro Americanos"
  COS_fundamentalism_party:0 "Conferencia Episcopal de Costa Rica"
 
- AUS_autocracy_party:0 "House of Habsburg"
- AUS_radical_democracy:0 "Republicans for Greater Austria"
+ AUS_autocracy_party:0 "Klerikalabsolutist"
+ AUS_autocracy_party_1:0 "House of Habsburg"
+ AUS_centrism_party:0 "Constitutional Party"
+ AUS_radical_democracy:0 "-"
+ AUS_traditional_conservatism_party:0 "Federalist Party"
+ AUS_social_egalitarianism:0 "-"
+ AUS_chauvinist_populism:0 "-"
 
  HAI_autocracy_party:0 "House of Haiti"
  HAI_social_egalitarianism_party:0 "Parti Libéral"
@@ -586,4 +597,6 @@
  MOL_autocracy_party_long:0 "Căimăcămie"
  MOL_chauvinist_populism_party_long:0 "Partidul Nationalist Democrat"
  MOL_anarchism_party_long:0 "Anarhistii"
-MOL_fundamentalism_party_long:0 "Partidul Tării"
+ MOL_fundamentalism_party_long:0 "Partidul Tării"
+ 
+ SRW_autocracy_party:0 "White Rajahs"

@@ -41,6 +41,16 @@ division_template = {
 	}
 }
 
+division_template = {
+  name = "Colonial Garrison"
+
+  regiments = {
+    irregular_infantry = { x = 0 y = 0}
+    irregular_infantry = { x = 0 y = 1}
+  }
+  priority = 0
+}
+
 units = {
 		#Aldershot Command
 		division= {
@@ -210,6 +220,44 @@ units = {
 
 		}
 
+		division= {
+			name = "Singapore Colonial Garrison"
+			location = 12299
+			division_template = "Colonial Garrison"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "Freetown Colonial Garrison"
+			location = 2038
+			division_template = "Colonial Garrison"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "Jamaican Colonial Garrison"
+			location = 12304
+			division_template = "Colonial Garrison"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "Mexican Colonial Garrison"
+			location = 2077
+			division_template = "Colonial Garrison"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "Ellice Islands Colonial Garrison"
+			location = 13054
+			division_template = "Colonial Garrison"
+			start_experience_factor = 0.1
+		}
+		division= {
+			name = "Trincomalee Colonial Garrison"
+			location = 10201
+			division_template = "Colonial Garrison"
+			start_experience_factor = 0.1
+		}
+		
+		### ### ### ### ###
 		
 		navy = {				
 			name = "Channel Fleet"			

@@ -1,0 +1,13 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_endgame_score_button"
+		texturefile = "gfx/interface/endgame_score_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_endgame_power_button"
+		texturefile = "gfx/interface/endgame_power_button.dds"
+	}
+	
+}

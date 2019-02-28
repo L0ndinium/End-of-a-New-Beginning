@@ -1,0 +1,474 @@
+focus_tree = {
+    id = Liechtenstein
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LIE
+		}
+	}
+	default = no
+	focus = {
+	    id = LIE_Legacyofrheinbund
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 0
+		
+		completion_reward = {
+		    add_political_power = 100
+		    add_ideas = LIE_legacyofrheinbund
+		}
+	}
+	focus = {
+	    id = LIE_Bavariandistrust
+		icon = GFX_LIE_placeholder
+		cost = 50
+		prerequisite = {
+		focus = LIE_Legacyofrheinbund
+		}
+		x = 5
+		y = 1
+		
+		completion_reward = {
+		add_opinion_modifier = { target = BAV modifier = eoanb_om_LIE_BAV_lowered }
+		reverse_add_opinion_modifier = { target = BAV modifier = eoanb_om_LIE_BAV_lowered }
+	    }
+    }
+	focus = {
+	    id = LIE_Austrianpartnership
+		icon = GFX_LIE_placeholder
+		cost = 50
+		prerequisite = {
+		focus = LIE_Legacyofrheinbund
+		}
+		x = 10
+		y = 1
+		
+		completion_reward = {
+		    add_political_power = 100
+		    add_ideas = LIE_austrianpartnership
+		}
+	}
+	focus = {
+	    id = LIE_Confederationendangered
+		icon = GFX_LIE_placeholder
+		cost = 50
+		available = {
+			date > 1866.5.1
+		}
+		prerequisite = {
+		focus = LIE_Austrianpartnership
+		focus = LIE_Bavariandistrust
+		}
+		x = 7
+		y = 2
+		
+		completion_reward = {
+                     add_stability = -0.05
+		}
+	}
+	focus = {
+	    id = LIE_Supportprussia
+		icon = GFX_LIE_placeholder
+		cost = 50
+		prerequisite = {
+		focus = LIE_Confederationendangered
+		}
+		x = 5
+		y = 3
+		mutually_exclusive = { focus = LIE_neutralism focus = LIE_Supportaustria}
+		completion_reward = {
+                add_stability = 0.05
+		        add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_AUS_lowered }
+	         	reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_AUS_lowered }		
+				add_opinion_modifier = { target = PRS modifier = eoanb_om_LIE_PRS_improved }
+	         	reverse_add_opinion_modifier = { target = PRS modifier = eoanb_om_LIE_PRS_improved }
+				remove_ideas = LIE_Austrianpartnership
+		}
+	}
+	focus = {
+	    id = LIE_sellweapons
+		icon = GFX_LIE_placeholder
+		cost = 75
+		prerequisite = {
+		focus = LIE_Supportprussia
+		}
+		x = 3
+		y = 4
+		
+		mutually_exclusive = { focus = LIE_joinwar }
+		completion_reward = {
+            add_political_power = -50
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 500
+				target = PRS
+			}
+		}
+	}
+	focus = {
+	    id = LIE_joinwar
+		icon = GFX_LIE_placeholder
+		cost = 75
+		prerequisite = {
+		focus = LIE_Supportprussia
+		}
+		x = 5
+		y = 4
+		
+		mutually_exclusive = { focus = LIE_sellweapons }
+		completion_reward = {
+		             add_political_power = -50
+                     add_stability = -0.05
+				PRS = {
+					add_to_faction = LIE
+				}
+		}
+	}
+	focus = {
+	    id = LIE_aftermath
+		icon = GFX_LIE_placeholder
+		cost = 75
+		mutually_exclusive = { }
+		prerequisite = {
+		focus = LIE_joinwar focus = LIE_sellweapons
+		}
+		x = 4
+		y = 5
+		
+		completion_reward = {
+                     add_stability = 0.05
+		}
+	}
+	focus = {
+	    id = LIE_prussiavincit
+		icon = GFX_LIE_placeholder
+		cost = 75
+		mutually_exclusive = { focus = LIE_austriavincit}
+		prerequisite = {
+		focus = LIE_aftermath
+		}
+		x = 5
+		y = 6
+		
+		completion_reward = {
+                     add_stability = 0.1
+					 add_political_power = 100
+		}
+	}
+	focus = {
+	    id = LIE_austriavincit
+		icon = GFX_LIE_placeholder
+		cost = 75
+		mutually_exclusive = { focus = LIE_prussiavincit}
+		prerequisite = {
+		focus = LIE_aftermath
+		}
+	
+		x = 3
+		y = 6
+		
+		completion_reward = {
+                     add_stability = -0.1
+					 add_political_power = -100
+		}
+	}
+	focus = {
+	    id = LIE_isolationismagain
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 4
+		y = 7
+		mutually_exclusive = { }
+		prerequisite = {
+		focus = LIE_austriavincit focus = LIE_prussiavincit
+		}
+		completion_reward = {
+                     add_stability = -0.5
+					 add_political_power = 50
+		}
+	}
+	focus = {
+	    id = LIE_neutralism
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 3
+		prerequisite = {
+		focus = LIE_Confederationendangered
+		}
+		mutually_exclusive = { focus = LIE_Supportprussia focus = LIE_Supportaustria }
+		completion_reward = {
+                     add_stability = 0.01
+					 add_political_power = 50
+		}
+	}
+	focus = {
+	    id = LIE_surviveforgotten
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 5
+		prerequisite = {
+		focus = LIE_neutralism
+		}
+		completion_reward = {
+					 add_political_power = 50
+		}
+	}
+	focus = {
+	    id = LIE_learnobserving
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 6
+		prerequisite = { 
+		focus = LIE_surviveforgotten
+		}
+		completion_reward = {
+					 add_political_power = 50
+					 add_ideas = LIE_warobserver
+		}
+	}
+	focus = {
+	    id = LIE_enforceindependence
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 7
+		y = 7
+		prerequisite = {
+		focus = LIE_learnobserving
+		}
+		completion_reward = {
+					 add_political_power = 100
+					 add_stability = 0.1
+		}
+	}
+	focus = {
+	    id = LIE_austrianogood
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 8
+		y = 8
+		mutually_exclusive = { }
+		prerequisite = {
+		focus = LIE_enforceindependence focus = LIE_confirmsurvival
+		}
+		completion_reward = {
+					 remove_ideas = LIE_Austrianpartnership
+					  add_opinion_modifier = { target = AUS modifier = liechtensteinsaysbye }
+		              reverse_add_opinion_modifier = { target = AUS modifier = liechtensteinsaysbye }
+		}
+	}
+	focus = {
+	    id = LIE_Supportaustria
+		icon = GFX_LIE_placeholder
+		cost = 50
+		prerequisite = {
+		focus = LIE_Confederationendangered
+		}
+		x = 9
+		y = 3
+		mutually_exclusive = { focus = LIE_neutralism  focus = LIE_Supportprussia}
+		completion_reward = {
+                add_stability = 0.05
+            hidden_effect = {		       
+			   add_opinion_modifier = { target = PRS modifier = eoanb_om_LIE_AUS_lowered }
+	         	reverse_add_opinion_modifier = { target = PRS modifier = eoanb_om_LIE_AUS_lowered }		
+				add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_PRS_improved }
+	         	reverse_add_opinion_modifier = { target = AUS modifier = eoanb_om_LIE_PRS_improved }
+			}
+		}
+	}
+	focus = {
+	    id = LIE_totheborder
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 9
+		y = 4
+		prerequisite = {
+		focus = LIE_Supportaustria
+		}
+		completion_reward = {
+		      country_event = { id = liechtenstein.1 }
+		}
+	}
+	focus = {
+	    id = LIE_confirmsurvival
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 9
+		y = 6
+		prerequisite = {
+		focus = LIE_totheborder
+		}
+		completion_reward = {
+		        add_stability = 0.025
+		}
+	}
+	
+	
+	#-----------------------------------------------------------------------------------
+	#	ECONOMIC BRANCH
+	#-----------------------------------------------------------------------------------
+	
+	focus = {
+	    id = LIE_Aloyseconomy
+		icon = GFX_LIE_placeholder
+		cost = 50
+		x = 14
+		y = 0
+		
+		completion_reward = {
+                     add_political_power = 100
+					 random_owned_controlled_state = {
+				       limit = {
+					   is_in_home_area = yes
+				       }
+				       add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+	    id = LIE_newage
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 14
+		y = 1
+		prerequisite = {
+		    focus = LIE_Aloyseconomy
+		}
+		completion_reward = {
+            add_political_power = 50
+		    add_ideas = LIE_newage 
+			}
+		}
+	focus = {
+	    id = LIE_johannsecond
+		icon = GFX_LIE_placeholder
+		cost = 50
+		x = 14
+		y = 2
+		available = {
+			date > 1858.11.12
+		}
+		prerequisite = {
+		    focus = LIE_newage
+		}
+		completion_reward = {
+            add_political_power = 20
+			LIE = {
+				retire_country_leader = yes
+                create_country_leader = {
+                    name = "Johann II"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "johann_ii_prt1.dds"
+                    expire = 1929.02.11
+                    ideology = despotism 
+                }
+			}
+		}
+	}
+	focus = {
+	    id = LIE_inauguratefactory
+		icon = GFX_goal_generic_construct_civ_factory 
+		cost = 100
+		x = 14
+		y = 3
+		prerequisite = {
+		    focus = LIE_johannsecond
+		}
+		available_if_capitulated = no
+		completion_reward = {
+            955 = { add_extra_state_shared_building_slots = 1  }
+			955 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+	focus = {
+	    id = LIE_reformconstitution
+		icon = GFX_LIE_placeholder
+		cost = 50
+		x = 12
+		y = 3
+		prerequisite = {
+		    focus = LIE_johannsecond
+		}
+		completion_reward = {
+            add_ideas = constitution_adopted
+		}
+	}
+	focus = {
+	    id = LIE_princeduties
+		icon = GFX_LIE_placeholder
+		cost = 50
+		x = 16
+		y = 3
+		prerequisite = {
+		    focus = LIE_johannsecond
+		}
+		completion_reward = {
+            add_political_power = 100
+		}
+	}
+	focus = {
+	    id = LIE_modernizecountry
+		icon = GFX_LIE_placeholder
+		cost = 50
+		x = 12
+		y = 4
+		prerequisite = {
+		    focus = LIE_reformconstitution
+		}
+		completion_reward = {
+            swap_ideas = {
+              add_idea = LIE_newnewage
+              remove_idea = LIE_newage
+            }
+		}
+	}
+	focus = {
+	    id = LIE_statevisit
+		icon = GFX_LIE_placeholder
+		cost = 50
+		x = 16
+		y = 4
+		prerequisite = {
+		    focus = LIE_princeduties
+		}
+		completion_reward = {
+            add_political_power = 100
+		}
+	}
+	focus = {
+	    id = LIE_princelycollection
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 14
+		y = 5
+		prerequisite = {
+		    focus = LIE_statevisit
+			focus = LIE_modernizecountry
+		}
+		completion_reward = {
+            add_political_power = 40
+			add_stability = 0.05
+		}
+	}
+	focus = {
+	    id = LIE_friendsnear
+		icon = GFX_LIE_placeholder
+		cost = 75
+		x = 14
+		y = 6
+		prerequisite = {
+		    focus = LIE_princelycollection
+		}
+		completion_reward = {
+           add_opinion_modifier = { target = BAD modifier = eoanb_om_LIE_BAD_improved }
+		   reverse_add_opinion_modifier = { target = BAD modifier = eoanb_om_LIE_BAD_improved }
+		   add_opinion_modifier = { target = WUR modifier = eoanb_om_LIE_WUR_improved }
+		   reverse_add_opinion_modifier = { target = WUR modifier = eoanb_om_LIE_WUR_improved }
+		}
+	}
+}

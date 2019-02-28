@@ -96,11 +96,12 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 4
 		y = 1
-		cost = 75
+		cost = 250
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 0.25
 		}
+		available = {  OR = { has_idea = industrializing has_idea = industrialized } }
 		prerequisite = { focus = generic_focus_industry }
 		bypass = {
 			any_owned_state = {
@@ -150,10 +151,10 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 4
 		y = 2
-		cost = 75
+		cost = 250
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 0.25
 		}
 		prerequisite = { focus = generic_focus_build_civ_factory }
 		bypass = {

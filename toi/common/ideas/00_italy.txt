@@ -332,7 +332,7 @@ ideas = {
 	country = {
 		ITA_Reliance_on_Farming = {
 
-			picture = GFX_idea_ITA_Unorganized_Navy
+			picture = ITA_Unorganized_Navy
 			
 			modifier = {
 				consumer_goods_factor = -0.04
@@ -353,8 +353,54 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		ITA_Brigandage = {
 
+			picture = GFX_idea_ITA_Brigandage
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.10
+				research_time_factor = 0.05
+				conscription = -0.05
+				
+			}
+		}
+	}
+	country = {
+		ITA_Agriculture_Revival = {
 
+			picture = ITA_Brigandage
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+	}
+	country = {
+		ITA_Different_Naval_Doctorines = {
+
+			picture = ITA_Unorganized_Navy
+			
+			research_bonus = {
+                naval_doctrine = -0.1
+            }
+		}
+	}
+	country = {
+		ITA_Exports_1860 = {
+
+			picture = FRA_international_inflow
+			
+			modifier = {
+				 consumer_goods_factor = -0.01
+			}            
+            
+		}
+	}
+
+ 
 
 hidden_ideas = {
       ITA_Piedmontese = {

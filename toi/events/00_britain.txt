@@ -4,6 +4,8 @@ add_namespace = britainworkerunrest
 add_namespace = britainindia
 add_namespace = britaincanada
 add_namespace = britainafrica
+add_namespace = britainaustralia
+add_namespace = britainoceania
 add_namespace = britainnews
 
 ### NORMAL BRITISH EVENTS BELOW ###
@@ -569,6 +571,112 @@ country_event = {
 		}
 	}
 	
+} 
+
+#Walker is found in Honduras
+country_event = {
+	id = britain.19
+	title = britain.19.t
+	desc = britain.19.d
+	picture = GFX_report_event_generic_sailship
+	
+	fire_only_once = yes
+	
+trigger = {
+	AND = {
+		TAG = ENG
+		date > 1859.8.6
+	}	
+    }
+	
+	option = { 
+		name = britain.19.a
+		ai_chance = { factor = 50 }
+		add_political_power = 5
+		hidden_effect = {	
+			HON = {
+				create_country_leader = {
+					name = "Fernando Caudillo"
+					desc = "POLITICS_CAUDILLO_DESC"
+					expire = "1861.1.1"
+					ideology = national_populism
+					traits = {
+		
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = britain.19.b 
+		ai_chance = { factor = 50 }
+		add_political_power = -5
+		hidden_effect = {
+			ENG = { country_event = britain.20 }
+			HON = { country_event = britain.20 }
+			NIC = { country_event = britain.20 }
+			USA = { country_event = britain.20 }
+			ELS = { country_event = britain.20 }
+		}	
+	}
+
+}
+
+country_event = {
+	id = britain.20
+	title = britain.20.t
+	desc = britain.20.d
+	picture = GFX_event_nicaragua_1
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = britain.20.a
+		ai_chance = { factor = 60 }
+		trigger = {
+			OR = {
+				TAG = USA 
+				TAG = ENG 
+			}
+		}
+		add_political_power = -5
+	}
+	
+	option = {
+		name = britain.20.b
+		ai_chance = { factor = 20 }
+		trigger = {
+			OR = {
+				TAG = NIC
+				TAG = ELS
+				TAG = COS
+			}
+		}
+		declare_war_on = {
+			target = HON
+			type = topple_government
+		}
+	} 
+
+	option = {
+		name = britain.20.c
+		ai_chance = { factor = 20 }
+		trigger = {
+			TAG = HON
+		}
+		set_politics = { ruling_party = chauvinist_populism elections_allowed = no }
+		set_political_party = {
+			ideology = chauvinist_populism
+			popularity = 55
+		}
+		custom_effect_tooltip = eoanb_tt_ENG_event_20_b
+		hidden_effect = {
+			load_oob = "HON_Walker"
+		}
+	}
+
 }
 
 ### POLITICAL EVENTS FOR BRITAIN BELOW ###
@@ -811,23 +919,23 @@ country_event = {
 	
 	trigger = {
 		TAG = ENG
-		country_exists = JAP
-		NOT = { has_war_with = JAP }
+		country_exists = TSH
+		NOT = { has_war_with = TSH }
 		date > 1858.8.25
 	}
 	
 	option = {
 		name = britainpolitical.4.a
 		ai_chance = { factor = 90 }
-		add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_friendship }
-		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_friendship }
+		add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_friendship }
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_friendship }
 	}
 	
 	option = {
 		name = britainpolitical.4.b
 		ai_chance = { factor = 10 }
-		add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_fauxpas }
-		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_fauxpas }
+		add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_fauxpas }
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_fauxpas }
 	}
 	
 }
@@ -1025,6 +1133,174 @@ country_event = {
 	
 }
 
+#Britain's stance on the Maritime Treaty
+country_event = {
+	id = britaincanada.2
+	title = britaincanada.2.t
+	desc = britaincanada.2.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britaincanada.2.a
+		ai_chance = { factor = 95 }
+		add_opinion_modifier = { target = CAN modifier = eoanb_om_ENG_CAN_endorsed }
+		reverse_add_opinion_modifier = { target = CAN modifier = eoanb_om_ENG_CAN_endorsed }
+	}
+	
+	option = {
+		name = britaincanada.2.b
+		ai_chance = { factor = 5 }
+		add_opinion_modifier = { target = CAN modifier = eoanb_om_ENG_CAN_denounced }
+		reverse_add_opinion_modifier = { target = CAN modifier = eoanb_om_ENG_CAN_denounced }
+	}
+	
+}
+
+#CAN requests NFL
+country_event = {
+	id = britaincanada.3
+	title = britaincanada.3.t
+	desc = britaincanada.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britaincanada.3.a
+		ai_chance = { factor = 20 }
+		CAN = { transfer_state = 331 }
+		CAN = { add_state_core = 331 }
+		hidden_effect = {
+			NFL = { remove_state_core = 331 }
+		}
+	}
+	
+	option = {
+		name = britaincanada.3.b
+		ai_chance = { factor = 80 }
+	}
+	
+}
+
+#The London Conference
+country_event = {
+	id = britaincanada.4
+	title = britaincanada.4.t
+	desc = britaincanada.4.d
+	picture = GFX_report_event_military_planning
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = ENG
+		CAN = { is_subject_of = ENG }
+		CAN = { has_cosmetic_tag = CAN_confederation }
+		date > 1866.12.20
+	}
+	
+	option = {
+		name = britaincanada.4.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britaincanada_4_a
+		hidden_effect = {
+			ENG = { country_event = { id = britaincanada.5 days = 25 random = 240 } }
+		}
+	}
+	
+}
+
+#The British North America Act
+country_event = {
+	id = britaincanada.5
+	title = britaincanada.5.t
+	desc = britaincanada.5.d
+	picture = report_event_canada_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britaincanada.5.a
+		ai_chance = { factor = 90 }
+		CAN = { add_stability = 0.05 }
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"  
+			}
+			set_autonomy = {
+				target = CAN
+				autonomy_state = autonomy_dominion
+			}
+		}
+		hidden_effect = {
+			BCO = { country_event = { id = britishcanada.10 days = 10 } }
+		}
+	}
+	
+	option = {
+		name = britaincanada.5.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_opinion_modifier = { target = CAN modifier = eoanb_om_ENG_CAN_no_recognition }
+		reverse_add_opinion_modifier = { target = CAN modifier = eoanb_om_ENG_CAN_no_recognition }
+	}
+	
+}
+
+#Canada asks for purchase of Rupert's Land
+country_event = {
+	id = britaincanada.6
+	title = britaincanada.6.t
+	desc = britaincanada.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britaincanada.6.a
+		ai_chance = { factor = 100 }
+		CAN = { annex_country = { target = HBC transfer_troops = no } }
+		hidden_effect = {
+			if = {
+				limit = {
+					467 = { is_core_of = HBC }
+				}
+				HBC = { remove_state_core = 467 }
+			}
+			if = {
+				limit = {
+					469 = { is_core_of = HBC }
+				}
+				HBC = { remove_state_core = 469 }
+			}
+			if = {
+				limit = {
+					470 = { is_core_of = HBC }
+				}
+				HBC = { remove_state_core = 470 }
+			}
+			if = {
+				limit = {
+					683 = { is_core_of = HBC }
+				}
+				HBC = { remove_state_core = 683 }
+			}
+		}
+	}
+	
+	option = {
+		name = britaincanada.6.b
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
 ### EVENTS RELATING TO BRITISH INDIA BELOW ###
 
 #Hidden Event that prevents revolt risk from going below 0
@@ -1164,18 +1440,14 @@ country_event = {
 				1006 = { is_controlled_by = SRS }
 			}
 			AND = {
-				431 = { is_controlled_by = OUD }
-				435 = { is_controlled_by = OUD }
-				433 = { is_controlled_by = OUD }
-				436 = { is_controlled_by = OUD }
-				1006 = { is_controlled_by = OUD }
-			}
-			AND = {
-				431 = { is_controlled_by = GWA }
-				435 = { is_controlled_by = GWA }
-				433 = { is_controlled_by = GWA }
-				436 = { is_controlled_by = GWA }
-				1006 = { is_controlled_by = GWA }
+				any_country = {
+					has_war_together_with = SRS 
+					controls_state = 431
+					controls_state = 435
+					controls_state = 433
+					controls_state = 436
+					controls_state = 1006
+				}
 			}
 		}
 	}
@@ -1289,6 +1561,53 @@ country_event = {
 	option = {
 		name = britainindia.5.a
 		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#ENG gets message RAJ is trying to distance itself
+country_event = {
+	id = britainindia.6
+	title = britainindia.6.t
+	desc = britainindia.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	#Send them a warning
+	option = {
+		name = britainindia.6.a
+		ai_chance = { factor = 90 }
+		RAJ = { country_event = { id = britishindia.2 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_a
+	}
+	
+	#Threaten War
+	option = {
+		name = britainindia.6.b
+		ai_chance = { 
+			factor = 8 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.3 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_b
+	}
+	
+	#Release them
+	option = {
+		name = britainindia.6.c
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RAJ = { country_event = { id = britishindia.4 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_ENG_event_britainindia_6_c
 	}
 	
 }

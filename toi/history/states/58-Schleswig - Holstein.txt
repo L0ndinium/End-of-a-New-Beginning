@@ -9,11 +9,9 @@ state= {
 		owner = SCH
 		buildings = {
 			infrastructure = 3
-			arms_factory = 1
 			dockyard = 1
 			317 = {
 				bunker = 2
-
 			}
 		}
 		add_core_of = SCH

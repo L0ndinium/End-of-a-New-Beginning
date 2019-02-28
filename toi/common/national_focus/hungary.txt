@@ -1,0 +1,322 @@
+focus_tree = {
+	id = hungary
+	country = {
+	factor = 0
+	modifier = {
+		add = 10
+		tag = HUN
+		}
+	}
+	default = no
+####### First Election focus tree
+	focus = {
+	id = HUN_new_hungary
+	icon = GFX_goal_unknown
+	cost = 10.00
+	x = 10
+	y = 0
+	completion_reward = {
+				add_political_power = 100
+	}
+}
+	focus = {
+	id = HUN_stabilize_the_realm
+	icon = GFX_goal_unknown
+	cost = 70.00
+	prerequisite = {
+		focus = HUN_new_hungary
+	}
+
+	x = 10
+	y = 1
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_open_politics
+	icon = GFX_goal_unknown
+	cost = 70.00
+	prerequisite = {
+		focus = HUN_stabilize_the_realm
+	}
+	x = 10
+	y = 2
+	available = {
+		has_war = no
+		
+	}
+	completion_reward = {
+		country_event = {
+    		id = HUNelections.1
+    			days = 1
+	  }
+   }
+}
+	focus = {
+	id = HUN_ferenc_deak
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = HUN_open_politics
+	}
+	mutually_exclusive = {
+		focus = HUN_keep_lajos
+	}
+	x = 9
+	y = 3
+	completion_reward = {
+
+	}
+	available = {
+		has_war = no
+		has_country_flag = HUN_flag_first_elections_deak
+
+	}	
+}
+	focus = {
+	id = HUN_keep_lajos
+	icon = GFX_goal_unknown
+	cost 10.00
+	prerequisite = {
+		focus = HUN_open_politics
+	}
+	mutually_exclusive = {
+		focus = HUN_ferenc_deak
+	}
+	x = 11
+	y = 3
+	completion_reward = {
+
+	}
+	available = {
+		has war = no
+		has_country_flag = HUN_flag_first_elections_lajos
+		
+	}
+}
+	focus = {
+	id = HUN_legacy_of_regent
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_keep_lajos
+	}
+	x = 11
+	y = 4
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_minority_rights
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_legacy_of_regent
+	}
+	x = 11
+	y = 5
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_father_of_honved
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_legacy_of_regent
+	}
+	x = 12
+	y = 5
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_invest_in_poor
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_legacy_of_regent
+	}
+	x = 13
+	y = 5
+	completion_reward = {
+	
+	}
+}
+	focus = {
+	id = HUN_end_unpaid_labor
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_invest_in_poor
+		focus = HUN_father_of_honved
+		focus = HUN_minority_rights
+	}
+	x = 11.5
+	y = 6
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_hungary_for_hungarians
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_ferenc_deak
+	}
+	x = 8
+	y = 4
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_formalize_autrian_relations
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_ferenc_deak
+	}
+	x = 9
+	y = 4
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_realm_of_wise_man
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_ferenc_deak
+	}
+	x = 6
+	y = 4
+	completion_reward = {
+	
+	}
+}
+	focus = {
+	id = HUN_new_horizons
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_realm_of_wise_man
+	}
+	x = 6
+	y = 5
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_ban_minority_languages
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_hungary_for_hungarians
+		focus = HUN_formalize_austrian_relations
+	}
+	x = 9
+	y = 6
+	completion_reward = {
+	
+	}
+}
+###### Navy Tree
+	focus = {
+	id = HUN_recreate_navy
+	icon = GFX_goal_unknown
+	cost = 35
+	x = 15 
+	y = 0
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_open_first_dock
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_recreate_navy
+	}
+	x = 15
+	y = 1	
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_recruit_navy_leaders
+	icon = GFX_goal_unknown
+	cost = 35
+	prerequisite = {
+		focus = HUN_recreate_navy
+	}
+	x = 16
+	y = 1
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_navy_pressure
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_open_first_dock
+	}
+	x = 15
+	y = 2
+	completion_reward = {
+
+	}	
+}
+	focus = {
+	id = HUN_train_recruits
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_recruit_navy_leaders
+	}
+	x = 16
+	y = 2
+	completion_reward = {
+
+	}
+}
+	focus = {
+	id = HUN_contest_austrian_supremacy
+	icon = GFX_goal_unknown
+	cost = 70
+	prerequisite = {
+		focus = HUN_train_recruits
+		focus = HUN_navy_pressure
+	}
+	mutually_exclusive = {
+		focus = HUN_adriatic_treaties
+	}
+	x = 15
+	y = 3
+	completion_reward {
+
+	}
+}
+	focus = {
+	id = HUN_adriatic_treaties
+	cost = 70
+	prerequisite = {
+		focus = HUN_train_recruits
+		focus = HUN_navy_pressure
+	}
+	mutually_exclusive = {
+		focus = HUN_contest_austrian_supremacy
+	}
+}
+	

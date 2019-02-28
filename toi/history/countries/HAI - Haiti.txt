@@ -25,7 +25,7 @@
     stagnation_growth
     border_control
 	limited_conscription
-    full_equality
+    segregation
     absolutism
 
     human_rights
@@ -39,7 +39,7 @@
 	
   }
   
-  add_opinion_modifier = { target = HAI modifier = EOANB_independence_HAI_war }
+  add_opinion_modifier = { target = DOM modifier = EOANB_independence_HAI_war }
 
   set_politics = {
     parties = {
@@ -103,7 +103,7 @@
 	desc = "POLITICS_STENIO_VINCENT_DESC"
 	picture = "Portrait_HAI_Fabre_Geffrard.dds"
 	expire = "1965.1.1"
-	ideology = conserv_liberal
+	ideology = conserv
 	traits = {
 		#
 	}
@@ -114,7 +114,7 @@
 	desc = "POLITICS_STENIO_VINCENT_DESC"
 	picture = "Portrait_Jean_Nicolas_Nissage_Saget.dds"
 	expire = "1965.1.1"
-	ideology = conserv
+	ideology = conserv_liberal
 	traits = {
 		#
 	}

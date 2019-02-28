@@ -408,3 +408,35 @@ news_event = { # Grand Kabyle campaign ending
       name = nap_france_flavor.22.a
     }
 }
+
+news_event = { # Cochinchina war ending with French territory gain
+    id = nap_france_flavor.23
+    title = nap_france_flavor.23.t
+    desc = nap_france_flavor.23.d
+
+    picture = GFX_france_news_cochinchina_campaign
+
+    major = yes
+
+    is_triggered_only = yes
+
+    option = {
+      name = nap_france_flavor.23.a
+    }
+}
+
+news_event = { # Cochinchina war ending without French territory gain
+    id = nap_france_flavor.24
+    title = nap_france_flavor.24.t
+    desc = nap_france_flavor.24.d
+
+    picture = GFX_france_news_cochinchina_campaign
+
+    major = yes
+
+    is_triggered_only = yes
+
+    option = {
+      name = nap_france_flavor.24.a
+    }
+}

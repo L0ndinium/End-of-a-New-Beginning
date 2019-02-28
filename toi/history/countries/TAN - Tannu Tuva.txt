@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
-  capital = 554
+  capital = 329
 
-  oob = "SYR_1857"
+  oob = "TAN_1857"
 
   set_convoys = 0
   
@@ -83,12 +83,4 @@
   }
 
   # POLITICAL LEADERS
-
-create_country_leader = {
-    name = "Leader"
-    desc = "POLITICS_TEMP_DESC"
-    picture = ""
-    expire = 2000.09.10
-    ideology = despotism
-}
-}
+ }

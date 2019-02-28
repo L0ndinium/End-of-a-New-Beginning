@@ -961,6 +961,15 @@ guiTypes = {
 			max_slots = { x = 6 y = 2 }
 			format = "UPPER_LEFT"
 		}
+		
+		gridboxtype = {
+			name = "spirit_grid_over_over_defined"
+			position = { x = 250 y = 20 }
+			size = { width = 300 height = 70 }
+			slotsize = { width = 16 height = 16 }
+			max_slots = { x = 12 y = 4 }
+			format = "UPPER_LEFT"
+		}
 			
 		containerWindowType = {
 			name = "political_pie_chart"

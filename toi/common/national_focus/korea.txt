@@ -2411,7 +2411,7 @@ focus = {
 
 		completion_reward = {
 		add_opinion_modifier = {
-    	target = JAP
+    	target = TSH
     	modifier = tsushimatrade
 		}
 		add_political_power = 30
@@ -2439,7 +2439,7 @@ focus = {
 
 		completion_reward = {
 		add_opinion_modifier = {
-    	target = JAP
+    	target = TSH
     	modifier = envoyjapan
 		}
 		add_political_power = -100

@@ -732,6 +732,43 @@ political_actions = {
 		
 	}
 	
+	#Grant the Canadian Confederation land from the Hudson Bay Company
+	eoanb_decision_ENG_grant_CAN_HBC_land = {
+		
+		icon = generic_decision
+		
+		available = {
+			HBC = {
+				owns_state = 332
+				owns_state = 466
+				owns_state = 682
+			}
+		}
+		
+		visible = {
+			TAG = ENG
+			CAN = { is_subject_of = ENG }
+			HBC = { is_subject_of = ENG }
+			CAN = { has_cosmetic_tag = CAN_confederation }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+		
+		complete_effect = {
+			CAN = { country_event = { id = britishcanada.8 days = 1 } }
+		}
+		
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				date < 1864.10.1
+			}
+		}
+	}
+	
 }
 
 eoanb_category_projects = {

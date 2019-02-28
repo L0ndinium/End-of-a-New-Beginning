@@ -38,6 +38,7 @@
 	religion_orthodox
     #NATIONAL SPIRITS
     GRE_idea_occupation_athens
+	GRE_idea_uncertain_succession
   }
 
   set_politics = {
@@ -109,7 +110,7 @@ create_country_leader = {
 create_country_leader = {
     name = "Constantine Canaris"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_GRE_Constantine_Kanaris"
+    picture = "Portrait_GRE_Constantine_Kanaris.dds"
     expire = 1867.7.6
     ideology = revolutionary
     traits = {

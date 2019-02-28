@@ -1,0 +1,21 @@
+
+state={
+	id=1320 
+	name="STATE_1320" # Syrmia 
+	manpower = 110000
+
+	state_category = rural
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 3 
+		}
+		add_core_of = AUS
+		add_core_of = CRO 
+	}
+
+	provinces={
+	 11580
+	}
+}

@@ -139,6 +139,17 @@ create_country_leader = {
   }
 
 }
+create_country_leader = {
+  name = "Bettino Ricasoli"
+  #desc = "POLITICS_GIUSEPPE_MAZZINI_DESC"
+  picture = "Portrait_ITA_Bettino_Ricasoli.dds"
+  expire = "1965.1.1"
+  ideology = conserv_liberal
+  traits = {
+    ITA_trait_Iron_Baron
+  }
+
+}
 create_corps_commander = {
   name = "Giuseppe Garibaldi"
   picture = "Portrait_PIE_Giuseppe_Garibaldi.dds"

@@ -11,7 +11,7 @@ state={
 		owner = OLD
 
 		victory_points = {
-			9517 3
+			9517 1
 		}
 		
 		buildings = {

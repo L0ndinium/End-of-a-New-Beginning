@@ -744,7 +744,7 @@ country_event = {
 		TAG = PRS
 		date > 1862.2.16
 		country_exists = CHI
-		country_exists = JAP
+		country_exists = TSH
 		country_exists = SIA
 	}
 	
@@ -753,8 +753,8 @@ country_event = {
 		ai_chance = { factor = 100 }
 		add_opinion_modifier = { target = CHI modifier = eoanb_om_PRS_eulenburg_expedition }
 		reverse_add_opinion_modifier = { target = CHI modifier = eoanb_om_PRS_eulenburg_expedition }
-		add_opinion_modifier = { target = JAP modifier = eoanb_om_PRS_eulenburg_expedition }
-		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_PRS_eulenburg_expedition }
+		add_opinion_modifier = { target = TSH modifier = eoanb_om_PRS_eulenburg_expedition }
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_PRS_eulenburg_expedition }
 		add_opinion_modifier = { target = SIA modifier = eoanb_om_PRS_eulenburg_expedition }
 		reverse_add_opinion_modifier = { target = SIA modifier = eoanb_om_PRS_eulenburg_expedition }
 	}

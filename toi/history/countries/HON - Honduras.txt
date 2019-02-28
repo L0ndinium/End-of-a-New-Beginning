@@ -88,8 +88,16 @@
     name = "José Santos Guardiola"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_HON_Jose_Guardiola.dds"
-    expire = 1900.1.1
+    expire = 1862.1.11
     ideology = conserv
+}
+
+  create_country_leader = {
+    name = "William Walker"
+    desc = "POLITICS_TEMP_DESC"
+    picture = "Portrait_HON_William_Walker.dds"
+    expire = 1862.1.11
+    ideology = national_populism
 }
 
 create_corps_commander {

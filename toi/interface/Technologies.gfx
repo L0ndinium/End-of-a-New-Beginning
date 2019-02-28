@@ -6104,6 +6104,86 @@ spriteTypes = {
 		name = "GFX_PRS_rifle_equipment10_medium"
 		texturefile = "gfx/interface/technologies/infantry/PRS_infantry_equipment_rifle_10.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_10_medium"
+		texturefile = "gfx/interface/technologies/infantry/PRS_infantry_equipment_rifle_7.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment10_medium"
+		texturefile = "gfx/interface/technologies/infantry/PRS_infantry_equipment_rifle_7.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_7_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_7.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment7_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_7.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_6_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_6.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment6_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_5_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_5.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment5_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_5.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_4_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment4_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_3_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment3_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_2_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment2_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_infantry_equipment_rifle_1_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_rifle_equipment1_medium"
+		texturefile = "gfx/interface/technologies/infantry/AUS_infantry_equipment_rifle_1.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_infantry_equipment_shotgun_0_medium"

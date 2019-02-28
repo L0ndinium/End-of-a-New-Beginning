@@ -1,0 +1,635 @@
+﻿add_namespace = tsushima
+
+#Russia breaches Japanese Isolation Policy
+country_event = {
+	id = tsushima.1
+	title = tsushima.1.t
+	desc = tsushima.1.d
+	picture = GFX_report_event_generic_sailship
+	
+	is_triggered_only = yes
+	
+	#Call Britain for Help
+	option = {
+		name = tsushima.1.a
+		ai_chance = { factor = 95 }
+		ENG = { country_event = { id = tsushima.3 days = 1 } }
+	}
+	
+	#Back down and give Russia Tsushima
+	option = {
+		name = tsushima.1.b
+		ai_chance = { 
+			factor = 5 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RUS = { country_event = { id = tsushima.2 days = 1 } }
+	}
+	
+}
+
+#Japan gives Tsushima to Russia
+country_event = {
+	id = tsushima.2
+	title = tsushima.2.t
+	desc = tsushima.2.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	#How nice of them
+	option = {
+		name = tsushima.2.a
+		ai_chance = { factor = 100 }
+		RUS = { transfer_state = 1231 }
+		TSH = {
+			remove_state_core = 1231
+			add_state_claim = 1231
+		}
+		hidden_effect = {
+			news_event = news.18
+		}	
+	}
+	
+}
+
+#Japan calls Britain for Help
+country_event = {
+	id = tsushima.3
+	title = tsushima.3.t
+	desc = tsushima.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	#Britain will help
+	option = {
+		name = tsushima.3.a
+		ai_chance = {
+			factor = 85
+			modifier = {
+				factor = 0.5
+				has_opinion = { target = TSH value < 0 }
+			}
+		}
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_tsushima_ENG_did_help }
+		hidden_effect = {
+			set_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+		}
+	}
+	
+	#They are on their own
+	option = {
+		name = tsushima.3.b
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 4
+				has_opinion = { target = TSH value > 25 }
+			}
+		}
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_tsushima_ENG_didnt_help }
+		hidden_effect = {
+			set_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
+		}
+	}
+	
+}
+
+#The Tsushima Clashes
+country_event = {
+	id = tsushima.4
+	title = tsushima.4.t
+	desc = tsushima.4.d
+	picture = GFX_report_event_dead_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = TSH
+		OR = {
+			has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			has_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
+		}
+		date > 1861.4.11
+	}
+	
+	#Horrible
+	option = {
+		name = tsushima.4.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = RUS modifier = eoanb_om_tsushima_clashes }
+		reverse_add_opinion_modifier = { target = RUS modifier = eoanb_om_tsushima_clashes }
+		hidden_effect = {
+			set_global_flag = eoanb_flag_tsushima_incident_1
+		}
+	}
+	
+}
+
+#The Tsushima Incident
+country_event = {
+	id = tsushima.5
+	title = tsushima.5.t
+	desc = tsushima.5.d
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+	
+	is_triggered_only = yes
+	
+	#What else must this island endure
+	option = {
+		name = tsushima.5.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = RUS modifier = eoanb_om_tsushima_incident }
+		reverse_add_opinion_modifier = { target = RUS modifier = eoanb_om_tsushima_incident }
+		hidden_effect = {
+			set_global_flag = eoanb_flag_tsushima_incident_2
+		}
+	}
+	
+}
+
+#The Coastline Charter
+country_event = {
+	id = tsushima.6
+	title = tsushima.6.t
+	desc = tsushima.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	#Tsushima Authorities say Yes
+	option = {
+		name = tsushima.6.a
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		RUS = { country_event = { id = tsushima.2 days = 1 } }
+		hidden_effect = {
+			clr_global_flag = eoanb_flag_tsushima_incident_1
+			clr_global_flag = eoanb_flag_tsushima_incident_2
+		}
+	}
+	
+	#Tsushima Authorities say No
+	option = {
+		name = tsushima.6.b
+		ai_chance = { factor = 95 }
+		RUS = { country_event = { id = tsushima.8 days = 2 } }
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			RUS = { country_event = { id = tsushima.7 days = 1 } }
+		}
+		hidden_effect = {
+			clr_global_flag = eoanb_flag_tsushima_incident_1
+			clr_global_flag = eoanb_flag_tsushima_incident_2
+		}
+	}
+	
+}
+
+#Russia gets message Britain backs up Japan
+country_event = {
+	id = tsushima.7
+	title = tsushima.7.t
+	desc = tsushima.7.d
+	picture = GFX_report_event_canada_treaty
+	
+	is_triggered_only = yes
+	
+	#This is bad for us
+	option = {
+		name = tsushima.7.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = ENG modifier = eoanb_om_ENG_supports_against_RUS }
+	}
+	
+}
+
+#Russia gets message Tsushima Authorities said No
+country_event = {
+	id = tsushima.8
+	title = tsushima.8.t
+	desc = tsushima.8.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	#We will have to back down
+	option = {
+		name = tsushima.8.a
+		ai_chance = { factor = 75 }
+		TSH = { country_event = { id = tsushima.9 days = 1 } }
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			ENG = { country_event = { id = tsushima.9 days = 1 } }
+		}
+	}
+	
+	#We refuse to back down
+	option = {
+		name = tsushima.8.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		TSH = { country_event = { id = tsushima.10 days = 1 } }
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			ENG = { country_event = { id = tsushima.10 days = 1 } }
+		}
+	}
+	
+}
+
+#Russia backs down
+country_event = {
+	id = tsushima.9
+	title = tsushima.9.t
+	desc = tsushima.9.d
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+	#Good
+	option = {
+		name = tsushima.9.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			if = {
+				limit = {
+					TAG = TSH
+				}
+				news_event = news.19
+			}
+		}
+	}
+	
+}
+
+#Refusal to back down - threaten Russia with war
+country_event = {
+	id = tsushima.10
+	title = tsushima.10.t
+	desc = tsushima.10.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	#We will threaten war
+	option = {
+		name = tsushima.10.a
+		ai_chance = { factor = 95 }
+		RUS = { country_event = { id = tsushima.11 days = 1 } }
+		trigger = {
+			TAG = TSH
+		}
+	}
+	
+	#We will back down if they want it so much - war is not worth it
+	option = {
+		name = tsushima.10.b
+		ai_chance = { factor = 5 }
+		RUS = { country_event = { id = tsushima.2 days = 1 } }
+		trigger = {
+			TAG = TSH
+		}
+	}
+	
+	#We will back up Japan in case of war
+	option = {
+		name = tsushima.10.c
+		ai_chance = { factor = 100 }
+		trigger = {
+			TAG = ENG
+		}
+	}
+	
+}
+
+#Japan threatens War
+country_event = {
+	id = tsushima.11
+	title = tsushima.11.t
+	desc = tsushima.11.d
+	picture = GFX_report_event_king_speech
+	
+	is_triggered_only = yes
+	
+	#We will back down then
+	option = {
+		name = tsushima.11.a
+		ai_chance = { factor = 80 }
+		TSH = { country_event = { id = tsushima.9 days = 1 } }
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			ENG = { country_event = { id = tsushima.9 days = 1 } }
+		}
+	}
+	
+	#They can have a war
+	option = {
+		name = tsushima.11.b
+		ai_chance = { factor = 20 }
+		declare_war_on = { target = TSH type = annex_everything }
+		custom_effect_tooltip = eoanb_tt_event_tsushima_11_b
+		hidden_effect = {
+			TSH = { country_event = { id = tsushima.12 days = 1 } }
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+				}
+				ENG = { country_event = { id = tsushima.12 days = 1 } }
+			}
+			news_event = news.20
+		}
+	}
+	
+}
+
+#Russia declared war on Japan
+country_event = {
+	id = tsushima.12
+	title = tsushima.12.t
+	desc = tsushima.12.d
+	picture = GFX_report_event_nationalist_china_machinegun_firing
+	
+	is_triggered_only = yes
+	
+	#We will fight them off
+	option = {
+		name = tsushima.12.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			TAG = TSH
+		}
+		hidden_effect = {
+			set_global_flag = eoanb_flag_tsushima_war_ongoing
+		}
+	}
+	
+	#We will come to Japans Defense
+	option = {
+		name = tsushima.12.b
+		ai_chance = { factor = 100 }
+		add_to_war = { 
+			targeted_alliance = TSH 
+			enemy = RUS
+		}
+		custom_effect_tooltip = eoanb_tt_event_tsushima_12_b
+		trigger = {
+			TAG = ENG
+		}
+	}
+	
+}
+
+#Russia loses the War
+country_event = {
+	id = tsushima.13
+	title = tsushima.13.t
+	desc = tsushima.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = RUS
+		has_global_flag = eoanb_flag_tsushima_war_ongoing
+		OR = {
+			RUS = { surrender_progress > 0.35 }
+			RUS = { has_army_manpower = { size < 25000 } }
+			RUS = { NOT = { controls_state = 195 } }
+			AND = {
+				RUS = { NOT = { controls_state = 1231 } }
+				date > 1865.6.1
+			}
+			AND = {
+				RUS = { NOT = { controls_state = 655 } }
+				RUS = { NOT = { controls_state = 555 } }
+				RUS = { NOT = { controls_state = 562 } }
+				RUS = { NOT = { controls_state = 637 } }
+				RUS = { NOT = { controls_state = 644 } }
+				RUS = { NOT = { controls_state = 574 } }
+				RUS = { NOT = { controls_state = 563 } }
+				RUS = { NOT = { controls_state = 565 } }
+				RUS = { NOT = { controls_state = 564 } }
+			}
+		}
+	}
+	
+	#We have lost
+	option = {
+		name = tsushima.13.a
+		ai_chance = { factor = 100 }
+		TSH = { 
+			transfer_state = 655
+			add_state_core = 655
+		}
+		RUS = {
+			remove_state_core = 655
+			add_state_claim = 655
+		}
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			TSH = { country_event = { id = tsushima.14 days = 1 } }
+		}
+		RUS = { add_timed_idea = { idea = eoanb_idea_tsushima_paying_reparations days = 365 } }
+		TSH = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			ENG = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
+		}
+		hidden_effect = {
+			white_peace = TSH
+			white_peace = RYU
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+				}
+				white_peace = ENG
+				white_peace = NWT
+				white_peace = BCO
+			}
+			clr_global_flag = eoanb_flag_tsushima_war_ongoing
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+				}
+				clr_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
+				}
+				clr_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
+			}
+		}
+	}
+	
+}
+
+#Japan gets asked to open ports
+country_event = {
+	id = tsushima.14
+	title = tsushima.14.t
+	desc = tsushima.14.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	#The British deserve it
+	option = {
+		name = tsushima.14.a
+		ai_chance = { factor = 98 }
+		#Change this to Naval Access in MtG
+		ENG = { give_military_access = TSH }
+	}
+	
+	#No, that is not okay
+	option = {
+		name = tsushima.14.b
+		ai_chance = { factor = 2 }
+		ENG = { country_event = { id = tsushima.15 days = 1 } }
+	}
+	
+}
+
+#Japan refuses to open ports
+country_event = {
+	id = tsushima.15
+	title = tsushima.15.t
+	desc = tsushima.15.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	#We have to accept that
+	option = {
+		name = tsushima.15.a
+		ai_chance = { factor = 98 }
+		add_opinion_modifier = { target = TSH modifier = eoanb_om_tsushima_TSH_broke_treaty }
+	}
+	
+	#If they want another war, they can have it
+	option = {
+		name = tsushima.15.b
+		ai_chance = { factor = 2 }
+		declare_war_on = { target = TSH type = puppet_wargoal_focus }
+	}
+	
+}
+
+#Russia wins the War
+country_event = {
+	id = tsushima.16
+	title = tsushima.16.t
+	desc = tsushima.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = RUS
+		has_global_flag = eoanb_flag_tsushima_war_ongoing
+		TSH = { surrender_progress > 0.5 }
+		OR = {
+			TSH = { surrender_progress > 0.6 }
+			ENG = { surrender_progress > 0.4 }
+			TSH = { has_army_manpower = { size < 10000 } }
+			ENG = { NOT = { controls_state = 952 } }
+		}
+	}
+	
+	#We have won
+	option = {
+		name = tsushima.16.a
+		ai_chance = { factor = 100 }
+		RUS = { 
+			transfer_state = 1231
+			add_state_core = 1231
+		}
+		TSH = {
+			remove_state_core = 1231
+			add_state_claim = 1231
+		}
+		RUS = { 
+			transfer_state = 750
+			add_state_core = 750
+		}
+		TSH = {
+			remove_state_core = 750
+			add_state_claim = 750
+		}
+		RUS = { 
+			transfer_state = 537
+			remove_state_claim = 537
+		}
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			ENG = { add_timed_idea = { idea = eoanb_idea_tsushima_paying_reparations days = 365 } }
+		}
+		TSH = { add_timed_idea = { idea = eoanb_idea_tsushima_paying_reparations days = 365 } }
+		RUS = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
+		if = {
+			limit = {
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			ENG = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
+		}
+		hidden_effect = {
+			white_peace = TSH
+			white_peace = RYU
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+				}
+				white_peace = ENG
+				white_peace = NWT
+				white_peace = BCO
+			}
+			clr_global_flag = eoanb_flag_tsushima_war_ongoing
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+				}
+				clr_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			}
+			if = {
+				limit = {
+					has_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
+				}
+				clr_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
+			}
+		}
+	}
+	
+}

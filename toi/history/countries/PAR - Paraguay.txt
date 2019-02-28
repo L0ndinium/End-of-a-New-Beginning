@@ -86,6 +86,8 @@
 	horse_transport = 1
 	start_build_tech = 1
   }
+  
+   give_guarantee = URG
 
   # POLITICAL LEADERS
 
@@ -102,10 +104,10 @@ create_country_leader = {
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_PAR_Francisco_Antonio_Lopez.dds"
     expire = 1900.7.10
-    ideology = tropical
+    ideology = national_populism
 }
 
-create_corps_commander {
+create_field_marshal {
   name = "Francisco Solano López"
   picture = "Portrait_PAR_Francisco_Antonio_Lopez.dds"
   traits = { }

@@ -1,1 +1,172 @@
-﻿
+﻿AUS_INF_01 = 
+{
+	name = "Infantry Divisions"
+
+	for_countries = { AUS HUN }
+
+	can_use = {
+		tag = AUS
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { AUS_INF_02 AUS_INF_03}
+
+	fallback_name = "%d. Infanterietruppendivision"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		6 = { "%d. Infanterietruppendivision" }
+		7 = { "%d. Infanterietruppendivision" }
+		10 = { "%d. Infanterietruppendivision" }
+		12 = { "%d. Infanterietruppendivision" }
+		13 = { "%d. Infanterietruppendivision" }
+		16 = { "%d. Infanterietruppendivision" }
+		20 = { "%d. Infanterietruppendivision" }
+		24 = { "%d. Infanterietruppendivision" }
+		25 = { "%d. Infanterietruppendivision" }
+		26 = { "%d. Infanterietruppendivision" }
+		27 = { "%d. Infanterietruppendivision" }
+		28 = { "%d. Infanterietruppendivision" }
+		29 = { "%d. Infanterietruppendivision" }
+		30 = { "%d. Infanterietruppendivision" }
+		31 = { "%d. Infanterietruppendivision" }
+		32 = { "%d. Infanterietruppendivision" }
+		36 = { "%d. Infanterietruppendivision" }
+		37 = { "%d. Infanterietruppendivision" }
+		38 = { "%d. Infanterietruppendivision" }
+		39 = { "%d. Infanterietruppendivision" }
+		40 = { "%d. Infanterietruppendivision" }
+		41 = { "%d. Infanterietruppendivision" }
+		42 = { "%d. Infanterietruppendivision" }
+		43 = { "%d. Infanterietruppendivision" }
+		44 = { "%d. Infanterietruppendivision" }
+		45 = { "%d. Infanterietruppendivision" }
+		46 = { "%d. Infanterietruppendivision" }
+		47 = { "%d. Infanterietruppendivision" }
+		48 = { "%d. Infanterietruppendivision" }
+		49 = { "%d. Infanterietruppendivision" }
+		50 = { "%d. Infanterietruppendivision" }
+		51 = { "%d. Infanterietruppendivision" }
+	}
+}
+
+AUS_INF_02 = 
+{
+	name = "Infantry Regiments"
+
+	for_countries = { AUS HUN }
+
+	can_use = {
+		tag = AUS
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { AUS_INF_01 AUS_INF_03}
+
+	fallback_name = "Infanterie Regiment Nr.%d"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Infanterie Regiment Nr.%d - „Wien“" }
+		2 = { "Infanterie Regiment Nr.%d - „Linz“" }
+		3 = { "Infanterie Regiment Nr.%d - „Graz“" }
+		4 = { "Infanterie Regiment Nr.%d - „Klagenfurt“" }
+		5 = { "Infanterie Regiment Nr.%d - „Pola“" }
+		7 = { "Infanterie Regiment Nr.%d - „Pilsen“" }
+		24 = { "Infanterie Regiment Nr.%d - „Prag“" }
+		25 = { "Infanterie Regiment Nr.%d - „Eger“" }
+		26 = { "Infanterie Regiment Nr.%d - „Leitmeritz“" }
+		27 = { "Infanterie Regiment Nr.%d - „Jungbunzlau“" }
+		28 = { "Infanterie Regiment Nr.%d - „Brünn“" }
+		29 = { "Infanterie Regiment Nr.%d - „Lemberg“" }
+		30 = { "Infanterie Regiment Nr.%d - „Krakau“" }
+		31 = { "Infanterie Regiment Nr.%d - „Stanislau“" }
+		32 = { "Infanterie Regiment Nr.%d - „Sankt Pölten“" }
+		36 = { "Infanterie Regiment Nr.%d - „Zara“" }
+		38 = { "Infanterie Regiment Nr.%d - „Teschen“" }
+		40 = { "Infanterie Regiment Nr.%d - „Budweis“" }
+		41 = { "Infanterie Regiment Nr.%d - „Jaroslau“" }
+		45 = { "Infanterie Regiment Nr.%d - „Triest“" }
+		48 = { "Infanterie Regiment Nr.%d - „Laibach“" }
+		52 = { "Infanterie Regiment Nr.%d - „Przemyśl“" }
+		54 = { "Infanterie Regiment Nr.%d - „Czernowitz“" }
+		55 = { "Infanterie Regiment Nr.%d - „Salzburg“" }
+	}
+}
+
+AUS_INF_03 = 
+{
+	name = "Light Infantry Regiments"
+
+	for_countries = { AUS HUN }
+
+	can_use = {
+		tag = AUS
+	}
+
+	division_types = { "light_infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { AUS_INF_01 AUS_INF_02 }
+
+	fallback_name = "Feldjägerregiment Nr.%d"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d. Tiroler Jägerregiment" }
+		2 = { "%d. Tiroler Jägerregiment" }
+		3 = { "%d. Tiroler Jägerregiment" }
+		4 = { "%d. Tiroler Jägerregiment" }
+		5 = { "Feldjägerregiment Nr.%d" }
+		7 = { "Feldjägerregiment Nr.%d" }
+		24 = { "Feldjägerregiment Nr.%d" }
+		25 = { "Feldjägerregiment Nr.%d" }
+		26 = { "Feldjägerregiment Nr.%d" }
+		27 = { "Feldjägerregiment Nr.%d" }
+		28 = { "Feldjägerregiment Nr.%d" }
+	}
+}
+
+AUS_CAV_01 = 
+{
+	name = "Hussar Divisions"
+
+	for_countries = { AUS HUN }
+
+	can_use = {
+		tag = AUS
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HUN_INF_01 }
+
+	fallback_name = "Husarenregiment Nr.%d"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Husarenregiment „Kaiser“ Nr.%d" }
+		2 = { "Husarenregiment „Friedrich Leopold von Preußen“ Nr.%d" }
+		3 = { "Husarenregiment „Graf von Hadik“ Nr.%d" }
+		4 = { "Husarenregiment „Vécsey“ Nr.%d" }
+		5 = { "Husarenregiment „Graf Radetzky“ Nr.%d" }
+		6 = { "Husarenregiment „Blankenstein“ Nr.%d" }
+		7 = { "Husarenregiment Nr.%d" }
+		8 = { "Husarenregiment Nr.%d" }
+		9 = { "Husarenregiment „Graf Nádasdy“ Nr.%d" }
+		10 = { "Husarenregiment „Friedrich Wilhelm III. König von Preußen“ Nr.%d" }
+	}
+}

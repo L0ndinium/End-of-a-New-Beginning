@@ -94,6 +94,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/FRA/FRA_unstable_government.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_FRA_VIN_war"
+		texturefile = "gfx/interface/ideas/FRA/FRA_VIN_war.dds"
+	}
+
 	# ADVISORS
 
 	spriteType = {

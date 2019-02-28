@@ -322,13 +322,13 @@ country_event = {        #1859 elections start
 	    GRE = {
 		set_country_flag = gre_election_1859	
         set_variable = {
-        var = gre_electiona
-        value = 1
-       }
-	  country_event = { id = Greecemisc.2 days = 25 }
-	}
+            var = gre_electiona
+            value = 1
+        }
+	    country_event = { id = Greecemisc.2 days = 25 }
+	    }
 	
-}
+    }
 }
 }
 
@@ -347,6 +347,14 @@ country_event = { #1859 elections results
 	}
 	
 	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+	        GRE = {
+		        complete_national_focus = GRE_elections_1859
+		    }
+	    }
+	}
 	
 	option = {
 		name = Greeceelections.2.a #Otto win
@@ -847,7 +855,7 @@ country_event = { #Revolutions against Otto
 	desc = GREpolitics.12.d
 	picture = placeholder
 	
-	is_triggered_only = yes
+	fire_only_once = yes
 	
 	trigger = {
 		TAG = GRE

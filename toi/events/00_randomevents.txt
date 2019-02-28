@@ -352,7 +352,7 @@ country_event = {
 	}
 		
 	mean_time_to_happen = {
-		days = 2400
+		days = 3200
 		modifier = {
 			factor = 0.9
 			has_stability < 0.6
@@ -986,4 +986,44 @@ country_event = {
 		}
 	}
 	
+}
+
+#Weapon Technology advances during a war (Victorian Era)
+country_event = {
+	id = random.24
+	title = random.24.t
+	desc = random.24.d
+	picture = GFX_report_event_canada_army
+	
+	trigger = {
+		has_war = yes
+		has_idea = victorian_era
+		amount_research_slots > 1
+	}
+	
+	mean_time_to_happen = {
+		days = 1200
+		modifier = {
+			factor = 0.8
+			has_idea = ten_percent
+		}
+		modifier = {
+			factor = 0.9
+			has_idea = five_percent
+		}
+		modifier = {
+			factor = 1.1
+			has_idea = two_percent
+		}
+		modifier = {
+			factor = 1.2
+			has_idea = one_percent
+		}
+	}
+	
+	option = {
+		name = random.24.a
+		ai_chance = { factor = 100 }
+		add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
+	}
 }

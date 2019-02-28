@@ -16,10 +16,9 @@ ideas = {
 			picture = AUS_hungarian_revolution
 			
 			modifier = {
-				conscription_factor = -0.1
+				conscription_factor = -0.3  
 				army_org_Factor = -0.05
-				drift_defence_factor = -0.25
-				stability_factor = -0.20
+				stability_factor = -0.25  
 			}
 		}
 		
@@ -99,85 +98,9 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = AUS_hungarian_revolution
+			picture = AUS_Hungarian_Nationalism
 			
 			modifier = {
-	            stability_factor = -0.15 
-			}
-		}
-		
-		AUS_HUN_Separatism1 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-			
-			modifier = {
-	            stability_factor = -0.125 
-			}
-		}
-		
-		AUS_HUN_Separatism1a = { #Absolutist path
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-			
-			modifier = {
-	            stability_factor = -0.14 
-			}
-		}
-		AUS_HUN_Separatism2a = { #Help Hungarians - Abolutism
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-			
-			modifier = {
-	            stability_factor = -0.08 
-			}
-		}
-		
-		AUS_HUN_Separatism2b = { #Supress Hungarians - Abolutism
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-			
-			modifier = {
-	            stability_factor = -0.18
 			}
 		}
 		
@@ -196,64 +119,6 @@ ideas = {
 			picture = AUS_hungarian_revolution
 			
 			modifier = {
-	            stability_factor = -0.1 
-			}
-		}
-		
-		AUS_SLA_Separatism1 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-			
-			modifier = {
-	            stability_factor = -0.09
-			}
-		}
-		
-		AUS_SLA_Separatism1a = { #If Austria goes absolutist
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-			
-			modifier = {
-	            stability_factor = -0.12 
-			}
-		}
-		
-		AUS_SLA_Separatism2a = { #Supress Slavic minorities - Absolutist 
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = AUS_hungarian_revolution
-			
-			modifier = {
-	            stability_factor = -0.15 
 			}
 		}
 
@@ -529,8 +394,207 @@ ideas = {
 	           industrial_capacity_dockyard = 0.15 
 			}
 	    }
+		
+		AUS_idea_hydroelectricity = {
 
+		   allowed = {
+			   always = no
+		   }
 
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           production_speed_industrial_complex_factor = 0.05 
+			}
+	    }
+		
+		AUS_idea_expand_uhlan_army = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           cavalry_attack_factor = 0.05
+			   cavalry_defence_factor = 0.05
+			}
+	    }
+		AUS_idea_adriatic_navy = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+			
+			equipment_bonus = {
+				tp_tech = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		   modifier = {
+	           production_speed_dockyard_factor = 0.1 
+			}
+	    }
+		
+		AUS_idea_industrialization_bohemia = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		   
+		   cancel = {
+		        check_variable = { num_of_civilian_factories > AUS_var_bohemian_industrialization }
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                production_speed_industrial_complex_factor = 0.25 
+			}
+	    }
+		
+		AUS_idea_urbanise_wien = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		   
+		   cancel = {
+		        check_variable = { num_of_civilian_factories > AUS_var_wien_urbanisation }
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                production_speed_industrial_complex_factor = 0.2 	 
+				production_speed_infrastructure_factor = 0.1 
+			}
+	    }
+		AUS_idea_migration_prag = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes 
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                MONTHLY_POPULATION = 0.001 
+			}
+	    }
+		AUS_idea_Metternich_Legacy = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+	           production_speed_dockyard_factor = 0.1 
+			}
+	    }
+		AUS_idea_Hungarian_Wheat = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes 
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                consumer_goods_factor = -0.05 
+			}
+	    }
+		AUS_idea_Galician_Railways = {
+
+		   allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes 
+		   }
+
+		   removal_cost = -1
+
+		   picture = placeholder
+			
+		   modifier = {
+                production_speed_infrastructure_factor = 0.1   
+			}
+	    }
+		AUS_idea_lost_hungary_revolt = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AUS_hungarian_revolution
+			
+			modifier = {
+				stability_factor = -0.25 
+				political_power_gain = -0.25 
+			}
+		}
 	}	
     political_advisor = {
 		AUS_advisor_hermann_dietrich_lindheim = {
@@ -604,22 +668,89 @@ ideas = {
 			}
 		}	
 	}
-	theorist = {
-		AUS_theorist_naval_ludwig_von_fautz = {
+	high_command = {
+		AUS_idea_naval_ludwig_von_fautz = {
 
 			allowed = {
 				original_tag = AUS
 			}
 			
-			picture = placeholder 
+			available = {
+				has_completed_focus = AUS_New_Leadership
+			}
 			
-			cost = 250
+			picture = AUS_advisor_Ludwig_von_Fautz 
+			
+			cost = 50 
 
 			research_bonus = {
 				naval_doctrine = 0.1
 			}
 
 			traits = { # }
+		    }
 		}
+		AUS_idea_naval_maximilian_austria = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			picture = AUS_advisor_Ludwig_von_Fautz 
+			
+			cost = 50 
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { # }
+		    }
+        }			
+		AUS_idea_army_archduke_albrecht = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			available = {
+				has_completed_focus = AUS_Archduke_Albrecht
+			}
+			
+			picture = AUS_advisor_Ludwig_von_Fautz 
+			
+			cost = 50 
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { # }
+		    }
+	    }
 	}
+	
+	theorist = {
+		AUS_idea_theorist_heinrich_von_hess = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			available = {
+				has_completed_focus = AUS_Heinrich_Von_Hess's_Ideas
+			}
+			
+			picture = AUS_theorist_Henrich_von_Hess 
+			
+			cost = 50 
+
+			research_bonus = {
+				naval_doctrine = 0.1
+			}
+
+			traits = { # }
+		    }	
+	    }
+    }
 }

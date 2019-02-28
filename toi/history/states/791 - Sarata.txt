@@ -1,0 +1,19 @@
+
+state={
+	id=791 
+	name="STATE_791" # Sarata 
+	manpower = 15000
+
+	state_category = rural
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 3 
+		}
+		add_core_of = RUS 
+	}
+
+	provinces={
+	 6727 13679 
+	}

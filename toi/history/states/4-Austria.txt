@@ -3,10 +3,6 @@ state={
 	id=4
 	name="STATE_4"
 	manpower = 1243000
-	resources={
-		oil= 1
-		wood = 1
-	}
 	
 	state_category = city 
 	

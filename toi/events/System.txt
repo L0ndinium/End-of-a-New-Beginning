@@ -16,10 +16,16 @@ country_event = {
 	option = {
 		name = system.1.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 237 id = system.2 } }
+		random_country = { country_event = { days = 237 id = system.2 } }
 		add_named_threat = { 
 			threat = 3
 			name = eoanb_threat_starting_threat
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = eoanb_init_initiated }
+			}
+			set_global_flag = eoanb_init_initiated
 		}
 	}
 	
@@ -39,7 +45,7 @@ country_event = {
 	option = {
 		name = system.2.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.3 } }
+		random_country = { country_event = { days = 365 id = system.3 } }
 		if = {
 			limit = {
 				NOT = { country_exists = IRE }
@@ -64,7 +70,7 @@ country_event = {
 	option = {
 		name = system.3.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.4 } }
+		random_country = { country_event = { days = 365 id = system.4 } }
 	}
 	
 }
@@ -82,7 +88,7 @@ country_event = {
 	option = {
 		name = system.4.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.5 } }
+		random_country = { country_event = { days = 365 id = system.5 } }
 	}
 	
 }
@@ -100,7 +106,7 @@ country_event = {
 	option = {
 		name = system.5.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.6 } }
+		random_country = { country_event = { days = 365 id = system.6 } }
 	}
 	
 }
@@ -118,7 +124,7 @@ country_event = {
 	option = {
 		name = system.6.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.7 } }
+		random_country = { country_event = { days = 365 id = system.7 } }
 	}
 	
 }
@@ -136,7 +142,7 @@ country_event = {
 	option = {
 		name = system.7.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.8 } }
+		random_country = { country_event = { days = 365 id = system.8 } }
 	}
 	
 }
@@ -154,7 +160,7 @@ country_event = {
 	option = {
 		name = system.8.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.9 } }
+		random_country = { country_event = { days = 365 id = system.9 } }
 	}
 	
 }
@@ -172,7 +178,7 @@ country_event = {
 	option = {
 		name = system.9.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.10 } }
+		random_country = { country_event = { days = 365 id = system.10 } }
 	}
 	
 }
@@ -190,7 +196,7 @@ country_event = {
 	option = {
 		name = system.10.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.11 } }
+		random_country = { country_event = { days = 365 id = system.11 } }
 	}
 	
 }
@@ -208,7 +214,7 @@ country_event = {
 	option = {
 		name = system.11.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.12 } }
+		random_country = { country_event = { days = 365 id = system.12 } }
 	}
 	
 }
@@ -226,7 +232,7 @@ country_event = {
 	option = {
 		name = system.12.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.13 } }
+		random_country = { country_event = { days = 365 id = system.13 } }
 	}
 	
 }
@@ -244,7 +250,7 @@ country_event = {
 	option = {
 		name = system.13.a
 		ai_chance = { factor = 100 }
-		ENG = { country_event = { days = 365 id = system.14 } }
+		random_country = { country_event = { days = 365 id = system.14 } }
 	}
 	
 }
@@ -262,7 +268,7 @@ country_event = {
 	option = {
 		name = system.14.a
 		ai_chance = { factor = 100 }
-		#End of the chain for now
+		random_country = { country_event = { days = 365 id = system.17 } }
 	}
 	
 }
@@ -313,4 +319,52 @@ country_event = {
 		white_peace = CAU
 	}
 	
+}
+
+#1871 Init Event
+country_event = {
+	id = system.17
+	title = system.17.t
+	desc = system.17.d
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = {
+		name = system.17.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				NOT = { has_global_flag = eoanb_init_initiated }
+			}
+			set_global_flag = eoanb_init_initiated
+		}
+		#End of the chain for now
+		#Figure out how to trigger the next one at the 1st January 1872 in case this event was triggered by system.18 (due to 20-day inaccuracies)
+		#Perhaps use MTTH?
+	}
+	
+}
+
+#This Event triggers the 1871 Init if the 1870 start date was selected
+country_event = {
+	id = system.18
+	title = system.18.t
+	desc = system.18.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1870.12.31
+		NOT = { has_global_flag = eoanb_init_initiated }
+	}
+	
+	hidden = yes
+	
+	option = {
+		name = system.17.a
+		ai_chance = { factor = 100 }
+		random_country = { country_event = { id = system.17 } }
+	}
 }

@@ -56,13 +56,13 @@
         popularity = 25
       }
       traditional_conservatism = {
-        popularity = 20
+        popularity = 50
       }
       radical_democracy = {
-        popularity = 0
+        popularity = 20
       }
       chauvinist_populism = {
-        popularity = 55
+        popularity = 5
       }
       autocracy = {
         popularity = 0
@@ -72,7 +72,7 @@
       }
     }
 
-	  ruling_party = chauvinist_populism
+	  ruling_party = traditional_conservatism
   }
 
   set_technology = {
@@ -89,7 +89,7 @@
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_GUA_Rafael_Carrera.dds"
     expire = 1865.4.14
-    ideology = tropical
+    ideology = conserv
 }
 
 create_corps_commander = {

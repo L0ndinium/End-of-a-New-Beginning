@@ -1980,6 +1980,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/france/france_news_grand_kabyle_campaign.dds"
 	}
 
+	spriteType = {
+		name = "GFX_france_news_cochinchina_campaign"
+		texturefile = "gfx/event_pictures/france/france_news_cochinchina_campaign.dds"
+	}
+
 	#SEPOY EVENTS
 
 	spriteType = {
@@ -2466,6 +2471,10 @@ spriteTypes = {
 		name = "GFX_event_ITA_Po_Valley_Modernization"
 		texturefile = "gfx/event_pictures/italy/ITA_Po_Valley_Modernization.dds"
 	}
+	spriteType = {
+		name = "GFX_event_ITA_Creation_Army"
+		texturefile = "gfx/event_pictures/italy/event_ITA_Creation_Army.dds"
+	}
 
 	#RUSSIAN EVENTS
 	
@@ -2602,6 +2611,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/uk/report_event_uk_parliament.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_report_event_sepoy_lucknow_surrender"
+		texturefile = "gfx/event_pictures/uk/report_event_sepoy_lucknow_surrender.dds"
+	}
+	
     ### Greek Events ###
 	
 	spriteType = {
@@ -2660,7 +2674,23 @@ spriteTypes = {
 		name = "GFX_report_event_AUS_austrianarmy_1"
 		texturefile = "gfx/event_pictures/austria/AUS_austrianarmy_1.dds"
 	}	
+
+	spriteType = {
+		name = "GFX_report_event_AUS_habsburgs_1"
+		texturefile = "gfx/event_pictures/austria/AUS_habsburgs_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_AUS_Budapest_1"
+		texturefile = "gfx/event_pictures/austria/AUS_Budapest_1.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_report_event_AUS_franz_joseph_coronation"
+		texturefile = "gfx/event_pictures/austria/AUS_franz_joseph_coronation.dds"
+	}		
 	
+	### Italian Events ###
 	
 	spriteType = {
 		name = "GFX_event_PIE_Confezione_di_Pastiglie_Leone"
@@ -2671,5 +2701,35 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/italy/NSC_University_Garden1.dds"
 	}
 
+	spriteType = {
+		name = "GFX_event_ITA_Regia_Marina"
+		texturefile = "gfx/event_pictures/italy/event_ITA_Regia_Marina.dds"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_Carbineers_First_Force"
+		texturefile = "gfx/event_pictures/italy/event_ITA_Carbineers_First_Force.dds"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_Corazzieri"
+		texturefile = "gfx/event_pictures/italy/event_ITA_Corazzieri.dds"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_Carvour_Death"
+		texturefile = "gfx/event_pictures/italy/event_ITA_Carvour_Death.dds"
+	}
+	spriteType = {
+		name = "GFX_event_ITA_Generic_General_Meeting"
+		texturefile = "gfx/event_pictures/italy/event_ITA_Generic_General_Meeting.dds"
+	}
+	spriteType = {
+		name = "GFX_MOR_Gardens"
+		texturefile = "gfx/event_pictures/morocco/MOR_Gardens.dds"
+	}
+	### Spain Events ###
 	
+	spriteType = {
+		name = "GFX_report_event_dominican_restoration"
+		texturefile = "gfx/event_pictures/spain/report_event_dominican_restoration.dds"
+	}
+
 }

@@ -17,7 +17,21 @@ ITA_Referendum_category_decisions = {
     allowed = {
         original_tag = PIE
         date < 1900.1.1
-        has_cosmetic_tag = ITA
+        #has_cosmetic_tag = ITA
+       
+    }
+}
+
+ITA_brigindage_category_decisions = {
+
+    icon = generic_political_actions
+
+    picture = ita_brigindage
+
+    allowed = {
+        original_tag = PIE
+        date < 1900.1.1
+        #has_cosmetic_tag = ITA
        
     }
 }
@@ -166,6 +180,17 @@ eoanb_category_projects = {
 eoanb_category_traditions_celebrations = {
 	icon = generic_democracy
 	
+}
+
+eoanb_category_aus_federalization_1 = {
+	icon = generic_political_actions
+	
+	visible = {
+	    tag = AUS
+		AUS = {
+		    has_country_flag = AUS_flag_federalization_begin
+		}
+	}
 }
 
 #Should always be at the very bottom for interface useability purposes

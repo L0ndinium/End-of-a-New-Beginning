@@ -102,6 +102,14 @@ create_country_leader = {
 	expire = "1947.1.1"
 	ideology = christian
 }
+create_country_leader = {
+  name = "Roman Triumvirate"
+  #desc = "POLITICS_RONALD_MCDONALD_DESC"
+  picture = "gfx/leaders/PAP/RRE_Tri_Government.dds"
+  expire = "1965.1.1"
+  ideology = revolutionary
+
+}
 
 create_corps_commander = {
   name = "Raphael de Courten"

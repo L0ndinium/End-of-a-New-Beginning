@@ -512,3 +512,7 @@
  HOL_willems_orde:0 "Militaire Willems-Orde"
  HOL_orde_nederlandse_leeuw:0 "Orde van de Nederlandse Leeuw"
  HOL_orde_oranje_nassau:0 "Orde van Oranje-Nassau"
+
+ #Italian leader traits
+ ITA_trait_Iron_Baron:0 "Iron Baron"
+ ITA_trait_Iron_Baron_desc:0 "His private life and public career were marked by the utmost integrity, and by a rigid austerity which earned him the name of the Iron Baron. Along with this Ricasoli also created the recipe for Chianti Wine which is produced by a family named firm."

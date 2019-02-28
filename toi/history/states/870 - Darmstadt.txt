@@ -11,6 +11,12 @@ state={
 		victory_points = {
 			589 5
 		}
+		victory_points = {
+			11560 3
+		}
+		victory_points = {
+			6444 1
+		}
 		owner = HSD
 		add_core_of = HSD
 	}

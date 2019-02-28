@@ -300,45 +300,212 @@ news_event = {
 		name = news.17.a
 		trigger = {
 			NOT = {
-				TAG = JAP
+				TAG = TSH
 				TAG = USA
+				TAG = CHO
+				TAG = SAT
+				TAG = SAG
+				TAG = TOS 
+				TAG = ENG
+				TAG = FRA
+				TAG = RUS
+				TAG = HOL 
 			}
 		}
 	}
 	option = {
 		name = news.17.b
-		trigger = { TAG = JAP }
+		trigger = { TAG = TSH }
+		add_ideas = TSH_foreign_trade
 		add_stability = -0.10
 		add_opinion_modifier = { target = USA modifier = small_decrease }
 	}
 	option = {
 		name = news.17.c
 		trigger = { TAG = USA }
+		add_ideas = USA_TSH_trade
 		add_political_power = 50
-		add_opinion_modifier = { target = JAP modifier = small_increase }
+		add_opinion_modifier = { target = TSH modifier = small_increase }
 	}
 	option = {
 		name = news.17.d
 		trigger = { TAG = CHO }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = medium_decrease }
+		add_opinion_modifier = { target = TSH modifier = medium_decrease }
 	}
 	option = {
 		name = news.17.e
 		trigger = { TAG = SAT }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = medium_decrease }
+		add_opinion_modifier = { target = TSH modifier = medium_decrease }
 	}
 	option = {
 		name = news.17.f
 		trigger = { TAG = SAG }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = small_decrease }
+		add_opinion_modifier = { target = TSH modifier = small_decrease }
 	}
 	option = {
 		name = news.17.g
 		trigger = { TAG = TOS }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = small_decrease }
+		add_opinion_modifier = { target = TSH modifier = small_decrease }
 	}
+	option = {
+		name = news.17.h
+		trigger = {
+			OR = {
+				TAG = ENG
+				TAG = FRA
+				TAG = RUS
+				TAG = HOL
+			}
+		}
+		if = {
+			limit = { tag = ENG }
+			add_ideas = ENG_TSH_trade
+		}
+		if = {
+			limit = { tag = FRA }
+			add_ideas = FRA_TSH_trade
+		}
+		if = {
+			limit = { tag = RUS }
+			add_ideas = RUS_TSH_trade
+		}
+		if = {
+			limit = { tag = HOL }
+			add_ideas = HOL_TSH_trade
+		}
+		add_political_power = 50
+		add_opinion_modifier = { target = TSH modifier = small_increase }
+	}
+}
+
+#Japan backs down and gives Tsushima to Russia
+news_event = {
+	id = news.18
+	title = news.18.t
+	desc = news.18.d
+	picture = GFX_news_event_military_planning
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.18.a
+		trigger = { TAG = RUS }
+	}
+	
+	option = {
+		name = news.18.b
+		trigger = { TAG = TSH }
+	}
+	
+	option = {
+		name = news.18.c
+		trigger = { 
+			NOT = { 
+				OR = { 
+					TAG = TSH 
+					TAG = RUS 
+				} 
+			} 
+		}
+	}
+	
+}
+
+#Russia backs down
+news_event = {
+	id = news.19
+	title = news.19.t
+	desc = news.19.d
+	picture = GFX_news_event_military_planning
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.19.a
+		trigger = { TAG = RUS }
+	}
+	
+	option = {
+		name = news.19.b
+		trigger = { TAG = TSH }
+	}
+	
+	option = {
+		name = news.19.c
+		trigger = { 
+			NOT = { 
+				OR = { 
+					TAG = TSH 
+					TAG = RUS 
+				} 
+			} 
+		}
+	}
+	
+}
+
+#Russia and Japan go to war over Tsushima
+news_event = {
+	id = news.20
+	title = news.20.t
+	desc = news.20.d
+	picture = GFX_news_event_military_planning
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.20.a
+		trigger = { TAG = RUS }
+	}
+	
+	option = {
+		name = news.20.b
+		trigger = { TAG = TSH }
+	}
+	
+	option = {
+		name = news.20.c
+		trigger = { 
+			NOT = { 
+				OR = { 
+					TAG = TSH 
+					TAG = RUS 
+				} 
+			} 
+		}
+	}
+	
+}
+
+#The Maritime Treaty (CAN, NVS, BRK)
+news_event = {
+	id = news.21
+	title = news.21.t
+	desc = news.21.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.21.a
+		trigger = { TAG = CAN }
+	}
+	
+	option = {
+		name = news.21.b
+		trigger = { NOT = { TAG = CAN } }
+	}
+	
 }

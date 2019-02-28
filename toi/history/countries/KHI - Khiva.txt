@@ -1,5 +1,5 @@
 ﻿1857.1.1 = {
-  capital = 584
+  capital = 1319
 
   oob = "KHI_1857"
 
@@ -33,7 +33,7 @@
 
     privileged_education
     state_religion
-	religion_shiite
+	religion_sunni
          #NATIONAL SPIRITS
 	
   }

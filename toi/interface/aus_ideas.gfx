@@ -4,9 +4,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/AUS/AUS_hungarian_revolution.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_AUS_Hungarian_Nationalism"
+		texturefile = "gfx/interface/ideas/AUS/AUS_Hungarian_Nationalism.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_AUS_unrest"
 		texturefile = "gfx/interface/ideas/AUS/AUS_unrest.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_AUS_advisor_Ludwig_von_Fautz"
+		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_Ludwig_von_Fautz.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_theorist_Henrich_von_Hess"
+		texturefile = "gfx/interface/ideas/AUS/AUS_Advisor_Henrich_von_Hess.dds"
+	}	
     spriteType = {
 		name = "GFX_idea_AUS_advisor_hermann_dietrich_lindheim"
 		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_hermann_dietrich_lindheim.dds"
@@ -40,4 +52,5 @@ spriteTypes = {
 		name = "GFX_idea_AUS_advisor_ignacy_lukasiewicz"
 		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_ignacy_lukasiewicz.dds"
 	}
+	
 }

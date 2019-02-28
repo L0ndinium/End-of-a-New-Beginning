@@ -429,6 +429,7 @@ ideas = {
 			picture = ger_rebuild_the_nation
 			
 			modifier = {
+				ai_get_ally_desire_factor = -1000
 				ai_focus_aggressive_factor = 0.25
 				war_support_factor = 0.15
 				army_core_defence_factor = 0.15

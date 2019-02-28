@@ -16,4 +16,12 @@ spriteTypes = {
 		name = "ita_spaget"
 		texturefile = "gfx/interface/decisions/decision_category_ita_spaget.dds"
     }
+    spriteType = {
+		name = "ita_skull"
+		texturefile = "gfx/interface/decisions/decision_category_ita_brigindage_skull.dds"
+    }
+    spriteType = {
+		name = "GFX_decision_cat_ita_brigindage"
+		texturefile = "gfx/interface/decisions/decision_cat_ita_brigindage.dds"
+    }
 }

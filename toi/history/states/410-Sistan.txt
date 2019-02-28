@@ -18,6 +18,9 @@ state={
 		}
 		add_core_of = KLT
 		add_claim_by = PER
+		victory_points = {
+			2070 1
+		}
 	}
 
 	provinces={

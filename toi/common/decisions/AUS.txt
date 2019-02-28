@@ -170,6 +170,7 @@ eoanb_category_diplomatic_actions = {
 		visible = {
 			TAG = AUS
 			AUS = { has_completed_focus = AUS_Future_Italy }
+			country_exists = LVN 
 		}
 		
 		fire_only_once = yes
@@ -197,6 +198,9 @@ eoanb_category_diplomatic_actions = {
 		visible = {
 			TAG = AUS
 			AUS = { has_completed_focus = AUS_Future_Italy }
+			country_exists = MOD 
+			country_exists = PRM
+			country_exists = TUS 
 		}
 		
 		fire_only_once = yes
@@ -228,6 +232,7 @@ eoanb_category_diplomatic_actions = {
 		visible = {
 			TAG = AUS
 			AUS = { has_completed_focus = AUS_Future_Italy }
+			country_exists = PIE 
 		}
 		
 		fire_only_once = yes
@@ -244,4 +249,311 @@ eoanb_category_diplomatic_actions = {
 			base = 1
 		}
 	}
+	
+	eoanb_decision_AUS_peace_with_HUN = { #Offer Peace to Hungary   
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+			has_global_flag = flag_HUN_revolt_1
+		}
+		
+		visible = {
+		    AND = {
+			        TAG = AUS
+			        has_global_flag = flag_HUN_revolt_1
+			        country_exists = HUN  
+			    OR = {
+			        AND = {
+		         	    HUN = { has_war_with = AUS  
+			                any_war_score > 20    
+			            }
+					    HUN = {
+					        controls_state = 43
+					    }
+                    }   
+                    AND = {
+		         	    HUN = { has_war_with = AUS 
+			            any_war_score > 10   
+			            }			
+                        HUN = {
+					        controls_state = 43
+					        controls_state = 956
+					    }					
+				    }				
+		        }
+			}
+		}
+		
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event =  { id = AUShungaryrevolt.5 days = 1 } 
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_peace_with_HUN_2 = { #Offer Peace to Hungary 2 - Desperate offer 
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS
+			has_global_flag = flag_HUN_revolt_1
+			country_exists = HUN  
+		    HUN = { has_war_with = AUS 
+			    any_war_score > 30     
+				controls_state = 43
+				controls_state = 956
+				controls_state = 109 	
+				has_country_flag = HUN_AUS_war_denied_peace_1
+            }				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUShungaryrevolt.6   
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+eoanb_category_aus_federalization_1 = {
+
+	eoanb_decision_AUS_negotiate_hungarians = { #Negotiate with the Hungarians
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.4   
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_negotiate_slovaks = { #Negotiate with the Slovaks
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.5  
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_negotiate_transylvanians = { #Negotiate with the Transylvanians 
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.6    
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_negotiate_croats = { #Negotiate with the Croats 
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.7     
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_negotiate_italians = { #Negotiate with the Italians  
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.8      
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_negotiate_bohemians = { #Negotiate with the Bohemians 
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.9       
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_negotiate_galicians = { #Negotiate with the Galicians  
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.10        
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	eoanb_decision_AUS_negotiate_vojvodina = { #Negotiate with the Vojvodinans   
+	
+		icon = generic_political_discourse
+		
+		available = {
+		    tag = AUS 
+		}
+		
+		visible = {
+			TAG = AUS				
+	    }
+
+		fire_only_once = yes
+		
+		is_good = no 
+		
+		complete_effect = {
+		    HUN = {
+	    	    country_event = AUSfedcompromise.11       
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 }

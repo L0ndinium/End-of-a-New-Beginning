@@ -195,6 +195,47 @@ create_corps_commander = {
   planning_skill = 1
   logistics_skill = 1
 }
+create_corps_commander = {
+  name = "Enrico Cosenz"
+  picture = "Portrait_NSC_Enrico_Cosenz.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Manfredo Fanti"
+  picture = "Portrait_ITA_manfredo_fanti.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Domenico Cucchiari"
+  picture = "Portrait_ITA_domenico_cucchiari.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Giovanni Durando"
+  picture = "Portrait_ITA_giovanni_durando.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+
 
 create_navy_leader = {
   name = "Carlo Pellion di Persano"

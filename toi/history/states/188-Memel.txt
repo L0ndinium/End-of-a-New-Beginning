@@ -21,6 +21,9 @@ state=
 			}
 		}
 		add_core_of = PRS
+		victory_points = {
+			3288 3
+		}
 	}
 	provinces={
 		3288

@@ -7,7 +7,7 @@ state={
 
 	history={
 		owner = CHO
-		add_core_of = JAP
+		add_core_of = TSH
 		add_core_of = CHO
 		buildings = {
 			infrastructure = 5

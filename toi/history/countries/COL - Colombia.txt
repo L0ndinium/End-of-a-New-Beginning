@@ -98,13 +98,43 @@ name = "Antionio Herran y Martinez"
 	expire = "1862.1.1"
 	ideology = christian 
 }
+
+create_country_leader = {	
+name = "Tomas Cipriano de Mosquera"
+	desc = "POLITICS_OSPINA_DESC"
+	picture = "Portrait_COL_Tomas_Cipriano_de_Mosquera.dds"
+	expire = "1864.4.8"
+	ideology = conserv_liberal 
+}
 	
 
 create_corps_commander = {
+  name = "Julio Arboleda"
+  picture = "Portrait_COL_Julio_Arboleda.dds"
+  traits = { }
+  skill = 2
+  attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
   name = "Leonardo Canal"
   picture = "Portrait_COL_Leonardo_Canal.dds"
   traits = { }
   skill = 3
+  attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+  name = "Eustorgio Salgar"
+  picture = "Portrait_COL_Eustorgio_Salgar.dds"
+  traits = { }
+  skill = 1
   attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1

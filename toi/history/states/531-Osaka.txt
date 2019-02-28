@@ -10,8 +10,8 @@ state={
 	}
 
 	history={
-		owner = JAP
-		add_core_of = JAP
+		owner = TSH
+		add_core_of = TSH
 		buildings = {
 			infrastructure = 5
 			cotton_farm = 2

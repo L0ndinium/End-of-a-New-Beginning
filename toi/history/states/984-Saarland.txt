@@ -14,6 +14,9 @@ state={
 			infrastructure = 3
 			coal_mine=1
 		}
+		victory_points = {
+			9575 3 
+		}
 		add_core_of = PRS
 	}
 

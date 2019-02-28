@@ -13,7 +13,7 @@ equipments = {
 		interface_category = interface_category_land
 
 		reliability = 0.8
-		maximum_speed = 10
+		maximum_speed = 8
 
 		defense = 6
 		breakthrough = 0.35

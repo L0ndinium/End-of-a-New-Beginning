@@ -85,12 +85,12 @@ country_event = {
         			1211 = {
         				add_core_of = CSA
         			}
-        			remove_state_core = 1211
-        			add_state_claim = 1211
         		}
             }
         	remove_state_core = 366
         	add_state_claim = 366
+        	remove_state_core = 1211
+        	add_state_claim = 1211
 			hidden_effect = { USA = { country_event = { days = 1 id = csa.3 } } }
 			hidden_effect = { CSA = { country_event = { id = csa.2 } } }
 			add_popularity = { ideology = traditional_conservatism popularity = -0.03 }

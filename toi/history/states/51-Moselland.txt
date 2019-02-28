@@ -11,16 +11,19 @@ state={
 	history={
 		owner = PRS
 		victory_points = {
-			6469 10 
+			587 8
 		}
 		victory_points = {
-			587 5 
+			3547 10
 		}
 		victory_points = {
-			3547 5 
+			11494 1
 		}
 		victory_points = {
-			11435 10 
+			9522 3
+		}
+		victory_points = {
+			11435 5
 		}
 		buildings = {
 			infrastructure = 6

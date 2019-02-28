@@ -881,6 +881,14 @@ country_event = {
 			PRS = { set_country_flag = eoanb_flag_won_7_weeks_war }
 			AUS = {
 				remove_ideas = PRS_idea_weakened_sww
+                    add_to_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 2  
+                    }
+                    add_to_variable = {
+                        var = SLA_REVOLT_RISK
+                        value = 1 
+                    }
 			}
 			SAX = {
 				remove_ideas = PRS_idea_weakened_sww

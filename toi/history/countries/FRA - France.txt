@@ -220,7 +220,7 @@
     desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
     picture = "Portrait_FRA_George_Ernest_Boulanger.dds"
     expire = "1865.1.1"
-    ideology = dictator
+    ideology = national_populism
     traits = { }
   }
 

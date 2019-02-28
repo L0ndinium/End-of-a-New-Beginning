@@ -1,0 +1,114 @@
+﻿1857.1.1 = {
+  capital = 998
+
+  oob = "CCH_1857"
+
+  set_convoys = 0
+  
+  set_research_slots = 2
+
+  add_ideas = { 
+    #POLITICS 
+		  
+    hos_is_leader
+    pre_industrial_era
+    agrarian
+    no_heir
+    absolute_monarchy
+
+    civilian_economy
+    limited_exports
+    two_percent
+    normal_taxes
+	cl_legal
+
+    stagnation_growth
+    border_control
+	  limited_conscription
+    slavery
+    absolutism
+
+    no_constitution
+    no_elections
+
+    privileged_education
+    state_religion
+	religion_sunni
+         #NATIONAL SPIRITS
+	
+  }
+
+  set_politics = {
+    parties = {
+      anarchism = {
+        popularity = 0
+      }
+      vanguard_communism = {
+        popularity = 0
+      }
+      collectivist_socialism = {
+        popularity = 0
+      }
+      social_egalitarianism = {
+        popularity = 0
+      }
+      centrism = {
+        popularity = 0
+      }
+      traditional_conservatism = {
+        popularity = 0
+      }
+      radical_democracy = {
+        popularity = 0
+      }
+      chauvinist_populism = {
+        popularity = 0
+      }
+      autocracy = {
+        popularity = 100
+      }
+      fundamentalism = {
+        popularity = 0
+      }
+    }
+
+	  ruling_party = autocracy
+  }
+
+  FRA = {
+    if = {
+      limit = {
+        has_dlc = "Together for Victory"
+      }
+      set_autonomy = {
+        target = CCH
+        autonomous_state = autonomy_colony
+        freedom_level = 0.01
+      }
+      else = {
+        puppet = CCH
+      }
+    }
+  }
+
+  set_technology = {
+	infantry_weapons = 1
+	start_build_tech = 1
+	tech_infantry_napoleonic_uniform = 1
+	vic_army_cloth = 1
+	tech_naval_1812_frigate = 1
+  }
+
+  # POLITICAL LEADERS
+
+  create_country_leader = {
+    name = "Louis Adolphe Bonard"
+    desc = "POLITICS_GEORGE_V_DESC"
+    picture = "Portrait_CCH_Louis_Adolphe_Bonard.dds"
+    expire = "1867.5.31"
+    ideology = despotism
+    traits = {
+
+    }
+  }
+}

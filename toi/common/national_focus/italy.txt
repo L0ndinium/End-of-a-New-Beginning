@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = ITA_Focus_Politics
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_elections
 		cost = 70
 		x = 10
 		y = 0
@@ -22,8 +22,13 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Industry_Agriculture_Focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_agriculture
 		cost = 70
+		allow_branch = {
+			NOT = {
+				has_country_flag = ITA_Agrigulture_Branch_Completion
+			}
+		}
 		x = 37
 		y = 0
 			completion_reward = {
@@ -42,7 +47,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Military_Focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_divide_unite_army
 		cost = 70
 		x = 25
 		y = 1
@@ -73,7 +78,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_Industry
 		cost = 70
 		allow_branch = {
-			always = no
+			has_completed_focus = ITA_Farmers_Mentality
 		}
 		x = 37
 		y = 0
@@ -185,6 +190,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ITA_Nurture_Liberal_Ideals
 		}
+
 		x = 8
 		y = 2
 			completion_reward = {
@@ -423,19 +429,6 @@ focus_tree = {
 							add_ideas = ITA_Unite_Italian_Lands
 						}
 				}
-
-	}
-	focus = {
-		id = ITA_Young_Europe_Revived
-		icon = GFX_goal_unknown
-		cost = 5
-		prerequisite = {
-			focus = ITA_Unite_Italian_Lands
-		}
-		x = 8
-		y = 6
-
-		
 
 	}
 	focus = {
@@ -689,111 +682,139 @@ focus_tree = {
 	focus = {
 		id = ITA_Regio_Esercito
 		icon = GFX_focus_ITA_Royal_Army
-		cost = 70
+		cost = 25
 		prerequisite = {
 			focus = ITA_Military_Focus
 		}
 		x = 25
 		y = 2
 
+		completion_reward = {
+			country_event = {
+    			id = ita.16
+
+			}
+		}
+
+
+
 	}
 	focus = {
 		id = ITA_Deal_with_Brigandage
 		icon = GFX_goal_generic_military_sphere
-		cost = 70
+		cost = 45
 		prerequisite = {
 			focus = ITA_Regio_Esercito
 		}
 		x = 25
 		y = 3
 
+		completion_reward = {
+			custom_effect_tooltip = ITA_Brigandage_Handle_Focus_Decisions
+		}
+
 	}
 	focus = {
 		id = ITA_Carbinieri
-		icon = GFX_focus_ITA_Cav_1
-		cost = 70
+		icon = GFX_goal_focus_ITA_carbine_force
+		cost = 15
 		prerequisite = {
 			focus = ITA_Deal_with_Brigandage
 		}
-		x = 21
+		x = 23
 		y = 4
+
+		completion_reward = {
+			country_event = {
+    			id = ita.18
+
+			}
+		}
 
 	}
 	focus = {
 		id = ITA_IV_Corps
 		icon = GFX_focus_generic_little_entente
-		cost = 70
+		cost = 25
 		prerequisite = {
 			focus = ITA_Deal_with_Brigandage
 		}
-		x = 23
+		x = 25
 		y = 4
 
 	}
+	#focus = {
+		#id = ITA_Creation_Decree
+		#icon = GFX_focus_generic_treaty
+		#cost = 25
+		#prerequisite = {
+		#	focus = ITA_IV_Corps
+		#}
+		#x = 25
+		#y = 5
+
+	#}
 	focus = {
-		id = ITA_Creation_Decree
-		icon = GFX_focus_generic_treaty
-		cost = 70
+		id = ITA_Corazzieri
+		icon = GFX_goal_generic_cavalry
+		cost = 35
 		prerequisite = {
-			focus = ITA_IV_Corps
+			focus = ITA_Carbinieri
 		}
 		x = 23
 		y = 5
 
-	}
-	focus = {
-		id = ITA_Corazzieri
-		icon = GFX_goal_generic_cavalry
-		cost = 70
-		prerequisite = {
-			focus = ITA_Carbinieri
+		completion_reward = {
+			country_event = {
+    			id = ita.19
+			}
 		}
-		x = 21
-		y = 5
 
 	}
 	focus = {
 		id = ITA_Regia_Marina
-		icon = GFX_focus_ITA_Marina
-		cost = 70
+		icon = GFX_goal_focus_Italian_Navy
+		cost = 15
 		prerequisite = {
 			focus = ITA_Deal_with_Brigandage
 		}
 		x = 27
 		y = 4
 
+		completion_reward = {
+				country_event = {
+    			id = ita.17
+			}
+		}
+
 	}
 	focus = {
 		id = ITA_Purchase_Foreign_Ships
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 70
+		cost = 25
 		prerequisite = {
 			focus = ITA_Regia_Marina
 		}
 		x = 27
 		y = 5
 
-	}
-	focus = {
-		id = ITA_Corpo_Aeronautico_Militare
-		icon = GFX_focus_ITA_Balloon
-		cost = 70
-		prerequisite = {
-			focus = ITA_Deal_with_Brigandage
-		}
-		x = 29
-		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+    			bonus = 0.5
+    			uses = 3
+    			category = naval_equipment
+			}
+			set_technology = {
+				tech_naval_1830_gunboat = 1
+				tech_naval_1857_gunboat = 1
+				tech_naval_1865_gunboat = 1
+			}
+			hidden_effect = {
+    			load_oob = "ITA_Ship_Commision"
+			}
+			custom_effect_tooltip = ITA_Purchase_Foreign_Ships_Tooltip
 
-	}
-	focus = {
-		id = ITA_Expand_Balloon_Activites
-		icon = GFX_goal_unknown
-		cost = 70
-		prerequisite = {
-			focus = ITA_Corpo_Aeronautico_Militare
 		}
-		x = 29
-		y = 5
 
 	}
 	focus = {
@@ -804,21 +825,25 @@ focus_tree = {
 			focus = ITA_Purchase_Foreign_Ships
 		}
 		prerequisite = {
-			focus = ITA_Creation_Decree
+			focus = ITA_IV_Corps
 		}
 		prerequisite = {
 			focus = ITA_Corazzieri
 		}
-		prerequisite = {
-			focus = ITA_Expand_Balloon_Activites
-		}
+		#prerequisite = {
+			#focus = ITA_Expand_Balloon_Activites
+		#}
 		x = 25
 		y = 6
+
+		completion_reward = {
+			remove_ideas = ITA_Unorganized_Army
+		}
 
 	}
 	focus = {
 		id = ITA_Combine_Italian_Fleets
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_mass_produce_ships
 		cost = 70
 		prerequisite = {
 			focus = ITA_Partial_Unification_of_the_Army
@@ -836,7 +861,11 @@ focus_tree = {
 		}
 		x = 27
 		y = 9
-
+		completion_reward = {
+			remove_ideas = {
+				ITA_Different_Naval_Doctorine	
+			}	
+		}
 	}
 	focus = {
 		id = ITA_A_True_Pier_of_Europe
@@ -903,50 +932,10 @@ focus_tree = {
 		x = 37
 		y = 1
 			completion_reward = {
-					random_owned_controlled_state = {
-							limit = {
-									free_building_slots = {
-											building = farm
-											size > 0
-											include_locked = yes
-										}
-									OR = {
-											is_in_home_area = yes
-											NOT = {
-													owner = {
-															any_owned_state = {
-																	free_building_slots = {
-																			building = farm
-																			size > 0
-																			include_locked = yes
-																		}
-																	is_in_home_area = yes
-																}
-														}
-												}
-										}
-								}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = farm
-									level = 1
-									instant_build = yes
-								}
-						}
+					add_ideas = ITA_Agriculture_Revival
 				}
 
 	}
-	#focus = {
-		#id = ITA_Turn_Weeds_Into_Food
-		#icon = GFX_focus_ITA_Pasta
-		#cost = 70
-		#prerequisite = {
-		#	focus = ITA_Agriculture_Revival
-		#}
-		#x = 34
-		#y = 2
-
-	#}
 	focus = {
 		id = ITA_Spread_Moderning_Farming
 		icon = GFX_focus_ITA_Farms
@@ -956,6 +945,14 @@ focus_tree = {
 		}
 		x = 34
 		y = 3
+
+		completion_reward = {
+			add_tech_bonus = {
+							bonus = 0.15
+							uses = 2
+							category = biochemistry_tech
+						}
+		}
 
 	}
 	focus = {
@@ -968,10 +965,12 @@ focus_tree = {
 		x = 36
 		y = 2
 
+		completion_reward = {
+			add_stability = 0.05
+		} 
+
+
 	}
-	#focus = {
-		###cost = 70
-		######}
 	focus = {
 		id = ITA_Poor_Man's_Food
 		icon = GFX_focus_ITA_Wheat
@@ -981,6 +980,12 @@ focus_tree = {
 		}
 		x = 36
 		y = 4
+
+		completion_reward = {
+				PIE = {
+							add_stability = 0.025
+						}
+		}
 
 	}
 	focus = {
@@ -993,8 +998,11 @@ focus_tree = {
 		x = 38
 		y = 2
 			completion_reward = {
-
-}
+			add_popularity = {
+    			ideology = centrism
+    			popularity = 0.05
+			}
+		}
 
 	}
 	focus = {
@@ -1007,8 +1015,9 @@ focus_tree = {
 		x = 38
 		y = 3
 			completion_reward = {
+				add_stability = 0.01
 
-}
+		}
 
 	}
 	focus = {
@@ -1049,6 +1058,12 @@ focus_tree = {
 		x = 40
 		y = 2
 
+		completion_reward = {
+			effect_tooltip = {
+        		add_manpower = 10000
+			}
+		}
+
 	}
 	focus = {
 		id = ITA_Export_Surplus_Food
@@ -1059,6 +1074,13 @@ focus_tree = {
 		}
 		x = 40
 		y = 3
+
+		completion_reward = {
+			add_timed_idea = {
+    			idea = ITA_Exports_1860
+    			days = 730
+			}
+		}
 
 	}
 	focus = {
@@ -1079,6 +1101,13 @@ focus_tree = {
 		}
 		x = 37
 		y = 5
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_Unlock_Industrialization 
+			hidden_effect = {
+				set_country_flag = ITA_Agrigulture_Branch_Completion
+			}
+		}
 
 	}
 	focus = {
@@ -1355,11 +1384,29 @@ focus_tree = {
 		}
 		x = 25
 		y = 7
+		completion_reward = {
+			add_equipment_to_stockpile = {
+   				type = cavalry_equipment
+    			amount = 1000
+    			producer = PIE
+			}
+			add_equipment_to_stockpile = {
+   				type = uniform_equipment_1
+    			amount = 1000
+    			producer = PIE
+			}
+			add_equipment_to_stockpile = {
+   				type = infantry_equipment_rifle_0
+    			amount = 1000
+    			producer = PIE
+			}
+			
+		}
 
 	}
 	focus = {
 		id = ITA_Colonial_Troops
-		icon = GFX_focus_ITA_Colonial_Troop
+		icon = GFX_goal_focus_ITA_Colonial_Troops
 		cost = 70
 		prerequisite = {
 			focus = ITA_Partial_Unification_of_the_Army

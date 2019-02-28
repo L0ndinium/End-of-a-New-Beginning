@@ -129,7 +129,7 @@
  anti_air_desc:0 ""
  artillery:0 "Artillery"
  artillery_desc:0 ""
- rocket_artillery:0 "Support Rocket Artillery"
+ rocket_artillery:0 "Gunpowder Rocket Artillery"
  rocket_artillery_desc:0 ""
  rocket_artillery_brigade:0 "Rocket Artillery"
  rocket_artillery_brigade_desc:0 ""

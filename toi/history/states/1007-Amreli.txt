@@ -13,7 +13,9 @@ state={
 			coal_mine=1
 			
 		}
-
+		victory_points = {
+			10118 5
+		}
 	}
 
 	provinces={

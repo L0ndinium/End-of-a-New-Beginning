@@ -1,7 +1,7 @@
 state_categories={
 	rural = {
 		local_building_slots = 3
-	
+		production_speed_buildings_factor = -0.05
 		color = { 240 160 0 }
 
 	}

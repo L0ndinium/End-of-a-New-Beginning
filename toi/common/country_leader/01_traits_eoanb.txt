@@ -126,7 +126,6 @@ leader_traits = {
 
 	vanguard_communism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		vanguard_communism_drift = 0.05
 		
@@ -137,7 +136,6 @@ leader_traits = {
 
 	collectivist_socialism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		collectivist_socialism_drift = 0.05
 		
@@ -148,7 +146,6 @@ leader_traits = {
 
 	social_egalitarianism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		social_egalitarianism_drift = 0.05
 		
@@ -159,7 +156,6 @@ leader_traits = {
 
 	centrism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		centrism_drift = 0.05
 		
@@ -170,7 +166,6 @@ leader_traits = {
 
 	traditional_conservatism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		traditional_conservatism_drift = 0.05
 		
@@ -181,7 +176,6 @@ leader_traits = {
 
 	radical_democracy_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		radical_democracy_drift = 0.05
 		
@@ -192,7 +186,6 @@ leader_traits = {
 
 	autocracy_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		autocracy_drift = 0.05
 		
@@ -203,7 +196,6 @@ leader_traits = {
 
 	chauvinist_populism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		chauvinist_populism_drift = 0.05
 		
@@ -214,7 +206,6 @@ leader_traits = {
 
 	anarchism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		anarchism_drift = 0.05
 		
@@ -225,7 +216,6 @@ leader_traits = {
 
 	fundamentalism_alignment = {
 		random = no
-		# Boosts Fascism
 		sprite = 13
 		fundamentalism_drift = 0.05
 		
@@ -440,6 +430,12 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				TAG = PRS
+				is_historical_focus_on = yes
+				date < 1920.1.1
+			}
 		}
 	}
 
@@ -683,6 +679,16 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+
+	###Italian Leader Traits
+
+	ITA_trait_Iron_Baron = {
+		random = no
+		
+		political_power_gain = 0.5 
+		
+
 	}
 
 }

@@ -74,6 +74,8 @@
 
 	  ruling_party = centrism
   }
+  
+    set_cosmetic_tag = ECU_1857
 
   set_technology = {
 	infantry_weapons = 1

@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+		eoanb_idea_tsushima_paying_reparations = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_central_management
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		eoanb_idea_tsushima_receiving_reparations = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+	}
+}

@@ -79,6 +79,16 @@ country_event = {
 					news_event = news.1
 					clr_global_flag = FRA_PIE_OneCall
 					set_global_flag = PIE_2IW_Victory
+					AUS = {
+                        add_to_variable = {
+                            var = HUN_REVOLT_RISK
+                            value = 2  
+                        }
+                        add_to_variable = {
+                            var = SLA_REVOLT_RISK
+                            value = 1 
+                        }
+					}
 					release_puppet = PRM
 					release_puppet = MOD
 					release_puppet = TUS
@@ -747,8 +757,13 @@ country_event = {
 		
 		trigger = {
 			TAG = PIE
+			OR = {
 			controls_state = 156
 			controls_state = 115
+			controls_state = 117
+			controls_state = 997
+			}
+			
 
 			
 		}

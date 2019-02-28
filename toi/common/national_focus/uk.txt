@@ -386,6 +386,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = ENG_focus_repeal_regulatory_act }
 		mutually_exclusive = { focus = ENG_focus_continue_annex_policy }
+		available = { RAJ = { is_subject_of = ENG } }
 		
 		completion_reward = {
 			if = {
@@ -432,7 +433,10 @@ focus_tree = {
 		}
 		prerequisite = { focus = ENG_focus_repeal_regulatory_act }
 		mutually_exclusive = { focus = ENG_focus_stop_lapse_doctrine }
-		available = { TRA = { exists = yes } }
+		available = { 
+			TRA = { exists = yes } 
+			RAJ = { is_subject_of = ENG }
+		}
 		bypass = { TRA = { has_war_with = RAJ } }
 		
 		select_effect = {
@@ -484,6 +488,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
 		mutually_exclusive = { focus = ENG_focus_the_RAJ_compromise focus = ENG_focus_grant_RAJ_autonomy }
+		available = { RAJ = { is_subject_of = ENG } }
 		
 		completion_reward = {
 			RAJ = {
@@ -516,6 +521,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
 		mutually_exclusive = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_grant_RAJ_autonomy }
+		available = { RAJ = { is_subject_of = ENG } }
 		
 		completion_reward = {
 			if = {
@@ -559,6 +565,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = ENG_focus_continue_annex_policy focus = ENG_focus_stop_lapse_doctrine }
 		mutually_exclusive = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_the_RAJ_compromise }
+		available = { RAJ = { is_subject_of = ENG } }
 		
 		completion_reward = {
 			custom_effect_tooltip = eoanb_tt_focus_ENG_grant_RAJ_autonomy_rr
@@ -655,6 +662,155 @@ focus_tree = {
 				}
 				RAJ = { drop_cosmetic_tag = yes }
 				RAJ = { set_cosmetic_tag = RAJ_ENG_british_dominion }
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_develop_RAJ_factory
+		icon = GFX_goal_focus_develop_canada
+		x = 10
+		y = 7
+		cost = 150
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_the_RAJ_compromise focus = ENG_focus_grant_RAJ_autonomy }
+		available = { RAJ = { is_subject_of = ENG } }
+		
+		completion_reward = {
+			RAJ = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_focus_develop_RAJ_infrastructure
+		icon = GFX_goal_focus_develop_canada
+		x = 12
+		y = 7
+		cost = 150
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = ENG_focus_direct_RAJ_control focus = ENG_focus_the_RAJ_compromise focus = ENG_focus_grant_RAJ_autonomy }
+		available = { RAJ = { is_subject_of = ENG } }
+		
+		completion_reward = {
+			RAJ = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
