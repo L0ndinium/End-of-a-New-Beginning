@@ -191,13 +191,12 @@ MCD = "countries/Macedonia.txt"
 BOH = "countries/Bohemia.txt"
 SAR = "countries/Sardinia.txt"
 KRA = "countries/Krakow.txt"
-<<<<<<< HEAD
 SPH = "countries/Spanish Philippines"
 MDN = "countries/Maguindanao"
 CSP = "countries/Carlist Spain"
-=======
 TSH = "countries/Tokugawa Shogunate.txt"
->>>>>>> master
+GLM = "countries/GaliciaLodomeria.txt"
+SLV = "countries/Slovenia.txt"
 
 # Below, countries which color are not important
 
