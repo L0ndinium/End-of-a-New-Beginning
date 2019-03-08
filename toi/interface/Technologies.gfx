@@ -5458,6 +5458,16 @@ spriteTypes = {
 		name = "GFX_mining_rig_3_medium"
 		texturefile = "gfx/interface/technologies/process_engineering/mining_rig_3.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_oil_extraction_medium"
+		texturefile = "gfx/interface/technologies/process_engineering/oil_extraction.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_oil_storage_medium"
+		texturefile = "gfx/interface/technologies/process_engineering/oil_storage.dds"
+	}
 
 	### Electronics and Devices ###
 

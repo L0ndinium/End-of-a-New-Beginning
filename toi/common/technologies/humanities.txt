@@ -719,12 +719,8 @@ technologies = {
 			
 		}
 		allow = {
-			NOT={
-				NOT={
-					has_country_flag = is_historical_colonial_power
-					has_global_flag = scramble_for_africa
-				}
-			}
+			has_country_flag = is_historical_colonial_power
+			has_global_flag = scramble_for_africa
         }
 		
 		research_cost = 1

@@ -143,6 +143,45 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
+					name = "infantry_subtitle_marines"
+					position = { x = 3090 y = 1775 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = { x = 0 y = 0}
+					text = "INFANTRY_TITLE_MARINES"
+					maxWidth = 600
+					maxHeight = 62
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "infantry_subtitle_mountaineers"
+					position = { x = 3090 y = 1915 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = { x = 0 y = 0}
+					text = "INFANTRY_TITLE_MOUNTAINEERS"
+					maxWidth = 600
+					maxHeight = 62
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "infantry_subtitle_shock_troops"
+					position = { x = 3090 y = 2055 }
+					textureFile = ""
+					font = "hoi_33"
+					borderSize = { x = 0 y = 0}
+					text = "INFANTRY_TITLE_SHOCK_TROOPS"
+					maxWidth = 600
+					maxHeight = 62
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
 					name = "infantry_subtitle_early_medicine"
 					position = { x = 2144 y = 1921 }
 					textureFile = ""
@@ -1967,6 +2006,18 @@ guiTypes = {
 				size = { width = 1440 height = 1000 }	
 			}
 
+			instantTextBoxType = {
+				name = "dream_of_flight_title"
+				position = { x = 1045 y = 120 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "VICTORIAN_AIR_DOCTRINE_LABEL"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
 			
 			gridboxtype = {
 				name = "air_doctrine_victorian_tree"
@@ -2613,7 +2664,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "mechanical_engineering_year1"
-					position = { x = 0 y = 140 }
+					position = { x = 0 y = 20 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2626,7 +2677,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "mechanical_engineering_year2"
-					position = { x = 0 y = 416 }
+					position = { x = 0 y = 390 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2639,7 +2690,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "mechanical_engineering_year3"
-					position = { x = 0 y = 692 }
+					position = { x = 0 y = 625 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2649,10 +2700,23 @@ guiTypes = {
 					format = left
 					Orientation = "UPPER_LEFT"
 				}
-
+				
 				instantTextBoxType = {
 					name = "mechanical_engineering_year4"
-					position = { x = 0 y = 968 }
+					position = { x = 0 y = 750 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1865"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "mechanical_engineering_year5"
+					position = { x = 0 y = 870 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2664,8 +2728,21 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "mechanical_engineering_year5"
-					position = { x = 0 y = 1244 }
+					name = "mechanical_engineering_year6"
+					position = { x = 0 y = 985 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1875"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "mechanical_engineering_year7"
+					position = { x = 0 y = 1100 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2677,8 +2754,21 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "mechanical_engineering_year6"
-					position = { x = 0 y = 1520 }
+					name = "mechanical_engineering_year8"
+					position = { x = 0 y = 1225 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1885"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "mechanical_engineering_year9"
+					position = { x = 0 y = 1350 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2690,8 +2780,21 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "mechanical_engineering_year7"
-					position = { x = 0 y = 1796 }
+					name = "mechanical_engineering_year10"
+					position = { x = 0 y = 1475 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1895"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "mechanical_engineering_year11"
+					position = { x = 0 y = 1580 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2703,12 +2806,38 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "mechanical_engineering_year8"
-					position = { x = 0 y = 2072 }
+					name = "mechanical_engineering_year12"
+					position = { x = 0 y = 1705 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1905"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "mechanical_engineering_year13"
+					position = { x = 0 y = 1830 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
 					text = "1910"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "mechanical_engineering_year14"
+					position = { x = 0 y = 1955 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1915"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -2842,7 +2971,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "process_engineering_year1"
-					position = { x = 0 y = 140 }
+					position = { x = 0 y = 20 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2855,7 +2984,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "process_engineering_year2"
-					position = { x = 0 y = 416 }
+					position = { x = 0 y = 390 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2868,7 +2997,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "process_engineering_year3"
-					position = { x = 0 y = 692 }
+					position = { x = 0 y = 625 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2878,10 +3007,23 @@ guiTypes = {
 					format = left
 					Orientation = "UPPER_LEFT"
 				}
-
+				
 				instantTextBoxType = {
 					name = "process_engineering_year4"
-					position = { x = 0 y = 968 }
+					position = { x = 0 y = 865 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1865"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "process_engineering_year5"
+					position = { x = 0 y = 985 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2893,8 +3035,21 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "process_engineering_year5"
-					position = { x = 0 y = 1244 }
+					name = "process_engineering_year6"
+					position = { x = 0 y = 1105 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1875"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "process_engineering_year7"
+					position = { x = 0 y = 1230 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -2906,12 +3061,12 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "process_engineering_year6"
-					position = { x = 0 y = 1520 }
+					name = "process_engineering_year8"
+					position = { x = 0 y = 1355 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1890"
+					text = "1885"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -3046,7 +3201,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "biochemistry_year1"
-					position = { x = 0 y = 140 }
+					position = { x = 0 y = 20 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3059,7 +3214,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "biochemistry_year2"
-					position = { x = 0 y = 416 }
+					position = { x = 0 y = 380 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3072,7 +3227,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "biochemistry_year3"
-					position = { x = 0 y = 692 }
+					position = { x = 0 y = 630 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3082,10 +3237,23 @@ guiTypes = {
 					format = left
 					Orientation = "UPPER_LEFT"
 				}
-
+				
 				instantTextBoxType = {
 					name = "biochemistry_year4"
-					position = { x = 0 y = 968 }
+					position = { x = 0 y = 755 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1865"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "biochemistry_year5"
+					position = { x = 0 y = 880 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3097,8 +3265,21 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "biochemistry_year5"
-					position = { x = 0 y = 1244 }
+					name = "biochemistry_year6"
+					position = { x = 0 y = 1005 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1875"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "biochemistry_year7"
+					position = { x = 0 y = 1120 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3110,8 +3291,21 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "biochemistry_year6"
-					position = { x = 0 y = 1520 }
+					name = "biochemistry_year8"
+					position = { x = 0 y = 1245 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1885"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "biochemistry_year9"
+					position = { x = 0 y = 1365 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3123,8 +3317,8 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "biochemistry_year7"
-					position = { x = 0 y = 1796 }
+					name = "biochemistry_year10"
+					position = { x = 0 y = 1582 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3239,7 +3433,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "aviation_year1"
-					position = { x = 0 y = 140 }
+					position = { x = 0 y = 20 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -3252,7 +3446,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "aviation_year2"
-					position = { x = 0 y = 416 }
+					position = { x = 0 y = 350 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}

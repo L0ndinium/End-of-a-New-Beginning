@@ -12,6 +12,11 @@ equipments = {
 		
 		interface_category = interface_category_other_ships
 
+		upgrades = { 
+			ship_armor_upgrade
+			ship_reliability_upgrade
+		}
+		
 		# Unused by convoys
 		surface_detection = 10
 		sub_detection = 0

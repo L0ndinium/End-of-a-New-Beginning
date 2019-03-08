@@ -94,10 +94,6 @@ ideas = {
 			picture = PRS_legacy_of_clausewitz
 			
 			research_bonus = { land_doctrine = 0.25 }
-			
-			modifier = {
-				#
-			}
 		}
 		PRS_landwehr = {
 			allowed = {

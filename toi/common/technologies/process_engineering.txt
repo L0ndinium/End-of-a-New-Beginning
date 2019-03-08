@@ -83,6 +83,11 @@ technologies = {
 			level = 5
 		}
 		
+		path = {
+			leads_to_tech = oil_extraction
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 1.5
 		start_year = 1880
 		folder = {
@@ -248,11 +253,78 @@ technologies = {
 		
 		production_oil_factor = 0.1
 		
+		path = {
+			leads_to_tech = oil_extraction
+			research_cost_coeff = 1
+		}
+		
 		research_cost = 1
 		start_year = 1880
 		folder = {
 			name = process_engineering_folder
 			position = { x = 10 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+			
+		}
+		
+		categories = {
+			resource_extraction_tech
+			process_engineering_tech
+		}
+	}
+	
+	oil_extraction = {
+		
+		fuel_gain_factor = 1
+		
+		path = {
+			leads_to_tech = oil_storage
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.4
+		start_year = 1885
+		folder = {
+			name = process_engineering_folder
+			position = { x = 10 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1
+				date > "1850.1.1"
+			}
+			
+		}
+		
+		categories = {
+			resource_extraction_tech
+			process_engineering_tech
+		}
+	}
+	
+	oil_storage = {
+		
+		enable_building = {
+			building = fuel_silo_industrial
+			level = 1
+		}
+		
+		research_cost = 1.1
+		start_year = 1885
+		folder = {
+			name = process_engineering_folder
+			position = { x = 12 y = 20 }
 		}
 		
 		ai_will_do = {

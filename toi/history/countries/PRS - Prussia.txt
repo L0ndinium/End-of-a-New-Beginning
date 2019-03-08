@@ -45,7 +45,7 @@
   }
 	create_import = {
     resource = cotton
-    amount = 8
+    amount = 11
     exporter = USA
   }
   
