@@ -8,7 +8,7 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
-				TAG = JAP
+				TAG = TSH
 				date > 1857.5.11
 		}
 		
@@ -31,7 +31,7 @@ country_event = {
 	    option = {
 	    	name = shogunate_japan.1.a
 	    	ai_chance = { factor = 95 }
-	    	JAP = { country_event = { days = 7 id = shogunate_japan.2 } }
+	    	TSH = { country_event = { days = 7 id = shogunate_japan.2 } }
 	    }
 	    option = {
 	    	name = shogunate_japan.1.b
@@ -57,5 +57,69 @@ country_event = {
 	    	add_political_power = -50
 	    	add_stability = 0.005
 	    	#Add Court Influence
+	    }
+}
+
+#monetary policy
+country_event = {
+	    id = shogunate_japan.3
+	    title = shogunate_japan.3.t
+	    desc = shogunate_japan.3.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.3.a
+	    	##placeholder
+	    }
+}
+
+#western_military_treatises
+country_event = {
+	    id = shogunate_japan.4
+	    title = shogunate_japan.4.t
+	    desc = shogunate_japan.4.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.4.a
+	    	##placeholder
+	    }
+}
+
+#invite foreign expertise
+country_event = {
+	    id = shogunate_japan.5
+	    title = shogunate_japan.5.t
+	    desc = shogunate_japan.5.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.5.a
+	    	##placeholder
+	    }
+}
+
+#military budget realocations
+country_event = {
+	    id = shogunate_japan.6
+	    title = shogunate_japan.6.t
+	    desc = shogunate_japan.6.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.6.a
+	    	##placeholder
 	    }
 }

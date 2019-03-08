@@ -6,7 +6,7 @@ state={
 
 	history={
 		owner = SAT
-		add_core_of = JAP
+		add_core_of = TSH
 		add_core_of = SAT
 		buildings = {
 			infrastructure = 5

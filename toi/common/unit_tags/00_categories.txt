@@ -13,4 +13,8 @@ sub_unit_categories = {
 	category_cas
 	category_cavalry
 	category_ranged_cavalry
+	category_special_forces
+	category_nav_bomber
+	category_tac_bomber
+	category_strat_bomber
 }

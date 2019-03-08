@@ -1,0 +1,291 @@
+ideas = {
+	
+	country = {
+		TSH_vic_fiscal_crisis = {
+
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.20
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+	}
+	country = {
+		TSH_vic_fiscal_crisis_2 = {
+
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.20
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+	}
+	country = {
+		TSH_vic_fiscal_crisis_3 = {
+
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+	}
+	country = {
+		tsh_vic_weight_based_system = {
+
+			modifier = {
+				min_export = 0.05
+			}
+		}
+	}
+	country = {
+		TSH_support_SAG = {
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+	}	
+	country = {
+		TSH_support_CHO = {
+
+			modifier = {
+				MONTHLY_POPULATION = 0.03
+			}
+		}
+	}
+	country = {
+		TSH_support_TOS = {
+
+			modifier = {
+				min_export = 0.05
+			}
+		}
+	}
+	country = {
+		TSH_support_SAT = {
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+	country = {
+		TSH_FRA_trade = {
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+	country = {
+		tsh_vic_industrial_expansion = {
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+	country = {
+		tsh_hatamoto_troops = {
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+	}
+	country = {
+		tsh_army_centralization_efforts = {
+
+			modifier = {
+				political_power_gain = -0.25
+				army_org_factor = 0.05
+				max_planning = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+	country = {
+		tsh_army_centralization_efforts_2 = {
+
+			modifier = {
+				political_power_gain = -0.25
+				army_org_factor = 0.1
+				max_planning = 0.1
+				army_core_defence_factor = 0.05
+				offence = 0.05
+			}
+		}
+	}
+	country = {
+		tsh_army_centralization_efforts_3 = {
+
+			modifier = {
+				army_org_factor = 0.1
+				max_planning = 0.1
+				army_core_defence_factor = 0.05
+				offence = 0.05
+			}
+		}
+	}
+	country = {
+		tsh_decentralized_army_structure = {
+
+			modifier = {
+				conscription = 0.1
+				army_org_factor = -0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+	}
+	country = {
+		tsh_decentralized_army_structure_2 = {
+
+			modifier = {
+				conscription = 0.1
+				army_org_factor = -0.1
+				army_core_defence_factor = 0.15
+				offence = 0.075
+			}
+		}
+	}
+	country = {
+		tsh_decentralized_army_structure_3 = {
+			
+			modifier = {
+				conscription = 0.1
+				army_org_factor = -0.15
+				army_core_defence_factor = 0.15
+				offence = 0.075
+				max_planning = 0.2
+			}
+		}
+	}
+	country = {
+		TSH_vic_reverberatory_furnaces = {
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+	}
+	country = {
+		TSH_foreign_engineering_contracts = {
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+	}
+	country = {
+		TSH_nagasaki_arsenal = {
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+	}
+	country = {
+		TSH_nagasaki_arsenal_naval = {
+
+			modifier = {
+				production_speed_naval_base_factor = 0.25
+			}
+		}
+	}
+	country = {
+		TSH_yokosuka_arsenal = {
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+	}
+	country = {
+		TSH_yokosuka_weapon_foundry = {
+
+			modifier = {
+				out_of_supply_factor = -0.05
+			}
+		}
+	}
+	country = {
+		TSH_yokosuka_shipyards = {
+
+			modifier = {
+				production_speed_naval_base_factor = 0.15
+			}
+		}
+	}
+	country = {
+		TSH_foreign_trade = {
+
+			modifier = {
+				consumer_goods_factor = -0.01
+			}
+		}
+	}
+	country = {
+		TSH_tenryo_improvements = {
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+	}
+	country = {
+		TSH_silk_industry = {  
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+	country = {
+		TSH_expand_agricultural_production = {
+
+			modifier = {
+				monthly_population = 0.02
+			}
+		}
+	}
+	country = {
+		TSH_assist_merchant_classes = {
+
+			modifier = {
+				min_export = 0.05
+			}
+		}
+	}
+	country = {
+		TSH_flat_tax_on_farmers = {
+
+			modifier = {
+				monthly_population = 0.03
+				conscription_factor = 0.5
+			}
+        }
+	}
+	country = {
+		TSH_modern_defensive_theory = {
+
+			modifier = {
+				dig_in_speed_factor = 0.15
+				max_dig_in = 0.5
+			}
+		}
+	}
+	country = {
+		TSH_unbacked_notes_issued = {
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.03
+			}
+		}
+	}
+}
+	

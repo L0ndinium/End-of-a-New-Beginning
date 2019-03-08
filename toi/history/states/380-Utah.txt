@@ -17,6 +17,9 @@ state= {
 		victory_points = {
 			4865 5 
 		}
+		victory_points = {
+			12573 1 
+		}
 		add_claim_by = USA
 	}
 	provinces={

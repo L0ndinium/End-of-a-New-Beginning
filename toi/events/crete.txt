@@ -105,7 +105,7 @@ country_event = {#Arkadi explosision
 
 	fire_only_once = yes
 	#is_triggered_only = yes
-
+	
 	trigger = {
 		tag = CET
 		date > 1866.11.02

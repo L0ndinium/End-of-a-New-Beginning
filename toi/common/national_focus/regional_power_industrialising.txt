@@ -861,12 +861,13 @@ focus_tree = {
 			any_owned_state = { is_coastal = yes }
 		}
 		bypass = {
-			has_tech = tech_naval_1812_corvette
+			#has_tech = tech_naval_1812_corvette
 		}
 		x = 16
 		y = 1
 		completion_reward={
-			set_technology = {tech_naval_1812_corvette=1}
+			#BROKEN BY MTG
+			#set_technology = {tech_naval_1812_corvette=1}
 		}
 	}
 	focus = {

@@ -195,14 +195,13 @@ country_event = { # The Carbonari Revolt
         add_state_core = 808
         add_state_core = 813
         add_state_core = 157
-        add_state_core = 85
+        add_state_core = 785
         add_state_core = 812
         add_state_core = 117
         add_state_core = 997
         add_state_core = 156
         add_state_core = 115
         add_state_core = 114
-
         add_state_claim = 979
         add_state_claim = 160
         add_state_claim = 1234

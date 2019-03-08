@@ -51,44 +51,4 @@ units = {
 			division_template = "Danish Cavalry"
 			start_experience_factor = 0.1
 		}
-		
-		navy = {				
-			name = "Danish Navy"			
-			base = 6287
-			location = 6287
-			ship = { name = "Skjold" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Frederik den Sjette" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Waldemar" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Danneborg" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Dronning Marie" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Thetis" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Bellona" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Havfreun" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Rota" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Tordenskjold" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Niels Zuel" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Sjaelland" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Galathea" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Balkyrien" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Najaden" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Saga" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Heimdal" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Thor" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Ornen" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "St. Thomas" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Mercurius" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "St. Croix" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Delphinen" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Pillen" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Falken" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Neptune" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Holge Danske" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Slesvig Jernskis" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Hekla" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Geiser" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Skirner" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Aegir Jernskie" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Uffo" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-			ship = { name = "Hertha" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = DEN } } }
-		}
 }

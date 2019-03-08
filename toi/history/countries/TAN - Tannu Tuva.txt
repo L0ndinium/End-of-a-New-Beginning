@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
-  capital = 554
+  capital = 329
 
-  oob = "SYR_1857"
+  oob = "TAN_1857"
 
   set_convoys = 0
   
@@ -79,16 +79,8 @@
   infantry_weapons = 1
   tech_infantry_napoleonic_uniform = 1
 	start_build_tech = 1
-  tech_naval_1812_frigate = 1
+  #tech_naval_1812_frigate = 1
   }
 
   # POLITICAL LEADERS
-
-create_country_leader = {
-    name = "Leader"
-    desc = "POLITICS_TEMP_DESC"
-    picture = ""
-    expire = 2000.09.10
-    ideology = despotism
-}
-}
+ }

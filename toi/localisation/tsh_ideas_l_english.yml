@@ -1,0 +1,41 @@
+﻿l_english:
+ ####FOCUSES####
+
+ ####IDEAS####
+ TSH_vic_fiscal_crisis:0 "Fiscal Crisis"
+ TSH_vic_fiscal_crisis_2:0 "Fiscal Crisis"
+ TSH_vic_fiscal_crisis_3:0 "Fiscal Crisis"
+ tsh_vic_weight_based_system:0 "Adopted Weight-Based System"
+ TSH_support_SAG:0 "Bakufu Relief Efforts"
+ TSH_support_CHO:0 "Bakufu Relief Efforts"
+ TSH_support_TOS:0 "Bakufu Relief Efforts"
+ TSH_support_SAT:0 "Bakufu Relief Efforts"
+ TSH_FRA_trade:0 "Franco-Japanese Trade"
+ tsh_vic_industrial_expansion:0 "Industrial Expansion Efforts"
+ tsh_hatamoto_troops:0 "Readied Hatamoto Levies"
+ tsh_army_centralization_efforts:0 "Army Centralization Efforts"
+ tsh_army_centralization_efforts_2:0 "Army Centralization Efforts"
+ tsh_army_centralization_efforts_3:0 "Army Centralization Efforts"
+ tsh_decentralized_army_structure:0 "Decentralized Army Structure"
+ tsh_decentralized_army_structure_2:0 "Decentralized Army Structure"
+ tsh_decentralized_army_structure_3:0 "Decentralized Army Structure"
+ TSH_vic_reverberatory_furnaces:0 "Reverberatory Furnaces"
+ TSH_foreign_engineering_contracts:0 "Foreign Engineering Contracts"
+ TSH_nagasaki_arsenal:0 "Nagasaki Arsenal Projects"
+ TSH_nagasaki_arsenal_naval:0 "Nagasaki Arsenal Naval Projects"
+ TSH_yokosuka_arsenal:0 "Yokosuka Arsenal Projects"
+ TSH_yokosuka_weapon_foundry:0 "Yokosuka Weapons Foundry Projects"
+ TSH_yokosuka_shipyards:0 "Yokosuka Shipyard Projects"
+ TSH_tenryo_improvements:0 "Tenryo Territory Improvements"
+ TSH_silk_industry:0 "Silk Industry Subsidies"
+ TSH_expand_agricultural_production:0 "Expanded Agricultural Output"
+ TSH_assist_merchant_classes:0 "Assisted Merchants"
+ TSH_flat_tax_on_farmers:0 "Agricultural Tax Reforms"
+ TSH_modern_defensive_theory:0 "Modern Defensive Theory"
+ TSH_unbacked_notes_issued:0 "Unbacked Notes Issued"
+
+ ####OPINION MODIFIERS####
+
+ ####POLITICAL AND OTHER ADVISORS####
+
+ ####COMPANIES####

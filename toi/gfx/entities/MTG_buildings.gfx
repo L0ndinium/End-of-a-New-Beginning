@@ -1,0 +1,6 @@
+objectTypes = {
+	pdxmesh = {
+		name = "building_fuel_silo_mesh"
+		file = "gfx/models/buildings/fuel_silo.mesh"
+	}
+}

@@ -299,34 +299,11 @@ country_event = {
 		remove_ideas = DOM_restoration_war
 		transfer_state = 1318
 		white_peace = SPR
+		SPR = { set_country_flag = SPR_lost_restoration }
+		USA = { give_guarantee = DOM }
 	}    
 }
 
-country_event = {
-	id = hispaniola.10
-	title = hispaniola.10.t
-	desc = hispaniola.10.d
-	
-	fire_only_once = yes 
-	
-	hidden = yes
-	
-	trigger = {
-		AND = {
-			TAG = SPR
-			has_war_with = DOM
-			controls_state = 319
-			controls_state = 1318
-		}
-	}
-    
-    option = {
-		name = hispaniola.10.a
-		transfer_state = 319
-		transfer_state = 1318
-		white_peace = DOM
-	}    
-}				
 
 	
 	

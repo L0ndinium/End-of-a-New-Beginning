@@ -8,8 +8,9 @@ state={
 	}
 
 	history={
-		owner=AUS
-		add_core_of=AUS
+		owner = AUS
+		add_core_of = AUS
+		add_core_of = HUN
 
 		buildings = {
 			infrastructure=2 

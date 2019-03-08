@@ -10,9 +10,9 @@ ideas = {
 			picture = generic_war_preparation
 			
 			research_bonus = {
-				land_doctrine = -0.5
-				naval_doctrine = -0.25
-				air_doctrine = -0.25
+				land_doctrine = 0.5
+				naval_doctrine = 0.25
+				air_doctrine = 0.25
 			}
 			
 			modifier = {
@@ -43,7 +43,7 @@ ideas = {
 			picture = ger_revive_the_kaiserreich
 			
 			research_bonus = {
-				land_doctrine = 0.1
+				land_doctrine = -0.1
 			}
 			
 			modifier = {
@@ -60,7 +60,7 @@ ideas = {
 			picture = ger_revive_the_kaiserreich
 			
 			research_bonus = {
-				land_doctrine = 0.1
+				land_doctrine = -0.1
 			}
 			
 			modifier = {
@@ -397,7 +397,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_infrastructure_factor = 0.05
 				production_speed_buildings_factor = 0.05
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 			}
 		}
 		GER_idea_new_marketing_strategies = {
@@ -567,7 +567,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.8 
 				production_speed_buildings_factor = -0.8
 				production_factory_efficiency_gain_factor = -1
-				research_time_factor = 0.5
+				research_speed_factor = -0.25
 				social_egalitarianism_drift = 0.1
 			}
 		}
@@ -592,7 +592,7 @@ ideas = {
 				industrial_capacity_factory = -0.8
 				industrial_capacity_dockyard = -0.8
 				consumer_goods_factor = 0.2
-				research_time_factor = 0.1
+				research_speed_factor = -0.1
 				MONTHLY_POPULATION = -0.3
 			}
 		}
@@ -653,7 +653,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				naval_equipment = 0.05
+				naval_equipment = -0.05
 			}
 
 			traits = { GER_trait_naval_lloyd }
@@ -680,7 +680,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				mechanical_engineering_tech = 0.1
+				mechanical_engineering_tech = -0.1
 			}
 
 			traits = { GER_trait_concern_siemens }
@@ -705,7 +705,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				biochemistry_tech = 0.1
+				biochemistry_tech = -0.1
 			}
 
 			traits = { GER_trait_concern_bayer }

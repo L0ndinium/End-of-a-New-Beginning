@@ -273,7 +273,7 @@ technologies = {
 	
 	inorganic_chemistry = {
 		
-		research_time_factor = -0.02
+		research_speed_factor = 0.02
 		
 		research_cost = 1
 		start_year = 1850
@@ -816,7 +816,7 @@ technologies = {
 	
 	physical_chemistry = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1875
@@ -880,7 +880,7 @@ technologies = {
 	
 	noble_gas_discovery = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1885

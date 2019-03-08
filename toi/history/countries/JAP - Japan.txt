@@ -1,7 +1,7 @@
 ﻿1857.1.1 = {
   capital = 1266
 
-  oob = "JAP_1857"
+  #oob = "JAP_1857"
 
   set_convoys = 0
   
@@ -34,9 +34,6 @@
     privileged_education
     state_religion
     religion_shinto
-	JAP_vic_fiscal_crisis
-	JAP_vic_imperial-bakutu_tensions
-         #NATIONAL SPIRITS
 	
   }
 	reverse_add_opinion_modifier = { target = USA modifier = embargo }
@@ -81,20 +78,18 @@
 	  ruling_party = autocracy
   }
 
-  set_cosmetic_tag = JAP_shogunate
-
   set_technology = {
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	start_build_tech = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	basic_cavalry = 1
   }
 
   # POLITICAL LEADERS
 
   create_country_leader = {
-    name = "Tokugawa Iesada"
+    name = "JAPAN"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_JAP_Tokugawa_Iesada.dds"
     expire = 1900.1.1
@@ -102,7 +97,7 @@
 }
 
 create_country_leader = {
-    name = "Itagaki Taisuke"
+    name = "JAPAN"
     desc = "POLITICS_TEMP_DESC"
     picture = ""
     expire = 1900.1.1
@@ -110,7 +105,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-    name = "Tokugawa Iesada"
+    name = "JAPAN"
     desc = "POLITICS_TEMP_DESC"
     picture = "Portrait_JAP_Tokugawa_Iesada.dds"
     expire = 1900.1.1

@@ -500,7 +500,7 @@ technologies = {
 	
 	maxims_flying_machine = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1895

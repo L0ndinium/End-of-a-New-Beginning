@@ -779,17 +779,11 @@
  UPCA_cosmetic_chauvinist_populism_ADJ:0 "Central American"
  UPCA_cosmetic_fundamentalism_ADJ:0 "Central American"
 
- TEX_Houston_USA_cosmetic_centrism:0 "Unionist Texas"
- TEX_Houston_USA_cosmetic_centrism_ADJ:0 "Texan"
- TEX_Houston_USA_cosmetic_centrism_DEF:0 "Unionist Texas"
+
 
  TEX_Houston_CSA_cosmetic_traditional_conservatism:0 "Confederate Texas"
  TEX_Houston_CSA_cosmetic_traditional_conservatism_ADJ:0 "Texan"
  TEX_Houston_CSA_cosmetic_traditional_conservatism_DEF:0 "Confederate Texas"
-
- JAP_shogunate_autocracy:0 "Tokugawa Shogunate"
- JAP_shogunate_autocracy_ADJ:0 "Tokugawa Shogunate"
- JAP_shogunate_autocracy_DEF:0 "the Tokugawa Shogunate"
 
  PAP_RRP_radical_democracy:0 "Roman Republic"
  PAP_RRP_radical_democracy_ADJ:0 "Roman"
@@ -924,3 +918,8 @@
  BCO_united_anarchism_ADJ:0 "British-Colombian"
  BCO_united_chauvinist_populism_ADJ:0 "British-Colombian"
  BCO_united_fundamentalism_ADJ:0 "British-Colombian"
+
+ 
+ PAP_RRP_radical_democracy:0 "Third Roman Republic"
+ PAP_RRP_radical_democracy_ADJ:0 "Roman"
+ PAP_RRP_radical_democracy_DEF:0 "the Third Roman Republic" #'the United States of America' instead of 'United States of America'

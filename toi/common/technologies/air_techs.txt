@@ -118,7 +118,7 @@ technologies = {
 		start_year = 1885
 		folder = {
 			name = air_techs_folder
-			position = { x = 4 y = 10 }
+			position = { x = 4 y = 12 }
 		}
 		
 		categories = {

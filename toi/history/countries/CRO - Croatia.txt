@@ -80,7 +80,7 @@
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	start_build_tech = 1
 	iron_railways = 1
@@ -94,11 +94,4 @@
 
   # POLITICAL LEADERS
 
-  create_country_leader = {
-    name = "Leader"
-    desc = "POLITICS_TEMP_DESC"
-    picture = ""
-    expire = 2000.09.10
-    ideology = despotism
-}
 }

@@ -5,7 +5,7 @@ news_event = {
     picture = GFX_report_event_election_vote
     
     is_triggered_only = yes
-
+	 
     hidden = yes
 
     immediate = {
@@ -24,9 +24,12 @@ news_event = {
             # var = global.global_agrarian_liberty
             # value = 0
         # }
+		clear_array = global.score_array 
+		clear_array = global.score_array_position
+		clear_array = global.score_tag_array
 
         every_country = {
-
+                
             #Initial calculation
             #Whenever this calculation runs, also add modified_liberty, which is a separate variable that stores liberty
             #from events, decisions and other sources
@@ -281,7 +284,84 @@ news_event = {
                 var = overall_score
                 min = 0
                 max = 100000
-            }
+            }			
+			add_to_array = { global.score_array = overall_score }
+			add_to_array = { global.score_tag_array = THIS.id }
+            set_temp_variable = { length_temp = global.score_array^num }
         }
+            for_loop_effect = {
+                start = 0
+                end = length_temp
+                add = 1
+                value = v
+                break = b
+                find_highest_in_array = {
+                    array = global.score_array
+                    value = score_array_highest_value
+                    index = score_array_highest_index
+                }
+                remove_from_array = {
+                    array = global.score_array
+                    index = score_array_highest_index
+                }
+                add_to_temp_array = { 
+                    array = global.score_array_temp 
+                    value = score_array_highest_value 
+                }
+                set_temp_variable = { tag_temp = global.score_tag_array^score_array_highest_index }
+                remove_from_array = {
+                    array = global.score_tag_array
+                    index = score_array_highest_index
+                }
+                add_to_temp_array = { 
+                    array = global.score_tag_array_temp  
+                    value = tag_temp
+                }
+            }
+            for_loop_effect = {
+                start = 0
+                end = length_temp
+                add = 1
+                value = v
+                break = b
+                add_to_array = { 
+                    array = global.score_array
+                    value = global.score_array_temp^v 
+                }
+                add_to_array = { 
+                    array = global.score_tag_array
+                    value = global.score_tag_array_temp^v 
+                }
+            }
+            for_loop_effect = {
+                start = 0
+                end = length_temp
+                add = 1
+                value = v
+                break = b
+				
+                add_to_array = {    
+                    array = global.score_array_position  				
+                    value = v 
+                }	
+                add_to_variable = { global.score_array_position^v = 1 } 				
+            }	
+		every_country = {
+		    set_temp_variable = { length_temp = global.score_array^num }
+            for_loop_effect = {
+                start = 0
+                end = length_temp
+                add = 1
+                value = v  
+                break = b 
+				
+				if = {
+				    limit = { check_variable = { global.score_tag_array^v = THIS } }
+					set_variable = { score_array_position_var = v } 
+					set_variable = { b = 1 }
+				}		
+            }	 	
+			add_to_variable = { score_array_position_var = 1 } 
+		}		
     }
 }

@@ -85,7 +85,7 @@
 	infantry_weapons = 1
 	vic_army_cloth = 1
 	start_build_tech = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
   }
 
   # POLITICAL LEADERS

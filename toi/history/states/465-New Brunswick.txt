@@ -21,6 +21,9 @@ state={
 			}
 		}
 		add_core_of = BRK
+		victory_points = {
+			634 1
+		}
 	}
 
 	provinces={

@@ -904,7 +904,8 @@ focus_tree = {
 		prerequisite = { focus = GER_focus_historical_convoys_for_trade }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = frigate_tech }
+			#BROKEN BY MTG
+			#add_tech_bonus = { bonus = 0.5 uses = 1 category = frigate_tech }
 		}
 	}
 	

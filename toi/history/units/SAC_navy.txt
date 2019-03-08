@@ -1,12 +1,2 @@
 ﻿	units = {
-		navy = {				
-			name = "Swedish African Navy"			
-			base = 2050
-			location = 2050
-			ship = { name = "HMAS Havfrun" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = SAC } } }
-			ship = { name = "HMAS Ängeln" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = SAC } } }
-			ship = { name = "HMAS Örnen" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = SAC } } }
-			ship = { name = "HMAS Amarant" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = SAC } } }
-			ship = { name = "HMAS Neptunus" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = SAC } } }
-		}
 	}

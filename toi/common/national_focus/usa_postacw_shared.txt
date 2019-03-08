@@ -1142,11 +1142,12 @@
 		x = 14
 		y = 18
 		completion_reward = {
-			add_tech_bonus = {
-    			bonus = 0.25
-    			uses = 2
-    			category = frigate_tech
-			}
+			#BROKEN BY MTG
+			#add_tech_bonus = {
+    		#	bonus = 0.25
+    		#	uses = 2
+    		#	category = frigate_tech
+			#}
 		}
 	}
 	shared_focus = {

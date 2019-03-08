@@ -1088,7 +1088,7 @@ technologies = {
 	
 	doctrine_victorian_innovation_research = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 3.5
 		folder = {

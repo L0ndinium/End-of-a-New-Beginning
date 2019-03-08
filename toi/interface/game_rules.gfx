@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_game_rule_allow_paratroopers"
+		texturefile = "gfx/game_rules/allow_paratroopers.dds"
+	}
+
+}

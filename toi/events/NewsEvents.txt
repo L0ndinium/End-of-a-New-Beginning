@@ -300,7 +300,7 @@ news_event = {
 		name = news.17.a
 		trigger = {
 			NOT = {
-				TAG = JAP
+				TAG = TSH
 				TAG = USA
 				TAG = CHO
 				TAG = SAT
@@ -315,41 +315,41 @@ news_event = {
 	}
 	option = {
 		name = news.17.b
-		trigger = { TAG = JAP }
-		add_ideas = JAP_foreign_trade
+		trigger = { TAG = TSH }
+		add_ideas = TSH_foreign_trade
 		add_stability = -0.10
 		add_opinion_modifier = { target = USA modifier = small_decrease }
 	}
 	option = {
 		name = news.17.c
 		trigger = { TAG = USA }
-		add_ideas = USA_JAP_trade
+		add_ideas = USA_TSH_trade
 		add_political_power = 50
-		add_opinion_modifier = { target = JAP modifier = small_increase }
+		add_opinion_modifier = { target = TSH modifier = small_increase }
 	}
 	option = {
 		name = news.17.d
 		trigger = { TAG = CHO }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = medium_decrease }
+		add_opinion_modifier = { target = TSH modifier = medium_decrease }
 	}
 	option = {
 		name = news.17.e
 		trigger = { TAG = SAT }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = medium_decrease }
+		add_opinion_modifier = { target = TSH modifier = medium_decrease }
 	}
 	option = {
 		name = news.17.f
 		trigger = { TAG = SAG }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = small_decrease }
+		add_opinion_modifier = { target = TSH modifier = small_decrease }
 	}
 	option = {
 		name = news.17.g
 		trigger = { TAG = TOS }
 		add_stability = -0.05
-		add_opinion_modifier = { target = JAP modifier = small_decrease }
+		add_opinion_modifier = { target = TSH modifier = small_decrease }
 	}
 	option = {
 		name = news.17.h
@@ -363,22 +363,22 @@ news_event = {
 		}
 		if = {
 			limit = { tag = ENG }
-			add_ideas = ENG_JAP_trade
+			add_ideas = ENG_TSH_trade
 		}
 		if = {
 			limit = { tag = FRA }
-			add_ideas = FRA_JAP_trade
+			add_ideas = FRA_TSH_trade
 		}
 		if = {
 			limit = { tag = RUS }
-			add_ideas = RUS_JAP_trade
+			add_ideas = RUS_TSH_trade
 		}
 		if = {
 			limit = { tag = HOL }
-			add_ideas = HOL_JAP_trade
+			add_ideas = HOL_TSH_trade
 		}
 		add_political_power = 50
-		add_opinion_modifier = { target = JAP modifier = small_increase }
+		add_opinion_modifier = { target = TSH modifier = small_increase }
 	}
 }
 
@@ -400,7 +400,7 @@ news_event = {
 	
 	option = {
 		name = news.18.b
-		trigger = { TAG = JAP }
+		trigger = { TAG = TSH }
 	}
 	
 	option = {
@@ -408,7 +408,7 @@ news_event = {
 		trigger = { 
 			NOT = { 
 				OR = { 
-					TAG = JAP 
+					TAG = TSH 
 					TAG = RUS 
 				} 
 			} 
@@ -435,7 +435,7 @@ news_event = {
 	
 	option = {
 		name = news.19.b
-		trigger = { TAG = JAP }
+		trigger = { TAG = TSH }
 	}
 	
 	option = {
@@ -443,7 +443,7 @@ news_event = {
 		trigger = { 
 			NOT = { 
 				OR = { 
-					TAG = JAP 
+					TAG = TSH 
 					TAG = RUS 
 				} 
 			} 
@@ -470,7 +470,7 @@ news_event = {
 	
 	option = {
 		name = news.20.b
-		trigger = { TAG = JAP }
+		trigger = { TAG = TSH }
 	}
 	
 	option = {
@@ -478,7 +478,7 @@ news_event = {
 		trigger = { 
 			NOT = { 
 				OR = { 
-					TAG = JAP 
+					TAG = TSH 
 					TAG = RUS 
 				} 
 			} 

@@ -100,19 +100,5 @@ units = {
 			division_template = "Japanese Riflemen"
 			start_experience_factor = 0.1
 		}
-		
-		navy = {				
-			name = "Japanese Fleet"			
-			base = 9998
-			location = 9998
-			ship = { name = "Kanrin Maru" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-			ship = { name = "Choyo Maru" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-			ship = { name = "Hoo Maru" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-			ship = { name = "Asashi Maru" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-			ship = { name = "Shohei Maru" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-			ship = { name = "Unkou Maru" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-			ship = { name = "Banryu" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-			ship = { name = "Kanko Maru" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = JAP } } }
-		}
 }
 

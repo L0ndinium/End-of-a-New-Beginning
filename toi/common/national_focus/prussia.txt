@@ -2687,7 +2687,6 @@ focus_tree = {
 			NOT = { has_global_flag = eoanb_flag_second_schleswig_war }
 			OR = {
 				PRS = { has_navy_size = { size > 24 } }
-				PRS = { has_tech = tech_naval_1857_troops }
 				PRS = { has_completed_focus = PRS_high_seas }
 			}
 		}

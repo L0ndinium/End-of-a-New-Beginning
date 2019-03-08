@@ -96,10 +96,11 @@ focus_tree = {
 				}
 		available = {
 			always = no
-		}
-		x = 8
-		y = 2
+			
 
+		}
+			x = 8
+		y = 2
 
 
 	}
@@ -113,7 +114,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Plombieres_Meeting
 		}
-		x = 3
+		x = 5
 		y = 3
 
 	}
@@ -141,7 +142,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Casus_Belli_ft
 		}
-		x = 3
+		x = 5
 		y = 4
 
 		completion_reward = {
@@ -160,7 +161,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Plombieres_Meeting
 		}
-		x = 13
+		x = 10
 		y = 3
 
 	}
@@ -171,7 +172,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Military_Plan_FT
 		}
-		x = 12
+		x = 11
 		y = 4
 
 		completion_reward = {
@@ -187,7 +188,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_Military_Plan_FT
 		}
-		x = 14
+		x = 13
 		y = 4
 
 		completion_reward = {
@@ -285,7 +286,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_The_War_Starts
 		}
-		x = 5
+		x = 7
 		y = 6
 
 		completion_reward = {
@@ -301,7 +302,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_The_War_Starts
 		}
-		x = 11
+		x = 9
 		y = 6
 
 		completion_reward = {
@@ -420,7 +421,7 @@ focus_tree = {
         popularity = 1
       }
       centrism = {
-        popularity = 20
+        popularity = 52
       }
       traditional_conservatism = {
         popularity = 20
@@ -432,14 +433,14 @@ focus_tree = {
         popularity = 0
       }
       autocracy = {
-        popularity = 52
+        popularity = 20
 
       }
       fundamentalism = {
         popularity = 0
       }
     }
-    ruling_party = autocracy
+    ruling_party = centrism
 											
 
 											}
@@ -447,6 +448,9 @@ focus_tree = {
 		add_ideas = {
 			ITA_Unorganized_Army
 			ITA_Unorganized_Navy
+			ITA_Brigandage
+			ITA_Different_Naval_Doctorines
+			ITA_Reliance_on_Farming
 		}
 		remove_ideas = {
 			PIE_National_Society

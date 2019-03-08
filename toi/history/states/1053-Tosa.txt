@@ -7,7 +7,7 @@ state=
 	history=
 	{
 		owner = TOS
-		add_core_of = JAP
+		add_core_of = TSH
 		add_core_of = TOS
 		buildings = {
 			infrastructure = 2

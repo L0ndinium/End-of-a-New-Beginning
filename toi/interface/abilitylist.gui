@@ -1,0 +1,58 @@
+guiTypes = {
+
+	iconType = {
+		position = {x=78 y=25}
+		name = "abilitylist_bg_mid"
+		spriteType = "GFX_ability_list_mid"
+	}	
+
+	containerWindowType = {
+		name = "abilitylist_button_container"
+		position = { x=37 y=11 }
+		size = { width=36 height=80 }
+		
+		iconType = {
+			position = {x=-8 y=-3}
+			name = "abilitylist_active_bg"
+			spriteType = "GFX_ability_active_bg"
+		}
+		
+		iconType = {
+			position = {x=-8 y=-3}
+			name = "abilitylist_cooldown_bg"
+			spriteType = "GFX_ability_cooldown_bg"
+		}
+		
+		buttonType = {
+			position = {x=-8 y=-3}
+			name = "abilitylist_button"
+			spriteType = "GFX_ability_icon_default"
+			oversound = command_power_ability_over
+			# Sound note: clicksound for different combat power abilities is not defined in this file, but in game\common\abilities\basic_abilities.txt
+		}
+		
+	}
+	
+	containerWindowType = {
+		name = "abilitylist_window"
+		position = {x=-5 y=-78}
+		size = { width=165 height=80 }
+		Orientation = center_down
+		clipping = no
+		fade_time = 300
+		fade_type = linear
+		#moveable = yes
+		
+		iconType = {
+			position = {x=0 y=0}
+			name = "bg_begin"
+			spriteType = "GFX_ability_list_begin"
+		}
+		
+		iconType = {
+			position = {x=99 y=0}
+			name = "bg_end"
+			spriteType = "GFX_ability_list_end"
+		}
+	}
+}

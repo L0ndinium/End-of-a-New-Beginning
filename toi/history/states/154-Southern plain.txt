@@ -17,11 +17,12 @@ state = {
 			11659 5
 		}
 		 
-                victory_points = {
+        victory_points = {
 			679 1
 		}
 
 		add_core_of = AUS
+		add_core_of = HUN
 	}
 
 	provinces={

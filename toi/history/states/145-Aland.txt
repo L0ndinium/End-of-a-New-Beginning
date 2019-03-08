@@ -8,13 +8,16 @@ state=
 
 	history=
 	{
-		owner = RUS
+		owner = FIN
 		buildings = {
 			infrastructure = 3
 		}
-		add_core_of = RUS
+		add_core_of = FIN
 		add_claim_by = SWE
-		add_claim_by = FIN
+		set_demilitarized_zone = yes
+		1869.1.1 = {
+			set_demilitarized_zone = no
+		}
 	}
 
 	provinces=	{

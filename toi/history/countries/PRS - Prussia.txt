@@ -101,7 +101,7 @@
 	tech_infantry_napoleonic_uniform = 1
 	tech_infantry_practical_rifling = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	iron_railways = 1
 	steam_engine = 1
@@ -118,7 +118,7 @@
 	horse_transport = 1
 	mounted_infantry = 1
 	tech_support = 1
-	tech_naval_1830_frigate = 1
+	#tech_naval_1830_frigate = 1
 	mongolfiere = 1
 	start_build_tech = 1
 	ornithopter = 1
@@ -126,10 +126,10 @@
 	tech_infantry_special_infantry_corps = 1
 	armor_tech_velocipede = 1
 	land_doctrine_victorian = 1
-	tech_naval_1812_sloop = 1
-	tech_naval_1812_corvette = 1
-	tech_naval_1812_troops = 1
-	naval_doctrine_victorian = 1
+	#tech_naval_1812_sloop = 1
+	#tech_naval_1812_corvette = 1
+	#tech_naval_1812_troops = 1
+	#naval_doctrine_victorian = 1
 	steel_railways = 1
 	interchange_parts = 1
 	factory_industry_1 = 1

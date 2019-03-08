@@ -56,7 +56,7 @@ ideas = {
 		
 			picture = SWE_Inept_Army
 			
-			research_bonus = { land_doctrine = -0.75 }
+			research_bonus = { land_doctrine = 0.75 }
 			
 			modifier = {
 			#
@@ -809,7 +809,7 @@ ideas = {
 			}		
 		}
 		
-		RUS_JAP_trade = {
+		RUS_TSH_trade = {
 			allowed = {
 				always = no
 			}

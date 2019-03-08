@@ -160,28 +160,6 @@ units = {
 			start_experience_factor = 0.3
 
 		}
-
-
-	navy = {				
-		name = "Preussische Flotte"			
-		base = 6332
-		location = 6332
-		ship = { name = "Gefion" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Thetis" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Danzig" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Barbarossa" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Ancona" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Gazelle" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Amazon" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Grillon" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Mercury" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Hela" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Frauenlob" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Iltis" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Royal Victoria" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Königsberg" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-		ship = { name = "Berlin" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PRS } } }
-	}
 }
 
 instant_effect = {

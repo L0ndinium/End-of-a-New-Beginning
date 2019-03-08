@@ -34,6 +34,10 @@ spriteTypes = {
 		name = "GFX_idea_PRS_theorist_land_moltke"
 		texturefile = "gfx/interface/ideas/PRS/PRS_theorist_moltke.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ITA_Brigandage"
+		texturefile = "gfx/interface/ideas/ITA/idea_ITA_Brigandage.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_PRS_theorist_land_moltke"

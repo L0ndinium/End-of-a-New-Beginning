@@ -50,7 +50,7 @@ ideas = {
 	country = {
 		ITA_minor_Art_Galleries1 = {
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 		}
 	}

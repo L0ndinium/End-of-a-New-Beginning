@@ -11,6 +11,9 @@ buildings = {
 		infrastructure = yes
 		max_level = 20
 		value = 2
+		
+		show_modifier = yes
+		max_fuel_building = 0.25
 	}
 	
 	arms_factory = {
@@ -116,18 +119,59 @@ buildings = {
 		value = 2
 	}
 
-	synthetic_refinery = {
-		show_on_map = 1
+	synthetic_refinery_oil = {
+		show_on_map = 0
 		base_cost = 25000
 		icon_frame = 10
-		local_resources_oil = 4 # May use local_resources_ + any resource name
-		local_resources_rubber = 2 # May use local_resources_ + any resource name
+		local_resources_oil = 1
 		refinery = yes
-		#max_level = 0 # max: 5
-		max_level = 5 # This is the max unlock level
+		max_level = 10
+		shares_slots = yes
+		value = 6
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+		fuel_gain_from_states = 2.0
+	}
+	
+	synthetic_refinery_rubber = {
+		show_on_map = 0
+		base_cost = 20000
+		icon_frame = 28
+		local_resources_rubber = 1
+		refinery = yes
+		max_level = 10
 		shares_slots = yes
 		value = 4
 		infrastructure_construction_effect = yes
+	}
+	
+	fuel_silo_industrial = {
+		show_on_map = 0
+		base_cost = 15000
+		icon_frame = 26
+		shares_slots = yes
+		value = 4
+		infrastructure_construction_effect = yes
+		fuel_silo = yes
+		max_level = 50
+		
+		show_modifier = yes
+		max_fuel_building = 50.0
+	}
+
+	fuel_silo_modern = {
+		show_on_map = 0
+		base_cost = 20000
+		icon_frame = 27
+		shares_slots = yes
+		value = 6
+		infrastructure_construction_effect = yes
+		fuel_silo = yes
+		max_level = 50
+		
+		show_modifier = yes
+		max_fuel_building = 100.0
 	}
 
 	radar_station = {
@@ -135,8 +179,7 @@ buildings = {
 		base_cost = 7500
 		icon_frame = 11
 		radar = yes
-		#max_level = 0 # max: 5
-		max_level = 6 # This is the max unlock level
+		max_level = 6
 		damage_factor = 0.5
 		value = 3
 	}
@@ -159,7 +202,7 @@ buildings = {
 		icon_frame = 13
 		nuclear_reactor = yes
 		nuclear_production_factor = 1
-		max_level = 3 # This is the max unlock level
+		max_level = 10 # This is the max unlock level
 		shares_slots = yes
 		value = 8
 		infrastructure_construction_effect = yes
@@ -295,6 +338,9 @@ buildings = {
 		shares_slots = yes
 		value = 3
 		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+		weekly_manpower = 5
 	}
 	
 	machine_parts_factory_inactive = {
@@ -303,7 +349,7 @@ buildings = {
 		icon_frame = 18
 		max_level = 20
 		shares_slots = yes
-		value = 5
+		value = 4
 		infrastructure_construction_effect = yes
 	}
 	
@@ -313,7 +359,7 @@ buildings = {
 		icon_frame = 16
 		max_level = 20
 		shares_slots = yes
-		value = 4
+		value = 3
 		infrastructure_construction_effect = yes
 	}
 	
@@ -333,7 +379,7 @@ buildings = {
 		icon_frame = 18
 		max_level = 20
 		shares_slots = yes
-		value = 5
+		value = 2
 		infrastructure_construction_effect = yes
 	}
 	
@@ -343,7 +389,7 @@ buildings = {
 		icon_frame = 18
 		max_level = 20
 		shares_slots = yes
-		value = 5
+		value = 3
 		infrastructure_construction_effect = yes
 	}
 
@@ -353,7 +399,7 @@ buildings = {
 		icon_frame = 18
 		max_level = 20
 		shares_slots = yes
-		value = 5
+		value = 3
 		infrastructure_construction_effect = yes
 	}
 	

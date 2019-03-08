@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-	CSA_civil_war_cotton_dismay = {
+		CSA_civil_war_cotton_dismay = {
 			allowed = {
 				TAG = CSA
 			}
@@ -17,7 +17,7 @@ ideas = {
 				army_attack_factor = -0.5
 			}
 		}
-	CSA_Civil_War_Scout_Dependency = {
+		CSA_Civil_War_Scout_Dependency = {
 			
 			allowed = {
 				TAG = CSA
@@ -39,7 +39,7 @@ ideas = {
 				recon_factor = 0.05
 			}
 		}
-	CSA_Civil_War_Scout_Dependency2 = {
+		CSA_Civil_War_Scout_Dependency2 = {
 			
 			allowed = {
 				TAG = CSA
@@ -64,7 +64,7 @@ ideas = {
 				ai_focus_aggressive_factor = -0.1
 			}
 		}
-	CSA_Civil_War_Industry1 = {
+		CSA_Civil_War_Industry1 = {
 			
 			allowed = {
 				TAG = CSA
@@ -83,7 +83,7 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 			}
 		}
-	CSA_Civil_War_Industry2 = {
+		CSA_Civil_War_Industry2 = {
 			
 			allowed = {
 				TAG = CSA
@@ -102,7 +102,7 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
-	CSA_Civil_War_Industry3 = {
+		CSA_Civil_War_Industry3 = {
 			
 			allowed = {
 				TAG = CSA
@@ -122,7 +122,7 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
-	CSA_Civil_War_Conscription = {
+		CSA_Civil_War_Conscription = {
 			
 			allowed = {
 				TAG = CSA
@@ -140,7 +140,7 @@ ideas = {
 				conscription = 0.03
 			}
 		}
-	CSA_Civil_War_Total_War = {
+		CSA_Civil_War_Total_War = {
 			
 			allowed = {
 				TAG = CSA
@@ -159,7 +159,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 			}
 		}
-	ACW_observer = {
+		ACW_observer = {
 			
 			allowed = {
 				TAG = ENG
@@ -180,7 +180,7 @@ ideas = {
 				experience_gain_army = 0.05
 			}
 		}
-	CSA_strong_aristocrats_3 = {
+		CSA_strong_aristocrats_3 = {
 			
 			allowed = {
 				TAG = CSA
@@ -204,7 +204,7 @@ ideas = {
 				political_power_gain = 0.15
 			}
 		}
-	CSA_strong_aristocrats_2 = {
+		CSA_strong_aristocrats_2 = {
 			
 			allowed = {
 				TAG = CSA
@@ -228,7 +228,7 @@ ideas = {
 				political_power_gain = 0.1
 			}
 		}
-	CSA_strong_aristocrats_1 = {
+		CSA_strong_aristocrats_1 = {
 			
 			allowed = {
 				TAG = CSA
@@ -251,7 +251,7 @@ ideas = {
 				political_power_gain = 0.05
 			}
 	}
-	CSA_confederate_government = {
+		CSA_confederate_government = {
 			
 			allowed = {
 				TAG = CSA
@@ -271,7 +271,7 @@ ideas = {
 				generate_wargoal_tension = 0.2
 			}
 	}
-	CSA_federal_government = {
+		CSA_federal_government = {
 			
 			allowed = {
 				TAG = CSA
@@ -291,7 +291,7 @@ ideas = {
 				generate_wargoal_tension = 0.1
 			}
 	}
-	CSA_aristocrats_discouraged = {
+		CSA_aristocrats_discouraged = {
 			
 			allowed = {
 				TAG = CSA
@@ -309,7 +309,7 @@ ideas = {
 				political_power_gain = -0.1
 			}
 		}
-	CSA_aristocrats_encouraged = {
+		CSA_aristocrats_encouraged = {
 			
 			allowed = {
 				TAG = CSA
@@ -399,4 +399,5 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
+	}
 }

@@ -1,0 +1,114 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ai_trace_window"
+		position = { x=150 y=100 }	
+		size = { width = 1108 height = 720 }
+		moveable = yes
+		Orientation = UPPER_LEFT
+
+		background = {
+			name = "Background"	
+			quadTextureSprite ="GFX_tiled_window"
+		}
+		
+		buttonType = {
+			name = "toggle_failed"
+			position = { x = 20 y = 0 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+			pdx_tooltip = "TOGGLE_FAILED"
+		}
+		
+		buttonType = {
+			name = "toggle_all"
+			position = { x = 50 y = 0 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+			pdx_tooltip = "TOGGLE_ALL"
+		}
+
+		containerWindowType = {
+			name = "entries_window"
+			position = { x=10 y=25 }
+			size = { width = 1088 height = 685 }
+			verticalScrollbar = "right_vertical_slider"
+			
+			background = {
+				name = "Background"	
+				quadTextureSprite ="GFX_tiled_window"
+			}	
+			
+			gridboxtype = {
+				name = "entries"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 100%% height = 48 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
+		
+		buttonType = {
+			name = "close_window"
+			position = { x = -50 y = 0 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE_WINDOW"
+		}
+	}
+	
+	containerWindowType = {
+		name = "ai_trace_entry"
+		size = { width = 1088 height = 48 }
+		Orientation = UPPER_LEFT
+		
+		background = {
+			name = "Background"	
+			quadTextureSprite ="GFX_tiled_plain_bg_small"
+		}
+		
+		instantTextboxType = {
+			name = "failed"
+			position = {x=45 y=5}
+			font = "hoi_16mbs"
+			maxWidth = 70
+			maxHeight = 23
+			format = centre
+			text = "FAILED"
+		}
+		
+		instantTextboxType = {
+			name = "number"
+			position = {x=5 y=5}
+			font = "hoi_16mbs"
+			maxWidth = 80
+			maxHeight = 23
+			format = centre
+		}
+
+		instantTextboxType = {
+			name = "date"
+			position = {x=5 y=25}
+			font = "hoi_16mbs"
+			maxWidth = 80
+			maxHeight = 23
+			format = centre
+		}		
+		
+		instantTextboxType = {
+			name = "text" 
+			position = {x=85 y=5}
+			font = "hoi_16mbs"
+			maxWidth = 300
+			maxHeight = 50
+			format = centre
+		}		
+	}
+}

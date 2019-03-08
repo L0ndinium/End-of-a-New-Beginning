@@ -8,6 +8,9 @@ state={
 		}
 		owner = SRW
 		add_core_of = SRW
+		victory_points = {
+			1208 1
+		}
 	}
 
 	provinces={

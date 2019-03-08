@@ -84,7 +84,7 @@
   	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
   	vic_army_cloth = 1
-  	tech_naval_1812_frigate = 1
+  	#tech_naval_1812_frigate = 1
   	gw_artillery = 1
   	iron_railways = 1
   	steam_engine = 1

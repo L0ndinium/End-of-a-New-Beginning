@@ -295,7 +295,7 @@ leader_traits = {
 		sprite = 10
 		random = yes
 		
-		research_time_factor = -0.02
+		research_speed_factor = 0.02
 
 		ai_will_do = {
 			factor = 1
@@ -306,7 +306,7 @@ leader_traits = {
 		sprite = 10
 		random = yes
 		
-		research_time_factor = -0.03
+		research_speed_factor = 0.03
 
 		ai_will_do = {
 			factor = 1
@@ -675,6 +675,75 @@ leader_traits = {
 		conscription = 0.001
 		out_of_supply_factor = -0.05
 		army_core_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	###Italian Leader Traits
+
+	ITA_trait_Iron_Baron = {
+		random = no
+		
+		political_power_gain = 0.5 
+		
+
+	}
+	
+	#Companies
+	
+	#Light Ship Designer
+	eoanb_naval_manufacturer_light = {
+		random = no
+		#TEMPORARY
+		navy_screen_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Heavy Ship Designer
+	eoanb_naval_manufacturer_heavy = {
+		random = no
+		#TEMPORARY
+		navy_capital_ship_attack_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	artillery_manufacturer_1 = {
+		random = no
+		#generic
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Mass Ship Designer
+	ENG_trait_naval_whitworth = {
+		random = no
+		#TEMPORARY
+		navy_screen_attack_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Fleet Designer
+	GER_trait_naval_lloyd = {
+		random = no
+		#TEMPORARY
+		navy_screen_attack_factor = 0.05
+		navy_screen_defence_factor = 0.05
+		navy_capital_ship_attack_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1

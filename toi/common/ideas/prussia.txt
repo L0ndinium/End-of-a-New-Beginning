@@ -93,7 +93,7 @@ ideas = {
 			
 			picture = PRS_legacy_of_clausewitz
 			
-			research_bonus = { land_doctrine = -0.25 }
+			research_bonus = { land_doctrine = 0.25 }
 			
 			modifier = {
 				#
@@ -310,7 +310,7 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 			}
 		}
 		PRS_idea_new_socialist_schools_2 = {
@@ -323,7 +323,7 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 		}
 		PRS_idea_privatized_railways = {
@@ -526,6 +526,25 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+		PRS_idea_army_reserves_mobilizing = {
+			allowed = {
+				original_tag = PRS
+			}
+			
+			removal_cost = -1
+			
+			picture = eng_imperial_conscription
+			
+			modifier = {
+				conscription = 0.01
+				weekly_manpower = 250
+				mobilization_speed = 1
+				training_time_army_factor = -0.1
+				experience_loss_factor = -0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
 	}
 	political_advisor = {
 		PRS_advisor_august_von_der_heydt = {
@@ -721,7 +740,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				artillery = 0.05
+				artillery = -0.05
 			}
 
 			traits = { PRS_trait_artillery_spandau }
@@ -739,7 +758,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = 0.05
+				infantry_weapons = -0.05
 			}
 
 			traits = { PRS_trait_infantery_krupp }
@@ -902,7 +921,7 @@ ideas = {
 			cost = 250
 
 			research_bonus = {
-				naval_doctrine = 0.1
+				naval_doctrine = -0.1
 			}
 
 			traits = { PRS_trait_naval_adalbert }
@@ -919,8 +938,8 @@ ideas = {
 			cost = 250
 
 			research_bonus = {
-				air_doctrine = 0.1
-				aviation_tech = 0.1
+				air_doctrine = -0.1
+				aviation_tech = -0.1
 			}
 
 			traits = { PRS_trait_air_lilienthal }
@@ -934,7 +953,7 @@ ideas = {
 			cost = 250
 
 			research_bonus = {
-				land_doctrine = 0.1
+				land_doctrine = -0.1
 			}
 
 			traits = { PRS_trait_land_moltke }

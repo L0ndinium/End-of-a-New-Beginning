@@ -15,7 +15,9 @@ state={
 
 		}
 		add_core_of = AUS
-
+		victory_points = {
+			13677 2
+		}
 	}
 
 	provinces={

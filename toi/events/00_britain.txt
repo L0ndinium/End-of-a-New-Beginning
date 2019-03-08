@@ -919,23 +919,23 @@ country_event = {
 	
 	trigger = {
 		TAG = ENG
-		country_exists = JAP
-		NOT = { has_war_with = JAP }
+		country_exists = TSH
+		NOT = { has_war_with = TSH }
 		date > 1858.8.25
 	}
 	
 	option = {
 		name = britainpolitical.4.a
 		ai_chance = { factor = 90 }
-		add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_friendship }
-		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_friendship }
+		add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_friendship }
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_friendship }
 	}
 	
 	option = {
 		name = britainpolitical.4.b
 		ai_chance = { factor = 10 }
-		add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_fauxpas }
-		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_ENG_JAP_fauxpas }
+		add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_fauxpas }
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_ENG_TSH_fauxpas }
 	}
 	
 }

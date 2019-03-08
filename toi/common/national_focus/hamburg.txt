@@ -681,7 +681,8 @@ focus_tree = {
 		prerequisite = { focus = HAM_focus_expand_1854_reforms }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = frigate_tech }
+			#BROKEN BY MTG
+			#add_tech_bonus = { bonus = 0.5 uses = 1 category = frigate_tech }
 		}
 	}
 	
@@ -722,7 +723,8 @@ focus_tree = {
 		prerequisite = { focus = HAM_focus_naval_dockyard }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = lineship_tech }
+			#BROKEN BY MTG
+			#add_tech_bonus = { bonus = 0.5 uses = 1 category = lineship_tech }
 		}
 	}
 	

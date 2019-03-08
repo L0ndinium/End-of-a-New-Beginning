@@ -84,7 +84,7 @@
   set_technology = {
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	iron_railways = 1
 	steam_engine = 1
@@ -136,6 +136,17 @@ create_country_leader = {
   ideology = conserv
   traits = {
     #
+  }
+
+}
+create_country_leader = {
+  name = "Bettino Ricasoli"
+  #desc = "POLITICS_GIUSEPPE_MAZZINI_DESC"
+  picture = "Portrait_ITA_Bettino_Ricasoli.dds"
+  expire = "1965.1.1"
+  ideology = conserv_liberal
+  traits = {
+    ITA_trait_Iron_Baron
   }
 
 }

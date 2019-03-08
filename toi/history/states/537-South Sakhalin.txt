@@ -1,6 +1,6 @@
 state= {
 	id=537
-	name="STATE_537"
+	name="South Sakhalin"
 	manpower = 135196
 	resources={
 		oil=2
@@ -10,7 +10,7 @@ state= {
 	state_category = rural
 
 	history= {
-		owner = JAP
+		owner = TSH
 		add_claim_by = RUS
 		add_claim_by = CHI
 		buildings = {

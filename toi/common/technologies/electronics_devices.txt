@@ -2,7 +2,7 @@ technologies = {
 	
 	pyroglycerine_synthesis = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 2
 		start_year = 1850
@@ -552,7 +552,7 @@ technologies = {
 	
 	electromagnetic_radiation_detection = {
 	
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		dependencies = {
 			alternators = 1
@@ -652,7 +652,7 @@ technologies = {
 	
 	radioactivity_discovery = {
 	
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1895
@@ -707,7 +707,7 @@ technologies = {
 	radio_wave_generators = {
 	
 		production_speed_radar_station_factor = 0.1
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1900
@@ -1013,7 +1013,7 @@ technologies = {
 	
 	theory_of_electromagnetism = {
 	
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1860
