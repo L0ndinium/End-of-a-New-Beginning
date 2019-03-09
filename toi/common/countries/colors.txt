@@ -364,8 +364,8 @@ SER = {
 }
 
 GLM = {
-	color = rgb { 255 137 94 }
-	color_ui = rgb { 255 137 94 }
+	color = rgb { 216 97 28 }
+	color_ui = rgb { 216 97 28 }
 }
 
 SLV = {
