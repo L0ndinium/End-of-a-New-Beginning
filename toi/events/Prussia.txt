@@ -202,7 +202,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		custom_effect_tooltip = eoanb_tt_PRS_event_han_access
 		hidden_effect = {
-			give_military_access = HAN
+			HAN = { give_military_access = PRS }
 		}
 	}
 }

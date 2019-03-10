@@ -81,6 +81,8 @@
 	#tech_naval_1812_frigate = 1
   }
 
+    set_cosmetic_tag = COL_granada
+  
   # POLITICAL LEADERS
 
 
