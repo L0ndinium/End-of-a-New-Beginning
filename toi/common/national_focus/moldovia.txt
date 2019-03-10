@@ -55,6 +55,7 @@ focus_tree = {
         value = 2
       }
    		add_ideas = infrastructure_funding
+			}
 		}
 	}
   focus = {
@@ -132,7 +133,7 @@ focus_tree = {
   focus = {
     id = Moldovian_Rearmamnet
     icon = GFX_goal_focus_industrial_revolution
-    x = 1
+    x = 0
     y = 2
     cost = 70
     prerequisite = {
@@ -154,7 +155,7 @@ focus_tree = {
   focus = {
 		id = Infantry_Support
 		icon = GFX_goal_generic_national_unity
-		x = 1
+		x = 0
 		y = 3
 		cost = 75
 		available_if_capitulated = no
@@ -171,7 +172,7 @@ focus_tree = {
   focus = {
     id = Learning_from_the_Seimeni
     icon = GFX_focus_generic_little_entente
-    x = 1
+    x = 0
     y = 4
     cost = 70
     available_if_capitulated = no
@@ -276,7 +277,7 @@ focus_tree = {
 			x = 6
 			y = 2
 			cost = 60
-			prerequisite = { focus = Great_Power_Tutelag }
+			prerequisite = { focus = Great_Power_Tutelage }
 			available_if_capitulated = no
 			ai_will_do = {
 				factor = 1
@@ -370,3 +371,4 @@ focus_tree = {
 						add_tech_bonus = { bonus = 0.30 uses = 2 category = naval_technolgy }
 					}
 				}
+			}
