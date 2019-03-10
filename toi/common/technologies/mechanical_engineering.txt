@@ -1269,7 +1269,7 @@ technologies = {
 	
 	early_thermodynamics_theories = {
 	
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1855
@@ -1304,7 +1304,7 @@ technologies = {
 	gibbs_theory_of_thermodynamics = {
 	
 		local_resources_factor = 0.05
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1875

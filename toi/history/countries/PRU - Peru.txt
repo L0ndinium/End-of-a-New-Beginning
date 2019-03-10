@@ -6,11 +6,6 @@
   set_convoys = 0
   
   set_research_slots = 2
-  
-      declare_war_on = {
-    target = PRR
-    type = annex_everything
-  }
 
   add_ideas = { 
     #POLITICS 
@@ -86,8 +81,8 @@
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
-	tech_naval_1857_sloop_steam = 1
+	#tech_naval_1812_frigate = 1
+	#tech_naval_1857_sloop_steam = 1
 	start_build_tech = 1
   }
 

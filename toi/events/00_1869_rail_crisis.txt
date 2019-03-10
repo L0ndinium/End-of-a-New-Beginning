@@ -197,8 +197,8 @@ country_event = {
 	option = {
 		name = fbrailcrisis.7.c
 		ai_chance = { factor = 0 }
+		976 = { add_claim_by = BEL }
 		declare_war_on = { target = FRA type = take_claimed_state }
-		976 = { add_claim_by = FRA }
 	}
 	
 }

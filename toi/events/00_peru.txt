@@ -28,9 +28,13 @@ country_event = {
 	trigger = {
     AND = {
 	tag = ECU
-	has_stability < 0.01
+	has_idea = PRU_port_blockade
 	}
 	}
+	
+	mean_time_to_happen = {
+			days = 10
+		}
 	
 	option = {
 		name = peru.2.a

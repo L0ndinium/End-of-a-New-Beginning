@@ -26,7 +26,7 @@ country_event = {
         add_state_claim = 364
         CSA = { transfer_state = 364 }
         364 = { add_core_of = CSA }
-        USA = { CSA = { transfer_technology = yes } }
+        CSA = { inherit_technology = USA }
     }
     option = {
         name = acw.1.b
@@ -43,7 +43,7 @@ country_event = {
         add_state_claim = 364
         CSA = { transfer_state = 364 }
         364 = { add_core_of = CSA }
-        USA = { CSA = { transfer_technology = yes } }
+        CSA = { inherit_technology = USA }
         CSA = {
             change_tag_from = USA
             }
@@ -83,7 +83,7 @@ country_event = {
         add_state_claim = 364
         CSA = { transfer_state = 364 }
         364 = { add_core_of = CSA }
-        USA = { CSA = { transfer_technology = yes } }
+        CSA = { inherit_technology = USA }
   }
     option = {
         name = acw.1.b
@@ -96,7 +96,7 @@ country_event = {
         add_state_claim = 364
         CSA = { transfer_state = 364 }
         364 = { add_core_of = CSA }
-        USA = { CSA = { transfer_technology = yes } }
+        CSA = { inherit_technology = USA }
         CSA = {  
             change_tag_from = USA
             }
@@ -179,26 +179,28 @@ country_event = {
                 remove_state_core = 363
                 add_state_claim = 363
                 363 = { add_core_of = CSA }
+                set_country_flag = USAAmerican_Civil_War
+                country_event = { hours = 1 id = usa.14 }
+                country_event = { days = 5 id = acw.5 }
+                country_event = { id = acw.6 }
+                add_war_support = 0.3
+                add_stability = 0.3
+                country_event = { id = csa.8 }
+                add_popularity = { ideology = traditional_conservatism popularity = -0.2 }
             }
-            USA = { country_event = { id = csa.8 } }
-            USA = { add_popularity = { ideology = traditional_conservatism popularity = -0.2 } }
+            CSA = {
+                set_country_flag = CSAAmerican_Civil_War
+                country_event = { hours = 1 id = csa.10 }
+                country_event = { id = acw.6 }
+                add_stability = 0.3
+                add_war_support = 0.3
+            }
+            news_event = { id = acw_news.1 }
+            declare_war_on = {
+                target = USA
+                type = acw_civil_war_wargoal
+            }
         }
-        declare_war_on = {
-            target = USA
-            type = acw_civil_war_wargoal
-        }
-        hidden_effect = { USA = { set_country_flag = USAAmerican_Civil_War } }
-        hidden_effect = { CSA = { set_country_flag = CSAAmerican_Civil_War } }
-        hidden_effect = { USA = { country_event = { hours = 1 id = usa.14 } } }
-        hidden_effect = { CSA = { country_event = { hours = 1 id = csa.10 } } }
-        hidden_effect = { USA = { country_event = { days = 5 id = acw.5 } } }
-        hidden_effect = { USA = { country_event = { id = acw.6 } } }
-        hidden_effect = { CSA = { country_event = { id = acw.6 } } }
-        hidden_effect = { news_event = { id = acw_news.1 } }
-        hidden_effect = { CSA = { add_stability = 0.3 } }
-        hidden_effect = { CSA = { add_war_support = 0.3 } }
-        hidden_effect = { USA = { add_stability = 0.3 } }
-        hidden_effect = { USA = { add_war_support = 0.3 } }
     }
 }
 country_event = {
@@ -248,7 +250,7 @@ country_event = {
             limit = {
                 tag = USA
             }
-            USA = { remove_ideas = american_slavery_3 }
+            remove_ideas = american_slavery_3
             add_political_power = 200
             add_timed_idea = {
                 idea = USA_civil_war_over_by_christmas
@@ -2198,7 +2200,7 @@ country_event = {
                 set_stability = 0.9
                 set_war_support = 0.9
                 load_oob = USA_IMPERIAL_STATES
-                USA = { CAL = { transfer_technology = yes } }
+                inherit_technology = USA
                 country_event = { id = acw.6 }
                 add_popularity = {
                     ideology = autocracy
@@ -2289,7 +2291,7 @@ country_event = {
                 set_stability = 0.9
                 set_war_support = 0.9
                 load_oob = USA_IMPERIAL_STATES
-                USA = { CAL = { transfer_technology = yes } }
+                inherit_technology = USA
                 country_event = { id = acw.6 }
                 add_popularity = {
                     ideology = autocracy
@@ -2396,7 +2398,7 @@ country_event = {
                 set_stability = 0.9
                 set_war_support = 0.9
                 load_oob = USA_MANHATTAN_COMMUNE
-                USA = { MHC = { transfer_technology = yes } }
+                inherit_technology = USA
                 country_event = { id = acw.6 }
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
@@ -2450,7 +2452,7 @@ country_event = {
                 set_war_support = 0.9
                 country_event = { id = acw.6 }
                 load_oob = USA_MANHATTAN_COMMUNE
-                USA = { MHC = { transfer_technology = yes } }
+                inherit_technology = USA
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
                     amount = 2500
@@ -2510,7 +2512,7 @@ country_event = {
                 transfer_state = 733
                 transfer_state = 358
                 load_oob = USA_FREE_STATES
-                USA = { NEG = { transfer_technology = yes } }
+                inherit_technology = USA
                 set_stability = 0.9
                 set_war_support = 0.9
                 country_event = { id = acw.6 }
@@ -2621,7 +2623,7 @@ country_event = {
                 transfer_state = 733
                 transfer_state = 358
                 load_oob = USA_FREE_STATES
-                USA = { NEG = { transfer_technology = yes } }
+                inherit_technology = USA
                 set_stability = 0.9
                 set_war_support = 0.9
                 country_event = { id = acw.6 }
@@ -3048,7 +3050,7 @@ country_event = {
                 transfer_state = 1304
                 transfer_state = 1303
             }
-            USA = { TEX = { transfer_technology = yes } }
+            TEX = { inherit_technology = USA }
             TEX = {
                 start_civil_war = {
                     ruling_party = centrism
@@ -3139,7 +3141,7 @@ country_event = {
                 transfer_state = 1303
                 set_country_flag = TEX_civil_war
             }
-            USA = { TEX = { transfer_technology = yes } }
+            TEX = { inherit_technology = USA }
             TEX = {
                 start_civil_war = {
                     ruling_party = centrism

@@ -137,14 +137,13 @@ guiTypes = {
 	   
    }
 	containerWindowType = {
-       name = "colonial_power_container"
-       position = { x = 1000 y = 4 }
+       name = "colonial_power_container_1"
+       position = { x = 980 y = 4 }
  
        buttonType ={
            name ="colonial_power_bg"
            spriteType = "GFX_generic_box_96"
            position = { x=0 y=0 }
-           shortcut = "ctrl+p"
        }
  
        iconType = {
@@ -153,19 +152,19 @@ guiTypes = {
            position = { x= 1 y = 1 }
        }
  
-       instantTextBoxType = {
-           name ="colonial_power_text"
-           position = { x= 25 y = 4 }
-           font = "hoi_18mbs"
-           text = "[?colonial_power]/[?colonial_power_max]"
-           format = center
-           maxWidth = 64
-           maxHeight = 24
-           fixedsize = yes
+        instantTextBoxType = {
+            name ="colonial_power_text"
+            position = { x= 25 y = 4 }
+            font = "hoi_18mbs"
+            text = "[?colonial_power]/[?colonial_power_max]"
+            format = center
+            maxWidth = 64
+            maxHeight = 24
+            fixedsize = yes
     
-           pdx_tooltip = COLONIAL_POWER_TOOLTIP
-           pdx_tooltip_delayed = COLONIAL_POWER_TOOLTIP_DELAYED
-       }
+            pdx_tooltip = COLONIAL_POWER_TOOLTIP
+            pdx_tooltip_delayed = COLONIAL_POWER_TOOLTIP_DELAYED
+        }
    }
    containerWindowType = {
        name = "progress_in_colonial_area_container"

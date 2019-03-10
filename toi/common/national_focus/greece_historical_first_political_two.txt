@@ -1,0 +1,606 @@
+focus_tree = {
+	id = greece_historical_focus_first_political_two 
+country = {
+		factor = 0
+	}
+	    default = no 
+		shared_focus = GRE_agrarian_nation
+		shared_focus = GRE_hellenic_army
+		shared_focus = GRE_hellenic_navy
+		shared_focus = GRE_culture_revival
+	
+#Start - Politics	
+	focus = {
+		id = GRE_Revolutionary_Government   
+		icon = GFX_focus_government_icon 
+		x = 8      
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_New_King  
+		icon = GFX_focus_government_icon 
+		x = -5     
+		y = 0
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+
+	focus = {
+		id = GRE_Proclaim_Elections_Rev_Gov   
+		icon = GFX_focus_government_icon 
+		x = 0    
+		y = 1   
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_Revolutionary_Government
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Begin_National_Convention_Rev_Gov 
+		icon = GFX_focus_government_icon 
+		x = 0    
+		y = 2    
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_Proclaim_Elections_Rev_Gov
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Continue_Monarchy_Rev_Gov
+		icon = GFX_focus_government_icon 
+		x = -3      
+		y = 3     
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_Begin_National_Convention_Rev_Gov
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Proclaim_Republic_Rev_Gov
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Proclaim_Republic_Rev_Gov  
+		icon = GFX_focus_government_icon 
+		x = 3      
+		y = 3     
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_Begin_National_Convention_Rev_Gov
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_Continue_Monarchy_Rev_Gov
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_King_George  
+		icon = GFX_focus_government_icon 
+		x = -5      
+		y = 4   
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_New_King
+		    focus = GRE_Continue_Monarchy_Rev_Gov
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_King_Alfred
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_King_Alfred  
+		icon = GFX_focus_government_icon 
+		x = -1       
+		y = 4   
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Continue_Monarchy_Rev_Gov
+		}
+		
+		mutually_exclusive = {
+		    focus = GRE_King_George
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Neutral_King   
+		icon = GFX_focus_government_icon 
+		x = -6      
+		y = 5    
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_King_George
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Wilhelm_von_Sponneck   
+		icon = GFX_focus_government_icon 
+		x = -8        
+		y = 6     
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_Neutral_King
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Marry_Olga_Russia    
+		icon = GFX_focus_government_icon 
+		x = -6       
+		y = 6      
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_Neutral_King
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Versatile_Foreign_Policy     
+		icon = GFX_focus_government_icon 
+		x = -6       
+		y = 7      
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+			focus = GRE_Marry_Olga_Russia
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_British_King   
+		icon = GFX_focus_government_icon 
+		x = 0       
+		y = 5   
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_King_Alfred
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Marry_Maria_Alexandrovna    
+		icon = GFX_focus_government_icon 
+		x = 0       
+		y = 6    
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_British_King
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Pro_British_Foreign_Policy     
+		icon = GFX_focus_government_icon 
+		x = 0       
+		y = 7    
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_Marry_Maria_Alexandrovna
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Ionian_Islands     
+		icon = GFX_focus_government_icon 
+		x = -4        
+		y = 5     
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_King_George
+		    focus = GRE_King_Alfred
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Suffrage_Everyone      
+		icon = GFX_focus_government_icon 
+		x = -2         
+		y = 5     
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+		
+		prerequisite = {
+		    focus = GRE_King_George
+		    focus = GRE_King_Alfred
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Establish_Order       
+		icon = GFX_focus_government_icon 
+		x = -3          
+		y = 6      
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+
+		prerequisite = {
+		    focus = GRE_Ionian_Islands
+		}		
+		prerequisite = {
+		    focus = GRE_Suffrage_Everyone
+		}
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Father_Nation        
+		icon = GFX_focus_government_icon 
+		x = -3          
+		y = 7       
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+
+		prerequisite = {
+		    focus = GRE_Establish_Order
+		}		
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_President_Grivas          
+		icon = GFX_focus_government_icon 
+		x = 3             
+		y = 4        
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+
+		prerequisite = {
+		    focus = GRE_Proclaim_Republic_Rev_Gov
+		}		
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Cleanse_Public_Administration          
+		icon = GFX_focus_government_icon 
+		x = 2               
+		y = 5         
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+
+		prerequisite = {
+		    focus = GRE_President_Grivas
+		}		
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Exile_Voulgaris          
+		icon = GFX_focus_government_icon 
+		x = 4                
+		y = 5         
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+
+		prerequisite = {
+		    focus = GRE_President_Grivas
+		}		
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_True_Republic_Rev_Gov           
+		icon = GFX_focus_government_icon 
+		x = 3                 
+		y = 6         
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+
+		prerequisite = {
+		    focus = GRE_Cleanse_Public_Administration
+		}		
+		prerequisite = {
+		    focus = GRE_Exile_Voulgaris
+		}		
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+	
+	focus = {
+		id = GRE_Elections_Rev_Gov_Republic            
+		icon = GFX_focus_government_icon 
+		x = 3                 
+		y = 7          
+		cost = 70
+		available_if_capitulated = no
+		relative_position_id = GRE_Revolutionary_Government
+	
+		ai_will_do = {
+			factor = 1 
+		}
+
+		prerequisite = {
+		    focus = GRE_True_Republic_Rev_Gov
+		}		
+		
+		completion_reward = {
+		    GRE = {
+			    add_political_power = 100 
+			}
+	    }	
+	}
+
+
+}

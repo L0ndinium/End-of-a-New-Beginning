@@ -48,7 +48,7 @@ defined_text = {
 		}
 		localization_key = eoanb_lockey_italian_celebrate_traditions_TUS
 	}
-	text = {
+	text = { 
 		trigger = {
 			TAG = NSC
 		}
@@ -56,5 +56,57 @@ defined_text = {
 	}
 	text = {
 		localization_key = eoanb_lockey_italian_celebrate_traditions_general
+	}
+}
+
+defined_text = {
+	name = GetGreekHeirOttoName 
+	text = {
+		trigger = {
+			THIS = {
+			    has_country_flag = GRE_flag_luitpold_heir 
+			}
+		}
+		localization_key = "eoanb_greek_heir_otto_luitpold"
+	}
+	text = {
+		trigger = { 
+			THIS = {
+			    has_country_flag = GRE_flag_ludwig_heir 
+			}
+		}
+		localization_key = "eoanb_greek_heir_otto_ludwig"
+	}
+	text = {
+		trigger = { 
+		}
+		localization_key = "eoanb_greek_heir_otto_none" 
+    }
+}
+	
+defined_text = {
+	name = GetPowerStatusName
+	text = {
+		trigger = {
+            check_variable = { this.score_array_position_var <  8 }			
+		}
+		localization_key = eoanb_lockey_power_status_great_power 
+	}
+	text = {
+		trigger = {	
+            check_variable = { this.score_array_position_var >  7 }		
+            check_variable = { this.score_array_position_var <  16 }				
+		}
+		localization_key = eoanb_lockey_power_status_secondary_power
+	}
+	text = {
+		trigger = {		
+            check_variable = { this.score_array_position_var >  16 }		
+            check_variable = { this.score_array_position_var <  40 }		
+		}
+		localization_key = eoanb_lockey_power_status_minor_power
+	}
+	text = {
+		localization_key = eoanb_lockey_power_status_unsignificant_power
 	}
 }

@@ -12,8 +12,7 @@ state={
 		owner = ARG
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 2
-			arms_factory = 1
+			industrial_complex = 1
 
 		}
 		victory_points = {

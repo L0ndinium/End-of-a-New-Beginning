@@ -40,7 +40,7 @@ on_actions = {
 				limit = { 
                     has_idea = AF_T_small_kingdom
                 }
-				clamp_variable = { var = industrisation_progress min = 0 max = industrisation_progress_max }
+				#clamp_variable = { var = industrisation_progress min = 0 max = 100 }
 			}
 			if = {
 				limit = { 

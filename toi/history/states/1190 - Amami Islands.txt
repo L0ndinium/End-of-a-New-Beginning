@@ -6,11 +6,11 @@ state={
 	state_category = small_island
 
 	history={
-		owner = JAP
+		owner = TSH
 		victory_points = {
 			7115 1
 		}
-		add_core_of = JAP
+		add_core_of = TSH
 	}
 
 	provinces={

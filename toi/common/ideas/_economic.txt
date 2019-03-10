@@ -144,7 +144,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.05
 				conversion_cost_civ_to_mil_factor= 0.05
 				conversion_cost_mil_to_civ_factor = 0.05
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				political_power_factor = -0.05
 			}
 			
@@ -183,7 +183,7 @@ ideas = {
 				production_speed_buildings_factor = -0.1
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				political_power_factor = -0.1
 			}
 			
@@ -246,7 +246,7 @@ ideas = {
 				production_speed_buildings_factor = -0.3
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
-				research_time_factor = 0.2
+				research_speed_factor = -0.2
 				political_power_factor = -0.3
 			}
 			
@@ -279,7 +279,7 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -307,7 +307,7 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 			}
 			
 			default = yes
@@ -337,7 +337,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
-				research_time_factor = -0.01
+				research_speed_factor = 0.01
 			}
 			
 			cancel_if_invalid = no
@@ -623,7 +623,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.15
-				research_time_factor = -0.04
+				research_speed_factor = 0.04
 				consumer_goods_factor = -0.04
 				stability_weekly = -0.001
 				drift_defence_factor = -0.4
@@ -665,7 +665,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.1
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 				consumer_goods_factor = -0.02
 				stability_weekly = -0.0005
 				drift_defence_factor = -0.2
@@ -785,7 +785,7 @@ ideas = {
 			
 			modifier = {
 				political_power_factor = -0.1
-				research_time_factor = 0.02
+				research_speed_factor = -0.02
 				consumer_goods_factor = 0.05
 				stability_weekly = 0.0005
 				drift_defence_factor = 0.2
@@ -816,7 +816,7 @@ ideas = {
 				MONTHLY_POPULATION = -0.1
 				political_power_gain = -0.1
 				trade_opinion_factor = -0.25
-				research_time_factor = 0.08
+				research_speed_factor = -0.08
 			}
 			
 			default = yes
@@ -845,7 +845,7 @@ ideas = {
 				MONTHLY_POPULATION = -0.05
 				political_power_gain = -0.05
 				trade_opinion_factor = -0.1
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -892,7 +892,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.2
 				production_factory_max_efficiency_factor = 0.1
 				local_resources_factor = 0.1
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				MONTHLY_POPULATION = -0.15
 				conscription_factor = -0.1
 				political_power_factor = -0.2
@@ -925,7 +925,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_factory_max_efficiency_factor = 0.05
 				local_resources_factor = 0.05
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 				MONTHLY_POPULATION = -0.1
 				conscription_factor = -0.05
 				political_power_factor = -0.1
@@ -982,7 +982,7 @@ ideas = {
 		
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.05
-				research_time_factor = 0.02
+				research_speed_factor = -0.02
 				trade_laws_cost_factor = -0.1
 				#mobilization_laws_cost_factor = -0.1
 			}
@@ -1011,7 +1011,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.1
 				production_factory_max_efficiency_factor = -0.05
 				local_resources_factor = -0.1
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				MONTHLY_POPULATION = 0.05
 				conscription_factor = 0.05
 				trade_laws_cost_factor = -0.25

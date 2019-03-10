@@ -53,6 +53,7 @@ technology_categories = {
 	infantry_tech
 	marine_tech
 	construction_tech
+	excavation_tech
 	submarine_doctrine
 	air_equipment
 	cat_mobile_warfare
@@ -126,13 +127,13 @@ technology_categories = {
 	doctrine_victorian_traditional_tech
 	doctrine_victorian_industry_tech
 	doctrine_victorian_innovative_tech
-	monitor_tech
-	frigate_tech
-	sloop_tech
-	lineship_tech
-	gunboat_tech
-	corvette_tech
-	submarine_tech
+	#monitor_tech
+	#frigate_tech
+	#sloop_tech
+	#lineship_tech
+	#gunboat_tech
+	#corvette_tech
+	#submarine_tech
 	navaltroops_tech
 	project_tech
 	suez_canal_tech
@@ -144,6 +145,12 @@ technology_categories = {
 	kiel_canal_tech
 	gatling_gun_tech
 	tech_category_uniforms
+	naval_mines
+	concentrated_industry_category
+	dispersed_industry_category
+	asw_tech
+	naval_minesweeping
+	naval_minelaying
 }
 
 technology_folders = {
@@ -152,7 +159,17 @@ technology_folders = {
 	armour_folder
 	artillery_folder
 	air_techs_folder
-	naval_folder
+	naval_folder = {
+		available = {
+			not = { has_dlc = "Man the Guns" }
+		}
+	}
+	mtgnavalfolder = {
+		available = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	industry_folder
 	land_doctrine_folder
 	naval_doctrine_folder
 	air_doctrine_folder

@@ -12,15 +12,26 @@ NMapMode = {
 	FABRICATE_CLAIM_ALREADY_CLAIM_SECONDARY_COLOR = { 0.5, 0, 0, 1 },
 	FABRICATE_CLAIM_ALREADY_CORE_SECONDARY_COLOR = { 0.5, 0, 0, 1 },
 	FABRICATE_CLAIM_ALREADY_FABRICATING_SECONDARY_COLOR = { 0.5, 0, 0, 1 },
-	CONSTRUCTION_MAP_MODE_BUILDING_DEFAULT_COLOR = { 0.43, 0.43, 0.43 }, 			-- Color of states/provinces that can't be built on
-	CONSTRUCTION_MAP_MODE_BUILDING_MAX_LEVEL_COLOR = { 0.0, 0.0, 1.0  }, 			-- Color of states/provinces where current building level is maxed out (max is current max level, not final max level) of a building type
+	CONSTRUCTION_MAP_MODE_BUILDING_DEFAULT_COLOR = { 0.43, 0.22, 0.22, 0.25 }, 			-- Color of states/provinces that can't be built on
+	CONSTRUCTION_MAP_MODE_BUILDING_MAX_LEVEL_COLOR = { 0.05, 0.1, 0.7, 0.4 }, 			-- Color of states/provinces where current building level is maxed out (max is current max level, not final max level) of a building type
+	CONSTRUCTION_MAP_MODE_BUILDING_LEVEL_LOW_COLOR = { 0.05, 0.22, 0.0, 0.4 },
+	CONSTRUCTION_MAP_MODE_BUILDING_LEVEL_HI_COLOR = { 0.4, 0.9, 0.0, 0.5 },
 	CONSTRUCTION_MAP_MODE_BUILDING_MAX_AMOUNT_QUEUED_COLOR = { 0.0, 0.0, 1.0  }, 	-- Color of states/provinces when building queue is maxed of a building type
 	CONSTRUCTION_MAP_MODE_BUILDING_QUEUED_COLOR = { 1.0, 0.85, 0.0  },				-- Color of states/provinces when building queue contains one or more of a building type.
-	DIPLOMACY_MAP_MODE_CONTROLLER_COLOR_FACTOR = 1.8,								-- If the nation is a controller but not an owner of a state. Larger value = brighter
-	CONSTRUCTION_MAP_MODE_TRANSPARENCY_OVERRIDE = 248, 								-- When you use gradient borders to defeat the purpose of gradient borders. Larger than 248 seems to make the transparency stronger?
+	MAP_MODE_MANPOWER_RANGE_MAX = 20000000,											-- When a state has that much manpower, it will be colored with the color MAP_MODE_MANPOWER_RANGE_COLOR_TO. Everything below that will have an interpolated color.
+	MAP_MODE_MANPOWER_RANGE_COLOR_FROM = { 0.2, 0.2, 0.7, 0.18 },					-- Color range for manpower map mode.
+	MAP_MODE_MANPOWER_RANGE_COLOR_TO = { 1, 0.125, 0.0, 0.6 },
+	MAP_MODE_INFRA_RANGE_COLOR_FROM = { 1, 0.125, 0.0, 0.1 },						-- Color range for infrastructure map mode.
+	MAP_MODE_INFRA_RANGE_COLOR_TO = { 0.1, 0.9, 0.1, 0.6 },
+	MAP_MODE_IDEOLOGY_COLOR_TRANSPARENCY = 1,										-- In the Ideology map mode, the colors on the map are taken from the scriptable file 00_ideologies.txt for each group. We use them in the interfaces (pie-charts) where transparency is not used, but 100% opaque looks bad on the map. This is a variable to control the transparency of the color.
+	DIPLOMACY_MAP_MODE_CONTROLLER_COLOR_FACTOR = 1.8,								-- OBSOLETE
+	CONSTRUCTION_MAP_MODE_TRANSPARENCY_OVERRIDE = 241, 								-- When you use gradient borders to defeat the purpose of gradient borders. Larger than 248 seems to make the transparency stronger?
 	PEACE_CONFERENCE_CURRENT_SELECTED_SECONDARY_COLOR = { 0, 0, 1, 0.25 },
 	PEACE_CONFERENCE_SELECTABLE_SECONDARY_COLOR = { 0, 1, 0, 0.25 },
-	FACTIONS_COLOR_NOT_MEMBER = { 0.6, 0.6, 0.6, 1.0 },
+	FACTIONS_COLOR_NOT_MEMBER = { 0.6, 0.6, 0.6, 0.25 },
+	FACTIONS_MEMBER_TRANSPARENCY = 1.0,
+	PLAYER_MAPMODE_NOT_SELECTED_COUNTRY_TRANSPARENCY = 0.15,						-- How much is the country colors faded out, for countries that are not occupied by the any player.
+	SELECTED_COUNTRY_HIGHLIGHT_THICKNESS_MULT = 1.5,								-- When a country is selected (blinking/highlighted) it's borders becomes a bit thicker, to make stand out even more. 1.0 is default thick
 	STRATEGIC_MODE_COUNTRY_COLOR_STRIPES_TRANSP = 0.0,
 	STRATEGIC_MODE_ENEMY_STRIPES_COLOR = { 0.827, 0.172, 0.184, 0.0 },
 	STRATEGIC_MODE_OUR_STRIPES_COLOR = { 0.427, 0.619, 0.858, 0.0 },
@@ -38,7 +49,15 @@ NMapMode = {
 	AIR_MISSION_ARROW_ACTIVE_COLOR = { 0, 1.0, 0, 0.5 },							-- Color of the arrow drawn in the strategic air map mode, between the air base and the region for the active missions
 	AIR_MISSION_ARROW_NONACTIVE_COLOR = { 1.0, 1.0, 1.0, 0.2 },						-- Same as above, but for non active missions (when no air wing has any mission active)
 	AIR_MISSION_ARROW_SELECTED_COLOR = { 1.0, 1.0, 0, 0.8 },						-- Same as above, but for currently selected air wings/air bases.
-	AIR_TRANSFER_ARROW_COLOR = { 1, 1, 0, 0.75 }									-- Same as above, but for the arrows drawn between airbases for current transfers
+	AIR_TRANSFER_ARROW_COLOR = { 1, 1, 0, 0.75 },									-- Same as above, but for the arrows drawn between airbases for current transfers
+	NAVAL_REGION_ACCESS_AVOID_COLOR = { 1, 1, 0, 0.35 },							-- Color for the map stripes on naval regions that has set an access level = AVOID
+	NAVAL_REGION_ACCESS_BLOCK_COLOR = { 1, 0, 0, 0.45 },							-- Color for the map stripes on naval regions that has set an access level = BLOCK
+	NAVAL_REGION_FADE_WHEN_FLEET_SELECTED = 0.15,									-- How much all region borders (except those with mission assigned to it) are faded out, when a fleet is selected.
+	AIR_REGION_FADE_WHEN_WING_SELECTED = 0.15,
+	UI_CONFIGURABLE_SLOT_FROM = 3,													-- Mapmode slots range that may be configurable. Indices are 0-based (first slot is 0)
+	UI_CONFIGURABLE_SLOT_TO = 8,
+	MAP_MODE_TERRAIN_TRANSPARENCY = 0.5,											-- How much transparent are the province colors in the simplified terrain map mode
+	MAP_MODE_NAVAL_TERRAIN_TRANSPARENCY = 0.8,										-- How much transparent are the SEA province colors in the simplified terrain map mode
 },
 
 NMapIcons = {
@@ -60,6 +79,8 @@ NMapIcons = {
 		DEFAULT_PRIORITY_CAPITAL = 5,
 		DEFAULT_PRIORITY_PEACE_COST = 3,
 		DEFAULT_PRIORITY_ADJACENCY_RULE = 3,
+		DEFAULT_PRIORITY_NAVAL_MINES = 13,
+		DEFAULT_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		STATES_PRIORITY_UNITS_STACK = 10,
 		STATES_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -78,6 +99,8 @@ NMapIcons = {
 		STATES_PRIORITY_CAPITAL = 5,
 		STATES_PRIORITY_PEACE_COST = 3,
 		STATES_PRIORITY_ADJACENCY_RULE = 3,
+		STATES_PRIORITY_NAVAL_MINES = 13,
+		STATES_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		SUPPLY_AREAS_PRIORITY_UNITS_STACK = 10,
 		SUPPLY_AREAS_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -96,6 +119,8 @@ NMapIcons = {
 		SUPPLY_AREAS_PRIORITY_CAPITAL = 5,
 		SUPPLY_AREAS_PRIORITY_PEACE_COST = 3,
 		SUPPLY_AREAS_PRIORITY_ADJACENCY_RULE = 3,
+		SUPPLY_AREAS_PRIORITY_NAVAL_MINES = 13,
+		SUPPLY_AREAS_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		STRATEGIC_AIR_PRIORITY_UNITS_STACK = 10,
 		STRATEGIC_AIR_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -114,6 +139,8 @@ NMapIcons = {
 		STRATEGIC_AIR_PRIORITY_CAPITAL = 5,
 		STRATEGIC_AIR_PRIORITY_PEACE_COST = 3,
 		STRATEGIC_AIR_PRIORITY_ADJACENCY_RULE = 3,
+		STRATEGIC_AIR_PRIORITY_NAVAL_MINES = 13,
+		STRATEGIC_AIR_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		STRATEGIC_NAVY_PRIORITY_UNITS_STACK = 10,
 		STRATEGIC_NAVY_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -132,6 +159,8 @@ NMapIcons = {
 		STRATEGIC_NAVY_PRIORITY_CAPITAL = 5,
 		STRATEGIC_NAVY_PRIORITY_PEACE_COST = 3,
 		STRATEGIC_NAVY_PRIORITY_ADJACENCY_RULE = 3,
+		STRATEGIC_NAVY_PRIORITY_NAVAL_MINES = 13,
+		STRATEGIC_NAVY_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		RESISTANCE_PRIORITY_UNITS_STACK = 10,
 		RESISTANCE_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -150,6 +179,8 @@ NMapIcons = {
 		RESISTANCE_PRIORITY_CAPITAL = 5,
 		RESISTANCE_PRIORITY_PEACE_COST = 3,
 		RESISTANCE_PRIORITY_ADJACENCY_RULE = 3,
+		RESISTANCE_PRIORITY_NAVAL_MINES = 13,
+		RESISTANCE_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		RESOURCES_PRIORITY_UNITS_STACK = 10,
 		RESOURCES_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -168,6 +199,8 @@ NMapIcons = {
 		RESOURCES_PRIORITY_CAPITAL = 5,
 		RESOURCES_PRIORITY_PEACE_COST = 3,
 		RESOURCES_PRIORITY_ADJACENCY_RULE = 3,
+		RESOURCES_PRIORITY_NAVAL_MINES = 13,
+		RESOURCES_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		DIPLOMACY_PRIORITY_UNITS_STACK = 10,
 		DIPLOMACY_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -186,6 +219,8 @@ NMapIcons = {
 		DIPLOMACY_PRIORITY_CAPITAL = 5,
 		DIPLOMACY_PRIORITY_PEACE_COST = 3,
 		DIPLOMACY_PRIORITY_ADJACENCY_RULE = 3,
+		DIPLOMACY_PRIORITY_NAVAL_MINES = 13,
+		DIPLOMACY_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		FACTIONS_PRIORITY_UNITS_STACK = 10,
 		FACTIONS_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -204,6 +239,8 @@ NMapIcons = {
 		FACTIONS_PRIORITY_CAPITAL = 5,
 		FACTIONS_PRIORITY_PEACE_COST = 3,
 		FACTIONS_PRIORITY_ADJACENCY_RULE = 3,
+		FACTIONS_PRIORITY_NAVAL_MINES = 13,
+		FACTIONS_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		STRATEGIC_REGIONS_PRIORITY_UNITS_STACK = 10,
 		STRATEGIC_REGIONS_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -222,6 +259,8 @@ NMapIcons = {
 		STRATEGIC_REGIONS_PRIORITY_CAPITAL = 5,
 		STRATEGIC_REGIONS_PRIORITY_PEACE_COST = 3,
 		STRATEGIC_REGIONS_PRIORITY_ADJACENCY_RULE = 3,
+		STRATEGIC_REGIONS_PRIORITY_NAVAL_MINES = 13,
+		STRATEGIC_REGIONS_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		DEPLOYMENT_AIR_PRIORITY_UNITS_STACK = 10,
 		DEPLOYMENT_AIR_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -240,6 +279,8 @@ NMapIcons = {
 		DEPLOYMENT_AIR_PRIORITY_CAPITAL = 5,
 		DEPLOYMENT_AIR_PRIORITY_PEACE_COST = 3,
 		DEPLOYMENT_AIR_PRIORITY_ADJACENCY_RULE = 3,
+		DEPLOYMENT_AIR_PRIORITY_NAVAL_MINES = 13,
+		DEPLOYMENT_AIR_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		DEPLOYMENT_NAVY_PRIORITY_UNITS_STACK = 10,
 		DEPLOYMENT_NAVY_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -258,6 +299,8 @@ NMapIcons = {
 		DEPLOYMENT_NAVY_PRIORITY_CAPITAL = 5,
 		DEPLOYMENT_NAVY_PRIORITY_PEACE_COST = 3,
 		DEPLOYMENT_NAVY_PRIORITY_ADJACENCY_RULE = 3,
+		DEPLOYMENT_NAVY_PRIORITY_NAVAL_MINES = 13,
+		DEPLOYMENT_NAVY_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		DEPLOYMENT_MILITARY_PRIORITY_UNITS_STACK = 10,
 		DEPLOYMENT_MILITARY_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -276,6 +319,8 @@ NMapIcons = {
 		DEPLOYMENT_MILITARY_PRIORITY_CAPITAL = 5,
 		DEPLOYMENT_MILITARY_PRIORITY_PEACE_COST = 3,
 		DEPLOYMENT_MILITARY_PRIORITY_ADJACENCY_RULE = 3,
+		DEPLOYMENT_MILITARY_PRIORITY_NAVAL_MINES = 13,
+		DEPLOYMENT_MILITARY_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		PEACE_CONFERENCE_PRIORITY_UNITS_STACK = 10,
 		PEACE_CONFERENCE_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -294,6 +339,8 @@ NMapIcons = {
 		PEACE_CONFERENCE_PRIORITY_CAPITAL = 5,
 		PEACE_CONFERENCE_PRIORITY_PEACE_COST = 3,
 		PEACE_CONFERENCE_PRIORITY_ADJACENCY_RULE = 3,
+		PEACE_CONFERENCE_PRIORITY_NAVAL_MINES = 13,
+		PEACE_CONFERENCE_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		INFRASTRUCTURE_PRIORITY_UNITS_STACK = 10,
 		INFRASTRUCTURE_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -312,6 +359,8 @@ NMapIcons = {
 		INFRASTRUCTURE_PRIORITY_CAPITAL = 5,
 		INFRASTRUCTURE_PRIORITY_PEACE_COST = 3,
 		INFRASTRUCTURE_PRIORITY_ADJACENCY_RULE = 3,
+		INFRASTRUCTURE_PRIORITY_NAVAL_MINES = 13,
+		INFRASTRUCTURE_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		DIPLOMACY_FABRICATE_CLAIM_PRIORITY_UNITS_STACK = 10,
 		DIPLOMACY_FABRICATE_CLAIM_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -330,6 +379,8 @@ NMapIcons = {
 		DIPLOMACY_FABRICATE_CLAIM_PRIORITY_CAPITAL = 5,
 		DIPLOMACY_FABRICATE_CLAIM_PRIORITY_PEACE_COST = 3,
 		DIPLOMACY_FABRICATE_CLAIM_PRIORITY_ADJACENCY_RULE = 3,
+		DIPLOMACY_FABRICATE_CLAIM_PRIORITY_NAVAL_MINES = 13,
+		DIPLOMACY_FABRICATE_CLAIM_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		MANPOWER_PRIORITY_UNITS_STACK = 10,
 		MANPOWER_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -348,6 +399,8 @@ NMapIcons = {
 		MANPOWER_PRIORITY_CAPITAL = 5,
 		MANPOWER_PRIORITY_PEACE_COST = 3,
 		MANPOWER_PRIORITY_ADJACENCY_RULE = 3,
+		MANPOWER_PRIORITY_NAVAL_MINES = 13,
+		MANPOWER_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		IDEOLOGY_PRIORITY_UNITS_STACK = 10,
 		IDEOLOGY_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -366,6 +419,8 @@ NMapIcons = {
 		IDEOLOGY_PRIORITY_CAPITAL = 5,
 		IDEOLOGY_PRIORITY_PEACE_COST = 3,
 		IDEOLOGY_PRIORITY_ADJACENCY_RULE = 3,
+		IDEOLOGY_PRIORITY_NAVAL_MINES = 13,
+		IDEOLOGY_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		START_CONSTRUCTION_PRIORITY_UNITS_STACK = 10,
 		START_CONSTRUCTION_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -384,6 +439,8 @@ NMapIcons = {
 		START_CONSTRUCTION_PRIORITY_CAPITAL = 5,
 		START_CONSTRUCTION_PRIORITY_PEACE_COST = 3,
 		START_CONSTRUCTION_PRIORITY_ADJACENCY_RULE = 3,
+		START_CONSTRUCTION_PRIORITY_NAVAL_MINES = 13,
+		START_CONSTRUCTION_PRIORITY_NAVAL_ACCIDENTS = 13,
 		
 		PLAYERS_PRIORITY_UNITS_STACK = 10,
 		PLAYERS_PRIORITY_UNITS_STACK_GROUP = 11,
@@ -402,6 +459,8 @@ NMapIcons = {
 		PLAYERS_PRIORITY_CAPITAL = 5,
 		PLAYERS_PRIORITY_PEACE_COST = 3,
 		PLAYERS_PRIORITY_ADJACENCY_RULE = 3,
+		PLAYERS_PRIORITY_NAVAL_MINES = 13,
+		PLAYERS_PRIORITY_NAVAL_ACCIDENTS = 13,
 },
 
 NAirGfx = {
@@ -433,11 +492,13 @@ NAirGfx = {
 	MISSILES_DIVISION_FACTOR = 60,					-- Number of missiles shown in a strategic region will be divided by this factor.
 	FIGHTERS_DIVISION_FACTOR = 60,					-- Number of missiles shown in a strategic region will be divided by this factor.
 	TRANSPORT_DIVISION_FACTOR = 60,
+	TRAINING_MISSION_DIVISION_FACTOR = 60,
 	MAX_MISSILE_BOMBING_SCENARIOS = 2,				-- Max number of missile bombing scenarios in a strategic region.
 	MAX_PATROL_SCENARIOS = 2,						-- Max number of patrol scenarios in a strategic region.
 	MAX_BOMBING_SCENARIOS = 2,						-- Max number of bombings scenarios in a strategic region.
 	MAX_DOGFIGHTS_SCENARIOS = 2,					-- Max number of dogfight scenarios in a strategic region.
 	MAX_TRANSPORT_SCENARIOS = 2,					-- Max number of transport scenarios in a strategic region
+	MAX_TRAINING_SCENARIOS = 2,						-- Max number of training scenarios in a strategic region
 },
 
 NGraphics = {
@@ -445,6 +506,7 @@ NGraphics = {
 	COUNTER_MODE_ALLEGIANCE_ALLIED = { 0.31, 0.65, 0.94, 1.0 },
 	COUNTER_MODE_ALLEGIANCE_ENEMY = { 0.91, 0.30, 0.30, 1.0 },
 	COUNTER_MODE_ALLEGIANCE_OTHER = { 0.8, 0.8, 0.8, 1.0 },
+	
 	MAX_MESHES_LOADED_PER_FRAME = 10,
 	MESH_POPUP_SCALE_UP_SPEED = 5.0,
 	MESH_POPUP_SCALE_DOWN_SPEED = 2.1,
@@ -562,7 +624,6 @@ NGraphics = {
 	GRADIENT_BORDERS_THICKNESS_SUPPLY_AREA_A = 2.0,
 	GRADIENT_BORDERS_THICKNESS_SUPPLY_AREA_B = 20.0,
 	GRADIENT_BORDERS_THICKNESS_STRATEGIC_REGIONS = 150.0,
-	GRADIENT_BORDERS_THICKNESS_RESISTANCE = 10.0,
 	GRADIENT_BORDERS_THICKNESS_RADARS = 20.0, -- (OBSOLETE)
 	GRADIENT_BORDERS_THICKNESS_DIPLOMACY = 12.0,
 	GRADIENT_BORDERS_OUTLINE_CUTOFF_COUNTRY = 0.973, -- Magic number to balance cutoff on edges without neighbor
@@ -579,16 +640,19 @@ NGraphics = {
 	GRADIENT_BORDERS_CAMERA_DISTANCE_OVERRIDE_RESISTANCE = 0.0, 
 	GRADIENT_BORDERS_CAMERA_DISTANCE_OVERRIDE_RADARS = 0.0, -- (OBSOLETE)
 	GRADIENT_BORDERS_CAMERA_DISTANCE_OVERRIDE_FACTIONS = 0.0, 
+	GRADIENT_BORDERS_CAMERA_DISTANCE_OVERRIDE_TERRAIN = 0.39, 
 	GRADIENT_BORDERS_OPTIMIZATION_RANGE = 30.0, -- smaller value = faster gradient borders but may have artifacts on large provinces (value to balance)
 	GRADIENT_BORDERS_REFRESH_FREQ = 0.12, -- how frequent is gradient borders repainting (optimization for high-speed gameplay)
 	STRATEGIC_AIR_COLOR_BAD = {0.8, 0, 0, 1}, -- rgb
 	STRATEGIC_AIR_COLOR_GOOD = {0, 0.8, 0, 1},
 	STRATEGIC_AIR_COLOR_AVERAGE = {0.8, 0.8, 0, 1},
 	STRATEGIC_AIR_COLOR_NEUTRAL = {140.0/255, 131.0/255, 119.0/255, 1},
-	RESISTANCE_COLOR_GOOD = {0.8, 0.8, 0, 1}, -- rgb
-	RESISTANCE_COLOR_AVERAGE = {0.8, 0.4, 0, 1},
-	RESISTANCE_COLOR_BAD = {0.8, 0, 0, 1},
-	CONSTRUCTION_CONVERSION_COLOR = { 0.9, 0.9, 0.3, 1},
+	RESISTANCE_COLOR_NONE = {0.4, 0.4, 0.6, 0.5}, -- rgba
+	RESISTANCE_COLOR_GOOD = {0.8, 0.8, 0, 0.3}, -- rgba
+	RESISTANCE_COLOR_AVERAGE = {0.8, 0.4, 0, 0.5},
+	RESISTANCE_COLOR_BAD = {0.8, 0, 0, 0.9},
+	CONSTRUCTION_CONVERSION_COLOR = { 0.9, 0.9, 0.3, 0.1},
+	CONSTRUCTION_CONVERSION_IN_PROGRESS_COLOR = { 0.3, 0.3, 0.9, 0.1},
 	STRATEGIC_NAVY_COLOR_MISSION = {1.0, 0.7, 0.0, 1},
 	STRATEGIC_NAVY_COLOR_NEUTRAL = {0.5, 0.5, 0.5, 1},
 	VIRTUAL_BATTLEPLANS_COLOR = { 0.2, 1.0, 0.2, 1 },
@@ -632,6 +696,14 @@ NGraphics = {
 	SUPPLY_ICON_DISTANCE_CUTOFF = 2500,
 	PROV_CONSTRUCTION_ICON_DISTANCE_CUTOFF = 400,
 	STATE_CONSTRUCTION_ICON_DISTANCE_CUTOFF = 800,
+	DECISION_MAP_ICON_DISTANCE_CUTOFF = 1000,
+	DECISION_MAP_ICON_DEPTH_PRIORITY = 50,
+	NAVAL_MISSION_TASK_FORCES_GROUP_BY_ALLEGIANCE_CUTOFF = 500,
+	NAVAL_MISSION_ICONS_DISTANCE_CUTOFF = 1300,
+	NAVAL_MINES_DISTANCE_CUTOFF = 800,
+	NAVAL_MINES_CLUMPING = 58, -- The higher value, the more likely the 3d naval mines will clamp together
+	NAVAL_MINES_CLUMP_NEAR_TERRITORY = 25, -- Higher chance to spawn 3d naval mine near our territory
+	NAVAL_MINES_COUNT_TO_VISUAL_ASPECT = 0.1, -- How many in-game-naval-mines is one visual 3d naval mine?
 	MAP_ICONS_GROUP_MAX_SIZE = 15, -- max size in screen pixels of the group of merged icons
 	MAP_ICONS_GROUP_CAM_DISTANCE = 90.0, -- camera distance at which the icons begin to group up
 	MAP_ICONS_STATE_GROUP_CAM_DISTANCE = 180.0, -- Camera distance at which the icons begin to group up on state level
@@ -651,6 +723,7 @@ NGraphics = {
 	MAP_ORDERS_MIN_LINE_POINTS = 8, -- Minimum number of points that an arrow/line must have to be valid (it's a fix to avoid being able to draw empty invisible orders) - use debug_lines console command to debug it and tweak.
 
 	DIVISION_NAMES_GROUP_MAX_TOOLTIP_ENTRIES = 15,	-- Max entries to display the names in the tooltip, when mouse over the division-names-group in the division template designer.
+	SHIP_NAMES_GROUP_MAX_NAME_LIST_ENTRIES = 25,	-- Max example name entries in ship name list in production meni
 	
 	WEATHER_DISTANCE_CUTOFF = 1500, -- At what distance weather effects are hidden
 	WEATHER_DISTANCE_FADE_LENGTH = 400, -- How far the fade out distance should be
@@ -738,17 +811,16 @@ NGraphics = {
 	TRADE_ROUTE_LEND_LEASE_EXPORT_COLOR = { 0.5, 1.0, 0.0, 0.75 },
 	TRADE_ROUTE_LEND_LEASE_IMPORT_COLOR = { 0.5, 1.0, 0.0, 0.75 },
 	
-	TRAIT_GRID_COLUMN_SHIFTS = {
-		3,
-		211,
-		419,
-		3,
-		211
-	},
+	TRAIT_GRID_COLUMN_OFFSET = 3,
+	TRAIT_GRID_COLUMN_WIDTH = 208,
 	TRAIT_GRID_ROW_SHIFT = 48,
 	
 	TRAIT_LINE_ASSIGNED_COLOR = { 0.47, 0.93, 0.65 },
 	TRAIT_LINE_NON_ASSIGNED_COLOR = { 0.67, 0.75, 0.93 },
+	TRAIT_INVALID_FOR_ASSIGNMENT_COLOR = { 0.8, 0.3, 0.3 },
+	
+	PRIDE_OF_THE_FLEET_MODULATE = { 1.0, 0.95, 0.0, 1.0 }, -- pride of the fleet color
+	
 	
 	-- unit on-map interface modulate colors
 	FRIEND_COLOR  = {0.7, 0.9, 0.7},
@@ -797,6 +869,8 @@ NGraphics = {
 	POLITICAL_PULSE_BASE =	10.0,
 	POLITICAL_PULSE_RANDOM = 10.0,
 
+	STRATEGIC_REGION_ZOOM_HEIGHT = 300.0,				-- zooming to a strategic region will make you zoom this further from map
+	
 	ARROW_PARADROP_HEIGHT_TO_LEN = 0.3,
 	ARROW_PARADROP_HEIGHT_MAX = 11.0,
 	ARROW_MIN_TEXT_POINTS_LIMIT = 10,				-- Amount of points when arrow gets first detailed text
@@ -808,7 +882,8 @@ NGraphics = {
 	SHOW_ONLY_PATH_ABOVE = 500.0,					-- Above this only supply icons in the currently shown path are shown
 
 	ACCLIMATIZATION_CAMO_SHOW_AT = 0.5,				-- The moment at which the division gains enough acclimatization to change it's model to the camouflage one.
-	ACCLIMATIZATION_CAMO_SHOW_WHEN_IN_STATE = 0.2	-- The troops camouflage can swap (to the one from acclim.) not only when snow/desert is in the location we are in, but also when % of provinces in current state has snow/desert.
+	ACCLIMATIZATION_CAMO_SHOW_WHEN_IN_STATE = 0.2,	-- The troops camouflage can swap (to the one from acclim.) not only when snow/desert is in the location we are in, but also when % of provinces in current state has snow/desert.
+	
 },
 
 NInterface = {
@@ -836,6 +911,7 @@ NInterface = {
 	MAX_NON_SUCCESSFUL_COMBAT_COLOR = { 00.0/360.0, 0.95, 0.86 },	-- Color for icons if all of combats are not successful
 	
 	UNIT_SELECT_DOUBLE_CLICK_TIME = 0.1,				-- Delay before double click event for unit selection
+	SHIP_SELECT_DOUBLE_CLICK_TIME = 1.0,				-- Delay before double click event for ship selection
 	
 	MINIMAP_TOGGLE_DURATION = 0.5,				-- Delay for minimap toggle
 	MINIMAP_TOGGLE_SHIFT = 270,				-- horizontal shift for minimap to close it
@@ -853,9 +929,41 @@ NInterface = {
 	ARMY_GROUP_FIRST_MEMBER_SPACING = 5,		-- Extra spacing between the army group portrait and the first member of the army group
 	ARMY_GROUP_COLLAPSE_EXTRA_SPACING = 5,		-- Extra spacing between the army group portrait when army group is collapsed
 	
-	ARMY_LIST_BOTTOM_PADDING = 145,				-- Bottom padding for army list on left
+	ARMY_LIST_BOTTOM_PADDING = 165,				-- Bottom padding for army list on left
+	ARMY_LIST_BOTTOM_PADDING_WITH_EXPEDITIONARIES = 240, -- Bottom padding for army list on left when expeditionaries are open
+	
+	
+	MILITARY_FACTORIES_SCALE = { 1, 5, 10 },
 
-	MILITARY_FACTORIES_SCALE = { 1, 5, 10 }
+	FLEET_BOTTOM_BAR_HEIGHT = 110,				-- Height of the list of fleet at the bottom of the screen
+	FLEET_BOTTOM_BAR_PADDING_RIGHT = 110,			-- Width of the Rhs panel at the bottom of the screen where map mode are selected
+
+	PICKED_UP_NAVY_OFFSET_X = 26,				-- Amount of pixels to shift the picked up navy window on the x axis
+	PICKED_UP_NAVY_OFFSET_Y = -14,				-- Amount of pixels to shift the picked up navy window on the y axis
+
+	TASK_FORCE_ENTRY_OFFSET_Y = -2,				-- Adjust the position of a task force entry. Added to the height of the background image.
+	TASK_FORCE_COMPOSITION_EDITOR_PADDING_TO_NAVIES_VIEW = 20,	-- Padding on the x axis between the navies view and the task force composition editor window
+
+	FUEL_STOCKPILE_DURATION_MAX = 365*5,		-- our max for stockpile duration display
+	
+	SHIP_REFIT_TOOLTIP_MAX_DIFF_LINES = 20,		-- Maximum number of lines to show in the tooltip describing stat differences from all the source equipment variants to the target being considered.
+	
+	DEFAULT_TASKFORCE_ICON = 6,						-- newly created taskforces will use this icon
+	DEFAULT_FLEET_ICON = 4,							-- newly created fleets will use this icon
+	DEFAULT_NAVAL_EQUIPMENT_ROLE_ICON = 1,			-- newly created naval equipment variants will use this icon, if the AI equipment designs do not propose a better one.
+	
+	FUEL_GRAPH_COLOR = {
+		0.8, 0.8, 0.8, -- stockpile
+		0.8, 0.0, 0.0, -- total consumption
+		0.0, 0.8, 0.0, -- army consumption
+		0.0, 0.0, 0.8, -- navy consumption
+		0.0, 0.8, 0.8, -- air consumption
+		0.8, 0.8, 0.0, -- other consumption
+		0.8, 0.8, 0.8, -- produced
+	},
+	
+	PRODUCTION_SHIP_FILTERS_ROLE_SELECTION_WINDOW_OFFSET_X = 4,	-- offset of the role icon selection window shown in the filters of ship design in the production tab
+	PRODUCTION_SHIP_FILTERS_ROLE_SELECTION_WINDOW_OFFSET_Y = -8,
 },
 
 

@@ -12,7 +12,7 @@ ideas = {
 		        LIE_austrianpartnership = {		           
 				   modifier ={
 					  industrial_capacity_factory = 0.05
-					  research_time_factor = -0.02
+					  research_speed_factor = 0.02
 					}
 				}
 				LIE_newage = {		           

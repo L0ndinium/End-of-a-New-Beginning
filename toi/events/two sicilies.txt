@@ -71,7 +71,7 @@ country_event = {
         create_country_leader = {
             name = "Francesco II"
             desc = ""
-            picture = ".dds"
+            picture = "Portrait_NSC_Francis_II.dds"
             expire = 1875.08.03
             ideology = despotism 
         }

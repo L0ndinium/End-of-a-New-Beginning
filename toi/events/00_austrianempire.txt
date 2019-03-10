@@ -11,6 +11,17 @@ country_event = {
 	
     is_triggered_only = yes 
 	
+	immediate = {
+	    hidden_effect = {
+		    AUS = {
+                set_party_name = { 
+                    ideology = autocracy  
+                    name = AUS_autocracy_party_1  
+                }			    
+			}
+		}
+	}
+	
 	option = {
 		name = AUSpolitics.1.a  #Appoint Gołuchowski - Reform Empire 
 		ai_chance = { 
@@ -75,7 +86,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		
 	    hidden_effect = {
-		AUS = { set_country_flag = AUS_flag_unlock_October_Diploma }
+		    AUS = { 
+		        set_country_flag = AUS_flag_unlock_February_Patent # unlock february patent 		
+		    }
 		}	
 		add_political_power = -100 
 	}
@@ -119,11 +132,17 @@ country_event = { #Bohemians Protests stopped
 	fire_only_once = yes
 	
 		trigger = {
-			tag = AUS 
-            focus_progress = {
-                focus = AUS_Imprison_Dissenters
-                progress > 0.5 
-            }			 
+			tag = AUS 	 
+			OR = {
+                focus_progress = {
+                    focus = AUS_Imprison_Dissenters
+                    progress > 0.5 
+                }		
+                focus_progress = {
+                    focus = AUS_February_Patent
+                    progress > 0.3  
+                }					
+		    }
 		}
 	
 	option = {
@@ -131,10 +150,11 @@ country_event = { #Bohemians Protests stopped
 		ai_chance = { factor = 100 }
 		
 		AUS = {
-            swap_ideas = {
-			    remove_idea = AUS_SLA_Separatism1 
-				add_idea = AUS_SLA_Separatism1a 
-			}
+            add_to_variable = {
+                var = SLA_REVOLT_RISK
+                value = 0.5    
+            }
+            custom_effect_tooltip = AUS_tt_add_half_sla_revolt_risk			
 		}
 	}
 }
@@ -149,10 +169,16 @@ country_event = { #Hungarian Liberals Angered
 	
 		trigger = {
 			tag = AUS 
-            focus_progress = {
-                focus = AUS_Imprison_Dissenters
-                progress > 0.8 
-            }			 
+			OR = {
+                focus_progress = {
+                    focus = AUS_Imprison_Dissenters
+                    progress > 0.8 
+                }		
+                focus_progress = {
+                    focus = AUS_February_Patent
+                    progress > 0.9  
+                }					
+		    }
 		}
 	
 	option = {
@@ -160,11 +186,82 @@ country_event = { #Hungarian Liberals Angered
 		ai_chance = { factor = 100 }
 		
 		AUS = {
-            swap_ideas = {
-			    remove_idea = AUS_HUN_Separatism1 
-				add_idea = AUS_HUN_Separatism1a 
-			}
+            add_to_variable = {
+                var = HUN_REVOLT_RISK
+                value = 0.5    
+            }
+            custom_effect_tooltip = AUS_tt_add_half_hun_revolt_risk			
 		}
+	}
+}
+
+country_event = { #von Schmerling's resignation 
+	id = AUSpolitics.6
+	title = AUSpolitics.6.t
+	desc = AUSpolitics.6.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = AUSpolitics.6.a  #Accept the resignation 
+		ai_chance = { factor = 100 }
+		
+		AUS = {
+            retire_country_leader = yes
+            create_country_leader = {
+                name = "Richard von Belcredi"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_AUS_Richard_Belcredi.dds"
+                expire = 2000.09.10
+                ideology = despotism
+            }			
+	    }		
+	}
+}
+
+country_event = { #Choose Beust or keep Belcredi  
+	id = AUSpolitics.7
+	title = AUSpolitics.7.t
+	desc = AUSpolitics.7.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes
+	
+		trigger = {
+			tag = AUS 
+            AUS = { 
+			    has_country_leader = {
+                    name = "Richard von Belcredi"
+                     ruling_only = yes
+                } 
+		    }
+			date > 1867.01.25  
+		}
+	
+	option = {
+		name = AUSpolitics.7.a  #Replace with Beust - Dual Monarchy  
+		ai_chance = { factor = 75 }
+		
+		AUS = {
+            retire_country_leader = yes
+            create_country_leader = {
+                name = "Friedrich von Beust"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_AUS_Friedrich_von_Beust.dds"
+                expire = 2000.09.10
+                ideology = despotism
+            }			
+	    }
+        custom_effect_tooltip = AUS_tt_appoint_von_beust	
+	}
+	option = {
+		name = AUSpolitics.7.b  #Keep Belcredi - Federalization 
+		ai_chance = { factor = 25  }
+		
+        custom_effect_tooltip = AUS_tt_keep_richard_belcredi 
 	}
 }
 
@@ -180,7 +277,13 @@ country_event = { #Future of Lombardy Venetia
 	
 	option = { #Annex only Venetia   
 		name = AUSdiplo.1.a
-		ai_chance = { factor = 20 }
+		ai_chance = { 
+            factor = 25  
+            modifier = {
+                factor = 0 
+                is_historical_focus_on = yes
+            }
+        }		
 		
 		AUS = {
           transfer_state = 160             
@@ -195,13 +298,25 @@ country_event = { #Future of Lombardy Venetia
 
 	option = { #Keep the Puppet   
 		name = AUSdiplo.1.b 
-		ai_chance = { factor = 80 }
+		ai_chance = { 
+            factor = 60   
+            modifier = {
+                factor = 100  
+                is_historical_focus_on = yes
+            }
+        }
 
 	}
 	
 	option = { #TfV - Give more freedom    
 		name = AUSdiplo.1.c 
-		ai_chance = { factor = 80 }
+		ai_chance = { 
+            factor = 15   
+            modifier = {
+                factor = 0   
+                is_historical_focus_on = yes
+            }
+        }
 		
 		if ={
 		    limit = {
@@ -209,7 +324,7 @@ country_event = { #Future of Lombardy Venetia
 			}
             set_autonomy = {
                 target = LVN 
-                autonomy_state = dominion
+                autonomy_state = puppet
             }			
 		}
 		else = {
@@ -230,7 +345,13 @@ country_event = { #Future of Modena, Parma and Tuscany
 	
 	option = { #TfV - Make Puppets     
 		name = AUSdiplo.2.a 
-		ai_chance = { factor = 60 }
+		ai_chance = { 
+            factor = 60   
+            modifier = {
+                factor = 0   
+                is_historical_focus_on = yes
+            }
+        }
 		
 		if ={
 		    limit = {
@@ -300,7 +421,13 @@ country_event = { #Future of Modena, Parma and Tuscany
 	
 	option = { #Status Quo    
 		name = AUSdiplo.2.b 
-		ai_chance = { factor = 40 }
+		ai_chance = { 
+            factor = 40    
+            modifier = {
+                factor = 100  
+                is_historical_focus_on = yes
+            }
+        }
 		
 	}
 }
@@ -315,7 +442,19 @@ country_event = { #Cede Savoy and Nice to France
 	
 	option = { #Give Savoy and Nice to France      
 		name = AUSdiplo.3.a 
-		ai_chance = { factor = 60 }
+		ai_chance = { 
+            factor = 60   
+            modifier = {
+                factor = 10   
+                FRA = {
+				    has_completed_focus = FRA_close_relations_austria 
+				}
+            }
+            modifier = {
+                factor = 10   
+                is_historical_focus_on = yes
+            }
+        }
 		
 		custom_effect_tooltip = AUS_tt_FRA_savoy_nice  
 		
@@ -326,8 +465,13 @@ country_event = { #Cede Savoy and Nice to France
 	
 	option = { #Let Piedmont keep them     
 		name = AUSdiplo.3.b 
-		ai_chance = { factor = 40 }
-		
+		ai_chance = { 
+            factor = 40    
+            modifier = {
+                factor = 5    
+                is_historical_focus_on = yes
+            }
+        }
 	}
 }
 
@@ -401,19 +545,32 @@ country_event = { #Retire Ferenc Gyulay
 		date > 1859.05.15 
 		AUS = {
 		any_war_score < 2 
+		has_war_with = PIE 
 		}
 	}
 	
 	option = { #Retire him      
 		name = AUSgenerals.1.a 
-		ai_chance = { factor = 100 }
+		ai_chance = { 
+            factor = 75     
+            modifier = {
+                factor = 100    
+                is_historical_focus_on = yes
+            }
+        }
 		
 	    remove_unit_leader = 168305
 	}
 	
 	option = { #Do not Retire him      
 		name = AUSgenerals.1.b 
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+            factor = 25     
+            modifier = {
+                factor = 0     
+                is_historical_focus_on = yes
+            }
+        }
 	
 	    AUS = {
 		    add_stability = -0.05 
@@ -525,16 +682,1550 @@ country_event = { #Retire Leopold Gondrecourt as Tutor
 		
 	    AUS = {
             create_corps_commander = {
-            name = "Leopold Gondrecourt"
-            picture = "Portrait_AUS_Leopold_Gondrecourt.dds"
-            traits = { }
-            skill = 3
-            attack_skill = 1
-	        defense_skill = 1
-	        planning_skill = 1
-	        logistics_skill = 1
-	        id = 16833
+                name = "Leopold Gondrecourt"
+                picture = "Portrait_AUS_Leopold_Gondrecourt.dds"
+                traits = { skilled_staffer }
+                skill = 3 
+                attack_skill = 2 
+             	defense_skill = 2
+               	planning_skill = 2
+             	logistics_skill = 3 
+            	id = 16833
 		    }
 	    }
     }		     
+}
+
+country_event = { #Promote Kuhnenfeld as General      
+	id = AUSgenerals.6
+	title = AUSgenerals.6.t
+	desc = AUSgenerals.6.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1863.10.29  
+	}
+	
+	option = { #Make him Major General       
+		name = AUSgenerals.6.a 
+		ai_chance = { factor = 100 }
+		
+	    AUS = {
+            create_corps_commander = {
+            name = "Franz Kuhn von Kuhnenfeld"
+            picture = "Portrait_AUS_Franz_von_Kuhnenfeld.dds"
+            traits = { trait_mountaineer }
+            skill = 3
+            attack_skill = 3
+	        defense_skill = 2 
+	        planning_skill = 3
+	        logistics_skill = 2
+	        id = 168307
+		    }
+	    }
+    }		     
+}
+
+country_event = { #Promote Archduke Wilhelm Franz Karl      
+	id = AUSgenerals.7
+	title = AUSgenerals.7.t
+	desc = AUSgenerals.7.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1864.08.10   
+	}
+	
+	option = { #Make him Major General       
+		name = AUSgenerals.7.a 
+		ai_chance = { factor = 100 }
+		
+	    AUS = {
+            create_corps_commander = {
+            name = "Wilhelm Franz Karl of Austria"
+            picture = "Portrait_AUS_Archduke_Wilhelm_Karl_Franz.dds"
+            traits = { bearer_of_artillery }
+            skill = 2 
+            attack_skill = 1 
+	        defense_skill = 3 
+	        planning_skill = 2 
+	        logistics_skill = 2 
+	        id = 168308 
+		    }
+	    }
+    }		     
+}
+
+country_event = { #Promote Leopold Gondrecout       
+	id = AUSgenerals.8
+	title = AUSgenerals.8.t
+	desc = AUSgenerals.8.d
+	picture = GFX_report_event_AUS_austrianarmy_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1864.01.20    
+	}
+	
+	option = { #Make him Major General       
+		name = AUSgenerals.8.a 
+		ai_chance = { factor = 100 }
+		
+	    AUS = {
+            create_corps_commander = {
+                name = "Leopold Gondrecourt"
+                picture = "Portrait_AUS_Leopold_Gondrecourt.dds"
+                traits = { skilled_staffer }
+                skill = 3 
+                attack_skill = 2 
+             	defense_skill = 2
+               	planning_skill = 2
+             	logistics_skill = 3 
+            	id = 16833
+		    }
+	    }
+    }		     
+}
+
+
+## Habsburg Events 
+
+add_namespace = AUShabsburg
+
+country_event = { #Birth of Archduke Rudolf        
+	id = AUShabsburg.1
+	title = AUShabsburg.1.t
+	desc = AUShabsburg.1.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1858.08.25     
+	}
+	
+	option = { 
+		name = AUShabsburg.1.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_3_prestige_score = yes 
+    }		     
+}
+
+country_event = { #Death of Archduchess Sophie         
+	id = AUShabsburg.2
+	title = AUShabsburg.2.t
+	desc = AUShabsburg.2.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1857.05.29     
+	}
+	
+	option = { 
+		name = AUShabsburg.2.a 
+		ai_chance = { factor = 100 }
+    }		     
+}
+
+country_event = { #Trip to Hungary          
+	id = AUShabsburg.3
+	title = AUShabsburg.3.t
+	desc = AUShabsburg.3.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1857.03.29     
+	}
+	
+	option = { 
+		name = AUShabsburg.3.a 
+		ai_chance = { factor = 100 }
+    }		     
+}
+
+country_event = { #The Birth of Archduchess Marie Valerie           
+	id = AUShabsburg.4 
+	title = AUShabsburg.4.t
+	desc = AUShabsburg.4.d
+	picture = GFX_report_event_AUS_habsburgs_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1866.04.22      
+	}
+	
+	option = { 
+		name = AUShabsburg.4.a 
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		AUS = { has_country_flag = AUS_flag_hun_dual_monarchy }
+		}
+    }		
+
+	option = { 
+		name = AUShabsburg.4.b 
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		NOT = { AUS = { has_country_flag = AUS_flag_hun_dual_monarchy } } 
+		}
+		
+		eoanb_add_2_prestige_score = yes 
+    }		
+}
+
+add_namespace = AUSflavour 
+
+country_event = { #The Blue Danube Waltz            
+	id = AUSflavour.1 
+	title = AUSflavour.1.t
+	desc = AUSflavour.1.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1867.02.15       
+	}
+	
+	option = { 
+		name = AUSflavour.1.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_5_prestige_score = yes 
+    }		     
+}
+
+country_event = { #A German Requiem (Brahms)            
+	id = AUSflavour.2 
+	title = AUSflavour.2.t
+	desc = AUSflavour.2.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1868.07.24        
+	}
+	
+	option = { 
+		name = AUSflavour.2.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_3_prestige_score = yes 
+    }		     
+}
+
+country_event = { #Vienna Court Opera Opens             
+	id = AUSflavour.3 
+	title = AUSflavour.3.t
+	desc = AUSflavour.3.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1869.05.25         
+	}
+	
+	option = { 
+		name = AUSflavour.3.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_4_prestige_score = yes 
+    }		     
+}
+
+country_event = { #Abolishing the Voivodeship of Serbia and Banat of Temeschwar             
+	id = AUSflavour.4 
+	title = AUSflavour.4.t
+	desc = AUSflavour.4.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1860.12.27         
+	}
+	
+	option = { 
+		name = AUSflavour.4.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_1_prestige_score = yes 
+    }		     
+}
+
+country_event = { #Johann Strauss II publishes Trisch-Trasch-Polka 
+	id = AUSflavour.5 
+	title = AUSflavour.5.t
+	desc = AUSflavour.5.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1858.11.24         
+	}
+	
+	option = { 
+		name = AUSflavour.5.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_1_prestige_score = yes 
+    }		     
+}
+
+
+## Hungary Revolts alternate history
+
+add_namespace = AUShungaryrevolt
+
+country_event = { #Event to warn about the revolution           
+	id = AUShungaryrevolt.1
+	title = AUShungaryrevolt.1.t
+	desc = AUShungaryrevolt.1.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		AUS = {
+            check_variable = {
+                var = HUN_REVOLT_RISK
+                value = 10 
+                compare = greater_than_or_equals 
+            }
+		}     
+	}
+	
+	option = { 
+		name = AUShungaryrevolt.1.a 
+		ai_chance = { factor = 100 }
+		
+        country_event = {
+            id = AUShungaryrevolt.2
+            days = 35
+        }		
+    }		     
+}
+
+country_event = { #Beginning of Revolution           
+	id = AUShungaryrevolt.2
+	title = AUShungaryrevolt.2.t
+	desc = AUShungaryrevolt.2.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+
+	immediate = {
+	    hidden_effect = {
+		    HUN = {
+                transfer_state = 43	
+                transfer_state = 154
+                transfer_state = 155 	
+                transfer_state = 664 
+                transfer_state = 968 	
+                load_oob = "HUN_Revolt"		
+                add_ideas = HUN_idea_Revolt 
+                set_politics = {
+                    parties = {
+                        collectivist_socialism = {
+                            popularity = 3
+                        }
+                        social_egalitarianism = {
+                            popularity = 10
+                        }
+                        centrism = {
+                            popularity = 42
+                        }
+                        traditional_conservatism = {
+                            popularity = 38 
+                        }
+                        chauvinist_populism = {
+                            popularity = 7
+                        }
+                        autocracy = {
+                            popularity = 0
+                        }
+                    }
+	                ruling_party = centrism
+                }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_rifle_0
+                    amount = 4000 
+                    producer = HUN 
+                }
+                add_equipment_to_stockpile = {
+                    type = uniform_equipment_0
+                    amount = 4000  
+                    producer = HUN 
+                }
+                add_equipment_to_stockpile = {
+                    type = cavalry_equipment_0
+                    amount = 2000 
+                    producer = HUN 
+                }
+                create_country_leader = {
+                name = "Lajos Kossuth"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_HUN_Lajos_Kossuth.dds"
+                expire = 2000.09.10
+                ideology = social_liberal
+                }		
+                create_country_leader = {
+                name = "Ferenc Deák"
+                desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+                picture = "Portrait_HUN_Ferenc_Deak.dds"
+                expire = 2000.09.10
+                ideology = moderatism
+                }				
+		    }
+			if = {
+			    limit = {
+				AUS = { has_idea = AUS_hungarian_revolution }
+				}
+			    remove_ideas = AUS_hungarian_revolution
+			}
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 11 
+                       compare = equals 
+                    } 
+			    }
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                }			
+		    }
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 12 
+                        compare = equals 
+                    } 
+			    }
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                    transfer_state = 84 
+                    transfer_state = 76  
+                }
+			    84 = {
+                   create_unit = {
+                        division = "name = \"8. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 690    
+                    }
+				}				
+		    }    
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 13 
+                        compare = equals 
+                    } 
+			    } 
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                    transfer_state = 84 
+                    transfer_state = 82 
+			        transfer_state = 83  
+                    transfer_state = 76  		
+                    transfer_state = 45 
+                    transfer_state = 743 
+                }
+			    84 = {
+                   create_unit = {
+                        division = "name = \"8. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 690    
+                    }
+				}
+			    45 = {
+                   create_unit = {
+                        division = "name = \"9. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 3617    
+                    }
+				}					
+		    }
+		    if = {
+		        limit = { 
+		            check_variable = {
+                        var = HUN_REVOLT_RISK
+                        value = 14  
+                        compare = greater_than_or_equals 
+                    } 
+			    }
+			    HUN = {
+                    transfer_state = 967
+                    transfer_state = 73 
+                    transfer_state = 84 
+                    transfer_state = 76  		
+                    transfer_state = 45 
+                    transfer_state = 743   	
+                    transfer_state = 82  
+                    transfer_state = 83 
+                    transfer_state = 71  
+                    transfer_state = 70 	
+                }	
+			    84 = {
+                   create_unit = {
+                        division = "name = \"8. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 690    
+                    }
+				}
+			    45 = {
+                   create_unit = {
+                        division = "name = \"9. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 3617    
+                    }
+				}
+			    70 = {
+                   create_unit = {
+                        division = "name = \"10. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5"
+                        owner = HUN
+						prioritize_location = 9692     
+                    }
+				}				
+		    }
+			set_global_flag = flag_HUN_revolt_1			
+	    }
+	}
+	
+	
+	option = { 
+		name = AUShungaryrevolt.2.a #Remain Austria 
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			news_event = {
+			    id = AUSnews.1
+			    days = 10 
+			}
+            AUS = {
+		        country_event = {
+                    id = AUShungaryrevolt.4
+                    days = 35   
+                }
+			}			
+		}
+    }
+
+	option = { 
+		name = AUShungaryrevolt.2.b #Play as Hungary  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+				news_event = {
+				    id = AUSnews.1
+				    days = 10 
+				}		
+		    HUN = { 
+		        country_event = {
+                    id = AUShungaryrevolt.3
+                    days = 25 
+                }
+		        change_tag_from = ROOT
+				delete_unit_template_and_units = {
+                    division_template = "Infanterie Regiment"
+					division_template = "Jäger Regiment"
+					division_template = "Hussar Regiment"					
+                }
+            }
+			AUS = {
+		        country_event = {
+                    id = AUShungaryrevolt.4
+                    days = 50  
+                }
+			}			
+        }
+    }
+}
+
+country_event = { #Event introducing the player to Hungary            
+	id = AUShungaryrevolt.3
+	title = AUShungaryrevolt.3.t
+	desc = AUShungaryrevolt.3.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = AUShungaryrevolt.3.a 
+		ai_chance = { factor = 100 }
+				
+    }		     
+}
+
+country_event = { #Event that actually starts the war             
+	id = AUShungaryrevolt.4
+	title = AUShungaryrevolt.4.t
+	desc = AUShungaryrevolt.4.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+	    hidden_effect = {
+	        AUS = {
+			    declare_war_on = {
+                    target = HUN
+                    type = annex_everything
+                } 
+			}
+			HUN = {
+			set_province_controller = 3689  
+			set_province_controller = 6711 
+			set_province_controller = 619  
+			set_province_controller = 11592
+			}
+			    967 = {
+                   create_unit = {
+                        division = "name = \"5. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                        owner = HUN
+						prioritize_location = 3689 
+                    }
+				}
+			    76 = {
+                   create_unit = {
+                        division = "name = \"6. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                        owner = HUN
+						prioritize_location = 6711  
+                    }
+				}
+			    45 = {
+                   create_unit = {
+                        division = "name = \"7. Gyalogezred\" division_template = \"Gyalogezred\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                        owner = HUN
+						prioritize_location = 619   
+                    }
+				}
+			    82 = {
+                   create_unit = {
+                        division = "name = \"2. Huszár ezred\" division_template = \"Huszár\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+                        owner = HUN
+						prioritize_location = 11592   
+                    }
+				}
+			HUN = {
+                add_state_core = 70 	
+                add_state_core = 71 
+                add_state_core = 73 
+                add_state_core = 1233 
+                add_state_core = 76 
+                add_state_core = 83 
+                add_state_core = 84 
+                add_state_core = 82 
+                add_state_core = 743 
+                add_state_core = 45 
+				add_state_core = 967 
+			}
+	    }
+	}
+	
+	option = { 
+		name = AUShungaryrevolt.4.a 
+		ai_chance = { factor = 100 }
+				
+    }		     
+}
+
+country_event = { #Peace Event in Favour of Hungary - No Croatia 
+	id = AUShungaryrevolt.5
+	title = AUShungaryrevolt.5.t
+	desc = AUShungaryrevolt.5.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = AUShungaryrevolt.5.a #Accept Peace 
+		ai_chance = { factor = 85 }
+				
+		AUS = { 
+		    white_peace = HUN 
+        }				
+        
+		AUS = {
+	        every_owned_state = {
+                limit = { is_core_of = HUN }
+		        HUN = {
+		            transfer_state = PREV        
+		        } 
+			    remove_core_of = AUS
+		    }
+		}
+		
+		HUN = {			
+			remove_ideas = {
+			HUN_idea_Revolt
+			}
+		}
+		news_event = {
+			id = AUSnews.3
+			days = 1 
+		}
+    }
+	option = { 
+		name = AUShungaryrevolt.5.b #Reject Peace  
+		ai_chance = { factor = 15 }
+		
+		hidden_effect = {
+		    HUN = { set_country_flag = HUN_AUS_war_denied_peace_1 }
+		}
+        HUN = {
+		    add_war_support = -0.15 
+			add_stability = -0.1 
+		}		
+    }	
+}
+
+country_event = { #Peace Event in Favour of Hungary - Croatia 
+	id = AUShungaryrevolt.6
+	title = AUShungaryrevolt.6.t
+	desc = AUShungaryrevolt.6.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = AUShungaryrevolt.6.a #Accept Peace 
+		ai_chance = { factor = 85 }
+		
+		AUS = {
+	        every_owned_state = {
+                limit = { is_core_of = HUN }
+		        HUN = {
+		            transfer_state = PREV        
+		        } 
+			    remove_core_of = AUS
+		    }
+			add_ideas = AUS_idea_lost_hungary_revolt
+			white_peace = HUN
+        }			
+		
+		HUN = {
+			transfer_state = 109 
+			transfer_state = 1011 
+			transfer_state = 1271 
+			remove_ideas = {
+			    HUN_idea_Revolt
+			}
+		}
+		news_event = {
+			id = AUSnews.3
+			days = 1 
+		}
+    }	
+}
+
+add_namespace = AUSnews 
+
+news_event = { #Hungarian Revolt news             
+	id = AUSnews.1
+	title = AUSnews.1.t
+	desc = AUSnews.1.d 
+	picture = GFX_news_event_generic_rally2
+	
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = { 
+		name = AUSnews.1.a 
+		ai_chance = { factor = 100 }		
+    }		     
+}
+
+news_event = { #Compromise Achieved             
+	id = AUSnews.2
+	title = AUSnews.2.t
+	desc = AUSnews.2.d 
+	picture = GFX_news_event_generic_rally2
+	
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = { 
+		name = AUSnews.2.a 
+		ai_chance = { factor = 100 }		
+    }		     
+}
+
+news_event = { #Hungarian Revolt Peace              
+	id = AUSnews.3
+	title = AUSnews.3.t
+	desc = AUSnews.3.d 
+	picture = GFX_news_event_generic_rally2
+	
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = { 
+		name = AUSnews.3.a 
+		ai_chance = { factor = 100 }		
+    }		     
+}
+
+add_namespace = AUShuncompromise
+add_namespace = AUSfedcompromise
+
+country_event = { #Begin Negotiating with the Hungarians  
+	id = AUShuncompromise.1
+	title = AUShuncompromise.1.t
+	desc = AUShuncompromise.1.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Ausgleich begins 
+		name = AUShuncompromise.1.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.2 days = 365 } 
+				set_country_flag = AUS_flag_dual_monarchy_begin 
+		    }		
+		}
+    }	
+}
+
+country_event = { #Choose Between Federalization or Dual Monarchy   
+	id = AUSfedcompromise.1
+	title = AUSfedcompromise.1.t
+	desc = AUSfedcompromise.1.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Dual Monarchy  
+		name = AUSfedcompromise.1.a  
+		ai_chance = { 
+            factor = 60    
+            modifier = {
+                factor = 100    
+                is_historical_focus_on = yes
+            }
+        }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.2 days = 200 } 
+			    set_country_flag = AUS_flag_dual_monarchy_begin
+		    }
+        }		
+    }	
+	
+	option = { #Federalization  
+		name = AUSfedcompromise.1.b  
+		ai_chance = { 
+            factor = 40    
+            modifier = {
+                factor = 0     
+                is_historical_focus_on = yes
+            }
+        }
+		
+	    AUS = {
+		    country_event = { id = AUSfedcompromise.2 days = 200 } 
+			set_country_flag = AUS_flag_federalization_1_begin
+		}		
+    }	
+}
+
+country_event = { #Restore the Constitution   
+	id = AUShuncompromise.2
+	title = AUShuncompromise.2.t
+	desc = AUShuncompromise.2.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Agree  
+		name = AUShuncompromise.2.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.3 days = 150 }  
+		    }		
+		}
+		custom_effect_tooltip = AUS_tt_restore_hun_constitution 
+    }	
+}
+
+country_event = { #Diet of Hungary restored and votes on it    
+	id = AUShuncompromise.3
+	title = AUShuncompromise.3.t
+	desc = AUShuncompromise.3.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Passes   
+		name = AUShuncompromise.3.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.4 days = 50 }  
+		    }		
+		}
+		custom_effect_tooltip = AUS_tt_diet_restored  
+    }	
+}
+
+country_event = { #Appoint Prime Minister for Hungary 
+	id = AUShuncompromise.4
+	title = AUShuncompromise.4.t
+	desc = AUShuncompromise.4.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUShuncompromise.5 days = 50 }
+                #set_country_flag = AUS_flag_dual_monarchy_ui				
+		    }		
+		}
+	}
+	
+	option = { #Andrassy   
+		name = AUShuncompromise.4.a  
+		ai_chance = { factor = 80 }
+		
+		hidden_effect = {
+	        set_country_flag = AUS_flag_andrassy_hun_pm 		
+		}
+		custom_effect_tooltip = AUS_tt_appoint_andrassy   
+    }
+
+	option = { #Deak    
+		name = AUShuncompromise.4.b   
+		ai_chance = { factor = 20 }
+		
+		hidden_effect = {
+	        set_country_flag = AUS_flag_deak_hun_pm 		
+		}
+		custom_effect_tooltip = AUS_tt_appoint_deak    
+    }	
+}
+
+country_event = { #Franz Joseph crowned King of Hungary  
+	id = AUShuncompromise.5
+	title = AUShuncompromise.5.t
+	desc = AUShuncompromise.5.d
+	picture = GFX_report_event_AUS_franz_joseph_coronation
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		hidden_effect = {
+			set_cosmetic_tag = AUS_HUN_dual
+			news_event = AUSnews.2
+			AUS = {
+			    retire_country_leader = yes 
+                create_country_leader = {
+                    name = "Franz Joseph I"
+                    desc = "POLITICS_TEMP_DESC"
+                    picture = "Portrait_AUS_Franz_Joseph_I.dds"
+                    expire = 1920.08.03
+                    ideology = despotism 
+                }
+				remove_ideas = AUS_Franz_Joseph_I
+				set_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 0   
+                }
+				add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 2   
+                }
+				every_owned_state = { 
+				    limit = { NOT = { is_core_of = AUS } }
+				    add_core_of = AUS 
+				}
+				every_owned_state = { 
+				    limit = { is_core_of = HUN }
+				    remove_core_of = HUN 
+				}
+			}
+		}		
+	}
+	
+	option = { #Sehr Schon    
+		name = AUShuncompromise.5.a  
+		ai_chance = { factor = 80 }
+		
+		hidden_effect = {
+	        set_country_flag = AUS_flag_hun_dual_monarchy  		
+		}
+		custom_effect_tooltip = AUS_tt_dual_monarchy_enacted    
+    }	
+}
+
+country_event = { #The Vienna Conference 
+	id = AUSfedcompromise.2
+	title = AUSfedcompromise.2.t
+	desc = AUSfedcompromise.2.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Begin tbe Federalization Process   
+		name = AUSfedcompromise.2.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+		        country_event = { id = AUSfedcompromise.3 days = 150 } #Conference End 
+			    set_country_flag = AUS_flag_federalization_begin
+		    }
+        }		
+    }		
+}
+
+country_event = { #Conference Ends  
+	id = AUSfedcompromise.3
+	title = AUSfedcompromise.3.t
+	desc = AUSfedcompromise.3.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #End the Process    
+		name = AUSfedcompromise.3.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867 
+		    }
+        }		
+    }		
+}
+
+country_event = { #Negotiate with Hungarians  
+	id = AUSfedcompromise.4
+	title = AUSfedcompromise.4.t
+	desc = AUSfedcompromise.4.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Accept the crown of Hungary      
+		name = AUSfedcompromise.4.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                     value = 2  
+                }
+                subtract_from_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 1 
+                }
+			    set_country_flag = AUS_flag_federalization_franz_joseph_crowned_king_hun 
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_remove_hun_revolt_risk 	
+        custom_effect_tooltip = AUS_tt_add_two_sla_revolt_risk		
+    }
+
+	option = { #Reject the crown of Hungary      
+		name = AUSfedcompromise.4.b 
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+                add_to_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 2 
+                }
+            }
+        }
+        custom_effect_tooltip = AUS_tt_add_two_hun_revolt_risk		
+    }	
+}
+
+country_event = { #Negotiate with Slovaks   
+	id = AUSfedcompromise.5
+	title = AUSfedcompromise.5.t
+	desc = AUSfedcompromise.5.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Accept Slovak Autonomy     
+		name = AUSfedcompromise.5.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_slovak_autonomy  
+                add_to_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 1  
+                }
+		    }
+        }	
+        custom_effect_tooltip = AUS_tt_add_hun_revolt_risk		
+    }	
+	option = { #All of Slovakia under Hungary      
+		name = AUSfedcompromise.5.b  
+		ai_chance = { factor = 100 }	
+		
+		hidden_effect = {
+	        AUS = { 
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 0.5   
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_half_sla_revolt_risk				
+    }	
+}
+
+country_event = { #Negotiate with the Transylvanians    
+	id = AUSfedcompromise.6
+	title = AUSfedcompromise.6.t
+	desc = AUSfedcompromise.6.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Full Autonomy for Transylvania     
+		name = AUSfedcompromise.6.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_transylvania_full_autonomy
+                add_to_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 2   
+                }				
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_two_hun_revolt_risk				
+    }
+
+	option = { #Autonomy for Transylvania but Szekerland under Hungary      
+		name = AUSfedcompromise.6.b 
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_transylvania_autonomy_notszekerland 
+                add_to_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 1   
+                }				
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_hun_revolt_risk				
+    }	
+	
+	option = { #Under Hungary       
+		name = AUSfedcompromise.6.c  
+		ai_chance = { factor = 100 }			
+    }
+}
+
+country_event = { #Negotiate with the Croats     
+	id = AUSfedcompromise.7
+	title = AUSfedcompromise.7.t
+	desc = AUSfedcompromise.7.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Full Autonomy with Dalmatia     
+		name = AUSfedcompromise.7.a  
+		ai_chance = { factor = 25 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_full_autonomy_croatia 
+                add_to_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 0.5    
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_half_hun_revolt_risk		
+    }
+
+	option = { #Autonomy without Dalmatia      
+		name = AUSfedcompromise.7.b   
+		ai_chance = { factor = 15 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_full_autonomy_croatia 
+                add_to_variable = {
+                    var = HUN_REVOLT_RISK
+                    value = 0.5    
+                }
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 0.5    
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_half_hun_revolt_risk			
+        custom_effect_tooltip = AUS_tt_add_half_sla_revolt_risk			
+
+    }
+
+	option = { #Croatia under Hungary      
+		name = AUSfedcompromise.7.c    
+		ai_chance = { factor = 60 }
+		
+		hidden_effect = {
+	        AUS = {
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 1     
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_sla_revolt_risk		
+    }	
+}
+
+country_event = { #Negotiate with the Italians      
+	id = AUSfedcompromise.8
+	title = AUSfedcompromise.8.t
+	desc = AUSfedcompromise.8.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #If annexed Venice give it back to Lombardy-Venetia or autonomy + Trentino    
+		name = AUSfedcompromise.8.a  
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		    AUS = {
+			    owns_state = 160 
+			}
+		}
+		
+		if = {
+			limit = {
+		        LVN = { exists = yes }
+		    }
+		    LVN = {
+		        transfer_state = 160 
+				transfer_state = 1234 
+			}
+			160 = {
+				add_core_of = LVN 
+			}
+			1234 = {
+				add_core_of = LVN 
+			}
+		}
+		else = {
+			hidden_effect = {
+			    set_country_flag = AUS_flag_federalization_1867_venice_and_trentino_autonomy
+			}
+		}
+    }
+
+	option = { #If annexed Venice give it back to Lombardy-Venetia or autonomy    
+		name = AUSfedcompromise.8.b 
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		    AUS = {
+			    owns_state = 160 
+			}
+		}
+		
+		if = {
+			limit = {
+		        LVN = { exists = yes }
+		    }
+		    LVN = {
+		        transfer_state = 160 
+			}
+			160 = {
+				add_core_of = LVN 
+			}
+		}
+		else = {
+			hidden_effect = {
+			    set_country_flag = AUS_flag_federalization_1867_venice_autonomy
+			}
+		}
+    }
+	
+	option = { #If not annexed Venice give it autonomy + trentino 
+		name = AUSfedcompromise.8.a   
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		    NOT = {
+		        AUS = {
+			        owns_state = 160 
+			    }
+		    }
+		}
+		
+	    hidden_effect = {
+			    set_country_flag = AUS_flag_federalization_1867_venice_and_trentino_autonomy
+		}
+	}
+	
+	option = { #If not annexed Venice give it autonomy
+		name = AUSfedcompromise.8.b   
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+		    NOT = {
+		        AUS = {
+			        owns_state = 160 
+			    }
+		    }
+		}
+		
+	    hidden_effect = {
+		    set_country_flag = AUS_flag_federalization_1867_venice_autonomy
+		}
+	}
+}	
+
+country_event = { #Negotiate with the Bohemians       
+	id = AUSfedcompromise.9
+	title = AUSfedcompromise.9.t
+	desc = AUSfedcompromise.9.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #Full Autonomy     
+		name = AUSfedcompromise.9.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_bohemia_autonomy 
+		    }
+        }		
+    }	
+	option = { #Sudentenland under Austria      
+		name = AUSfedcompromise.9.b  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_bohemia_sudentenland_austrian  
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 0.5    
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_half_sla_revolt_risk		
+    }
+	option = { #All under Austria       
+		name = AUSfedcompromise.9.c  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867_bohemia_austrian  
+                add_to_variable = {
+                    var = SLA_REVOLT_RISK
+                    value = 1    
+                }
+		    }
+        }
+        custom_effect_tooltip = AUS_tt_add_sla_revolt_risk		
+    }	
+}
+
+country_event = { #Negotiate with the Galicians        
+	id = AUSfedcompromise.10 
+	title = AUSfedcompromise.10.t
+	desc = AUSfedcompromise.10.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #End the Process    
+		name = AUSfedcompromise.10.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867 
+		    }
+        }		
+    }		
+}
+
+country_event = { #Negotiate with the Vojvodinans         
+	id = AUSfedcompromise.11 
+	title = AUSfedcompromise.11.t
+	desc = AUSfedcompromise.11.d
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { #End the Process    
+		name = AUSfedcompromise.11.a  
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+	        AUS = {
+			    set_country_flag = AUS_flag_federalization_1867 
+		    }
+        }		
+    }		
+}
+
+add_namespace = AUShidden #Hidden Events 
+
+country_event = { #hidden event to clear variable          
+	id = AUShidden.1 
+	title = AUShidden.1.t 
+	desc = AUShidden.1.t 
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	hidden = yes
+
+    trigger = {
+        TAG = AUS 
+        NOT = {
+            has_idea = AUS_idea_industrialization_bohemia
+        }     
+        has_variable = AUS_var_bohemian_industrialization
+    }
+
+    immediate = {
+	    AUS = {
+            clear_variable = AUS_var_bohemian_industrialization
+		}
+    }
+
+    option = {
+	
+	}	
+}
+
+country_event = { #hidden event to clear variable          
+	id = AUShidden.2 
+	title = AUShidden.2.t 
+	desc = AUShidden.2.t 
+	picture = GFX_report_event_AUS_Budapest_1
+	
+	fire_only_once = yes 
+	
+	hidden = yes 
+
+    trigger = {
+        TAG = AUS 
+        NOT = {
+            has_idea = AUS_idea_urbanise_wien
+        }     
+        has_variable = AUS_var_wien_urbanisation
+    }
+
+    immediate = {
+	    AUS = {
+            clear_variable = AUS_var_wien_urbanisation
+		}
+    }
+
+    option = {
+	
+	}		
 }

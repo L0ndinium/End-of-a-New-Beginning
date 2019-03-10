@@ -18,7 +18,13 @@
 default_unit_production = {
 	enable = {
 		always = yes
-		#NOT = { original_tag = GER } NOT = { original_tag = FRA } NOT = { original_tag = CHI  } NOT = { original_tag = ENG  }
+		NOT = { original_tag = GER } NOT = { original_tag = FRA } NOT = { original_tag = CHI  } NOT = { original_tag = ENG  }
+		not = { original_tag = CZE } 
+		Not = {
+			OR = {
+				original_tag = JAP
+			}
+		}
 	}
 	
 	ai_strategy = {
@@ -99,7 +105,7 @@ default_unit_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = capital_ship
-		value = 20
+		value = 10
 	}
 
 	ai_strategy = {
@@ -111,7 +117,7 @@ default_unit_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = screen_ship
-		value = 30
+		value = 40
 	}
 
 	ai_strategy = {
@@ -139,6 +145,133 @@ default_unit_production = {
 	}
 }
 
+default_role_ratios = {
+	enable = {
+		not = {
+			has_dlc = "Man the Guns"
+		}
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_sub
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 100
+	}
+}
+
+default_role_ratios = {
+	enable = {
+		has_dlc = "Man the Guns"
+		not = {
+			OR = {
+				original_tag = GER
+				original_tag = ENG
+				original_tag = USA
+				original_tag = JAP
+				original_tag = SOV
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -80
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = -70
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = 25
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 20
+	}
+}
+
+#dont_build_capitals_if_on_treaty = {
+#	enable = {
+#		has_naval_treaty_trigger = yes
+#	}
+#
+#	abort = {
+#		not = { has_naval_treaty_trigger = yes }
+#	}
+#
+#	ai_strategy = {
+#		type = unit_ratio
+#		id = capital_ship
+#		value = -2		 #1 to 2
+#	}
+#	ai_strategy = {
+#		type = role_ratio
+#		id = naval_capital_bb
+#		value = -100
+#	}
+#
+#	ai_strategy = {
+#		type = role_ratio
+#		id = naval_capital_bc
+#		value = -100
+#	}
+#}
 
 default_paratroopers_production = {
 	enable = {
@@ -158,23 +291,38 @@ default_paratroopers_production = {
 
 default_garrison_production = {
 	enable = {
-		ai_wants_divisions >  12 #Massively decreasing the amount of paratroopers the AI wants
+		NOT = { 
+			original_tag = GER 
+			original_tag = SOV
+			original_tag = USA
+			original_tag = CHI
+			original_tag = FRA
+			original_tag = JAP
+		}
+		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = yes
 	}
 	abort = {
-		ai_wants_divisions < 13 #Massively decreasing the amount of paratroopers the AI wants
+		ai_wants_divisions < 13 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = no
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = garrison
-		value = 7
+		value = 5
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = suppression
+		value = 2
 	}
 }
 
 default_mountaineers_production = {
 	enable = {
+		NOT = { original_tag = GER }
 		ai_wants_divisions > 11 #Decreasing the amount of mountaineers the AI wants
 	}
 	abort = {
@@ -190,6 +338,7 @@ default_mountaineers_production = {
 
 default_marines_production = {
 	enable = {
+		NOT = { original_tag = GER }
 		ai_wants_divisions > 49
 	}
 	abort = {
@@ -211,6 +360,7 @@ default_marines_production = {
 
 default_mobile_production = {
 	enable = {
+		NOT = { original_tag = GER }
 		ai_wants_divisions > 11
 		has_tech = motorised_infantry
 	}
@@ -227,6 +377,8 @@ default_mobile_production = {
 
 default_armored_production = {
 	enable = {
+		NOT = { original_tag = GER }
+		not = { original_tag = CZE }
 		ai_wants_divisions > 49
 	}
 	abort = {
@@ -248,6 +400,7 @@ default_armored_production = {
 
 highered_armored_production = {
 	enable = {
+		NOT = { original_tag = GER }
 		num_of_military_factories > 69
 	}
 	abort = {
@@ -297,9 +450,45 @@ slightly_naval_focused_nation = {
 	}
 }
 
+more_naval_focused_nation = {
+	enable = {
+		OR = {
+			tag = JAP
+			tag = USA
+			tag = ENG
+		}
+		date > "1941.1.1" #Delaying it by a couple of years
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 2		 #1 to 2
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 1
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 1
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 1
+	}
+}
+
+
 default_area_priority = {
 	enable = {
-		always = yes
+		NOT = { original_tag = GER } NOT = { original_tag = FRA }
 	}
 
 	ai_strategy = {
@@ -323,25 +512,25 @@ default_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = asia
-		value = 65
+		value = 75
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = middle_east
-		value = 40
+		value = 50
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = africa
-		value = -80
+		value = -90
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = pacific
-		value = 80
+		value = 300
 	}
 	
 	ai_strategy = {
@@ -352,9 +541,59 @@ default_area_priority = {
 
 }
 
+default_stockpile_management = {
+	enable = {
+		num_divisions > 150
+	}
+
+	abort = {
+		num_divisions < 130
+	}
+
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 35 # double base stockpile #from 25 to 35
+	}
+}
+
+
+#dont_build_capitals_if_on_treaty = {
+#	enable = {
+#		has_naval_treaty_trigger = yes
+#		not = {
+#			OR = {
+#				original_tag = JAP
+#				original_tag = ITA
+#			}
+#		}
+#	}
+#
+#	abort = {
+#		not = { has_naval_treaty_trigger = yes }
+#	}
+#
+#	ai_strategy = {
+#		type = unit_ratio
+#		id = capital_ship
+#		value = -2		 #1 to 2
+#	}
+#	ai_strategy = {
+#		type = role_ratio
+#		id = naval_capital_bb
+#		value = -100
+#	}
+#
+#	ai_strategy = {
+#		type = role_ratio
+#		id = naval_capital_bc
+#		value = -100
+#	}
+#}
+
 DEFAULT_template_design = {
 	enable = {
-		always = yes			
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = POL } }	
+		date < 1940.1.1				
 	}
 	abort = { 
 		#REVISE LATER
@@ -406,6 +645,7 @@ DEFAULT_template_design = {
 
 DEFAULT_template_design = {
 	enable = {
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = POL } }
 		date > 1940.1.1				
 	}
 

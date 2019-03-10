@@ -45,7 +45,7 @@ country_event = {
 		name = tsushima.2.a
 		ai_chance = { factor = 100 }
 		RUS = { transfer_state = 1231 }
-		JAP = {
+		TSH = {
 			remove_state_core = 1231
 			add_state_claim = 1231
 		}
@@ -72,12 +72,12 @@ country_event = {
 			factor = 85
 			modifier = {
 				factor = 0.5
-				has_opinion = { target = JAP value < 0 }
+				has_opinion = { target = TSH value < 0 }
 			}
 		}
-		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_tsushima_ENG_did_help }
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_tsushima_ENG_did_help }
 		hidden_effect = {
-			set_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+			set_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 		}
 	}
 	
@@ -92,12 +92,12 @@ country_event = {
 			}
 			modifier = {
 				factor = 4
-				has_opinion = { target = JAP value > 25 }
+				has_opinion = { target = TSH value > 25 }
 			}
 		}
-		reverse_add_opinion_modifier = { target = JAP modifier = eoanb_om_tsushima_ENG_didnt_help }
+		reverse_add_opinion_modifier = { target = TSH modifier = eoanb_om_tsushima_ENG_didnt_help }
 		hidden_effect = {
-			set_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+			set_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
 		}
 	}
 	
@@ -113,10 +113,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		TAG = JAP
+		TAG = TSH
 		OR = {
-			has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
-			has_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+			has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+			has_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
 		}
 		date > 1861.4.11
 	}
@@ -189,7 +189,7 @@ country_event = {
 		RUS = { country_event = { id = tsushima.8 days = 2 } }
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			RUS = { country_event = { id = tsushima.7 days = 1 } }
 		}
@@ -232,10 +232,10 @@ country_event = {
 	option = {
 		name = tsushima.8.a
 		ai_chance = { factor = 75 }
-		JAP = { country_event = { id = tsushima.9 days = 1 } }
+		TSH = { country_event = { id = tsushima.9 days = 1 } }
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			ENG = { country_event = { id = tsushima.9 days = 1 } }
 		}
@@ -251,10 +251,10 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		JAP = { country_event = { id = tsushima.10 days = 1 } }
+		TSH = { country_event = { id = tsushima.10 days = 1 } }
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			ENG = { country_event = { id = tsushima.10 days = 1 } }
 		}
@@ -278,7 +278,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					TAG = JAP
+					TAG = TSH
 				}
 				news_event = news.19
 			}
@@ -302,7 +302,7 @@ country_event = {
 		ai_chance = { factor = 95 }
 		RUS = { country_event = { id = tsushima.11 days = 1 } }
 		trigger = {
-			TAG = JAP
+			TAG = TSH
 		}
 	}
 	
@@ -312,7 +312,7 @@ country_event = {
 		ai_chance = { factor = 5 }
 		RUS = { country_event = { id = tsushima.2 days = 1 } }
 		trigger = {
-			TAG = JAP
+			TAG = TSH
 		}
 	}
 	
@@ -340,10 +340,10 @@ country_event = {
 	option = {
 		name = tsushima.11.a
 		ai_chance = { factor = 80 }
-		JAP = { country_event = { id = tsushima.9 days = 1 } }
+		TSH = { country_event = { id = tsushima.9 days = 1 } }
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			ENG = { country_event = { id = tsushima.9 days = 1 } }
 		}
@@ -353,13 +353,13 @@ country_event = {
 	option = {
 		name = tsushima.11.b
 		ai_chance = { factor = 20 }
-		declare_war_on = { target = JAP type = annex_everything }
+		declare_war_on = { target = TSH type = annex_everything }
 		custom_effect_tooltip = eoanb_tt_event_tsushima_11_b
 		hidden_effect = {
-			JAP = { country_event = { id = tsushima.12 days = 1 } }
+			TSH = { country_event = { id = tsushima.12 days = 1 } }
 			if = {
 				limit = {
-					has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 				}
 				ENG = { country_event = { id = tsushima.12 days = 1 } }
 			}
@@ -383,7 +383,7 @@ country_event = {
 		name = tsushima.12.a
 		ai_chance = { factor = 100 }
 		trigger = {
-			TAG = JAP
+			TAG = TSH
 		}
 		hidden_effect = {
 			set_global_flag = eoanb_flag_tsushima_war_ongoing
@@ -395,7 +395,7 @@ country_event = {
 		name = tsushima.12.b
 		ai_chance = { factor = 100 }
 		add_to_war = { 
-			targeted_alliance = JAP 
+			targeted_alliance = TSH 
 			enemy = RUS
 		}
 		custom_effect_tooltip = eoanb_tt_event_tsushima_12_b
@@ -444,7 +444,7 @@ country_event = {
 	option = {
 		name = tsushima.13.a
 		ai_chance = { factor = 100 }
-		JAP = { 
+		TSH = { 
 			transfer_state = 655
 			add_state_core = 655
 		}
@@ -454,40 +454,41 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
-			JAP = { country_event = { id = tsushima.14 days = 1 } }
+			TSH = { country_event = { id = tsushima.14 days = 1 } }
 		}
 		RUS = { add_timed_idea = { idea = eoanb_idea_tsushima_paying_reparations days = 365 } }
-		JAP = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
+		TSH = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			ENG = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
 		}
 		hidden_effect = {
-			white_peace = JAP
+			white_peace = TSH
 			white_peace = RYU
 			if = {
 				limit = {
-					has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 				}
 				white_peace = ENG
 				white_peace = NWT
+				white_peace = BCO
 			}
 			clr_global_flag = eoanb_flag_tsushima_war_ongoing
 			if = {
 				limit = {
-					has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 				}
-				clr_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				clr_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			if = {
 				limit = {
-					has_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+					has_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
 				}
-				clr_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+				clr_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
 			}
 		}
 	}
@@ -507,8 +508,7 @@ country_event = {
 	option = {
 		name = tsushima.14.a
 		ai_chance = { factor = 98 }
-		#Change this to Naval Access in MtG
-		ENG = { give_military_access = JAP }
+		ENG = { give_military_access = TSH }
 	}
 	
 	#No, that is not okay
@@ -533,14 +533,14 @@ country_event = {
 	option = {
 		name = tsushima.15.a
 		ai_chance = { factor = 98 }
-		add_opinion_modifier = { target = JAP modifier = eoanb_om_tsushima_JAP_broke_treaty }
+		add_opinion_modifier = { target = TSH modifier = eoanb_om_tsushima_TSH_broke_treaty }
 	}
 	
 	#If they want another war, they can have it
 	option = {
 		name = tsushima.15.b
 		ai_chance = { factor = 2 }
-		declare_war_on = { target = JAP type = puppet_wargoal_focus }
+		declare_war_on = { target = TSH type = puppet_wargoal_focus }
 	}
 	
 }
@@ -557,11 +557,11 @@ country_event = {
 	trigger = {
 		TAG = RUS
 		has_global_flag = eoanb_flag_tsushima_war_ongoing
-		JAP = { surrender_progress > 0.5 }
+		TSH = { surrender_progress > 0.5 }
 		OR = {
-			JAP = { surrender_progress > 0.6 }
+			TSH = { surrender_progress > 0.6 }
 			ENG = { surrender_progress > 0.4 }
-			JAP = { has_army_manpower = { size < 10000 } }
+			TSH = { has_army_manpower = { size < 10000 } }
 			ENG = { NOT = { controls_state = 952 } }
 		}
 	}
@@ -574,7 +574,7 @@ country_event = {
 			transfer_state = 1231
 			add_state_core = 1231
 		}
-		JAP = {
+		TSH = {
 			remove_state_core = 1231
 			add_state_claim = 1231
 		}
@@ -582,7 +582,7 @@ country_event = {
 			transfer_state = 750
 			add_state_core = 750
 		}
-		JAP = {
+		TSH = {
 			remove_state_core = 750
 			add_state_claim = 750
 		}
@@ -592,40 +592,41 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			ENG = { add_timed_idea = { idea = eoanb_idea_tsushima_paying_reparations days = 365 } }
 		}
-		JAP = { add_timed_idea = { idea = eoanb_idea_tsushima_paying_reparations days = 365 } }
+		TSH = { add_timed_idea = { idea = eoanb_idea_tsushima_paying_reparations days = 365 } }
 		RUS = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
 		if = {
 			limit = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			ENG = { add_timed_idea = { idea = eoanb_idea_tsushima_receiving_reparations days = 365 } }
 		}
 		hidden_effect = {
-			white_peace = JAP
+			white_peace = TSH
 			white_peace = RYU
 			if = {
 				limit = {
-					has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 				}
 				white_peace = ENG
 				white_peace = NWT
+				white_peace = BCO
 			}
 			clr_global_flag = eoanb_flag_tsushima_war_ongoing
 			if = {
 				limit = {
-					has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+					has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 				}
-				clr_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
+				clr_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
 			}
 			if = {
 				limit = {
-					has_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+					has_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
 				}
-				clr_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+				clr_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
 			}
 		}
 	}

@@ -1,0 +1,134 @@
+guiTypes = {
+	containerWindowType = {
+		name = "achievements_window"
+		position = { x=50 y=50 }	
+		size = { width=795 height=605 }
+		Orientation = center
+		Origo = center
+		moveable = yes
+
+		background = {
+				name = "Background"
+				spriteType ="GFX_tiled_bg"
+			} 
+		iconType ={
+			name ="achievements_top_bar"
+			spriteType = "GFX_achievements_top_bar"
+			position = { x=15 y=13}
+			Orientation = "UPPER_LEFT"
+			allwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "title_label"
+			position = { x = 147 y =28 }	
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "ACHIEVEMENTS"
+			maxWidth = 500
+			maxHeight = 32
+			format = centre
+			allwaystransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "entries"
+			position = {x=17 y=75}
+			size = {width=760 height=470}
+			verticalScrollbar = "right_vertical_slider"
+			margin = {top=5 left=0 bottom=4 right=0}
+			
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_paper_bg2"
+			} 
+			
+			gridBoxType = {
+				name = "list"
+				position = {x=10 y=10}
+				size = {width=100%% height=100%%}
+				slotsize = {width=100%% height=95}
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
+		
+		iconType ={
+			name ="achievements_bottom_bar"
+			spriteType = "GFX_achievements_bottom_bar"
+			position = { x=15 y=-61 }
+			Orientation = "LOWER_LEFT"
+			allwaystransparent = yes
+		}
+			
+		buttonType = {
+			name ="close_button"
+			quadTextureSprite ="GFX_button_261x34"
+			position = { x= 267§ y = 553}
+			buttonText = "CLOSE"
+			buttonFont = "hoi_16mbs"
+			shortcut = "ESCAPE"
+		}
+		
+	}
+	
+	###### ACHIEVEMENT ENTRY
+	containerWindowType = {
+		name = "achievement_entry"
+		position = { x=0 y=0 }	
+		size = { width=600 height= 83 }
+		
+		#remove
+		iconType =
+		{
+			name ="achievement_entry_bg"
+			spriteType = "GFX_achievement_entry_bg"
+			position = { x=-2 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="achievement_icon"
+			spriteType = "GFX_idea_unknown"
+			position = { x= 17 y = 12 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "achievement_name"
+			position = { x = 112 y = 10 }
+			font = "hoi_20b"
+			borderSize = {x = 0 y = 0}
+			text = "name"	
+			maxWidth = 300
+			maxHeight = 32
+			fixedsize = yes
+			format = left			
+		}
+		
+		instantTextBoxType = {
+			name = "achievement_desc"
+			position = { x = 112 y = 30 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "desc"	
+			maxWidth = 450
+			maxHeight = 100
+			format = left			
+		}
+		
+		## stuff to the right
+		
+		instantTextBoxType = {
+			name = "achievement_progress_text"
+			position = { x = 603 y = 34 }
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "7/14"
+			vertical_alignment = center			
+			maxWidth = 100
+			maxHeight = 32
+			format = centre			
+		}
+	}
+}

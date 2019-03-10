@@ -1,4 +1,40 @@
 ideas = {
+	country = {
+		SPR_VIN_war = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_VIN_war
+			
+			modifier = {
+				consumer_goods_factor = 0.01
+			}
+		}
+		SPR_VIN_victory = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_VIN_war
+			
+			modifier = {
+				consumer_goods_factor = -0.01
+			}
+		}
+	}
     political_advisor = {
 		SPR_Jose_de_Salamanca = {
 			allowed = {

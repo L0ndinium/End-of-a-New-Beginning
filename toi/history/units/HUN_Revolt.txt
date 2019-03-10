@@ -1,0 +1,106 @@
+﻿division_template = {
+  name = "Gyalogezred"
+
+  division_names_group = HUN_INF_01 
+  
+  regiments = {
+    line_infantry = { x = 0 y = 0}
+    line_infantry = { x = 0 y = 1}
+    line_infantry = { x = 1 y = 0}
+    line_infantry = { x = 1 y = 1}
+  }
+}
+
+division_template = {
+  name = "Könnyűhadosztály"
+
+  division_names_group = HUN_INF_02
+  
+  regiments = {
+    light_infantry = { x = 0 y = 0}
+	light_infantry = { x = 0 y = 1}
+	light_infantry = { x = 1 y = 0}
+	light_infantry = { x = 1 y = 1}
+  }
+}
+
+division_template = {
+  name = "Huszár"
+
+  division_names_group = HUN_CAV_01 
+  
+  regiments = {
+    light_cavalry = { x = 0 y = 0}
+	light_cavalry = { x = 1 y = 0}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 1
+		    }
+			location = 9660
+			division_template = "Gyalogezred"
+			start_experience_factor = 0.2
+		}
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 2 
+		    }
+			location = 6720
+			division_template = "Gyalogezred"
+			start_experience_factor = 0.2
+		}
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 3 
+		    }
+			location = 679
+			division_template = "Gyalogezred"
+			start_experience_factor = 0.2
+		}
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 1
+		    }
+			location = 11610 
+			division_template = "Könnyűhadosztály"
+			start_experience_factor = 0.2
+		}
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 2
+		    }
+			location = 11610 
+			division_template = "Könnyűhadosztály"
+			start_experience_factor = 0.2
+		}
+		#Scattered Divisions
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 1
+		    }
+			location = 6751 
+			division_template = "Huszár"
+			start_experience_factor = 0.25 
+            start_equipment_factor = 0.75
+		}
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 3
+		    }
+			location = 11659  
+			division_template = "Huszár"
+			start_experience_factor = 0.25 
+            start_equipment_factor = 0.75
+		}
+}

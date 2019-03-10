@@ -1,5 +1,10 @@
+AUS_HUN_dual = {
+	color = rgb { 145 27 25 }
+	color_ui = rgb { 255 255 255 }
+}
+
 LVN_austrian = {
-	color = rgb { 147 150 163 }
+	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
 }
 
@@ -21,11 +26,6 @@ PIE_focus_ITA = {
 GER_north_confederation = {
 	color = rgb { 111 118 124 }
 	color_ui = rgb { 111 118 124 }
-}
-
-AUS_HUN_dual = {
-	color = rgb { 194 198 215 }
-	color_ui = rgb { 255 255 255 }
 }
 
 PRS_GER_bismarck = {
@@ -101,11 +101,24 @@ IRQ_mesopotamia = {
 	color = rgb { 178 114 99 }
 	color_ui = rgb { 178 114 99 }
 }
-RRP = {
- color = rgb { 103 29 32 }
- color_ui = rgb { 103 29 32 }
-}
+
 UPCA_cosmetic = {
 	color = rgb { 164 247 249 }
 	color_ui = rgb { 164 247 249 }
 }
+CAN_province = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 119 48 39 }
+}
+CAN_confederation = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 119 48 39 }
+}
+BCO_united = {
+	color = rgb { 24 49 89 }
+	color_ui = rgb { 24 49 89 }
+}
+PAP_RRP = {
+	color = rgb { 103 29 32 }
+	color_ui = rgb { 103 29 32 }
+   }

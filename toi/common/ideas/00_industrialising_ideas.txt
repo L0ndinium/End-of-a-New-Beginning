@@ -163,7 +163,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.15
 				stability_factor = -0.075
-				research_time_factor = 1
+				research_speed_factor = -0.5
 				army_org_Factor = -0.075
 			}
 		}
@@ -179,7 +179,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.15
 				stability_factor = -0.1
-				research_time_factor = 0.75
+				research_speed_factor = -0.4
 				army_org_Factor = -0.075
 			}
 		}
@@ -410,7 +410,7 @@ ideas = {
 			picture = generic_war_preparation
 
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				industrial_capacity_factory = 0.05
 			}
 		}

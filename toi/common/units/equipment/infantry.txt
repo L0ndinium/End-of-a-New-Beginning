@@ -553,8 +553,9 @@ equipments = {
 		resources = {
 			steel = 1
 			machine_parts = 1
-			oil = 1
 		}
+		
+		fuel_consumption = 0.3
 	}
 	
 	flamethrower_equipment_0 = {

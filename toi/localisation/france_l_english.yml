@@ -125,12 +125,15 @@
  FRA_french_expeditionary_troops:0 "French Expeditionary Forces"
  FRA_condemn_french_volunteers:0 "Condemn the French Volunteers"
  FRA_french_colonial_empire:0 "Chasseloup-Laubat's Colonial Plans"
+ FRA_french_colonial_empire_desc:0 "France needs to get colonial ambitions"
  FRA_stabilize_algeria:0 "Stabilize the Algerian conquests"
  FRA_intervention_lebanon:0 "Intervention in Lebanon"
  FRA_expand_algeria:0 "Expand in Algeria"
  FRA_full_control_senegal:0 "Full Control of Senegal"
  FRA_convert_mali:0 "Catholic Missions to Mali"
  FRA_french_indochina:0 "Colonize Indochina"
+ FRA_french_indochina_desc:0 "The Vietnamese Emperor have approved the execution of two Spanish Catholic missionaries. It was not the first incident of this type but this time French have an army in China with the Second Opium War. It is an occasion for French and Spanish armies to do a punitive expedition."
+ FRA_french_indochina_tooltip:0 "Declare war to Vietnam with the help of Spain.\nEvery month, you will lose equipment to continue the war\n\n"
  FRA_convert_vietnamese:0 "Convert the Vietnamese"
  FRA_european_neighbors:0 "Our European Neighbors"
  FRA_empire_paix:0 "L'Empire, c'est la Paix"
@@ -300,6 +303,7 @@
  FRA_tooltip_loi_niel:0 "Finishing this focus will unlock the decision to §YEnact the Niel Law.§!"
  FRA_death_mouhot:0 "Henri Mouhot needs to finish his trip"
  FRA_tooltip_contain_prussia:0 "$YDecisions$! will be unlocked to invite neighboring countries in the $MContinental System$!"
+ FRA_has_colonial_ambitions:0 "France has colonial ambitions"
 
 ##################################################
 #                     DECISIONS
@@ -390,7 +394,17 @@
  FRA_CBI_idea_french_backed_economy_2:0 "French Backed Economy"
  FRA_CBI_idea_french_industries:0 "French Industries"
  FRA_CBI_idea_recognized_prime_minister:0 "Recognized Prime Minister"
-
+ FRA_VIN_war:0 "Cochinchina campaign"
+ FRA_VIN_war_desc:0 "The Vietnamese Emperor have approved the execution of two Spanish Catholic missionaries. It was not the first incident of this type but this time French have an army in China with the Second Opium War. French and Spanish armies are curenntly doing a punitive expedition but this simple expedition is not enough easy than predicted."
+ SPR_VIN_war:0 "Cochinchina campaign"
+ SPR_VIN_war_desc:0 "The Vietnamese Emperor have approved the execution of two Spanish Catholic missionaries. It was not the first incident of this type but this time French have an army in China with the Second Opium War. French and Spanish armies are curenntly doing a punitive expedition but this simple expedition is not enough easy than predicted."
+ VIN_FRA_war:0 "Cochinchina campaign"
+ VIN_FRA_war_desc:0 "The Vietnamese Emperor have approved the execution of two Spanish Catholic missionaries. It was not the first incident of this type but this time French have an army in China with the Second Opium War. French and Spanish armies are curenntly doing a punitive expedition but this simple expedition is not enough easy than predicted.\nIn addition to this war, the Vietnam is facing a revolt.\nIf the Vietnam loses, he will also pay reparation to Europeans."
+ FRA_VIN_victory:0 "Cochinchina war reparation"
+ FRA_VIN_victory_desc:0 "Like the Cochinchina war is a victory, France has got war reparations"
+ SPR_VIN_victory:0 "Cochinchina war reparation"
+ SPR_VIN_victory_desc:0 "Like the Cochinchina war is a victory, Spain has got war reparations"
+ 
  # Leaders
  POLITICS_NAPOLEON_III_DESC:0 "Charles-Louis-Napoleon Bonaparte, also called Louis-Napoleon Bonaparte, is a nephew of the Emperor Napoleon the First as the 3rd son of Louis-Napoleon Bonaparte, called Louis Bonaparte, the King of Holland. Napoleon the First considered him as a grand-son as a son of Hortense de Beauharnais the daughter of Josephine. In 1816, all the Bonaparte are banned from France, Charles-Louis-Napoleon Bonaparte is exiled in Arenenberg (Switzerland) with his mother. In 1832 he get the Swiss nationality. 1832 is also the year of the death of the son of Napoleon the First. Charles-Louis-Napoleon Bonaparte became the leader of the Bonaparte dynasty like his brothers are also dead. He attempted several uprising, Strasbourg (1836) and Boulogne-sur-Mer (1840). The 1848 Revolution allowed him to run for deputation. He became the first universal elected president in 1848. In December 1851 he organized a coup d’état and in December 1852 he became the Emperor Napoleon III. Napoleon III is married in 1853 with Eugénie de Montijo and has got a son in March 1856 who is the godchild of the Pope Pie IX."
 
@@ -535,6 +549,14 @@
  nap_france_flavor.22.t:0 "Grand Kabyle campaign ending"
  nap_france_flavor.22.d:0 "The conquest of the Grand Kabyle region is finished. Marshal Randon, the France Algeria governor have successfully manage this conquest to make the French colony bigger."
  nap_france_flavor.22.a:0 "How the inhabitants will react to the European colonization?"
+
+ nap_france_flavor.23.t:0 "End of the Cochinchina war"
+ nap_france_flavor.23.d:0 "The treaty of Saigon ended the Cochinchina war.\nFrance and Spain get war reparations.\nSpain was not interested by territory gains.\nBut France has obtained the provinces under his control in the lower Cochinchina."
+ nap_france_flavor.23.a:0 "France has a new colony"
+
+ nap_france_flavor.24.t:0 "End of the Cochinchina war"
+ nap_france_flavor.24.d:0 "The treaty of Saigon ended the Cochinchina war.\nFrance and Spain get war reparations.\nSpain and France were not interested by territory gains."
+ nap_france_flavor.24.a:0 "A long war for few results"
 
   # Event Text
 
@@ -851,6 +873,16 @@
  nap_france.153.t:0 "The integration of Southern Algeria into our colony"
  nap_france.153.d:0 ""
  nap_france.153.a:0 "As it should be"
+
+ nap_france.160.t:0 "Continue the Cochinchina war"
+ nap_france.160.d:0 "The punitive expedition is not easy as predicted. Should we continue the war and ask later more reparations or should we forgive to lose all efforts but stop doing efforts."
+ nap_france.160.a:0 "They will pay for that resistance"
+ nap_france.160.b:0 "Continue this war will bring nothing"
+
+ nap_france.161.t:0 "Victory in Cochinchina war"
+ nap_france.161.d:0 "The treaty of Saigon ended the Cochinchina war.\nFrance and Spain get war reparations.\nSpain is not interested by territory gains.\nShould we demand the provinces under our control in the lower Cochinchina ?"
+ nap_france.161.a:0 "Yes we need some provinces to intervene later"
+ nap_france.161.b:0 "Cochinchina is too far"
 
  nap_france.200.t:0 "The Regency of Jérôme Bonaparte"
  nap_france.200.d:0 ""

@@ -91,7 +91,7 @@
   tech_infantry_infantry_swords = 1
   tech_infantry_flintlock_pistol = 1
   vic_army_cloth = 1
-  tech_naval_1812_frigate = 1
+  #tech_naval_1812_frigate = 1
   gw_artillery = 1
   iron_railways = 1
   steam_engine = 1
@@ -195,6 +195,47 @@ create_corps_commander = {
   planning_skill = 1
   logistics_skill = 1
 }
+create_corps_commander = {
+  name = "Enrico Cosenz"
+  picture = "Portrait_NSC_Enrico_Cosenz.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Manfredo Fanti"
+  picture = "Portrait_ITA_manfredo_fanti.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Domenico Cucchiari"
+  picture = "Portrait_ITA_domenico_cucchiari.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+create_corps_commander = {
+  name = "Giovanni Durando"
+  picture = "Portrait_ITA_giovanni_durando.dds"
+  traits = { }
+  skill = 3
+  attack_skill = 1
+  defense_skill = 1
+  planning_skill = 1
+  logistics_skill = 1
+}
+
 
 create_navy_leader = {
   name = "Carlo Pellion di Persano"

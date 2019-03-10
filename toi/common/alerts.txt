@@ -30,6 +30,9 @@ alerts = {
 	alert_naval_combat = {
 		category = HIGH
 	}
+	alert_is_spotting = {
+		category = HIGH
+	}
 	alert_enemy_generate_wargoal  = {
 		category = HIGH
 	}
@@ -98,6 +101,12 @@ alerts = {
 	alert_faction_possible_invite  = {
 		category = LOW
 	}
+	alert_faction_assume_leadership_possible  = {
+		category = LOW
+	}
+	alert_faction_member_near_assuming_leadership  = {
+		category = LOW
+	}
 	alert_air_reserve_unused  = {
 		category = LOW
 	}
@@ -135,6 +144,9 @@ alerts = {
 		category = HIGH
 	}
 	alert_border_conflict = {
+		category = HIGH
+	}
+	alert_ally_pulling_its_expeditionaries = {
 		category = HIGH
 	}
 }

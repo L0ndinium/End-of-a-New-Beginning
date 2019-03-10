@@ -1,5 +1,5 @@
 state={
-	id=88 # Krakow
+	id=88 # Tarnow 
 	name="STATE_88"
 	manpower = 2798907
 	resources={
@@ -7,20 +7,21 @@ state={
 		oil=2
 	}
 
-	state_category = large_city
+	state_category = rural 
 
 	history={
 		owner = AUS
-		victory_points = {
-			9427 10
-		}
 		buildings = {
 			infrastructure = 4
 		}
+		victory_points = {
+			442 2
+		}
 		add_core_of = AUS
+		add_core_of = GLM
 	}
 
 	provinces={
-		417 442 466 3410 6499 6522 9412 11398 11413 11507 9427
+		417 442 466 3410 6499 6522 9412 11398 11413 11507
 	}
 }

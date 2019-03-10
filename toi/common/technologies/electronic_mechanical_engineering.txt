@@ -5,39 +5,47 @@ technologies = {
 	debugtech = {
 		
 		enable_equipments = {
-			infantry_equipment
-			infantry_equipment_0
-			infantry_equipment_1
-			infantry_equipment_2
-			infantry_equipment_3
+			#
 		}
 		enable_building = {
 			building = rocket_site
 			level = 3
 		}
 		enable_building = {
-			building = synthetic_refinery
-			level = 5
+			building = synthetic_refinery_oil
+			level = 10
+		}
+		enable_building = {
+			building = synthetic_refinery_rubber
+			level = 10
+		}
+		enable_building = {
+			building = fuel_silo_industrial
+			level = 50
+		}
+		enable_building = {
+			building = fuel_silo_modern
+			level = 50
 		}
 		enable_building = {
 			building = nuclear_reactor
-			level = 3
+			level = 10
 		}
 		enable_building = {
 			building = electronics_factory
-			level = 3
+			level = 5
 		}
 		enable_building = {
 			building = plastics_refinery
-			level = 3
+			level = 5
 		}
 		enable_building = {
 			building = ceramic_buners
-			level = 3
+			level = 5
 		}
 		enable_building = {
 			building = generator_factory
-			level = 3
+			level = 5
 		}
 		enable_building = {
 			building = anti_air_building

@@ -101,6 +101,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0.25
 		}
+		available = {  OR = { has_idea = industrializing has_idea = industrialized } }
 		prerequisite = { focus = generic_focus_industry }
 		bypass = {
 			any_owned_state = {
@@ -811,7 +812,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 12
 		y = 1
-		cost = 75
+		cost = 250
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -888,7 +889,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 12
 		y = 2
-		cost = 75
+		cost = 250
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1

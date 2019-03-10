@@ -20,14 +20,4 @@ units = {
 			division_template = "South American Infantry"
 			start_experience_factor = 0.1
 		}
-		
-		navy = {				
-			name = "Bolivian Navy"			
-			base = 8217
-			location = 8217
-			ship = { name = "General Sucre" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BOL } } }
-			ship = { name = "El Morro" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BOL } } }
-			ship = { name = "Sorata" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BOL } } }
-			ship = { name = "Maria Luisa" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BOL } } }
-		}
 }

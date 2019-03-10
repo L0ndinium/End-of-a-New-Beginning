@@ -81,7 +81,7 @@
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	iron_railways = 1
 	steam_engine = 1
@@ -101,6 +101,14 @@ create_country_leader = {
 	picture = "Portrait_PAP_Pius_IX.dds"
 	expire = "1947.1.1"
 	ideology = christian
+}
+create_country_leader = {
+  name = "Roman Triumvirate"
+  #desc = "POLITICS_RONALD_MCDONALD_DESC"
+  picture = "gfx/leaders/PAP/RRE_Tri_Government.dds"
+  expire = "1965.1.1"
+  ideology = revolutionary
+
 }
 
 create_corps_commander = {

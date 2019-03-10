@@ -147,8 +147,8 @@ foreign_politics = {
 		
 		visible = {
 			TAG = RUS
-			JAP = { exists = yes }
-			JAP = { has_full_control_of_state = 1231 }
+			TSH = { exists = yes }
+			TSH = { has_full_control_of_state = 1231 }
 			date > 1861.1.1
 		}
 		
@@ -157,7 +157,7 @@ foreign_politics = {
 		cost = 0
 		
 		complete_effect = {
-			JAP = { country_event = { id = tsushima.1 days = 1 } }
+			TSH = { country_event = { id = tsushima.1 days = 1 } }
 		}
 		
 		ai_will_do = {
@@ -183,12 +183,12 @@ foreign_politics = {
 		
 		visible = {
 			TAG = RUS
-			JAP = { exists = yes }
-			JAP = { has_full_control_of_state = 1231 }
+			TSH = { exists = yes }
+			TSH = { has_full_control_of_state = 1231 }
 			date > 1861.5.1
 			OR = {
-				has_global_flag = eoanb_flag_tsushima_ENG_allied_JAP
-				has_global_flag = eoanb_flag_tsushima_ENG_denied_JAP
+				has_global_flag = eoanb_flag_tsushima_ENG_allied_TSH
+				has_global_flag = eoanb_flag_tsushima_ENG_denied_TSH
 			}
 		}
 		
@@ -197,7 +197,7 @@ foreign_politics = {
 		cost = 0
 		
 		complete_effect = {
-			JAP = { country_event = { id = tsushima.5 days = 1 } }
+			TSH = { country_event = { id = tsushima.5 days = 1 } }
 		}
 		
 		ai_will_do = {
@@ -219,8 +219,8 @@ foreign_politics = {
 		
 		visible = {
 			TAG = RUS
-			JAP = { exists = yes }
-			JAP = { has_full_control_of_state = 1231 }
+			TSH = { exists = yes }
+			TSH = { has_full_control_of_state = 1231 }
 			OR = {
 				has_global_flag = eoanb_flag_tsushima_incident_1
 				has_global_flag = eoanb_flag_tsushima_incident_2
@@ -232,7 +232,7 @@ foreign_politics = {
 		cost = 0
 		
 		complete_effect = {
-			JAP = { country_event = { id = tsushima.6 days = 1 } }
+			TSH = { country_event = { id = tsushima.6 days = 1 } }
 		}
 		
 		ai_will_do = {

@@ -1,6 +1,8 @@
 ﻿division_template = {
-  name = "Imperial Line Infantry"
+  name = "Infanterie Regiment"
 
+  division_names_group = AUS_INF_02 
+  
   regiments = {
     line_infantry = { x = 0 y = 0}
     line_infantry = { x = 0 y = 1}
@@ -10,8 +12,10 @@
 }
 
 division_template = {
-  name = "Imperial Grenadiers"
+  name = "Jäger Regiment"
 
+  division_names_group = AUS_INF_03
+  
   regiments = {
     light_infantry = { x = 0 y = 0}
 	light_infantry = { x = 0 y = 1}
@@ -21,8 +25,10 @@ division_template = {
 }
 
 division_template = {
-  name = "Austrian Hussars"
+  name = "Hussar Regiment"
 
+  division_names_group = AUS_CAV_01 
+  
   regiments = {
     light_cavalry = { x = 0 y = 0}
 	light_cavalry = { x = 1 y = 0}
@@ -32,82 +38,121 @@ division_template = {
 units = {
 		#Capital
 		division= {
-			name = "1st Line Infantry"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 1
+		    }
 			location = 11666
-			division_template = "Imperial Line Infantry"
+			division_template = "Infanterie Regiment"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "2nd Line Infantry"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 2
+		    }
 			location = 11666
-			division_template = "Imperial Line Infantry"
+			division_template = "Infanterie Regiment"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "1st Grenadiers"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 1
+		    }
 			location = 11666
-			division_template = "Imperial Grenadiers"
+			division_template = "Jäger Regiment"
 			start_experience_factor = 0.2
 		}
 		#Scattered Divisions
 		division= {
-			name = "1st Hussars"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 1
+		    }
 			location = 11542
-			division_template = "Austrian Hussars"
+			division_template = "Hussar Regiment"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "3rd Line Infantry"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 3
+		    }
 			location = 11542
-			division_template = "Imperial Line Infantry"
+			division_template = "Infanterie Regiment"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "4th Line Infantry"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 4
+		    }
 			location = 9660
-			division_template = "Imperial Line Infantry"
+			division_template = "Infanterie Regiment"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "3rd Grenadiers"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 2
+		    }
 			location = 11581
-			division_template = "Imperial Grenadiers"
+			division_template = "Jäger Regiment"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "3rd Hussars"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 2
+		    }
 			location = 11479
-			division_template = "Austrian Hussars"
+			division_template = "Hussar Regiment"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "4th Hussars"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 3
+		    }
 			location = 9427
-			division_template = "Austrian Hussars"
+			division_template = "Hussar Regiment"
 			start_experience_factor = 0.1
 		}
 		division= {
-			name = "1st Transylvanian Division"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 5
+		    }
 			location = 6711
-			division_template = "Imperial Line Infantry"
+			division_template = "Infanterie Regiment"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "2nd Transylvanian Division"
-			location = 662
-			division_template = "Imperial Line Infantry"
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 7 
+		    }
+			location = 9606 
+			division_template = "Infanterie Regiment"
 			start_experience_factor = 0.2
 		}
-		navy = {				
-			name = "Imperiale Flotte Österreichs"			
-			base = 11584
-			location = 11584
-			ship = { name = "SMS Novara" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Radetzky" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Adria" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Donau" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Wien" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Trieste" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Graz" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 8
+		    }
+			location = 13677 
+			division_template = "Infanterie Regiment"
+			start_experience_factor = 0.2
+		}
+		division= {
+		    division_name = {   
+			    is_name_ordered = yes
+			    name_order = 10
+		    }
+			location = 3780 
+			division_template = "Infanterie Regiment"
+			start_experience_factor = 0.2
 		}
 }

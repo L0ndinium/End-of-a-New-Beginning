@@ -83,17 +83,9 @@
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
 	start_build_tech = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
   }
 
   # POLITICAL LEADERS
 
-  create_country_leader = {
-    name = "Leader"
-    desc = ""
-    picture = ""
-    expire = "2100.1.1"
-    ideology = despotism
-    traits = { }
-  }
 }

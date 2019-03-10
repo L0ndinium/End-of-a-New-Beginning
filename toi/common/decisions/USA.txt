@@ -566,6 +566,7 @@ USA_foreign_policy = {
 
         visible = {
             TAG = USA
+            country_exists = TSH
         }
 
         fire_only_once = yes
@@ -573,7 +574,7 @@ USA_foreign_policy = {
         cost = 25
 
         complete_effect = {
-             JAP = { country_event = { id = shogunate_japan.1 } }
+             TSH = { country_event = { id = shogunate_japan.1 } }
         }
         ai_will_do = {
             base = 4000
@@ -1334,7 +1335,7 @@ USA_return_from_ashes = {
 	            	USA = { change_tag_from = ROOT }
 	            }
 	            load_focus_tree = generic
-	            ROOT = { USA = { transfer_technology = yes } }
+				USA = { inherit_technology = ROOT }
 	            every_state = {
 	            	limit = {
 	            		OR = {

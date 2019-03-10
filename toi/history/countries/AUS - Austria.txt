@@ -42,14 +42,25 @@
   AUS_hungarian_revolution
   AUS_HUN_Separatism
   AUS_SLA_Separatism
-  AUS_lack_of_recruits
   }
   
       #Colective guarantee of the 7 great power
   give_guarantee = ROM
   give_guarantee = MOL
 
-  puppet = LVN
+	if ={
+	    limit = {
+		    has_dlc = "Together for Victory"
+		}
+            set_autonomy = {
+                target = LVN 
+                autonomy_state = autonomy_personal_union_2 
+				freedom_level = 0.1 
+            }			
+	else = {
+		puppet = LVN
+	}
+}
 
   set_politics = {
     parties = {
@@ -66,10 +77,10 @@
         popularity = 3
       }
       centrism = {
-        popularity = 6
+        popularity = 15 
       }
       traditional_conservatism = {
-        popularity = 9
+        popularity = 15 
       }
       radical_democracy = {
         popularity = 0
@@ -78,7 +89,7 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 80
+        popularity = 65 
       }
       fundamentalism = {
         popularity = 0
@@ -87,15 +98,15 @@
 
 	  ruling_party = autocracy
   }
-  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = AUS }
-  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = AUS }
+  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 2000 producer = AUS }
+  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 2500 producer = AUS }
 
   set_technology = {
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	tech_infantry_practical_rifling = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	iron_railways = 1
 	steam_engine = 1
@@ -114,7 +125,7 @@
 	mounted_infantry = 1
 	tech_support = 1
 	early_howitzer = 1
-	tech_naval_1830_frigate = 1
+	#tech_naval_1830_frigate = 1
 	mongolfiere = 1
 	ornithopter = 1
 	screw_propeller = 1
@@ -128,6 +139,15 @@
 	traits = {
 		#
 	}
+}
+
+set_variable = {
+    var = HUN_REVOLT_RISK
+    value = 4   
+}
+set_variable = {
+    var = SLA_REVOLT_RISK
+    value = 2  
 }
 
   create_field_marshal = {
@@ -161,11 +181,11 @@
 	create_corps_commander = {
   name = "Albrecht von Österreich-Teschen"
   picture = "Portrait_AUS_Albrecht_von_Osterreich_Teschen.dds"
-  traits = { }
-  skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
+  traits = { old_guard cavalry_officer  }
+  skill = 2
+  attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
 	logistics_skill = 1
 	id = 16831
 }
@@ -173,60 +193,48 @@
 create_corps_commander = {
   name = "Eduard Clam-Gallas"
   picture = "Portrait_AUS_Eduard_Clam_Gallas.dds"
-  traits = { }
+  traits = { cavalry_officer }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+  attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2 
 	id = 16832
-}
-
-create_corps_commander = {
-  name = "Leopold Gondrecourt"
-  picture = "Portrait_AUS_Leopold_Gondrecourt.dds"
-  traits = { }
-  skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 16833
 }
 
 create_corps_commander = {
   name = "Leopold Ludwig of Austria"
   picture = "Portrait_AUS_Leopold_Ludwig_of_Austria.dds"
-  traits = { }
-  skill = 3
+  traits = { politically_connected  }
+  skill = 2
   attack_skill = 1
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 1
-	logistics_skill = 1
+	logistics_skill = 2
 	id = 16834
 }
 
 create_corps_commander = {
   name = "Ludwig von Benedek"
   picture = "Portrait_AUS_Ludwig_von_Benedek.dds"
-  traits = { }
+  traits = { old_guard infantry_officer }
   skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+  attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2 
 	id = 16835
 }
 
 create_corps_commander = {
   name = "Ludwig von Gablenz"
   picture = "Portrait_AUS_Ludwig_von_Gablenz.dds"
-  traits = { }
-  skill = 3
-  attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+  traits = { infantry_officer }
+  skill = 4 
+  attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3 
+	logistics_skill = 4
 	id = 16836
 }
 
@@ -240,6 +248,18 @@ create_corps_commander = {
 	planning_skill = 1
 	logistics_skill = 1
 	id = 16837
+}
+
+create_corps_commander = {
+  name = "Ernst Hartung"
+  picture = "Portrait_AUS_Ernst_von_Hartung.dds"
+  traits = { }
+  skill = 4
+  attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3 
+	id = 168309 
 }
 
 create_navy_leader = {

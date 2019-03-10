@@ -1,1 +1,168 @@
 ﻿
+HUN_INF_01 = 
+{
+	name = "Infantry Divisions"
+
+	for_countries = { AUS HUN }
+
+	can_use = {
+		tag = HUN
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { HUN_INF_02 }
+
+	fallback_name = "%d. gyalogezred"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		6 = { "%d. gyalogezred" }
+		7 = { "%d. gyalogezred" }
+		10 = { "%d. gyalogezred" }
+		12 = { "%d. gyalogezred" }
+		13 = { "%d. gyalogezred" }
+		16 = { "%d. gyalogezred" }
+		20 = { "%d. gyalogezred" }
+		24 = { "%d. gyalogezred" }
+		25 = { "%d. gyalogezred" }
+		26 = { "%d. gyalogezred" }
+		27 = { "%d. 'Szekel' gyalogezred" }
+		28 = { "%d. gyalogezred" }
+		29 = { "%d. gyalogezred" }
+		30 = { "%d. gyalogezred" }
+		31 = { "%d. gyalogezred" }
+		32 = { "%d. gyalogezred" }
+		36 = { "%d. gyalogezred" }
+		37 = { "%d. gyalogezred" }
+		38 = { "%d. gyalogezred" }
+		39 = { "%d. gyalogezred" }
+		40 = { "%d. gyalogezred" }
+		41 = { "%d. gyalogezred" }
+		42 = { "%d. gyalogezred" }
+		43 = { "%d. gyalogezred" }
+		44 = { "%d. gyalogezred" }
+		45 = { "%d. gyalogezred" }
+		46 = { "%d. gyalogezred" }
+		47 = { "%d. gyalogezred" }
+		48 = { "%d. gyalogezred" }
+		49 = { "%d. gyalogezred" }
+		50 = { "%d. gyalogezred" }
+		51 = { "%d. gyalogezred" }
+	}
+}
+
+HUN_INF_02 = 
+{
+	name = "Light Infantry Divisions"
+
+	for_countries = { AUS HUN }
+
+	can_use = {
+		tag = HUN
+	}
+
+	division_types = { "light_infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { HUN_INF_01 }
+
+	fallback_name = "%d. könnyűhadosztály"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		6 = { "%d. könnyűhadosztály" }
+		7 = { "%d. könnyűhadosztály" }
+		10 = { "%d. könnyűhadosztály" }
+		12 = { "%d. könnyűhadosztály" }
+		13 = { "%d. könnyűhadosztály" }
+		16 = { "%d. könnyűhadosztály" }
+		20 = { "%d. könnyűhadosztály" }
+		24 = { "%d. könnyűhadosztály" }
+		25 = { "%d. könnyűhadosztály" }
+		26 = { "%d. könnyűhadosztály" }
+		27 = { "%d. 'Szekel' könnyűhadosztály" }
+		28 = { "%d. könnyűhadosztály" }
+		29 = { "%d. könnyűhadosztály" }
+		30 = { "%d. könnyűhadosztály" }
+		31 = { "%d. könnyűhadosztály" }
+		32 = { "%d. könnyűhadosztály" }
+		36 = { "%d. könnyűhadosztály" }
+		37 = { "%d. könnyűhadosztály" }
+		38 = { "%d. könnyűhadosztály" }
+		39 = { "%d. könnyűhadosztály" }
+		40 = { "%d. könnyűhadosztály" }
+		41 = { "%d. könnyűhadosztály" }
+		42 = { "%d. könnyűhadosztály" }
+		43 = { "%d. könnyűhadosztály" }
+		44 = { "%d. könnyűhadosztály" }
+		45 = { "%d. könnyűhadosztály" }
+		46 = { "%d. könnyűhadosztály" }
+		47 = { "%d. könnyűhadosztály" }
+		48 = { "%d. könnyűhadosztály" }
+		49 = { "%d. könnyűhadosztály" }
+		50 = { "%d. könnyűhadosztály" }
+		51 = { "%d. könnyűhadosztály" }
+	}
+}
+
+HUN_CAV_01 = 
+{
+	name = "Cavalry Divisions"
+
+	for_countries = { AUS HUN }
+
+	can_use = {
+		tag = HUN
+	}
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { HUN_INF_01 }
+
+	fallback_name = "%d. huszár ezred"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		6 = { "%d. huszár ezred" }
+		7 = { "%d. huszár ezred" }
+		10 = { "%d. huszár ezred" }
+		12 = { "%d. huszár ezred" }
+		13 = { "%d. huszár ezred" }
+		16 = { "%d. huszár ezred" }
+		20 = { "%d. huszár ezred" }
+		24 = { "%d. huszár ezred" }
+		25 = { "%d. huszár ezred" }
+		26 = { "%d. huszár ezred" }
+		27 = { "%d. 'Szekel' huszár ezred" }
+		28 = { "%d. huszár ezred" }
+		29 = { "%d. huszár ezred" }
+		30 = { "%d. huszár ezred" }
+		31 = { "%d. huszár ezred" }
+		32 = { "%d. huszár ezred" }
+		36 = { "%d. huszár ezred" }
+		37 = { "%d. huszár ezred" }
+		38 = { "%d. huszár ezred" }
+		39 = { "%d. huszár ezred" }
+		40 = { "%d. huszár ezred" }
+		41 = { "%d. huszár ezred" }
+		42 = { "%d. huszár ezred" }
+		43 = { "%d. huszár ezred" }
+		44 = { "%d. huszár ezred" }
+		45 = { "%d. huszár ezred" }
+		46 = { "%d. huszár ezred" }
+		47 = { "%d. huszár ezred" }
+		48 = { "%d. huszár ezred" }
+		49 = { "%d. huszár ezred" }
+		50 = { "%d. huszár ezred" }
+		51 = { "%d. huszár ezred" }
+	}
+}

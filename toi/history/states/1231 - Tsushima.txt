@@ -8,8 +8,8 @@ state={
 		buildings = {
 			#
 		}
-			add_core_of = JAP
-			owner = JAP
+			add_core_of = TSH
+			owner = TSH
 	}
 
 	provinces={

@@ -4,6 +4,8 @@ add_namespace = britishafrica
 add_namespace = britishaustralia
 add_namespace = britishoceania
 
+### EVENTS RELATING TO INDIA BELOW ###
+
 #The Sepoy Rebellion is won
 country_event = {
 	id = britishindia.1
@@ -127,6 +129,375 @@ country_event = {
 		ENG = { set_autonomy = { target = RAJ autonomy_state = autonomy_free } }
 		add_opinion_modifier = { target = ENG modifier = eoanb_om_RAJ_ENG_friendly_release }
 		reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_RAJ_ENG_friendly_release }
+	}
+	
+}
+
+### EVENTS RELATING TO CANADA BELOW ###
+
+#New Brunswick contemplates Maritime Union
+country_event = {
+	id = britishcanada.1
+	title = britishcanada.1.t
+	desc = britishcanada.1.d
+	picture = GFX_report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = BRK
+		date > 1864.3.1
+		country_exists = CAN
+		country_exists = NVS
+	}
+	
+	option = {
+		name = britishcanada.1.a
+		ai_chance = { factor = 99 }
+		NVS = { country_event = { id = britishcanada.2 days = 1 } }
+		hidden_effect = {
+			BRK = { set_country_flag = eoanb_flag_wants_canada_conference }
+		}
+	}
+	
+	option = {
+		name = britishcanada.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0 
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 10
+	}
+	
+}
+
+#Nova Scotia gets the suggestion
+country_event = {
+	id = britishcanada.2
+	title = britishcanada.2.t
+	desc = britishcanada.2.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishcanada.2.a
+		ai_chance = { factor = 99 }
+		custom_effect_tooltip = eoanb_tt_event_britishcanada_2_a
+		hidden_effect = {
+			NVS = { set_country_flag = eoanb_flag_wants_canada_conference }
+		}
+	}
+	
+	option = {
+		name = britishcanada.2.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0 
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 10
+	}
+	
+}
+
+#Canada: Should we join the Conference?
+country_event = {
+	id = britishcanada.3
+	title = britishcanada.3.t
+	desc = britishcanada.3.d
+	picture = GFX_report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = CAN
+		BRK = { has_country_flag = eoanb_flag_wants_canada_conference }
+		NVS = { has_country_flag = eoanb_flag_wants_canada_conference }
+	}
+	
+	option = {
+		name = britishcanada.3.a
+		ai_chance = { factor = 99 }
+		custom_effect_tooltip = eoanb_tt_event_britishcanada_3_a
+		hidden_effect = {
+			CAN = { set_country_flag = eoanb_flag_wants_canada_conference }
+		}
+	}
+	
+	option = {
+		name = britishcanada.3.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 10
+	}
+	
+}
+
+#The Conference
+country_event = {
+	id = britishcanada.4
+	title = britishcanada.4.t
+	desc = britishcanada.4.d
+	picture = GFX_report_event_hungary_parliament
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = CAN
+		date > 1864.9.1
+		BRK = { has_country_flag = eoanb_flag_wants_canada_conference }
+		NVS = { has_country_flag = eoanb_flag_wants_canada_conference }
+		CAN = { has_country_flag = eoanb_flag_wants_canada_conference }
+	}
+	
+	option = {
+		name = britishcanada.4.a
+		ai_chance = { factor = 100 }
+		NVS = { country_event = { id = britishcanada.5 days = 1 } }
+	}
+	
+}
+
+#NVS gets asked whether BRK will be allowed to unite
+country_event = {
+	id = britishcanada.5
+	title = britishcanada.5.t
+	desc = britishcanada.5.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishcanada.5.a
+		ai_chance = { factor = 99 }
+		BRK = { country_event = { id = britishcanada.6 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_event_britishcanada_5_a
+	}
+	
+	option = {
+		name = britishcanada.5.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_opinion_modifier = { target = BRK modifier = eoanb_om_canada_negotiation_failure }
+		reverse_add_opinion_modifier = { target = BRK modifier = eoanb_om_canada_negotiation_failure }
+		add_opinion_modifier = { target = CAN modifier = eoanb_om_canada_negotiation_failure }
+		reverse_add_opinion_modifier = { target = CAN modifier = eoanb_om_canada_negotiation_failure }
+	}
+	
+}
+
+#BRK is allowed to annex NVS, but will join CAN
+country_event = {
+	id = britishcanada.6
+	title = britishcanada.6.t
+	desc = britishcanada.6.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishcanada.6.a
+		ai_chance = { factor = 99 }
+		annex_country = { target = NVS transfer_troops = no }
+		CAN = { country_event = { id = britishcanada.7 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_event_britishcanada_6_a
+	}
+	
+	option = {
+		name = britishcanada.6.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		annex_country = { target = NVS transfer_troops = no }
+		add_opinion_modifier = { target = CAN modifier = eoanb_om_canada_negotiation_failure_severe }
+		reverse_add_opinion_modifier = { target = CAN modifier = eoanb_om_canada_negotiation_failure_severe }
+	}
+	
+}
+
+#CAN annexes the new union of BRK and NVS
+country_event = {
+	id = britishcanada.7
+	title = britishcanada.7.t
+	desc = britishcanada.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishcanada.7.a
+		ai_chance = { factor = 100 }
+		annex_country = { target = BRK transfer_troops = no }
+		ENG = { country_event = { id = britaincanada.2 days = 1 } }
+		custom_effect_tooltip = eoanb_tt_event_britishcanada_7_a
+		hidden_effect = {
+			news_event = { id = news.21 }
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CAN_confederation
+			if = {
+				limit = {
+					464 = {
+						is_core_of = NVS
+						NOT = { is_core_of = CAN }
+					}
+				}
+				NVS = { remove_state_core = 464 }
+				CAN = { add_state_core = 464 }
+			}
+			if = {
+				limit = {
+					465 = {
+						is_core_of = BRK
+						NOT = { is_core_of = CAN }
+					}
+				}
+				BRK = { remove_state_core = 465 }
+				CAN = { add_state_core = 465 }
+			}
+		}
+	}
+	
+}
+
+#The Hudson Bay Transfer
+country_event = {
+	id = britishcanada.8
+	title = britishcanada.8.t
+	desc = britishcanada.8.d
+	picture = report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishcanada.8.a
+		ai_chance = { factor = 100 }		
+		transfer_state = 332
+		transfer_state = 466
+		transfer_state = 682
+		CAN = { add_state_core = 332 }
+		CAN = { add_state_core = 466 }
+		CAN = { add_state_core = 682 }
+		hidden_effect = {
+			HBC = { remove_state_core = 332 }
+			HBC = { remove_state_core = 466 }
+			HBC = { remove_state_core = 682 }
+		}
+	}
+	
+}
+
+#The Quebec Conference
+country_event = {
+	id = britishcanada.9
+	title = britishcanada.9.t
+	desc = britishcanada.9.d
+	picture = GFX_report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = CAN
+		CAN = { has_cosmetic_tag = CAN_confederation }
+		date > 1864.10.9
+	}
+	
+	option = {
+		name = britishcanada.9.a
+		ai_chance = { factor = 90 }
+		add_political_power = 50
+		add_stability = 0.05
+		add_opinion_modifier = { target = ENG modifier = eoanb_om_CAN_pro_ENG_quebec }
+		reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_CAN_pro_ENG_quebec }
+	}
+	
+	option = {
+		name = britishcanada.9.b
+		ai_chance = { 
+			factor = 8
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 50
+		custom_effect_tooltip = eoanb_tt_event_britishcanada_9_b
+		hidden_effect = {
+			add_autonomy_score = { value = 50 }
+		}
+	}
+	
+	option = {
+		name = britishcanada.9.c
+		ai_chance = { 
+			factor = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		if = {
+			limit = {
+				NFL = { is_subject_of = ENG }
+			}
+			ENG = { country_event = { id = britaincanada.3 days = 1 } }
+		}
+		else_if = {
+			limit = {
+				NOT = { NFL = { is_subject_of = ENG } }
+			}
+			transfer_state = 331
+			CAN = { add_state_core = 331 }
+			hidden_effect = {
+				NFL = { remove_state_core = 331 }
+			}
+		}
+	}
+	
+}
+
+#BCO: Unify with VAN and QCI?
+country_event = {
+	id = britishcanada.10
+	title = britishcanada.10.t
+	desc = britishcanada.10.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britishcanada.10.a
+		ai_chance = { factor = 100 }
+		annex_country = { target = QCI transfer_troops = no }
+		annex_country = { target = VAN transfer_troops = no }
+		BCO = { add_state_core = 739 }
+		BCO = { add_state_core = 740 }
+		hidden_effect = {
+			QCI = { remove_state_core = 739 }
+			VAN = { remove_state_core = 740 }
+			release = BCO
+			ENG = { puppet = BCO }
+			BCO = { set_cosmetic_tag = BCO_united }
+		}
 	}
 	
 }

@@ -202,7 +202,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		custom_effect_tooltip = eoanb_tt_PRS_event_han_access
 		hidden_effect = {
-			give_military_access = HAN
+			HAN = { give_military_access = PRS }
 		}
 	}
 }
@@ -716,6 +716,57 @@ country_event = {
 	option = {
 		name = prussia.29.b
 		ai_chance = { factor = 100 }
+	}
+	
+}
+
+#The Reserves System (Activate)
+country_event = {
+	id = prussia.30
+	title = prussia.30.t
+	desc = prussia.30.d
+	picture = GFX_report_event_bulgarian_soldiers
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		TAG = PRS
+		NOT = { has_completed_focus = GER_focus_historical_deutsches_heer }
+		has_war = yes
+		NOT = { has_idea = PRS_idea_army_reserves_mobilizing }
+	}
+	
+	option = {
+		name = prussia.30.a
+		ai_chance = { factor = 100 }
+		add_ideas = PRS_idea_army_reserves_mobilizing
+	}
+	
+}
+
+#The Reserves System (Deactivate)
+country_event = {
+	id = prussia.31
+	title = prussia.31.t
+	desc = prussia.31.d
+	picture = GFX_report_event_bulgarian_soldiers
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		TAG = PRS
+		has_war = no
+		has_idea = PRS_idea_army_reserves_mobilizing
+	}
+	
+	option = {
+		name = prussia.31.a
+		ai_chance = { factor = 100 }
+		remove_ideas = PRS_idea_army_reserves_mobilizing
 	}
 	
 }

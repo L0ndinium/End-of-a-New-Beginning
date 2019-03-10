@@ -16,6 +16,9 @@ state={
 		add_core_of = VIN
 		owner = VIN
 		victory_points = {
+			4379 8
+		}
+		victory_points = {
 			4075 5
 		}
 		victory_points = {

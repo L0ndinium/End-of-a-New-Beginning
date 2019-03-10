@@ -18,13 +18,11 @@ state={
 		victory_points = {
 			3354 1
 		}
-		victory_points = {
-			6314 3
-		}
 		buildings = {
 			infrastructure = 4
 		}
 		add_core_of = RUS
+		add_core_of = LIT
 	}
 
 	provinces={

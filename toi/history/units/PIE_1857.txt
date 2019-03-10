@@ -81,29 +81,4 @@ units = {
 			division_template = "Royal Cavalry"
 			start_experience_factor = 0.3
 		}
-		
-	navy = {				
-		name = "Regia Marina"			
-		base = 6788
-		location = 6788
-		ship = { name = "San Michele" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Den Geneys" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Beroldo" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Euridice" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "San Giovanni" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Aquila" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Aurora" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Eridano" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Daino" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Colombo" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Staffetta" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Governolo" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Constituzione" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Monzambano" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Tripoli" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Malfatano" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Authion" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Ichnusa" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-		ship = { name = "Gulinara" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PIE } } }
-	}
 }

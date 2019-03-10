@@ -6,7 +6,6 @@ state={
 
 	state_category = city
 	resources={
-		oil = 2
 		wood = 2
 	}
 	history={
@@ -23,6 +22,7 @@ state={
 			cotton_farm=1
 		}
 		add_core_of = AUS
+		add_core_of = HUN
 	}
 
 	provinces={

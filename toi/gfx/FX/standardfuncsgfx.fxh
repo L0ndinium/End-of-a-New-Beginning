@@ -28,6 +28,7 @@ ConstantBuffer( 0, 0 )
 	float		CubemapIntensity;
 	float4		SunDiffuseIntensity
 	float4		MoonDiffuseIntensity
+	float		GB_TextureHeight;
 };
 
 
@@ -826,16 +827,25 @@ PixelShader =
 		return stripeVal;
 	}	
 	
-	float gradient_border_process_channel( out float3 vCh, float3 vInit, float vCamDist, float3 vNormal, float2 uv, in sampler2D gbTex, float vOutlineMult, float vOutlineCutoff, float vStrength )
+	float gradient_border_process_channel( out float3 vCh, float3 vInit, float vCamDist, float3 vNormal, float2 uv, in sampler2D gbTex, in sampler2D gbTex2, float vOutlineMult, float vOutlineCutoff, float vStrength )
 	{
 		vCh = vInit;
+
+		const float PulseSpeedMult = 3.5f;
+		float FX = tex2D( gbTex2, uv ).b;
+		vStrength *= lerp( lerp( 0.45f, 1.0f, 1.0f - FX ), 1.0f, ( sin( vGlobalTime * PulseSpeedMult ) + 1.0f ) / 2 );
+
+		float vFullWidth = 5.25f / 255.0f;//lerp( 5.25f, 0.01f, FX ) / 255.f;
+		float vGradientWidth = 0.5f / 255.0f;//lerp( 0.5f, 0.1f, FX ) / 255.f;
 
 		// Grab multisampled border color
 		float4 vGBDist = gradient_border_multisample_alpha( tex2D( gbTex, uv ), gbTex, uv );
 
+		float Alpha = vGBDist.a;
+
 		// Check how much color and how much outline there is
-		float vColorOpacity = Levels( vGBDist.a, 0.0f, vOutlineCutoff );
-		float vOutline = 1.0f - Levels( vGBDist.a, vOutlineCutoff, 1.0f );
+		float vColorOpacity = Levels( Alpha, 0.0f, vOutlineCutoff );
+		float vOutline = 1.0f - Levels( Alpha, vOutlineCutoff, 1.0f );
 		float vOldOutline = vOutline;
 		vOutline *= floor(vColorOpacity);
 		vOutline *= vOutlineMult;
@@ -847,19 +857,24 @@ PixelShader =
 		// Now when vOutline > 0 then vColorOpacity = 0, and other way around.
 		// Never both values will be > 0.
 		vColorOpacity *= floor(vOldOutline);
-
 	
-		float vFullWidth = 4.25f / 255.f;
-		float vGradientWidth = 0.5f / 255.f;
 
-		float vThick = smoothstep( 0.f, 1.f, Levels( vGBDist.a, vOutlineCutoff - vFullWidth, vOutlineCutoff - vFullWidth + vGradientWidth ) ) ;
+		float vThick = smoothstep( 0.f, 1.f, Levels( Alpha, vOutlineCutoff - vFullWidth, vOutlineCutoff - vFullWidth + vGradientWidth ) ) ;
 		
 		vThick *= floor(vOldOutline);
+
 		float vMaxGradient = max( vColorOpacity, vOutline );
+
 		vCh = lerp( vCh, vGBDist.rgb, max( vMaxGradient, vThick )* vStrength);
+
+		// Compensate the brightness since the 2nd layer is now black (not white) although it's alpha is 0
+		vCh *= 1.15f;
+		vCh = min( vCh, float3( 1, 1, 1 ) );
+
+		// Make the outline edge darker
 		vCh = lerp( vCh, vCh * .5, vThick );
-	
-		return max( vMaxGradient * 0.5, vThick );
+
+		return max( vMaxGradient, vThick );
 	}
 
 	void gradient_border_apply( inout float3 vColor, float3 vNormal, float2 vUV, 
@@ -879,13 +894,21 @@ PixelShader =
 		float vGBCamDistCh1 = saturate( ( vGBCamDist * int( 1.0f - vCamDistOverride.x ) ) + vCamDistOverride.x );
 		float vGBCamDistCh2 = saturate( ( vGBCamDist * int( 1.0f - vCamDistOverride.y ) ) + vCamDistOverride.y );
 
+		// Split UV to correct offset in height, as 1st channel is the top half part of the texture, and 2nd channel is bottom half
+		float HalfPix = 0.5f / GB_TextureHeight;
+		vUV.y *= 0.5f - HalfPix;
+		float2 vUV2 = float2( vUV.x, vUV.y + 0.5f );
+
 		// Calculate color and transparency of both channels
 		float3 vGradMix;
-		float vAlpha1 = gradient_border_process_channel( vGradMix, vColor, vGBCamDistCh1, vNormal, vUV, TexCh1, vOutlineMult, vOutlineCutoff.x, GB_STRENGTH_CH1 );
-		float vAlpha2 = gradient_border_process_channel( vGradMix, vGradMix, vGBCamDistCh2, vNormal, vUV, TexCh2, vOutlineMult, vOutlineCutoff.y, (1.0 - vAlpha1 * GB_STRENGTH_CH1 * GB_FIRST_LAYER_PRIORITY) * GB_STRENGTH_CH2 );
+		float vAlpha1 = gradient_border_process_channel( vGradMix, vColor, vGBCamDistCh1, vNormal, vUV, TexCh1, TexCh2, vOutlineMult, vOutlineCutoff.x, GB_STRENGTH_CH1 );
+		float vAlpha2 = gradient_border_process_channel( vGradMix, vGradMix, vGBCamDistCh2, vNormal, vUV2, TexCh1, TexCh2, vOutlineMult, vOutlineCutoff.y, (1.0 - vAlpha1 * GB_STRENGTH_CH1 * GB_FIRST_LAYER_PRIORITY) * GB_STRENGTH_CH2 );
 				
 		// Now mix, the resultat with background
-		vColor = lerp( vColor, vGradMix, GB_OPACITY_NEAR + ( 1.0f - vGBCamDist ) * ( GB_OPACITY_FAR - GB_OPACITY_NEAR ) );
+		float TranspA = 1.0f - tex2D( TexCh2, vUV ).g;
+		float TranspB = 1.0f - tex2D( TexCh2, vUV2 ).g;
+		float GlobalTransp = min( TranspA, TranspB );
+		vColor = lerp( vColor, vGradMix, ( GB_OPACITY_NEAR + ( 1.0f - vGBCamDist ) * ( GB_OPACITY_FAR - GB_OPACITY_NEAR ) ) * GlobalTransp );
 	//vColor = GetOverlay( vColor, ToLinear(vGradMix), 0.80);
 
 		// Return some alpha, so the postprocess will ignore gradient borders

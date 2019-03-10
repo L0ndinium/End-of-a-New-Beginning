@@ -1,2 +1,23 @@
 ﻿add_namespace = colombia
-
+country_event = {
+		id = colombia.1
+		title = colombia.1.t
+		desc = colombia.1.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			AND = {
+				tag = COL
+				date > 1858.5.22
+		}
+		}
+		
+		option = {
+			name = colombia.1.a
+			drop_cosmetic_tag = yes
+			hidden_effect = { set_cosmetic_tag = COL_granadine }
+			add_political_power = 15
+			
+		}
+}

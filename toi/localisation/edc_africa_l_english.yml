@@ -1,6 +1,6 @@
 ﻿l_english:
  agatate_for_war_against_tribal_neighbor:0 "Agatate for war against [From.GetName]"
- COLONIAL_POWER_TOOLTIP:0 "§YColonial Power§!\n\nCurrent Colonial Power: §Y[?Root.colonial_power]§!\nDaily Gain:§G +[?Root.colonial_power_rate]§!\n[Root.GetColonialTechUnlocked]\nCurrent Max: §G[?root.colonial_power_max]§!"
+ COLONIAL_POWER_TOOLTIP:0 "§YColonial Power§!\n\nCurrent Colonial Power: §Y[?Root.colonial_power]§!\nDaily Gain:§G +[?Root.colonial_power_rate]§!\nCurrent Max: §G[?root.colonial_power_max]§!"
  COLONIAL_POWER_TOOLTIP_DELAYED:0 "This is your nations §YColonial Power§!, a measure of the political and economic power your country has over the African Continent based on the §YTotal Number of Factories§! you have.\nThis power is used to colonise tribal states in Africa"
  INDUSTRISATION_PROGRESS_TOOLTIP:0 "§YIndustrisation Progress§!\n\nCurrent Industrisation Progress:§Y[?Root.industrisation_progress]%§!\n\nWhen this hits §G100%§! and you have §G40%§! Stability you can become an §YIndustrialising Nation§!"
  INDUSTRISATION_PROGRESS_TOOLTIP_DELAYED:0 "This is the percentage of your nation that has embraced industrial practises in some way.\nThis Can be Gained by Completing the Following:\nEvery §Y10§! Factories Constructed: §G+10%§! \nResearch any of the Following for §G+5%§!:\n  §YMechanical Production I§!\n  §YFactory Industry I§!\n  §YEarly Dynamo Generator§!\n  §YDry Puddling§!\n  §YElectrical Telegraph§!\n  §YIndustrial Society§!\n  §YIndustrial Fertilizers§!"

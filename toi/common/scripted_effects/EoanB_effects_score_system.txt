@@ -1,0 +1,127 @@
+
+eoanb_add_1_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 1 }
+	}
+	custom_effect_tooltip = eoanb_add_1_prestige_score 
+}
+
+eoanb_add_2_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 2 }
+	}
+	custom_effect_tooltip = eoanb_add_2_prestige_score 
+}
+
+eoanb_add_3_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 3 }
+	}
+	custom_effect_tooltip = eoanb_add_3_prestige_score 
+}
+
+eoanb_add_4_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 4 }
+	}
+	custom_effect_tooltip = eoanb_add_4_prestige_score 
+}
+
+eoanb_add_5_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 5 }
+	}
+	custom_effect_tooltip = eoanb_add_5_prestige_score 
+}
+
+eoanb_add_10_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 10 }
+	}
+	custom_effect_tooltip = eoanb_add_10_prestige_score 
+}
+
+eoanb_add_15_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 15 }
+	}
+	custom_effect_tooltip = eoanb_add_15_prestige_score 
+}
+
+eoanb_add_20_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 20 }
+	}
+	custom_effect_tooltip = eoanb_add_20_prestige_score 
+}
+
+eoanb_add_50_prestige_score = { 
+    hidden_effect = {
+        add_to_variable = { prestige_score = 50 }
+	}
+	custom_effect_tooltip = eoanb_add_50_prestige_score 
+}
+
+	
+eoanb_add_1_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 1 }
+	}
+	custom_effect_tooltip = eoanb_add_1_tech_score 
+}
+
+eoanb_add_2_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 2 }
+	}
+	custom_effect_tooltip = eoanb_add_2_tech_score 
+}
+
+eoanb_add_3_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 3 }
+	}
+	custom_effect_tooltip = eoanb_add_3_tech_score 
+}
+
+eoanb_add_4_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 4 }
+	}
+	custom_effect_tooltip = eoanb_add_4_tech_score 
+}
+
+eoanb_add_5_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 5 }
+	}
+	custom_effect_tooltip = eoanb_add_5_tech_score 
+}
+
+eoanb_add_10_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 10 }
+	}
+	custom_effect_tooltip = eoanb_add_10_tech_score 
+}
+
+eoanb_add_15_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 15 }
+	}
+	custom_effect_tooltip = eoanb_add_15_tech_score 
+}
+
+eoanb_add_20_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 20 }
+	}
+	custom_effect_tooltip = eoanb_add_20_tech_score 
+}
+
+eoanb_add_50_tech_score = { 
+    hidden_effect = {
+        add_to_variable = { tech_score = 50 }
+	}
+	custom_effect_tooltip = eoanb_add_50_tech_score 
+}

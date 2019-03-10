@@ -1500,12 +1500,13 @@ focus_tree = {
 		x = 39
 		y = 4
 		completion_reward = {
-			add_tech_bonus = {
-				name = lineship_tech_bonus
-				bonus = 0.25
-				uses = 1
-				category = lineship_tech
-			}
+			#BROKEN BY MTG
+			#add_tech_bonus = {
+			#	name = lineship_tech_bonus
+			#	bonus = 0.25
+			#	uses = 1
+			#	category = lineship_tech
+			#}
 		}
 	}
 	focus = {
@@ -1817,13 +1818,29 @@ focus_tree = {
 		available = {
 			date > 1858.6.1
 			has_country_flag = FRA_has_colonial_ambitions
+			has_global_flag = eoanb_flag_sow_ENG_FRA_cooperate
 		}
 		x = 49
 		y = 1
 		completion_reward = {
-			create_wargoal = {
-				target = VIN
-				type = puppet_wargoal_focus
+			custom_effect_tooltip = FRA_french_indochina_tooltip
+			country_event = { id = nap_france.160 days = 30 }
+			country_event = { id = nap_france.161 days = 1500 }
+			add_timed_idea = {
+				idea = FRA_VIN_war
+				days = 1500
+			}
+			VIN = {
+				add_timed_idea = {
+					idea = VIN_FRA_war
+					days = 2000
+				}
+			}
+			SPR = {
+				add_timed_idea = {
+					idea = SPR_VIN_war
+					days = 1500
+				}
 			}
 		}
 	}
@@ -1837,8 +1854,8 @@ focus_tree = {
 		x = 48
 		y = 2
 		available = {
-			VIN = {
-				is_puppet = yes
+			CCH = {
+				controls_state = 998
 			}
 		}
 		completion_reward = {
@@ -1856,97 +1873,12 @@ focus_tree = {
 		}
 		x = 50
 		y = 2
+		available = {
+			has_country_flag = FRA_death_mouhot
+		}
 		completion_reward = {
 			add_political_power = 50
 			clr_country_flag = FRA_death_mouhot
-		}
-	}
-	focus = {
-		id = FRA_land_in_da_nang
-		icon = GFX_focus_generic_coastal_fort
-		cost = 70
-		prerequisite = {
-			focus = FRA_convert_vietnamese
-		}
-		prerequisite = {
-			focus = FRA_research_angkor_wat
-		}
-		x = 49
-		y = 3
-
-	}
-	focus = {
-		id = FRA_secure_cochichina
-		icon = GFX_goal_focus_secure_cochichina
-		cost = 70
-		prerequisite = {
-			focus = FRA_land_in_da_nang
-		}
-		x = 49
-		y = 4
-
-	}
-	focus = {
-		id = FRA_faith_over_territory
-		icon = GFX_goal_focus_faith_vietnam
-		cost = 70
-		prerequisite = {
-			focus = FRA_secure_cochichina
-		}
-		mutually_exclusive = {
-			focus = FRA_capture_vietnam
-		}
-		x = 48
-		y = 5
-		completion_reward = {
-			add_political_power = 50
-			set_autonomy = {
-				target = VIN
-				autonomous_state = autonomy_protectorate
-				freedom_level = 0.1
-			}
-			VIN = {
-				set_cosmetic_tag = VIN_FRENCH_COCHICHINA
-				set_politics = {
-					ruling_party = autocracy
-				}
-				create_country_leader = {
-					name = "Tu Duc"
-					picture = "Portrait_VIN_Tu_Duc.dds"
-					ideology = despotism
-				}
-			}
-		}
-	}
-	focus = {
-		id = FRA_capture_vietnam
-		icon = GFX_goal_focus_colonize_vietnam
-		cost = 70
-		prerequisite = {
-			focus = FRA_secure_cochichina
-		}
-		mutually_exclusive = {
-			focus = FRA_faith_over_territory
-		}
-		x = 50
-		y = 5
-		completion_reward = {
-			set_autonomy = {
-				target = VIN
-				autonomous_state = autonomy_colony
-				freedom_level = 0.1
-			}
-			VIN = {
-				set_cosmetic_tag = VIN_FRENCH_COCHICHINA
-				set_politics = {
-					ruling_party = autocracy
-				}
-				create_country_leader = {
-					name = "Louis Adolphe Bonard"
-					picture = "Portrait_VIN_Louis_Adolphe_Bonard.dds"
-					ideology = despotism
-				}
-			}
 		}
 	}
 	focus = {
@@ -1954,11 +1886,16 @@ focus_tree = {
 		icon = GFX_goal_focus_protectorate_cambodia
 		cost = 70
 		prerequisite = {
-			focus = FRA_faith_over_territory
-			focus = FRA_capture_vietnam
+			focus = FRA_research_angkor_wat
+		}
+		prerequisite = {
+			focus = FRA_convert_vietnamese
+		}
+		available = {
+			date > 1867.5.1
 		}
 		x = 49
-		y = 6
+		y = 3
 		completion_reward = {
 			set_autonomy = {
 				target = CAM

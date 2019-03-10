@@ -1455,7 +1455,8 @@ focus_tree = {
 		prerequisite = { focus = ETH_emphasize_light_ships }
 		completion_reward = {
 			add_political_power = -100
-			add_tech_bonus = { bonus = 0.50 uses = 1 technology = tech_naval_1812_frigate }
+			#BROKEN BY MTG
+			#add_tech_bonus = { bonus = 0.50 uses = 1 technology = tech_naval_1812_frigate }
 
 		}
 	}
@@ -1512,7 +1513,8 @@ focus_tree = {
 		prerequisite = { focus = ETH_emphasize_trade_ships }
 		completion_reward = {
 			add_political_power = -100
-			add_tech_bonus = { bonus = 0.50 uses = 1 technology = tech_naval_1812_corvette }
+			#BROKEN BY MTG
+			#add_tech_bonus = { bonus = 0.50 uses = 1 technology = tech_naval_1812_corvette }
 
 		}
 	}
@@ -1567,7 +1569,8 @@ focus_tree = {
 		prerequisite = { focus = ETH_emphasize_heavy_ships }
 		completion_reward = {
 			add_political_power = -100
-			add_tech_bonus = { bonus = 0.50 uses = 1 technology = tech_naval_1812_lineship }
+			#BROKEN BY MTG
+			#add_tech_bonus = { bonus = 0.50 uses = 1 technology = tech_naval_1812_lineship }
 
 		}
 	}

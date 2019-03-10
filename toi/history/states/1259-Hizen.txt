@@ -12,7 +12,7 @@ state={
 
 	history={
 		owner = SAG
-		add_core_of = JAP
+		add_core_of = TSH
 		add_core_of = SAG
 		buildings = {
 			infrastructure = 3

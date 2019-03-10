@@ -915,17 +915,17 @@ logistics_skill = 3
       focus = CHI_Bright_Young_Sailors
     }
 		available = {
-			has_tech = tech_naval_1830_gunboat
+			#has_tech = tech_naval_1830_gunboat
 		}
 	 completion_reward = {
-add_equipment_production = {
-equipment = {
-type = equipment_1830_gunboat
-}
-requested_factories = 1
-progress = 0.95
-amount = 5
-}
+#add_equipment_production = {
+#equipment = {
+#type = equipment_1830_gunboat
+#}
+#requested_factories = 1
+#progress = 0.95
+#amount = 5
+#}
 	}
 	}
 	focus = {
@@ -983,13 +983,13 @@ amount = 5
       focus = CHI_The_Japanese_in_Taiwan
     }
 	available = {
-		has_tech = tech_naval_1865_gunboat
+		#has_tech = tech_naval_1865_gunboat
 	}
 	 completion_reward = {
-	 			hidden_effect = {
-					load_oob = "CHI_nanyang"
-				}
-				custom_effect_tooltip = CHI_Form_Nanyang_Fleet_tooltip
+	 			#hidden_effect = {
+				#	load_oob = "CHI_nanyang"
+				#}
+				#custom_effect_tooltip = CHI_Form_Nanyang_Fleet_tooltip
 		}
 	}
 	focus = {
@@ -1006,14 +1006,14 @@ amount = 5
       focus = CHI_Form_the_Nanyang_Fleet
     }
 	available = {
-		has_tech = tech_naval_1830_gunboat
-		has_tech = tech_naval_1830_frigate
+		#has_tech = tech_naval_1830_gunboat
+		#has_tech = tech_naval_1830_frigate
 	}
 	 completion_reward = {
-	 hidden_effect = {
-		 load_oob = "CHI_nanyangexpansion"
-	 }
-	 custom_effect_tooltip = CHI_Nanyang_Fleet_Expansion_tooltip
+	 #hidden_effect = {
+		 #load_oob = "CHI_nanyangexpansion"
+	# }
+	 #custom_effect_tooltip = CHI_Nanyang_Fleet_Expansion_tooltip
 		}
 	}
 	focus = {
@@ -1030,13 +1030,13 @@ amount = 5
       focus = CHI_The_Japanese_in_Taiwan
     }
 	available = {
-		has_tech = tech_naval_1830_gunboat
+		#has_tech = tech_naval_1830_gunboat
 	}
 	 completion_reward = {
-	 	hidden_effect = {
-		 	load_oob = "CHI_beiyang"
-	 	}
-				custom_effect_tooltip = CHI_Form_Beiyang_Fleet_tooltip
+	 	#hidden_effect = {
+		# 	load_oob = "CHI_beiyang"
+	 	#}
+			#	custom_effect_tooltip = CHI_Form_Beiyang_Fleet_tooltip
 		}
 	}
 	focus = {
@@ -1075,13 +1075,13 @@ amount = 5
       focus = CHI_Foreign_Ironclads
     }
 	available = {
-		has_tech = tech_naval_1830_gunboat
+		#has_tech = tech_naval_1830_gunboat
 	}
 	 completion_reward = {
-	 hidden_effect = {
-				load_oob = "CHI_gunboats1"
-				}
-				custom_effect_tooltip = CHI_Gunboat_Trade_tooltip
+	# hidden_effect = {
+				#load_oob = "CHI_gunboats1"
+				#}
+				#custom_effect_tooltip = CHI_Gunboat_Trade_tooltip
 		}
 	}
 	focus = {

@@ -5,6 +5,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/category_bomber.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_unit_category_nav_bomber"
+		texturefile = "gfx/interface/category_nav_bomber.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_category_tac_bomber"
+		texturefile = "gfx/interface/category_tac_bomber.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_category_strat_bomber"
+		texturefile = "gfx/interface/category_strat_bomber.dds"
+		legacy_lazy_load = no
+	}
 
 	spriteType = {
 		name = "GFX_unit_category_cas"

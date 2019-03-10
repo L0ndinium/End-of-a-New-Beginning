@@ -195,14 +195,13 @@ country_event = { # The Carbonari Revolt
         add_state_core = 808
         add_state_core = 813
         add_state_core = 157
-        add_state_core = 85
+        add_state_core = 785
         add_state_core = 812
         add_state_core = 117
         add_state_core = 997
         add_state_core = 156
         add_state_core = 115
         add_state_core = 114
-
         add_state_claim = 979
         add_state_claim = 160
         add_state_claim = 1234
@@ -1895,6 +1894,110 @@ country_event = { # The integration of Southern Algeria into our colony
     ALG = {
       transfer_state = 513
     }
+  }
+}
+
+country_event = { # Cochinchina war simulation
+  id = nap_france.160
+  title = nap_france.160.t
+  desc = nap_france.160.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+  
+  trigger = {
+	has_idea = FRA_VIN_war
+  }
+
+  option = { # Continue the war
+    name = nap_france.160.a
+	ai_chance = { factor = 100 }
+    add_equipment_to_stockpile = {
+	  type = uniform_equipment_2
+      amount = -50
+      producer = FRA
+	}
+    add_equipment_to_stockpile = {
+	  type = infantry_equipment_rifle_1
+      amount = -30
+      producer = FRA
+	}
+	country_event = { id = nap_france.160 days = 30 }
+  }
+  option = { # Stop the war
+    name = nap_france.160.b
+	ai_chance = { factor = 0 }
+    add_stability = -0.10
+	remove_ideas = FRA_VIN_war
+	VIN = {
+	  add_stability = 0.10
+	  remove_ideas = VIN_FRA_war
+	}
+	SPR = {
+	  add_stability = -0.01
+	  remove_ideas = SPR_VIN_war
+	}
+  }
+}
+
+country_event = { # Cochinchina war FRA victory
+  id = nap_france.161
+  title = nap_france.161.t
+  desc = nap_france.161.d
+  picture = GFX_report_event_nap_france_carbonari
+
+  is_triggered_only = yes
+  
+  trigger = {
+	has_idea = FRA_VIN_war
+  }
+
+  option = { # Get gold and territory reparations
+    name = nap_france.161.a
+	ai_chance = { factor = 100 }
+	CCH = {
+		transfer_state = 998
+	}
+    if = {
+      limit = {
+        has_dlc = "Together for Victory"
+      }
+      set_autonomy = {
+        target = CCH
+        autonomous_state = autonomy_colony
+        freedom_level = 0.01
+      }
+      else = {
+        puppet = CCH
+      }
+    }
+    add_timed_idea = {
+	  idea = FRA_VIN_victory
+	  days = 300
+	}
+	SPR = {
+      add_timed_idea = {
+	    idea = SPR_VIN_victory
+		days = 300
+	  }
+	}
+	hidden_effect = { news_event = { id = nap_france_flavor.23 } }
+  }
+
+  option = { # Get only gold reparations
+    name = nap_france.161.b
+	ai_chance = { factor = 0 }
+    add_timed_idea = {
+	  idea = FRA_VIN_victory
+	  days = 300
+	}
+	SPR = {
+      add_timed_idea = {
+	    idea = SPR_VIN_victory
+		days = 300
+	  }
+	}
+	hidden_effect = { news_event = { id = nap_france_flavor.24 } }
   }
 }
 

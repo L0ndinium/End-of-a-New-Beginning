@@ -52,7 +52,4 @@ opinion_modifiers = {
 	revoked_embargo = {
 		value = 10
 	}
-	JAP_adapted_kokugaku={
-		value = -5
-	}
 }

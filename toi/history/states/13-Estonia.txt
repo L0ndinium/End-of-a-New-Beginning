@@ -27,6 +27,7 @@ state={
 			}
 		}
 		add_core_of = RUS
+		add_core_of = EST
 	}
 
 	provinces={

@@ -2,7 +2,7 @@ technologies = {
 
 	wohler_synthesis = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1850
@@ -31,7 +31,7 @@ technologies = {
 	
 	organic_chemistry = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1
 		start_year = 1855
@@ -60,7 +60,7 @@ technologies = {
 	
 	chemical_structure_model = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1
 		start_year = 1860
@@ -89,7 +89,7 @@ technologies = {
 	
 	periodic_table = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1
 		start_year = 1865
@@ -300,7 +300,7 @@ technologies = {
 	
 	microbiology = {
 		
-		research_time_factor = -0.01
+		research_speed_factor = 0.01
 		
 		research_cost = 1.5
 		start_year = 1870
@@ -683,6 +683,13 @@ technologies = {
 		
 		consumer_goods_factor = -0.04
 		MONTHLY_POPULATION = 0.02
+		
+		dependencies = {
+			petrol_combustion_engine = 1
+			stainless_steel = 1
+			agricultural_engineering = 1
+			electrical_engineering = 1
+		}
 		
 		research_cost = 2
 		start_year = 1890

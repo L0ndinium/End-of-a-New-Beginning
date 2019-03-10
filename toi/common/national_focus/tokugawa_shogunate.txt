@@ -1,0 +1,1206 @@
+focus_tree = {
+	id = tokugawa_shogunate_vic_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+				tag = TSH
+		}
+	}
+	focus = {
+		id = TSH_vic_great_gold_exodus
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_country_flag = TSH_open_port
+		}
+		x = 8
+		y = 0
+		completion_reward = {
+			swap_ideas = {
+				add_idea = TSH_vic_fiscal_crisis_2
+				remove_idea = TSH_vic_fiscal_crisis
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_crisis_control
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_great_gold_exodus
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = TSH_vic_reign_in_han_currency
+		icon = GFX_focus_han_currency
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_greater_control_on_gold_market
+		}
+		prerequisite = {
+			focus = TSH_vic_crisis_control
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+			SAT = {
+				add_stability = -0.05
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_decrease
+				}
+			}
+			CHO = {
+				add_stability = -0.05
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_decrease
+				}
+			}
+			TOS = {
+				add_stability = -0.05
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_decrease
+				}
+			}
+			SAG = {
+				add_stability = -0.05
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_decrease
+				}
+			}
+			swap_ideas = {
+				add_idea = TSH_vic_fiscal_crisis_3
+				remove_idea = TSH_vic_fiscal_crisis_2
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_greater_control_on_gold_market
+		icon = GFX_focus_control_gold_market
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_reign_in_han_currency
+		}
+		prerequisite = {
+			focus = TSH_vic_crisis_control
+		}
+		x = 9
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = RUS
+						tag = HOL
+						tag = USA
+						tag = PRS
+						tag = FRA
+					}
+				}
+				add_opinion_modifier = {
+					target = TSH
+					modifier = minor_sanctions#custom modifer
+				}
+			}
+			swap_ideas={
+				add_idea = TSH_vic_fiscal_crisis_3
+				remove_idea = TSH_vic_fiscal_crisis_2
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_debase_the_currency
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_greater_control_on_gold_market
+			focus = TSH_vic_reign_in_han_currency
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			country_event = {id = shogunate_japan.3}
+		}
+	}
+	focus = {
+		id = TSH_vic_issue_unbacked_notes
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_debase_the_currency
+		}
+		x = 7
+		y = 4
+		completion_reward = {
+			#??
+			add_political_power = 25
+			add_timed_idea = { idea = TSH_unbacked_notes_issued days = 200 }
+		}
+	}
+	focus = {
+		id = TSH_vic_adopt_aratame_sanbu_sadame
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_debase_the_currency
+		}
+		x = 9
+		y = 4
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = TSH_vic_adopt_weight_based_system
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_adopt_aratame_sanbu_sadame
+		}
+		prerequisite = {
+			focus = TSH_vic_issue_unbacked_notes
+		}
+		available = {
+			has_political_power > 49
+		}
+		x =	8
+		y = 5
+		completion_reward = {
+			add_political_power = -50
+			remove_ideas = {
+				TSH_vic_fiscal_crisis_3
+			}
+			add_timed_idea = { idea = tsh_vic_weight_based_system days = 300}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = RUS
+						tag = HOL
+						tag = USA
+						tag = PRS
+						tag = FRA
+					}
+				}
+				remove_opinion_modifier = {
+					target = TSH
+					modifier = minor_sanctions#custom modifer
+				}
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_aid_tozama_daimyo
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_adopt_weight_based_system
+		}
+		x = 4
+		y = 6
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = SAT
+						tag = TOS
+						tag = CHO
+						tag = SAG
+					}
+				}
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_increase
+				}
+			}
+			add_stability = 0.05
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = TSH_vic_support_saga
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_aid_tozama_daimyo
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_choshu
+			focus = TSH_vic_support_tosa
+			focus = TSH_vic_support_satsuma
+		}
+		x = 2
+		y = 7
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = -25
+			SAG = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+				add_ideas = {
+					TSH_support_SAG
+				}
+				add_political_power = 25
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_choshu
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_aid_tozama_daimyo
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_support_saga
+			focus = TSH_vic_support_tosa
+			focus = TSH_vic_support_satsuma
+		}
+		x = 4
+		y = 7
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = -25
+			CHO = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+				add_ideas = {
+					TSH_support_CHO
+				}
+				add_political_power = 25
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_support_tosa
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_aid_tozama_daimyo
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_support_saga
+			focus = TSH_vic_choshu
+			focus = TSH_vic_support_satsuma
+		}
+		x = 6
+		y = 7
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = -25
+			TOS = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+				add_ideas = {
+					TSH_support_TOS
+				}
+				add_political_power = 25
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_support_satsuma
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_aid_tozama_daimyo
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_support_saga
+			focus = TSH_vic_choshu
+			focus = TSH_vic_support_tosa
+		}
+		x = 8
+		y = 7
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = -25
+			SAT = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+				add_ideas = {
+					TSH_support_SAT
+				}
+				add_political_power = 25
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_focus_on_tenryo
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_adopt_weight_based_system
+		}
+		x = 12
+		y = 6
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = SAT
+						tag = TOS
+						tag = CHO
+						tag = SAG
+					}
+				}
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_decrease
+				}
+			}
+			add_stability = -0.03
+			add_political_power = -50
+			add_timed_idea = { idea = TSH_tenryo_improvements days = 200}
+		}
+	}
+	focus = {
+		id = TSH_vic_silk_industry
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_focus_on_tenryo
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_expand_agricultural_production
+			focus = TSH_vic_assist_merchant_classes
+		}
+		x = 10
+		y = 7
+		completion_reward = {
+			add_political_power = -25
+			add_timed_idea = { idea = TSH_silk_industry days = 150}
+			FRA = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+			    }
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_expand_agricultural_production
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_focus_on_tenryo
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_silk_industry
+			focus = TSH_vic_assist_merchant_classes
+		}
+		x = 12
+		y = 7
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = -25
+			add_timed_idea = { idea = TSH_expand_agricultural_production days = 150}
+		}
+	}
+	focus = {
+		id = TSH_vic_assist_merchant_classes
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_focus_on_tenryo
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_silk_industry
+			focus = TSH_vic_expand_agricultural_production
+		}
+		x = 14
+		y = 7
+		completion_reward = {
+			add_political_power = -25
+			add_timed_idea = { idea = TSH_assist_merchant_classes days = 150}
+			USA = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = TSH_vic_flat_tax_on_farmers
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_assist_merchant_classes
+			focus = TSH_vic_silk_industry
+			focus = TSH_vic_expand_agricultural_production
+		}
+		x = 10
+		y = 8
+		completion_reward = {
+			add_stability = 0.03
+			add_ideas = TSH_flat_tax_on_farmers
+		}
+	}
+	focus = {
+		id = TSH_vic_industrial_expansions
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_support_saga
+			focus = TSH_vic_choshu
+			focus = TSH_vic_support_tosa
+			focus = TSH_vic_support_satsuma
+			focus = TSH_vic_assist_merchant_classes
+			focus = TSH_vic_silk_industry
+			focus = TSH_vic_expand_agricultural_production
+		}
+		x = 8
+		y = 8
+		completion_reward = {
+			add_timed_idea = { idea = tsh_vic_industrial_expansion days = 200}
+		}
+	}
+	focus = {
+		id = TSH_vic_an_international_economy
+		icon = GFX_focus_crisis_control
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = TSH_vic_industrial_expansions
+			focus = TSH_vic_flat_tax_on_farmers
+		}
+		x = 9
+		y = 9
+		completion_reward = {
+			add_stability = -0.15
+			add_ideas = {
+				civilian_economy
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_legacy_of_rangaku
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		x = 22
+		y = 0
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.25
+				uses = 1
+				category = process_engineering_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = biochemistry_tech
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_army_of_the_bakufu
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_legacy_of_rangaku
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 18
+		y = 1
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = TSH_vic_seek_out_western_military_treaties
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_army_of_the_bakufu
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 18
+		y = 2
+		completion_reward = {
+			country_event = {id = shogunate_japan.4}
+		}
+	}
+	focus = {
+		id = TSH_vic_raise_hatamoto_troops
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_seek_out_western_military_treaties
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 17
+		y = 3
+		completion_reward = {
+			add_ideas = tsh_hatamoto_troops
+		}
+	}
+	focus = {
+		id = TSH_vic_western_field_tactics
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_raise_hatamoto_troops
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 17
+		y = 4
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = { 
+				bonus = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_fund_training_schools
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_seek_out_western_military_treaties
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 19
+		y = 3
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = { 
+				bonus = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_teach_samurai_retainers
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_fund_training_schools
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 19
+		y = 4
+		completion_reward = {
+			every_army_leader = {
+				add_skill_level = 1
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_begin_centralization_efforts
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_teach_samurai_retainers
+		}
+		prerequisite = {
+			focus = TSH_vic_western_field_tactics
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_rely_upon_daimyo_levies
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 19
+		y = 5
+		completion_reward = {
+			add_ideas = {
+				tsh_army_centralization_efforts
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_rely_upon_daimyo_levies
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_teach_samurai_retainers
+		}
+		prerequisite = {
+			focus = TSH_vic_western_field_tactics
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_begin_centralization_efforts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 17
+		y = 5
+		completion_reward = {
+			add_ideas = {
+				tsh_decentralized_army_structure
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_firearms_training
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_rely_upon_daimyo_levies
+			focus = TSH_vic_begin_centralization_efforts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 18
+		y = 6
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = { 
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = { 
+				bonus = 0.25
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_expand_the_army
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_firearms_training
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 18
+		y = 7
+		completion_reward = {
+			add_manpower = 10000
+			add_political_power = -25
+		}
+	}
+	focus = {
+		id = TSH_vic_invite_foreign_expertise
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_expand_the_army
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 17
+		y = 8
+		completion_reward = {
+			country_event = {id = shogunate_japan.5}
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = TSH_vic_establish_the_shinsengumi
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_expand_the_army
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 19
+		y = 8
+		completion_reward = {
+			#??
+		}
+	}
+	focus = {
+		id = TSH_vic_integrate_domain_leadership
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_rely_upon_daimyo_levies
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 6
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = SAT
+						tag = TOS
+						tag = CHO
+						tag = SAG
+					}
+				}
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_large_unit_tactics
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_integrate_domain_leadership
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 7
+		completion_reward = {
+			swap_ideas = {
+				add_idea = tsh_decentralized_army_structure_2
+				remove_idea = tsh_decentralized_army_structure
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_expand_unit_autonommy
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_large_unit_tactics
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 16
+		y = 9
+		completion_reward = {
+			swap_ideas = {
+				add_idea = tsh_decentralized_army_structure_3
+				remove_idea = tsh_decentralized_army_structure_2
+			}
+		}
+	}
+	
+	focus = {
+		id = TSH_vic_simpify_military_administration
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_rely_upon_daimyo_levies
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 20
+		y = 6
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+		}
+	}
+	focus = {
+		id = TSH_vic_promote_organizational_cohesion
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_simpify_military_administration
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 20
+		y = 7
+		completion_reward = {
+			swap_ideas = {
+				add_idea = tsh_army_centralization_efforts_2
+				remove_idea = tsh_army_centralization_efforts
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_merit_based_officer_corps
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_promote_organizational_cohesion
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 20
+		y = 9
+		completion_reward = {
+			swap_ideas = {
+				add_idea = tsh_army_centralization_efforts_3
+				remove_idea = tsh_army_centralization_efforts_2
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_secure_funding_for_military_expansion
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_legacy_of_rangaku
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 1
+		completion_reward = {
+			country_event = {id = shogunate_japan.6}
+		}
+	}
+	focus = {
+		id = TSH_vic_study_western_manufacturing
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_secure_funding_for_military_expansion
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 23
+		y = 2
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.25
+				uses = 2
+				category = mechanical_engineering_tech
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_incorporate_american_processing
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_study_western_manufacturing
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 22
+		y = 3
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.25
+				uses = 2
+				category = process_engineering_tech
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_construct_reverberatory_furnaces
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_study_western_manufacturing
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 24
+		y = 3
+		completion_reward = {
+			add_ideas = TSH_vic_reverberatory_furnaces
+		}
+	}
+
+	focus = {
+		id = TSH_vic_modern_defensive_theory
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_construct_reverberatory_furnaces
+		}
+		prerequisite = {
+			focus = TSH_vic_incorporate_american_processing
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 22
+		y = 4
+		completion_reward = {
+			add_ideas = TSH_modern_defensive_theory
+		}
+	}
+	focus = {
+		id = TSH_vic_reinforce_osaka_castle
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_modern_defensive_theory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 21
+		y = 5
+		completion_reward = {
+			1263 = {
+				add_building_construction = { type = bunker province = 7072 level = 2 instant_build = yes }
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_expand_odaiba_battery
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_modern_defensive_theory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 23
+		y = 5
+		completion_reward = {
+			1266 = {
+				add_building_construction = { type = bunker province = 1182 level = 2 instant_build = yes }
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_contract_foreign_engineers
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_construct_reverberatory_furnaces
+		}
+		prerequisite = {
+			focus = TSH_vic_incorporate_american_processing
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 26
+		y = 4
+		completion_reward = {
+			add_political_power = -75
+			add_timed_idea = { idea = TSH_foreign_engineering_contracts days = 50 }
+		}
+	}
+	focus = {
+		id = TSH_vic_nagasaki_arsenal
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_contract_foreign_engineers
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 5
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea= { idea = TSH_nagasaki_arsenal days = 400 }
+			SAG = {
+				add_timed_idea= { idea = TSH_nagasaki_arsenal days = 400 }
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_nagasaki_arsenal_naval
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_nagasaki_arsenal
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 6
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea = { idea = TSH_nagasaki_arsenal_naval days = 200 }
+			SAG = {
+				add_timed_idea = { idea = TSH_nagasaki_arsenal_naval days = 200 }
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_nagasaki_iron_foundry
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_nagasaki_arsenal_naval
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 25
+		y = 7
+		completion_reward = {
+			add_political_power = -50
+			
+			SAG = {
+				
+				add_opinion_modifier = {
+					target = TSH
+					modifier = small_increase
+				}
+			}
+		}
+	}
+}

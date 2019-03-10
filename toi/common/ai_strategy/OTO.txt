@@ -1,34 +1,34 @@
-oto_deal_crete_1868 = {
-	enable = {
-		CET = {
-		    has_country_flag = CET_cretan_revolt
-		}
-		original_tag = OTO 
-	}
-	abort = {
-		NOT = {
-			CET = {
-				has_country_flag = CET_cretan_revolt
-			}
-		}
-	}
+# oto_deal_crete_1868 = {
+	# enable = {
+		# CET = {
+		    # has_country_flag = CET_cretan_revolt
+		# }
+		# original_tag = OTO 
+	# }
+	# abort = {
+		# NOT = {
+			# CET = {
+				# has_country_flag = CET_cretan_revolt
+			# }
+		# }
+	# }
 	
-	ai_strategy = {
-		type = invade	
-		id = "CET" 
-		value = 200
-	}
+	# ai_strategy = {
+		# type = invade	
+		# id = "CET" 
+		# value = 200
+	# }
 	
-	ai_strategy = {
-		type = conquer 	
-		id = "CET" 
-		value = 200
-	}
+	# ai_strategy = {
+		# type = conquer 	
+		# id = "CET" 
+		# value = 200
+	# }
 	
-	ai_strategy = {
-		type = area_priority	
-		id = europe  
-		value = 100 
-	}
+	# ai_strategy = {
+		# type = area_priority	
+		# id = europe  
+		# value = 100 
+	# }
 	
-}
+# }
