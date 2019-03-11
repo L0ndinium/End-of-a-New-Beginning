@@ -47,7 +47,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Military_Focus
-		icon = GFX_goal_focus_divide_unite_army
+		icon = GFX_goal_focus_ITA_Military_Academies
 		cost = 70
 		x = 25
 		y = 1

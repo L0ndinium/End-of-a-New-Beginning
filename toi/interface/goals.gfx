@@ -3117,5 +3117,9 @@ spriteTypes = {
 		name = "GFX_goal_focus_Italian_Navy"
 		texturefile = "gfx/interface/goals/italy/focus_Italian_Navy.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_focus_ITA_Military_Academies"
+		texturefile = "gfx/interface/goals/italy/focus_ITA_Military_Academies.dds"
+	}
 
 }
