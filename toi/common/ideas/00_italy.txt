@@ -332,7 +332,7 @@ ideas = {
 	country = {
 		ITA_Reliance_on_Farming = {
 
-			picture = GFX_Idea_agriculture_focus
+			picture = agriculture_focus
 			
 			modifier = {
 				consumer_goods_factor = -0.04
@@ -381,7 +381,7 @@ ideas = {
 	country = {
 		ITA_Different_Naval_Doctorines = {
 
-			picture = GFX_idea_ITA_Differing_Naval_Doctorines
+			picture = ITA_Differing_Naval_Doctorines
 			
 			research_bonus = {
                 naval_doctrine = 0.1
