@@ -1193,6 +1193,7 @@ focus_tree = {
 		y = 7
 		completion_reward = {
 			add_political_power = -50
+			add_timed_idea= { idea = TSH_nagasaki_iron_foundry days = 400 }
 			
 			SAG = {
 				
@@ -1201,6 +1202,24 @@ focus_tree = {
 					modifier = small_increase
 				}
 			}
+		}
+	}
+	focus = {
+		id = TSH_vic_yokosuka_arsenal
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_contract_foreign_engineers
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 26
+		y = 5
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea= { idea = TSH_yokosuka_arsenal days = 400 }
 		}
 	}
 }
