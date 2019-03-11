@@ -3996,5 +3996,9 @@ spriteTypes = {
 		name = "GFX_idea_MTG_naval_treaty_adherent_reduced"
 		texturefile = "gfx/interface/ideas/idea_mtg_naval_treaty_adherent_reduced.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ITA_Differing_Naval_Doctorines"
+		texturefile = "gfx/interface/ideas/ITA/ITA_Differing_Naval_Doctorines.dds"
+	}
 	
 }

@@ -48,5 +48,17 @@ spriteTypes = {
 		name = "GFX_idea_HAI_hispaniola"
 		texturefile = "gfx/interface/ideas/HISPANIOLA/HAI_hispaniola.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ITA_Differing_Naval_Doctorines"
+		texturefile = "gfx/interface/ideas/ITA/ITA_Differing_Naval_Doctorines.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_Unified_Italian_Naval_Doctrine"
+		texturefile = "gfx/interface/ideas/ITA/ITA_Unified_Italian_Naval_Doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_Idea_agriculture_focus"
+		texturefile = "gfx/interface/ideas/ITA/Idea_agriculture_focus.dds"
+	}
 	
 }
