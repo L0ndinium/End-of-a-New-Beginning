@@ -355,6 +355,16 @@ SER = {
 	color_ui = rgb { 160 110 110 }
 }
 
+GLM = {
+	color = rgb { 216 97 28 }
+	color_ui = rgb { 216 97 28 }
+}
+
+SLV = {
+	color = rgb { 86 178 188 }
+	color_ui = rgb { 86 178 188 }
+}
+
 ICE = {
 	color = rgb { 100  125  175 }
 	color_ui = rgb { 100  125  175 }

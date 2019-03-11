@@ -23,12 +23,4 @@ units = {
 			division_template = "Papal Guard"
 			start_experience_factor = 0.3
 		}
-		
-		navy = {				
-			name = "Papal Navy"			
-			base = 11751
-			location = 11751
-			ship = { name = "Roma" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PAP } } }
-			ship = { name = "Immacolata Concezione" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = PAP } } }
-		}
 }

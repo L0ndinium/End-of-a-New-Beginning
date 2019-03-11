@@ -158,6 +158,12 @@ spriteTypes = {
 		noOfFrames = 2		
 	}
 
+	spriteType = {
+		name = "GFX_2d_3d_switch"
+		textureFile = "gfx/interface/divisiondesigner/2d_3d.png"
+		noOfFrames = 2			
+	}
+	
 	corneredTileSpriteType = {
 		name = "GFX_tiled_plain_bg"
 		size= { x=192 y=192 }
@@ -211,6 +217,15 @@ spriteTypes = {
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}	
+	
+	corneredTileSpriteType = {
+		name = "GFX_tiled_window_w_close_scrollbar"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//tiles//tiled_window_w_close_scrollbar.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 	
 	corneredTileSpriteType = {
 		name = "GFX_tiled_bg_1_scrollbar"
@@ -623,7 +638,56 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_technology_naval_folder_researched_item_bg"
 		textureFile = "gfx//interface//techtree//tech_naval_researched_item_bg.dds"
-	}			
+	}
+
+	
+	spriteType = {
+		name = "GFX_technology_mtgnavalfolder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_mtgnavalfolder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_mtgnavalfolder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_mtgnavalfolder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}	
+	
+	spriteType = { 
+		name = "GFX_technology_mtgnavalfolder_currently_researching_item_bg"
+		textureFile = "gfx//interface//techtree//tech_naval_currently_researching_item.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_mtgnavalfolder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_naval_available_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_mtgnavalfolder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_naval_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_mtgnavalfolder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_naval_researched_item_bg.dds"
+	}
+	
 	
 	##### infantry tech ######	# infantry has a special small override	
 	
@@ -1279,6 +1343,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_tech_bonus"
 		textureFile = "gfx/interface/tech_bonus.dds"
+		noOfFrames = 6
+	}
+
+	spriteType = {
+		name = "GFX_bg_tech"
+		textureFile = "gfx/interface/divisiondesigner/bg_tech_wide.dds"
 		noOfFrames = 3
 	}
 

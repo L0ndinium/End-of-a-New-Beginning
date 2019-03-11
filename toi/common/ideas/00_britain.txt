@@ -23,7 +23,7 @@ ideas = {
 			picture = jap_duplicate_research
 			
 			modifier = {
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 			}
 		}
 		ENG_idea_sun_never_sets = {
@@ -67,7 +67,7 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 				production_speed_buildings_factor = 0.05
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
@@ -819,7 +819,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				naval_equipment = 0.05
+				naval_equipment = -0.05
 			}
 
 			traits = { eoanb_naval_manufacturer_heavy }
@@ -836,7 +836,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				naval_equipment = 0.05
+				naval_equipment = -0.05
 			}
 
 			traits = { ENG_trait_naval_whitworth }
@@ -855,7 +855,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				process_engineering_tech = 0.05
+				process_engineering_tech = -0.05
 			}
 
 			traits = { ENG_trait_concern_bic }
@@ -872,7 +872,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				process_engineering_tech = 0.05
+				process_engineering_tech = -0.05
 			}
 
 			traits = { ENG_trait_concern_bhsc }
@@ -889,7 +889,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				biochemistry_tech = 0.05
+				biochemistry_tech = -0.05
 			}
 
 			traits = { ENG_trait_concern_beechams_pills }
@@ -906,7 +906,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				electronics_devices_tech = 0.05
+				electronics_devices_tech = -0.05
 			}
 
 			traits = { ENG_trait_concern_ferranti }
@@ -928,7 +928,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = 0.05
+				infantry_weapons = -0.05
 			}
 
 			traits = { ENG_trait_materiel_webley_scott }
@@ -945,7 +945,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				infantry_weapons = 0.05
+				infantry_weapons = -0.05
 			}
 
 			traits = { ENG_trait_materiel_ww_greener }
@@ -962,7 +962,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				artillery = 0.05
+				artillery = -0.05
 			}
 
 			traits = { ENG_trait_materiel_wargm }
@@ -979,7 +979,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				artillery = 0.05
+				artillery = -0.05
 			}
 
 			traits = { ENG_trait_materiel_royal_arsenal }

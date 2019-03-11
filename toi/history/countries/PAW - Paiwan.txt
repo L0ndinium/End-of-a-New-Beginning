@@ -83,12 +83,4 @@
 
   # POLITICAL LEADERS
 
-  create_country_leader = {
-    name = "Leader"
-    desc = "POLITICS_UNKNOWN_DESC"
-    picture = "Portrait_generic.dds"
-    expire = "1900.01.01"
-    ideology = despotism
-    traits = { }
-  }
 }

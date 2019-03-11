@@ -276,7 +276,13 @@
  AUSflavour.2.a:0 "Beautiful"
  AUSflavour.3.t:0 "The Opening of the Vienna Court Opera"
  AUSflavour.3.d:0 ""
- AUSflavour.3.a:0 ""
+ AUSflavour.3.a:0 "A Fine Addition to Vienna"
+ AUSflavour.4.t:0 "Abolishing the Serbian Voivodeship"
+ AUSflavour.4.d:0 ""
+ AUSflavour.4.a:0 "All roads lead to Buda - Pesth and Vienna"
+ AUSflavour.5.t:0 "Trisch-Trasch-Polka"
+ AUSflavour.5.d:0 ""
+ AUSflavour.5.a:0 "How Wonderful"
 
  
 
@@ -458,7 +464,7 @@
  AUS_tt_reform_empire_compromise:0 "§GReform§! the Empire by beginning negotiations with one or several of the different §Ynationalities§! in the Empire.\n\nThrough your §Ychoices§! before and during the negotiations you will be able to §Ginfluence§! the course of the Empire for the next decades."
  AUS_tt_not_reform_empire:0 "Usher a new era of §Yabsolutism§! in the Empire\n\nThe policies of the Empire will continue being centered on the §YGerman people and influenced by the Habsburgs§!, and will seek to §Yrepress§! any dissent for the next decades."
  AUS_tt_archduke_albrecht_employ_advisor:0 "Unlocks §YAlbrecht, Duke of Teschen§! as Chief of the Army"
- AUS_tt_unlock_ludwig_von_fautz:0 "Unlocks §YLudwig von Fautz§! as Chief of the Army"
+ AUS_tt_unlock_ludwig_von_fautz:0 "Unlocks §YLudwig von Fautz§! as Chief of the Navy"
  AUS_tt_heinrich_hesse_advisor:0 "Unlocks §YHeinrich von Heß§! as Military Theorist"
  AUS_tt_appoint_von_beust:0 "§YCount von Beust§! supports implementing the Dual Monarchy"
  AUS_tt_keep_richard_belcredi:0 "§YCount von Belcredi§! supports Federalizing the Empire"

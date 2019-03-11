@@ -16,7 +16,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_enabled_achievement_icons"
 		texturefile = "gfx/interface/enabled_achievement_icons.dds"
-		noOfFrames = 2		
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_game_rule_option_disallow_achievements"
+		texturefile = "gfx/interface/game_rule_option_disallow_achievements.dds"
 	}
 
 	spriteType = {
@@ -38,8 +43,8 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_save_game_btn"
-		textureFile = "gfx/interface/save_game_disconnected_3frames.dds"
+		name = "GFX_save_load_file_btn"
+		textureFile = "gfx/interface/save_load_file_disconnected_3frames.dds"
 		noOfFrames = 3
 	}
 
@@ -133,6 +138,11 @@ spriteTypes = {
                 effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
         }
 	
+	spriteType = {
+                name = "GFX_frontend_task_force_composition_editor_upper_bar"
+                texturefile = "gfx/interface/frontend_task_force_composition_editor_upper_bar.dds"
+        }
+
 	spriteType = {
                 name = "GFX_load_save_top_screen"
                 texturefile = "gfx/interface/load_save_top_screen.dds"

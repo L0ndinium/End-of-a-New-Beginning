@@ -719,12 +719,8 @@ technologies = {
 			
 		}
 		allow = {
-			NOT={
-				NOT={
-					has_country_flag = is_historical_colonial_power
-					has_global_flag = scramble_for_africa
-				}
-			}
+			has_country_flag = is_historical_colonial_power
+			has_global_flag = scramble_for_africa
         }
 		
 		research_cost = 1
@@ -998,7 +994,7 @@ technologies = {
 			position = { x = 16 y = 14 }
 		}
 		allow = {
-			has_tech = tech_naval_1857_gunboat
+			#has_tech = tech_naval_1857_gunboat
         }
 		
 		ai_will_do = {

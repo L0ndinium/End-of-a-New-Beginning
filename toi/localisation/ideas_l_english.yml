@@ -1066,6 +1066,10 @@
  ARG_civil_war_war:0 "Argentine Civil War"
  ARG_decentral_military_2:0 "Decentralized Military"
  ARG_decentral_military_1:0 "Decentralized Military"
+ ARG_devastating_defeat:0 "Devastating Defeat"
+ ARG_devastating_defeat_desc:0 "The defeat in the Paraguayan War has proved to shatter our republic. We suffered the humiliation of losing to Lopez's small landlocked nation and have to deal with the consequences as the new United Argentina struggles."
+ ARG_devastated_economy:0 "Devastated Economy"
+ ARG_devastated_economy_desc:0 "The Empire of Brazil has not taken any land away from us but has imposed severe economic and trade limitations in our nation and also we had to pay enormous reparations. 
  Panic_of_1857_1:0 "Panic of 1857"
  Panic_of_1857_2:0 "Panic of 1857"
  Panic_of_1857_3:0 "Panic of 1857"
@@ -1360,3 +1364,5 @@
  eoanb_continuous_resource_management_desc:0 "Placeholder"
  eoanb_continuous_austerity_consumer:0 "Continuous Austerity"
  eoanb_continuous_austerity_consumer_desc:0 "Placeholder"
+ PRS_idea_army_reserves_mobilizing:0 "Prussian Army Reserves"
+ PRS_idea_army_reserves_mobilizing_desc:0 "The Prussian Army Reserves are mobilizing due to the ongoing war, strengthening the [PRS.GetAdjective] Military."

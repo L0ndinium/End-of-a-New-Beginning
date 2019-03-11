@@ -59,12 +59,4 @@ units = {
 			division_template = "Caballos Mexicanos"
 			start_experience_factor = 0.3
 		}
-		
-		navy = {				
-			name = "Mexican Fleet"			
-			base = 12810
-			location = 12810
-			ship = { name = "Hidalgo" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = MEX } } }
-			ship = { name = "Guerrero" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = MEX } } }
-		}
 }

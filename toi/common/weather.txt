@@ -62,6 +62,11 @@ settings = {
     min_temperature = -1.0
   }
 
+  #Provinces with a static modifiers with this ID gets the mud effect applied on the map
+  visual_mud_effects = {
+    flooded
+  }
+
   snowing = {
     # Amount of snow collected affects the visual snow on the map
     snow_gain_on_snowing = 3.0
@@ -85,6 +90,11 @@ settings = {
     weather_ground_snow_high = { 40.0 1000.0 }
   }
 
+  arctic_water = {
+	arctic_water_temperature = { -5.0 0.0 }
+	arctic_water_end_temperature = { 1.0 5.0 }
+  }
+  
   # Increase chance of X if was already X before. Decrease otherwise.
   chance_increase = {
     mud = { 20.0 0.10 }

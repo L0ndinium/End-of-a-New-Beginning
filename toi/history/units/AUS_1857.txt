@@ -155,16 +155,4 @@ units = {
 			division_template = "Infanterie Regiment"
 			start_experience_factor = 0.2
 		}
-		navy = {				
-			name = "Imperiale Flotte Österreichs"			
-			base = 11584
-			location = 11584
-			ship = { name = "SMS Novara" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Radetzky" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Adria" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Donau" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Wien" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Trieste" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-			ship = { name = "SMS Graz" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = AUS } } }
-		}
 }

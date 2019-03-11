@@ -321,7 +321,7 @@ continuous_focus_palette = {
 			hidden_trigger = { has_dlc = "Together for Victory" }
 		}
 
-		enabled = {
+		enable = {
 			is_in_faction = yes
 			num_faction_members > 1
 			custom_trigger_tooltip = {

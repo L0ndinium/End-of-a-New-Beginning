@@ -19,35 +19,18 @@ spriteTypes = {
 		name = "GFX_idea_AUS_theorist_Henrich_von_Hess"
 		texturefile = "gfx/interface/ideas/AUS/AUS_Advisor_Henrich_von_Hess.dds"
 	}	
-    spriteType = {
-		name = "GFX_idea_AUS_advisor_hermann_dietrich_lindheim"
-		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_hermann_dietrich_lindheim.dds"
-	}
-	
 	spriteType = {
-		name = "GFX_idea_AUS_advisor_anton_von_schmerling"
-		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_anton_von_schmerling.dds"
-	}
-	
+		name = "GFX_idea_AUS_theorist_Albrecht_von_Teschen"
+		texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Albrecht_von_Teschen.dds"
+	}	
 	spriteType = {
-		name = "GFX_idea_AUS_advisor_ignaz_semmelweis"
-		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_ignaz_semmelweis.dds"
-	}
-	
+		name = "GFX_idea_AUS_theorist_Archduke_Maximillian"
+		texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Archduke_Maximillian.dds"
+	}	
 	spriteType = {
-		name = "GFX_idea_AUS_advisor_georg_sigl"
-		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_georg_sigl.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_AUS_advisor_friedrich_schey_von_koromla"
-		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_friedrich_schey_von_koromla.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_idea_AUS_advisor_anselm_salomon_von_rothschild"
-		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_anselm_salomon_von_rothschild.dds"
-	}
-	
+		name = "GFX_idea_AUS_theorist_Wilhelm_von_Tegetthof"
+		texturefile = "gfx/interface/ideas/AUS/AUS_theorist_Wilhelm_von_Tegetthof.dds"
+	}	
 	spriteType = {
 		name = "GFX_idea_AUS_advisor_ignacy_lukasiewicz"
 		texturefile = "gfx/interface/ideas/AUS/AUS_advisor_ignacy_lukasiewicz.dds"

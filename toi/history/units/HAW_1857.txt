@@ -1,13 +1,3 @@
 ﻿units = {
 	
-	navy = {				
-		name = "Hawaiian Navy"			
-		base = 4180
-		location = 4180
-		ship = { name = "Nu-Hiva" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = HAW } } }
-		ship = { name = "Papeete" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = HAW } } }
-		ship = { name = "Tane-Manou" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = HAW } } }
-		ship = { name = "Kamehameha" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = HAW } } }
-	}
-	
 }

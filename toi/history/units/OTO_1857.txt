@@ -151,35 +151,4 @@ units = {
 			start_experience_factor = 0.2
 		}
 		
-		navy = {				
-			name = "Ottoman Fleet"			
-			base = 4112
-			location = 4112
-			ship = { name = "Mahmudiye" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Peyk Zafer" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Mukaddeme i Hayir" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Taif" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Aziz" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Haluk" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Hasan" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Baki" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Giray" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Ferda" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Durul" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Civan" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Aysel" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Reyhan" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Burcu" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Mahti" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Birol" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Erdal" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Tosun" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Arslan" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Turna" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Selma" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Seren" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Cansu" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Narin" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-			ship = { name = "Osman" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = OTO } } }
-		}
 }

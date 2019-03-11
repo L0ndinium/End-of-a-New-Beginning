@@ -62,14 +62,16 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
-			date > 1863.1.1
-			tag = PAR
-			has_government = chauvinist_populism
-			OR = {
-				ARG = {
-					has_government = centrism
-				}
+			AND = {
+				date > 1863.1.1
+				tag = PAR
+				has_government = chauvinist_populism
+				OR = {
+					ARG = {
+						has_government = centrism
+					}
 				date > 1864.1.1
+				}
 			}
 		}
 		
@@ -95,9 +97,11 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
-			tag = PAR
-			has_government = chauvinist_populism
-			date > 1863.5.3
+			AND = { 
+				tag = PAR
+				has_government = chauvinist_populism
+				date > 1863.5.3
+			}
 			}
 		
 		option = {
@@ -115,14 +119,21 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
+			AND = {
 			tag = PAR
 			has_government = chauvinist_populism
 		    ARG = {
 				has_government = centrism
 			}
-            BRA = {
+			OR = {
+				BRA = {
 				has_completed_focus	= BRA_uruguayan_intervention
+				}
+				BRA = {
+				has_completed_focus = BRA_reclaim_the_cisplatine_province
+				}
 			}
+		}
 		}
 		
 		option = {
@@ -143,11 +154,18 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
+		AND = {
 			tag = PAR
 			has_government = chauvinist_populism
-            BRA = {
+            OR = {
+				BRA = {
 				has_completed_focus	= BRA_challenge_the_blanco_government
-			}
+				}
+				BRA = { 
+				has_completed_focus = BRA_artigas_border_crisis
+				}
+			}	
+		}
 		}
 		
 		option = {
@@ -190,6 +208,7 @@ country_event = {
 		fire_only_once = yes
 		
 		trigger = {
+		AND = {
 			tag = PAR
 			has_government = chauvinist_populism
             BRA = {
@@ -199,6 +218,7 @@ country_event = {
 				surrender_progress > 0.2
 			}
 			has_war = no
+		}	
 		}
 		
 		option = {
@@ -259,12 +279,14 @@ country_event = { #Ask Argentina for Access
 		fire_only_once = yes
 
 		trigger = {
-			date > 1865.1.10
-			ARG = { has_war = no }
-			ARG = { exists = yes }
-			ARG = { is_puppet = no }
-			tag = PAR
-			has_war_with = BRA
+			AND = {
+				date > 1865.1.10
+				ARG = { has_war = no }
+				ARG = { exists = yes }
+				ARG = { is_puppet = no }
+				tag = PAR
+				has_war_with = BRA
+			}
 		}
 		
 		option = {
@@ -568,6 +590,16 @@ country_event = { #Paraguay Loses the War AUTOMATED
 					transfer_state = 1066
 				}
 			}
+			
+			if = {
+				limit = {
+					ARG = { is_in_faction_with = PAR }
+				}
+				ARG = {
+					add_ideas = ARG_devastated_economy
+				}
+			}
+			
 			remove_ideas = PAR_not_one_step_back
 			add_ideas = PAR_brazil_occupation
 			add_timed_idea = {
@@ -631,6 +663,7 @@ country_event = { #Paraguay Wins the War AUTOMATED
 				transfer_state = 1064
 				transfer_state = 1099
 				transfer_state = 1062
+		        ARG = { add_ideas = ARG_devastating_defeat }
 			}
 			else = {
 				transfer_state = 1064

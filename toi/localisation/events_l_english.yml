@@ -1745,6 +1745,12 @@
  prussia.29.d:0 "This mod gives you the option of playing with the German names for the states in the Germany region. Do you want to enable this?"
  prussia.29.a:0 "Yes, I want the German names."
  prussia.29.b:0 "No, keep it in English."
+ prussia.30.t:0 "[PRS.GetAdjective] Reserves Mobilizing"
+ prussia.30.d:0 "Prussia has, throughout history, established a system where the military has a strong, well trained force of reservists to fall back on in wartime. Since we are now at war, it is time for our reserves to mobilize!"
+ prussia.30.a:0 "This will help the war effort."
+ prussia.31.t:0 "[PRS.GetAdjective] Reserves Demobilizing"
+ prussia.31.d:0 "The war is over, and the men and support we have drawn from the reserve system are no longer needed."
+ prussia.31.a:0 "Back to the reserves you go!"
 
  #Bavaria
  bavariafocus.0.t:0 "Maximilian II Dead!"
@@ -2330,9 +2336,15 @@
  hispaniola.3.b:0 "Attack, destroy the imperialists!"
  hispaniola.6.t:0 "General Geffrard coups the Empire!"
  hispaniola.6.d:0 "Our general, unhappy with the current autocracy, has couped the Haitian Empire and installed a new republic!"
+ hispaniola.6.a:0 "Woah!"
  hispaniola.7.t:0 "Dominican Restoration War"
  hispaniola.7.d:0 "The Dominican generals Gregorio Luperon and Gaspar Polanco have began a revolt in the Dominican Republic! The pro-independence nationalists began rallying the farmers in Cibao revolted with our tariffs and our policy of taking their cattle. The rebellious and traitorous generals have gathered an enormous force and rumors say they are being supported by Haiti and Puerto Rican rebels."
  hispaniola.7.a:0 "We will not let them secede again!"
+ 
+ #Colombia
+ colombia.1.t:0 "Decentralization of New Granada"
+ colombia.1.d:0 "Mariano Ospina Rodriguez has made a new constitution that will greatly decentralize our nation to try and keep the liberal states appeased. New states will be formed and peace will be enforced upon them, not only this but the military will be strenghtened to protect from foreign threats and foreigners who helped us in the independence war will be naturalized."
+ colombia.1.a:0 "This is a new dawn for Granada, Long live the Granadine Confederation!"
  
  #Second Schleswig War
  eoanb_tt_event_secschwar_1:0 "§RFrederick VII will die.§!"

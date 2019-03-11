@@ -1,12 +1,5 @@
 ﻿
 
 units = {
-		 
-		navy = {				
-			name = "London Fleet"			
-			base = 6788
-			location = 6788
-			ship = { name = "Affondatore" definition = gunboat equipment = { equipment_1865_gunboat = { amount = 1 owner = ITA } } }
-		}
 
     }

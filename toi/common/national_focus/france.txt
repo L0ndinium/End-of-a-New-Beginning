@@ -1500,12 +1500,13 @@ focus_tree = {
 		x = 39
 		y = 4
 		completion_reward = {
-			add_tech_bonus = {
-				name = lineship_tech_bonus
-				bonus = 0.25
-				uses = 1
-				category = lineship_tech
-			}
+			#BROKEN BY MTG
+			#add_tech_bonus = {
+			#	name = lineship_tech_bonus
+			#	bonus = 0.25
+			#	uses = 1
+			#	category = lineship_tech
+			#}
 		}
 	}
 	focus = {

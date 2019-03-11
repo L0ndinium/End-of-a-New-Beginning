@@ -26,12 +26,4 @@ units = {
 			start_experience_factor = 0.1
 		}
 		
-		navy = {				
-			name = "Greek Navy"			
-			base = 4109
-			location = 4109
-			ship = { name = "Loudovikos" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = GRE } } }
-			ship = { name = "Emmanouil" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = GRE } } }
-		}
-		
 }

@@ -12,7 +12,7 @@ ideas = {
 			
 			picture = HAM_hanseatic_legion
 			
-			research_bonus = { land_doctrine = -0.25 }
+			research_bonus = { land_doctrine = 0.25 }
 			
 			modifier = {
 				army_infantry_attack_factor = -0.15

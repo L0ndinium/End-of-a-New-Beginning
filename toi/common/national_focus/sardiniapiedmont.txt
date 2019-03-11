@@ -203,11 +203,6 @@ focus_tree = {
 		cost = 70
 		available = {
 			always = no
-			
-		}
-		custom_trigger_tooltip = {
-    		tooltip = custom_effect_tooltip = PIE_War_Starts_Available
-
 		}
 		prerequisite = {
 			focus = PIE_Accept_Confederation

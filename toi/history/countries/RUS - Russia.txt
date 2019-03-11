@@ -109,7 +109,7 @@ set_politics = {
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1
 	vic_army_cloth = 1
-	tech_naval_1812_frigate = 1
+	#tech_naval_1812_frigate = 1
 	gw_artillery = 1
 	start_build_tech = 1
 	iron_railways = 1
@@ -290,10 +290,6 @@ create_navy_leader = {
   picture = "Portrait_RUS_Michael Reinecke.dds"
   traits = { }
   skill = 2
-  attack_skill = 1
-  defense_skill = 1
-  planning_skill = 1
-  logistics_skill = 1
 }
 
 create_corps_commander = {

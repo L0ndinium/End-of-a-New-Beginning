@@ -278,10 +278,6 @@ country_event = { # Camille Clément de La Roncière-Le Noury becomes amiral
 		id = 178933
 		traits = {}
 		skill = 1
-		attack_skill = 1
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
 	}
 	add_command_power = -20 
   }

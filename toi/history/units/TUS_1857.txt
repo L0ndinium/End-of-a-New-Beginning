@@ -36,12 +36,4 @@ units = {
 			division_template = "Tuscan Infantry"
 			start_experience_factor = 0.2
 		}
-		
-		navy = {				
-			name = "Tuscan Navy"			
-			base = 6973
-			location = 6973
-			ship = { name = "Argo" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = TUS } } }
-			ship = { name = "Feritore" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = TUS } } }
-		}
 }

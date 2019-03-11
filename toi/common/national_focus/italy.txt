@@ -804,11 +804,12 @@ focus_tree = {
     			uses = 3
     			category = naval_equipment
 			}
-			set_technology = {
-				tech_naval_1830_gunboat = 1
-				tech_naval_1857_gunboat = 1
-				tech_naval_1865_gunboat = 1
-			}
+			#BROKEN BY MTG
+			#set_technology = {
+			#	tech_naval_1830_gunboat = 1
+			#	tech_naval_1857_gunboat = 1
+			#	tech_naval_1865_gunboat = 1
+			#}
 			hidden_effect = {
     			load_oob = "ITA_Ship_Commision"
 			}
@@ -851,6 +852,9 @@ focus_tree = {
 		x = 29
 		y = 7
 
+		completion_reward = {
+			#
+		}
 	}
 	focus = {
 		id = ITA_Unified_Naval_Doctrine
@@ -862,9 +866,10 @@ focus_tree = {
 		x = 27
 		y = 9
 		completion_reward = {
-			remove_ideas = {
-				ITA_Different_Naval_Doctorine	
-			}	
+			#BROKEN
+			#remove_ideas = {
+			#	ITA_Different_Naval_Doctorine	
+			#}	
 		}
 	}
 	focus = {

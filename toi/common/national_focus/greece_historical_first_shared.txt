@@ -895,11 +895,12 @@ shared_focus  = {
 		prerequisite = { focus = GRE_hellenic_navy }		
 		
 		completion_reward = {
-            add_tech_bonus = {
-                bonus = 0.25 
-                uses = 1  
-                category = sloop_tech 
-            }	
+            #BROKEN BY MTG
+			#add_tech_bonus = {
+            #    bonus = 0.25 
+            #    uses = 1  
+            #    category = sloop_tech 
+            #}	
 		}
 	}
 	
@@ -919,12 +920,13 @@ shared_focus  = {
 		prerequisite = { focus = GRE_steamships }		
 		
 		completion_reward = {
-            add_tech_bonus = {
-                bonus = 0.25 
-                uses = 1  
-                category = monitor_tech 
-				category = lineship_tech 
-            }	
+            #BROKEN BY MTG
+			#add_tech_bonus = {
+            #    bonus = 0.25 
+            #    uses = 1  
+            #    category = monitor_tech 
+			#	category = lineship_tech 
+            #}	
 		}
 	}
 	

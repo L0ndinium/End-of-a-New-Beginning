@@ -14,12 +14,4 @@ units = {
 			division_template = "South American Infantry"
 			start_experience_factor = 0.1
 		}
-		
-		navy = {				
-			name = "Fleet of Ecuador"			
-			base = 8252
-			location = 8252
-			ship = { name = "Guyas" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = ECU } } }
-			ship = { name = "Machala" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = ECU } } }
-		}
 }

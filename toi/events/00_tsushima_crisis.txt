@@ -508,7 +508,6 @@ country_event = {
 	option = {
 		name = tsushima.14.a
 		ai_chance = { factor = 98 }
-		#Change this to Naval Access in MtG
 		ENG = { give_military_access = TSH }
 	}
 	

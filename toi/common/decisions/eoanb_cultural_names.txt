@@ -128,7 +128,7 @@ eoanb_category_options = {
 		    88 = {
 			set_state_name = "Westgalizien"
 			}
-		    1232 = {
+		    1231 = {
 			set_state_name = "Krakau"
 			}
 		    664 = {

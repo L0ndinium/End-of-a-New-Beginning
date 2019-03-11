@@ -228,7 +228,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				naval_equipment = 0.05
+				naval_equipment = -0.05
 			}
 			
 			traits = { eoanb_naval_manufacturer_light }
@@ -248,7 +248,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				electronics_devices_tech = 0.1
+				electronics_devices_tech = -0.1
 			}
 
 			traits = { electronics_concern_3 }
@@ -266,7 +266,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				biochemistry_tech = 0.1
+				biochemistry_tech = -0.1
 			}
 
 			traits = { electronics_concern_2 }
@@ -284,7 +284,7 @@ ideas = {
 			removal_cost = 10
 
 			research_bonus = {
-				mechanical_engineering = 0.1
+				mechanical_engineering = -0.1
 			}
 
 			traits = { industrial_concern_1 }

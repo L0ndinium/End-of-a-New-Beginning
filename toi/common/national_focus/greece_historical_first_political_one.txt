@@ -182,12 +182,13 @@ country = {
 		}
 		
 		completion_reward = {
-		    GRE = {
-		        swap_ideas = {
-                    remove_idea = GRE_idea_uncertain_succession 
-                    add_idea = GRE_idea_Amalia_succession 			    
-			    }	
-            }		    		
+		    #BROKEN
+			#GRE = {
+		    #    swap_ideas = {
+            #        remove_idea = GRE_idea_uncertain_succession 
+            #        add_idea = GRE_idea_Amalia_succession 			    
+			#    }	
+            #}		    		
 	    }	
 	}
 	
@@ -287,9 +288,10 @@ country = {
 		}
 		
 		completion_reward = {
-		    GRE = {
-		        add_ideas = GRE_idea_Enlightened_Despotism 
-			}
+		    #BROKEN
+			#GRE = {
+		    #    add_ideas = GRE_idea_Enlightened_Despotism 
+			#}
 	    }	
 	}
 	

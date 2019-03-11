@@ -88,41 +88,21 @@ defined_text = {
 	name = GetPowerStatusName
 	text = {
 		trigger = {
-            check_variable = {
-                var = overall_score 
-                value = 500 
-                compare = greater_than 
-            }			
+            check_variable = { this.score_array_position_var <  8 }			
 		}
 		localization_key = eoanb_lockey_power_status_great_power 
 	}
 	text = {
-		trigger = {
-            check_variable = {
-                var = overall_score 
-                value = 500 
-                compare = less_than  
-            }		
-            check_variable = {
-                var = overall_score 
-                value = 300  
-                compare = greater_than 
-            }				
+		trigger = {	
+            check_variable = { this.score_array_position_var >  7 }		
+            check_variable = { this.score_array_position_var <  16 }				
 		}
 		localization_key = eoanb_lockey_power_status_secondary_power
 	}
 	text = {
-		trigger = {
-            check_variable = {
-                var = overall_score 
-                value = 300 
-                compare = less_than  
-            }		
-            check_variable = {
-                var = overall_score 
-                value = 100  
-                compare = greater_than 
-            }					
+		trigger = {		
+            check_variable = { this.score_array_position_var >  16 }		
+            check_variable = { this.score_array_position_var <  40 }		
 		}
 		localization_key = eoanb_lockey_power_status_minor_power
 	}

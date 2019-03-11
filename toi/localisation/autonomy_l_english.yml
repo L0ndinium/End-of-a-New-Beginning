@@ -1,5 +1,6 @@
 ﻿l_english:
  autonomy_dominion:0 "Dominion"
+ autonomy_supervised_state:0 "Supervised State"
  autonomy_colony:0 "Colony"
  autonomy_puppet:0 "Puppet"
  autonomy_integrated_puppet:0 "Integrated Puppet"
@@ -58,8 +59,8 @@
  EVENT_AUTONOMY_EFFECTS:1 "§HEffects on autonomy§!"
  ADD_AUTONOMY_SCORE_DESC:0 "Add £autonomy_texticon $VALUE|H2$"
  ADD_AUTONOMY_SCORE_DETAILED_DESC:0 "Add £autonomy_texticon $VALUE|H2$ to the $COUNTRY|H$"
- COLONIAL_FORCES_GENERAL_DESCRIPTION:0 "§GClick to view templates of subjects§!\nArmies created with colonial templates can include certain amount of subject troops depending on its autonomy level."
- COLONIAL_FORCES_NO_SUBJECTS:1 "§RWe have no subjects we could recruit colonial templates from§!"
+ COLONIAL_FORCES_GENERAL_DESCRIPTION:2 "§GClick to view templates of subjects and Governments in Exile§!\n\nDivisions created with colonial templates can include more manpower from the colony if the colony's autonomy is lowered."
+ COLONIAL_FORCES_NO_SUBJECTS:2 "§RWe have no subjects or Governments in Exile we could recruit templates from§!"
  FOREIGN_TEMPLATE_DESC:0 "This is a $COUNTRY|H$ template, which is our subject. We can duplicate template and create colonial forces on its base. Colonial template will use its parent troops, depending on autonomy level."
  COLONIAL_TEMPLATE_DESC:0 "This is $COUNTRY|H$ colonial template. Colonial template will use its parent troops, depending on autonomy level."
  CONSTRUCTION_MASTER_BUILDING_LEVELS:0 "$MASTER|H$ is currently building $LVL|H$ levels of $BUILDING|H$ for us."

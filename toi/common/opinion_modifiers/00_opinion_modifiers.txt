@@ -360,24 +360,6 @@ opinion_modifiers = {
 	war_plan_orange = {
 		value = -50
 	}
-	democratic_leanings_good = {
-		value = 30
-	}
-	democratic_leanings_bad = {
-		value = -30
-	}
-	communism_leanings_good = {
-		value = 30
-	}
-	communism_leanings_bad = {
-		value = -30
-	}
-	fascism_leanings_good = {
-		value = 30
-	}
-	fascism_leanings_bad = {
-		value = -30
-	}
 	tizard_relations = {
 		value = 50
 	}

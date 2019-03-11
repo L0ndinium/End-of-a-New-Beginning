@@ -597,70 +597,12 @@ ideas = {
 		}
 	}	
     political_advisor = {
-		AUS_advisor_hermann_dietrich_lindheim = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			traits = { 
-				industrial_promoter
-				neutral_party
-			}
-		}
-		AUS_advisor_anton_von_schmerling = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			traits = { 
-				efficient_administrator 
-				neutral_party
-			}
-		}
-		AUS_advisor_ignaz_semmelweis = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			traits = { 
-				ingenious_scientist
-				neutral_party
-			}
-		}
-		AUS_advisor_georg_sigl = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			traits = { 
-				innovative_engineer 
-				neutral_party
-			}
-		}
-		AUS_advisor_friedrich_schey_von_koromla = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			traits = { 
-				railroad_tycoon
-				neutral_party
-			}
-		}
-		AUS_advisor_anselm_salomon_von_rothschild = {
-			allowed = {
-				original_tag = AUS
-			}
-
-			traits = { 
-				clever_buisnessman
-				neutral_party
-			}
-		}
 		AUS_advisor_ignacy_lukasiewicz = {
 			allowed = {
 				original_tag = AUS
 			}
+			
+			picture = AUS_advisor_ignacy_lukasiewicz
 
 			traits = { 
 				oil_magnate
@@ -668,7 +610,42 @@ ideas = {
 			}
 		}	
 	}
-	high_command = {
+	
+	army_chief = {
+		AUS_idea_army_archduke_albrecht = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			available = {
+				has_completed_focus = AUS_Archduke_Albrecht
+			}
+			
+			picture = AUS_theorist_Albrecht_von_Teschen 
+			
+			cost = 50 
+
+			research_bonus = {
+				naval_doctrine = -0.1
+			}
+
+			traits = { army_chief_defensive_1 army_chief_old_guard }
+		}	
+	}
+	navy_chief = {
+		AUS_idea_naval_maximilian_austria = {
+
+			allowed = {
+				original_tag = AUS
+			}
+			
+			picture = AUS_theorist_Archduke_Maximillian 
+			
+			cost = 50 
+
+			traits = { navy_chief_reform_1 }
+		}
 		AUS_idea_naval_ludwig_von_fautz = {
 
 			allowed = {
@@ -683,53 +660,27 @@ ideas = {
 			
 			cost = 50 
 
-			research_bonus = {
-				naval_doctrine = 0.1
-			}
-
-			traits = { # }
-		    }
+			traits = { navy_chief_decisive_battle_1 }
 		}
-		AUS_idea_naval_maximilian_austria = {
-
-			allowed = {
-				original_tag = AUS
-			}
-			
-			picture = AUS_advisor_Ludwig_von_Fautz 
-			
-			cost = 50 
-
-			research_bonus = {
-				naval_doctrine = 0.1
-			}
-
-			traits = { # }
-		    }
-        }			
-		AUS_idea_army_archduke_albrecht = {
+	}
+	high_command = {
+		AUS_idea_naval_wilhelm_von_tegetthof = {
 
 			allowed = {
 				original_tag = AUS
 			}
 			
 			available = {
-				has_completed_focus = AUS_Archduke_Albrecht
+				has_completed_focus = AUS_Wilhelm_von_Tegetthoff
 			}
 			
-			picture = AUS_advisor_Ludwig_von_Fautz 
+			picture = AUS_theorist_Wilhelm_von_Tegetthof 
 			
 			cost = 50 
 
-			research_bonus = {
-				naval_doctrine = 0.1
-			}
-
-			traits = { # }
-		    }
-	    }
-	}
-	
+			traits = { navy_chief_decisive_battle_2 navy_chief_reform_2 }
+		}		
+    }		
 	theorist = {
 		AUS_idea_theorist_heinrich_von_hess = {
 
@@ -746,11 +697,10 @@ ideas = {
 			cost = 50 
 
 			research_bonus = {
-				naval_doctrine = 0.1
+				land_doctrine = -0.05 
 			}
 
 			traits = { # }
-		    }	
-	    }
-    }
+		}	
+	}
 }

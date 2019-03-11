@@ -21,7 +21,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_time_factor = 0.1
+				research_speed_factor = -0.1
 			}
 
 			default = yes
@@ -55,7 +55,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				political_power_gain = 0.05
 			}
 			
@@ -80,7 +80,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 				political_power_gain = -0.05
 			}
 
@@ -119,7 +119,7 @@ ideas = {
 			picture = GFX_idea_compulsory_education
 			
 			modifier = {
-				research_time_factor = -0.08
+				research_speed_factor = 0.08
 				consumer_goods_factor = 0.02
 			}
 			
@@ -206,7 +206,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = -0.05
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 			}
 			
 			cancel_if_invalid = no
@@ -241,7 +241,7 @@ ideas = {
 				drift_defence_factor = 0.1
 				political_power_factor = 0.05
 				stability_factor = 0.05
-				research_time_factor = 0.02
+				research_speed_factor = -0.02
 			}
 
 			ai_will_do = {
@@ -294,7 +294,7 @@ ideas = {
 				drift_defence_factor = 0.2
 				political_power_factor = 0.1
 				stability_factor = 0.05
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 			}
 			
 			cancel_if_invalid = no

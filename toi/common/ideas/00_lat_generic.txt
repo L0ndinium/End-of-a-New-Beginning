@@ -217,7 +217,7 @@ ideas = {
 		LAT_generic_Marine_Republic1 = {
 			picture = escort_effort_focus
 			modifier = {
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 			}
 		}
 	}
@@ -362,7 +362,7 @@ ideas = {
 		LAT_generic_Hired_Archaeologist = {
 			picture = generic_research_bonus
 			modifier = {
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 			}
 		}
 	}
@@ -450,7 +450,7 @@ ideas = {
 		LAT_generic_Jews_in_America = {
 			picture = generic_research_bonus
 			modifier = {
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 			}
 		}
 	}

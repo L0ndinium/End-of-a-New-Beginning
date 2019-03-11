@@ -111,7 +111,7 @@ ideas = {
 			picture = nzl_gum_digging
 
 			modifier = {
-				research_time_factor = -0.075
+				research_speed_factor = 0.05
 			}
 		}
 		nzl_pink_white_terraces = {

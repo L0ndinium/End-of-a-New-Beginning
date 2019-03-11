@@ -36,4 +36,4 @@ units = {
 			division_template = "Ursprungsbefolknings infanteriregemente"
 			start_experience_factor = 0.2
 			}
-		}
+}

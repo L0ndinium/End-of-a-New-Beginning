@@ -20,21 +20,4 @@ units = {
 			division_template = "South American Infantry"
 			start_experience_factor = 0.1
 		}
-		
-		navy = {				
-			name = "Venezuelan Navy"			
-			base = 8113
-			location = 8113
-			ship = { name = "Presidente" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Congreso" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Fama" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Democracia" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Trimer" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Eclipse" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Intrepida" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Estrella" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Forzosa" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Manzanares" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-			ship = { name = "Libertador" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = VEN } } }
-		}
 }

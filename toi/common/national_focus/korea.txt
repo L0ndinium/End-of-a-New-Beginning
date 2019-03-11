@@ -1525,16 +1525,17 @@ focus = {
 
 
 		completion_reward = {
-		add_tech_bonus = {
-   		 bonus = 0.5
-    	 uses = 1
-    	 category = frigate_tech
-		}
-		add_tech_bonus = {
-   		 bonus = 0.5
-    	 uses = 1
-    	 category = sloop_tech
-		}
+			#BROKEN BY MTG
+			#add_tech_bonus = {
+			#	bonus = 0.5
+			#	uses = 1
+			#	category = frigate_tech
+			#}
+			#add_tech_bonus = {
+			#	bonus = 0.5
+			#	uses = 1
+			#	category = sloop_tech
+			#}
 		}
 	}
 
@@ -1614,16 +1615,17 @@ focus = {
 
 
 		completion_reward = {
-		add_tech_bonus = {
-   		 bonus = 0.5
-    	 uses = 1
-    	 category = corvette_tech
-		}
-		add_tech_bonus = {
-   		 bonus = 0.5
-    	 uses = 1
-    	 category = gunboat_tech
-		}
+			#BROKEN BY MTG
+			#add_tech_bonus = {
+			#	bonus = 0.5
+			#	uses = 1
+			#	category = corvette_tech
+			#}
+			#add_tech_bonus = {
+			#	bonus = 0.5
+			#	uses = 1
+			#	category = gunboat_tech
+			#}
 		}
 	}
 

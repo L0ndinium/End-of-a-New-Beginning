@@ -816,6 +816,8 @@ country_event = { #Birth of Archduke Rudolf
 	option = { 
 		name = AUShabsburg.1.a 
 		ai_chance = { factor = 100 }
+		
+		eoanb_add_3_prestige_score = yes 
     }		     
 }
 
@@ -886,6 +888,8 @@ country_event = { #The Birth of Archduchess Marie Valerie
 		trigger = {
 		NOT = { AUS = { has_country_flag = AUS_flag_hun_dual_monarchy } } 
 		}
+		
+		eoanb_add_2_prestige_score = yes 
     }		
 }
 
@@ -907,6 +911,8 @@ country_event = { #The Blue Danube Waltz
 	option = { 
 		name = AUSflavour.1.a 
 		ai_chance = { factor = 100 }
+		
+		eoanb_add_5_prestige_score = yes 
     }		     
 }
 
@@ -926,6 +932,8 @@ country_event = { #A German Requiem (Brahms)
 	option = { 
 		name = AUSflavour.2.a 
 		ai_chance = { factor = 100 }
+		
+		eoanb_add_3_prestige_score = yes 
     }		     
 }
 
@@ -945,8 +953,53 @@ country_event = { #Vienna Court Opera Opens
 	option = { 
 		name = AUSflavour.3.a 
 		ai_chance = { factor = 100 }
+		
+		eoanb_add_4_prestige_score = yes 
     }		     
 }
+
+country_event = { #Abolishing the Voivodeship of Serbia and Banat of Temeschwar             
+	id = AUSflavour.4 
+	title = AUSflavour.4.t
+	desc = AUSflavour.4.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1860.12.27         
+	}
+	
+	option = { 
+		name = AUSflavour.4.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_1_prestige_score = yes 
+    }		     
+}
+
+country_event = { #Johann Strauss II publishes Trisch-Trasch-Polka 
+	id = AUSflavour.5 
+	title = AUSflavour.5.t
+	desc = AUSflavour.5.d
+	picture = GFX_report_event_AUS_wien_1
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	    TAG = AUS
+		date > 1858.11.24         
+	}
+	
+	option = { 
+		name = AUSflavour.5.a 
+		ai_chance = { factor = 100 }
+		
+		eoanb_add_1_prestige_score = yes 
+    }		     
+}
+
 
 ## Hungary Revolts alternate history
 
@@ -1417,8 +1470,6 @@ news_event = { #Hungarian Revolt news
 	desc = AUSnews.1.d 
 	picture = GFX_news_event_generic_rally2
 	
-	fire_only_once = yes 
-	
 	is_triggered_only = yes 
 	
 	major = yes 
@@ -1435,8 +1486,6 @@ news_event = { #Compromise Achieved
 	desc = AUSnews.2.d 
 	picture = GFX_news_event_generic_rally2
 	
-	fire_only_once = yes 
-	
 	is_triggered_only = yes 
 	
 	major = yes 
@@ -1452,8 +1501,6 @@ news_event = { #Hungarian Revolt Peace
 	title = AUSnews.3.t
 	desc = AUSnews.3.d 
 	picture = GFX_news_event_generic_rally2
-	
-	fire_only_once = yes 
 	
 	is_triggered_only = yes 
 	
@@ -2132,6 +2179,8 @@ country_event = { #hidden event to clear variable
 	picture = GFX_report_event_AUS_Budapest_1
 	
 	fire_only_once = yes 
+	
+	hidden = yes
 
     trigger = {
         TAG = AUS 
@@ -2159,6 +2208,8 @@ country_event = { #hidden event to clear variable
 	picture = GFX_report_event_AUS_Budapest_1
 	
 	fire_only_once = yes 
+	
+	hidden = yes 
 
     trigger = {
         TAG = AUS 

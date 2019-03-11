@@ -99,5 +99,47 @@ ideas = {
 				mobilization_speed = -0.1
 			}
 		}
+		
+		ARG_devastating_defeat = {
+			
+			allowed = {
+				TAG = ARG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_Inept_Army
+			
+			modifier = {
+				stability_factor = -0.45
+				war_support_factor = -0.25
+				political_power_factor = -0.30
+			}
+		}
+		
+		ARG_devastated_economy = {
+			
+			allowed = {
+				TAG = ARG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+			
+			modifier = {
+				stability_factor = -0.35
+				production_factory_max_efficiency_factor = -0.25
+				political_power_factor = -0.05
+			}
+		}
 
 }

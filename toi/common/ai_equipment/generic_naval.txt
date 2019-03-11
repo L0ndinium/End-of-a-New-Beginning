@@ -1,0 +1,63 @@
+# AI Ship Designs for Generic Nations
+#
+#destroyers = {
+#	category = naval
+#	
+#	blocked_for = {
+#		SOV
+#	}
+#	
+#	available_for = {
+#	}
+#	
+#	roles = {
+#		naval_screen
+#	}
+#	
+#	priority = {
+#		factor = 2500
+#		modifier = {
+#			factor = 10
+#			is_major = no
+#		}
+#	}
+#	
+#	screen_default = {
+#	
+#		priority = {
+#			factor = 250
+#			modifier = {
+#				factor = 10
+#				is_major = no
+#			}
+#		}
+#		
+#		role_icon_index = 2
+#		
+#		target_variant = {
+#			match_value = 2000.0
+#			
+#			type = ship_hull_light
+#			modules = {
+#				fixed_ship_battery_slot = ship_light_battery
+#				fixed_ship_fire_control_system_slot = ship_fire_control_system
+#				fixed_ship_radar_slot = ship_sonar
+#				fixed_ship_engine_slot = light_ship_engine
+#				fixed_ship_torpedo_slot = ship_torpedo
+#				rear_1_custom_slot = ship_depth_charge
+#			}
+#		}
+#		
+#		allowed_modules = {
+#			ship_depth_charge
+#			ship_light_battery
+#			ship_torpedo
+#			ship_anti_air
+#			light_ship_engine
+#			ship_sonar
+#			ship_fire_control_system
+#			ship_radar
+#		}
+#	}
+#	
+#}

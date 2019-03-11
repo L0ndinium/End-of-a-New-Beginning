@@ -3,10 +3,8 @@ upgrades = {
 	ship_gun_upgrade = {
 		max_level = 5
 		cost = naval				# This determies how much XP it will cost, controlled by defines, there are 3 cost types: air, land and naval
-		fire_range = 0.03
-		attack = 0.04
-		ap_attack = 0.05
-		shore_bombardment = 0.05
+		lg_attack = 0.04
+		lg_armor_piercing = 0.05
 		naval_speed = -0.01
 		reliability = -0.005
 	}
@@ -21,7 +19,7 @@ upgrades = {
 		max_level = 5
 		cost = naval 
 		armor_value = 0.05
-		evasion = -0.01
+
 		naval_speed = -0.01
 	}
 	ship_engine_upgrade = {
@@ -29,7 +27,7 @@ upgrades = {
 		cost = naval 
 		naval_speed = 0.03
 		naval_range = 0.05
-		evasion = 0.02
+
 		reliability = -0.005
 	}	
 	destroyer_engine_upgrade = {
@@ -37,7 +35,7 @@ upgrades = {
 		cost = naval 
 		naval_speed = 0.03
 		naval_range = 0.05
-		evasion = 0.02
+
 	}	
 	ship_reliability_upgrade = {
 		max_level = 5
@@ -81,7 +79,7 @@ upgrades = {
 		cost = naval 
 		naval_speed = 0.05
 		naval_range = 0.05
-		evasion = 0.03
+
 		reliability = -0.005
 		sub_visibility = 0.05
 	}	

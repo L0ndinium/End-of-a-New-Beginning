@@ -11,7 +11,7 @@ country_event = {
 			tag = ARG
 			BUE = { exists = no }
 			NOT = {
-				has_global_flag = BUE_won_arg_civwar
+				has_global_flag = BUE_won_arg_civwar 
 			}
 		}
 
@@ -19,21 +19,6 @@ country_event = {
 			days = 2
 		}
 		
-		option = {
-			name = arg.1.a
-			set_global_flag = ARG_won_arg_civwar
-			remove_ideas = ARG_civil_war_war
-			drop_cosmetic_tag = yes
-			509 = {
-				remove_core_of = BUE
-				add_core_of = ARG
-			}
-			278 = {
-				remove_core_of = BUE
-				add_core_of = ARG
-			}
-			hidden_effect = { news_event = { id = arg_news.1 } }
-		}
 		option = {
 			name = arg.1.b
 			set_global_flag = ARG_won_arg_civwar
@@ -74,7 +59,7 @@ country_event = {
 			}
 			remove_ideas = ARG_civil_war_war
 			remove_ideas = ARG_civil_war_calm
-			BUE = { ARG = { transfer_technology = yes } }
+			BUE = { inherit_technology = ARG }
 			ARG = { drop_cosmetic_tag = yes }
 			ARG = {
 				annex_country = {

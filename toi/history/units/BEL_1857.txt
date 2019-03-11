@@ -39,15 +39,4 @@ units = {
 			division_template = "Belgian Grenadiers"
 			start_experience_factor = 0.1
 		}
-		
-		navy = {				
-			name = "Belgian Navy"			
-			base = 6560
-			location = 6560
-			ship = { name = "Le Duc de Brabant" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BEL } } }
-			ship = { name = "La Louise Marie" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BEL } } }
-			ship = { name = "Brussels" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BEL } } }
-			ship = { name = "Antwerpen" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BEL } } }
-			ship = { name = "Gent" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = BEL } } }
-		}
 }

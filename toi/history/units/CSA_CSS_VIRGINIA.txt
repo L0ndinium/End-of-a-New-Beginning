@@ -1,8 +1,2 @@
 ﻿units = {
-	navy = {				
-		name = "CSS Virginia"			
-		base = 788
-		location = 788
-		ship = { name = "CSS Virginia" definition = frigate equipment = { equipment_1861_frigate = { amount = 1 owner = CSA } } }
-	}
 }

@@ -1647,17 +1647,7 @@ focus_tree = {
         }
     
         completion_reward = {
-		    if = {
-			    limit = {
-				    AUS = {
-					    has_idea = AUS_idea_naval_maximilian_of_austria
-					}
-				}
-			    navy_experience = 25 
-			}
-            else = {
-			    navy_experience = 5 
-			} 
+		   navy_experience = 5 
 		}
 	}
 	
@@ -1733,12 +1723,13 @@ focus_tree = {
         }
     
         completion_reward = {
-            add_tech_bonus = {
-                bonus = 0.4  
-                uses = 1
-                category = monitor_tech 
-                category = lineship_tech 
-            }
+            #BROKEN BY MTG
+			#add_tech_bonus = {
+            #    bonus = 0.4  
+            #    uses = 1
+            #    category = monitor_tech 
+            #    category = lineship_tech 
+            #}
 		}
 	}
 	
@@ -1785,11 +1776,12 @@ focus_tree = {
         }
     
         completion_reward = {
-            add_tech_bonus = {
-                bonus = 0.25   
-                uses = 1
-                category = sloop_tech 
-            }
+            #BROKEN BY MTG
+			#add_tech_bonus = {
+            #    bonus = 0.25   
+            #    uses = 1
+            #    category = sloop_tech 
+            #}
 		}
 	}
 	

@@ -63,6 +63,7 @@ equipments = {
 			fabric = 6
 		}
 
+		fuel_consumption = 5
 	}
 	
 	balloon_equipment = {

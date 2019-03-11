@@ -15,11 +15,4 @@ units = {
 			division_template = "Liberian Militia"
 			start_experience_factor = 0.3
 		}
-	navy = {				
-		name = "Liberian Navy"			
-		base = 7959
-		location = 7959
-		ship = { name = "RLS. Roberts" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = LIB } } }
-		ship = { name = "RLS. Buchanan" definition = frigate equipment = { equipment_1812_frigate = { amount = 1 owner = LIB } } }
-	}
 }

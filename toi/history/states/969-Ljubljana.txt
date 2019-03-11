@@ -10,6 +10,7 @@ state={
 	history = {
 		owner=AUS
 		add_core_of=AUS
+		add_core_of = SLV
 		
 		victory_points = {
 			9627 3 

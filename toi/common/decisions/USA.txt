@@ -1335,7 +1335,7 @@ USA_return_from_ashes = {
 	            	USA = { change_tag_from = ROOT }
 	            }
 	            load_focus_tree = generic
-	            ROOT = { USA = { transfer_technology = yes } }
+				USA = { inherit_technology = ROOT }
 	            every_state = {
 	            	limit = {
 	            		OR = {

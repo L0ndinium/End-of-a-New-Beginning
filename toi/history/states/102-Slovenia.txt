@@ -15,6 +15,7 @@ state={
 
 		}
 		add_core_of = AUS
+		add_core_of = SLV
 
 	}
 

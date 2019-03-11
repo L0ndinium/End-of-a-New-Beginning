@@ -698,4 +698,23 @@ on_actions = {
 		}
 	}
 	
+on_capitulation = {
+    effect = {
+        if = {
+            limit = {
+                TAG = DOM
+                FROM = { TAG = SPR }
+            }
+            SPR = {
+				transfer_state = 319 
+				set_global_flag = SPR_won_restoration
+			}
+			DOM = {
+				remove_ideas = DOM_restoration_war2
+				remove_ideas = DOM_restoration_war
+			}
+        }
+    }
+}
+	
 }

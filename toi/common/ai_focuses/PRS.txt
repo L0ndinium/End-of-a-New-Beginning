@@ -94,7 +94,6 @@ ai_historical_focus_list_PRS = {
 		GER_focus_historical_control_factories
 		GER_focus_historical_unemployed_benefits
 		GER_focus_historical_protective_tariffs
-		GER_focus_finally_united
 		GER_focus_historical_deutsches_heer
 		GER_focus_historical_decentralized_army
 		GER_focus_historical_wurttemberg_contingent
