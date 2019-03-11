@@ -35,30 +35,321 @@ guiTypes = {
 		size = { width = 265 height = -50 }
 		verticalScrollbar = "right_vertical_slider"
   
-	iconType = {
-		name = "power_status_bg"
-		quadTextureSprite ="GFX_generic_text_bg_108"
-		position = { x = 130 y = 60  }
+	    iconType = {
+		    name = "power_status_bg"
+		    quadTextureSprite ="GFX_generic_text_bg_108"
+		    position = { x = 130 y = 60  }
 		}
 				
-	iconType = {
-		name = "power_status_icon"
-		quadTextureSprite ="GFX_endgame_power_button"
-		position = { x = 155 y = 10 }
+    	iconType = {
+		    name = "power_status_icon"
+		    quadTextureSprite ="GFX_endgame_power_button"
+		    position = { x = 155 y = 10 }
 		}
 				
-	instantTextboxType = {
-		name = "power_status"
-		position = { x = 130 y = 65 }
-		font = "hoi_18mbs"
-		text = "[GetPowerStatusName]"
-		maxWidth = 100
-		maxHeight = 20
-		format = center
-		pdx_tooltip = "2"
-		fixedsize = yes 
-		pdx_tooltip = POWER_STATUS_TOOLTIP  
-		pdx_tooltip_delayed = DELAYED_POWER_STATUS_TOOLTIP
-	}	
-}
+	    instantTextboxType = {
+		    name = "power_status"
+		    position = { x = 130 y = 65 }
+		    font = "hoi_18mbs"
+		    text = "[GetPowerStatusName]"
+		    maxWidth = 100
+		    maxHeight = 20
+		    format = center
+		    pdx_tooltip = "2"
+		    fixedsize = yes 
+		    pdx_tooltip = POWER_STATUS_TOOLTIP  
+		    pdx_tooltip_delayed = DELAYED_POWER_STATUS_TOOLTIP
+	    }	
+    }  
+	
+	containerWindowType = {
+		name = "show_button_container"
+		position = { x = 0 y = 15 }
+		size = { width=100%% height=100%% }
+
+		buttonType = {
+			name ="button"
+			spriteType = "GFX_button_ledger" 
+			position = { x = -29 y = 19 }
+			shortcut = "ctrl+l"
+			Orientation = "UPPER_RIGHT"
+			scale = 1.15   
+			pdx_tooltip = LEDGER_OPEN_TOOLTIP 
+		}
+	}
+	containerWindowType = {
+		name = "show_list_container"
+		position = { x = 275 y = 175 }
+		size = { width= 85%% height= 85%% }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 50 bottom = 15 left = 0 right = 0 }
+		#moveable =  yes 
+		clipping = yes   
+
+		background ={
+			name ="Background"
+			quadTextureSprite = "GFX_tiled_window_w_close_scrollbar"
+			position = { x=0 y=0 }
+		}
+		iconType = {
+			name = "frame1"
+			quadTextureSprite = "GFX_difficulty_button_civilian"
+			position = { x = 130 y = 5 }
+			frame = 1
+		}
+		iconType = {
+			name = "frame2"
+			quadTextureSprite = "GFX_difficulty_button_elite"
+			position = { x = 275 y = 5 }
+			frame = 1
+		}
+		iconType = {
+			name = "frame3"
+			quadTextureSprite = "GFX_difficulty_button_regular"
+			position = { x = 400 y = 5 }
+			frame = 1
+		}
+		instantTextboxType = {
+			name = "title0"
+			position = { x = 650 y = -100 }
+			font = "hoi_20bs"
+			text = "Basic Information"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title1"
+			position = { x = 130 y = 12 }
+			font = "hoi_20bs"
+			text = "Name"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title2"
+			position = { x = 275 y = 12 }
+			font = "hoi_20bs"
+			text = "Score"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title3"
+			position = { x = 400 y = 12 }
+			font = "hoi_20bs"
+			text = "Position"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title4"
+			position = { x = 550 y = 12 }
+			font = "hoi_20bs"
+			text = "Power Status"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title5"
+			position = { x = 700 y = 12 }
+			font = "hoi_20bs"
+			text = "Government Type"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title6"
+			position = { x = 825 y = 12 }
+			font = "hoi_20bs"
+			text = "Population"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title7"
+			position = { x = 925 y = 12 }
+			font = "hoi_20bs"
+			text = "Number of Factories"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title8"
+			position = { x = 1025 y = 12 }
+			font = "hoi_20bs"
+			text = "Number of Divisions"
+			maxWidth = 132
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		instantTextboxType = {
+			name = "title9"
+			position = { x = 1135 y = 12 }
+			font = "hoi_20bs"
+			text = "Number of Ships"
+			maxWidth = 110
+			maxHeight = 68
+			format = centre
+			fixedsize = no
+		}
+		gridboxtype = {
+			name = "show_grid"
+			position = { x = 20 y = 40 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 100%% height = 85 }
+			add_horizontal = no
+			format = "UPPER_LEFT"
+			max_slots_horizontal = 1
+		}
+	}
+	containerWindowType = {
+		name = "show_entry"
+		#moveable =  yes
+
+		iconType = {
+			name = "flag"
+			quadTextureSprite = "GFX_shield_medium"
+			position = { x = 5 y = 23 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "frame1"
+			quadTextureSprite = "GFX_unitlist_unitinfo_button"
+			position = { x = 90 y = 20 }
+			Orientation = "UPPER_LEFT"
+			scale = 2
+		}
+		iconType = {
+			name = "frame2"
+			spriteType = "GFX_chart_history_type_button"
+			position = { x = 255 y = 35 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "frame3"
+			quadTextureSprite = "GFX_small_pol_piechart_frame"
+			position = { x = 380 y = 20 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.95
+		}
+		instantTextBoxType = { 
+			name ="name"
+			font = "hoi_18mbs"
+			position = { x = 100 y = 30 }
+			text = "[?global.score_tag_array^i.GetName]"
+			format = centre 
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		instantTextBoxType = {
+			name ="score"
+			font = "hoi_18mbs"
+			position = { x = 245 y = 40 }
+			text = "[?global.score_array^i|0]"
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		instantTextBoxType = {
+			name ="position"
+			font = "hoi_18mbs"
+			position = { x = 345 y = 40 }
+			text = "[?global.score_array_position^i]"
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		
+		instantTextBoxType = {
+			name ="Power Status"
+			font = "hoi_18mbs"
+			position = { x = 445 y = 40 }
+			#text = "[?global.score_array_position^i]"
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		
+		instantTextBoxType = {
+			name ="Government Type"
+			font = "hoi_18mbs"
+			position = { x = 545 y = 40 }
+			#text = "[?global.score_array_position^i]"
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		instantTextBoxType = {
+			name ="Population"
+			font = "hoi_18mbs"
+			position = { x = 800 y = 40 }
+			text = "[?global.population_array^i|2] M" 
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		instantTextBoxType = {
+			name ="Number of Factories"
+			font = "hoi_18mbs"
+			position = { x = 910 y = 40 }
+			text = "[?global.factories_array^i]"
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		instantTextBoxType = {
+			name ="Number of Divisions"
+			font = "hoi_18mbs"
+			position = { x = 1000 y = 40 }
+			text = "[?global.divisions_array^i]"
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+		instantTextBoxType = {
+			name ="Number of Ships"
+			font = "hoi_18mbs"
+			position = { x = 1105 y = 40 }
+			text = "[?global.ships_array^i]"
+			format = centre
+			maxWidth = 132
+			maxHeight = 68
+			fixedsize = no
+		}
+	}
+	containerWindowType = {
+		name = "close_entry_ledger"
+		
+		iconType = {
+			name = "closebutton"
+			quadTextureSprite = "GFX_closebutton"
+			position = { x = 1586.5  y = 184.5  }
+			scale = 1.22      
+		}
+	}
 }
