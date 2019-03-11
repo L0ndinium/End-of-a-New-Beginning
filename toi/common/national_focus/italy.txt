@@ -79,6 +79,7 @@ focus_tree = {
 		cost = 70
 		allow_branch = {
 			has_completed_focus = ITA_Farmers_Mentality
+			has_country_flag = ITA_Agrigulture_Branch_Completion 
 		}
 		x = 37
 		y = 0
