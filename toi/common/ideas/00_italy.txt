@@ -332,7 +332,7 @@ ideas = {
 	country = {
 		ITA_Reliance_on_Farming = {
 
-			picture = agriculture_focus
+			picture = ITA_agriculture_focus
 			
 			modifier = {
 				consumer_goods_factor = -0.04
@@ -356,7 +356,7 @@ ideas = {
 	country = {
 		ITA_Brigandage = {
 
-			picture = GFX_idea_ITA_Brigandage
+			picture = ITA_Brigandage
 			
 			modifier = {
 				stability_factor = -0.1
@@ -370,11 +370,15 @@ ideas = {
 	country = {
 		ITA_Agriculture_Revival = {
 
-			picture = ITA_Brigandage
+			picture = ITA_agriculture_focus
 			
 			modifier = {
 				MONTHLY_POPULATION = 0.05
 				army_morale_factor = 0.05
+				consumer_goods_factor = -0.04
+				production_speed_buildings_factor = -0.30
+				conscription = -0.10   
+				training_time_factor = 0.1 
 			}
 		}
 	}

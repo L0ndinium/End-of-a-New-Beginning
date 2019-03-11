@@ -57,8 +57,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ITA/ITA_Unified_Italian_Naval_Doctrine.dds"
 	}
 	spriteType = {
-		name = "GFX_Idea_agriculture_focus"
-		texturefile = "gfx/interface/ideas/ITA/Idea_agriculture_focus.dds"
+		name = "GFX_idea_ITA_agriculture_focus"
+		texturefile = "gfx/interface/ideas/ITA/ITA_agriculture_focus.dds"
 	}
 	
 }
