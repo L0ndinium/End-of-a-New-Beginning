@@ -27,6 +27,8 @@
  TSH_yokosuka_arsenal:0 "Yokosuka Arsenal Projects"
  TSH_yokosuka_weapon_foundry:0 "Yokosuka Weapons Foundry Projects"
  TSH_yokosuka_shipyards:0 "Yokosuka Shipyard Projects"
+ TSH_yokosuka_iron_foundry:0 "Yokosuka Iron Foundry Projects"
+ TSH_yokohama_ironworks:0 "Yokohama Ironworks Projects"
  TSH_tenryo_improvements:0 "Tenryo Territory Improvements"
  TSH_silk_industry:0 "Silk Industry Subsidies"
  TSH_expand_agricultural_production:0 "Expanded Agricultural Output"
@@ -34,6 +36,8 @@
  TSH_flat_tax_on_farmers:0 "Agricultural Tax Reforms"
  TSH_modern_defensive_theory:0 "Modern Defensive Theory"
  TSH_unbacked_notes_issued:0 "Unbacked Notes Issued"
+ TSH_koninklijke_marine_training:0 "Koninklijke Marine Training"
+ TSH_royal_navy_training:0 "Royal Navy Training"
 
  ####OPINION MODIFIERS####
 

@@ -1121,7 +1121,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 26
+		x = 29
 		y = 4
 		completion_reward = {
 			add_political_power = -75
@@ -1215,11 +1215,327 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 26
+		x = 29
 		y = 5
 		completion_reward = {
 			add_political_power = -50
 			add_timed_idea= { idea = TSH_yokosuka_arsenal days = 400 }
 		}
+	}
+	focus = {
+		id = TSH_vic_yokosuka_weapons_foundry
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_yokosuka_arsenal
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 27
+		y = 6
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea= { idea = TSH_yokosuka_weapon_foundry days = 400 }
+		}
+	}
+	focus = {
+		id = TSH_vic_yokosuka_technical_school
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_yokosuka_arsenal
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 29
+		y = 6
+		completion_reward = {
+			add_political_power = -50
+			add_tech_bonus = { 
+				bonus = 0.25
+				uses = 1
+				category = naval_equipment
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_yokosuka_shipyards
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_yokosuka_arsenal
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 31
+		y = 6
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea= { idea = TSH_yokosuka_shipyards days = 400 }
+		}
+	}
+	focus = {
+		id = TSH_vic_yokosuka_iron_foundry
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_yokosuka_weapons_foundry
+			focus = TSH_vic_yokosuka_technical_school
+			focus = TSH_vic_yokosuka_shipyards
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 29
+		y = 7
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea= { idea = TSH_yokosuka_iron_foundry days = 400 }
+		}
+	}
+	focus = {
+		id = TSH_vic_yokohama_ironworks
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_contract_foreign_engineers
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 33
+		y = 7
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea= { idea = TSH_yokohama_ironworks days = 400 }
+		}
+	}
+	focus = {
+		id = TSH_vic_acquire_western_equipment
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_secure_funding_for_military_expansion
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 28
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 100
+				producer = FRA
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_purchase_modern_rifles
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_acquire_western_equipment
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 26
+		y = 3
+		completion_reward = {
+			add_political_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 200
+				producer = FRA
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_western_artillery_designs
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_acquire_western_equipment
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 30
+		y = 3
+		completion_reward = {
+			add_political_power = -25
+			add_equipment_to_stockpile = {
+				type = cannon_equipment_0
+				amount = 50
+				producer = FRA
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_navy_of_the_bakufu
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_legacy_of_rangaku
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 43
+		y = 1
+		completion_reward = {
+			navy_experience = 15
+		}
+	}
+	focus = {
+		id = TSH_vic_kaigun_denshujo_training
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_navy_of_the_bakufu
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 39
+		y = 2
+		completion_reward = {
+			country_event = {id = shogunate_japan.7}
+		}
+	}
+	focus = {
+		id = TSH_vic_fate_of_the_kaigun_denshujo
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_kaigun_denshujo_training
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 37
+		y = 3
+		completion_reward = {
+			country_event = {id = shogunate_japan.8}
+		}
+	}
+	focus = {
+		id = TSH_vic_further_koninklijke_marine_cooperation
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		mutually_exclusive = {
+			focus = TSH_vic_establish_the_tsukiji_naval_training_center
+		}
+		prerequisite = {
+			focus = TSH_vic_fate_of_the_kaigun_denshujo
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 35
+		y = 4
+		completion_reward = {
+			add_ideas = {
+				TSH_koninklijke_marine_training
+			}
+			HOL = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_a_dutch_naval_mission
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_further_koninklijke_marine_cooperation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 35
+		y = 5
+		completion_reward = {
+			#Foreign Naval Mission
+			#Add Advisor Willem Huyssen van Kattendijke
+			HOL = {
+				country_event = {id = holland_oog.2}
+			}	
+		}		
+	}
+	focus = {
+		id = TSH_vic_establish_the_tsukiji_naval_training_center
+		icon = GFX_focus_gold_exodus
+		cost = 7000_britain
+		available_if_capitulated = no
+		mutually_exclusive = {
+			focus = TSH_vic_further_koninklijke_marine_cooperation
+		}
+		prerequisite = {
+			focus = TSH_vic_fate_of_the_kaigun_denshujo
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 37
+		y = 4
+		completion_reward = {
+			add_ideas = {
+				TSH_royal_navy_training
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = TSH
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = TSH_vic_a_british_naval_mission
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_further_koninklijke_marine_cooperation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 37
+		y = 5
+		completion_reward = {
+			#Foreign Naval Mission
+			#Add British Naval Advisor
+			ENG = {
+				country_event = {id = britainpolitical.5}
+			}	
+		}		
 	}
 }
