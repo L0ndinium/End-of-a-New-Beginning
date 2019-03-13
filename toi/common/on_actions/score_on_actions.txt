@@ -4,7 +4,11 @@ on_actions = {
         effect = {
 	        USA = {
 		        eoanb_score_system_calc = yes
-			    eoanb_ledger_system_calc = yes 
+				eoanb_score_system_calc = yes
+			    eoanb_ledger_system_calc = yes
+				eoanb_score_system_calc = yes
+				eoanb_ledger_system_calc = yes
+			
 		    }
 	    }
     }
@@ -28,7 +32,7 @@ on_actions = {
                 if = {
                     limit = {
                         check_variable = {
-                        global.time_counter = 15
+                        global.time_counter > 14
                         }
                     }
 					set_variable = { global.time_counter = 0 }
