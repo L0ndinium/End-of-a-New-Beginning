@@ -24,11 +24,6 @@ focus_tree = {
 		id = ITA_Industry_Agriculture_Focus
 		icon = GFX_goal_focus_agriculture
 		cost = 70
-		allow_branch = {
-			NOT = {
-				has_country_flag = ITA_Agrigulture_Branch_Completion
-			}
-		}
 		x = 37
 		y = 0
 			completion_reward = {
@@ -77,12 +72,11 @@ focus_tree = {
 		id = ITA_Industrialization
 		icon = GFX_focus_ITA_Industry
 		cost = 70
-		allow_branch = {
-			has_completed_focus = ITA_Farmers_Mentality
-			has_country_flag = ITA_Agrigulture_Branch_Completion 
-		}
 		x = 37
 		y = 0
+		allow_branch = {
+			always = no
+		}
 			completion_reward = {
 					random_owned_controlled_state = {
 							limit = {
