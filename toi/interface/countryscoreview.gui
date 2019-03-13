@@ -80,144 +80,184 @@ guiTypes = {
 	containerWindowType = {
 		name = "show_list_container"
 		position = { x = 275 y = 175 }
-		size = { width= 85%% height= 85%% }
-		verticalScrollbar = "right_vertical_slider"
-		margin = { top = 50 bottom = 15 left = 0 right = 0 }
-		#moveable =  yes 
-		clipping = yes   
+		size = { width= 1280 height= 85%% }
+		
+		margin = { top = 0 bottom = 15 left = 0 right = 0 }
+		moveable =  yes 
+		clipping = yes 
+		iconType = {
+			name = "closebutton"
+			quadTextureSprite = "GFX_closebutton"
+			position = { x = 1238  y = 13 }    
+		}
+			iconType = {
+				name = "title_box"
+				quadTextureSprite = "GFX_generic_box_small"
+				position = { x = 573 y = 16 }
+				frame = 1
+			}
+			instantTextboxType = {
+				name = "box_name"
+				position = { x = 550 y = 18 }
+				font = "hoi_20bs"
+				text = "Ledger"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			background ={
+				name ="Background"
+				quadTextureSprite = "GFX_tiled_window_w_close_scrollbar"
+				position = { x=0 y=0 }
+			}
+			iconType = {
+				name = "frame1"
+				quadTextureSprite = "GFX_difficulty_button_civilian"
+				position = { x = 130 y = 50 }
+				frame = 1
+			}
+			iconType = {
+				name = "frame2"
+				quadTextureSprite = "GFX_difficulty_button_elite"
+				position = { x = 275 y = 50 }
+				frame = 1
+			}
+			iconType = {
+				name = "frame3"
+				quadTextureSprite = "GFX_difficulty_button_regular"
+				position = { x = 400 y = 50 }
+				frame = 1
+			}
+			instantTextboxType = {
+				name = "title0"
+				position = { x = 650 y = -100 }
+				font = "hoi_20bs"
+				text = "Basic Information"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title1"
+				position = { x = 130 y = 58 }
+				font = "hoi_20bs"
+				text = "Name"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title2"
+				position = { x = 275 y = 58 }
+				font = "hoi_20bs"
+				text = "Score"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title3"
+				position = { x = 400 y = 58 }
+				font = "hoi_20bs"
+				text = "Position"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title4"
+				position = { x = 550 y = 58 }
+				font = "hoi_20bs"
+				text = "Power Status"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title5"
+				position = { x = 700 y = 58 }
+				font = "hoi_20bs"
+				text = "Government Type"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title6"
+				position = { x = 825 y = 58 }
+				font = "hoi_20bs"
+				text = "Population"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title7"
+				position = { x = 925 y = 58 }
+				font = "hoi_20bs"
+				text = "Number of Factories"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title8"
+				position = { x = 1025 y = 58 }
+				font = "hoi_20bs"
+				text = "Number of Divisions"
+				maxWidth = 132
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			instantTextboxType = {
+				name = "title9"
+				position = { x = 1135 y = 58 }
+				font = "hoi_20bs"
+				text = "Number of Ships"
+				maxWidth = 110
+				maxHeight = 68
+				format = centre
+				fixedsize = no
+			}
+			
+		
+		containerWindowType = {
+			name = "show_list_container_list"
+			verticalScrollbar = "right_vertical_slider"
+			position = { x = 0 y = 50 }
+			size = { width= 1280 height= 100%% }
+			margin = { top = 50 bottom = 0 left = 0 right = 0 }
+			smooth_scrolling = yes
+			scroll_wheel_factor = 40
+			vertical_scroll_step = 40
 
-		background ={
-			name ="Background"
-			quadTextureSprite = "GFX_tiled_window_w_close_scrollbar"
-			position = { x=0 y=0 }
+			background ={
+				name ="Background"
+				#quadTextureSprite = "GFX_generic_box_smallest"
+				position = { x=0 y=0 }
+			}
+			
+			gridboxtype = {
+				name = "show_grid"
+				position = { x = 20 y = -20 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 100%% height = 85 }
+				add_horizontal = no
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+			}
 		}
-		iconType = {
-			name = "frame1"
-			quadTextureSprite = "GFX_difficulty_button_civilian"
-			position = { x = 130 y = 5 }
-			frame = 1
-		}
-		iconType = {
-			name = "frame2"
-			quadTextureSprite = "GFX_difficulty_button_elite"
-			position = { x = 275 y = 5 }
-			frame = 1
-		}
-		iconType = {
-			name = "frame3"
-			quadTextureSprite = "GFX_difficulty_button_regular"
-			position = { x = 400 y = 5 }
-			frame = 1
-		}
-		instantTextboxType = {
-			name = "title0"
-			position = { x = 650 y = -100 }
-			font = "hoi_20bs"
-			text = "Basic Information"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title1"
-			position = { x = 130 y = 12 }
-			font = "hoi_20bs"
-			text = "Name"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title2"
-			position = { x = 275 y = 12 }
-			font = "hoi_20bs"
-			text = "Score"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title3"
-			position = { x = 400 y = 12 }
-			font = "hoi_20bs"
-			text = "Position"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title4"
-			position = { x = 550 y = 12 }
-			font = "hoi_20bs"
-			text = "Power Status"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title5"
-			position = { x = 700 y = 12 }
-			font = "hoi_20bs"
-			text = "Government Type"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title6"
-			position = { x = 825 y = 12 }
-			font = "hoi_20bs"
-			text = "Population"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title7"
-			position = { x = 925 y = 12 }
-			font = "hoi_20bs"
-			text = "Number of Factories"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title8"
-			position = { x = 1025 y = 12 }
-			font = "hoi_20bs"
-			text = "Number of Divisions"
-			maxWidth = 132
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		instantTextboxType = {
-			name = "title9"
-			position = { x = 1135 y = 12 }
-			font = "hoi_20bs"
-			text = "Number of Ships"
-			maxWidth = 110
-			maxHeight = 68
-			format = centre
-			fixedsize = no
-		}
-		gridboxtype = {
-			name = "show_grid"
-			position = { x = 20 y = 40 }
-			size = { width = 100%% height = 100%% }
-			slotsize = { width = 100%% height = 85 }
-			add_horizontal = no
-			format = "UPPER_LEFT"
-			max_slots_horizontal = 1
-		}
+
 	}
 	containerWindowType = {
 		name = "show_entry"
@@ -245,7 +285,7 @@ guiTypes = {
 		iconType = {
 			name = "frame3"
 			quadTextureSprite = "GFX_small_pol_piechart_frame"
-			position = { x = 380 y = 20 }
+			position = { x = 410 y = 20 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.95
 		}
@@ -272,7 +312,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="position"
 			font = "hoi_18mbs"
-			position = { x = 345 y = 40 }
+			position = { x = 375 y = 40 }
 			text = "[?global.score_array_position^i]"
 			format = centre
 			maxWidth = 132
@@ -340,16 +380,6 @@ guiTypes = {
 			maxWidth = 132
 			maxHeight = 68
 			fixedsize = no
-		}
-	}
-	containerWindowType = {
-		name = "close_entry_ledger"
-		
-		iconType = {
-			name = "closebutton"
-			quadTextureSprite = "GFX_closebutton"
-			position = { x = 1586.5  y = 184.5  }
-			scale = 1.22      
 		}
 	}
 }

@@ -1,12 +1,88 @@
 on_actions = {
-	on_startup = {
-		effect = {
-			random_country = {
-				news_event = {
-					id = score_handler.0
+
+    on_startup = {
+        effect = {
+	        USA = {
+		        eoanb_score_system_calc = yes
+			    eoanb_ledger_system_calc = yes 
+		    }
+	    }
+    }
+
+
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    OR = {
+                        original_tag = USA
+                        AND = {
+                            has_country_flag = eoanb_debug_score_handler
+                            NOT = { 
+                                country_exists = USA
+                            }
+                        }
+                    }
+                }
+                add_to_variable = { global.time_counter = 1 }
+                if = {
+                    limit = {
+                        check_variable = {
+                        global.time_counter = 15
+                        }
+                    }
+					set_variable = { global.time_counter = 0 }
+                    eoanb_score_system_calc = yes 
+                    eoanb_ledger_system_calc = yes 
+                }
+                # if = {
+                    # limit = {
+                        # check_variable = {
+                        # global.time_counter > 30
+                        # }
+                    # }
+                    # set_variable = { global.time_counter = 0 }
+                    # eoanb_ledger_system_calc = yes 
+                # }
+            }
+            else_if = {
+                limit = {
+                    NOT = { 
+                        AND = {
+                            country_exists = USA 
+                            any_country = {
+                                has_country_flag = eoanb_debug_score_handler
+                            }
+                        }
+                    }
 				}
-			}
-		}
+                random_country = {
+                    limit = {
+                        num_of_factories > 25
+                    }
+                    set_country_flag = eoanb_debug_score_handler
+                    if = {
+                        limit = {
+                            check_variable = {
+                                global.time_counter = 15
+                            }
+                        }
+						set_variable = { global.time_counter = 0 }
+                        eoanb_score_system_calc = yes 
+						eoanb_ledger_system_calc = yes
+                    }
+                    # if = {
+                        # limit = {
+                            # check_variable = {
+                                # global.time_counter > 30 
+                            # }
+                        # }
+                        # set_variable = { global.time_counter = 0 }
+                        # eoanb_ledger_system_calc = yes 
+                    # }
+                }
+            }
+	    }
 	}
 	
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired

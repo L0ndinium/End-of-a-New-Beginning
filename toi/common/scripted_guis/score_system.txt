@@ -73,19 +73,6 @@ scripted_gui = {
 		properties = {
 			flag = { image = "[?global.score_tag_array^i.GetFlag]" }
 		}
-	}	
-	close_list = {
-		context_type = player_context
-		#parent_window_token = show_list
-		window_name = "close_entry_ledger"
-
-		visible = {
-			check_variable = {
-			    show_overview_info > 0 
-			} 
-		}
-		triggers = {
-		}
 		effects = {
 			closebutton_click = {
                 set_temp_variable = { show = 1 }
@@ -93,5 +80,5 @@ scripted_gui = {
                 set_variable = { show_overview_info = show }
 			}
 		}
-	}
+	}	
 }

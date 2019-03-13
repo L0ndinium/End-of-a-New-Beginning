@@ -228,6 +228,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_The_War_Ends
 		}
+		available = {
+		    has_global_flag = PIE_2IW_Victory 
+		}
 		x = 8
 		y = 8
 
@@ -238,7 +241,11 @@ focus_tree = {
 				transfer_troops = yes
 			}
 		}
-
+		bypass = {
+		    NOT = {
+			    country_exists = TUS 
+			}
+		}
 	}
 
 	focus = {
@@ -286,6 +293,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PIE_The_War_Starts
 		}
+		available = {
+			has_war = yes	    
+		}
 		x = 7
 		y = 6
 
@@ -304,6 +314,9 @@ focus_tree = {
 		}
 		x = 9
 		y = 6
+		available = {
+			has_war = yes	    
+		}
 
 		completion_reward = {
 			country_event = {
@@ -321,6 +334,7 @@ focus_tree = {
 		}
 		available = {
 			always = no
+			has_global_flag = PIE_2IW_Victory
 		}
 		x = 8
 		y = 9
@@ -338,8 +352,6 @@ focus_tree = {
 			    country_exists = NSC
 			}
 		}
-
-
 	}
 	focus = {
 		id = PIE_Form_Italy
@@ -354,6 +366,7 @@ focus_tree = {
 		available = {
 			has_completed_focus = PIE_Industrializing 
 			has_completed_focus = PIE_Military_Focus
+			has_global_flag = PIE_2IW_Victory
 		}
 
 		completion_reward = {

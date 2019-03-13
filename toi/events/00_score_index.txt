@@ -1,6 +1,6 @@
 ﻿add_namespace = score_index
 
-news_event = {
+country_event = {
     id = score_index.0
     picture = GFX_report_event_election_vote
     
@@ -366,7 +366,7 @@ news_event = {
     }
 }
 	
-news_event = {
+country_event = {
     id = score_index.1 #default game variables sorted for ledger 
     picture = GFX_report_event_election_vote
     
