@@ -18272,7 +18272,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_focus_ITA_Military_Academies"
+		name = "GFX_focus_ITA_Military_Academies"
 		texturefile = "gfx/interface/goals/italy/focus_ITA_Military_Academies.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
