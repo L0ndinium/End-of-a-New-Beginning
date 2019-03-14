@@ -8,6 +8,11 @@ focus_tree = {
 		}
 	}
 	default = no
+	shared_focus = ITA_Focus_Politics
+		shared_focus = ITA_Military_Focus
+		shared_focus = ITA_Colonial_Ambition
+		shared_focus = ITA_Industry_Agriculture_Focus
+		shared_focus = ITA_Industrialization
 	focus = {
 		id = ITA_Focus_Politics
 		icon = GFX_goal_focus_elections
