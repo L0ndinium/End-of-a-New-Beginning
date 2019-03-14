@@ -566,19 +566,6 @@ guiTypes = {
 			Orientation = "UPPER_RIGHT"
 			pdx_tooltip = "MAIN_MENU"
 		}
-		
-		buttonType = {
-			name = "help_button"
-			position = { x = -29 y = 34 }
-			quadTextureSprite ="GFX_help_button"
-			buttonText = ""
-			buttonFont = "Main_14_black"
-			clicksound = click_ok
-			oversound = ui_menu_over
-			Orientation = "UPPER_RIGHT"
-			pdx_tooltip = "HELP_MENU"
-			web_link = ""
-		}
 
 		buttonType = {
 			name = "achievements_button"

@@ -184,6 +184,11 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 	spriteType = {
+		name = "GFX_button_ledger"
+		texturefile = "gfx//interface//topbar//button_ledger.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
 		name = "GFX_achievements_button"
 		texturefile = "gfx//interface//topbar//achievements_button.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -201,8 +206,5 @@ spriteTypes = {
 		texturefile = "gfx//interface//tab_settings.tga"
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	
-
-
 
 }

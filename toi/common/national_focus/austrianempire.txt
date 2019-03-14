@@ -458,6 +458,7 @@ focus_tree = {
                 remove_ideas = AUS_Klerikalabsolutist1 
 		    }
 			add_stability = 0.05 
+			eoanb_add_5_liberty = yes 
 		} 
 	}
 	
@@ -572,7 +573,8 @@ focus_tree = {
                 ideology = centrism
                 popularity = 0.2  
             }		
-            custom_effect_tooltip = AUS_tt_appoint_anton_von_schmerling 		    
+            custom_effect_tooltip = AUS_tt_appoint_anton_von_schmerling 	
+            eoanb_add_5_liberty = yes 			
 		}
 	}
 	
@@ -593,7 +595,8 @@ focus_tree = {
 		
 		completion_reward = {
             add_stability = 0.05   
-            add_political_power = -25 		    
+            add_political_power = -25 	
+            eoanb_add_2_liberty	= yes 		
 		}
 	}
 	
@@ -617,7 +620,8 @@ focus_tree = {
             add_popularity = {
                 ideology = centrism
                 popularity = 0.02  
-            }				    
+            }
+            eoanb_add_3_liberty	= yes 
 		}
 	}
 	
@@ -887,9 +891,8 @@ focus_tree = {
         }
 		
 		completion_reward = {
-		    AUS = {
-			    add_ideas = AUS_idea_Metternich_Legacy 
-			}
+		    add_stability = 0.05 
+			eoanb_remove_10_liberty = yes 
 		}
 	}
 	
@@ -909,7 +912,8 @@ focus_tree = {
         }
 		
 		completion_reward = {
-
+		    add_political_power = 50 
+            eoanb_remove_15_consciousness = yes 
 		}
 	}
 	
@@ -1120,7 +1124,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			army_experience = 10
+			army_experience = 5 
 			add_political_power = 40
             add_war_support = 0.03			 
 		}
@@ -1247,7 +1251,8 @@ focus_tree = {
         }
     
         completion_reward = {
-				#
+		    army_experience = 5 
+			eoanb_add_5_prestige_score = yes 
 		}
 	}
 
@@ -1299,7 +1304,7 @@ focus_tree = {
                     province = 11401
                 }           
 		    }
-		    1232 = {
+		    1321 = {
                 add_building_construction = {
                     type = bunker
                     level = 1

@@ -952,6 +952,8 @@ NInterface = {
 	DEFAULT_FLEET_ICON = 4,							-- newly created fleets will use this icon
 	DEFAULT_NAVAL_EQUIPMENT_ROLE_ICON = 1,			-- newly created naval equipment variants will use this icon, if the AI equipment designs do not propose a better one.
 	
+	SHIP_FUEL_EFFICIENCY_WARNING_THRESHOLD = 60.0,			-- Fuel usage threshold above which a ship is considered fuel inefficient for always on missions
+	
 	FUEL_GRAPH_COLOR = {
 		0.8, 0.8, 0.8, -- stockpile
 		0.8, 0.0, 0.0, -- total consumption

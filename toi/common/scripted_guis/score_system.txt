@@ -7,7 +7,7 @@ scripted_gui = {
 		parent_window_token = selected_country_view_info
 		
 		visible = {
-		#is_ai = no 
+		#is_ai = no  
 		}
 		 
 		effects = {
@@ -39,4 +39,47 @@ scripted_gui = {
 		ai_weights = {
 		}
 	}
+	
+	show_button = {
+		context_type = player_context
+		window_name = "show_button_container"
+
+		effects = {
+			button_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_info }
+                set_variable = { show_overview_info = show }
+			}
+		}
+	}
+	show_list = {
+		context_type = player_context
+		#parent_window_token = politics_tab
+		window_name = "show_list_container"
+
+		visible = {
+			check_variable = {
+			    show_overview_info > 0 
+			}
+			is_ai = no  			
+		}
+		triggers = {
+		}
+		dynamic_lists = {
+			show_grid = {
+				array = global.score_tag_array
+				entry_container = show_entry
+			} 
+		}
+		properties = {
+			flag = { image = "[?global.score_tag_array^i.GetFlag]" }
+		}
+		effects = {
+			closebutton_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_overview_info }
+                set_variable = { show_overview_info = show }
+			}
+		}
+	}	
 }
