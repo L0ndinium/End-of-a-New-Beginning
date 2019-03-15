@@ -31,13 +31,15 @@ news_event = {
 			}
 		}
 
-		news_event = {
-			# Get industrial level
+		country_event = {
 			id = score_index.0
+		}
+		country_event = {
+			id = score_index.1 
 		}
 
 		news_event = {
-			#Fire the freedom handler repeater event again in 30 days
+			#Fire the freedom handler repeater event again in 15 days
 			id = score_handler.1
 		}
 
@@ -55,7 +57,7 @@ news_event = {
 	immediate = {	
 		random_country = {
 			news_event = {
-				#Fire the freedom handler again in 30 days
+				#Fire the score handler again in 15 days
 				id = score_handler.0
 				days = 15   
 			}

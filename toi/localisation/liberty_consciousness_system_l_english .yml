@@ -1,0 +1,26 @@
+﻿l_english:
+ eoanb_add_1_liberty:0 "\nGain §G1§! liberty"
+ eoanb_add_2_liberty:0 "\nGain §G2§! liberty"
+ eoanb_add_3_liberty:0 "\nGain §G3§! liberty"
+ eoanb_add_4_liberty:0 "\nGain §G4§! liberty"
+ eoanb_add_5_liberty:0 "\nGain §G5§! liberty"
+ eoanb_add_10_liberty:0 "\nGain §G10§! liberty"
+ 
+ eoanb_add_1_consciousness:0 "\nGain §G1§! consciousness"
+ eoanb_add_5_consciousness:0 "\nGain §G5§! consciousness"
+ eoanb_add_10_consciousness:0 "\nGain §G10§! consciousness"
+ eoanb_add_15_consciousness:0 "\nGain §G15§! consciousness"
+ eoanb_add_20_consciousness:0 "\nGain §G20§! consciousness"
+ 
+ eoanb_remove_1_liberty:0 "\nLose §R1§! liberty"
+ eoanb_remove_2_liberty:0 "\nLose §R2§! liberty"
+ eoanb_remove_3_liberty:0 "\nLose §R3§! liberty"
+ eoanb_remove_4_liberty:0 "\nLose §R4§! liberty"
+ eoanb_remove_5_liberty:0 "\nLose §R5§! liberty"
+ eoanb_remove_10_liberty:0 "\nLose §R10§! liberty"
+ 
+ eoanb_remove_1_consciousness:0 "\nLose §R1§! consciousness"
+ eoanb_remove_5_consciousness:0 "\nLose §R5§! consciousness"
+ eoanb_remove_10_consciousness:0 "\nLose §R10§! consciousness"
+ eoanb_remove_15_consciousness:0 "\nLose §R15§! consciousness"
+ eoanb_remove_20_consciousness:0 "\nLose §R20§! consciousness"
