@@ -1,0 +1,661 @@
+focus_tree = {
+	id = vic_SouthAfricanRepublic
+	country = {
+		factor = 0
+		modifier = {#
+			add = 10
+			OR = {
+				tag = TRV
+			}
+		}
+	}
+	default = no
+	focus = {
+		id = trv_vic_political_reforms
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 5
+		y = 0
+		completion_reward = {
+			add_political_power = 75
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_question_of_church_state
+		icon = GFX_goal_focus_reform_administration
+		cost = 35
+		x = 3
+		y = 1
+		completion_reward = {
+			country_event={id= boer_states.90}
+		}
+		prerequisite = {
+			focus = trv_vic_political_reforms
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_accept_other_churches
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 2
+		y = 2
+		completion_reward = {
+			add_political_power =100
+			add_stability = -0.05
+		}
+		prerequisite = {
+			focus = trv_vic_question_of_church_state
+		}
+		available = {
+			has_country_flag = trv_settled_church_question
+			has_idea = secular_state
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_seperation_of_church_and_state
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 2
+		y = 3
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas={
+				trv_idea_annoyed_church
+			}
+		}
+		prerequisite = {
+			focus = trv_vic_accept_other_churches
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_only_one_church
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 4
+		y = 2
+		completion_reward = {
+			add_stability = 0.1
+		}
+		prerequisite = {
+			focus = trv_vic_question_of_church_state
+		}
+		available = {
+			has_country_flag = trv_settled_church_question
+			has_idea = state_religion
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_one_people_under_god
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 4
+		y = 3
+		completion_reward = {
+			add_ideas={
+				trv_idea_god_fairing_people
+			}
+		}
+		prerequisite = {
+			focus = trv_vic_only_one_church
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_imergration_reforms
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 5
+		y = 4
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_one_people_under_god
+			focus = trv_vic_seperation_of_church_and_state
+		}
+		prerequisite = {
+			focus = trv_vic_army_of_the_burghers
+			focus = trv_vic_expanded_military
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_the_question_of_our_racial_politices
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 8
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+		}
+		prerequisite = {
+			focus = trv_vic_political_reforms
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_pro_dutch_policies
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 7
+		y = 2
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_the_question_of_our_racial_politices
+		}
+		mutually_exclusive = {
+			focus = trv_vic_equal_policies
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_army_of_the_burghers
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 6
+		y = 3
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_pro_dutch_policies
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_equal_policies
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 9
+		y = 2
+		completion_reward = {
+			add_stability = -0.05
+		}
+		mutually_exclusive = {
+			focus = trv_vic_pro_dutch_policies
+		}
+		prerequisite = {
+			focus = trv_vic_the_question_of_our_racial_politices
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_expanded_military
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 10
+		y = 3
+		completion_reward = {
+			add_stability = -0.05
+		}
+		prerequisite = {
+			focus = trv_vic_equal_policies
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_the_question_of_slavery
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 8
+		y = 3
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_pro_dutch_policies
+			focus = trv_vic_equal_policies
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_foreign_affars
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 15
+		y = 0
+		completion_reward = {
+			add_political_power = 75
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_question_of_the_OFS
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 13
+		y = 1
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_foreign_affars
+		}
+		available ={
+			OFS = {
+				exists = yes
+			}
+			has_war = no
+		}
+		allow_branch = {
+			OFS = {
+				exists = yes
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_reattempt_diplomatic_ties
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 13
+		y = 2
+		completion_reward = {
+			
+		}
+		available={
+			OFS = {
+			NOT = {
+					any_owned_state = {
+						is_core_of = TRV
+					}
+				}
+			}
+			NOT = {
+				any_owned_state = {
+					is_core_of = OFS
+				}
+			}
+		}
+		prerequisite = {
+			focus = trv_vic_question_of_the_OFS
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_alliance_of_the_boers
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 13
+		y = 3
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_reattempt_diplomatic_ties
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_ignore_OFS
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 11
+		y = 2
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_question_of_the_OFS
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_integration_of_the_OFS
+		icon = GFX_goal_trv_ofs_union
+		cost = 70
+		x = 13
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					775 = {
+						is_fully_controlled_by = TRV
+					}
+				}
+				add_state_core = 775
+			}
+			if = {
+				limit = {
+					778 = {
+						is_fully_controlled_by = TRV
+					}
+				}
+				add_state_core = 778
+			}
+		}
+		prerequisite = {
+			focus = trv_vic_foreign_affars
+		}
+		available ={
+			any_owned_state = {
+				is_core_of = OFS
+			}
+			has_war = no
+		}
+		allow_branch = {
+			OFS = {
+				exists = no
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_central_OFS_integration
+		icon = GFX_goal_trv_ofs_union
+		cost = 70
+		x = 13
+		y = 2
+		completion_reward = {
+			if = {
+				limit = {
+					781 = {
+						is_fully_controlled_by = TRV
+					}
+				}
+				add_state_core = 781
+			}
+			if = {
+				limit = {
+					780 = {
+						is_fully_controlled_by = TRV
+					}
+				}
+				add_state_core = 780
+			}
+		}
+		prerequisite = {
+			focus = trv_vic_integration_of_the_OFS
+		}
+		available ={
+			has_war = no
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_southern_OFS_integration
+		icon = GFX_goal_trv_ofs_union
+		cost = 70
+		x = 13
+		y = 3
+		completion_reward = {
+			if = {
+				limit = {
+					747 = {
+						is_fully_controlled_by = TRV
+					}
+				}
+				add_state_core = 747
+			}
+			if = {
+				limit = {
+					777 = {
+						is_fully_controlled_by = TRV
+					}
+				}
+				add_state_core = 777
+			}
+			if = {
+				limit = {
+					776 = {
+						is_fully_controlled_by = TRV
+					}
+				}
+				add_state_core = 776
+			}
+		}
+		prerequisite = {
+			focus = trv_vic_central_OFS_integration
+		}
+		available ={
+			has_war = no
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = trv_vic_west_swaziland_purchase
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 15
+		y = 1
+		completion_reward = {
+			remove_ideas={trv_idea_occupied_swazi_territory}
+			SWZ={remove_ideas={SWZ_idea_bigger_than_it_looks}}
+		}
+		prerequisite = {
+			focus = trv_vic_foreign_affars
+		}
+		available ={
+			has_war = no
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_swaziland_alliance
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 15
+		y = 2
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_west_swaziland_purchase
+		}
+		available ={
+			has_war = no
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = trv_vic_british_policy
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 17
+		y = 1
+		completion_reward = {
+			country_event={id=boer_states.92}
+		}
+		prerequisite = {
+			focus = trv_vic_foreign_affars
+		}
+		available ={
+			has_war = no
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_ignore_the_british_sphere
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 17
+		y = 2
+		completion_reward = {
+			
+		}
+		allow_branch = {
+			#has_country_flag = trv_ignore_british
+		}
+		prerequisite = {
+			focus = trv_vic_british_policy
+			
+		}
+		available ={
+			has_war = no
+			has_country_flag = trv_ignore_british
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_remain_within_the_british_sphere
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 17
+		y = 2
+		completion_reward = {
+			add_political_power = 75
+		}
+		allow_branch = {
+			has_country_flag = trv_british_loyalty
+		}
+		prerequisite = {
+			focus = trv_vic_british_policy
+			
+		}
+		available ={
+			has_war = no
+			has_country_flag = trv_british_loyalty
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_push_into_besutoland
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 15
+		y = 3
+		completion_reward = {
+			add_state_claim = 841
+		}
+		prerequisite = {
+			focus = trv_vic_ignore_the_british_sphere
+		}
+		prerequisite = {
+			focus = trv_vic_swaziland_alliance
+		}
+		available ={
+			has_war = no
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_offer_ROZ_vassalisation
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 15
+		y = 4
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = trv_vic_push_into_besutoland
+		}
+		available ={
+			has_war = no
+			ROZ = {
+				exists = yes
+				controls_state = 545
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = trv_vic_army_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		x = 21
+		y = 0
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+}

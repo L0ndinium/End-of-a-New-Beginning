@@ -13,7 +13,7 @@ opinion_modifiers = {
 	fra_empire_paix = {
 		value = 20
 	}
-	
+
 	fra_lgoc = {
 		value = 20
 	}
@@ -76,7 +76,7 @@ opinion_modifiers = {
 		value = -30
 	}
 
-	
+
 	#Bavaria
 	bav_trias_result = {
 		value = 40
@@ -85,15 +85,15 @@ opinion_modifiers = {
 	bav_give_right_good = {
 		value = 40
 	}
-	
+
 	bav_give_right_bad = {
 		value = -40
 	}
-	
+
 	bav_frankfurt_fuerstentag_good = {
 		value = 10
 	}
-	
+
 	bav_frankfurt_fuerstentag_bad = {
 		value = -10
 	}
@@ -105,19 +105,19 @@ opinion_modifiers = {
 	bav_adopted_protestantism = {
 		value = 30
 	}
-	
+
 	bav_resign_to_war = {
 		value = -30
 	}
-	
+
 	bav_common_policy = {
 		value = 30
 	}
-	
+
 	bav_tried_common_policy = {
 		value = 10
 	}
-	
+
     eoanb_om_LIE_BAV_lowered = {
 	    value = -25
 	}
@@ -126,7 +126,7 @@ opinion_modifiers = {
 	}
     eoanb_om_LIE_WUR_improved = {
 	    value = 10
-	}	
+	}
     eoanb_om_LIE_AUS_lowered  = {
 	    value = -25
 	}
@@ -150,12 +150,12 @@ opinion_modifiers = {
 	long_term_alliance = {
 		value = 25
 	}
-	
+
 	caucasian_war = {
 		value = -150
 	}
-	
+
     AUS_ITA_League = {
-	    value = 200 
+	    value = 200
 	}
 }

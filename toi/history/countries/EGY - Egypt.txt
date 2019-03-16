@@ -7,9 +7,10 @@
   
   set_research_slots = 2
   
-  set_stability = 0.15
+  set_stability = 0.05
   
   set_variable = { debt_level = 1 }
+  set_country_flag = heir_ahmad
 
   add_ideas = { 
     #POLITICS 
@@ -29,7 +30,7 @@
     stagnation_growth
     border_control
 	  volunteer_only
-    slavery
+    slavery_all_but_name
     absolutism
 
     no_constitution
@@ -119,7 +120,7 @@ puppet = MED
 	  name = "Isma'il Pasha"
 	  desc = "POLITICS_GEORGE_V_DESC"
 	  picture = "Portrait_EGY_Ismail_Pasha.dds"
-	  expire = "1879.1.1"
+	  expire = "1895.3.2"
 	  ideology = despotism
 	  traits = {
 			industrial_promoter

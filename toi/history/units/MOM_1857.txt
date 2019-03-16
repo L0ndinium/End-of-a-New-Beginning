@@ -1,0 +1,18 @@
+﻿division_template = {
+  name = "Kenyan Infantry"
+
+  regiments = {
+    tribal_infantry = { x = 0 y = 0}
+	tribal_infantry = { x = 1 y = 0}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "1st Mombasa Infantry"
+			location = 5210
+			division_template = "Kenyan Infantry"
+			start_experience_factor = 0.0
+		}
+	}

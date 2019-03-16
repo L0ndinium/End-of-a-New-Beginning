@@ -380,6 +380,7 @@ eoanb_score_system_calc = {
 			add_to_variable = { overall_score = military_score }
 			add_to_variable = { overall_score = prestige_score }				
 			add_to_variable = { overall_score = tech_score }
+			multiply_variable = { overall_score = 0.5 }
             clamp_variable = {
                 var = overall_score
                 min = 0
@@ -457,7 +458,7 @@ eoanb_score_system_calc = {
 				if = {
 				    limit = { check_variable = { global.score_tag_array^v = THIS } }
 					set_variable = { score_array_position_var = v } 
-					set_variable = { b = 1 }
+					set_variable = { b = 0 }
 				}		
             }	 	
 			add_to_variable = { score_array_position_var = 1 } 
@@ -471,19 +472,17 @@ eoanb_ledger_system_calc = {
 	clear_array = global.divisions_array
 	clear_array = global.ships_array
     set_temp_variable = { length_temp = global.score_tag_array^num }
-	subtract_from_temp_variable = { length_temp = 1  }		
-	every_country = {
-        for_loop_effect = {
+	for_loop_effect = {
             start = 0
             end = length_temp
             add = 1
             value = v  
-				
-		    add_to_array = { global.population_array = 1 }	
-			add_to_array = { global.factories_array = 1 }	
-			add_to_array = { global.divisions_array = 1 }
-            add_to_array = { global.ships_array = 1 }				
-        }
+			add_to_array = { global.population_array = 1 }	
+		    add_to_array = { global.factories_array = 1 }	
+	     	add_to_array = { global.divisions_array = 1 }
+            add_to_array = { global.ships_array = 1 }
+	}
+    every_country = {	
         for_loop_effect = {
             start = 0
             end = length_temp
@@ -492,14 +491,14 @@ eoanb_ledger_system_calc = {
             break = b 
 				
 		    if = {
-				limit = { check_variable = { global.score_tag_array^v = THIS } }
+				limit = { check_variable = { global.score_tag_array^v = THIS } }		
 			    set_variable = { global.population_array^v = max_manpower_k } 
 				multiply_variable = { global.population_array^v = 0.001 }		
                 set_variable = { global.factories_array^v = num_of_factories }
 			    set_variable = { global.divisions_array^v = num_divisions }
 				set_variable = { global.ships_array^v = num_ships }
-				set_variable = { b = 1 }
+				set_variable = { b = 0 }
 			}		
-        }				
+        }		
     }
 }

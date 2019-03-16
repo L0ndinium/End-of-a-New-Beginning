@@ -60,7 +60,8 @@ scripted_gui = {
 		visible = {
 			check_variable = {
 			    show_overview_info > 0 
-			} 
+			}
+			is_ai = no  			
 		}
 		triggers = {
 		}

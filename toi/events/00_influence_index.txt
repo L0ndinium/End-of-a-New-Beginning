@@ -1,0 +1,28 @@
+﻿add_namespace = influence_index 
+
+country_event = {
+    id = influence_index.0
+    picture = GFX_report_event_election_vote
+    
+    is_triggered_only = yes
+	 
+    hidden = yes
+
+    immediate = {
+	eoanb_influence_calc_init = yes 
+}
+}
+	
+country_event = {
+    id = influence_index.1 #default game variables sorted for ledger 
+    picture = GFX_report_event_election_vote
+    
+    is_triggered_only = yes
+	 
+    hidden = yes
+
+    immediate = {
+
+		eoanb_influence_calc = yes 		
+    }			
+}

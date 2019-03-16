@@ -79,7 +79,7 @@ country_event = {
 		ai_chance = {
 			factor = 85
 		}
-		add_manpower = -3500
+		add_manpower = -2500
 		NZL ={
 			country_event = {id = nzl_other.2 days = 14}
 		}
@@ -370,7 +370,7 @@ country_event = { #Kingitanga offered a small amount of land
 		}
 	}
 }
-country_event = { #The Kingitanga Deal
+country_event = { #NZL - The Kingitanga Deal
 	id = nzl_other.15
 	title =  nzl_other.15.t
 	desc =  nzl_other.15.d
@@ -378,52 +378,25 @@ country_event = { #The Kingitanga Deal
 
 	is_triggered_only = yes
 	option = {
-		name = nzl_other.15.a #we agree
+		name = nzl_other.15.a #offer limited autonomy
 		ai_chance = {
 			factor = 80
 		}
-		add_political_power = -50
-		add_stability = 0.05
+		KIN = {country_event = {id = nzl_other.21}}
 	}
 	option = {
-		name = nzl_other.15.e #we agree (change tag)
+		name = nzl_other.15.b #offer greater autonomy
 		ai_chance = {
 			factor = 80
 		}
-		add_political_power = -50
-		add_stability = 0.05
-		custom_effect_tooltip = nzl_change_tag_to_KIN
-		hidden_effect = {
-			KIN ={
-				change_tag_from = NZL
-			}
-		}
+		KIN = {country_event = {id = nzl_other.22}}
 	}
 	option = {
-		name = nzl_other.15.b #decline the deal
-		ai_chance = {
-			factor = 20
-		}
-		KIN = {
-			end_puppet = NZL
-		}
-		declare_war_on = {
-			target = KIN
-			type = annex_everything
-		}
-	}
-	option = {
-		name = nzl_other.15.c #revise the deal
+		name = nzl_other.15.c #offer join government
 		ai_chance = {
 			factor = 0
 		}
-		add_stability = -0.10
-		add_ideas = {
-			nzl_split_adminastration
-		}
-		ENG = {
-			country_event = {id = nzl_nzw.17 days = 7}
-		}
+		KIN = {country_event = {id = nzl_other.23}}
 	}
 }
 country_event = { #New Zealand offers land deal
@@ -556,3 +529,169 @@ country_event = { #Kingitanga offers to intergrate the TAA
 		}
 	}
 }
+country_event = { #KIN - The Kingitanga deal - limited autonomy
+	id = nzl_other.21
+	title = nzl_other.21.t
+	desc = nzl_other.21.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nzl_other.21.a #agree
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = 25
+		add_stability = -0.025
+		add_autonomy_score = {
+			value = 250
+			localization = KIN_deal_autonomy_grant
+		}
+		FROM = {
+			country_event = {id = nzl_other.25}
+			add_stability = 0.025
+			add_political_power = 25
+		}
+	}
+	option = {
+		name = nzl_other.21.b #decline the deal
+		ai_chance = {
+			factor = 40
+		}
+		KIN = {
+			end_puppet = NZL
+		}
+		FROM = {country_event = {id = nzl_other.24}}
+	}
+}
+country_event = { #KIN - The Kingitanga deal - greater autonomy
+	id = nzl_other.22
+	title =  nzl_other.22.t
+	desc =  nzl_other.22.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = {
+		name = nzl_other.22.a #agree
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = 50
+		add_stability = -0.05
+		add_autonomy_score = {
+			value = 500
+			localization = KIN_deal_autonomy_grant
+		}
+		FROM= {
+			country_event = {id = nzl_other.25}
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	option = {
+		name = nzl_other.22.b #decline the deal
+		ai_chance = {
+			factor = 20
+		}
+		KIN = {
+			end_puppet = NZL
+		}
+		FROM= {country_event = {id = nzl_other.24}}
+	}
+}
+country_event = { #KIN - The Kingitanga deal - split_administration
+	id = nzl_other.23
+	title =  nzl_other.23.t
+	desc =  nzl_other.23.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = {
+		name = nzl_other.23.a #agree, ai KIN
+		ai_chance = {
+			factor = 85
+		}
+		NZL={
+			add_stability = -0.10
+			add_ideas = {
+				nzl_split_adminastration
+			}
+			annex_country = {
+				target = KIN
+				transfer_troops = yes
+			}
+		}
+		
+		ENG = {
+			country_event = {id = nzl_nzw.17 days = 7}
+		}
+	}
+	option = {
+		name = nzl_other.23.b #revise the deal, for players
+		ai_chance = {
+			factor = 0
+		}
+		NZL={
+			add_stability = -0.05
+			add_ideas = {
+				nzl_split_adminastration
+			}
+		}
+		KIN={
+			add_stability = 0.05
+			add_ideas = {
+				KIN_split_adminastration
+			}
+		}
+		ENG = {
+			country_event = {id = nzl_nzw.17 days = 7}
+		}
+	}
+	option = {
+		name = nzl_other.23.c #decline the deal
+		ai_chance = {
+			factor = 15
+		}
+		KIN = {
+			end_puppet = NZL
+		}
+		FROM= {country_event = {id = nzl_other.24}}
+	}
+}
+country_event = { #NZL - The Kingitanga deal - Deal declined
+	id = nzl_other.24
+	title =  nzl_other.24.t
+	desc =  nzl_other.24.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = {
+		name = nzl_other.24.a #we where fools to deal with them, attack
+		ai_chance = {
+			factor = 80
+		}
+		declare_war_on = {
+			target = KIN
+			type = annex_everything
+		}
+	}
+	option = {
+		name = nzl_other.24.b #let them go
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -50
+	}
+}	
+country_event = { #NZL - The Kingitanga deal - Deal accepted
+	id = nzl_other.25
+	title =  nzl_other.25.t
+	desc =  nzl_other.25.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	option = {
+		name = nzl_other.25.a #great
+	}
+}		

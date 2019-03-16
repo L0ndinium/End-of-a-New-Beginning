@@ -13,4 +13,28 @@ spriteTypes = {
 		name = "GFX_idea_BAV_advisor_ludwig_feuerbach"
 		texturefile = "gfx/interface/ideas/BAV/BAV_advisor_ludwig_feuerbach.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_BAV_advisor_friedrich_von_hegnenberg_dux"
+		texturefile = "gfx/interface/ideas/BAV/BAV_advisor_friedrich_von_hegnenberg_dux.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_BAV_advisor_joseph_poezl"
+		texturefile = "gfx/interface/ideas/BAV/BAV_advisor_joseph_poezl.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_BAV_advisor_gustav_von_schloer"
+		texturefile = "gfx/interface/ideas/BAV/BAV_advisor_gustav_von_schloer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_BAV_advisor_ludwig_von_der_pfordten"
+		texturefile = "gfx/interface/ideas/BAV/BAV_advisor_ludwig_von_der_pfordten.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_BAV_advisor_siegmund_von_pranckh"
+		texturefile = "gfx/interface/ideas/BAV/BAV_advisor_siegmund_von_pranckh.dds"
+	}
 }

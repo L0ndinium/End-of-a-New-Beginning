@@ -1,0 +1,2274 @@
+﻿add_namespace = liberia
+add_namespace = lib_border_conflict
+
+
+
+
+	
+#liberia Adopts ACS
+country_event = {
+	id = liberia.1
+	title = Liberia_Adopts_ACS_Policy.1.t
+	desc = liberia.1.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Leave_it_to_congress.1.a
+		ai_chance = { factor = 100 }
+		#No Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			LIB = { country_event = { days = 1 id = liberia.2 } }
+			set_country_flag = USA_supports_acs
+			
+		}
+		#No Civil War & NO LINCON = Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			
+		}
+		#YES Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			LIB = { country_event = { days = 1 id = liberia.2 } }
+			set_country_flag = USA_supports_acs
+			
+		}
+		#YES Civil War & NO LINCON =  Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			
+		}
+		
+		#STRONG ACS: No Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			LIB = { country_event = { days = 1 id = liberia.2 } }
+			set_country_flag = USA_supports_acs
+			
+		}
+		#STRONG ACS: No Civil War & NO LINCON = Okay Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			LIB = { country_event = { days = 1 id = liberia.2 } }
+			set_country_flag = USA_supports_acs
+			
+		}
+		#STRONG ACS: YES Civil War & YES LINCON = Okay Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			LIB = { country_event = { days = 1 id = liberia.2 } }
+			set_country_flag = USA_supports_acs
+			
+		}
+		#STRONG ACS: YES Civil War & NO LINCON =  Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			
+			hidden_effect = {
+
+			}
+			
+		}
+			
+		
+	}
+	
+	option = {
+		name = We_Should_Support_This.1.b
+		ai_chance = { factor = 0 }
+		LIB = { country_event = { days = 1 id = liberia.2 } }
+		set_country_flag = USA_supports_acs
+	}
+	
+	option = {
+		name = We_Should_not_Support_This.1.b
+		ai_chance = { factor = 0 }
+		LIB = { country_event = { days = 1 id = liberia.2 } }
+		set_country_flag = USA_supports_acs
+	}
+	
+}
+
+#USA Supports
+country_event = {
+	id = liberia.2
+	title = US_Supports_ACS.2.t
+	desc = liberia.2.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = liberia.2.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+	
+	
+#Kru War Aftermath
+country_event = {
+	id = liberia.3
+	title = Kru_War_Aftermath.3.t
+	desc = liberia.3.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Time_to_recover.3.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			KRU = { country_event = { days = 1 id = liberia.4 } }
+		}
+	}
+	
+}
+
+#Kru War Aftermath
+country_event = {
+	id = liberia.4
+	title = Our_Recovery_From_War_With_Liberia.4.t
+	desc = liberia.4.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Will_Not_Lose_Again.4.a
+		ai_chance = { factor = 100 }
+		
+		add_stability = -0.07
+		add_war_support = 0.12
+		army_experience = 10
+		#6 years untill this event happens
+		hidden_effect = {
+			KRU = { country_event = { days = 2190 id = liberia.5 } }
+		}
+			
+	}
+	
+}
+
+
+#Kru War Aftermath (General was a child during the Liberian-Kru war, inspired to revenge)
+country_event = {
+	id = liberia.5
+	title = A_Boy_Determined_To_Get_Revenge.5.t
+	desc = liberia.5.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_People_Are_Inspired.5.a
+		ai_chance = { factor = 100 }
+			add_stability = 0.13
+			add_war_support = 0.17
+			
+		create_corps_commander = {
+			name = "Yakpazuah Zaowolo"
+			picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.dds"
+			traits = { trickster brilliant_strategist }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 1
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					LIB = { 
+							NOT = {
+								has_completed_focus = LIB_end_slave_trade 
+							}
+					}
+				}
+					KRU = { country_event = { days = 7 id = liberia.6 } }
+			}
+		}
+			
+	}
+	
+}
+
+
+#Kru War Aftermath - Slave Raid (General was a child during the Liberian-Kru war, inspired to revenge)
+country_event = {
+	id = liberia.7
+	title = Zaowolo_Proposes_A_Raid_On_The_West.7.t
+	desc = liberia.7.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = An_excellent_plan.7.a
+		ai_chance = { factor = 70 }
+		add_command_power = -15
+		army_experience = 5
+		add_political_power = -15
+		add_war_support = .03
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					LIB = { 
+							NOT = {
+								has_tech = collodion_process
+							}
+					}
+				}
+					LIB = { country_event = { days = 7 id = liberia.8 } }
+			}
+			if = {
+				limit = {
+					LIB = { 
+							has_tech = collodion_process
+					}
+				}
+					LIB = { country_event = { days = 7 id = liberia.9 } }
+			}
+			if = {
+				limit = {
+					LIB = { 
+							AND = {
+								has_tech = collodion_process
+								has_tech = photographic_glass_plate
+							}
+					}
+				}
+					LIB = { country_event = { days = 7 id = liberia.10 } }
+			}
+		}
+		
+			
+	}
+	
+	option = {
+		name = This_is_too_risky.7.a
+		ai_chance = { factor = 30 }
+		
+		add_political_power = 15
+		add_war_support = -.05
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Success
+country_event = {
+	id = liberia.8
+	title = Kru_Raided_Our_Stockpile_Overnight.8.t
+	desc = liberia.8.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Our_military_is_hopeless.8.a
+		ai_chance = { factor = 100 }
+		
+		add_stability = -0.15
+		add_war_support = -0.20
+		set_country_flag = LIB_second_kru_raid
+		hidden_effect = {
+			KRU = { country_event = { days = 3 id = liberia.11 } }
+		}
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Spotted
+country_event = {
+	id = liberia.9
+	title = Kru_Raiders_Spotted.9.t
+	desc = liberia.9.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Call_the_troops.9.a
+		ai_chance = { factor = 100 }
+		
+		start_border_war = {
+				change_state_after_war = no
+					attacker = {
+						state = 760
+						num_provinces = 4
+						on_win = liberia.11
+						on_lose = liberia.12
+						on_cancel = lib_border_conflict.4
+					}
+				
+					defender = {
+						state = 298
+						num_provinces = 4
+						on_win = lib_border_conflict.6
+						on_lose = lib_border_conflict.8
+						on_cancel = lib_border_conflict.4
+					}
+		}
+		set_country_flag = LIB_second_kru_raid
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Worst Outcome
+country_event = {
+	id = liberia.10
+	title = Kru_Raiders_Spotted.10.t
+	desc = liberia.10.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Call_the_troops.10.a
+		ai_chance = { factor = 100 }
+		
+		start_border_war = {
+				change_state_after_war = no
+					attacker = {
+						state = 760
+						num_provinces = 4
+						on_win = liberia.11
+						on_lose = liberia.13
+						on_cancel = lib_border_conflict.4
+					}
+				
+					defender = {
+						state = 298
+						num_provinces = 4
+						on_win = lib_border_conflict.7
+						on_lose = lib_border_conflict.9
+						on_cancel = lib_border_conflict.4
+					}
+		}
+		set_country_flag = LIB_second_kru_raid
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Outcome 1
+country_event = {
+	id = liberia.11
+	title = Raid_Succesful.11.t
+	desc = liberia.11.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Excellent.11.a
+		ai_chance = { factor = 0 }
+		
+		add_stability = 0.06
+		add_war_support = 0.05
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_rifle_0
+			amount = 2000
+			producer = LIB
+		}
+			
+	}
+	
+	option = {
+		name = Promote_him_to_tribe_leader.11.a
+		ai_chance = { factor = 100 }
+		
+		add_stability = 0.17
+		add_war_support = 0.12
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_rifle_0
+			amount = 2000
+			producer = LIB
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		if = {
+				limit = {
+					KRU = { 
+						has_government = autocracy
+					}
+				}
+					create_country_leader = {
+						name = "Yakpazuah Zaowolo"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1898.4.7"
+						ideology = tribe
+						traits = {
+						}
+					}
+		}
+		if = {
+				limit = {
+					KRU = { 
+							has_government = chauvinist_populist
+					}
+				}
+					create_country_leader = {
+						name = "Yakpazuah Zaowolo"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1898.4.7"
+						ideology = military_goverment
+						traits = {
+						}
+					}
+		}
+		
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Outcome 2
+country_event = {
+	id = liberia.12
+	title = Raid_Unsuccessful.12.t
+	desc = liberia.12.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Atleast_Zaowolo_is_alive.12.a
+		ai_chance = { factor = 100 }
+		
+		add_stability = -0.07
+		add_war_support = -0.05
+		army_experience = 5
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Outcome 3
+country_event = {
+	id = liberia.13
+	title = Zaowolo_Has_Been_Captured_And_Executed.13.t
+	desc = liberia.13.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_is_terrible.13.a
+		ai_chance = { factor = 100 }
+		
+		add_stability = -0.30
+		add_war_support = -0.20
+		add_manpower = -150	
+	}
+	
+}
+
+
+#Kru Raids Our Settlement!
+country_event = {
+	id = liberia.14
+	title = Kru_Raids_Our_Stockpile.14.t
+	desc = liberia.14.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Those_Damn_Kru.14.a
+		ai_chance = { factor = 100 }
+		
+		add_stability = -0.07
+		add_war_support = 0.05
+		298={
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+		set_country_flag = LIB_KRU_raids_stockpile
+	}
+	
+}
+
+#Back Up Plan
+country_event = {
+	id = liberia.15
+	title = We_Better_Have_A_Back_Up_Plan.15.t
+	desc = liberia.15.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = USA_Support.15.a
+		ai_chance = { factor = 50 }
+		trigger={
+			country_exists = USA
+		}
+		set_country_flag = LIB_USA_military_support
+		USA = { country_event = { days = 1 id = liberia.16 } }
+	}
+	
+	option = {
+		name = CSA_Support.15.a
+		ai_chance = { factor = 50 }
+		trigger={
+			country_exists = CSA
+		}
+		set_country_flag = LIB_CSA_military_support
+		CSA = { country_event = { days = 1 id = liberia.17 } }
+	}
+	
+	option = {
+		name = No_Support.15.a
+		ai_chance = { factor = 0 }
+		
+	}
+	
+}
+
+#Back Up Plan
+country_event = {
+	id = liberia.16
+	title = Liberia_Requests_Back_Up_Plan.16.t
+	desc = liberia.16.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = Noted.16.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LIB_USA_military_support
+	}
+	
+}
+
+#Back Up Plan
+country_event = {
+	id = liberia.17
+	title = Liberia_Requests_Back_Up_Plan.17.t
+	desc = liberia.17.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = Noted.17.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LIB_CSA_military_support
+	}
+	
+}
+
+
+
+#Kru Colonization
+country_event = {
+	id = liberia.24
+	title = Establish_Kru_Government.24.t
+	desc = liberia.24.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = Restablish_the_republic_of_maryland.24.a
+		ai_chance = { factor = 10 }
+		761 = {
+				set_state_name = "Maryland County"
+		}
+		KRU = {
+			set_cosmetic_tag = KRU_maryland
+			add_ideas = afr_reforming_kingdom
+			add_ideas = KRU_underground_kru_resistance
+			hidden_effect = {
+				set_party_name = { 
+					ideology = centrism 
+					long_name = AFR_party_republican
+					name = AFR_party_republican
+				}
+				set_party_name = { 
+					ideology = traditional_conservatism
+					long_name = AFR_party_democratic
+					name = AFR_party_democratic
+				}
+				set_party_name = { 
+					ideology = autocracy 
+					long_name = AFR_party_monarch
+					name = AFR_party_monarch 
+				}
+				set_country_flag = ACS_colony
+				if = {
+					limit = {
+						KRU = {
+							NOT = {
+								has_focus_tree = industrialilzing_power_africa
+							}
+						}
+					}
+					load_focus_tree = industrialilzing_power_africa
+				}
+				
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Samuel Hampton"
+					desc = "DESC"
+					picture = "generic_leader_king_4.dds"
+					expire = "1920.1.1"
+					ideology = conserv_liberal
+					traits = {
+		
+					}
+				}
+				swap_ideas = {
+					remove_idea = state_religion
+					add_idea = secular_state
+				}
+				swap_ideas = {
+					remove_idea = absolute_monarchy
+					add_idea = presidential_republic
+				}
+				swap_ideas = {
+					remove_idea = no_constitution
+					add_idea = constitution_adopted
+				}	
+				swap_ideas = {
+					remove_idea = no_heir
+					add_idea = non_monarchical_system
+				}
+				swap_ideas = {
+					remove_idea = religion_animist
+					add_idea = religion_protestant
+				}
+				swap_ideas = {
+					remove_idea = no_elections
+					add_idea = limited_elections
+				}
+				swap_ideas = {
+					remove_idea = law_pre_industrial_army
+					add_idea = law_victorian_army
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = usa_slavery_law
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = usa_slavery_law
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							LIB = {
+								has_idea = usa_slavery_law
+							}
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = segregation
+					}
+				}
+				swap_ideas = {
+					remove_idea = manpower_tribal_warriors
+					add_idea = limited_conscription
+				}
+				swap_ideas = {
+					remove_idea = no_borders
+					add_idea = border_control
+				}
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = limited_exports
+				}
+				swap_ideas = {
+					remove_idea = very_low_taxes
+					add_idea = normal_taxes
+				}
+				swap_ideas = {
+					remove_idea = lp_land_estates
+					add_idea = lp_land_purchase
+				}
+				swap_ideas = {
+					remove_idea = absolutism
+					add_idea = property_owners_suffrage
+				}
+				
+			}
+			
+		}
+		LIB = { country_event = {id = liberia.37} }
+		hidden_effect = {
+			KRU = { country_event = { days = 15 id = liberia.25 } }
+			LIB = { 
+				country_event = { days = 6 id = liberia.27 } 
+				country_event = {id = liberia.40}
+			}
+			KRU = {
+				remove_ideas = AF_T_unorganized_tribal_nation
+				remove_ideas = AF_T_unorganized_tribal_nation_2
+				remove_ideas = AF_T_unorganized_tribal_nation_3
+				remove_ideas = AF_T_unorganized_tribal_nation_4
+				remove_ideas = AF_T_unorganized_tribal_nation_5
+			}
+			KRU = {
+				add_ideas = LIB_low_life_expectancy
+				add_ideas = LIB_poor_infrastructure
+				add_ideas = LIB_high_racial_tensions
+				add_opinion_modifier = {
+					target = LIB
+					modifier = large_increase
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = CSA
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+			LIB = {
+				add_opinion_modifier = {
+					target = KRU
+					modifier = large_increase
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = KRU
+					modifier = medium_increase
+				}
+			}
+			CSA = {
+				add_opinion_modifier = {
+					target = KRU
+					modifier = medium_increase
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = KRU
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = A_truely_african_colony.24.a
+		ai_chance = { factor = 90 }
+		KRU = { country_event = { days = 15 id = liberia.26 } }
+		KRU = {
+			set_cosmetic_tag = KRU_republic
+			add_ideas = AF_T_organized_tribal_nation
+			add_ideas = KRU_underground_kru_resistance
+			
+			
+			hidden_effect = {
+				set_party_name = { 
+					ideology = centrism 
+					long_name = AFR_party_republican
+					name = AFR_party_republican
+				}
+				set_party_name = { 
+					ideology = traditional_conservatism
+					long_name = AFR_party_democratic
+					name = AFR_party_democratic
+				}
+				set_party_name = { 
+					ideology = autocracy 
+					long_name = AFR_party_monarch
+					name = AFR_party_monarch 
+				}
+				if = {
+					limit = {
+						KRU = {
+							NOT = {
+								has_focus_tree = AF_O_K
+							}
+						}
+					}
+					load_focus_tree = AF_O_K
+				}
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Samuel Hampton"
+					desc = "DESC"
+					picture = "generic_leader_king_4.dds"
+					expire = "1920.1.1"
+					ideology = conserv_liberal
+					traits = {
+		
+					}
+				}
+				remove_ideas = AF_T_unorganized_tribal_nation
+				remove_ideas = AF_T_unorganized_tribal_nation_2
+				remove_ideas = AF_T_unorganized_tribal_nation_3
+				remove_ideas = AF_T_unorganized_tribal_nation_4
+				remove_ideas = AF_T_unorganized_tribal_nation_5
+				swap_ideas = {
+					remove_idea = absolute_monarchy
+					add_idea = presidential_republic
+				}
+				swap_ideas = {
+					remove_idea = no_constitution
+					add_idea = constitution_adopted
+				}
+				add_opinion_modifier = {
+					target = LIB
+					modifier = large_increase
+				}
+				swap_ideas = {
+					remove_idea = no_heir
+					add_idea = non_monarchical_system
+				}
+				swap_ideas = {
+					remove_idea = no_elections
+					add_idea = limited_elections
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = usa_slavery_law
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = usa_slavery_law
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							LIB = {
+								has_idea = usa_slavery_law
+							}
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = segregation
+					}
+				}
+				swap_ideas = {
+					remove_idea = no_borders
+					add_idea = border_control
+				}
+				swap_ideas = {
+					remove_idea = very_low_taxes
+					add_idea = low_taxes
+				}
+				swap_ideas = {
+					remove_idea = lp_land_estates
+					add_idea = lp_land_purchase
+				}
+				swap_ideas = {
+					remove_idea = absolutism
+					add_idea = property_owners_suffrage
+				}
+				
+			}
+			
+		}
+		hidden_effect = {
+			LIB = {country_event = {id = liberia.40}}
+			LIB = {
+				add_opinion_modifier = {
+					target = KRU
+					modifier = medium_increase
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = KRU
+					modifier = small_increase
+				}
+			}
+		}
+	}
+	
+}
+
+#Independant State Of Maryland
+country_event = {
+	id = liberia.25
+	title = The_Fate_Of_Our_People.25.t
+	desc = liberia.25.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = We_will_resist_occupation.25.a
+		ai_chance = { factor = 100 }
+		set_country_flag = KRU_colonial_governance 
+
+	}
+	
+	option = {
+		name = This_is_our_home.25.a
+		ai_chance = { factor = 0 }
+		set_country_flag = KRU_colonial_governance 
+
+	}
+	
+}
+
+#Kru Colony
+country_event = {
+	id = liberia.26
+	title = We_control_our_culture.26.t
+	desc = liberia.26.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = Atleast_we_are_somewhat_independant.26.a
+		ai_chance = { factor = 100 }
+		set_country_flag = KRU_self_governance
+	}
+	
+}
+
+#Mass Migration Troubles 1
+country_event = {
+	id = liberia.27
+	title = Maryland_Migration_Camp_Troubles.27.t
+	desc = liberia.27.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = send_military_escort.27.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+				LIB = { country_event = { days = 30 id = liberia.28 } }
+		}
+	}
+	
+	option = {
+		name = hope_for_the_best.27.a
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+				LIB = { country_event = { days = 30 id = liberia.29 } }
+		}
+	}
+	
+}
+
+#Kru Guerrilla Raids_1
+country_event = {
+	id = liberia.28
+	title = Military_Prevents_Kru_Guerrilla_Raids.28.t
+	desc = liberia.28.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = Luckily_limited_casualities.28.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				TAG = KRU
+			}
+			KRU = {
+				add_stability = -.03
+			}
+			761 = {
+					add_manpower = -157
+			}
+		}
+		if = {
+			limit = {
+				TAG = LIB
+			}
+			LIB = {
+				add_stability = -.01
+			}
+		}
+			
+	}
+	
+	
+	
+}
+
+#Kru Guerrilla Raids_2
+country_event = {
+	id = liberia.29
+	title = Kru_Guerrilla_Raids_Burn_Camp.29.t
+	desc = liberia.29.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = This_is_horrible.29.a
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				TAG = KRU
+			}
+			KRU = {
+				add_stability = -.09
+			}
+			761 = {
+					add_manpower = -753
+			}
+		}
+		if = {
+			limit = {
+				TAG = LIB
+			}
+			LIB = {
+				add_stability = -.07
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	
+}
+
+#Kru wins
+country_event = {
+	id = lib_border_conflict.2
+	title = lib_border_conflict.2.t
+	desc = lib_border_conflict.2.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = A_succesful_raid.2.a
+		ai_chance = { factor = 100 }
+		army_experience = 10
+			add_war_support = 0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 500
+				producer = LIB
+			}	
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_0
+				amount = 500
+				producer = LIB
+			}
+	}
+}
+#Kru loses
+country_event = {
+	id = lib_border_conflict.3
+	title = lib_border_conflict.3.t
+	desc = lib_border_conflict.3.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+
+	option = {
+		name = A_lost_oppurtunity.3.a
+		ai_chance = { factor = 100 }
+		add_war_support = -0.05
+		army_experience = 5
+	}
+}
+
+#stalemate
+country_event = {
+	id = lib_border_conflict.4
+	title = lib_border_conflict.4.t
+	desc = lib_border_conflict.4.desc
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = we_cannot_sustain_this.4.a
+		ai_chance = { factor = 100 }
+		add_war_support = -0.03
+		set_country_flag = LIB_KRU_raids_stockpile
+	}
+}
+
+#Liberia wins
+country_event = {
+	id = lib_border_conflict.5
+	title = lib_border_conflict.5.t
+	desc = lib_border_conflict.5.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = A_succesful_defence.5.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LIB_KRU_raids_stockpile
+		army_experience = 10
+			add_war_support = 0.05
+	}
+}
+
+#Kru War Aftermath - Kru Raid - Spotted - LIB WON
+country_event = {
+	id = lib_border_conflict.6
+	title = Kru_Raiders_Spotted.6.t
+	desc = lib_border_conflict.6.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Will_Not_Lose_Again.6.a
+		ai_chance = { factor = 100 }
+		
+		
+		add_stability = 0.15
+		add_war_support = 0.12
+		army_experience = 10
+		hidden_effect = {
+			KRU = { country_event = { days = 3 id = liberia.12 } }
+		}
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Worst Outcome - LIB WON
+country_event = {
+	id = lib_border_conflict.7
+	title = lib_border_conflict.7.t
+	desc = lib_border_conflict.7.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hold_a_public_execution.7.a
+		ai_chance = { factor = 100 }
+		
+		
+		add_stability = 0.15
+		add_war_support = 0.3
+		army_experience = 10
+			KRU = { country_event = { days = 3 id = liberia.13 } }
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Spotted - LIB LOSS
+country_event = {
+	id = lib_border_conflict.8
+	title = lib_border_conflict.8.t
+	desc = lib_border_conflict.8.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Will_Not_Lose_Again.8.a
+		ai_chance = { factor = 100 }
+		
+		
+		add_stability = -0.15
+		add_war_support = -0.20
+		army_experience = 5
+			
+	}
+	
+}
+
+#Kru War Aftermath - Kru Raid - Worst Outcome - LIB LOSS
+country_event = {
+	id = lib_border_conflict.9
+	title = We_Captured_The_Kru_Raider_General.9.t
+	desc = lib_border_conflict.9.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hold_a_public_execution.9.a
+		ai_chance = { factor = 100 }
+		
+		
+		add_stability = -0.15
+		add_war_support = -0.20
+		army_experience = 5
+			
+	}
+	
+}
+
+#Info on Annexation of Independent State of Maryland
+country_event = {
+	id = liberia.30
+	title = The_Annexation_of_Independent_State_of_Maryland.30.t
+	desc = liberia.30.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Interesting.30.a
+		ai_chance = { factor = 100 }
+		add_political_power = 100
+	}
+	
+}
+
+#Request US Gov Road Investment
+country_event = {
+	id = liberia.31
+	title = Liberia_Requests_Infrastructure_Investment.31.t
+	desc = liberia.31.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Do_what_we_can.31.a
+		ai_chance = { factor = 100 }
+		#No Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.32 }
+					activate_decision = LIB_Request_Gov_Road_Investment_2
+				}
+			}
+			
+		}
+		#No Civil War & NO LINCON = Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.33 }
+					activate_decision = LIB_Request_Gov_Road_Investment_3
+				}
+			}
+			
+		}
+		#YES Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.33 }
+					activate_decision = LIB_Request_Gov_Road_Investment_4
+				}
+			}
+			
+		}
+		#YES Civil War & NO LINCON =  Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.34 }
+					activate_decision = LIB_Request_Gov_Road_Investment_5
+				}
+			}
+			
+		}
+		
+		#STRONG ACS: No Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.32 }
+					activate_decision = LIB_Request_Gov_Road_Investment_1
+				}
+			}
+			
+		}
+		#STRONG ACS: No Civil War & NO LINCON = Okay Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.33 }
+					activate_decision = LIB_Request_Gov_Road_Investment_2
+				}
+			}
+			
+		}
+		#STRONG ACS: YES Civil War & YES LINCON = Okay Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.33 }
+					activate_decision = LIB_Request_Gov_Road_Investment_3
+				}
+			}
+			
+		}
+		#STRONG ACS: YES Civil War & NO LINCON =  Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			hidden_effect = {
+				LIB = {
+					country_event = { days = 1 id = liberia.34 }
+					activate_decision = LIB_Request_Gov_Road_Investment_4
+				}
+			}
+			
+		}
+		
+		
+	}
+	
+	option = {
+		name = Its_not_worth_it.31.a
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Request US Gov Road Investment
+country_event = {
+	id = liberia.32
+	title = Liberia_Requests_Infrastructure_Investment.32.t
+	desc = liberia.32.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Outstanding.32.a
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Request US Gov Road Investment
+country_event = {
+	id = liberia.33
+	title = Liberia_Requests_Infrastructure_Investment.33.t
+	desc = liberia.33.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Great.33.a
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Request US Gov Road Investment
+country_event = {
+	id = liberia.34
+	title = Liberia_Requests_Infrastructure_Investment.34.t
+	desc = liberia.34.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Atleast_its_something.34.a
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Request US Gov Shipyard Investment
+country_event = {
+	id = liberia.35
+	title = Liberia_Requests_Shipyard_Upgrade.35.t
+	desc = liberia.35.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Do_what_we_can.35.a
+		ai_chance = { factor = 100 }
+		#No Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			298 = {
+				if={
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = dockyard
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+		}
+		#No Civil War & NO LINCON = bad Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				
+			}
+			
+		}
+		#YES Civil War & YES LINCON = okay Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			
+		}
+		#YES Civil War & NO LINCON =  Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						NOT = {
+							has_country_flag = LIB_adopted_ACS_policy
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				
+			}
+			
+		}
+		
+		#STRONG ACS: No Civil War & YES LINCON = Gucchi Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			298 = {
+				if={
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = dockyard
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+		}
+		#STRONG ACS: No Civil War & NO LINCON = Okay Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = no
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			298 = {
+				if={
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = dockyard
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+		}
+		#STRONG ACS: YES Civil War & YES LINCON = Okay Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						has_country_leader = {
+							name = "Abraham Lincoln"
+							ruling_only = yes
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			hidden_effect = {
+				
+			}
+			
+		}
+		#STRONG ACS: YES Civil War & NO LINCON =  Shit Reward Below
+		if = {
+			limit = {
+				AND = {
+					USA = {
+						has_civil_war = yes
+					}
+					USA = {
+						NOT = {
+							has_country_leader = {
+								name = "Abraham Lincoln"
+								ruling_only = yes
+							}
+						}
+					}
+					LIB = {
+						has_country_flag = LIB_adopted_ACS_policy
+					}
+				}
+			}
+			hidden_effect = {
+				
+			}
+			
+		}
+		
+		
+	}
+	
+	option = {
+		name = Its_not_worth_it.35.a
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Request US Gov Road Investment
+country_event = {
+	id = liberia.36
+	title = American_Colonization_Society.36.t
+	desc = liberia.36.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Interesting.36.a
+		ai_chance = { factor = 15 }
+	}
+	
+}
+
+#Mass Migration #1
+country_event = {
+	id = liberia.37
+	title = Colonial_Migration_Plan.37.t
+	desc = liberia.37.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Four_Year_Plan.37.a
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		298 = {
+				add_manpower = -1000
+		}
+		761 = {
+				add_manpower = 1000
+		}
+		hidden_effect = {
+			LIB = { country_event = { days = 30 id = liberia.27 } }
+			set_country_flag = LIB_four_year_plan
+			LIB = { country_event = { days = 144 id = liberia.38 } }
+			LIB = { country_event = { days = 288 id = liberia.38 } }
+			LIB = { country_event = { days = 432 id = liberia.38 } }
+			LIB = { country_event = { days = 576 id = liberia.38 } }
+			LIB = { country_event = { days = 720 id = liberia.38 } }
+			LIB = { country_event = { days = 864 id = liberia.38 } }
+			LIB = { country_event = { days = 1008 id = liberia.38 } }
+			LIB = { country_event = { days = 1152 id = liberia.38 } }
+			LIB = { country_event = { days = 1296 id = liberia.38 } }
+			LIB = { country_event = { days = 1440 id = liberia.38 } }
+		}
+	}
+	
+	option = {
+		name = Push_For_Two_Years.37.a
+		ai_chance = { factor = 0 }
+		add_political_power = -50
+		298 = {
+				add_manpower = -2000
+		}
+		761 = {
+				add_manpower = 2000
+		}
+		hidden_effect = {
+			LIB = { country_event = { days = 30 id = liberia.27 } }
+			set_country_flag = LIB_two_year_plan
+			LIB = { country_event = { days = 144 id = liberia.38 } }
+			LIB = { country_event = { days = 288 id = liberia.38 } }
+			LIB = { country_event = { days = 432 id = liberia.38 } }
+			LIB = { country_event = { days = 576 id = liberia.38 } }
+			LIB = { country_event = { days = 720 id = liberia.38 } }
+		}
+	}
+	
+}
+
+#Mass Migration #2
+country_event = {
+	id = liberia.38
+	title = Colonial_Migration_Plan_Update.38.t
+	desc = liberia.38.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Good_Fortune.38.a
+		ai_chance = { factor = 100 }
+		KRU = {
+			 country_event = { days = 15 id = liberia.39 } 
+		}
+		if = {
+			limit = {
+				LIB = {
+					AND = { 
+						has_country_flag = LIB_four_year_plan
+						NOT = {
+							has_country_flag = KRU_migration_security
+						}
+					}
+				}
+			}
+			298 = {
+				add_manpower = -1000
+			}
+			761 = {
+				add_manpower = 1000
+			}
+			hidden_effect = {
+				clr_country_flag = KRU_migration_security
+			}
+		}
+		if = {
+			limit = { 
+				LIB = {
+					AND = { 
+						has_country_flag = LIB_four_year_plan
+						has_country_flag = KRU_migration_security
+					}
+				}
+			}
+			298 = {
+				add_manpower = -1000
+			}
+			761 = {
+				add_manpower = 1000
+			}
+			hidden_effect = {
+				clr_country_flag = KRU_migration_security
+			}
+		}
+		if = {
+			limit = { 
+				LIB = {
+					AND = { 
+						has_country_flag = LIB_two_year_plan
+						NOT = {
+							has_country_flag = KRU_migration_security
+						}
+					}
+				}
+			}
+			298 = {
+				add_manpower = -2000
+			}
+			761 = {
+				add_manpower = 2000
+			}
+			hidden_effect = {
+				clr_country_flag = KRU_migration_security
+			}
+		}
+		if = {
+			limit = { 
+				LIB = {
+					AND = { 
+						has_country_flag = LIB_two_year_plan
+						has_country_flag = KRU_migration_security
+					}
+				}
+			}
+			298 = {
+				add_manpower = -2000
+			}
+			761 = {
+				add_manpower = 2000
+			}
+			hidden_effect = {
+				clr_country_flag = KRU_migration_security
+			}
+		}
+	}
+}
+
+#Mass Migration #2
+country_event = {
+	id = liberia.39
+	title = Colonists_Arrived.39.t
+	desc = liberia.39.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_colonial_goverment_welcomes_them.39.a
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { 
+				LIB = {
+					has_country_flag = LIB_four_year_plan
+				}
+			}
+			KRU = {
+				add_stability = 0.01
+				add_political_power = 15
+			}
+			
+		}
+		if = {
+			limit = { 
+				LIB = {
+					has_country_flag = LIB_two_year_plan
+				}
+			}
+			KRU = {
+				add_stability = 0.02
+				add_political_power = 30
+			}
+		}
+	}
+	
+	option = {
+		name = Give_them_better_security.39.a
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { 
+				LIB = {
+					has_country_flag = LIB_four_year_plan
+				}
+			}
+			KRU = {
+				add_stability = 0.02
+				add_political_power = -30
+			}
+			set_country_flag = KRU_migration_security
+			
+		}
+		if = {
+			limit = { 
+				LIB = {
+					has_country_flag = LIB_two_year_plan
+				}
+			}
+			KRU = {
+				add_stability = 0.04
+				add_political_power = -60
+			}
+			set_country_flag = KRU_migration_security
+		}
+	}
+	
+	option = {
+		name = The_kru_will_oppose_them_from_the_shadows.39.a
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { 
+				LIB = {
+					has_country_flag = LIB_four_year_plan
+				}
+			}
+			KRU = {
+				add_stability = 0.01
+				add_political_power = 15
+			}
+			
+		}
+		if = {
+			limit = { 
+				LIB = {
+					has_country_flag = LIB_two_year_plan
+				}
+			}
+			KRU = {
+				add_stability = 0.02
+				add_political_power = 30
+			}
+		}
+	}
+	
+}
+
+#Mass Migration #2
+country_event = {
+	id = liberia.40
+	title = Play_As_Kru.40.t
+	desc = liberia.40.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = No.40.a
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = Yes.40.b
+		ai_chance = { factor = 0 }
+		KRU = { change_tag_from = ROOT }
+	}
+	
+}

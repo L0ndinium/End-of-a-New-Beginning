@@ -184,5 +184,47 @@ ideas = {
 				stability_factor = 0.10
 			}
 		}
+		KIN_split_adminastration = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = nzl_gold
+
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = 0.10
+			}
+		}
+		KIN_innovative_tatics = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_combat
+
+			modifier = {
+				army_org_Factor = 0.025
+				offence = 0.01
+			}
+		}
+		nzl_moturoa_refineries = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				local_resources_factor = 0.05
+				production_oil_factor = 0.1
+			}
+		}
 	}
 }

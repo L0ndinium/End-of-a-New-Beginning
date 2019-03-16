@@ -46,7 +46,11 @@ BAV_make_common_policy = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
 		}
 	}
 	
@@ -86,11 +90,13 @@ BAV_make_common_policy = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
 		}
 	}
-	
-	
 	
 	eoanb_decision_BAV_common_policy_frankfurt = {
 
@@ -128,7 +134,11 @@ BAV_make_common_policy = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
 		}
 	}
 	
@@ -168,7 +178,11 @@ BAV_make_common_policy = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
 		}
 	}
 	
@@ -208,7 +222,11 @@ BAV_make_common_policy = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
 		}
 	}
 	
@@ -241,14 +259,18 @@ BAV_make_common_policy = {
 			custom_effect_tooltip = BAV_customeffect_decision_common_policy
 			
 			hidden_effect = {
-				THU = {
+				SAX = {
 					country_event = { id = bavariaevent.5 days = 3 }
 				}
 			}
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
 		}
 	}
 	
@@ -288,13 +310,248 @@ BAV_make_common_policy = {
 		}
 
 		ai_will_do = {
-			base = 1
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	eoanb_decision_BAV_invite_WUR_BAD_trias = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = BAV
+			country_exists = WUR
+			country_exists = BAD
+			WUR = {
+				has_idea = BAV_foreign_accepted_trias
+			}
+			BAD = {
+				has_idea = BAV_foreign_accepted_trias
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = BAV_customeffect_decision_invite_trias
+			
+			hidden_effect = {
+				WUR = {
+					country_event = { id = bavariafocus.45 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	eoanb_decision_BAV_invite_FRK_trias = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = BAV
+			country_exists = FRK
+			has_completed_focus = BAV_extendthetrias
+			FRK = {
+				has_idea = BAV_foreign_accepted_trias
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = BAV_customeffect_decision_invite_trias
+			
+			hidden_effect = {
+				FRK = {
+					country_event = { id = bavariafocus.50 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	eoanb_decision_BAV_invite_HES_trias = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = BAV
+			country_exists = HES
+			has_completed_focus = BAV_extendthetrias
+			HES = {
+				has_idea = BAV_foreign_accepted_trias
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = BAV_customeffect_decision_invite_trias
+			
+			hidden_effect = {
+				HES = {
+					country_event = { id = bavariafocus.50 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	eoanb_decision_BAV_invite_THU_trias = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = BAV
+			country_exists = THU
+			has_completed_focus = BAV_extendthetrias
+			THU = {
+				has_idea = BAV_foreign_accepted_trias
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = BAV_customeffect_decision_invite_trias
+			
+			hidden_effect = {
+				THU = {
+					country_event = { id = bavariafocus.50 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	eoanb_decision_BAV_invite_SAX_trias = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = BAV
+			country_exists = SAX
+			has_completed_focus = BAV_extendthetrias
+			SAX = {
+				has_idea = BAV_foreign_accepted_trias
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = BAV_customeffect_decision_invite_trias
+			
+			hidden_effect = {
+				SAX = {
+					country_event = { id = bavariafocus.50 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
+		}
+	}
+	
+	eoanb_decision_BAV_invite_HAN_trias = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = BAV
+			country_exists = HAN
+			has_completed_focus = BAV_extendthetrias
+			HAN = {
+				has_idea = BAV_foreign_accepted_trias
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = BAV_customeffect_decision_invite_trias
+			
+			hidden_effect = {
+				HAN = {
+					country_event = { id = bavariafocus.50 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 60
+				is_historical_focus_on = no
+			}
 		}
 	}
 }
-
-#economic_decisions = {
-#
-#	
-#
-#}

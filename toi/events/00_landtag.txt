@@ -1,0 +1,473 @@
+﻿add_namespace = landtag
+
+#Second Chamber Election
+country_event = {
+	id = landtag.0
+	title = landtag.0.t
+	desc = landtag.0.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			OR = {
+				tag = BAV
+				tag = PRS
+				tag = WUR
+				tag = BAD
+				tag = HSD
+				tag = FRK
+				tag = HES
+				tag = THU
+				tag = SAX
+				tag = HAN
+				tag = MCK
+			}
+			check_variable = { 2ch_elected = 0 }
+		}
+	}
+	
+	immediate = {
+		set_variable = { 2ch_elected = 1 }
+		
+		if = {
+			limit = {
+				has_government = autocracy
+			}
+			if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy > 0.79 }
+				}
+				random_list = {
+					80 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					10 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					10 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy > 0.59 }
+				}
+				random_list = {
+					65 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					20 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					15 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy > 0.39 }
+				}
+				random_list = {
+					50 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy < 0.4 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 0 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = centrism
+			}
+			if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism > 0.79 }
+				}
+				random_list = {
+					10 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					80 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					10 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism > 0.69 }
+				}
+				random_list = {
+					20 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					65 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					15 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism > 0.39 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					50 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism < 0.4 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 0 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = traditional_conservatism
+			}
+			if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism > 0.79 }
+				}
+				random_list = {
+					10 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					10 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					80 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism > 0.69 }
+				}
+				random_list = {
+					20 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					15 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					65 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism > 0.39 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					50 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism < 0.4 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_I_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 3 }
+					}
+					25 = {
+						set_variable = { 2CH_I_pres_current = 0 }
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_government = autocracy
+			}
+			if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy > 0.79 }
+				}
+				random_list = {
+					80 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					10 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					10 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy > 0.59 }
+				}
+				random_list = {
+					65 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					20 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					15 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy > 0.39 }
+				}
+				random_list = {
+					50 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@autocracy < 0.4 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 0 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = centrism
+			}
+			if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism > 0.79 }
+				}
+				random_list = {
+					10 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					80 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					10 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism > 0.69 }
+				}
+				random_list = {
+					20 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					65 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					15 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism > 0.39 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					50 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@centrism < 0.4 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 0 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_government = traditional_conservatism
+			}
+			if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism > 0.79 }
+				}
+				random_list = {
+					10 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					10 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					80 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism > 0.69 }
+				}
+				random_list = {
+					20 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					15 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					65 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism > 0.39 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					50 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { Root.party_popularity@traditional_conservatism < 0.4 }
+				}
+				random_list = {
+					25 = {
+						set_variable = { 2CH_II_pres_current = 1 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 2 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 3 }
+					}
+					25 = {
+						set_variable = { 2CH_II_pres_current = 0 }
+					}
+				}
+			}
+		}
+	} 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = landtag.0.a
+	}
+}

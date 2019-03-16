@@ -1,0 +1,36 @@
+
+
+LIB_US_Investment_Diplomacy = {
+	icon = generic_democracy
+	visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+	}
+}
+
+LIB_Reconstruction = {
+	icon = generic_democracy
+	visible = {
+		has_completed_focus = LIB_Reconstruction
+	}
+}
+
+LIB_ACS_US_Branch = {
+	icon = generic_democracy
+	visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+	}
+}
+
+LIB_End_Slave_Trade = {
+	icon = generic_democracy
+	visible = {
+		has_country_flag = LIB_End_Slave_Trade
+	}
+}
+
+LIB_Control_Slave_Trade = {
+	icon = generic_democracy
+	visible = {
+		has_country_flag = LIB_Control_Slave_Trade
+	}
+}

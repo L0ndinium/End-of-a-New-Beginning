@@ -31,10 +31,10 @@ news_event = {
 			}
 		}
 
-		news_event = {
+		country_event = {
 			id = score_index.0
 		}
-		news_event = {
+		country_event = {
 			id = score_index.1 
 		}
 

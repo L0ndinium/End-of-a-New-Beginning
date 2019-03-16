@@ -1,0 +1,54 @@
+
+eoanb_influence_calc_init = {
+    every_country = {
+		limit = {
+            check_variable = { 
+			    var = this.score_array_position_var
+                value = 16 		
+			    compare = less_than_or_equals 
+			}			    
+		}
+	    set_temp_variable = { influence_var_temp = overall_score }
+        multiply_temp_variable = { influence_var_temp = 0.001 }	 	
+		set_variable = { influence_var = influence_var_temp }
+	clamp_variable = {
+	    var = influence_var
+	    max = 1 
+		min = 0 
+	}
+	}
+}
+
+eoanb_influence_calc = {
+    every_country = {
+	    if = {
+		    limit = {
+            check_variable = { 
+			    var = this.score_array_position_var
+                value = 8  		
+			    compare = less_than_or_equals 
+			}	
+			}
+            add_to_variable = { influence_var = 0.025 }			
+		}
+	    else_if = {
+		    limit = {
+		    check_variable = { this.score_array_position_var >  8 }	
+            check_variable = { 
+			    var = this.score_array_position_var
+                value = 16  		
+			    compare = less_than_or_equals 
+			}
+            }			
+            add_to_variable = { influence_var = 0.01 }			
+		}
+		else = {
+		    set_variable = { influence_var = 0 }
+		}
+	clamp_variable = {
+	    var = influence_var
+	    max = 1 
+		min = 0 
+	}
+	}
+}

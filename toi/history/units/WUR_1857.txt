@@ -21,7 +21,7 @@ units = {
 		#Capital
 		division= {
 			name = "Wurttemberger Infanterie"
-			location = 9517
+			location = 11499
 			division_template = "Wurttemberg Infanterie"
 			start_experience_factor = 0.2
 		}

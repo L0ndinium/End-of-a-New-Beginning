@@ -25,7 +25,7 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
+    segregation
     absolutism
 
     no_constitution

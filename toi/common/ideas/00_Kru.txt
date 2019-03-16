@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+
+		KRU_underground_kru_resistance  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_Toxic_Politics
+
+			modifier = {
+				stability_factor = -0.07
+			}
+		}
+	
+	}
+}

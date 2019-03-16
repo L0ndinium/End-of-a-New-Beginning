@@ -572,6 +572,10 @@ D15 = {
 }
 
 ##################################
+GEC = {
+  color = rgb { 25 64 142 }
+  color_ui = rgb { 25 64 142 }
+}
 AFR = {
   color = rgb { 211 181 29 }
   color_ui = rgb { 211 181 29 }
@@ -782,7 +786,7 @@ SNM = {
 }
 GAL = {
 	color = rgb { 5 120 220 }
-	color_ui = rgb { 5 50 220 }	
+	color_ui = rgb { 5 50 220 }
 }
 BAS = {
 	color = rgb { 45 156 10 }

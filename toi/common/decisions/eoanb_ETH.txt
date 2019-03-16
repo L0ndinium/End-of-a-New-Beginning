@@ -1,0 +1,3325 @@
+ETH_POR_Company = {
+
+
+	ETH_portugal_companies_shipyard_company = {
+
+		available = {
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+		}
+
+		visible = {
+			always = no
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = { 
+							building = dockyard
+							size > 0 
+							include_locked = yes 
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+			}
+			set_country_flag = ETH_company_established
+		}
+	}
+
+	ETH_portugal_companies_logging_plantation = {
+
+		available = {
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			add_resource = { 
+						type = wood
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+		}
+	}
+
+	ETH_portugal_companies_cotton_plantation = {
+
+		available = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			add_resource = { 
+						type = cotton
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+		}
+	}
+
+
+
+
+
+	ETH_lease_portugal_company_port = {
+
+		available = {
+			has_country_flag = ETH_company_established
+			any_owned_state={
+			#limit = {
+						is_coastal = yes
+			#}
+			}
+			OR = {
+				has_idea = ETH_portugese_ethiopian_cotton_company
+				has_idea = ETH_portugese_ethiopian_shipyard_company
+				has_idea = ETH_portugese_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_portugese_ethiopian_cotton_company
+				has_idea = ETH_portugese_ethiopian_shipyard_company
+				has_idea = ETH_portugese_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			set_country_flag = ETH_lease_portugal_company_port
+			add_popularity = {
+					ideology = chauvinist_populism
+					popularity = 0.09
+			}
+		}
+	}
+
+ETH_portugal_railway_line = {
+
+    available = {
+		has_country_flag = ETH_lease_portugal_company_port
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+    }
+
+    visible = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+			country_event = { days = 1 id = ethiopia.157 }
+    }
+}
+
+ETH_portugal_railway_infrastructure_construction = {
+
+    available = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		AND = {
+				has_tech = iron_railways
+		}
+    }
+
+    visible = {
+		has_country_flag = ETH_portugal_railway_line
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+	
+	days_remove = 180
+
+    cost = 0
+	
+	 remove_effect = {
+			country_event = { days = 1 id = ethiopia.163 }
+			custom_effect_tooltip = EDC_afr.6.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.6 hours = 1 } 
+			}
+			815 = {
+				if={
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			
+			}
+	}
+}
+
+ETH_portugal_main_railway_route_construction = {
+
+    available = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		AND = {
+				has_tech = iron_railways
+				has_tech = steam_engine
+				has_tech = steam_locomotive
+		}
+    }
+
+    visible = {
+		has_country_flag = ETH_portugal_railway_infrastructure_construction
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+	
+	days_remove = 360
+
+    cost = 0
+	
+	 remove_effect = {
+			custom_effect_tooltip = EDC_afr_20ip
+			hidden_effect = {
+				country_event = { id = EDC_afr.6 hours = 1 }
+				country_event = { id = EDC_afr.6 hours = 1 } 
+			}
+			add_ideas = { AF_T_small_scale_railways }
+			set_country_flag = ETH_main_railway_route
+    }
+}
+
+ETH_portugal_military_expertise = {
+
+    available = {
+		AND = {
+			has_country_flag = ETH_lease_portugal_company_port
+			has_country_flag = ETH_portugal_military_acess
+		}
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+    }
+
+    visible = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+			add_manpower = 5000
+			add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = POR }
+			add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = POR }
+			set_country_flag = ETH_portugal_military_expertise
+			add_popularity = {
+				ideology = chauvinist_populism
+				popularity = 0.03
+			}
+    }
+}
+
+ETH_portugal_military_acess = {
+
+    available = {
+		has_country_flag = ETH_company_established
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+    }
+
+    visible = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		set_country_flag = ETH_portugal_military_acess
+    }
+}
+
+
+ETH_portugal_tech = {
+
+    available = {
+		AND = {
+			has_country_flag = ETH_portugal_military_expertise
+		}
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+    }
+
+    visible = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		POR = { country_event = { days = 1 id = ethiopia.32 } }
+		set_country_flag = ETH_portugal_tech
+    }
+}
+
+ETH_request_portugal_license = {
+
+    available = {
+		AND = {
+			has_country_flag = ETH_portugal_tech
+		}
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+    }
+
+    visible = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		POR = { country_event = { days = 1 id = ethiopia.174 } }
+		set_country_flag = ETH_request_portugal_license
+    }
+}
+
+ETH_prepare_portugal_corporate_coup = {
+
+    available = {
+		AND = {
+			has_idea = industrializing
+			chauvinist_populism > 0.60
+			has_country_flag = ETH_main_railway_route
+			has_country_flag = ETH_request_portugal_license
+		}
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+
+    visible = {
+		OR = {
+			has_idea = ETH_portugese_ethiopian_cotton_company
+			has_idea = ETH_portugese_ethiopian_shipyard_company
+			has_idea = ETH_portugese_ethiopian_logging_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		set_country_flag = ETH_Coup_Forming
+		set_country_flag = ETH_POR_Coup_Forming
+    }
+}
+
+}
+
+ETH_POR_Corporate_Coup = {
+
+	ETH_portugal_corporate_coup_plan_tewodrosII_assassination = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.50
+				has_country_flag = ETH_Coup_Forming
+				has_country_leader = { 
+						ruling_only = yes 
+						name = "Tewodros II" 
+				}
+				
+			}
+			OR = {
+				has_idea = ETH_portugese_ethiopian_cotton_company
+				has_idea = ETH_portugese_ethiopian_shipyard_company
+				has_idea = ETH_portugese_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_portugese_ethiopian_cotton_company
+					has_idea = ETH_portugese_ethiopian_shipyard_company
+					has_idea = ETH_portugese_ethiopian_logging_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				#ENG = { country_event = { days = 1 id = ethiopia.34 } }
+		}
+	}	
+
+	ETH_portugal_corporate_coup_plan_guarantee_support = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.45
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_portugese_ethiopian_cotton_company
+				has_idea = ETH_portugese_ethiopian_shipyard_company
+				has_idea = ETH_portugese_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_portugese_ethiopian_cotton_company
+					has_idea = ETH_portugese_ethiopian_shipyard_company
+					has_idea = ETH_portugese_ethiopian_logging_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			POR = { country_event = { days = 1 id = ethiopia.175 } }
+			hidden_effect = {
+				
+				
+			}
+		}
+	}
+
+	ETH_portugal_corporate_coup_plan_initiate_coup = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.60
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_portugese_ethiopian_cotton_company
+				has_idea = ETH_portugese_ethiopian_shipyard_company
+				has_idea = ETH_portugese_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_portugese_ethiopian_cotton_company
+				has_idea = ETH_portugese_ethiopian_shipyard_company
+				has_idea = ETH_portugese_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				POR = { country_event = { days = 1 id = ethiopia.178 } }
+				set_country_flag = ETH_Coup_Started
+		}
+	}
+
+	ETH_portugal_coup_volunteers = {
+
+		available = {
+			AND = { 
+				has_country_flag = ETH_corporate_coup_support
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_portugese_ethiopian_cotton_company
+					has_idea = ETH_portugese_ethiopian_shipyard_company
+					has_idea = ETH_portugese_ethiopian_logging_company
+				}
+			}
+		}
+
+		visible = {
+			AND = { 
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_portugese_ethiopian_cotton_company
+					has_idea = ETH_portugese_ethiopian_shipyard_company
+					has_idea = ETH_portugese_ethiopian_logging_company
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 500
+				producer = POR
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_1
+				amount = 500
+				producer = POR
+			}
+			add_manpower = 5000
+		}
+	}
+
+	ETH_portugal_coup_plea_for_support = {
+
+		available = {
+			AND = { 
+				NOT = {
+					has_country_flag = ETH_corporate_coup_support
+				}
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_portugese_ethiopian_cotton_company
+					has_idea = ETH_portugese_ethiopian_shipyard_company
+					has_idea = ETH_portugese_ethiopian_logging_company
+				}
+			}
+		}
+
+		visible = {
+			AND = { 
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_portugese_ethiopian_cotton_company
+					has_idea = ETH_portugese_ethiopian_shipyard_company
+					has_idea = ETH_portugese_ethiopian_logging_company
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		days_remove = 30
+		
+		modifier = {
+			political_power_gain = -1
+		}
+		
+		remove_effect = {
+			set_country_flag = ETH_corporate_coup_support
+		}
+	}
+
+}
+
+ETH_ENG_Company = {
+
+
+	ETH_british_companies_shipyard_company = {
+
+		available = {
+			has_idea = ETH_anglo_ethiopian_shipyard_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			activate_mission = ETH_british_export_shipyard_quota
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = { 
+							building = dockyard
+							size > 0 
+							include_locked = yes 
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+			}
+			set_country_flag = ETH_company_established
+			add_popularity = {
+						ideology = chauvinist_populism
+						popularity = 0.07
+			}
+		}
+	}
+
+	ETH_british_export_shipyard_quota = {
+
+		available = {
+				has_resources_amount = {
+					resource = oil
+					amount > 11
+					state = 815
+				}
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+		}
+
+		visible = {
+				always = no
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+		
+		days_remove = 360
+		
+		 remove_effect = {
+				ENG = { country_event = { days = 1 id = ethiopia.28 } }
+		}
+	}
+	
+	ETH_british_companies_rubber_plantation = {
+
+		available = {
+			has_idea = ETH_anglo_ethiopian_rubber_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			activate_mission = ETH_british_export_rubber_quota
+			add_resource = { 
+						type = rubber 
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+			add_popularity = {
+						ideology = chauvinist_populism
+						popularity = 0.07
+			}
+		}
+	}
+
+	ETH_british_export_rubber_quota = {
+
+		available = {
+				has_resources_amount = {
+					resource = rubber
+					amount > 11
+					state = 815
+				}
+				has_idea = ETH_anglo_ethiopian_rubber_company
+		}
+
+		visible = {
+				always = no
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+		
+		days_remove = 360
+		
+		 remove_effect = {
+				ENG = { country_event = { days = 1 id = ethiopia.28 } }
+		}
+	}
+
+	ETH_british_companies_cotton_plantation = {
+
+		available = {
+			has_idea = ETH_anglo_ethiopian_cotton_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			activate_mission = ETH_british_export_cotton_quota
+			add_resource = { 
+						type = cotton 
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+			add_popularity = {
+						ideology = chauvinist_populism
+						popularity = 0.07
+			}
+		}
+	}
+
+	ETH_british_export_cotton_quota = {
+
+		available = {
+				has_resources_amount = {
+					resource = cotton
+					amount > 11
+					state = 815
+				}
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				
+		}
+
+		visible = {
+				always = no
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+		
+		days_remove = 360
+		
+		 remove_effect = {
+				ENG = { country_event = { days = 1 id = ethiopia.28 } }
+				
+		}
+	}
+
+	ETH_lease_british_company_port = {
+
+		available = {
+			has_country_flag = ETH_company_established
+			any_owned_state={
+			#limit = {
+						is_coastal = yes
+			#}
+			}
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			set_country_flag = ETH_lease_british_company_port
+			add_popularity = {
+					ideology = chauvinist_populism
+					popularity = 0.09
+			}
+		}
+	}
+
+	ETH_british_railway_line = {
+
+		available = {
+			has_country_flag = ETH_lease_british_company_port
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				country_event = { days = 1 id = ethiopia.132 }
+		}
+	}
+
+	ETH_british_railway_infrastructure_construction = {
+
+		available = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			AND = {
+					has_tech = iron_railways
+			}
+		}
+
+		visible = {
+			has_country_flag = ETH_british_railway_line
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 180
+
+		cost = 0
+		
+		 remove_effect = {
+				country_event = { days = 1 id = ethiopia.138 }
+				custom_effect_tooltip = EDC_afr.6.t
+				hidden_effect = {
+					country_event = { id = EDC_afr.6 hours = 1 } 
+				}
+				815 = {
+					if={
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				
+				}
+		}
+	}
+
+	ETH_british_main_railway_route_construction = {
+
+		available = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			AND = {
+					has_tech = iron_railways
+					has_tech = steam_engine
+					has_tech = steam_locomotive
+			}
+		}
+
+		visible = {
+			has_country_flag = ETH_british_railway_infrastructure_construction
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 360
+
+		cost = 0
+		
+		 remove_effect = {
+				custom_effect_tooltip = EDC_afr_20ip
+				hidden_effect = {
+					country_event = { id = EDC_afr.6 hours = 1 }
+					country_event = { id = EDC_afr.6 hours = 1 } 
+				}
+				add_ideas = { AF_T_small_scale_railways }
+				set_country_flag = ETH_main_railway_route
+		}
+	}
+
+
+
+ETH_british_military_acess = {
+
+    available = {
+		AND = {
+			has_country_flag = ETH_main_railway_route
+			has_country_flag = ETH_company_established
+		}
+		OR = {
+			has_idea = ETH_anglo_ethiopian_cotton_company
+			has_idea = ETH_anglo_ethiopian_shipyard_company
+			has_idea = ETH_anglo_ethiopian_rubber_company
+		}
+    }
+
+    visible = {
+		OR = {
+			has_idea = ETH_anglo_ethiopian_cotton_company
+			has_idea = ETH_anglo_ethiopian_shipyard_company
+			has_idea = ETH_anglo_ethiopian_rubber_company
+		}
+		
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		ENG = { country_event = { days = 1 id = ethiopia.173 } }
+		set_country_flag = ETH_british_military_acess
+    }
+}
+
+	ETH_british_tech = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_british_military_expertise
+			}
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				ENG = { country_event = { days = 1 id = ethiopia.26 } }
+				set_country_flag = ETH_british_tech
+		}
+	}
+
+	ETH_request_british_license = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_british_tech
+			}
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				ENG = { country_event = { days = 1 id = ethiopia.174 } }
+				set_country_flag = ETH_request_british_license
+		}
+	}
+
+	ETH_prepare_british_corporate_coup = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.30
+				has_country_flag = ETH_main_railway_route
+				has_country_flag = ETH_request_british_license
+			}
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		complete_effect = {
+				set_country_flag = ETH_Coup_Forming
+				set_country_flag = ETH_ENG_Coup_Forming
+		}
+	}
+}
+
+ETH_ENG_Corporate_Coup = {
+
+	ETH_british_corporate_coup_plan_tewodrosII_assassination = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.50
+				has_country_flag = ETH_Coup_Forming
+				has_country_leader = { 
+						ruling_only = yes 
+						name = "Tewodros II" 
+				}
+				
+			}
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_anglo_ethiopian_cotton_company
+					has_idea = ETH_anglo_ethiopian_shipyard_company
+					has_idea = ETH_anglo_ethiopian_rubber_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				#ENG = { country_event = { days = 1 id = ethiopia.34 } }
+		}
+	}	
+
+	ETH_british_corporate_coup_plan_guarantee_support = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.45
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_anglo_ethiopian_cotton_company
+					has_idea = ETH_anglo_ethiopian_shipyard_company
+					has_idea = ETH_anglo_ethiopian_rubber_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			ENG = { country_event = { days = 1 id = ethiopia.175 } }
+			hidden_effect = {
+				
+				
+			}
+		}
+	}
+
+	ETH_british_corporate_coup_plan_initiate_coup = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.60
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_anglo_ethiopian_cotton_company
+				has_idea = ETH_anglo_ethiopian_shipyard_company
+				has_idea = ETH_anglo_ethiopian_rubber_company
+			}
+			
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				ENG = { country_event = { days = 1 id = ethiopia.178 } }
+				set_country_flag = ETH_Coup_Started
+		}
+	}
+
+	ETH_british_coup_volunteers = {
+
+		available = {
+			AND = { 
+				has_country_flag = ETH_corporate_coup_support
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_anglo_ethiopian_cotton_company
+					has_idea = ETH_anglo_ethiopian_shipyard_company
+					has_idea = ETH_anglo_ethiopian_rubber_company
+				}
+			}
+		}
+
+		visible = {
+				OR = {
+					has_idea = ETH_anglo_ethiopian_cotton_company
+					has_idea = ETH_anglo_ethiopian_shipyard_company
+					has_idea = ETH_anglo_ethiopian_rubber_company
+				}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		days_remove = 60
+		
+		modifier = {
+		}
+		
+		remove_effect = {
+			add_war_support = -0.06
+		}
+		
+		complete_effect = {
+			army_experience = 10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_1
+				amount = 500
+				producer = ENG
+			}
+			add_manpower = 5000
+			add_war_support = 0.15
+		}
+	}
+
+	ETH_british_coup_plea_for_support = {
+
+		available = {
+			AND = { 
+				NOT = {
+					has_country_flag = ETH_corporate_coup_support
+				}
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_anglo_ethiopian_cotton_company
+					has_idea = ETH_anglo_ethiopian_shipyard_company
+					has_idea = ETH_anglo_ethiopian_rubber_company
+				}
+			}
+		}
+
+		visible = {
+			AND = { 
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_anglo_ethiopian_cotton_company
+					has_idea = ETH_anglo_ethiopian_shipyard_company
+					has_idea = ETH_anglo_ethiopian_rubber_company
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		days_remove = 30
+		
+		modifier = {
+			political_power_gain = -1
+		}
+		
+		remove_effect = {
+			set_country_flag = ETH_corporate_coup_support
+		}
+	}
+
+}
+
+ETH_FRA_Company = {
+
+	ETH_french_companies_shipyard_company = {
+
+		available = {
+			has_idea = ETH_french_ethiopian_shipyard_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		remove_effect = {
+			activate_mission = ETH_french_export_shipyard_quota
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 0 
+							include_locked = yes 
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+			}
+			set_country_flag = ETH_company_established
+			add_popularity = {
+				ideology = chauvinist_populism
+				popularity = 0.07
+			}
+		}
+	}
+	
+	ETH_french_export_shipyard_quota = {
+
+		available = {
+				has_resources_amount = {
+					resource = oil
+					amount > 11
+					state = 815
+				}
+				has_idea = ETH_french_ethiopian_shipyard_company
+		}
+
+		visible = {
+				always = no
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+		
+		days_remove = 360
+		
+		 remove_effect = {
+				FRA = { country_event = { days = 1 id = ethiopia.28 } }
+		}
+	}
+	
+	ETH_french_companies_rubber_plantation = {
+
+		available = {
+			has_idea = ETH_french_ethiopian_logging_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			activate_mission = ETH_french_export_rubber_quota
+			add_resource = { 
+						type = rubber 
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+			add_popularity = {
+						ideology = chauvinist_populism
+						popularity = 0.07
+			}
+		}
+	}
+
+	ETH_french_export_rubber_quota = {
+
+		available = {
+				has_resources_amount = {
+					resource = rubber
+					amount > 11
+					state = 815
+				}
+				has_idea = ETH_french_ethiopian_logging_company
+		}
+
+		visible = {
+				always = no
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+		
+		days_remove = 360
+		
+		 remove_effect = {
+				FRA = { country_event = { days = 1 id = ethiopia.28 } }
+		}
+	}
+
+	ETH_french_companies_cotton_plantation = {
+
+		available = {
+			has_idea = ETH_french_ethiopian_cotton_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			activate_mission = ETH_french_export_cotton_quota
+			add_resource = { 
+						type = cotton 
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+			add_popularity = {
+						ideology = chauvinist_populism
+						popularity = 0.07
+			}
+		}
+	}
+
+	ETH_french_export_cotton_quota = {
+
+		available = {
+				has_resources_amount = {
+					resource = cotton
+					amount > 11
+					state = 815
+				}
+				has_idea = ETH_french_ethiopian_cotton_company
+				
+		}
+
+		visible = {
+				always = no
+			
+		}
+		
+		fire_only_once = no
+
+		cost = 0
+		
+		days_remove = 360
+		
+		 remove_effect = {
+				FRA = { country_event = { days = 1 id = ethiopia.28 } }
+				
+		}
+	}
+
+	ETH_lease_french_company_port = {
+
+		available = {
+			has_country_flag = ETH_company_established
+			any_owned_state={
+				is_coastal = yes
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			set_country_flag = ETH_lease_french_company_port
+			add_popularity = {
+					ideology = chauvinist_populism
+					popularity = 0.09
+			}
+		}
+	}
+
+	ETH_french_railway_line = {
+
+		available = {
+			has_country_flag = ETH_lease_french_company_port
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				country_event = { days = 1 id = ethiopia.132 }
+		}
+	}
+
+	ETH_french_railway_infrastructure_construction = {
+
+		available = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			AND = {
+					has_tech = iron_railways
+			}
+		}
+
+		visible = {
+			has_country_flag = ETH_french_railway_line
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 180
+
+		cost = 0
+		
+		remove_effect = {
+				country_event = { days = 1 id = ethiopia.138 }
+				custom_effect_tooltip = EDC_afr.6.t
+				hidden_effect = {
+					country_event = { id = EDC_afr.6 hours = 1 } 
+				}
+				815 = {
+					if={
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				
+				}
+		}
+	}
+
+	ETH_french_main_railway_route_construction = {
+
+		available = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			AND = {
+					has_tech = iron_railways
+					has_tech = steam_engine
+					has_tech = steam_locomotive
+			}
+		}
+
+		visible = {
+			has_country_flag = ETH_french_railway_infrastructure_construction
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 360
+
+		cost = 0
+		
+		 remove_effect = {
+				custom_effect_tooltip = EDC_afr_20ip
+				hidden_effect = {
+					country_event = { id = EDC_afr.6 hours = 1 }
+					country_event = { id = EDC_afr.6 hours = 1 } 
+				}
+				add_ideas = { AF_T_small_scale_railways }
+				set_country_flag = ETH_main_railway_route
+		}
+	}
+
+	ETH_french_military_acess = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_main_railway_route
+				has_country_flag = ETH_company_established
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			FRA = { country_event = { days = 1 id = ethiopia.173 } }
+			set_country_flag = ETH_french_military_acess
+		}
+	}
+
+	ETH_french_tech = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_french_military_expertise
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				FRA = { country_event = { days = 1 id = ethiopia.26 } }
+				set_country_flag = ETH_french_tech
+		}
+	}
+
+	ETH_request_french_license = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_french_tech
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				FRA = { country_event = { days = 1 id = ethiopia.174 } }
+				set_country_flag = ETH_request_french_license
+		}
+	}
+
+	ETH_prepare_french_corporate_coup = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.30
+				has_country_flag = ETH_main_railway_route
+				has_country_flag = ETH_request_french_license
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		complete_effect = {
+				set_country_flag = ETH_Coup_Forming
+				set_country_flag = ETH_FRA_Coup_Forming
+		}
+	}
+}
+
+ETH_FRA_Corporate_Coup = {
+
+	ETH_french_corporate_coup_plan_tewodrosII_assassination = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.50
+				has_country_flag = ETH_Coup_Forming
+				has_country_leader = { 
+						ruling_only = yes 
+						name = "Tewodros II" 
+				}
+				
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_french_ethiopian_cotton_company
+					has_idea = ETH_french_ethiopian_shipyard_company
+					has_idea = ETH_french_ethiopian_logging_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				#FRA = { country_event = { days = 1 id = ethiopia.34 } }
+		}
+	}	
+
+	ETH_french_corporate_coup_plan_guarantee_support = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.45
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_french_ethiopian_cotton_company
+					has_idea = ETH_french_ethiopian_shipyard_company
+					has_idea = ETH_french_ethiopian_logging_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			FRA = { country_event = { days = 1 id = ethiopia.175 } }
+			hidden_effect = {
+				
+				
+			}
+		}
+	}
+
+	ETH_french_corporate_coup_plan_initiate_coup = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.60
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_french_ethiopian_cotton_company
+				has_idea = ETH_french_ethiopian_shipyard_company
+				has_idea = ETH_french_ethiopian_logging_company
+			}
+			
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				FRA = { country_event = { days = 1 id = ethiopia.178 } }
+				set_country_flag = ETH_Coup_Started
+		}
+	}
+
+	ETH_french_coup_volunteers = {
+
+		available = {
+			AND = { 
+				has_country_flag = ETH_corporate_coup_support
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_french_ethiopian_cotton_company
+					has_idea = ETH_french_ethiopian_shipyard_company
+					has_idea = ETH_french_ethiopian_logging_company
+				}
+			}
+		}
+
+		visible = {
+				OR = {
+					has_idea = ETH_french_ethiopian_cotton_company
+					has_idea = ETH_french_ethiopian_shipyard_company
+					has_idea = ETH_french_ethiopian_logging_company
+				}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		days_remove = 60
+		
+		modifier = {
+		}
+		
+		remove_effect = {
+			add_war_support = -0.06
+		}
+		
+		complete_effect = {
+			army_experience = 10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 500
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_1
+				amount = 500
+				producer = FRA
+			}
+			add_manpower = 5000
+			add_war_support = 0.15
+		}
+	}
+
+	ETH_french_coup_plea_for_support = {
+
+		available = {
+			AND = { 
+				NOT = {
+					has_country_flag = ETH_corporate_coup_support
+				}
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_french_ethiopian_cotton_company
+					has_idea = ETH_french_ethiopian_shipyard_company
+					has_idea = ETH_french_ethiopian_logging_company
+				}
+			}
+		}
+
+		visible = {
+			AND = { 
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_french_ethiopian_cotton_company
+					has_idea = ETH_french_ethiopian_shipyard_company
+					has_idea = ETH_french_ethiopian_logging_company
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		days_remove = 30
+		
+		modifier = {
+			political_power_gain = -1
+		}
+		
+		remove_effect = {
+			set_country_flag = ETH_corporate_coup_support
+		}
+	}
+}
+
+
+ETH_PRS_Company = {
+
+
+	ETH_german_companies_shipyard_company = {
+
+		available = {
+			has_idea = ETH_german_ethiopian_shipyard_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = { 
+							building = dockyard
+							size > 0 
+							include_locked = yes 
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+			}
+			set_country_flag = ETH_company_established
+		}
+	}
+	
+	ETH_german_companies_rubber_plantation = {
+
+		available = {
+			has_idea = ETH_german_ethiopian_rubber_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			add_resource = { 
+						type = rubber
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+		}
+	}
+
+	ETH_german_companies_cotton_plantation = {
+
+		available = {
+			has_idea = ETH_german_ethiopian_cotton_company
+		}
+
+		visible = {
+			always = no
+			
+		}
+		
+		days_remove = 120
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 remove_effect = {
+			add_resource = { 
+						type = cotton
+						amount = 12 
+						state = 815
+			}
+			set_country_flag = ETH_company_established
+		}
+	}
+
+	ETH_lease_german_company_port = {
+
+		available = {
+			has_country_flag = ETH_company_established
+			any_owned_state = {
+				is_coastal = yes
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			set_country_flag = ETH_lease_german_company_port
+			add_popularity = {
+					ideology = chauvinist_populism
+					popularity = 0.09
+			}
+		}
+	}
+
+	ETH_german_railway_line = {
+
+		available = {
+			has_country_flag = ETH_lease_german_company_port
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				country_event = { days = 1 id = ethiopia.144 }
+		}
+	}
+
+	ETH_german_railway_infrastructure_construction = {
+
+		available = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			AND = {
+					has_tech = iron_railways
+			}
+		}
+
+		visible = {
+			has_country_flag = ETH_german_railway_line
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 180
+
+		cost = 0
+		
+		 remove_effect = {
+				country_event = { days = 1 id = ethiopia.151 }
+				custom_effect_tooltip = EDC_afr.6.t
+				hidden_effect = {
+					country_event = { id = EDC_afr.6 hours = 1 } 
+				}
+				815 = {
+					if={
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				
+				}
+		}
+	}
+
+	ETH_german_main_railway_route_construction = {
+
+		available = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			AND = {
+					has_tech = iron_railways
+					has_tech = steam_engine
+					has_tech = steam_locomotive
+			}
+		}
+
+		visible = {
+			has_country_flag = ETH_german_railway_infrastructure_construction
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 360
+
+		cost = 0
+		
+		 remove_effect = {
+				custom_effect_tooltip = EDC_afr_20ip
+				hidden_effect = {
+					country_event = { id = EDC_afr.6 hours = 1 }
+					country_event = { id = EDC_afr.6 hours = 1 } 
+				}
+				add_ideas = { AF_T_small_scale_railways }
+				set_country_flag = ETH_main_railway_route
+		}
+	}
+
+	ETH_german_military_expertise = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_lease_german_company_port
+				has_country_flag = ETH_german_military_acess
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				add_manpower = 5000
+				if = {
+					limit = {
+						AND = {
+							PRS = {
+								exists = yes 
+							}
+							GER = {
+								exists = no
+							}
+						}
+					}
+					add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = PRS }
+					add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = PRS }
+				}
+				if = {
+					limit = {
+						AND = {
+							GER = {
+								exists = yes 
+							}
+							PRS = {
+								exists = no
+							}
+						}
+					}	
+					add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = GER }
+					add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = GER }
+				}
+				if = {
+					limit = {
+						AND = {
+							GER = {
+								exists = yes 
+							}
+							PRS = {
+								exists = yes
+							}
+						}
+					}
+					add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = PRS }
+					add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = PRS }
+				}
+				
+				set_country_flag = ETH_german_military_expertise
+				add_popularity = {
+					ideology = chauvinist_populism
+					popularity = 0.03
+				}
+		}
+	}
+
+	ETH_german_military_acess = {
+
+		available = {
+			has_country_flag = ETH_company_established
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			set_country_flag = ETH_german_military_acess
+		}
+	}
+
+
+	ETH_german_tech = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_german_military_expertise
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			if = {
+				limit = {
+					AND = {
+						PRS = {
+							exists = yes 
+						}
+						GER = {
+							exists = no
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.26 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = no
+						}
+					}
+				}
+				GER = { country_event = { days = 1 id = ethiopia.26 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = yes
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.26 } }
+			}
+			set_country_flag = ETH_german_tech
+		}
+	}
+
+	ETH_request_german_license = {
+
+		available = {
+			AND = {
+				has_country_flag = ETH_german_tech
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+				
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+		 if = {
+				limit = {
+					AND = {
+						PRS = {
+							exists = yes 
+						}
+						GER = {
+							exists = no
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.174 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = no
+						}
+					}
+				}
+				GER = { country_event = { days = 1 id = ethiopia.174 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = yes
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.174 } }
+			}
+			set_country_flag = ETH_request_german_license
+		}
+	}
+
+	ETH_prepare_german_corporate_coup = {
+
+		available = {
+			AND = {
+				has_idea = industrializing
+				chauvinist_populism > 0.60
+				has_country_flag = ETH_main_railway_route
+				has_country_flag = ETH_request_german_license
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			set_country_flag = ETH_Coup_Forming
+			set_country_flag = ETH_GER_Coup_Forming
+		}
+	}	
+}
+
+ETH_GER_Corporate_Coup = {
+
+	ETH_german_corporate_coup_plan_tewodrosII_assassination = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.50
+				has_country_flag = ETH_Coup_Forming
+				has_country_leader = { 
+						ruling_only = yes 
+						name = "Tewodros II" 
+				}
+				
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_german_ethiopian_cotton_company
+					has_idea = ETH_german_ethiopian_shipyard_company
+					has_idea = ETH_german_ethiopian_rubber_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+				#ENG = { country_event = { days = 1 id = ethiopia.34 } }
+		}
+	}	
+
+	ETH_german_corporate_coup_plan_guarantee_support = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.45
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			AND = { 
+				OR = {
+					has_idea = ETH_german_ethiopian_cotton_company
+					has_idea = ETH_german_ethiopian_shipyard_company
+					has_idea = ETH_german_ethiopian_rubber_company
+				}
+				has_civil_war = no
+				NOT = {
+					has_country_flag = ETH_Coup_Started
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		complete_effect = {
+			if = {
+				limit = {
+					AND = {
+						PRS = {
+							exists = yes 
+						}
+						GER = {
+							exists = no
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.175 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = no
+						}
+					}
+				}
+				GER = { country_event = { days = 1 id = ethiopia.175 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = yes
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.175 } }
+			}
+			hidden_effect = {
+				
+				
+			}
+		}
+	}
+
+	ETH_german_corporate_coup_plan_initiate_coup = {
+
+		available = {
+			AND = {
+				chauvinist_populism > 0.60
+				has_country_flag = ETH_Coup_Forming
+				
+			}
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+		}
+
+		visible = {
+			OR = {
+				has_idea = ETH_german_ethiopian_cotton_company
+				has_idea = ETH_german_ethiopian_shipyard_company
+				has_idea = ETH_german_ethiopian_rubber_company
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			if = {
+				limit = {
+					AND = {
+						PRS = {
+							exists = yes 
+						}
+						GER = {
+							exists = no
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.178 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = no
+						}
+					}
+				}
+				GER = { country_event = { days = 1 id = ethiopia.178 } }
+			}
+			if = {
+				limit = {
+					AND = {
+						GER = {
+							exists = yes 
+						}
+						PRS = {
+							exists = yes
+						}
+					}
+				}
+				PRS = { country_event = { days = 1 id = ethiopia.178 } }
+			}
+			set_country_flag = ETH_Coup_Started
+		}
+	}
+
+	ETH_german_coup_volunteers = {
+
+		available = {
+			AND = { 
+				has_country_flag = ETH_corporate_coup_support
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_german_ethiopian_cotton_company
+					has_idea = ETH_german_ethiopian_shipyard_company
+					has_idea = ETH_german_ethiopian_rubber_company
+				}
+			}
+		}
+
+		visible = {
+			AND = { 
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_german_ethiopian_cotton_company
+					has_idea = ETH_german_ethiopian_shipyard_company
+					has_idea = ETH_german_ethiopian_rubber_company
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 500
+				producer = PRS
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_1
+				amount = 500
+				producer = PRS
+			}
+			add_manpower = 5000
+		}
+	}
+
+	ETH_german_coup_plea_for_support = {
+
+		available = {
+			AND = { 
+				NOT = {
+					has_country_flag = ETH_corporate_coup_support
+				}
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_german_ethiopian_cotton_company
+					has_idea = ETH_german_ethiopian_shipyard_company
+					has_idea = ETH_german_ethiopian_rubber_company
+				}
+			}
+		}
+
+		visible = {
+			AND = { 
+				has_civil_war = yes
+				OR = {
+					has_idea = ETH_german_ethiopian_cotton_company
+					has_idea = ETH_german_ethiopian_shipyard_company
+					has_idea = ETH_german_ethiopian_rubber_company
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		days_remove = 30
+		
+		modifier = {
+			political_power_gain = -1
+		}
+		
+		remove_effect = {
+			set_country_flag = ETH_corporate_coup_support
+		}
+	}
+
+}
+
+
+
+ETH_proclaim_coalition_against_islam_category = {
+
+
+	Proclaim_Coalition_1 = {
+
+		available = {
+			
+		}
+
+		visible = {
+			AND = {
+					has_completed_focus = ETH_keep_the_missionaries
+					has_completed_focus = ETH_convert_to_protestant
+					NOT = {
+						has_completed_focus = ETH_british_companies
+					}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			ENG = { country_event = { days = 1 id = ethiopia.47 } }
+			hidden_effect = {
+				ETH = { country_event = { days = 7 id = ethiopia.83 } }
+			}
+		}
+	}
+	
+
+	Proclaim_Coalition_2 = {
+
+		available = {
+			
+		}
+
+		visible = {
+			
+			AND = {
+				has_completed_focus = ETH_supress_the_missionaries
+				NOT = {
+						has_completed_focus = ETH_british_companies
+				}
+			}
+					
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			ENG = { country_event = { days = 1 id = ethiopia.53 } }
+			hidden_effect = {
+				ETH = { country_event = { days = 7 id = ethiopia.87 } }
+			}
+		}
+	}
+	
+	
+	Proclaim_Coalition_3 = {
+
+		available = {
+			
+		}
+
+		visible = {
+			
+			AND = {
+				has_completed_focus = ETH_keep_the_missionaries
+				NOT = {
+						has_completed_focus = ETH_convert_to_protestant
+						has_completed_focus = ETH_british_companies
+				}
+			}
+			
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			ENG = { country_event = { days = 1 id = ethiopia.59 } }
+			hidden_effect = {
+				ETH = { country_event = { days = 7 id = ethiopia.91 } }
+			}
+		}
+	}
+	
+	
+	Proclaim_Coalition_4 = {
+
+		available = {
+				
+		}
+
+		visible = {
+			AND = {
+					has_completed_focus = ETH_british_companies
+					has_completed_focus = ETH_supress_the_missionaries
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			ENG = { country_event = { days = 1 id = ethiopia.65 } }
+			hidden_effect = {
+				ETH = { country_event = { days = 7 id = ethiopia.95 } }
+			}
+		}
+	}
+	
+	
+	Proclaim_Coalition_5 = {
+
+		available = {
+			
+		}
+
+		visible = {
+			AND = {
+					has_completed_focus = ETH_british_companies
+					has_completed_focus = ETH_keep_the_missionaries
+					has_completed_focus = ETH_convert_to_protestant
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		 complete_effect = {
+			ENG = { country_event = { days = 1 id = ethiopia.71 } }
+			hidden_effect = {
+				ETH = { country_event = { days = 7 id = ethiopia.104 } }
+			}
+		}
+	}
+	
+	
+	Proclaim_Coalition_6 = {
+
+		available = {
+			
+		}
+
+		visible = {
+			AND = {
+					has_completed_focus = ETH_british_companies
+					has_completed_focus = ETH_keep_the_missionaries
+					NOT = {
+						has_completed_focus = ETH_convert_to_protestant
+					}
+			}
+		}
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		complete_effect = {
+			ENG = { country_event = { days = 1 id = ethiopia.77 } }
+			hidden_effect = {
+				ETH = { country_event = { days = 7 id = ethiopia.113 } }
+			}
+		}
+	}
+}
+
+ETH_Internal_Affairs = {
+
+
+	ETH_Operation_Strike_Eritrea = {
+
+		available = {
+				ETH = { 
+					controls_state = 550
+				}
+		}
+
+		visible = {
+			ETH = {
+				has_war_with = EGY
+			}
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = yes
+
+		cost = 0
+		
+		days_remove = 200
+		
+		cancel_trigger = {
+			
+			
+		}
+		
+		
+		
+		remove_effect = {
+			if = {
+				limit = {
+					ETH = {
+						has_war_with = EGY
+					}
+				}
+				ETH = {
+					white_peace = EGY
+					white_peace = MED
+				}
+			}
+		}
+		
+		complete_effect = {
+			ETH = {
+				white_peace = EGY
+				white_peace = MED
+			}
+			ETH = {
+				transfer_state = 550
+			}
+			hidden_effect = { 
+				ETH = {
+					transfer_state = 817
+					transfer_state = 816
+					transfer_state = 815
+				}
+				MED = {
+					transfer_state = 983
+					transfer_state = 268
+				}
+			}
+		}
+	}
+
+	ETH_Fortify_Egyption_Border_Quickly = {
+
+		available = {
+			always = no
+		}
+
+		visible = {
+			always = no
+		}
+		
+		days_remove = 80
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		remove_effect = {
+			
+		}
+	}
+
+	ETH_Fortify_Egyption_Border_Secretly = {
+
+		available = {
+			always = no
+		}
+
+		visible = {
+			always = no
+		}
+		
+		days_remove = 160
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		remove_effect = {
+			
+		}
+	}
+
+	ETH_Egyption_Border_Skirmish_Holdout = {
+
+		available = {
+			always = no
+		}
+
+		visible = {
+			always = no
+		}
+		
+		is_good = yes
+		
+		days_remove = 30
+		
+		fire_only_once = yes
+
+		cost = 0
+		
+		cancel_trigger = {
+				hidden_trigger = {
+					NOT = {
+						has_border_war_between = {
+							attacker = 549
+							defender = 817
+						}
+					}
+				}
+		}
+		
+		modifier = {
+			
+		}
+		
+		
+		remove_effect = {
+			finalize_border_war = {
+				attacker_win = no
+				attacker = 549
+				defender = 817
+			}
+			hidden_effect = {
+				remove_ideas = ETH_the_generals_plan_1
+				remove_ideas = ETH_the_generals_plan_2
+				remove_ideas = ETH_the_generals_plan_3
+			}
+		}
+		
+		timeout_effect = {
+			finalize_border_war = {
+				attacker_win = no
+				attacker = 549
+				defender = 817
+			}
+			hidden_effect = {
+				remove_ideas = ETH_the_generals_plan_1
+				remove_ideas = ETH_the_generals_plan_2
+				remove_ideas = ETH_the_generals_plan_3
+			}
+		}
+	}
+
+}
+
+ETH_RUS_Diplomacy = {
+
+	ETH_Purchase_Russian_Guns = {
+
+		available = {
+			RUS = {
+					has_tech = rifle_equipment6
+			}
+		}
+
+		visible = {
+				tag = ETH
+				date > 1890.1.1
+		}
+	
+		fire_only_once = no
+
+		cost = 0
+	
+		days_remove = 60
+		
+		complete_effect = {
+			add_political_power = -150
+			hidden_effect = { 
+				RUS = { add_political_power = 150 }
+			}
+		}
+	
+		remove_effect = {
+			
+		}
+	}
+}

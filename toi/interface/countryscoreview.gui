@@ -153,7 +153,7 @@ guiTypes = {
 				name = "title2"
 				position = { x = 275 y = 58 }
 				font = "hoi_20bs"
-				text = "Score"
+				text = "Power Projection"
 				maxWidth = 132
 				maxHeight = 68
 				format = centre
@@ -323,8 +323,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="Power Status"
 			font = "hoi_18mbs"
-			position = { x = 445 y = 40 }
-			#text = "[?global.score_array_position^i]"
+			position = { x = 530 y = 40 }
+			text = "[?global.score_tag_array^i.GetPowerStatusName]"
 			format = centre
 			maxWidth = 132
 			maxHeight = 68
@@ -334,8 +334,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="Government Type"
 			font = "hoi_18mbs"
-			position = { x = 545 y = 40 }
-			#text = "[?global.score_array_position^i]"
+			position = { x = 680 y = 40 }
+			text = "[?global.score_tag_array^i.GetGovTypeName]"
 			format = centre
 			maxWidth = 132
 			maxHeight = 68
@@ -344,7 +344,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="Population"
 			font = "hoi_18mbs"
-			position = { x = 800 y = 40 }
+			position = { x = 805 y = 40 }
 			text = "[?global.population_array^i|2] M" 
 			format = centre
 			maxWidth = 132

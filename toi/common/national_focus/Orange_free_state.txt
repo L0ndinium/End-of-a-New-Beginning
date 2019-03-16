@@ -9,7 +9,6 @@ focus_tree = {
 			}
 		}
 	}
-	default = yes
 	focus = {
 		id = ofs_vic_complete_legal_reforms
 		icon = GFX_goal_focus_reform_administration
@@ -894,6 +893,9 @@ focus_tree = {
 			add_ideas = {
 				afr_ofs_invest_in_resource_discovery
 			}
+			hidden_effect={
+				load_focus_tree = Orange_free_state
+			}
 		}
 		available_if_capitulated = no
 		ai_will_do = {
@@ -912,6 +914,9 @@ focus_tree = {
 			focus = ofs_vic_invest_in_resource_discovery
 		}
 		available = {
+			has_country_flag = ofs_discovered_coal
+		}
+		allow_branch = {
 			has_country_flag = ofs_discovered_coal
 		}
 		completion_reward = {
@@ -941,6 +946,9 @@ focus_tree = {
 			focus = ofs_vic_invest_in_resource_discovery
 		}
 		available = {
+			has_country_flag = ofs_discovered_gold
+		}
+		allow_branch = {
 			has_country_flag = ofs_discovered_gold
 		}
 		completion_reward = {
@@ -986,6 +994,9 @@ focus_tree = {
 		}
 		dynamic =yes
 		available = {
+			has_country_flag = ofs_discovered_diamonds
+		}
+		allow_branch = {
 			has_country_flag = ofs_discovered_diamonds
 		}
 		available_if_capitulated = no

@@ -1,0 +1,17 @@
+﻿division_template = {
+  name = "African Infantry"
+
+  regiments = {
+    tribal_infantry = { x = 0 y = 0}
+  }
+}
+
+units = {
+		#Capital
+		division= {
+			name = "African Infantry"
+			location = 13214
+			division_template = "African Infantry"
+			start_experience_factor = 0.1
+		}
+}

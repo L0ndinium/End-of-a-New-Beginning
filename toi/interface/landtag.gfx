@@ -1,0 +1,11 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_landtag_name_bg"
+		texturefile = "gfx/interface/landtag/landtag_name_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_landtag_pres_bg"
+		texturefile = "gfx/interface/landtag/landtag_pres_bg.dds"
+	}
+}

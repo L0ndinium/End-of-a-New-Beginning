@@ -1,0 +1,148 @@
+
+eoanb_add_1_liberty = { 
+    hidden_effect = {
+        add_to_variable = { modified_liberty = 1 }
+	}
+	custom_effect_tooltip = eoanb_add_1_liberty 
+}
+
+eoanb_add_2_liberty = { 
+    hidden_effect = {
+        add_to_variable = { modified_liberty = 2 }
+	}
+	custom_effect_tooltip = eoanb_add_2_liberty 
+}
+
+eoanb_add_3_liberty = { 
+    hidden_effect = {
+        add_to_variable = { modified_liberty = 3 }
+	}
+	custom_effect_tooltip = eoanb_add_3_liberty 
+}
+
+eoanb_add_4_liberty = { 
+    hidden_effect = {
+        add_to_variable = { modified_liberty = 4 }
+	}
+	custom_effect_tooltip = eoanb_add_4_liberty 
+}
+
+eoanb_add_5_liberty = { 
+    hidden_effect = {
+        add_to_variable = { modified_liberty = 5 }
+	}
+	custom_effect_tooltip = eoanb_add_5_liberty 
+}
+
+eoanb_add_10_liberty = { 
+    hidden_effect = {
+        add_to_variable = { modified_liberty = 10 }
+	}
+	custom_effect_tooltip = eoanb_add_10_liberty 
+}
+
+eoanb_add_5_consciousness = { 
+    hidden_effect = {
+        add_to_variable = { modified_consciousness = 5 }
+	}
+	custom_effect_tooltip = eoanb_add_5_consciousness
+}
+
+eoanb_add_10_consciousness = { 
+    hidden_effect = {
+        add_to_variable = { modified_consciousness = 10 }
+	}
+	custom_effect_tooltip = eoanb_add_10_consciousness 
+}
+
+eoanb_add_20_consciousness = { 
+    hidden_effect = {
+        add_to_variable = { modified_consciousness = 20 }
+	}
+	custom_effect_tooltip = eoanb_add_20_consciousness 
+}
+
+eoanb_add_1_consciousness = { 
+    hidden_effect = {
+        add_to_variable = { modified_consciousness = 1 }
+	}
+	custom_effect_tooltip = eoanb_add_1_consciousness
+}
+
+
+eoanb_remove_1_liberty = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_liberty = 1 }
+	}
+	custom_effect_tooltip = eoanb_remove_1_liberty 
+}
+
+eoanb_remove_2_liberty = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_liberty = 2 }
+	}
+	custom_effect_tooltip = eoanb_remove_2_liberty 
+}
+
+eoanb_remove_3_liberty = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_liberty = 3 }
+	}
+	custom_effect_tooltip = eoanb_remove_3_liberty 
+}
+
+eoanb_remove_4_liberty = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_liberty = 4 }
+	}
+	custom_effect_tooltip = eoanb_remove_4_liberty 
+}
+
+eoanb_remove_5_liberty = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_liberty = 5 }
+	}
+	custom_effect_tooltip = eoanb_remove_5_liberty 
+}
+
+eoanb_remove_10_liberty = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_liberty = 10 }
+	}
+	custom_effect_tooltip = eoanb_remove_10_liberty 
+}
+
+eoanb_remove_5_consciousness = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_consciousness = 5 }
+	}
+	custom_effect_tooltip = eoanb_remove_5_consciousness
+}
+
+eoanb_remove_10_consciousness = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_consciousness = 10 }
+	}
+	custom_effect_tooltip = eoanb_remove_10_consciousness 
+}
+
+eoanb_remove_15_consciousness = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_consciousness = 15 }
+	}
+	custom_effect_tooltip = eoanb_remove_15_consciousness 
+}
+
+eoanb_remove_20_consciousness = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_consciousness = 20 }
+	}
+	custom_effect_tooltip = eoanb_remove_20_consciousness 
+}
+
+eoanb_remove_1_consciousness = { 
+    hidden_effect = {
+        subtract_from_variable = { modified_consciousness = 1 }
+	}
+	custom_effect_tooltip = eoanb_remove_1_consciousness
+}

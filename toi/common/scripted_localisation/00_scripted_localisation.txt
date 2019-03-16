@@ -88,25 +88,143 @@ defined_text = {
 	name = GetPowerStatusName
 	text = {
 		trigger = {
-            check_variable = { this.score_array_position_var <  8 }			
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 8		
+			compare = less_than_or_equals 
+			}			
 		}
-		localization_key = eoanb_lockey_power_status_great_power 
+		localization_key = "Great Power" 
 	}
 	text = {
 		trigger = {	
-            check_variable = { this.score_array_position_var >  7 }		
-            check_variable = { this.score_array_position_var <  16 }				
+            check_variable = { this.score_array_position_var >  8 }		
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 16 		
+			compare = less_than_or_equals 
+			}			
 		}
-		localization_key = eoanb_lockey_power_status_secondary_power
+		localization_key = "Secondary Power"
 	}
 	text = {
 		trigger = {		
             check_variable = { this.score_array_position_var >  16 }		
-            check_variable = { this.score_array_position_var <  40 }		
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 40 		
+			compare = less_than_or_equals 
+			}		
 		}
-		localization_key = eoanb_lockey_power_status_minor_power
+		localization_key = "Minor Power"
 	}
 	text = {
-		localization_key = eoanb_lockey_power_status_unsignificant_power
+		localization_key = "Unsignificant Power"
+	}
+}
+
+defined_text = {
+	name = GetGovTypeName
+	text = {
+		trigger = {
+            has_idea = absolute_monarchy		
+		}
+		localization_key = "Absolute Monarchy" 
+	}
+	text = {
+		trigger = {	
+            has_idea = constitutional_monarchy			
+		}
+		localization_key = "Constitutional Monarchy"
+	}
+	text = {
+		trigger = {		
+            has_idea = parliamentary_monarchy
+		}
+		localization_key = "Parliamentary Monarchy"
+	}
+	text = {
+		trigger = {		
+            has_idea = parliamentary_republic
+		}
+		localization_key = "Parliamentary Republic"
+	}
+	text = {
+		trigger = {		
+            has_idea = semi_presidential_republic
+		}
+		localization_key = "Semi-Presidential Republic"
+	}
+	text = {
+		trigger = {		
+            has_idea = presidential_republic
+		}
+		localization_key = "Presidential Republic"
+	}
+	text = {
+		trigger = {		
+            has_idea = socialist_republic
+		}
+		localization_key = "Socialist Republic"
+	}
+	text = {
+		trigger = {		
+            has_idea = socialist_state
+		}
+		localization_key = "Socialist State"
+	}
+	text = {
+		trigger = {		
+            has_idea = revolutionary_government
+		}
+		localization_key = "Revolutionary Government"
+	}
+	text = {
+		trigger = {		
+            has_idea = totalitarian_dictatorship
+		}
+		localization_key = "Totalitarian Dictatorship"
+	}
+	text = {
+		trigger = {		
+            has_idea = free_city
+		}
+		localization_key = "Free City"
+	}
+	text = {
+		trigger = {		
+            has_idea = military_junta
+		}
+		localization_key = "Military Junta"
+	}
+	text = {
+	    localization_key = "Anarchy"
+	}
+}
+
+defined_text = {
+	name = GetInfluenceLevel
+	text = {
+		trigger = {
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 8		
+			compare = less_than_or_equals 
+			}			
+		}
+		localization_key = "Is a Great Power" 
+	}
+	text = {
+		trigger = {
+		THIS = {
+            check_variable = { 
+			    influencer_array^0 > 50 
+			}			
+		}
+		} 
+		localization_key = "Is in the sphere of [?influencer_tag_array^0.GetNameWithFlag]" 
+	}
+	text = {
+	    localization_key = "Independent Nation"
 	}
 }

@@ -1,0 +1,42 @@
+opinion_modifiers = { #Bavaria
+
+	bav_trias_result = {
+		value = 40
+	}
+
+	bav_give_right_good = {
+		value = 40
+	}
+	
+	bav_give_right_bad = {
+		value = -40
+	}
+	
+	bav_frankfurt_fuerstentag_good = {
+		value = 10
+	}
+	
+	bav_frankfurt_fuerstentag_bad = {
+		value = -10
+	}
+
+	bav_german_two = {
+		value = 20
+	}
+
+	bav_adopted_protestantism = {
+		value = 30
+	}
+	
+	bav_resign_to_war = {
+		value = -30
+	}
+	
+	bav_common_policy = {
+		value = 30
+	}
+	
+	bav_tried_common_policy = {
+		value = 10
+	}
+}

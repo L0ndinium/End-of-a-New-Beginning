@@ -23,7 +23,7 @@
  sepoy.6.d:0 "Hidden Event"
  sepoy.6.a:0 "Hidden Event"
 
-#USA 
+#USA
  usa.0.t:0 "The Divided States of America"
  usa.0.d:0 "It is a bleak time for the United States. Ever since we declared ourselves independent, we have been plagued by the issue of Slavery. Although the United States would implement policies on Slavery, such as the Act Prohibiting Importation of Slaves in 1807, but even still this institution would continue. \n \nThere were many compromises between the Free States and the Slave States. The Free States were found primarily in the North, which consisted of rockier soil and colder climates. These factors moved the North away from agriculture and toward industrialization, therefore pushing the instituion of slavery out of the North. Meanwhile, the South's warmer climate and rich soil made large, plantation-based agriculture ubiquitous in the region, and as such made the institution of slavery prevalent there. \n \nDebates would arise concerning which states would be allowed to have Slavery, resulting in a power struggle between the Northern States and Southern states, until the Missouri Compromise of 1820, which stipulated that the 36°30' line, which made up Missouri's southern border, become the new border between North and South. States North of this line would be free and states South of it would have slavery. \n \nThis Compromise would be broken 3 decades later, however, with the Mexican-American War resulting in states like Texas and California joining the Union. The size of Texas and the wish for California to become a free state reignited the debate over Slavery. This would lead to the Compromise of 1850, which was devised by Whig Senator Henry Clay and Democratic politician Stephen A. Douglas, and the compromise stipulated the introduction of a Fugitive Slave clause which sparked more tension, as well as the enactment of Popular Sovereignty, allowing for states themselves to choose between adopting slavery or becoming a free state. A notable issue with the idea of Popular Sovereignty arose with the Kansas-Nebraska Act of 1854, which led to issues such as the incident known as Bleeding Kansas, where Northern and Southern migrants to Kansas would incite violence to turn Kansas to their side of the Slave Debate. \n \nThe debate over Slavery has taken a hard turn, with the Whig party dead and the rise of the Republican Party, which received 33% of the vote in the Election of 1856, but had still lost the election to Buchanan, a Democrat. \n \nThe future of the United States is in question."
  usa.0.a:0 "Hail Columbia!"
@@ -80,7 +80,6 @@
  usa.10.a:0 "Republican Abraham Lincoln"
  usa.10.b:0 "Southern Democrat John Breckinridge"
  usa.10.c:0 "Northern Democrat Stephen Douglas"
- usa.10.e:0 "Constitutional Unionist John Bell"
  usa.11.t:0 "Abraham Lincoln Inaugurated"
  usa.11.d:0 "Earlier today, the new President Abraham Lincoln was sworn in as President of the United States. In his inaugural address, he argued that the Constitution created a more perfect union than the Articles of Confederation, and that the secession of the South be called illegal. He calls for the Union to be strong, or else the American Experiment will die."
  usa.11.a:0 "Inspiring Words"
@@ -1574,7 +1573,7 @@
  generic.19.b:0 "Empty Button"
  generic.19.c:0 "Empty Button"
  generic.19.e:0 "Exit Help Menu"
- 
+
  #Portugal
  portugal.1.t:0 "France delivers an ultimatum!"
  portugal.1.d:0 "Our people have captured a French barque in the Mozambique sea! The French have demanded that we are to release it immediately or they will consider this a declaration of war. They are now awaiting our response and we cannot stay silent on this matter. What shall we do?"
@@ -2320,7 +2319,7 @@
  peru.3.t:0 "Treaty of Mapasingue"
  peru.3.d:0 "Castilla to see that there would be no progress in the negotiations with Gabriel García Moreno, initiated dialogues with Guillermo Franco Herrera interviewing both in the first instance in the Peruvian steam Tumbes. After several agreements, a Peruvian army made up of 5000 men landed in Ecuadorian territory and lent itself to take Mapasingue, Tornero and Buijo pressuring Ecuadorian claims to be given up. Finally, the representatives of Castilla and Franco signed the Treaty of Mapasingue."
  peru.3.a:0 "An unequal treaty..but we have to move on."
- 
+
  #Hispaniola
  hispaniola.1.t:0 "Solution to Economic Downfall"
  hispaniola.1.d:0 "Our nation managed to keep itself together and stop the Haitian invasions. After years of peace, our economy is still destroyed from the war and we need drastic measures to change that. Pedro Santana, our leader, suggests that Spain annexes us."
@@ -2340,12 +2339,12 @@
  hispaniola.7.t:0 "Dominican Restoration War"
  hispaniola.7.d:0 "The Dominican generals Gregorio Luperon and Gaspar Polanco have began a revolt in the Dominican Republic! The pro-independence nationalists began rallying the farmers in Cibao revolted with our tariffs and our policy of taking their cattle. The rebellious and traitorous generals have gathered an enormous force and rumors say they are being supported by Haiti and Puerto Rican rebels."
  hispaniola.7.a:0 "We will not let them secede again!"
- 
+
  #Colombia
  colombia.1.t:0 "Decentralization of New Granada"
  colombia.1.d:0 "Mariano Ospina Rodriguez has made a new constitution that will greatly decentralize our nation to try and keep the liberal states appeased. New states will be formed and peace will be enforced upon them, not only this but the military will be strenghtened to protect from foreign threats and foreigners who helped us in the independence war will be naturalized."
  colombia.1.a:0 "This is a new dawn for Granada, Long live the Granadine Confederation!"
- 
+
  #Second Schleswig War
  eoanb_tt_event_secschwar_1:0 "§RFrederick VII will die.§!"
  secschwar.1.t:0 "Death of Frederick VII"
@@ -2544,13 +2543,13 @@
  sevenweekswar.3.t:0 "Austrian Maneuvers"
  sevenweekswar.3.d:0 "In Response to our ambition to unify Germany expressed by the reforms we have attempted to pass recently inside the German Confederation, Austria has mobilized its army and is doing maneuvers near our borders. Many of our military higher-ups seem concerned, and some have already urged us to take action."
  sevenweekswar.3.a:0 "Worrying."
- eoanb_tt_PRS_cant_unify:0 "§RThis will seriously impact our ability to unite Germany.§!"
- eoanb_tt_PRS_prepares_against_AUS:0 "§YWe will begin to make preparations within the next few days.§!"
+ eoanb_tt_PRS_cant_unify:0 "§RThis will seriously impact our ability to unite Germany.§!\n"
+ eoanb_tt_PRS_prepares_against_AUS:0 "§YWe will begin to make preparations within the next few days.§!\n"
  eoanb_om_PRS_AUS_socialism:0 "Influencing Politics"
  eoanb_om_PRS_RUS_alvensleben:0 "Alvensleben Conference"
  eoanb_om_PRS_AUS_hungary_seperatist:0 "Supported Hungarian Seperatists"
- eoanb_tt_PRS_invites_allies:0 "§GWe will invite friendly countries in the German Confederation.§!"
- eoanb_tt_AUS_invites_allies:0 "§GWe will invite friendly countries in the German Confederation.§!"
+ eoanb_tt_PRS_invites_allies:0 "§GWe will invite friendly countries in the German Confederation.§!\n"
+ eoanb_tt_AUS_invites_allies:0 "§GWe will invite friendly countries in the German Confederation.§!\n"
  eoanb_customeffect_sww_side_prs:0 "§YWe will support Prussia.§!"
  eoanb_customeffect_sww_side_aus:0 "§YWe will support Austria.§!"
  eoanb_customeffect_sww_side_mid:0 "§YWe will support the Middle States.§!"
@@ -2559,15 +2558,15 @@
  eoanb_flag_participated_in_bundestag:0 "This country participated in the Bundestag meeting."
  eoanb_tt_PRS_gerconfed_over:0 "§RThis marks the end of the German Confederation.§!"
  eoanb_flag_seven_weeks_war_ongoing:0 "The Seven Weeks War is currently ongoing."
- eoanb_tt_PRS_lost_sww:0 "§RWe will make peace with our enemies. Our factions will get dissolved. Sigmaringen will go to Württemberg, and Oldenburg will go to Hannover.§!"
- eoanb_tt_PRS_won_sww:0 "§GWe will make peace with our enemies. Our factions will get dissolved. We will annex Hannover, Parts of Schleswig and Parts of Hesse. We will be able to form the German Confederation.§!"
+ eoanb_tt_PRS_lost_sww:0 "§RWe will make peace with our enemies. Our factions will get dissolved. Sigmaringen will go to Württemberg, and Oldenburg will go to Hannover.§!\n"
+ eoanb_tt_PRS_won_sww:0 "§GWe will make peace with our enemies. Our factions will get dissolved. We will annex Hannover, Parts of Schleswig and Parts of Hesse. We will be able to form the German Confederation.§!\n"
  eoanb_tt_PRS_declares_saxony:0 "§YShould Austria enter the war, taking Prague will greatly aid our victory.§!\n"
  eoanb_flag_PRS_can_form_ngc:0 "Prussia can form the North German Confederation."
  eoanb_flag_won_7_weeks_war:0 "Prussia has won the Seven Weeks War."
  eoanb_tt_PRS_ngc_historical:0 "§GWe will form the North German Confederation as a Confederation consisting of us and our allies in the Seven Weeks War, who will become our puppets.§!\n\n"
  eoanb_tt_PRS_ngc_united:0 "§GWe will form the North German Confederation as a single country. This path could incite more revolts and be more expensive in an administrative sense but we could certainly profit from it.§!\n\n"
- eoanb_tt_PRS_ngc_united_joiners:0 "§GFrankfurt, Saxony, Thuringia and Hesse will join the Confederation.§!"
- eoanb_tt_PRS_ngc_historical_joiners:0 "§GFrankfurt, Saxony, Thuringia and Hesse will join the Confederation.§!"
+ eoanb_tt_PRS_ngc_united_joiners:0 "§GFrankfurt, Saxony, Thuringia and Hesse will join the Confederation.§!\n"
+ eoanb_tt_PRS_ngc_historical_joiners:0 "§GFrankfurt, Saxony, Thuringia and Hesse will join the Confederation.§!\n"
  sevenweekswar.4.t:0 "Preparations for War"
  sevenweekswar.4.d:0 "A military conflict with Austria is surely coming, and we need to do our best to prepare..."
  sevenweekswar.4.a:0 "Begin preparing."
@@ -3405,7 +3404,7 @@
  britainnews.1.a:0 "Finally, we are rid of them."
  britainnews.1.b:0 "Their lawmakers are class traitors!"
  britainnews.1.c:0 "Could be a wise move."
- 
+
  #British Colonies
  eoanb_tt_event_britishindia_1_a:0 "§RRevolt Risk§! will be §Glowered§! by up to §Y2§! points.\nIf §RRevolt Risk§! is already at §Y0§!, stability will §Gincrease§! by an extra §Y5%§!."
  britishindia.1.t:0 "The End of the Sepoy Revolt"
@@ -3472,7 +3471,7 @@
  britishcanada.10.t:0 "A new British Colombia"
  britishcanada.10.d:0 "As Canada is moving towards a real Confederation with the recently passed North America Acts, it is time for our region, too, to have changes in its administration. Some British Ministers have proposed a Union with Vancouver Island (which would also include Haida Gwaii). This would also help to make us independent of [HBC.GetNameDef]. We should try to pursue this opportunity as soon as possible."
  britishcanada.10.a:0 "The proceedings will start immediately."
- 
+
  #Crisis of 1873
  PRS_is_in_1873_crisis:0 "§Y[PRS.GetNameDef]§! is currently in an economic crisis§!"
  eighteenseventhreecrisis.1.t:0 "Economic Crisis"
@@ -3608,7 +3607,7 @@
  election.1.j:0 "The Anarchists!"
  election.1.k:0 "The Fundamentalists!"
  election.1.l:0 "Reelect the Current Leader!"
- 
+
  #Tsushima Crisis
  eoanb_flag_tsushima_ENG_allied_JAP:0 "Britain backs up Japan in the Tsushima Crisis"
  eoanb_flag_tsushima_ENG_denied_JAP:0 "Britain didn't help Japan in the Tsushima Crisis"

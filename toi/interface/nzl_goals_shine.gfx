@@ -32,10 +32,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_kingitanga_shine"
-		texturefile = "gfx/interface/goals/kingitanga.dds"
+		texturefile = "gfx/interface/goals/new_zealand/kingitanga.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/kingitanga.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/kingitanga.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -48,7 +48,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/kingitanga.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/kingitanga.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -63,10 +63,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_oppose_kingitanga_shine"
-		texturefile = "gfx/interface/goals/oppose_kingitanga.dds"
+		texturefile = "gfx/interface/goals/new_zealand/oppose_kingitanga.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/oppose_kingitanga.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/oppose_kingitanga.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -79,7 +79,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/oppose_kingitanga.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/oppose_kingitanga.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -94,10 +94,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_investigate_waikato_shine"
-		texturefile = "gfx/interface/goals/waikato_invesigation.dds"
+		texturefile = "gfx/interface/goals/new_zealand/waikato_invesigation.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/waikato_invesigation.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/waikato_invesigation.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -110,7 +110,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/waikato_invesigation.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/waikato_invesigation.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -125,10 +125,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_bay_of_plenty_wealth_shine"
-		texturefile = "gfx/interface/goals/bay_of_plenty_wealth.dds"
+		texturefile = "gfx/interface/goals/new_zealand/bay_of_plenty_wealth.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/bay_of_plenty_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/bay_of_plenty_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -141,7 +141,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/bay_of_plenty_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/bay_of_plenty_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -156,10 +156,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_waikato_wealth_shine"
-		texturefile = "gfx/interface/goals/waikato_wealth.dds"
+		texturefile = "gfx/interface/goals/new_zealand/waikato_wealth.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/waikato_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/waikato_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -172,7 +172,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/waikato_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/waikato_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -187,10 +187,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_taranaki_wealth_shine"
-		texturefile = "gfx/interface/goals/taranaki_wealth.dds"
+		texturefile = "gfx/interface/goals/new_zealand/taranaki_wealth.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/taranaki_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/taranaki_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -203,7 +203,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/taranaki_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/taranaki_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -218,10 +218,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_auckland_wealth_shine"
-		texturefile = "gfx/interface/goals/auckland_wealth.dds"
+		texturefile = "gfx/interface/goals/new_zealand/auckland_wealth.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/auckland_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/auckland_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -234,7 +234,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/auckland_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/auckland_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -249,10 +249,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_gum_diggers_shine"
-		texturefile = "gfx/interface/goals/gum_diggers.dds"
+		texturefile = "gfx/interface/goals/new_zealand/gum_diggers.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/gum_diggers.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/gum_diggers.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -265,7 +265,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/gum_diggers.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/gum_diggers.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -280,10 +280,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_alpha_well_nz_shine"
-		texturefile = "gfx/interface/goals/alpha_well_nz.dds"
+		texturefile = "gfx/interface/goals/new_zealand/alpha_well_nz.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/alpha_well_nz.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/alpha_well_nz.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -296,7 +296,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/alpha_well_nz.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/alpha_well_nz.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -311,10 +311,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_maori_shine"
-		texturefile = "gfx/interface/goals/goal_maori.dds"
+		texturefile = "gfx/interface/goals/new_zealand/goal_maori.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_maori.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_maori.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -327,7 +327,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_maori.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_maori.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -342,10 +342,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_nz_fern_shine"
-		texturefile = "gfx/interface/goals/goal_nz_fern.dds"
+		texturefile = "gfx/interface/goals/new_zealand/goal_nz_fern.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_nz_fern.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_nz_fern.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -358,7 +358,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_nz_fern.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_nz_fern.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -373,10 +373,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_waitangi_treaty"
-		texturefile = "gfx/interface/goals/goal_waitangi_treaty.dds"
+		texturefile = "gfx/interface/goals/new_zealand/goal_waitangi_treaty.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_waitangi_treaty.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_waitangi_treaty.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -389,7 +389,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_waitangi_treaty.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_waitangi_treaty.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -404,10 +404,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_gold_otago_shine"
-		texturefile = "gfx/interface/goals/gold_otago.dds"
+		texturefile = "gfx/interface/goals/new_zealand/gold_otago.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/gold_otago.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/gold_otago.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -420,7 +420,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/gold_otago.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/gold_otago.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -435,10 +435,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_southern_wealth"
-		texturefile = "gfx/interface/goals/southern_wealth.dds"
+		texturefile = "gfx/interface/goals/new_zealand/southern_wealth.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/southern_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/southern_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -451,7 +451,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/southern_wealth.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/southern_wealth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -466,10 +466,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_natural_beauty"
-		texturefile = "gfx/interface/goals/nz_natural_beauty.dds"
+		texturefile = "gfx/interface/goals/new_zealand/nz_natural_beauty.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nz_natural_beauty.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/nz_natural_beauty.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -482,7 +482,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nz_natural_beauty.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/nz_natural_beauty.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -497,10 +497,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_farmlands"
-		texturefile = "gfx/interface/goals/nzl_farmlands.dds"
+		texturefile = "gfx/interface/goals/new_zealand/nzl_farmlands.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nzl_farmlands.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/nzl_farmlands.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -513,7 +513,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nzl_farmlands.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/nzl_farmlands.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -528,10 +528,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_wellington_capital"
-		texturefile = "gfx/interface/goals/nz_wellington_capital.dds"
+		texturefile = "gfx/interface/goals/new_zealand/nz_wellington_capital.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nz_wellington_capital.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/nz_wellington_capital.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -544,7 +544,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nz_wellington_capital.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/nz_wellington_capital.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -590,10 +590,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_mosgiel_woollen"
-		texturefile = "gfx/interface/goals/goal_mosgiel_woollen.dds"
+		texturefile = "gfx/interface/goals/new_zealand/goal_mosgiel_woollen.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_mosgiel_woollen.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_mosgiel_woollen.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -606,7 +606,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_mosgiel_woollen.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_mosgiel_woollen.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -621,10 +621,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_kingitanga_deal"
-		texturefile = "gfx/interface/goals/goal_kingitanga_deal.dds"
+		texturefile = "gfx/interface/goals/new_zealand/goal_kingitanga_deal.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_kingitanga_deal.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_kingitanga_deal.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -637,7 +637,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_kingitanga_deal.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_kingitanga_deal.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -652,10 +652,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_nzl_goal_new_zealand"
-		texturefile = "gfx/interface/goals/goal_new_zealand.dds"
+		texturefile = "gfx/interface/goals/new_zealand/goal_new_zealand.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_new_zealand.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_new_zealand.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -668,7 +668,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_new_zealand.dds"
+			animationmaskfile = "gfx/interface/goals/new_zealand/goal_new_zealand.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
