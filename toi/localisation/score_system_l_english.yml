@@ -32,3 +32,5 @@
  eoanb_add_15_tech_score:0 "\nGain §G15§! tech score"
  eoanb_add_20_tech_score:0 "\nGain §G20§! tech score"
  eoanb_add_50_tech_score:0 "\nGain §G50§! tech score"
+ 
+ show_influencers:0 "Influencers\n[?influencer_array^0|%0] [?influencer_tag_array^0.GetNameWithFlag]\n [?influencer_array^0|%0] [?influencer_tag_array^1.GetNameWithFlag]"

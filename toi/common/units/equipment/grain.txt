@@ -1,0 +1,21 @@
+equipments = {
+
+	grain_equipment = {
+		is_archetype = yes
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		interface_category = interface_category_land
+		
+		resources = {
+			grain = 1
+		}
+	}
+	
+	grain_consumable = {
+		active = yes
+		archetype = grain_equipment
+		priority = 05
+		visual_level = 0
+	}
+}

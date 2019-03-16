@@ -28,26 +28,26 @@ division_template = {
 units = {
 		#Kaiserliche Bayerische Armee
 		division= {
-			name = "1.Infanterie Division"
+			name = "1. Infanterie Division"
 			location = 692
 			division_template = "Infanterie Division"
 			start_experience_factor = 0.2
 		}
 		division= {
-			name = "2.Infanterie Division"
+			name = "2. Infanterie Division"
 			location = 532
 			division_template = "Infanterie Division"
 			start_experience_factor = 0.1
 			start_equipment_factor = 0.8
 		}
 		division= {
-			name = "3.Infanterie Division"
+			name = "3. Infanterie Division"
 			location = 11544
 			division_template = "Infanterie Division"
 			start_experience_factor = 0.2
     }
     division= {
-      name = "4.Infanterie Division"
+      name = "4. Infanterie Division"
       location = 6594
       division_template = "Infanterie Division"
       start_experience_factor = 0.2

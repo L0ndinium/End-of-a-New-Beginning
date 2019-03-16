@@ -1,5 +1,5 @@
 ﻿add_namespace = ethiopia
-
+add_namespace = ethiopian_border_conflict
 
 
 
@@ -132,6 +132,7 @@ country_event = {
 		}
 		add_ideas = ETH_anglo_ethiopian_shipyard_company_profits
 		ETH = { country_event = { days = 1 id = ethiopia.7 } }
+		ETH = { add_ideas = ETH_anglo_ethiopian_shipyard_company }
 		
 	}
 	
@@ -140,6 +141,7 @@ country_event = {
 		ai_chance = { factor = 33 }
 		add_ideas = ETH_anglo_ethiopian_company_profits
 		ETH = { country_event = { days = 1 id = ethiopia.8 } }
+		ETH = { add_ideas = ETH_anglo_ethiopian_rubber_company }
 	}
 	
 	option = {
@@ -147,6 +149,7 @@ country_event = {
 		ai_chance = { factor = 33 }
 		add_ideas = ETH_anglo_ethiopian_company_profits
 		ETH = { country_event = { days = 1 id = ethiopia.9 } }
+		ETH = { add_ideas = ETH_anglo_ethiopian_cotton_company }
 	}
 	
 }
@@ -163,7 +166,7 @@ country_event = {
 	option = {
 		name = Wonderful.7.a
 		ai_chance = { factor = 100 }
-		add_ideas = ETH_anglo_ethiopian_shipyard_company
+		activate_decision = ETH_british_companies_shipyard_company 
 	}
 	
 }
@@ -180,7 +183,7 @@ country_event = {
 	option = {
 		name = Wonderful.8.a
 		ai_chance = { factor = 100 }
-		add_ideas = ETH_anglo_ethiopian_rubber_company
+		activate_decision = ETH_british_companies_rubber_plantation 
 	}
 }
 	
@@ -196,7 +199,7 @@ country_event = {
 	option = {
 		name = Wonderful.9.a
 		ai_chance = { factor = 100 }
-		add_ideas = ETH_anglo_ethiopian_cotton_company
+		activate_decision = ETH_british_companies_cotton_plantation 
 	}
 }
 	
@@ -226,7 +229,7 @@ country_event = {
 		}
 		add_ideas = ETH_portugese_ethiopian_shipyard_company_profits
 		ETH = { country_event = { days = 1 id = ethiopia.11 } }
-		
+		ETH = { add_ideas = ETH_portugese_ethiopian_shipyard_company }
 	}
 	
 	option = {
@@ -235,6 +238,7 @@ country_event = {
 		add_political_power = 100
 		add_ideas = ETH_portugese_ethiopian_company_profits
 		ETH = { country_event = { days = 1 id = ethiopia.12 } }
+		ETH = { add_ideas = ETH_portugese_ethiopian_logging_company }
 	}
 	
 	option = {
@@ -242,6 +246,7 @@ country_event = {
 		ai_chance = { factor = 33 }
 		add_ideas = ETH_portugese_ethiopian_company_profits
 		ETH = { country_event = { days = 1 id = ethiopia.13 } }
+		ETH = { add_ideas = ETH_portugese_ethiopian_cotton_company }
 	}
 	
 }
@@ -258,7 +263,7 @@ country_event = {
 	option = {
 		name = Wonderful.11.a
 		ai_chance = { factor = 100 }
-		add_ideas = ETH_portugese_ethiopian_shipyard_company
+		activate_decision = ETH_portugal_companies_shipyard_company
 	}
 	
 }
@@ -266,7 +271,7 @@ country_event = {
 #Portugal chooses a logging company
 country_event = {
 	id = ethiopia.12
-	title = Portugal_Decides_To_Invest_In_A_Rubber_Plantation.8.t
+	title = Portugal_Decides_To_Invest_In_A_Logging_Plantation.8.t
 	desc = ethiopia.12.d
 	picture = GFX_report_event_soviet_finnish_pact
 	
@@ -275,7 +280,7 @@ country_event = {
 	option = {
 		name = Wonderful.12.a
 		ai_chance = { factor = 100 }
-		add_ideas = ETH_portugese_ethiopian_logging_company
+		activate_decision = ETH_portugal_companies_logging_plantation
 	}
 }
 	
@@ -291,7 +296,7 @@ country_event = {
 	option = {
 		name = Wonderful.13.a
 		ai_chance = { factor = 100 }
-		add_ideas = ETH_portugese_ethiopian_cotton_company
+		activate_decision = ETH_portugal_companies_cotton_plantation
 	}
 }
 
@@ -318,7 +323,7 @@ country_event = {
 				resource = fabric
 				amount = 7 
 				exporter = ETH 
-			}
+		}
 		ETH = { country_event = { days = 1 id = ethiopia.15 } }
 		
 	}
@@ -519,6 +524,104 @@ country_event = {
 	
 }
 
+
+
+#Ethiopia opens Portugal merchant ports
+country_event = {
+	id = ethiopia.42
+	title = Ethiopia_Invites_Portuguese_Merchants.42.t
+	desc = ethiopia.42.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.42.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_POR_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia opens Greek merchant ports
+country_event = {
+	id = ethiopia.43
+	title = Ethiopia_Invites_Greek_Merchants.43.t
+	desc = ethiopia.43.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.43.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_GRE_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia opens French merchant ports
+country_event = {
+	id = ethiopia.44
+	title = Ethiopia_Invites_French_Merchants.44.t
+	desc = ethiopia.44.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.44.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_FRA_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia opens British merchant ports
+country_event = {
+	id = ethiopia.45
+	title = Ethiopia_Invites_British_Merchants.45.t
+	desc = ethiopia.45.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.45.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_ENG_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia opens Italian merchant ports
+country_event = {
+	id = ethiopia.46
+	title = Ethiopia_Invites_Italian_Merchants.46.t
+	desc = ethiopia.46.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.46.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_ITA_Merchants
+		}
+	}
+	
+}
+
+
 #Ethiopia offers integration
 country_event = {
 	id = ethiopia.38
@@ -555,3 +658,3878 @@ country_event = {
 	}
 	
 }
+
+
+
+
+
+
+#Proclaim_Coalition_Against_Islam_1
+country_event = {
+	id = ethiopia.47
+	title = Ethiopia_Wants_A_Coalition_Against_Islam.47.t
+	desc = ethiopia.47.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Must_Protect_Our_Fellow_Protestants.47.a
+		ai_chance = { factor = 50 }
+		ETH = { country_event = { days = 1 id = ethiopia.48 } }
+		set_country_flag = coalition_against_islam
+		
+	}
+
+	option = {
+		name = We_Cant_Risk_Bad_Relations_With_The_Ottomans.47.b
+		ai_chance = { factor = 50 }
+		ETH = { country_event = { days = 1 id = ethiopia.49 } }
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_1
+#England Accepts!
+country_event = {
+	id = ethiopia.48
+	title = Britain_Accepts_Coalition.48.t
+	desc = ethiopia.48.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.48.a
+		ai_chance = { factor = 100 }
+		set_country_flag = coalition_against_islam
+
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_1
+#England Declines!
+country_event = {
+	id = ethiopia.49
+	title = Britain_Declines_Coalition.49.t
+	desc = ethiopia.49.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Unfortunate.49.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = Purge_The_Missionaries.49.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		ENG = { country_event = { days = 1 id = ethiopia.50 } }
+		}
+		set_country_flag = purged_missionaries
+	}
+}
+#Proclaim_Coalition_Against_Islam_1
+#Ethiopia Purges The Missionaries!
+country_event = {
+	id = ethiopia.50
+	title = Ethiopia_Purges_Our_Missionaries.50.t
+	desc = ethiopia.50.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Purge_The_Missionaries.50.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 15 id = ethiopia.51 } }
+	}
+}
+#Proclaim_Coalition_Against_Islam_1
+#Britain Invades Ethiopia!
+country_event = {
+	id = ethiopia.51
+	title = Britain_Invades_Ethiopia.51.t
+	desc = ethiopia.51.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = God_Help_Us.51.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { days = 1 id = ethiopia.52 }
+		}
+	}
+}
+#Proclaim_Coalition_Against_Islam_1
+#Tewodros_Dies!
+country_event = {
+	id = ethiopia.52
+	title = Tewodros_II_Found_Dead.52.t
+	desc = ethiopia.52.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_Is_Terrible.52.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+						name = "Menelik II"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = absolutism
+						traits = {
+						}
+			}
+		}
+	}
+}
+
+
+
+#Proclaim_Coalition_Against_Islam_2
+country_event = {
+	id = ethiopia.53
+	title = Ethiopia_Wants_A_Coalition_Against_Islam.53.t
+	desc = ethiopia.53.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Could_Use_An_Ally_Against_The_Ottomans.53.a
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.54 } }
+		set_country_flag = coalition_against_islam
+		
+	}
+
+	option = {
+		name = We_Cant_Risk_Bad_Relations_With_The_Ottomans.53.b
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 1 id = ethiopia.55 } }
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_2
+#England Accepts!
+country_event = {
+	id = ethiopia.54
+	title = Britain_Accepts_Coalition.54.t
+	desc = ethiopia.54.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.54.a
+		ai_chance = { factor = 100 }
+		set_country_flag = coalition_against_islam
+
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_2
+#England Declines!
+country_event = {
+	id = ethiopia.55
+	title = Britain_Declines_Coalition.55.t
+	desc = ethiopia.55.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Unfortunate.55.a
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = Purge_The_Missionaries.55.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		ENG = { country_event = { days = 1 id = ethiopia.56 } }
+		}
+		set_country_flag = purged_missionaries
+	}
+}
+#Proclaim_Coalition_Against_Islam_2
+#Ethiopia Purges The Missionaries!
+country_event = {
+	id = ethiopia.56
+	title = Ethiopia_Purges_Our_Missionaries.56.t
+	desc = ethiopia.56.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Purge_The_Missionaries.56.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 15 id = ethiopia.57 } }
+	}
+}
+#Proclaim_Coalition_Against_Islam_2
+#Britain Invades Ethiopia!
+country_event = {
+	id = ethiopia.57
+	title = Britain_Invades_Ethiopia.57.t
+	desc = ethiopia.57.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = God_Help_Us.57.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { days = 1 id = ethiopia.58 }
+		}
+	}
+}
+#Proclaim_Coalition_Against_Islam_2
+#Tewodros_Dies!
+country_event = {
+	id = ethiopia.58
+	title = Tewodros_II_Found_Dead.58.t
+	desc = ethiopia.58.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_Is_Terrible.58.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+						name = "Menelik II"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = absolutism
+						traits = {
+						}
+			}
+		}
+	}
+}
+
+
+
+#Proclaim_Coalition_Against_Islam_3
+country_event = {
+	id = ethiopia.59
+	title = Ethiopia_Wants_A_Coalition_Against_Islam.59.t
+	desc = ethiopia.59.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Could_Use_An_Ally_Against_The_Ottomans.59.a
+		ai_chance = { factor = 25 }
+		ETH = { country_event = { days = 1 id = ethiopia.60 } }
+		set_country_flag = coalition_against_islam
+		
+	}
+
+	option = {
+		name = We_Cant_Risk_Bad_Relations_With_The_Ottomans.59.b
+		ai_chance = { factor = 75 }
+		ETH = { country_event = { days = 1 id = ethiopia.61 } }
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_3
+#England Accepts!
+country_event = {
+	id = ethiopia.60
+	title = Britain_Accepts_Coalition.60.t
+	desc = ethiopia.60.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.60.a
+		ai_chance = { factor = 100 }
+		set_country_flag = coalition_against_islam
+
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_3
+#England Declines!
+country_event = {
+	id = ethiopia.61
+	title = Britain_Declines_Coalition.61.t
+	desc = ethiopia.61.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Unfortunate.61.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = Purge_The_Missionaries.61.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		ENG = { country_event = { days = 1 id = ethiopia.62 } }
+		}
+		set_country_flag = purged_missionaries
+	}
+}
+#Proclaim_Coalition_Against_Islam_3
+#Ethiopia Purges The Missionaries!
+country_event = {
+	id = ethiopia.62
+	title = Ethiopia_Purges_Our_Missionaries.62.t
+	desc = ethiopia.62.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Purge_The_Missionaries.62.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 15 id = ethiopia.63 } }
+	}
+}
+#Proclaim_Coalition_Against_Islam_3
+#Britain Invades Ethiopia!
+country_event = {
+	id = ethiopia.63
+	title = Britain_Invades_Ethiopia.63.t
+	desc = ethiopia.63.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = God_Help_Us.63.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { days = 1 id = ethiopia.64 }
+		}
+	}
+}
+#Proclaim_Coalition_Against_Islam_3
+#Tewodros_Dies!
+country_event = {
+	id = ethiopia.64
+	title = Tewodros_II_Found_Dead.64.t
+	desc = ethiopia.64.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_Is_Terrible.64.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+						name = "Menelik II"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = absolutism
+						traits = {
+						}
+			}
+		}
+	}
+}
+
+
+#Proclaim_Coalition_Against_Islam_4
+country_event = {
+	id = ethiopia.65
+	title = Ethiopia_Wants_A_Coalition_Against_Islam.65.t
+	desc = ethiopia.65.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Could_Better_Protect_Our_Colonial_Assets.65.a
+		ai_chance = { factor = 60 }
+		ETH = { country_event = { days = 1 id = ethiopia.66 } }
+		set_country_flag = coalition_against_islam
+		
+	}
+
+	option = {
+		name = We_Cant_Risk_Bad_Relations_With_The_Ottomans.65.b
+		ai_chance = { factor = 40 }
+		ETH = { country_event = { days = 1 id = ethiopia.67 } }
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_4
+#England Accepts!
+country_event = {
+	id = ethiopia.66
+	title = Britain_Accepts_Coalition.66.t
+	desc = ethiopia.66.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.66.a
+		ai_chance = { factor = 100 }
+		set_country_flag = coalition_against_islam
+
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_4
+#England Declines!
+country_event = {
+	id = ethiopia.67
+	title = Britain_Declines_Coalition.67.t
+	desc = ethiopia.67.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Unfortunate.67.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = Purge_The_Missionaries.67.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		ENG = { country_event = { days = 1 id = ethiopia.68 } }
+		}
+		set_country_flag = purged_missionaries
+	}
+}
+#Proclaim_Coalition_Against_Islam_4
+#Ethiopia Purges The Missionaries!
+country_event = {
+	id = ethiopia.68
+	title = Ethiopia_Purges_Our_Missionaries.68.t
+	desc = ethiopia.68.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Purge_The_Missionaries.68.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 15 id = ethiopia.69 } }
+	}
+}
+#Proclaim_Coalition_Against_Islam_4
+#Britain Invades Ethiopia!
+country_event = {
+	id = ethiopia.69
+	title = Britain_Invades_Ethiopia.69.t
+	desc = ethiopia.69.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = God_Help_Us.69.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { days = 1 id = ethiopia.70 }
+		}
+	}
+}
+#Proclaim_Coalition_Against_Islam_4
+#Tewodros_Dies!
+country_event = {
+	id = ethiopia.70
+	title = Tewodros_II_Found_Dead.70.t
+	desc = ethiopia.70.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_Is_Terrible.70.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+						name = "Menelik II"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = absolutism
+						traits = {
+						}
+			}
+		}
+	}
+}
+
+
+
+#Proclaim_Coalition_Against_Islam_5
+country_event = {
+	id = ethiopia.71
+	title = Ethiopia_Wants_A_Coalition_Against_Islam.71.t
+	desc = ethiopia.71.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Must_Protect_Our_Fellow_Protestants.71.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 1 id = ethiopia.72 } }
+		set_country_flag = coalition_against_islam
+		
+	}
+
+	option = {
+		name = We_Cant_Risk_Bad_Relations_With_The_Ottomans.71.b
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.73 } }
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_5
+#England Accepts!
+country_event = {
+	id = ethiopia.72
+	title = Britain_Accepts_Coalition.72.t
+	desc = ethiopia.72.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.72.a
+		ai_chance = { factor = 100 }
+		set_country_flag = coalition_against_islam
+
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_5
+#England Declines!
+country_event = {
+	id = ethiopia.73
+	title = Britain_Declines_Coalition.73.t
+	desc = ethiopia.73.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Unfortunate.73.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = Purge_The_Missionaries.73.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		ENG = { country_event = { days = 1 id = ethiopia.74 } }
+		}
+		set_country_flag = purged_missionaries
+	}
+}
+#Proclaim_Coalition_Against_Islam_5
+#Ethiopia Purges The Missionaries!
+country_event = {
+	id = ethiopia.74
+	title = Ethiopia_Purges_Our_Missionaries.74.t
+	desc = ethiopia.74.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Purge_The_Missionaries.74.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 15 id = ethiopia.75 } }
+	}
+}
+#Proclaim_Coalition_Against_Islam_5
+#Britain Invades Ethiopia!
+country_event = {
+	id = ethiopia.75
+	title = Britain_Invades_Ethiopia.75.t
+	desc = ethiopia.75.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = God_Help_Us.75.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { days = 1 id = ethiopia.76 }
+		}
+	}
+}
+#Proclaim_Coalition_Against_Islam_5
+#Tewodros_Dies!
+country_event = {
+	id = ethiopia.76
+	title = Tewodros_II_Found_Dead.76.t
+	desc = ethiopia.76.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_Is_Terrible.76.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+						name = "Menelik II"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = absolutism
+						traits = {
+						}
+			}
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_6
+country_event = {
+	id = ethiopia.77
+	title = Ethiopia_Wants_A_Coalition_Against_Islam.77.t
+	desc = ethiopia.77.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_Could_Better_Protect_Our_Colonial_Assets.77.a
+		ai_chance = { factor = 80 }
+		ETH = { country_event = { days = 1 id = ethiopia.78 } }
+		set_country_flag = coalition_against_islam
+		
+	}
+
+	option = {
+		name = We_Cant_Risk_Bad_Relations_With_The_Ottomans.77.b
+		ai_chance = { factor = 20 }
+		ETH = { country_event = { days = 1 id = ethiopia.79 } }
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_6
+#England Accepts!
+country_event = {
+	id = ethiopia.78
+	title = Britain_Accepts_Coalition.78.t
+	desc = ethiopia.78.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.78.a
+		ai_chance = { factor = 100 }
+		set_country_flag = coalition_against_islam
+
+	}
+	
+}
+#Proclaim_Coalition_Against_Islam_6
+#England Declines!
+country_event = {
+	id = ethiopia.79
+	title = Britain_Declines_Coalition.79.t
+	desc = ethiopia.79.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Unfortunate.79.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = Purge_The_Missionaries.79.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		ENG = { country_event = { days = 1 id = ethiopia.80 } }
+		}
+		set_country_flag = purged_missionaries
+	}
+}
+#Proclaim_Coalition_Against_Islam_6
+#Ethiopia Purges The Missionaries!
+country_event = {
+	id = ethiopia.80
+	title = Ethiopia_Purges_Our_Missionaries.80.t
+	desc = ethiopia.80.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Purge_The_Missionaries.80.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 15 id = ethiopia.81 } }
+	}
+}
+#Proclaim_Coalition_Against_Islam_6
+#Britain Invades Ethiopia!
+country_event = {
+	id = ethiopia.81
+	title = Britain_Invades_Ethiopia.81.t
+	desc = ethiopia.81.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = God_Help_Us.81.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { days = 1 id = ethiopia.82 }
+		}
+	}
+}
+#Proclaim_Coalition_Against_Islam_6
+#Tewodros_Dies!
+country_event = {
+	id = ethiopia.82
+	title = Tewodros_II_Found_Dead.82.t
+	desc = ethiopia.82.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_Is_Terrible.82.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+						name = "Menelik II"
+						desc = ""
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = absolutism
+						traits = {
+						}
+			}
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_1
+#Clergy Insurgents
+country_event = {
+	id = ethiopia.83
+	title = Clergy_Riots_In_Gedaref.83.t
+	desc = ethiopia.83.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Send_The_Military.83.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		ETH = { country_event = { days = 5 id = ethiopia.84 } }
+		}
+		
+		
+	}
+
+	option = {
+		name = Hopefully_This_Quiets_Down.83.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		ETH = { country_event = { days = 5 id = ethiopia.85 } }
+		}
+	}
+	
+}
+
+#Proclaim_Coalition_Against_Islam_1
+#Clergy Insurgents
+#Sent The Military
+country_event = {
+	id = ethiopia.84
+	title = Riot_Dispersed.84.t
+	desc = ethiopia.84.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.84.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.86 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_1
+#Clergy Insurgents
+#Did Nothing
+country_event = {
+	id = ethiopia.85
+	title = Riot_Damages_Buildings.85.t
+	desc = ethiopia.85.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.85.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.86 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_1
+#Clergy Insurgents
+#Civil War!
+country_event = {
+	id = ethiopia.86
+	title = Clergy_Insurgants_Attack.86.t
+	desc = ethiopia.86.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Prepare_For_War.86.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_2
+#Clergy Insurgents
+country_event = {
+	id = ethiopia.87
+	title = Clergy_Protests_In_Gedaref.87.t
+	desc = ethiopia.87.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Send_The_Military.87.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		ETH = { country_event = { days = 5 id = ethiopia.88 } }
+		}
+		
+		
+	}
+
+	option = {
+		name = Hopefully_This_Quiets_Down.87.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		ETH = { country_event = { days = 5 id = ethiopia.89 } }
+		}
+	}
+	
+}
+
+#Proclaim_Coalition_Against_Islam_2
+#Clergy Insurgents
+#Sent The Military
+country_event = {
+	id = ethiopia.88
+	title = Protest_Dispersed.88.t
+	desc = ethiopia.88.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.88.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.90 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_2
+#Clergy Insurgents
+#Did Nothing
+country_event = {
+	id = ethiopia.89
+	title = Protest_Ended.89.t
+	desc = ethiopia.89.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.89.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.90 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_2
+#Clergy Insurgents
+#Civil War!
+country_event = {
+	id = ethiopia.90
+	title = Clergy_Insurgants_Attack.90.t
+	desc = ethiopia.90.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Prepare_For_War.90.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+
+
+#Proclaim_Coalition_Against_Islam_3
+#Clergy Insurgents
+country_event = {
+	id = ethiopia.91
+	title = Clergy_Riots_In_Gedaref.91.t
+	desc = ethiopia.91.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Send_The_Military.91.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		ETH = { country_event = { days = 5 id = ethiopia.92 } }
+		}
+		
+		
+	}
+
+	option = {
+		name = Hopefully_This_Quiets_Down.91.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		ETH = { country_event = { days = 5 id = ethiopia.93 } }
+		}
+	}
+	
+}
+
+#Proclaim_Coalition_Against_Islam_3
+#Clergy Insurgents
+#Sent The Military
+country_event = {
+	id = ethiopia.92
+	title = Riot_Dispersed.92.t
+	desc = ethiopia.92.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.92.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.94 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_3
+#Clergy Insurgents
+#Did Nothing
+country_event = {
+	id = ethiopia.93
+	title = Riot_Damages_Buildings.93.t
+	desc = ethiopia.93.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.93.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.94 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_3
+#Clergy Insurgents
+#Civil War!
+country_event = {
+	id = ethiopia.94
+	title = Clergy_Insurgants_Attack.94.t
+	desc = ethiopia.94.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Prepare_For_War.94.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_4
+#Clergy Insurgents
+country_event = {
+	id = ethiopia.95
+	title = Clergy_Protests_In_Gedaref.95.t
+	desc = ethiopia.95.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Send_The_Military.95.a
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.96 } }
+		}
+		
+		
+	}
+	
+	option = {
+		name = Guard_The_Company_Assets.95.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.97 } }
+			ENG = { country_event = { days = 5 id = ethiopia.99 } }
+		}
+
+	}
+
+	option = {
+		name = Hopefully_This_Quiets_Down.95.b
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.98 } }
+			ENG = { country_event = { days = 5 id = ethiopia.100 } }
+		}
+	}
+	
+}
+
+#Proclaim_Coalition_Against_Islam_4
+#Clergy Insurgents
+#Sent The Military
+country_event = {
+	id = ethiopia.96
+	title = Riot_Dispersed.96.t
+	desc = ethiopia.96.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.96.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.101 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_4
+#Clergy Insurgents
+#Guarded The Company Assets
+country_event = {
+	id = ethiopia.97
+	title = Riot_Nearly_Attacked_Company_Assets.97.t
+	desc = ethiopia.97.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.97.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.101 } }
+		
+	}
+}
+
+
+#Proclaim_Coalition_Against_Islam_4
+#Clergy Insurgents
+#Did Nothing
+country_event = {
+	id = ethiopia.98
+	title = Riot_Damages_Company_Assets.98.t
+	desc = ethiopia.98.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.98.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.101 } }
+				
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_4
+#British Notification
+#Company Assets In Ethiopia Protected
+country_event = {
+	id = ethiopia.99
+	title = Abyssinia_Protects_Company_Assets_During_Riot.99.t
+	desc = ethiopia.99.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Very_Good.99.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 3 id = ethiopia.102 } }
+		add_opinion_modifier = {
+			target = ETH
+			modifier = small_increase
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_4
+#British Notification
+#Company Assets In Ethiopia Attacked
+country_event = {
+	id = ethiopia.100
+	title = Abyssinian_Riot_Damages_Company_Assets.100.t
+	desc = ethiopia.100.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.100.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 3 id = ethiopia.103 } }
+		add_opinion_modifier = {
+			target = ETH
+			modifier = small_decrease
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_4
+#British Response
+#Britain Is Happy
+country_event = {
+	id = ethiopia.102
+	title = Britain_Is_Happy.102.t
+	desc = ethiopia.102.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Thats_Good.102.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_4
+#British Response
+#Britain Is Mad
+country_event = {
+	id = ethiopia.103
+	title = Britain_Is_Furious.103.t
+	desc = ethiopia.103.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = That_May_Be_Bad.103.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+
+
+
+
+#Proclaim_Coalition_Against_Islam_4
+#Clergy Insurgents
+#Civil War!
+country_event = {
+	id = ethiopia.101
+	title = Clergy_Insurgants_Attack.101.t
+	desc = ethiopia.101.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Prepare_For_War.101.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+#Proclaim_Coalition_Against_Islam_5
+#Clergy Insurgents
+country_event = {
+	id = ethiopia.104
+	title = Clergy_Protests_In_Gedaref.104.t
+	desc = ethiopia.104.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Send_The_Military.104.a
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.105 } }
+		}
+		
+		
+	}
+	
+	option = {
+		name = Guard_The_Company_Assets.104.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.106 } }
+			ENG = { country_event = { days = 5 id = ethiopia.108 } }
+		}
+
+	}
+
+	option = {
+		name = Hopefully_This_Quiets_Down.104.b
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.107 } }
+			ENG = { country_event = { days = 5 id = ethiopia.109 } }
+		}
+	}
+	
+}
+
+#Proclaim_Coalition_Against_Islam_5
+#Clergy Insurgents
+#Sent The Military
+country_event = {
+	id = ethiopia.105
+	title = Riot_Dispersed.105.t
+	desc = ethiopia.105.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.105.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.110 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_5
+#Clergy Insurgents
+#Guarded The Company Assets
+country_event = {
+	id = ethiopia.106
+	title = Riot_Nearly_Attacked_Company_Assets.106.t
+	desc = ethiopia.106.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.106.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.110 } }
+		
+	}
+}
+
+
+#Proclaim_Coalition_Against_Islam_5
+#Clergy Insurgents
+#Did Nothing
+country_event = {
+	id = ethiopia.107
+	title = Riot_Damages_Company_Assets.107.t
+	desc = ethiopia.107.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.107.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.110 } }
+				
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_5
+#British Notification
+#Company Assets In Ethiopia Protected
+country_event = {
+	id = ethiopia.108
+	title = Abyssinia_Protects_Company_Assets_During_Riot.108.t
+	desc = ethiopia.108.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Very_Good.108.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 3 id = ethiopia.111 } }
+		add_opinion_modifier = {
+			target = ETH
+			modifier = small_increase
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_5
+#British Notification
+#Company Assets In Ethiopia Attacked
+country_event = {
+	id = ethiopia.109
+	title = Abyssinian_Riot_Damages_Company_Assets.109.t
+	desc = ethiopia.109.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.109.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 3 id = ethiopia.112 } }
+		add_opinion_modifier = {
+			target = ETH
+			modifier = small_decrease
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_5
+#British Response
+#Britain Is Happy
+country_event = {
+	id = ethiopia.111
+	title = Britain_Is_Happy.111.t
+	desc = ethiopia.111.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Thats_Good.111.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_5
+#British Response
+#Britain Is Mad
+country_event = {
+	id = ethiopia.112
+	title = Britain_Is_Furious.112.t
+	desc = ethiopia.112.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = That_May_Be_Bad.112.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+
+
+
+
+#Proclaim_Coalition_Against_Islam_5
+#Clergy Insurgents
+#Civil War!
+country_event = {
+	id = ethiopia.110
+	title = Clergy_Insurgants_Attack.110.t
+	desc = ethiopia.110.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Prepare_For_War.110.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+
+
+#Proclaim_Coalition_Against_Islam_6
+#Clergy Insurgents
+country_event = {
+	id = ethiopia.113
+	title = Clergy_Protests_In_Gedaref.113.t
+	desc = ethiopia.113.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Send_The_Military.113.a
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.114 } }
+		}
+		
+		
+	}
+	
+	option = {
+		name = Guard_The_Company_Assets.113.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.115 } }
+			ENG = { country_event = { days = 5 id = ethiopia.117 } }
+		}
+
+	}
+
+	option = {
+		name = Hopefully_This_Quiets_Down.113.b
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			ETH = { country_event = { days = 5 id = ethiopia.116 } }
+			ENG = { country_event = { days = 5 id = ethiopia.118 } }
+		}
+	}
+	
+}
+
+#Proclaim_Coalition_Against_Islam_6
+#Clergy Insurgents
+#Sent The Military
+country_event = {
+	id = ethiopia.114
+	title = Riot_Dispersed.114.t
+	desc = ethiopia.114.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.114.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.119 } }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_6
+#Clergy Insurgents
+#Guarded The Company Assets
+country_event = {
+	id = ethiopia.115
+	title = Riot_Nearly_Attacked_Company_Assets.115.t
+	desc = ethiopia.115.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.115.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.119 } }
+		
+	}
+}
+
+
+#Proclaim_Coalition_Against_Islam_6
+#Clergy Insurgents
+#Did Nothing
+country_event = {
+	id = ethiopia.116
+	title = Riot_Damages_Company_Assets.116.t
+	desc = ethiopia.116.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.116.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 30 id = ethiopia.119 } }
+				
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_6
+#British Notification
+#Company Assets In Ethiopia Protected
+country_event = {
+	id = ethiopia.117
+	title = Abyssinia_Protects_Company_Assets_During_Riot.117.t
+	desc = ethiopia.117.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Very_Good.117.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 3 id = ethiopia.120 } }
+		add_opinion_modifier = {
+			target = ETH
+			modifier = small_increase
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_6
+#British Notification
+#Company Assets In Ethiopia Attacked
+country_event = {
+	id = ethiopia.118
+	title = Abyssinian_Riot_Damages_Company_Assets.118.t
+	desc = ethiopia.118.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Hopefully_Thats_The_End.118.a
+		ai_chance = { factor = 100 }
+		ETH = { country_event = { days = 3 id = ethiopia.121 } }
+		add_opinion_modifier = {
+			target = ETH
+			modifier = small_decrease
+		}
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_6
+#British Response
+#Britain Is Happy
+country_event = {
+	id = ethiopia.120
+	title = Britain_Is_Happy.120.t
+	desc = ethiopia.120.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Thats_Good.120.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Proclaim_Coalition_Against_Islam_6
+#British Response
+#Britain Is Mad
+country_event = {
+	id = ethiopia.121
+	title = Britain_Is_Furious.121.t
+	desc = ethiopia.121.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = That_May_Be_Bad.121.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+
+
+
+
+#Proclaim_Coalition_Against_Islam_6
+#Clergy Insurgents
+#Civil War!
+country_event = {
+	id = ethiopia.119
+	title = Clergy_Insurgants_Attack.119.t
+	desc = ethiopia.119.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Prepare_For_War.119.a
+		ai_chance = { factor = 100 }
+
+	}
+}
+
+	
+#Ethiopia wants a german company
+country_event = {
+	id = ethiopia.122
+	title = ethiopia.122.t
+	desc = ethiopia.122.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ethiopia.122.a
+		ai_chance = { factor = 34 }
+		trigger={
+			ETH={
+				any_owned_state={
+					is_coastal = yes
+				}
+			}
+		}
+		add_ideas = ETH_german_ethiopian_shipyard_company_profits
+		ETH = { country_event = { days = 1 id = ethiopia.123 } }
+		ETH = { add_ideas = ETH_german_ethiopian_shipyard_company }
+		
+	}
+	
+	option = {
+		name = ethiopia.122.b
+		ai_chance = { factor = 33 }
+		add_ideas = ETH_german_ethiopian_company_profits
+		ETH = { country_event = { days = 1 id = ethiopia.124 } }
+		ETH = { add_ideas = ETH_german_ethiopian_rubber_company }
+	}
+	
+	option = {
+		name = ethiopia.122.c
+		ai_chance = { factor = 33 }
+		add_ideas = ETH_german_ethiopian_company_profits
+		ETH = { country_event = { days = 1 id = ethiopia.125 } }
+		ETH = { add_ideas = ETH_german_ethiopian_cotton_company }
+	}
+	
+}
+
+#Germany chooses a shipyard company
+country_event = {
+	id = ethiopia.123
+	title = Germany_Decides_To_Invest_In_A_Shipyard_Company.123.t
+	desc = ethiopia.123.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.123.a
+		ai_chance = { factor = 100 }
+		activate_decision = ETH_german_companies_shipyard_company 
+	}
+	
+}
+
+#Germany chooses a rubber company
+country_event = {
+	id = ethiopia.124
+	title = Germany_Decides_To_Invest_In_A_Rubber_Plantation.124.t
+	desc = ethiopia.124.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.124.a
+		ai_chance = { factor = 100 }
+		activate_decision = ETH_german_companies_rubber_plantation 
+	}
+}
+	
+#Germany chooses a cotton company
+country_event = {
+	id = ethiopia.125
+	title = Germany_Decides_To_Invest_In_A_Cotton_Plantation.125.t
+	desc = ethiopia.125.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Wonderful.125.a
+		ai_chance = { factor = 100 }
+		activate_decision = ETH_german_companies_cotton_plantation 
+	}
+}
+
+
+
+#Ethiopian_Egyption_Ties
+country_event = {
+	id = ethiopia.126
+	title = Close_Ties_With_Ethiopia.126.t
+	desc = ethiopia.126.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Become_Friends.126.a
+		ai_chance = { factor = 75 }
+		ETH = { country_event = { days = 1 id = ethiopia.127 } }
+		hidden_effect = {
+			clr_country_flag = ETH_EGY_Rivalry
+			ETH = { clr_country_flag = ETH_EGY_Rivalry }
+			set_country_flag = ETH_EGY_Ties
+			ETH = { set_country_flag = ETH_EGY_Ties }
+		}
+		
+	}
+	
+	option = {
+		name = Keep_Rivalry.126.b
+		ai_chance = { factor = 25 }
+		ETH = { country_event = { days = 1 id = ethiopia.128 } }
+		hidden_effect = {
+			set_country_flag = ETH_EGY_Rivalry
+			ETH = { set_country_flag = ETH_EGY_Rivalry }
+			clr_country_flag = ETH_EGY_Ties
+			ETH = { clr_country_flag = ETH_EGY_Ties }
+		}
+	}
+	
+}
+
+#Egypt says Yes
+country_event = {
+	id = ethiopia.127
+	title = Egypt_Agrees.127.t
+	desc = ethiopia.127.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = They_Accepted.127.a
+		ai_chance = { factor = 100 }
+
+	}
+	
+}
+
+#Egypt says No
+country_event = {
+	id = ethiopia.128
+	title = Egypt_Declines.128.t
+	desc = ethiopia.128.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = They_Decline.128.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Appeal_Ethiopian_Egyption_Rivalry
+country_event = {
+	id = ethiopia.129
+	title = Appeal_Ethiopian_Egyption_Rivalry.129.t
+	desc = ethiopia.129.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Yes.129.a
+		ai_chance = { factor = 50 }
+		ETH = { country_event = { days = 1 id = ethiopia.130 } }
+		hidden_effect = {
+			clr_country_flag = ETH_EGY_Rivalry
+			ETH = { clr_country_flag = ETH_EGY_Rivalry }
+		}
+		
+	}
+	
+	option = {
+		name = No.129.b
+		ai_chance = { factor = 50 }
+		ETH = { country_event = { days = 1 id = ethiopia.131 } }
+	}
+	
+}
+
+#Egypt says Yes
+country_event = {
+	id = ethiopia.130
+	title = Egypt_Agrees.130.t
+	desc = ethiopia.130.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = They_Accepted.130.a
+		ai_chance = { factor = 100 }
+
+	}
+	
+}
+
+#Egypt says No
+country_event = {
+	id = ethiopia.131
+	title = Egypt_Declines.131.t
+	desc = ethiopia.131.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = They_Decline.131.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+#British_Ethiopian_Railway_Construction_1_Info
+country_event = {
+	id = ethiopia.132
+	title = Ethiopian_Railway_Infrastructure_Construction.132.t
+	desc = ethiopia.132.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Lets_Hope_They_Agree.132.a
+		ai_chance = { factor = 100 }
+		ENG = { country_event = { days = 1 id = ethiopia.133 } }
+		
+	}
+	
+}
+
+#British_Ethiopian_Railway_Construction_1
+country_event = {
+	id = ethiopia.133
+	title = Ethiopian_Railway_Infrastructure_Construction.133.t
+	desc = ethiopia.133.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.133.a
+		ai_chance = { factor = 30 }
+		ETH = { country_event = { days = 1 id = ethiopia.134 } }
+		ETH = { activate_decision = ETH_british_railway_infrastructure_construction }
+		ETH = {
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1 
+				technology = iron_railways
+			}
+		}
+		
+	}
+	
+	option = {
+		name = Supervise_construction.133.b
+		ai_chance = { factor = 70 }
+		ETH = { country_event = { days = 1 id = ethiopia.135 } }
+		ETH = {
+		
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1
+				technology = iron_railways
+			}
+		}
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.133.c
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.136 } }
+	}
+	
+}
+
+#British_Ethiopian_Railway_Infrastructure_Construction_1_Full_Yes
+country_event = {
+	id = ethiopia.134
+	title = Britain_Gives_Full_Assistance.134.t
+	desc = ethiopia.134.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.134.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#British_Ethiopian_Railway_Infrastructure_Construction_1_Yes
+country_event = {
+	id = ethiopia.135
+	title = Britain_Lends_Some_Assistance.135.t
+	desc = ethiopia.135.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.135.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ETH_british_railway_line
+	}
+}
+
+#British_Ethiopian_Railway_Infrastructure_Construction_1_No
+country_event = {
+	id = ethiopia.136
+	title = Britain_Declines_To_Aid.136.t
+	desc = ethiopia.136.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.136.a
+		ai_chance = { factor = 10 }
+		set_country_flag = ETH_british_railway_line
+	}
+	
+	option = {
+		name = Cancle_the_project.136.b
+		ai_chance = { factor = 90 }
+		ENG = { country_event = { days = 10 id = ethiopia.137 } }
+	}
+}
+
+#British_Ethiopian_Railway_Infrastructure_Construction_1_Cancled
+country_event = {
+	id = ethiopia.137
+	title = Britain_Lends_Some_Assistance.137.t
+	desc = ethiopia.137.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Oh_well.137.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#British_Ethiopian_Main_Railway_Route_Construction_2_Info
+country_event = {
+	id = ethiopia.138
+	title = Ethiopian_Main_Railway_Route_Construction.138.t
+	desc = ethiopia.138.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Lets_Hope_They_Agree.138.a
+		ai_chance = { factor = 100 }
+		ENG = { country_event = { days = 1 id = ethiopia.139 } }
+		
+	}
+	
+}
+
+#British_Ethiopian_Main_Railway_Route_Construction_2
+country_event = {
+	id = ethiopia.139
+	title = Ethiopian_Main_Railway_Route_Construction.139.t
+	desc = ethiopia.139.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.139.a
+		ai_chance = { factor = 60 }
+		ETH = { country_event = { days = 1 id = ethiopia.140 } }
+		ETH = { activate_decision = ETH_british_main_railway_route_construction }
+		ETH = { 
+			add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+		
+	}
+	
+	option = {
+		name = Supervise_construction.139.b
+		ai_chance = { factor = 40 }
+		ETH = { country_event = { days = 1 id = ethiopia.141 } }
+		ETH = { add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.139.c
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.142 } }
+	}
+	
+}
+
+#British_Ethiopian_Main_Railway_Route_Construction_2_Full_Yes
+country_event = {
+	id = ethiopia.140
+	title = Britain_Gives_Full_Assistance.140.t
+	desc = ethiopia.140.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.140.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#British_Ethiopian_Main_Railway_Route_Construction_Construction_2_Yes
+country_event = {
+	id = ethiopia.141
+	title = Britain_Lends_Some_Assistance.141.t
+	desc = ethiopia.141.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.141.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ETH_british_railway_infrastructure_construction
+	}
+}
+
+#British_Ethiopian_Main_Railway_Route_Construction_Construction_2_No
+country_event = {
+	id = ethiopia.142
+	title = Britain_Declines_To_Aid.142.t
+	desc = ethiopia.142.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.142.a
+		ai_chance = { factor = 50 }
+		set_country_flag = ETH_british_railway_infrastructure_construction
+	}
+	
+	option = {
+		name = Cancle_the_project.142.b
+		ai_chance = { factor = 50 }
+		ENG = { country_event = { days = 10 id = ethiopia.143 } }
+	}
+}
+
+#British_Ethiopian_Main_Railway_Route_Construction_2_Cancled
+country_event = {
+	id = ethiopia.143
+	title = Ethiopia_Cancles_Main_Railway.143.t
+	desc = ethiopia.143.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Oh_well.143.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+#German_Ethiopian_Railway_Construction_1_Info
+country_event = {
+	id = ethiopia.144
+	title = Ethiopian_Railway_Infrastructure_Construction.144.t
+	desc = ethiopia.144.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Lets_Hope_They_Agree.144.a
+		ai_chance = { factor = 100 }
+		PRS = { country_event = { days = 1 id = ethiopia.145 } }
+		
+	}
+	
+}
+
+#German_Ethiopian_Railway_Construction_1
+country_event = {
+	id = ethiopia.145
+	title = Ethiopian_Railway_Infrastructure_Construction.145.t
+	desc = ethiopia.145.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.145.a
+		ai_chance = { factor = 30 }
+		ETH = { country_event = { days = 1 id = ethiopia.146 } }
+		ETH = { activate_decision = ETH_german_railway_infrastructure_construction }
+		ETH = {
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1 
+				technology = iron_railways
+			}
+		}
+		
+	}
+	
+	option = {
+		name = Supervise_construction.145.b
+		ai_chance = { factor = 70 }
+		ETH = { country_event = { days = 1 id = ethiopia.147 } }
+		ETH = {
+		
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1
+				technology = iron_railways
+			}
+		}
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.145.c
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.148 } }
+	}
+	
+}
+
+#German_Ethiopian_Railway_Infrastructure_Construction_1_Full_Yes
+country_event = {
+	id = ethiopia.146
+	title = Germany_Gives_Full_Assistance.146.t
+	desc = ethiopia.146.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.146.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#German_Ethiopian_Railway_Infrastructure_Construction_1_Yes
+country_event = {
+	id = ethiopia.147
+	title = Germany_Lends_Some_Assistance.147.t
+	desc = ethiopia.147.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.147.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ETH_german_railway_line
+	}
+}
+
+#German_Ethiopian_Railway_Infrastructure_Construction_1_No
+country_event = {
+	id = ethiopia.148
+	title = Germany_Declines_To_Aid.148.t
+	desc = ethiopia.148.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.149.a
+		ai_chance = { factor = 10 }
+		set_country_flag = ETH_german_railway_line
+	}
+	
+	option = {
+		name = Cancle_the_project.149.b
+		ai_chance = { factor = 90 }
+		PRS = { country_event = { days = 10 id = ethiopia.150 } }
+	}
+}
+
+#German_Ethiopian_Railway_Infrastructure_Construction_1_Cancled
+country_event = {
+	id = ethiopia.150
+	title = Germany_Lends_Some_Assistance.150.t
+	desc = ethiopia.150.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Oh_well.150.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#German_Ethiopian_Main_Railway_Route_Construction_2_Info
+country_event = {
+	id = ethiopia.151
+	title = Ethiopian_Main_Railway_Route_Construction.151.t
+	desc = ethiopia.151.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Lets_Hope_They_Agree.151.a
+		ai_chance = { factor = 100 }
+		PRS = { country_event = { days = 1 id = ethiopia.152 } }
+		
+	}
+	
+}
+
+#German_Ethiopian_Main_Railway_Route_Construction_2
+country_event = {
+	id = ethiopia.152
+	title = Ethiopian_Main_Railway_Route_Construction.152.t
+	desc = ethiopia.152.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.152.a
+		ai_chance = { factor = 60 }
+		ETH = { country_event = { days = 1 id = ethiopia.153 } }
+		ETH = { activate_decision = ETH_german_main_railway_route_construction }
+		ETH = { 
+			add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+		
+	}
+	
+	option = {
+		name = Supervise_construction.152.b
+		ai_chance = { factor = 40 }
+		ETH = { country_event = { days = 1 id = ethiopia.154 } }
+		ETH = { add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.152.c
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.155 } }
+	}
+	
+}
+
+#German_Ethiopian_Main_Railway_Route_Construction_2_Full_Yes
+country_event = {
+	id = ethiopia.153
+	title = Germany_Gives_Full_Assistance.153.t
+	desc = ethiopia.153.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.153.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#German_Ethiopian_Main_Railway_Route_Construction_Construction_2_Yes
+country_event = {
+	id = ethiopia.154
+	title = Germany_Lends_Some_Assistance.154.t
+	desc = ethiopia.154.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.154.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ETH_german_railway_infrastructure_construction
+	}
+}
+
+#German_Ethiopian_Main_Railway_Route_Construction_Construction_2_No
+country_event = {
+	id = ethiopia.155
+	title = Germany_Declines_To_Aid.155.t
+	desc = ethiopia.155.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.155.a
+		ai_chance = { factor = 50 }
+		set_country_flag = ETH_german_railway_infrastructure_construction
+	}
+	
+	option = {
+		name = Cancle_the_project.155.b
+		ai_chance = { factor = 50 }
+		PRS = { country_event = { days = 10 id = ethiopia.156 } }
+	}
+}
+
+#German_Ethiopian_Main_Railway_Route_Construction_2_Cancled
+country_event = {
+	id = ethiopia.156
+	title = Ethiopia_Cancles_Main_Railway.156.t
+	desc = ethiopia.156.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Oh_well.156.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+#Portugal_Ethiopian_Railway_Construction_1_Info
+country_event = {
+	id = ethiopia.157
+	title = Ethiopian_Railway_Infrastructure_Construction.157.t
+	desc = ethiopia.157.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Lets_Hope_They_Agree.157.a
+		ai_chance = { factor = 100 }
+		POR = { country_event = { days = 1 id = ethiopia.158 } }
+		
+	}
+	
+}
+
+#Portugal_Ethiopian_Railway_Construction_1
+country_event = {
+	id = ethiopia.158
+	title = Ethiopian_Railway_Infrastructure_Construction.158.t
+	desc = ethiopia.158.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.158.a
+		ai_chance = { factor = 30 }
+		ETH = { country_event = { days = 1 id = ethiopia.159 } }
+		ETH = { activate_decision = ETH_portugal_railway_infrastructure_construction }
+		ETH = {
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1 
+				technology = iron_railways
+			}
+		}
+		
+	}
+	
+	option = {
+		name = Supervise_construction.158.b
+		ai_chance = { factor = 70 }
+		ETH = { country_event = { days = 1 id = ethiopia.160 } }
+		ETH = {
+		
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1
+				technology = iron_railways
+			}
+		}
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.158.c
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.161 } }
+	}
+	
+}
+
+#Portugal_Ethiopian_Railway_Infrastructure_Construction_1_Full_Yes
+country_event = {
+	id = ethiopia.159
+	title = Portugal_Gives_Full_Assistance.159.t
+	desc = ethiopia.159.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.159.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#Portugal_Ethiopian_Railway_Infrastructure_Construction_1_Yes
+country_event = {
+	id = ethiopia.160
+	title = Portugal_Lends_Some_Assistance.160.t
+	desc = ethiopia.160.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.160.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ETH_portugal_railway_line
+	}
+}
+
+#Portugal_Ethiopian_Railway_Infrastructure_Construction_1_No
+country_event = {
+	id = ethiopia.161
+	title = Portugal_Declines_To_Aid.161.t
+	desc = ethiopia.161.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.161.a
+		ai_chance = { factor = 10 }
+		set_country_flag = ETH_portugal_railway_line
+	}
+	
+	option = {
+		name = Cancle_the_project.161.b
+		ai_chance = { factor = 90 }
+		POR = { country_event = { days = 10 id = ethiopia.162 } }
+	}
+}
+
+#Portugal_Ethiopian_Railway_Infrastructure_Construction_1_Cancled
+country_event = {
+	id = ethiopia.162
+	title = Portugal_Cancels_Railway_Project.162.t
+	desc = ethiopia.162.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Oh_well.162.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Portugal_Ethiopian_Main_Railway_Route_Construction_2_Info
+country_event = {
+	id = ethiopia.163
+	title = Ethiopian_Main_Railway_Route_Construction.163.t
+	desc = ethiopia.163.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Lets_Hope_They_Agree.163.a
+		ai_chance = { factor = 100 }
+		POR = { country_event = { days = 1 id = ethiopia.164 } }
+		
+	}
+	
+}
+
+#Portugal_Ethiopian_Main_Railway_Route_Construction_2
+country_event = {
+	id = ethiopia.164
+	title = Ethiopian_Main_Railway_Route_Construction.164.t
+	desc = ethiopia.164.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.164.a
+		ai_chance = { factor = 60 }
+		ETH = { country_event = { days = 1 id = ethiopia.165 } }
+		ETH = { activate_decision = ETH_portugal_main_railway_route_construction }
+		ETH = { 
+			add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+		
+	}
+	
+	option = {
+		name = Supervise_construction.164.b
+		ai_chance = { factor = 40 }
+		ETH = { country_event = { days = 1 id = ethiopia.166 } }
+		ETH = { add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.164.c
+		ai_chance = { factor = 0 }
+		ETH = { country_event = { days = 1 id = ethiopia.167 } }
+	}
+	
+}
+
+#Portugal_Ethiopian_Main_Railway_Route_Construction_2_Full_Yes
+country_event = {
+	id = ethiopia.165
+	title = Portugal_Gives_Full_Assistance.165.t
+	desc = ethiopia.165.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.165.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#Portugal_Ethiopian_Main_Railway_Route_Construction_Construction_2_Yes
+country_event = {
+	id = ethiopia.166
+	title = Portugal_Lends_Some_Assistance.166.t
+	desc = ethiopia.166.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.166.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ETH_portugal_railway_infrastructure_construction
+	}
+}
+
+#Portugal_Ethiopian_Main_Railway_Route_Construction_Construction_2_No
+country_event = {
+	id = ethiopia.167
+	title = Portugal_Declines_To_Aid.167.t
+	desc = ethiopia.167.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.167.a
+		ai_chance = { factor = 50 }
+		set_country_flag = ETH_portugal_railway_infrastructure_construction
+	}
+	
+	option = {
+		name = Cancle_the_project.167.b
+		ai_chance = { factor = 50 }
+		POR = { country_event = { days = 10 id = ethiopia.168 } }
+	}
+}
+
+#Portugal_Ethiopian_Main_Railway_Route_Construction_2_Cancled
+country_event = {
+	id = ethiopia.168
+	title = Ethiopia_Cancles_Main_Railway.168.t
+	desc = ethiopia.168.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Oh_well.168.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Ethiopia opens Prussian merchant ports
+country_event = {
+	id = ethiopia.169
+	title = Ethiopia_Invites_Prussian_Merchants.169.t
+	desc = ethiopia.169.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.169.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_PRS_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia opens Hamburg merchant ports
+country_event = {
+	id = ethiopia.170
+	title = Ethiopia_Invites_Hamburg_Merchants.170.t
+	desc = ethiopia.170.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.170.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_HAM_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia opens Bremen merchant ports
+country_event = {
+	id = ethiopia.171
+	title = Ethiopia_Invites_Bremen_Merchants.171.t
+	desc = ethiopia.171.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_colonial_interests?.171.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_BRE_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia opens Russian merchant ports
+country_event = {
+	id = ethiopia.172
+	title = Ethiopia_Invites_Russian_Merchants.172.t
+	desc = ethiopia.172.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_welcome_fellow_orthodox_christians.172.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			set_country_flag = ETH_RUS_Merchants
+		}
+	}
+	
+}
+
+#Ethiopia Gives Military Access
+country_event = {
+	id = ethiopia.173
+	title = Ethiopia_Provides_Military_Access.173.t
+	desc = ethiopia.173.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = That_Railway_Investment_Came_In_Handy.173.a
+		ai_chance = { factor = 100 }
+		ROOT = { give_military_access = ETH }
+		hidden_effect = {
+			set_country_flag = ETH_Military_Access
+		}
+	}
+	
+}
+
+
+			
+#Ethiopia Requests License Agreement
+country_event = {
+	id = ethiopia.174
+	title = Ethiopia_Requests_License_Agreement.174.t
+	desc = ethiopia.174.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Maybe_we_can_influence_them_further.174.a
+		ai_chance = { factor = 60 }
+		FROM = {
+				add_popularity = {
+					ideology = chauvinist_populism
+					popularity = 0.07
+				}
+		}
+		FROM = {
+				add_relation_modifier = {
+					target = ROOT
+					modifier = ROM_license_german_equipment
+				}
+		}
+	}
+	
+	option = {
+		name = They_are_not_worth_it.174.a
+		ai_chance = { factor = 40 }
+	}
+	
+}
+
+#Ethiopia Requests Military_Assistance
+country_event = {
+	id = ethiopia.175
+	title = Ethiopia_Company_Requests_Military_Assitance.175.t
+	desc = ethiopia.175.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_can_give_them_some_reserves.175.a
+		ai_chance = { factor = 70 } 
+		FROM = {
+				add_popularity = {
+					ideology = chauvinist_populism
+					popularity = 0.01
+				}
+		}
+		FROM = { country_event = { days = 1 id = ethiopia.176 } }
+	}
+	
+	option = {
+		name = They_are_not_worth_it.175.a
+		ai_chance = { factor = 30 }
+		FROM = { country_event = { days = 1 id = ethiopia.177 } }
+	}
+	
+}
+
+#Ethiopia Requests Military_Assistance_YES
+country_event = {
+	id = ethiopia.176
+	title = They_Accepted.176.t
+	desc = ethiopia.176.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_will_aid_us.176.a
+		ai_chance = { factor = 100 }
+			set_country_flag = ETH_corporate_coup_support
+	}
+	
+}
+
+#Ethiopia Requests Military_Assistance_NO
+country_event = {
+	id = ethiopia.177
+	title = Ethiopia_Provides_Military_Access.177.t
+	desc = ethiopia.177.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = A_minor_setback.177.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+
+#ETH_ENG_COUP Ethiopia Announces Coup
+country_event = {
+	id = ethiopia.178
+	title = Ethiopia_Announces_Coup.178.t
+	desc = ethiopia.178.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_plan_is_approved.178.a
+		ai_chance = { factor = 100 } 
+		FROM = { country_event = { days = 1 id = ethiopia.179 } }
+	}
+	
+	option = {
+		name = They_are_not_worth_it.175.a
+		ai_chance = { factor = 0 }
+		FROM = { country_event = { days = 1 id = ethiopia.180 } }
+	}
+	
+}
+
+#ETH_ENG_COUP Ethiopia Announces Coup_YES
+country_event = {
+	id = ethiopia.179
+	title = They_Accepted.179.t
+	desc = ethiopia.179.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Initiate_the_coup.179.a
+		ai_chance = { factor = 100 }
+		ROOT = { country_event = { days = 1 id = ethiopia.185 } }
+		hidden_effect = {
+					if = {
+						limit = {
+							ROOT = { 
+								has_idea = ETH_idea_alienated_parish_clergy
+							}
+						}
+						#ROOT = { country_event = { days = 1 id = ethiopia.181 } }
+					}
+					if = {
+						limit = {
+							ROOT = { 
+								has_idea = ETH_idea_furious_parish_clergy
+							}
+						}
+						#ROOT = { country_event = { days = 1 id = ethiopia.182 } }
+					}
+		}
+		ROOT = { 
+			set_capital = 815	
+			set_country_flag = is_trading_company
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_ENG_Coup_Forming
+					}
+				}
+				set_cosmetic_tag = ETH_British_Trade_Company
+				815 = {
+					set_state_name = "New Manchester"
+				}
+			}		
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_POR_Coup_Forming
+					}
+				}
+				set_cosmetic_tag = ETH_Portugal_Trade_Company
+				815 = {
+					set_state_name = "Novo Beja"
+				}
+				
+			}	
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_GER_Coup_Forming
+					}
+				}
+				set_cosmetic_tag = ETH_German_Trade_Company 
+				815 = {
+					set_state_name = "Neu Bernburg"
+				}
+			}	
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_FRA_Coup_Forming
+					}
+					
+				}
+				set_cosmetic_tag = ETH_French_Trade_Company
+				815 = {
+					set_state_name = "New Troyes"
+				}
+			}	
+			
+		}
+		if = {
+				limit = {
+					ROOT = { 
+							NOT = { 
+								has_country_flag = ETH_corporate_coup_support
+							}
+					}
+				}
+					
+					
+					start_civil_war = {
+						ruling_party = chauvinist_populism
+						ideology = autocracy
+						size = 1
+						only_own_territory = no
+						capital = 816
+						states = { 
+							816 817
+						}
+						keep_unit_leaders = {
+							
+						}
+					}
+			}
+		if = {
+				limit = {
+					ROOT = { 
+							has_country_flag = ETH_corporate_coup_support
+					}
+				}
+					
+					start_civil_war = {
+						ruling_party = chauvinist_populism
+						ideology = autocracy
+						size = 1
+						only_own_territory = no
+						capital = 816
+						states = { 
+							816 817
+						}
+						keep_unit_leaders = {
+							
+						}
+					}
+					
+		}
+		
+		ROOT = {
+			hidden_effect = {
+					remove_ideas = ETH_idea_tewodros_social_reforms
+					if = {
+						limit = {
+							FROM = { has_government = centrism }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 1
+								}
+
+								traditional_conservatism = {
+									popularity = 0
+								}
+			
+								social_egalitarianism = {
+									popularity = 0
+								}
+		
+								collectivist_socialism = { 
+									popularity = 0
+								}
+						
+								vanguard_communism = { 
+									popularity = 0
+								}
+						
+								autocracy = { 
+									popularity = 0
+								}
+						
+								radical_democracy = { 
+									popularity = 0
+								}
+							
+								chauvinist_populism = { 
+									popularity = 0
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = centrism
+						}
+					}
+					if = {
+						limit = {
+							FROM = { has_government = traditional_conservatism }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 0
+								}
+
+								traditional_conservatism = {
+									popularity = 1
+								}
+			
+								social_egalitarianism = {
+									popularity = 0
+								}
+		
+								collectivist_socialism = { 
+									popularity = 0
+								}
+						
+								vanguard_communism = { 
+									popularity = 0
+								}
+						
+								autocracy = { 
+									popularity = 0
+								}
+						
+								radical_democracy = { 
+									popularity = 0
+								}
+							
+								chauvinist_populism = { 
+									popularity = 0
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = traditional_conservatism
+						}
+					}
+					
+					
+					if = {
+						limit = {
+							FROM = { has_government = social_egalitarianism }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 0
+								}
+
+								traditional_conservatism = {
+									popularity = 0
+								}
+			
+								social_egalitarianism = {
+									popularity = 1
+								}
+		
+								collectivist_socialism = { 
+									popularity = 0
+								}
+						
+								vanguard_communism = { 
+									popularity = 0
+								}
+						
+								autocracy = { 
+									popularity = 0
+								}
+						
+								radical_democracy = { 
+									popularity = 0
+								}
+							
+								chauvinist_populism = { 
+									popularity = 0
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = social_egalitarianism
+						}
+					}
+					
+					if = {
+						limit = {
+							FROM = { has_government = collectivist_socialism }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 0
+								}
+
+								traditional_conservatism = {
+									popularity = 0
+								}
+			
+								social_egalitarianism = {
+									popularity = 0
+								}
+		
+								collectivist_socialism = { 
+									popularity = 1
+								}
+						
+								vanguard_communism = { 
+									popularity = 0
+								}
+						
+								autocracy = { 
+									popularity = 0
+								}
+						
+								radical_democracy = { 
+									popularity = 0
+								}
+							
+								chauvinist_populism = { 
+									popularity = 0
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = collectivist_socialism
+						}
+					}
+					
+					if = {
+						limit = {
+							FROM = { has_government = vanguard_communism }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 0
+								}
+
+								traditional_conservatism = {
+									popularity = 0
+								}
+			
+								social_egalitarianism = {
+									popularity = 0
+								}
+		
+								collectivist_socialism = { 
+									popularity = 0
+								}
+						
+								vanguard_communism = { 
+									popularity = 1
+								}
+						
+								autocracy = { 
+									popularity = 0
+								}
+						
+								radical_democracy = { 
+									popularity = 0
+								}
+							
+								chauvinist_populism = { 
+									popularity = 0
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = vanguard_communism
+						}
+					}
+					
+					if = {
+						limit = {
+							FROM = { has_government = autocracy }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 0
+								}
+
+								traditional_conservatism = {
+									popularity = 0
+								}
+			
+								social_egalitarianism = {
+									popularity = 0
+								}
+		
+								collectivist_socialism = { 
+									popularity = 0
+								}
+						
+								vanguard_communism = { 
+									popularity = 0
+								}
+						
+								autocracy = { 
+									popularity = 1
+								}
+						
+								radical_democracy = { 
+									popularity = 0
+								}
+							
+								chauvinist_populism = { 
+									popularity = 0
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = autocracy
+						}
+					}
+					
+					if = {
+						limit = {
+							FROM = { has_government = radical_democracy }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 0
+								}
+
+								traditional_conservatism = {
+									popularity = 0
+								}
+			
+								social_egalitarianism = {
+									popularity = 0
+								}
+		
+								collectivist_socialism = { 
+									popularity = 0
+								}
+						
+								vanguard_communism = { 
+									popularity = 0
+								}
+						
+								autocracy = { 
+									popularity = 0
+								}
+						
+								radical_democracy = { 
+									popularity = 1
+								}
+							
+								chauvinist_populism = { 
+									popularity = 0
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = radical_democracy
+						}
+					}
+					
+					if = {
+						limit = {
+							FROM = { has_government = chauvinist_populism }
+						}
+						set_politics = {
+							parties = {
+								centrism = { 
+									popularity = 0
+								}
+
+								traditional_conservatism = {
+									popularity = 0
+								}
+			
+								social_egalitarianism = {
+									popularity = 0
+								}
+		
+								collectivist_socialism = { 
+									popularity = 0
+								}
+						
+								vanguard_communism = { 
+									popularity = 0
+								}
+						
+								autocracy = { 
+									popularity = 0
+								}
+						
+								radical_democracy = { 
+									popularity = 0
+								}
+							
+								chauvinist_populism = { 
+									popularity = 1
+								}
+						
+								anarchism = { 
+									popularity = 0
+								}
+							
+								fundamentalism = { 
+									popularity = 0
+								}
+							}
+							ruling_party = chauvinist_populism
+						}
+					}
+					
+				}
+			}
+		}
+					
+	}
+	
+#ETH_ENG_COUP A_Colonial_General_Comes_To_Aid
+country_event = {
+	id = ethiopia.185
+	title = A_Colonial_General_Comes_To_Aid.185.t
+	desc = ethiopia.185.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Initiate_the_coup.185.a
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_ENG_Coup_Forming
+					}
+				}
+				create_corps_commander = {
+					name = "Reece Hamilton"
+					picture = "Portrait_France_Maurice_Gamelin.dds"
+					traits = { defensive_doctrine }
+					skill = 4
+					attack_skill = 1
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}		
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_POR_Coup_Forming
+					}
+				}
+				create_corps_commander = {
+					name = "Leandro Silva"
+					picture = "Portrait_France_Maurice_Gamelin.dds"
+					traits = { defensive_doctrine }
+					skill = 4
+					attack_skill = 1
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}	
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_GER_Coup_Forming
+					}
+				}
+				create_corps_commander = {
+					name = "Gilbert Heinz"
+					picture = "Portrait_France_Maurice_Gamelin.dds"
+					traits = { defensive_doctrine }
+					skill = 4
+					attack_skill = 1
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}	
+			if = {
+				limit = {
+					ROOT = { 
+						has_country_flag = ETH_FRA_Coup_Forming
+					}
+					
+				}
+				create_corps_commander = {
+					name = "Leopold Delafosse"
+					picture = "Portrait_France_Maurice_Gamelin.dds"
+					traits = { defensive_doctrine }
+					skill = 4
+					attack_skill = 1
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}	
+			
+		}
+		
+		
+		
+					
+	}
+}
+
+#ETH_ENG_COUP Ethiopia Announces Coup_NO
+country_event = {
+	id = ethiopia.180
+	title = Ethiopia_Provides_Military_Access.180.t
+	desc = ethiopia.180.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Cancle_the_coup.180.a
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+
+#Ethiopia wins
+country_event = {
+	id = ethiopian_border_conflict.2
+	title = ethiopian_border_conflict.2.t
+	desc = ethiopian_border_conflict.2.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ethiopian_border_conflict.2.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = ethiopian_border_conflict.2.b
+		ai_chance = { factor = 0 }
+	}
+}
+#Ethiopian loses
+country_event = {
+	id = ethiopian_border_conflict.3
+	title = ethiopian_border_conflict.3.t
+	desc = ethiopian_border_conflict.3.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+
+	option = {
+		name = ethiopian_border_conflict.3.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = ethiopian_border_conflict.3.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+#stalemate
+country_event = {
+	id = ethiopian_border_conflict.4
+	title = ethiopian_border_conflict.4.t
+	desc = ethiopian_border_conflict.4.desc
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = ethiopian_border_conflict.4.a
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = ethiopian_border_conflict.3.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Fortify Egyption Border
+country_event = {
+	id = ethiopia.181
+	title = Fortify_Egyption_Border_Plan.181.t
+	desc = ethiopia.181.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name =  full_construction_efforts.181.a
+		ai_chance = { factor = 50 }
+		activate_decision = ETH_Fortify_Egyption_Border_Quickly
+		hidden_effect = {
+			EGY = { country_event = { days = 27 id = ethiopia.182 } }
+		}
+	}
+	
+	option = {
+		name = secretive_construction_efforts.181.b
+		ai_chance = { factor = 50 }
+		activate_decision = ETH_Fortify_Egyption_Border_Secretly
+	}
+	
+}
+
+#Fortify Egyption Border_Conflict
+country_event = {
+	id = ethiopia.182
+	title = Ethiopia_Preparing_For_War.182.t
+	desc = ethiopia.182.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = raid_the_construction_effort.182.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			set_border_war_data = {
+				attacker = 549
+				defender = 817
+				combat_width = 100
+			}
+			ETH = { country_event = { days = 1 id = ethiopia.183 } }
+		}
+		start_border_war = {
+				change_state_after_war = no
+					attacker = {
+						state = 549
+						num_provinces = 4
+						on_win = ethiopian_border_conflict.3
+						on_lose = ethiopian_border_conflict.2
+						on_cancel = ethiopian_border_conflict.4
+					}
+				
+					defender = {
+						state = 817
+						num_provinces = 4
+						on_win = ethiopian_border_conflict.2
+						on_lose = ethiopian_border_conflict.3
+						on_cancel = ethiopian_border_conflict.4
+					}
+		}
+		hidden_effect = {
+			add_command_power = -80
+		}
+		
+	}
+	
+	option = {
+		name = we_cannot_intervene_as_of_now.182.b
+		ai_chance = { factor = 50 }
+	}
+	
+}
+
+#Fortify Egyption Border_Conflict
+country_event = {
+	id = ethiopia.183
+	title = Egyption_Ambushes_Our_Construction_Efforts.183.t
+	desc = ethiopia.183.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ask_The_Generals.183.a
+		ai_chance = { factor = 100 }
+		activate_decision = ETH_Egyption_Border_Skirmish_Holdout
+		if = {
+			limit = {
+				ETH = { 
+					has_completed_focus = ETH_train_defensive_tactics
+				}
+			}
+			add_ideas = ETH_the_generals_plan_1
+			
+		}
+		if = {
+			limit = {
+				ETH = { 
+					has_completed_focus = ETH_train_offensive_tactics
+				}
+			}
+			add_ideas = ETH_the_generals_plan_2
+			
+		}
+		if = {
+			limit = {
+				AND = {
+					ETH = { 
+						NOT = {
+							has_completed_focus = ETH_train_defensive_tactics
+						}
+					}
+					ETH = { 
+						NOT = {
+							has_completed_focus = ETH_train_offensive_tactics
+						}
+					}
+				}
+			}
+			add_ideas = ETH_the_generals_plan_3
+			
+		}
+		
+	}
+}
+#Assist_Sudanese_Independance
+country_event = {
+	id = ethiopia.184
+	title = Suport_Sudanese_Independance.184.t
+	desc = ethiopia.184.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = raid_a_few_camps.184.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					ALZ = {
+						has_opinion = {
+							target = EGY
+							value < 14
+						}
+					}
+					num_divisions > 0
+				}
+			}
+			hidden_effect = {
+				set_border_war_data = {
+					attacker = 833
+					defender = 549
+					combat_width = 40
+				}
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 833
+					num_provinces = 4
+					on_win = ethiopian_border_conflict.6
+					on_lose = ethiopian_border_conflict.5
+					on_cancel = ethiopian_border_conflict.7
+				}				
+				defender = {
+					state = 549
+					num_provinces = 4
+					on_win = ethiopian_border_conflict.5
+					on_lose = ethiopian_border_conflict.6
+					on_cancel = ethiopian_border_conflict.7
+				}
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					ALZ = {
+						has_opinion = {
+							target = EGY
+							value < 14
+						}
+					}
+					num_divisions > -1
+					num_divisions < 1
+				}
+			}
+			
+		}
+		
+		ETH = {
+			add_opinion_modifier = {
+				target = ALZ
+				modifier = medium_increase
+			}
+		}
+		
+	}
+	
+	option = {
+		name = we_cannot_risk_it.184.b
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Strike Eritrea
+country_event = {
+	id = ethiopia.186
+	title = Encourage_Sudanese_Independance.186.t
+	desc = ethiopia.186.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Encourage_Sudanese_independance.186.a
+		ai_chance = { factor = 100 }
+			if = {
+				limit = {
+					country_exists = ALZ
+				}
+				ALZ = { country_event = { days = 7 id = ethiopia.184 } }
+			}
+			EGY = { add_timed_idea = { idea = ETH_sudanese_islamic_unrest days = 270 } }
+			hidden_effect = {
+				set_country_flag = ETH_Encouraged_Sudan_Independance
+			}
+			ETH = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = large_decrease
+				}
+			}
+			EGY = {		
+				add_opinion_modifier = {
+						target = ETH
+						modifier = large_decrease
+				}
+			}
+			ALZ = {
+				add_opinion_modifier = {
+					target = ETH
+					modifier = medium_increase
+				}
+			}
+			hidden_effect = {
+			
+			}
+	}
+	
+}
+
+

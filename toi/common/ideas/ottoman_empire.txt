@@ -1,0 +1,273 @@
+ideas = {
+	country = {
+	OTO_crimean_war_debt = {
+			
+			allowed = {
+				TAG = OTO
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_crimean_war_debt
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_factor = -0.25
+				stability_factor = -0.1
+				war_support_factor = -0.4
+				drift_defence_factor = -0.25
+			}
+		}
+	tatar_migrant_crisis = {
+			
+			allowed = {
+				OR = {
+						tag = OTO
+						has_country_flag = tatar_migrant_crisis_flag
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_tatar_migrant_crisis
+			
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.2
+			}
+		}
+	OTO_tanzimat_reform = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_tanzimat_reform
+			
+			modifier = {
+				political_power_gain = 1
+				centrism_drift = 0.01
+				traditional_conservatism_drift = 0.01
+				stability_factor = -0.15
+				research_time_factor = -0.02
+			}
+		}
+
+	#UNFINISHED - NEEDS GFX & LOC
+	OTO_young_ottoman_constitution_signed = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				political_power_gain = 0.25
+				traditional_conservatism_drift = 0.01
+				autocracy_drift = -0.01
+				centrism_drift = 0.02
+				chauvinist_populism_drift = 0.01
+			}
+		}
+
+	#UNFINISHED - NEEDS GFX & LOC
+	OTO_declaration_of_seriat = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				political_power_gain = -0.25
+				traditional_conservatism_drift = 0.01
+				autocracy_drift = 0.01
+				fundamentalism_drift = 0.02
+			}
+		}
+	OTO_bank_of_england_rail_partner = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				subversive_activites_upkeep = -0.1
+			}
+		}
+	OTO_bank_of_france_rail_partner = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				license_tech_difference_speed = -0.25 
+			}
+		}
+	OTO_bank_of_germany_rail_partner = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				license_production_speed = -0.5 
+			}
+		}
+	OTO_grand_mufti_empowered = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				autocracy_drift = -0.01
+				fundamentalism_drift = 0.01
+			}
+		}
+	OTO_devshirme = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				non_core_manpower = 0.04
+				subjects_autonomy_gain = -0.5
+				political_power_factor = -0.01
+				stability_factor = -0.02
+			}
+		}
+	OTO_restricted_churches = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				stability_factor = 0.01
+				trade_opinion_factor = -0.25
+				improve_relations_maintain_cost_factor = 0.1
+			}
+		}
+	OTO_sublime_porte_school = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				political_power_gain = 0.25
+				research_time_factor = -0.05
+			}
+		}
+	OTO_sublime_porte_school = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				political_power_gain = 0.25
+				research_time_factor = -0.05
+			}
+		}
+	}
+
+
+
+}

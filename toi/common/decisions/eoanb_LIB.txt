@@ -1,0 +1,717 @@
+LIB_US_Investment_Diplomacy = {
+
+
+LIB_Request_Gov_Road_Investment = {
+
+    available = {
+		
+    }
+
+    visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	 complete_effect = {
+		USA = { country_event = { days = 1 id = liberia.31 } }
+		set_country_flag = LIB_request_gov_road_investment
+    }
+}
+
+LIB_Request_Gov_Road_Investment_1 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+LIB_Request_Gov_Road_Investment_2 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.07
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+LIB_Request_Gov_Road_Investment_3 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.12
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+	
+LIB_Request_Gov_Road_Investment_4 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.20
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+LIB_Request_Gov_Road_Investment_5 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.27
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+	
+	
+LIB_Seek_Plantation_Company  = {
+
+    available = {
+		has_country_flag = LIB_request_gov_road_investment
+		has_stability > 0.2
+		num_of_available_civilian_factories > 1
+		298 = {
+			infrastructure > 1 
+		}
+    }
+
+    visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 60
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+		civilian_factory_use = 1
+	}
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = cotton_farm
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = cotton_farm
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	complete_effect = {
+
+    }
+}
+
+LIB_US_Gov_Port_Investment = {
+
+    available = {
+		has_country_flag = LIB_request_gov_road_investment
+		has_stability > 0.3
+		has_resources_amount = {
+			resource = wood
+			amount > 7
+			state = 298
+		}
+		num_of_available_civilian_factories > 1
+		298 = {
+			infrastructure > 2
+		}
+    }
+
+    visible = {
+				has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 280
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+		civilian_factory_use = 1
+	}
+	
+	complete_effect = {
+		USA = { country_event = { days = 280 id = liberia.35 } }
+	}
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = naval_base
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = naval_base
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+	}
+	
+LIB_Procter_and_Gamble_Chemical_Plant = {
+	
+	available = {
+		has_stability > 0.6
+		has_completed_focus = LIB_ministry_of_health_and_social_welfare
+		has_idea =  AF_T_small_scale_railways 
+		num_of_available_civilian_factories > 1
+		298 = {
+			infrastructure > 2
+		}
+		298 = {
+			naval_base > 1
+		}
+    }
+
+    visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	days_remove = 90
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+		civilian_factory_use = 1
+	}
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	complete_effect = {
+		set_country_flag = LIB_procter_and_gamble_chemical_plant
+    }
+	
+	}
+
+LIB_Seek_Textile_Company  = {
+
+    available = {
+		has_stability > 0.7
+		has_idea =  AF_T_small_scale_railways 
+		cotton_farm > 1
+		num_of_available_civilian_factories > 1
+		298 = {
+			infrastructure > 3
+		}
+		298 = {
+			naval_base > 2
+		}
+    }
+
+    visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	days_remove = 120
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+		civilian_factory_use = 1
+	}
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = fabric_weavery
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = fabric_weavery
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = fabric_weavery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	complete_effect = {
+
+    }
+}
+
+}
+
+internal_politics_eoanb = {
+
+LIB_Copy_Procter_and_Gamble_Laboratory = {
+
+    available = {
+		has_completed_focus = LIB_ministry_of_health_and_social_welfare
+		has_country_flag = LIB_procter_and_gamble_chemical_plant
+    }
+
+    visible = {
+		has_completed_focus = LIB_ministry_of_health_and_social_welfare
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	days_remove = 45
+	
+	modifier = {
+		
+	}
+	
+	remove_effect = {
+		set_country_flag = LIB_chemistry_research_lab
+    }
+}
+
+LIB_Research_Microbiology = {
+
+    available = {
+		has_country_flag = LIB_chemistry_research_lab
+		has_tech = germ_theory
+    }
+
+    visible = {
+		has_completed_focus = LIB_ministry_of_health_and_social_welfare
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	days_remove = 360
+	
+	modifier = {
+		political_power_gain = -1
+	}
+	
+	remove_effect = {
+		add_tech_bonus = {
+			bonus = 0.25
+			uses = 1
+			technology = microbiology
+		}
+		hidden_effect = {
+			add_tech_bonus = {
+				bonus = 0.05
+				uses = 2
+				category = biochemistry_tech
+			}
+		}
+		
+    }
+}
+
+LIB_Mandatory_Vaccines = {
+
+    available = {
+		has_tech = early_vaccination
+    }
+
+    visible = {
+		has_completed_focus = LIB_ministry_of_health_and_social_welfare
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	days_remove = 360
+	
+	modifier = {
+		political_power_gain = -1
+	}
+	
+	remove_effect = {
+		remove_ideas = LIB_low_life_expectancy
+		
+    }
+}
+
+}

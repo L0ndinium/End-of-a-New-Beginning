@@ -1,680 +1,1538 @@
-﻿#add_namespace = pssystem
+﻿add_namespace = pssystem
 
-#-250
+#-1
+country_event = {
+	id = pssystem.10
+	title = pssystem.10.t
+	desc = pssystem.10.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_sank_minus_one = yes
+		NOT = {
+			has_idea = PS_high_ps
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = PS_opposition_rises
+			set_variable = { ROOT.opposition_rises_done = 1 }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.10.a
+	}
+}
+
+#-2
+country_event = {
+	id = pssystem.0
+	title = pssystem.0.t
+	desc = pssystem.0.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_sank_minus_two = yes
+		has_idea = PS_opposition_rises
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = PS_riots_in_the_streets
+			set_variable = { ROOT.riots_in_the_streets_done = 1 }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.0.a
+	}
+}
+
+#-3
+country_event = {
+	id = pssystem.1
+	title = pssystem.1.t
+	desc = pssystem.1.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_sank_minus_three = yes
+		has_idea = PS_riots_in_the_streets
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_government = radical_democracy
+				}
+				add_ideas = PS_big_scale_protests_double
+			}
+			else_if = {
+				limit = {
+					has_government = collectivist_socialism
+				}
+				add_ideas = PS_big_scale_protests_single
+			}
+			else = {
+				random_list = {
+					50 = {
+						add_ideas = PS_big_scale_protests_single
+					}
+					50 = {
+						add_ideas = PS_big_scale_protests_double
+					}
+				}
+			}
+			set_variable = { ROOT.big_scale_protests_done = 1 }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.1.a
+	}
+}
+
+#-4
+country_event = {
+	id = pssystem.2
+	title = pssystem.2.t
+	desc = pssystem.2.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_sank_minus_four = yes
+		OR = {
+			has_idea = PS_big_scale_protests_single
+			has_idea = PS_big_scale_protests_double
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				0 = {
+					if = {
+						limit = {
+							has_idea = PS_big_scale_protests_single
+						}
+						add_ideas = PS_fighting_in_the_streets_single
+					}
+					else_if = {
+						limit = {
+							has_idea = PS_big_scale_protests_double
+						}
+						add_ideas = PS_fighting_in_the_streets_double
+					}
+					set_variable = { ROOT.fighting_in_the_streets_done = 1 }
+				}
+				100 = {
+					if = {
+						limit = {
+							has_idea = PS_big_scale_protests_single
+						}
+						add_ideas = PS_fighting_in_the_streets_single
+					}
+					else_if = {
+						limit = {
+							has_idea = PS_big_scale_protests_double
+						}
+						add_ideas = PS_fighting_in_the_streets_double
+					}
+					set_variable = { ROOT.fighting_in_the_streets_done = 1 }
+					add_ideas = PS_take_over_identificator
+				}
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.2.a
+	}
+}
+
+#-5 demilitarized zone
 #country_event = {
-#	id = pssystem.0
-#	title = pssystem.0.t
-#	desc = pssystem.0.d
+#	id = pssystem.31
+#	title = pssystem.31.t
+#	desc = pssystem.31.d
 #	picture = GFX_report_wittelsbachs
 #	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_one
+#	mean_time_to_happen = {
+#		days = 3
 #	}
 #	
 #	trigger = {
-#		has_political_power < -249
-#		NOT = {
-#			OR = {
-#				#America
-#				tag = NWT
-#				tag = WLL
-#				#Asia
-#				tag = BUK
-#				tag = TRA
-#				tag = SRS
-#				tag = GWA
-#				tag = REW
-#				tag = HYD
-#				tag = PTH
-#				tag = NIE
-#				#Africa
-#				tag = KAA
-#				tag = SAL
-#				tag = MNH
-#				tag = MDR
-#				tag = EQA
-#				tag = WSG
-#				tag = YEK
-#				tag = BKW
-#				tag = LUB
-#				tag = BKM
-#				tag = BUG
-#				tag = BNG
-#				tag = SAA
-#				tag = KRU
-#				tag = MOR
-#				tag = BAB
-#				tag = TRZ
-#				tag = KAG
-#				tag = TUG
-#				tag = TUN
-#				tag = LBA
-#				tag = SNS
-#				tag = KBO
-#				tag = ETH
-#				tag = SID
-#				tag = HRR
-#				tag = AWS
-#				tag = ORO
-#				tag = GLD
-#				tag = MAJ
-#				tag = RDL
-#				tag = OGD
-#				tag = BOR
-#				tag = MOM
-#				tag = FTT
-#				tag = SNG
-#				tag = BAO
-#				tag = SIN
-#				tag = KAB
-#				tag = FTJ
-#				tag = TOU
-#				tag = BAM
-#				tag = KOY
-#				tag = LIB
-#				tag = MND
-#				tag = KOG
-#				tag = AKA
-#				tag = GBS
-#				tag = MSN
-#				tag = MOS
-#				tag = DDI
-#				tag = DAH
-#				tag = ASH
-#				tag = BRG
-#				tag = SKT
-#				tag = OYO
-#				tag = GBG
-#				tag = DFR
-#				tag = WDD
-#				tag = ALZ
-#				tag = SHK
-#				tag = TKN
-#				tag = KKY
-#				tag = MMA
-#				tag = MOM
-#				tag = IJB
-#				tag = ARO
-#				tag = BMM
-#				tag = BET
-#				tag = KTK
-#				tag = BAG
-#				tag = BDA
-#				tag = GBY
-#				tag = LNG
-#				tag = NYG
-#				tag = TOR
-#				tag = BNY
-#				tag = MAA
-#				tag = LUO
-#				tag = NKO
-#				tag = KRG
-#				tag = SUK
-#				tag = NYW
-#				tag = LGR
-#				tag = ZAN
-#				tag = UJJ
-#				tag = BUR
-#				tag = RWD
-#				tag = TIP
-#				tag = TTL
-#				tag = TEK
-#				tag = BLU
-#				tag = KTA
-#				tag = FNG
-#				tag = PUN
-#				tag = MSG
-#				tag = LOA
-#				tag = NGY
-#				tag = KON
-#				tag = TYO
-#				tag = HLO
-#				tag = LUN
-#				tag = KUB
-#				tag = CKW
-#				tag = LOZ
-#				tag = WYO
-#				tag = KND
-#				tag = MRN
-#				tag = KBD
-#				tag = OVD
-#				tag = AHR
-#				tag = GGL
-#				tag = KVG
-#				tag = BAT
-#				tag = OVB
-#				tag = HMB
-#				tag = ROZ
-#				tag = BTS
-#				tag = BMG
-#				tag = NDE
-#				tag = BST
-#				tag = HER
-#				tag = OFS
-#				tag = OOR
-#				tag = ZUL
+#		PS_pol_stab_sank_minus_five = yes
+#		#has_idea = PS_dem_zone_identificator
+#		OR = {
+#			has_idea = PS_fighting_in_the_streets_single
+#			has_idea = PS_fighting_in_the_streets_double
+#		}
+#	}
+#	
+#	immediate = {
+#		hidden_effect = {
+#			random_owned_controlled_state = {
+#				set_demilitarized_zone = yes
 #			}
 #		}
 #	}
 #	
 #	option = {
 #		ai_chance = { factor = 100 }
-#		name = pssystem.0.a
+#		name = pssystem.31.a
 #	}
 #}
-#
-#-500
-#country_event = {
-#	id = pssystem.1
-#	title = pssystem.1.t
-#	desc = pssystem.1.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_two
-#	}
-#	
-#	trigger = {
-#		has_political_power < -499
-#		NOT = {
-#			OR = {
-#				#America
-#				tag = NWT
-#				tag = WLL
-#				#Asia
-#				tag = BUK
-#				tag = TRA
-#				tag = SRS
-#				tag = GWA
-#				tag = REW
-#				tag = HYD
-#				tag = PTH
-#				tag = NIE
-#				#Africa
-#				tag = KAA
-#				tag = SAL
-#				tag = MNH
-#				tag = MDR
-#				tag = EQA
-#				tag = WSG
-#				tag = YEK
-#				tag = BKW
-#				tag = LUB
-#				tag = BKM
-#				tag = BUG
-#				tag = BNG
-#				tag = SAA
-#				tag = KRU
-#				tag = MOR
-#				tag = BAB
-#				tag = TRZ
-#				tag = KAG
-#				tag = TUG
-#				tag = TUN
-#				tag = LBA
-#				tag = SNS
-#				tag = KBO
-#				tag = ETH
-#				tag = SID
-#				tag = HRR
-#				tag = AWS
-#				tag = ORO
-#				tag = GLD
-#				tag = MAJ
-#				tag = RDL
-#				tag = OGD
-#				tag = BOR
-#				tag = MOM
-#				tag = FTT
-#				tag = SNG
-#				tag = BAO
-#				tag = SIN
-#				tag = KAB
-#				tag = FTJ
-#				tag = TOU
-#				tag = BAM
-#				tag = KOY
-#				tag = LIB
-#				tag = MND
-#				tag = KOG
-#				tag = AKA
-#				tag = GBS
-#				tag = MSN
-#				tag = MOS
-#				tag = DDI
-#				tag = DAH
-#				tag = ASH
-#				tag = BRG
-#				tag = SKT
-#				tag = OYO
-#				tag = GBG
-#				tag = DFR
-#				tag = WDD
-#				tag = ALZ
-#				tag = SHK
-#				tag = TKN
-#				tag = KKY
-#				tag = MMA
-#				tag = MOM
-#				tag = IJB
-#				tag = ARO
-#				tag = BMM
-#				tag = BET
-#				tag = KTK
-#				tag = BAG
-#				tag = BDA
-#				tag = GBY
-#				tag = LNG
-#				tag = NYG
-#				tag = TOR
-#				tag = BNY
-#				tag = MAA
-#				tag = LUO
-#				tag = NKO
-#				tag = KRG
-#				tag = SUK
-#				tag = NYW
-#				tag = LGR
-#				tag = ZAN
-#				tag = UJJ
-#				tag = BUR
-#				tag = RWD
-#				tag = TIP
-#				tag = TTL
-#				tag = TEK
-#				tag = BLU
-#				tag = KTA
-#				tag = FNG
-#				tag = PUN
-#				tag = MSG
-#				tag = LOA
-#				tag = NGY
-#				tag = KON
-#				tag = TYO
-#				tag = HLO
-#				tag = LUN
-#				tag = KUB
-#				tag = CKW
-#				tag = LOZ
-#				tag = WYO
-#				tag = KND
-#				tag = MRN
-#				tag = KBD
-#				tag = OVD
-#				tag = AHR
-#				tag = GGL
-#				tag = KVG
-#				tag = BAT
-#				tag = OVB
-#				tag = HMB
-#				tag = ROZ
-#				tag = BTS
-#				tag = BMG
-#				tag = NDE
-#				tag = BST
-#				tag = HER
-#				tag = OFS
-#				tag = OOR
-#				tag = ZUL
-#			}
-#		}
-#	}
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.1.a
-#	}
-#}
-#
-#-750
-#country_event = {
-#	id = pssystem.2
-#	title = pssystem.2.t
-#	desc = pssystem.2.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_three
-#	}
-#	
-#	trigger = {
-#		has_political_power < -749
-#		NOT = {
-#			OR = {
-#				#America
-#				tag = NWT
-#				tag = WLL
-#				#Asia
-#				tag = BUK
-#				tag = TRA
-#				tag = SRS
-#				tag = GWA
-#				tag = REW
-#				tag = HYD
-#				tag = PTH
-#				tag = NIE
-#				#Africa
-#				tag = KAA
-#				tag = SAL
-#				tag = MNH
-#				tag = MDR
-#				tag = EQA
-#				tag = WSG
-#				tag = YEK
-#				tag = BKW
-#				tag = LUB
-#				tag = BKM
-#				tag = BUG
-#				tag = BNG
-#				tag = SAA
-#				tag = KRU
-#				tag = MOR
-#				tag = BAB
-#				tag = TRZ
-#				tag = KAG
-#				tag = TUG
-#				tag = TUN
-#				tag = LBA
-#				tag = SNS
-#				tag = KBO
-#				tag = ETH
-#				tag = SID
-#				tag = HRR
-#				tag = AWS
-#				tag = ORO
-#				tag = GLD
-#				tag = MAJ
-#				tag = RDL
-#				tag = OGD
-#				tag = BOR
-#				tag = MOM
-#				tag = FTT
-#				tag = SNG
-#				tag = BAO
-#				tag = SIN
-#				tag = KAB
-#				tag = FTJ
-#				tag = TOU
-#				tag = BAM
-#				tag = KOY
-#				tag = LIB
-#				tag = MND
-#				tag = KOG
-#				tag = AKA
-#				tag = GBS
-#				tag = MSN
-#				tag = MOS
-#				tag = DDI
-#				tag = DAH
-#				tag = ASH
-#				tag = BRG
-#				tag = SKT
-#				tag = OYO
-#				tag = GBG
-#				tag = DFR
-#				tag = WDD
-#				tag = ALZ
-#				tag = SHK
-#				tag = TKN
-#				tag = KKY
-#				tag = MMA
-#				tag = MOM
-#				tag = IJB
-#				tag = ARO
-#				tag = BMM
-#				tag = BET
-#				tag = KTK
-#				tag = BAG
-#				tag = BDA
-#				tag = GBY
-#				tag = LNG
-#				tag = NYG
-#				tag = TOR
-#				tag = BNY
-#				tag = MAA
-#				tag = LUO
-#				tag = NKO
-#				tag = KRG
-#				tag = SUK
-#				tag = NYW
-#				tag = LGR
-#				tag = ZAN
-#				tag = UJJ
-#				tag = BUR
-#				tag = RWD
-#				tag = TIP
-#				tag = TTL
-#				tag = TEK
-#				tag = BLU
-#				tag = KTA
-#				tag = FNG
-#				tag = PUN
-#				tag = MSG
-#				tag = LOA
-#				tag = NGY
-#				tag = KON
-#				tag = TYO
-#				tag = HLO
-#				tag = LUN
-#				tag = KUB
-#				tag = CKW
-#				tag = LOZ
-#				tag = WYO
-#				tag = KND
-#				tag = MRN
-#				tag = KBD
-#				tag = OVD
-#				tag = AHR
-#				tag = GGL
-#				tag = KVG
-#				tag = BAT
-#				tag = OVB
-#				tag = HMB
-#				tag = ROZ
-#				tag = BTS
-#				tag = BMG
-#				tag = NDE
-#				tag = BST
-#				tag = HER
-#				tag = OFS
-#				tag = OOR
-#				tag = ZUL
-#			}
-#		}
-#	}
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.2.a
-#	}
-#}
-#
-#-1000
-#country_event = {
-#	id = pssystem.3
-#	title = pssystem.3.t
-#	desc = pssystem.3.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	fire_only_once = yes
-#	
-#	immediate = {
-#		set_country_flag = PP_stage_four
-#	}
-#	
-#	trigger = {
-#		has_political_power < -999
-#		NOT = {
-#			OR = {
-#				#America
-#				tag = NWT
-#				tag = WLL
-#				#Asia
-#				tag = BUK
-#				tag = TRA
-#				tag = SRS
-#				tag = GWA
-#				tag = REW
-#				tag = HYD
-#				tag = PTH
-#				tag = NIE
-#				#Africa
-#				tag = KAA
-#				tag = SAL
-#				tag = MNH
-#				tag = MDR
-#				tag = EQA
-#				tag = WSG
-#				tag = YEK
-#				tag = BKW
-#				tag = LUB
-#				tag = BKM
-#				tag = BUG
-#				tag = BNG
-#				tag = SAA
-#				tag = KRU
-#				tag = MOR
-#				tag = BAB
-#				tag = TRZ
-#				tag = KAG
-#				tag = TUG
-#				tag = TUN
-#				tag = LBA
-#				tag = SNS
-#				tag = KBO
-#				tag = ETH
-#				tag = SID
-#				tag = HRR
-#				tag = AWS
-#				tag = ORO
-#				tag = GLD
-#				tag = MAJ
-#				tag = RDL
-#				tag = OGD
-#				tag = BOR
-#				tag = MOM
-#				tag = FTT
-#				tag = SNG
-#				tag = BAO
-#				tag = SIN
-#				tag = KAB
-#				tag = FTJ
-#				tag = TOU
-#				tag = BAM
-#				tag = KOY
-#				tag = LIB
-#				tag = MND
-#				tag = KOG
-#				tag = AKA
-#				tag = GBS
-#				tag = MSN
-#				tag = MOS
-#				tag = DDI
-#				tag = DAH
-#				tag = ASH
-#				tag = BRG
-#				tag = SKT
-#				tag = OYO
-#				tag = GBG
-#				tag = DFR
-#				tag = WDD
-#				tag = ALZ
-#				tag = SHK
-#				tag = TKN
-#				tag = KKY
-#				tag = MMA
-#				tag = MOM
-#				tag = IJB
-#				tag = ARO
-#				tag = BMM
-#				tag = BET
-#				tag = KTK
-#				tag = BAG
-#				tag = BDA
-#				tag = GBY
-#				tag = LNG
-#				tag = NYG
-#				tag = TOR
-#				tag = BNY
-#				tag = MAA
-#				tag = LUO
-#				tag = NKO
-#				tag = KRG
-#				tag = SUK
-#				tag = NYW
-#				tag = LGR
-#				tag = ZAN
-#				tag = UJJ
-#				tag = BUR
-#				tag = RWD
-#				tag = TIP
-#				tag = TTL
-#				tag = TEK
-#				tag = BLU
-#				tag = KTA
-#				tag = FNG
-#				tag = PUN
-#				tag = MSG
-#				tag = LOA
-#				tag = NGY
-#				tag = KON
-#				tag = TYO
-#				tag = HLO
-#				tag = LUN
-#				tag = KUB
-#				tag = CKW
-#				tag = LOZ
-#				tag = WYO
-#				tag = KND
-#				tag = MRN
-#				tag = KBD
-#				tag = OVD
-#				tag = AHR
-#				tag = GGL
-#				tag = KVG
-#				tag = BAT
-#				tag = OVB
-#				tag = HMB
-#				tag = ROZ
-#				tag = BTS
-#				tag = BMG
-#				tag = NDE
-#				tag = BST
-#				tag = HER
-#				tag = OFS
-#				tag = OOR
-#				tag = ZUL
-#			}
-#		}
-#	}
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.3.a
-#	}
-#}
-#
-#-1000
-#country_event = {
-#	id = pssystem.9
-#	title = pssystem.9.t
-#	desc = pssystem.9.d
-#	picture = GFX_report_wittelsbachs
-#	
-#	is_triggered_only = yes
-#	
-#	option = {
-#		ai_chance = { factor = 100 }
-#		name = pssystem.9.a
-#		
-#		add_ideas = {
-#			PP_first_stage_drift_single
-#		}
-#	}
-#}
+
+#-5 take over
+country_event = {
+	id = pssystem.25
+	title = pssystem.25.t
+	desc = pssystem.25.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_sank_minus_five = yes
+		has_idea = PS_take_over_identificator
+		OR = {
+			has_idea = PS_fighting_in_the_streets_single
+			has_idea = PS_fighting_in_the_streets_double
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = PS_call_for_take_over
+			set_variable = { ROOT.call_for_civil_war_done = 1 }
+			
+			country_event = { id = pssystem.27 days = 30 }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.25.a
+	}
+}
+
+#takeover proxy
+country_event = {
+	id = pssystem.27
+	title = pssystem.27.t
+	desc = pssystem.27.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = PS_call_for_take_over
+				}
+				if = {
+					limit = {
+						has_idea = PS_fighting_in_the_streets_double
+					}
+					country_event = { id = pssystem.28 }
+				}
+				else_if = {
+					limit = {
+						has_idea = PS_fighting_in_the_streets_single
+					}
+					country_event = { id = pssystem.29 }
+				}
+			}
+			else = {
+				country_event = { id = pssystem.30 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.27.a
+	}
+}
+
+#takeover succeed colsoc
+country_event = {
+	id = pssystem.28
+	title = pssystem.28.t
+	desc = pssystem.28.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = collectivist_socialism
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.28.a
+	}
+}
+
+#takeover succeed raddem
+country_event = {
+	id = pssystem.29
+	title = pssystem.29.t
+	desc = pssystem.29.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = radical_democracy
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.29.a
+	}
+}
+
+#takeover avoided
+country_event = {
+	id = pssystem.30
+	title = pssystem.30.t
+	desc = pssystem.30.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.30.a
+	}
+}
+
+#-5 civil war
+country_event = {
+	id = pssystem.3
+	title = pssystem.3.t
+	desc = pssystem.3.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_sank_minus_five = yes
+		NOT = {
+			has_idea = PS_take_over_identificator
+		}
+		OR = {
+			has_idea = PS_fighting_in_the_streets_single
+			has_idea = PS_fighting_in_the_streets_double
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = PS_call_for_civil_war
+			set_variable = { ROOT.call_for_civil_war_done = 1 }
+			
+			if = {
+				limit = {
+					has_idea = PS_big_scale_protests_single
+				}
+				start_civil_war = {
+					ideology = radical_democracy
+					size = 0.2
+					only_own_territory = no
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = PS_big_scale_protests_double
+				}
+				start_civil_war = {
+					ideology = collectivist_socialism
+					size = 0.2
+					only_own_territory = no
+				}
+				#start_civil_war = {
+				#	ideology = radical_democracy
+				#	size = 0.2
+				#	only_own_territory = no
+				#}
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.3.a
+	}
+}
+
+#reverse
+#-5 reverse takeover
+country_event = {
+	id = pssystem.26
+	title = pssystem.26.t
+	desc = pssystem.26.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_minus_five = yes
+		has_idea = PS_call_for_take_over
+		has_idea = PS_take_over_identificator
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.call_for_civil_war_done = 0 }
+			remove_ideas = { PS_call_for_take_over }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.26.a
+	}
+}
+
+#-5 reverse civil war
+country_event = {
+	id = pssystem.4
+	title = pssystem.4.t
+	desc = pssystem.4.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_minus_five = yes
+		has_idea = PS_call_for_civil_war
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.call_for_civil_war_done = 0 }
+			remove_ideas = { PS_call_for_civil_war }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.4.a
+	}
+}
+
+#-4 reverse
+country_event = {
+	id = pssystem.5
+	title = pssystem.5.t
+	desc = pssystem.5.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_minus_four = yes
+		check_variable = { ROOT.call_for_civil_war_done = 0 }
+		OR = {
+			has_idea = PS_fighting_in_the_streets_single
+			has_idea = PS_fighting_in_the_streets_double
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.fighting_in_the_streets_done = 0 }
+			remove_ideas = { PS_fighting_in_the_streets_single PS_fighting_in_the_streets_double }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.5.a
+	}
+}
+
+#-3 reverse
+country_event = {
+	id = pssystem.6
+	title = pssystem.6.t
+	desc = pssystem.6.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_minus_three = yes
+		check_variable = { ROOT.fighting_in_the_streets_done = 0 }
+		OR = {
+			has_idea = PS_big_scale_protests_single
+			has_idea = PS_big_scale_protests_double
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.big_scale_protests_done = 0 }
+			remove_ideas = { PS_big_scale_protests_single PS_big_scale_protests_double }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.6.a
+	}
+}
+
+#-2 reverse
+country_event = {
+	id = pssystem.7
+	title = pssystem.7.t
+	desc = pssystem.7.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_minus_two = yes
+		check_variable = { ROOT.big_scale_protests_done = 0 }
+		has_idea = PS_riots_in_the_streets
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.riots_in_the_streets_done = 0 }
+			remove_ideas = { PS_riots_in_the_streets }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.7.a
+	}
+}
+
+#-1 reverse
+country_event = {
+	id = pssystem.11
+	title = pssystem.11.t
+	desc = pssystem.11.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_minus_one = yes
+		check_variable = { ROOT.riots_in_the_streets_done = 0 }
+		has_idea = PS_opposition_rises
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.opposition_rises_done = 0 }
+			remove_ideas = PS_opposition_rises
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.11.a
+	}
+}
+
+#+1
+country_event = {
+	id = pssystem.8
+	title = pssystem.8.t
+	desc = pssystem.8.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_rose_one = yes
+		NOT = {
+			has_idea = PS_opposition_rises
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.ps_high_done = 1 }
+			add_ideas = PS_high_ps
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.8.a
+	}
+}
+
+#+2
+country_event = {
+	id = pssystem.12
+	title = pssystem.12.t
+	desc = pssystem.12.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_rose_two = yes
+		has_idea = PS_high_ps
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.overwhelming_ps_done = 1 }
+			add_ideas = PS_overwhelming_ps
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.12.a
+	}
+}
+
+#+3
+country_event = {
+	id = pssystem.13
+	title = pssystem.13.t
+	desc = pssystem.13.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_rose_three = yes
+		has_idea = PS_overwhelming_ps
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.no_opposition_left_done = 1 }
+			add_ideas = PS_no_opposition_left
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.13.a
+	}
+}
+
+#+1 reverse
+country_event = {
+	id = pssystem.9
+	title = pssystem.9.t
+	desc = pssystem.9.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_one = yes
+		check_variable = { ROOT.overwhelming_ps_done = 0 }
+		has_idea = PS_high_ps
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.ps_high_done = 0 }
+			remove_ideas = { PS_high_ps }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.9.a
+	}
+}
+
+#+2 reverse
+country_event = {
+	id = pssystem.14
+	title = pssystem.14.t
+	desc = pssystem.14.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_two = yes
+		check_variable = { ROOT.no_opposition_left_done = 0 }
+		has_idea = PS_overwhelming_ps
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.overwhelming_ps_done = 0 }
+			remove_ideas = { PS_overwhelming_ps }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.14.a
+	}
+}
+
+#+3 reverse
+country_event = {
+	id = pssystem.15
+	title = pssystem.15.t
+	desc = pssystem.15.d
+	picture = GFX_report_wittelsbachs
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		PS_pol_stab_was_three = yes
+		has_idea = PS_no_opposition_left
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = { ROOT.no_opposition_left_done = 0 }
+			remove_ideas = { PS_no_opposition_left }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.15.a
+	}
+}
+
+### YEARLY CHANGE ###
+#event that calculates how much PS should be added or subtracted
+country_event = {
+	id = pssystem.16
+	title = pssystem.16.t
+	desc = pssystem.16.d
+	
+	is_triggered_only = yes
+	
+	#mean_time_to_happen = {
+	#	days = 365
+	#}
+	
+	#trigger = {
+	#	
+	#}
+	
+	hidden = yes
+	
+	immediate = {
+		country_event = { id = pssystem.16 days = 365 }
+	
+		set_variable = {
+			var = ROOT.pol_stability_yearly_factor
+			value = 0
+		}
+		
+		#has border war?
+		if = {
+			limit = {
+				has_border_war = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Border war: -1"
+		}
+		else = {
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Border war: +1"
+		}
+		
+		#has general war?
+		if = {
+			limit = {
+				has_war = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: General war: -1"
+		}
+		else = {
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: General war: +1"
+		}
+		
+		#has civil war?
+		if = {
+			limit = {
+				has_civil_war = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Civil war: -1"
+		}
+		else = {
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Civil war: +1"
+		}
+		
+		#is target of coup?
+		if = {
+			limit = {
+				is_target_of_coup = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Target of coup: -1"
+		}
+		else = {
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Target of coup: +1"
+		}
+		
+		#popular stability?
+		if = {
+			limit = {
+				has_stability > 0.8
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 2
+			}
+			log = "PS: Popular stability: +2"
+		}
+		else_if = {
+			limit = {
+				has_stability > 0.6
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Popular stability: +1"
+		}
+		else_if = {
+			limit = {
+				has_stability > 0.4
+			}
+			#stab between 40 and 60 does not affect the factor
+			log = "PS: Popular stability: +-0"
+		}
+		else_if = {
+			limit = {
+				has_stability > 0.2
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS:  Popular stability: -1"
+		}
+		else = {
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 2
+			}
+			log = "PS: Popular stability: -2"
+		}
+		
+		#party popularity?
+		if = {
+			limit = {
+				check_variable = { ROOT.party_popularity@ruling_party > 0.8 }
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 2
+			}
+			log = "PS: Party popularity: +2"
+		}
+		else_if = {
+			limit = {
+				check_variable = { ROOT.party_popularity@ruling_party > 0.6 }
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Party popularity: +1"
+		}
+		else_if = {
+			limit = {
+				check_variable = { ROOT.party_popularity@ruling_party > 0.4 }
+			}
+			#40-60% party pupularity does not affect the factor
+			
+			log = "PS: Party popularity: +-0"
+		}
+		else_if = {
+			limit = {
+				check_variable = { ROOT.party_popularity@ruling_party > 0.3 }
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Party popularity: -1"
+		}
+		else_if = {
+			limit = {
+				check_variable = { ROOT.party_popularity@ruling_party > 0.2 }
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 2
+			}
+			log = "PS: Party popularity: -2"
+		}
+		else = {
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 3
+			}
+			log = "PS: Party popularity: -3"
+		}
+		
+		#is puppet?
+		if = {
+			limit = {
+				is_puppet = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Is puppet: -1"
+		}
+		else = {
+			#not being a puppet does not affect the factor
+			
+			log = "PS: Is puppet: +-0"
+		}
+		
+		#is subject?
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Is subject: -1"
+		}
+		else = {
+			#not being a subject does not affect the factor
+			
+			log = "PS: Is subject: +-0"
+		}
+		
+		#is in a faction?
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Is in faction: +1"
+		}
+		else = {
+			#not being in a faction does not affect the factor
+			
+			log = "PS: Is in faction: +-0"
+		}
+		
+		#accident count
+		#accidents are used to subtract only
+		if = {
+			limit = {
+				PS_accident_factor_zero = yes
+			}
+			#if accident count is zero the factor gets not affected
+			
+			log = "PS: Accidents: +-0"
+		}
+		else_if = {
+			limit = {
+				PS_accident_factor_one = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Accidents: -1"
+		}
+		else_if = {
+			limit = {
+				PS_accident_factor_two = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 1
+			}
+			log = "PS: Accidents: -1"
+		}
+		else_if = {
+			limit = {
+				PS_accident_factor_three = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 2
+			}
+			log = "PS: Accidents: -2"
+		}
+		else_if = {
+			limit = {
+				PS_accident_factor_four = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 2
+			}
+			log = "PS: Accidents: -2"
+		}
+		else_if = {
+			limit = {
+				PS_accident_factor_over_four = yes
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability_yearly_factor
+				value = 3
+			}
+			log = "PS: Accidents: -3"
+		}
+		
+		#economy?
+		#change this
+		
+		#9 total
+		if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 10
+				}
+			}
+			country_event = { id = pssystem.17 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 9
+				}
+			}
+			country_event = { id = pssystem.17 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 8
+				}
+			}
+			country_event = { id = pssystem.18 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 7
+				}
+			}
+			country_event = { id = pssystem.18 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 6
+				}
+			}
+			country_event = { id = pssystem.18 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 5
+				}
+			}
+			country_event = { id = pssystem.19 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 4
+				}
+			}
+			country_event = { id = pssystem.19 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 3
+				}
+			}
+			country_event = { id = pssystem.19 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 2
+				}
+			}
+			country_event = { id = pssystem.20 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > 1
+				}
+			}
+			country_event = { id = pssystem.20 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor = 0
+				}
+			}
+			country_event = { id = pssystem.20 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -2
+				}
+			}
+			country_event = { id = pssystem.21 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -3
+				}
+			}
+			country_event = { id = pssystem.21 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -4
+				}
+			}
+			country_event = { id = pssystem.21 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -5
+				}
+			}
+			country_event = { id = pssystem.22 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -6
+				}
+			}
+			country_event = { id = pssystem.22 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -7
+				}
+			}
+			country_event = { id = pssystem.22 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -8
+				}
+			}
+			country_event = { id = pssystem.23 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -9
+				}
+			}
+			country_event = { id = pssystem.23 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -10
+				}
+			}
+			country_event = { id = pssystem.23 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -11
+				}
+			}
+			country_event = { id = pssystem.24 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -12
+				}
+			}
+			country_event = { id = pssystem.24 days = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { 
+					ROOT.pol_stability_yearly_factor > -13
+				}
+			}
+			country_event = { id = pssystem.24 days = 1 }
+		}
+		#-13 total
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.16.a
+		
+		clear_variable = ROOT.pol_stability_yearly_factor
+	}
+}
+
+#endpoint nr 1
+country_event = {
+	id = pssystem.17
+	title = pssystem.17.t
+	desc = pssystem.17.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = pssystem.17.a
+		
+		hidden_effect = {
+			increase_ps_by_two = yes
+		}
+	}
+}
+
+#endpoint nr 2
+country_event = {
+	id = pssystem.18
+	title = pssystem.17.t
+	desc = pssystem.18.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 70 }
+		name = pssystem.18.a
+	}
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = pssystem.18.b
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
+	}
+}
+
+#endpoint nr 3
+country_event = {
+	id = pssystem.19
+	title = pssystem.17.t
+	desc = pssystem.19.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 65 }
+		name = pssystem.19.a
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.19.b
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+}
+
+#enpoint nr 4
+country_event = {
+	id = pssystem.20
+	title = pssystem.17.t
+	desc = pssystem.20.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.20.a
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.20.b
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = pssystem.20.c
+	}
+}
+
+#enpoint nr 5
+country_event = {
+	id = pssystem.21
+	title = pssystem.17.t
+	desc = pssystem.21.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.21.a
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.21.b
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = pssystem.21.c
+		
+		hidden_effect = {
+			increase_ps_by_one = yes
+		}
+	}
+}
+
+#enpoint nr 6
+country_event = {
+	id = pssystem.22
+	title = pssystem.17.t
+	desc = pssystem.22.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.22.a
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 35 }
+		name = pssystem.22.b
+	}
+	
+	option = {
+		ai_chance = { factor = 30 }
+		name = pssystem.22.c
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+}
+
+#enpoint nr 7
+country_event = {
+	id = pssystem.23
+	title = pssystem.17.t
+	desc = pssystem.23.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.a
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.b
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.c
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.23.e
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+}
+
+#enpoint nr 8
+country_event = {
+	id = pssystem.24
+	title = pssystem.17.t
+	desc = pssystem.24.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.a
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.b
+		
+		hidden_effect = {
+			decrease_ps_by_two = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.c
+		
+		hidden_effect = {
+			decrease_ps_by_one = yes
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = pssystem.24.e
+	}
+}

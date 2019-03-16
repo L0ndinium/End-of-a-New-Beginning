@@ -1,0 +1,131 @@
+ideas = {
+	country = {
+
+		LIB_transatlantic = {
+			allowed = {
+				TAG = LIB
+				TAG = KRU
+			}
+			
+			removal_cost = -1
+			
+			picture = limited_elections
+			
+			modifier = {
+				stability_factor= -0.025
+				political_power_factor = -0.05
+			}
+		}
+		
+		LIB_illegal_transatlantic = {
+			allowed = {
+				TAG = LIB
+				TAG = KRU
+			}
+			
+			removal_cost = -1
+			
+			picture = limited_elections
+			
+			modifier = {
+				stability_factor= -0.05
+				MONTHLY_POPULATION = -0.01
+				political_power_factor = 0.10
+			}
+		}
+		
+		LIB_shining_example_transatlantic = {
+			allowed = {
+				TAG = LIB
+				TAG = KRU
+			}
+			
+			removal_cost = -1
+			
+			picture = limited_elections
+			
+			modifier = {
+				stability_factor= 0.01
+			}
+		}
+	
+	
+		LIB_low_racial_tensions  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				army_org_Factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+	
+		LIB_moderate_racial_tensions  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				army_org_Factor = -0.1
+				stability_factor = -0.10
+			}
+		}
+		
+		LIB_high_racial_tensions  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_unstable_government
+
+			modifier = {
+				army_org_Factor = -0.1
+				stability_factor = -0.20
+			}
+		}
+		
+		
+		LIB_low_life_expectancy = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+
+			modifier = {
+				stability_factor = -0.5
+				MONTHLY_POPULATION = -0.20
+			}
+		}
+		
+		LIB_poor_infrastructure = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RUS_disconnected_country
+
+			modifier = {
+				local_resources_factor = -0.15
+				mobilization_speed = -0.1
+				army_speed_factor  = -0.1
+			}
+		}
+	
+	}
+}

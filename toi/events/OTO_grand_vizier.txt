@@ -1,0 +1,8 @@
+﻿#Events for appointing the Ottoman grand viziers, if autocracy is in power.
+#These are normally triggered every 12 months with the option to keep the curent, but can be activated by decision at a small political power cost.
+#Grand viziers were historically changed often - there should be an encouragement for the player to cycle them and a way for the AI to do so.
+#If historical AI is on, these events will need to be triggered at the right dates & choose the right viziers
+
+#Events for the deaths of grand viziers if they are in office.
+
+	#Jan 7 1858 - d. Mustafa Resid

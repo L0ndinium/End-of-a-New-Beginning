@@ -1,0 +1,2807 @@
+focus_tree = {
+	id = gec_focus
+
+    country = {
+        factor = 0
+        
+        modifier = {
+            add = 11
+            tag = GEC
+        }
+    }
+	
+	default = no
+	
+	#Centralized Economy
+	focus = {
+		id = GEC_centralized_economy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 2
+		y = 0
+		mutually_exclusive = { focus = GEC_decentralized_economy }
+		prerequisite = { }
+		cost = 35
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Decentralized Economy
+	focus = {
+		id = GEC_decentralized_economy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 8
+		y = 0
+		mutually_exclusive = { focus = GEC_centralized_economy }
+		prerequisite = { }
+		cost = 35
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Connect Civilian Industry
+	focus = {
+		id = GEC_connect_civilian_industry
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 2
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_centralized_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Connect Infrastructure
+	focus = {
+		id = GEC_connect_infrastructure
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_centralized_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Connect Arms Industry
+	focus = {
+		id = GEC_connect_arms_industry
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 0
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_centralized_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Civilian Division of Labour
+	focus = {
+		id = GEC_civilian_division_of_labour
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 8
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_decentralized_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Cooperative Infrastructure
+	focus = {
+		id = GEC_cooperative_infrastructure
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 10
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_decentralized_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Develop German Puppets
+	focus = {
+		id = GEC_develop_german_puppets
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 13
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_decentralized_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Local Economy
+	focus = {
+		id = GEC_local_economy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 12
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_develop_german_puppets }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Local Politics
+	focus = {
+		id = GEC_local_politics
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 14
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_develop_german_puppets }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Compulsatory Participation in Parliament
+	focus = {
+		id = GEC_compulsatory_participation_in_parliament
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 13
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_local_politics }
+		prerequisite = { focus = GEC_local_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Arms Research Sharing
+	focus = {
+		id = GEC_arms_research_sharing
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 6
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_decentralized_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Northern Office of Economy
+	focus = {
+		id = GEC_northern_office_of_economy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 7
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_arms_research_sharing }
+		prerequisite = { focus = GEC_cooperative_infrastructure }
+		prerequisite = { focus = GEC_civilian_division_of_labour }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Southern Office of Economy
+	focus = {
+		id = GEC_southern_office_of_economy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 9
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_arms_research_sharing }
+		prerequisite = { focus = GEC_cooperative_infrastructure }
+		prerequisite = { focus = GEC_civilian_division_of_labour }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Regierungsbezirke
+	focus = {
+		id = GEC_regierungsbezirke
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 6
+		y = 3
+		mutually_exclusive = { focus = GEC_bundeslaender focus = GEC_regionen }
+		prerequisite = { focus = GEC_northern_office_of_economy }
+		prerequisite = { focus = GEC_southern_office_of_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bundesländer
+	focus = {
+		id = GEC_bundeslaender
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 8
+		y = 3
+		mutually_exclusive = { focus = GEC_regierungsbezirke focus = GEC_regionen }
+		prerequisite = { focus = GEC_northern_office_of_economy }
+		prerequisite = { focus = GEC_southern_office_of_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Regionen
+	focus = {
+		id = GEC_regionen
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 10
+		y = 3
+		mutually_exclusive = { focus = GEC_regierungsbezirke focus = GEC_bundeslaender }
+		prerequisite = { focus = GEC_northern_office_of_economy }
+		prerequisite = { focus = GEC_southern_office_of_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Restricted Industrial Autonomy
+	focus = {
+		id = GEC_restricted_industrial_autonomy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 7
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_regionen focus = GEC_bundeslaender focus = GEC_regierungsbezirke }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Restricted Political Autonomy
+	focus = {
+		id = GEC_restricted_political_autonomy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 9
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_regionen focus = GEC_bundeslaender focus = GEC_regierungsbezirke }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Central Delivery
+	focus = {
+		id = GEC_central_delivery
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 8
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_restricted_political_autonomy }
+		prerequisite = { focus = GEC_restricted_industrial_autonomy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Central Requests
+	focus = {
+		id = GEC_central_requests
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 8
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_central_delivery }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Centralized Institution for Economy
+	focus = {
+		id = GEC_centralized_institution_for_economy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 2
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_connect_arms_industry }
+		prerequisite = { focus = GEC_connect_civilian_industry }
+		prerequisite = { focus = GEC_connect_infrastructure }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bergbauunternehmen
+	focus = {
+		id = GEC_bergbauunternehmen
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 0
+		y = 3
+		mutually_exclusive = { focus = GEC_agrarunternehmen }
+		prerequisite = { focus = GEC_centralized_institution_for_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Agrarunternehmen
+	focus = {
+		id = GEC_agrarunternehmen
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 3
+		mutually_exclusive = { focus = GEC_bergbauunternehmen }
+		prerequisite = { focus = GEC_centralized_institution_for_economy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Deutschmetall
+	focus = {
+		id = GEC_deutschmetall
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 0
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_bergbauunternehmen focus = GEC_agrarunternehmen }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Inner Inspection Office
+	focus = {
+		id = GEC_inner_inspection_office
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 2
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_bergbauunternehmen focus = GEC_agrarunternehmen }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Food Standards
+	focus = {
+		id = GEC_food_standards
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_bergbauunternehmen focus = GEC_agrarunternehmen }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Renovate Arms Factories
+	focus = {
+		id = GEC_renovate_arms_factories
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 1
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_food_standards }
+		prerequisite = { focus = GEC_inner_inspection_office }
+		prerequisite = { focus = GEC_deutschmetall }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Renovate Civilian Factories
+	focus = {
+		id = GEC_renovate_civilian_factories
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 3
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_food_standards }
+		prerequisite = { focus = GEC_inner_inspection_office }
+		prerequisite = { focus = GEC_deutschmetall }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Northern and Southern Arms Industry
+	focus = {
+		id = GEC_northern_and_southern_arms_industry
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 1
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_renovate_arms_factories }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Northern and Southern Civilian Industry
+	focus = {
+		id = GEC_northern_and_southern_civilian_industry
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 3
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_renovate_civilian_factories }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Centralized Army
+	focus = {
+		id = GEC_centralized_army
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 21
+		y = 0
+		mutually_exclusive = { focus = GEC_decentralized_army }
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Prussian Doctrine
+	focus = {
+		id = GEC_prussian_doctrine
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 20
+		y = 1
+		mutually_exclusive = { focus = GEC_austrian_doctrine }
+		prerequisite = { focus = GEC_centralized_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Austrian Doctrine
+	focus = {
+		id = GEC_austrian_doctrine
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 22
+		y = 1
+		mutually_exclusive = { focus = GEC_prussian_doctrine }
+		prerequisite = { focus = GEC_centralized_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#High Command
+	focus = {
+		id = GEC_high_command
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 21
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_austrian_doctrine focus = GEC_prussian_doctrine }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Prussian Generals
+	focus = {
+		id = GEC_prussian_generals
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 20
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_high_command }
+		prerequisite = { focus = GEC_prussian_doctrine }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Austrian Tradition
+	focus = {
+		id = GEC_austrian_tradition
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 22
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_high_command }
+		prerequisite = { focus = GEC_austrian_doctrine }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Decentralized Army
+	focus = {
+		id = GEC_decentralized_army
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 27
+		y = 0
+		mutually_exclusive = { focus = GEC_centralized_army }
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Reforming the Kriegsministerium
+	focus = {
+		id = GEC_reforming_the_kriegsministerium
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 27
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_decentralized_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Zentraler Kriegsrat
+	focus = {
+		id = GEC_zentraler_kriegsrat
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 28
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_reforming_the_kriegsministerium }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Subordinated Councils
+	focus = {
+		id = GEC_subordinated_councils
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 28
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_zentraler_kriegsrat }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Allgemeine Kriegsverwaltung
+	focus = {
+		id = GEC_allgemeine_kriegsverwaltung
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 30
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_reforming_the_kriegsministerium }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Cooperation with Austria
+	focus = {
+		id = GEC_cooperation_with_austria
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 30
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_allgemeine_kriegsverwaltung }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Integrate Southern Ministeries
+	focus = {
+		id = GEC_integrate_southern_ministeries
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 26
+		y = 2
+		mutually_exclusive = { focus = GEC_leave_out_southern_ministeries }
+		prerequisite = { focus = GEC_reforming_the_kriegsministerium }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Leave Out Southern Ministeries
+	focus = {
+		id = GEC_leave_out_southern_ministeries
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 24
+		y = 2
+		mutually_exclusive = { focus = GEC_integrate_southern_ministeries }
+		prerequisite = { focus = GEC_reforming_the_kriegsministerium }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Süddeutsches Kriegsministerium
+	focus = {
+		id = GEC_sueddeutsches_kriegsministerium
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 25
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_integrate_southern_ministeries focus = GEC_leave_out_southern_ministeries }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#New Guns Only hidden
+	focus = {
+		id = GEC_new_guns_only_hidden
+		icon = GFX_unknown
+		ai_will_do = { factor = 0 }
+		x = 21
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = {
+			focus = GEC_austrian_tradition
+			focus = GEC_prussian_generals
+		}
+		
+		prerequisite = {
+			focus = GEC_cooperation_with_austria
+		}
+		prerequisite = {
+			focus = GEC_subordinated_councils
+		}
+		prerequisite = {
+			focus = GEC_sueddeutsches_kriegsministerium
+		}
+		
+		cost = 0
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#New Guns Only
+	focus = {
+		id = GEC_new_guns_only
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 21
+		y = 5
+		mutually_exclusive = { focus = GEC_everything_we_can_get }
+		
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = GEC_sueddeutsches_kriegsministerium
+					has_completed_focus = GEC_subordinated_councils
+					has_completed_focus = GEC_cooperation_with_austria
+				}
+				OR = {
+					has_completed_focus = GEC_austrian_tradition
+					has_completed_focus = GEC_prussian_generals
+				}
+			}
+		}
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Everything We Can Get hidden
+	focus = {
+		id = GEC_everything_we_can_get_hidden
+		icon = GFX_unknown
+		ai_will_do = { factor = 0 }
+		x = 27
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = {
+			focus = GEC_austrian_tradition
+			focus = GEC_prussian_generals
+		}
+		
+		prerequisite = {
+			focus = GEC_cooperation_with_austria
+		}
+		prerequisite = {
+			focus = GEC_subordinated_councils
+		}
+		prerequisite = {
+			focus = GEC_sueddeutsches_kriegsministerium
+		}
+		
+		available = {
+			always = no
+		}
+		
+		cost = 0
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Everything We Can Get
+	focus = {
+		id = GEC_everything_we_can_get
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 27
+		y = 5
+		mutually_exclusive = { focus = GEC_new_guns_only }
+		
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = GEC_sueddeutsches_kriegsministerium
+					has_completed_focus = GEC_subordinated_councils
+					has_completed_focus = GEC_cooperation_with_austria
+				}
+				OR = {
+					has_completed_focus = GEC_austrian_tradition
+					has_completed_focus = GEC_prussian_generals
+				}
+			}
+		}
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#We Old Few
+	focus = {
+		id = GEC_we_old_few
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 19
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_new_guns_only focus = GEC_everything_we_can_get }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bavarian Military Autonomy
+	focus = {
+		id = GEC_bavarian_military_autonomy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 19
+		y = 7
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_we_old_few }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bayerischer Kriegsvorstand
+	focus = {
+		id = GEC_bayerischer_kriegsvorstand
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 17
+		y = 7
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_we_old_few }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Extend Bavarian Army
+	focus = {
+		id = GEC_extend_bavarian_army
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 18
+		y = 8
+		mutually_exclusive = { focus = GEC_bayerische_koenigsgarde }
+		prerequisite = { focus = GEC_bayerischer_kriegsvorstand }
+		prerequisite = { focus = GEC_bavarian_military_autonomy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bayerische Königsgarde
+	focus = {
+		id = GEC_bayerische_koenigsgarde
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 21
+		y = 8
+		mutually_exclusive = { focus = GEC_extend_bavarian_army }
+		prerequisite = { focus = GEC_we_old_few }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Pickelhelm
+	focus = {
+		id = GEC_pickelhelm
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 21
+		y = 9
+		mutually_exclusive = { focus = GEC_raupenhelm }
+		prerequisite = { focus = GEC_bayerische_koenigsgarde focus = GEC_extend_bavarian_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Raupenhelm
+	focus = {
+		id = GEC_raupenhelm
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 18
+		y = 9
+		mutually_exclusive = { focus = GEC_pickelhelm }
+		prerequisite = { focus = GEC_bayerische_koenigsgarde focus = GEC_extend_bavarian_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#A New Navy
+	focus = {
+		id = GEC_a_new_navy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 24
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_new_guns_only focus = GEC_everything_we_can_get }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Cooperate with the k.k. Marine
+	focus = {
+		id = GEC_cooperate_with_the_kk_marine
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 23
+		y = 7
+		mutually_exclusive = { focus = GEC_cooperate_with_the_prs_marine }
+		prerequisite = { focus = GEC_a_new_navy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Cooperate with the Königlich Preußische Marine
+	focus = {
+		id = GEC_cooperate_with_the_prs_marine
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 25
+		y = 7
+		mutually_exclusive = { focus = GEC_cooperate_with_the_kk_marine }
+		prerequisite = { focus = GEC_a_new_navy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Look to the British
+	focus = {
+		id = GEC_look_to_the_british
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 27
+		y = 7
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_a_new_navy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Cooperate with the Royal Navy
+	focus = {
+		id = GEC_cooperate_with_the_royal_navy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 27
+		y = 8
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_look_to_the_british }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Naval Focus
+	focus = {
+		id = GEC_naval_focus
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 23
+		y = 9
+		mutually_exclusive = { focus = GEC_shore_focus }
+		prerequisite = { focus = GEC_cooperate_with_the_prs_marine focus = GEC_cooperate_with_the_kk_marine }
+		prerequisite = { focus = GEC_cooperate_with_the_royal_navy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Offensive Ships
+	focus = {
+		id = GEC_offensive_ships
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 23
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_naval_focus }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Shore Focus
+	focus = {
+		id = GEC_shore_focus
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 25
+		y = 9
+		mutually_exclusive = { focus = GEC_naval_focus }
+		prerequisite = { focus = GEC_cooperate_with_the_prs_marine focus = GEC_cooperate_with_the_kk_marine }
+		prerequisite = { focus = GEC_cooperate_with_the_royal_navy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Supportive Ships
+	focus = {
+		id = GEC_supportive_ships
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 25
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_naval_focus focus = GEC_shore_focus }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#German Gunboats
+	focus = {
+		id = GEC_german_gunboats
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 27
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_shore_focus }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#A New Army
+	focus = {
+		id = GEC_a_new_army
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 30
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_new_guns_only focus = GEC_everything_we_can_get }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#The Art of War
+	focus = {
+		id = GEC_the_art_of_war
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 29
+		y = 7
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_a_new_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Experimental Weapons
+	focus = {
+		id = GEC_experimental_weapons
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 31
+		y = 7
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_a_new_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Prussian Producers
+	focus = {
+		id = GEC_prussian_producers
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 31
+		y = 8
+		mutually_exclusive = { focus = GEC_austrian_imports }
+		prerequisite = { focus = GEC_experimental_weapons }
+		prerequisite = { focus = GEC_the_art_of_war }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Austrian Imports
+	focus = {
+		id = GEC_austrian_imports
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 29
+		y = 8
+		mutually_exclusive = { focus = GEC_prussian_producers }
+		prerequisite = { focus = GEC_experimental_weapons }
+		prerequisite = { focus = GEC_the_art_of_war }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bigger Units
+	focus = {
+		id = GEC_bigger_units
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 33
+		y = 8
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_experimental_weapons }
+		prerequisite = { focus = GEC_the_art_of_war }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Focus On Manpower
+	focus = {
+		id = GEC_focus_on_manpower
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 33
+		y = 9
+		mutually_exclusive = { focus = GEC_focus_on_firepower focus = GEC_focus_on_mobility }
+		prerequisite = { focus = GEC_bigger_units }
+		prerequisite = { focus = GEC_austrian_imports focus = GEC_prussian_producers }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Rekrutpolitik
+	focus = {
+		id = GEC_rekrutpolitik
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 33
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_focus_on_manpower }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Focus On Firepower
+	focus = {
+		id = GEC_focus_on_firepower
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 31
+		y = 9
+		mutually_exclusive = { focus = GEC_focus_on_manpower focus = GEC_focus_on_mobility }
+		prerequisite = { focus = GEC_austrian_imports focus = GEC_prussian_producers focus = GEC_bigger_units }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Deutsche Haubitzen
+	focus = {
+		id = GEC_deutsche_haubitzen
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 31
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_focus_on_firepower }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Focus On Mobility
+	focus = {
+		id = GEC_focus_on_mobility
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 29
+		y = 9
+		mutually_exclusive = { focus = GEC_focus_on_manpower focus = GEC_focus_on_firepower }
+		prerequisite = { focus = GEC_austrian_imports focus = GEC_prussian_producers focus = GEC_bigger_units }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Deutsche Hussaren
+	focus = {
+		id = GEC_deutsche_hussaren
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 29
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_focus_on_mobility }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Centralized Politics
+	focus = {
+		id = GEC_centralized_politics
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 38
+		y = 0
+		mutually_exclusive = { focus = GEC_decentralized_politics }
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Hierarchical Structure
+	focus = {
+		id = GEC_hierarchical_structure
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 38
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_centralized_politics }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Central Parliament System
+	focus = {
+		id = GEC_central_parliament_system
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 37
+		y = 2
+		mutually_exclusive = { focus = GEC_sub_parliament_system }
+		prerequisite = { focus = GEC_hierarchical_structure }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Landesabgeordnete
+	focus = {
+		id = GEC_landesabgeordnete
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 37
+		y = 3
+		mutually_exclusive = { focus = GEC_head_of_state_as_delegate }
+		prerequisite = { focus = GEC_central_parliament_system }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Head of State as Delegate
+	focus = {
+		id = GEC_head_of_state_as_delegate
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 35
+		y = 3
+		mutually_exclusive = { focus = GEC_landesabgeordnete }
+		prerequisite = { focus = GEC_central_parliament_system }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Sub-Parliament System
+	focus = {
+		id = GEC_sub_parliament_system
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 39
+		y = 2
+		mutually_exclusive = { focus = GEC_central_parliament_system }
+		prerequisite = { focus = GEC_hierarchical_structure }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Landesparlamente
+	focus = {
+		id = GEC_landesparlamente
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 39
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_sub_parliament_system }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Decentralized Politics
+	focus = {
+		id = GEC_decentralized_politics
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 0
+		mutually_exclusive = { focus = GEC_centralized_politics }
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Wahlkreise
+	focus = {
+		id = GEC_wahlkreise
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_decentralized_politics }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bezirkwahl
+	focus = {
+		id = GEC_bezirkwahl
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 2
+		mutually_exclusive = { focus = GEC_regionenwahl focus = GEC_landwahl }
+		prerequisite = { focus = GEC_wahlkreise }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Bezirksverwahlung
+	focus = {
+		id = GEC_bezirksverwaltung
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_bezirkwahl }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Regionenwahl
+	focus = {
+		id = GEC_regionenwahl
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 2
+		mutually_exclusive = { focus = GEC_bezirkwahl focus = GEC_landwahl }
+		prerequisite = { focus = GEC_wahlkreise }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Representative Parliament
+	focus = {
+		id = GEC_representative_parliament
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_landwahl focus = GEC_regionenwahl focus = GEC_bezirkwahl }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Landwahl
+	focus = {
+		id = GEC_landwahl
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 49
+		y = 2
+		mutually_exclusive = { focus = GEC_bezirkwahl focus = GEC_regionenwahl }
+		prerequisite = { focus = GEC_wahlkreise }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Dynamic Duration of Elections
+	focus = {
+		id = GEC_dynamic_duration_of_elections
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 49
+		y = 3
+		mutually_exclusive = { focus = GEC_set_duration_of_elections }
+		prerequisite = { focus = GEC_landwahl }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Set Duration of Elections
+	focus = {
+		id = GEC_set_duration_of_elections
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 51
+		y = 3
+		mutually_exclusive = { focus = GEC_dynamic_duration_of_elections }
+		prerequisite = { focus = GEC_landwahl }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Münchner Parlament
+	focus = {
+		id = GEC_muenchner_parliament
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 43
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_representative_parliament focus = GEC_landesparlamente focus = GEC_head_of_state_as_delegate focus = GEC_landesabgeordnete }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Centralized Legislative Procedure
+	focus = {
+		id = GEC_centralized_legislative_procedure
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 39
+		y = 5
+		mutually_exclusive = { focus = GEC_zwischenparlamente focus = GEC_konfoederatives_plenum } 
+		prerequisite = { focus = GEC_landesparlamente }
+		prerequisite = { focus = GEC_muenchner_parliament }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Konföderatives Plenum
+	focus = {
+		id = GEC_konfoederatives_plenum
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 37
+		y = 5
+		mutually_exclusive = { focus = GEC_zwischenparlamente focus = GEC_centralized_legislative_procedure }
+		prerequisite = { focus = GEC_muenchner_parliament }
+		prerequisite = { focus = GEC_landesabgeordnete focus = GEC_head_of_state_as_delegate }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Zwischenparlamente
+	focus = {
+		id = GEC_zwischenparlamente
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 5
+		mutually_exclusive = { focus = GEC_centralized_legislative_procedure focus = GEC_konfoederatives_plenum }
+		prerequisite = { focus = GEC_muenchner_parliament }
+		prerequisite = { focus = GEC_dynamic_duration_of_elections focus = GEC_set_duration_of_elections focus = GEC_bezirksverwaltung focus = GEC_representative_parliament }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Spezialkreise
+	focus = {
+		id = GEC_spezialkreise
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_abgeordnete_des_landtags }
+		prerequisite = { focus = GEC_zwischenparlamente }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Abgeordnete des Landtags
+	focus = {
+		id = GEC_abgeordnete_des_landtags
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 50
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_muenchner_parliament }
+		prerequisite = { focus = GEC_set_duration_of_elections focus = GEC_dynamic_duration_of_elections }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Nördliches Verfahren
+	focus = {
+		id = GEC_noerdliches_verfahren
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_zwischenparlamente focus = GEC_konfoederatives_plenum focus = GEC_centralized_legislative_procedure }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Südliches Verfahren
+	focus = {
+		id = GEC_suedliches_verfahren
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 41
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_zwischenparlamente focus = GEC_konfoederatives_plenum focus = GEC_centralized_legislative_procedure }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Assign Delegates
+	focus = {
+		id = GEC_assign_delegates
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 41
+		y = 7
+		mutually_exclusive = { focus = GEC_direct_election_of_delegates }
+		prerequisite = { focus = GEC_suedliches_verfahren }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#No Representative
+	focus = {
+		id = GEC_no_representative
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 41
+		y = 8
+		mutually_exclusive = { focus = GEC_german_representative }
+		prerequisite = { focus = GEC_direct_election_of_delegates focus = GEC_assign_delegates }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Parliament as Powerholder
+	focus = {
+		id = GEC_parliament_as_powerholder
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 41
+		y = 9
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_no_representative }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Innere Parlamentarische Kommission
+	focus = {
+		id = GEC_innere_parlamentarische_kommission
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 40
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_parliament_as_powerholder }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Äußere Parlamentarische Kommission
+	focus = {
+		id = GEC_aeussere_parlamentarische_kommission
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 42
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_parliament_as_powerholder }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Political Regulations
+	focus = {
+		id = GEC_political_regulations
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 39
+		y = 11
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_innere_parlamentarische_kommission }
+		prerequisite = { focus = GEC_aeussere_parlamentarische_kommission }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Assign a Kanzler
+	focus = {
+		id = GEC_assign_a_kanzler
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 41
+		y = 11
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_innere_parlamentarische_kommission }
+		prerequisite = { focus = GEC_aeussere_parlamentarische_kommission }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Austrian Advisors
+	focus = {
+		id = GEC_austrian_advisors
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 43
+		y = 11
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_innere_parlamentarische_kommission }
+		prerequisite = { focus = GEC_aeussere_parlamentarische_kommission }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Direct Election of Delegates
+	focus = {
+		id = GEC_direct_election_of_delegates
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 7
+		mutually_exclusive = { focus = GEC_assign_delegates }
+		prerequisite = { focus = GEC_noerdliches_verfahren }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#German Representative
+	focus = {
+		id = GEC_german_representative
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 8
+		mutually_exclusive = { focus = GEC_no_representative }
+		prerequisite = { focus = GEC_direct_election_of_delegates focus = GEC_assign_delegates }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Power to the Representative
+	focus = {
+		id = GEC_power_to_the_representative
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 9
+		mutually_exclusive = { focus = GEC_representative_without_power }
+		prerequisite = { focus = GEC_german_representative }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Representative without Power
+	focus = {
+		id = GEC_representative_without_power
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 9
+		mutually_exclusive = { focus = GEC_power_to_the_representative }
+		prerequisite = { focus = GEC_german_representative }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Figurehead for Foreign Policy
+	focus = {
+		id = GEC_figurehead_for_foreign_policy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_representative_without_power focus = GEC_power_to_the_representative }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Oberbefehl
+	focus = {
+		id = GEC_oberbefehl
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 10
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_representative_without_power focus = GEC_power_to_the_representative }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Our Own Crown
+	focus = {
+		id = GEC_our_own_crown
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 45
+		y = 11
+		mutually_exclusive = { focus = GEC_habsburg_regency }
+		prerequisite = { focus = GEC_figurehead_for_foreign_policy }
+		prerequisite = { focus = GEC_oberbefehl }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Habsburg Regency
+	focus = {
+		id = GEC_habsburg_regency
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 47
+		y = 11
+		mutually_exclusive = { focus = GEC_our_own_crown }
+		prerequisite = { focus = GEC_figurehead_for_foreign_policy }
+		prerequisite = { focus = GEC_oberbefehl }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#European Relations
+	focus = {
+		id = GEC_european_relations
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 58
+		y = 0
+		mutually_exclusive = {  }
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Seek Austrian Guidance
+	focus = {
+		id = GEC_seek_austrian_guidance
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 58
+		y = 1
+		mutually_exclusive = { focus = GEC_strive_for_independence }
+		prerequisite = { focus = GEC_european_relations }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Rely on Austria
+	focus = {
+		id = GEC_rely_on_austria
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 58
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_seek_austrian_guidance }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Ask for Austrian Arms
+	focus = {
+		id = GEC_ask_for_austrian_arms
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 58
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_rely_on_austria }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Ask for Austrian Forces
+	focus = {
+		id = GEC_ask_for_austrian_forces
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 60
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_rely_on_austria }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Joint Austro-German Army
+	focus = {
+		id = GEC_joint_austro_german_army
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 59
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_ask_for_austrian_arms }
+		prerequisite = { focus = GEC_ask_for_austrian_forces }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Reaffirm Friendship
+	focus = {
+		id = GEC_reaffirm_friendship
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 59
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_joint_austro_german_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Reaffirm the Habsburgs
+	focus = {
+		id = GEC_reaffirm_the_habsburgs
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 59
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_reaffirm_friendship }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Central European Powers
+	focus = {
+		id = GEC_central_european_powers
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 57
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_reaffirm_friendship }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Strive for Independence
+	focus = {
+		id = GEC_strive_for_independence
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 55
+		y = 1
+		mutually_exclusive = { focus = GEC_seek_austrian_guidance }
+		prerequisite = { focus = GEC_european_relations }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Deutsche Wehrhoheit
+	focus = {
+		id = GEC_deutsche_wehrhoheit
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 55
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_strive_for_independence }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Distance from Austrian Politics
+	focus = {
+		id = GEC_distance_from_austrian_politics
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 55
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_deutsche_wehrhoheit }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Ask Europe for Recognition
+	focus = {
+		id = GEC_aks_europe_for_recognition
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 54
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_distance_from_austrian_politics }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Rally Nationalists
+	focus = {
+		id = GEC_rally_nationalists
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 56
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_distance_from_austrian_politics }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#The New German Power
+	focus = {
+		id = GEC_the_new_german_power
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 55
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_aks_europe_for_recognition }
+		prerequisite = { focus = GEC_rally_nationalists }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Declare Independence from Austria
+	focus = {
+		id = GEC_declare_independence_from_austria
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 55
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_the_new_german_power }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Relations with France
+	focus = {
+		id = GEC_relations_with_france
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 63
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_european_relations }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#State Visit
+	focus = {
+		id = GEC_state_visit
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 63
+		y = 2
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_relations_with_france }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Gift Saarland
+	focus = {
+		id = GEC_gift_saarland
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 62
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_state_visit }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Gift Palatinate
+	focus = {
+		id = GEC_gift_palatinate
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 64
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_state_visit }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Propose Friendship
+	focus = {
+		id = GEC_propose_friendship
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 63
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_gift_palatinate focus = GEC_gift_saarland }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Nuremberger Pact
+	focus = {
+		id = GEC_nuremberger_pact
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 63
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_propose_friendship }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Affirm French Autocracy
+	focus = {
+		id = GEC_affirm_french_autocracy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 63
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_nuremberger_pact }
+		prerequisite = { focus = GEC_gift_palatinate }
+		prerequisite = { focus = GEC_gift_saarland }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Franco-Allemand Union
+	focus = {
+		id = GEC_franco_allemand_union
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 61
+		y = 6
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_nuremberger_pact }
+		prerequisite = { focus = GEC_gift_palatinate }
+		prerequisite = { focus = GEC_gift_saarland }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Address Inner Issues
+	focus = {
+		id = GEC_address_inner_issues
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 69
+		y = 0
+		mutually_exclusive = {  }
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Address Conservatives
+	focus = {
+		id = GEC_address_conservatives
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 69
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_address_inner_issues }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Address Autocratists
+	focus = {
+		id = GEC_address_autocratists
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 67
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_address_inner_issues }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Address Nationalists
+	focus = {
+		id = GEC_address_nationalists
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 71
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_address_inner_issues }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Address Political Minorities
+	focus = {
+		id = GEC_address_political_minorities
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 73
+		y = 1
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_address_inner_issues }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Enforce Unity
+	focus = {
+		id = GEC_enforce_unity
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 72
+		y = 2
+		mutually_exclusive = { focus = GEC_enforce_parliament focus = GEC_enforce_head_of_state }
+		prerequisite = { focus = GEC_address_autocratists }
+		prerequisite = { focus = GEC_address_conservatives }
+		prerequisite = { focus = GEC_address_nationalists }
+		prerequisite = { focus = GEC_address_political_minorities }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Enforce Parliament
+	focus = {
+		id = GEC_enforce_parliament
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 70
+		y = 2
+		mutually_exclusive = { focus = GEC_enforce_unity focus = GEC_enforce_head_of_state }
+		prerequisite = { focus = GEC_address_autocratists }
+		prerequisite = { focus = GEC_address_conservatives }
+		prerequisite = { focus = GEC_address_nationalists }
+		prerequisite = { focus = GEC_address_political_minorities }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Enforce Head of State
+	focus = {
+		id = GEC_enforce_head_of_state
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 68
+		y = 2
+		mutually_exclusive = { focus = GEC_enforce_unity focus = GEC_enforce_parliament }
+		prerequisite = { focus = GEC_address_autocratists }
+		prerequisite = { focus = GEC_address_conservatives }
+		prerequisite = { focus = GEC_address_nationalists }
+		prerequisite = { focus = GEC_address_political_minorities }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Give States Less Autonomy
+	focus = {
+		id = GEC_give_states_less_autonomy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 70
+		y = 3
+		mutually_exclusive = { focus = GEC_give_states_more_autonomy }
+		prerequisite = { focus = GEC_enforce_head_of_state focus = GEC_enforce_parliament focus = GEC_enforce_unity }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Give States More Autonomy
+	focus = {
+		id = GEC_give_states_more_autonomy
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 72
+		y = 3
+		mutually_exclusive = { focus = GEC_give_states_less_autonomy }
+		prerequisite = { focus = GEC_enforce_head_of_state focus = GEC_enforce_parliament focus = GEC_enforce_unity }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Purge Seperatists
+	focus = {
+		id = GEC_purge_seperatists
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 74
+		y = 3
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_enforce_unity }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Suppress Northern Demands
+	focus = {
+		id = GEC_suppress_northern_demands
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 70
+		y = 4
+		mutually_exclusive = { focus = GEC_accept_northern_demands }
+		prerequisite = { focus = GEC_give_states_less_autonomy focus = GEC_give_states_more_autonomy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Accept Northern Demands
+	focus = {
+		id = GEC_accept_northern_demands
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 72
+		y = 4
+		mutually_exclusive = { focus = GEC_suppress_northern_demands }
+		prerequisite = { focus = GEC_give_states_less_autonomy focus = GEC_give_states_more_autonomy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Ask Austria for Help
+	focus = {
+		id = GEC_ask_austria_for_help
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 68
+		y = 4
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_give_states_less_autonomy focus = GEC_give_states_more_autonomy }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	#Ask France for Help
+	focus = {
+		id = GEC_ask_france_for_help
+		icon = GFX_unknown
+		ai_will_do = { factor = 40 }
+		x = 68
+		y = 5
+		mutually_exclusive = {  }
+		prerequisite = { focus = GEC_ask_austria_for_help }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+}

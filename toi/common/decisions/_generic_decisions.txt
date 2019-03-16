@@ -1022,48 +1022,6 @@ eoanb_religious_affairs = {
 		}
 	}
 	
-	#Jihad - Sunni/Shia/Ibadi against Orthodox/Protestant/Catholic
-	eoanb_decision_generic_jiahd_against_christianity = {
-		
-		icon = generic_prepare_civil_war
-		
-		available = {
-			has_war_support > 0.5
-		}
-		
-		visible = {
-			OR =  {
-				has_idea = religion_sunni
-				has_idea = religion_shiite
-				has_idea = religion_ibadi
-			}
-			any_neighbor_country = {
-				OR = {
-					has_idea = religion_catholic
-					has_idea = religion_protestant
-					has_idea = religion_orthodox
-				}
-			}
-			has_stability > 0.3
-		}
-		
-		fire_only_once = no
-		
-		days_re_enable = 1825
-		
-		days_remove = 90
-		
-		cost = 100
-		
-		modifier = {
-			army_core_defence_factor = 0.1
-		}
-		
-		ai_will_do = {
-			base = 1
-		}
-	}
-	
 	eoanb_decision_generic_hold_animist_festival = {
 		
 		icon = generic_civil_support

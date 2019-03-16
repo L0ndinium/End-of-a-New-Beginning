@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		#Starting grand vizier 1857
+		OTO_vizier_mustafa_resid = {
+			allowed = {
+				TAG = OTO
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_vizier_mustafa_resid
+
+			cancel = {
+				#died Jan 7 1858
+				date > 1858.01.07
+			}
+
+			modifier = {
+				#Tanzimat reformer
+				centrism_drift = 0.01
+				traditional_conservatism_drift = 0.01
+				#Great statesman
+				political_power_gain = 0.1
+				stability_weekly = 0.001
+				#Seasoned diplomat
+				improve_relations_maintain_cost_factor = -0.75 
+			}
+		}
+	}
+}

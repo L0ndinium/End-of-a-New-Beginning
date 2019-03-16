@@ -1,0 +1,2210 @@
+focus_tree = {
+	id = wurttem_focus
+
+    country = {
+        factor = 0
+        
+        modifier = {
+            add = 10
+            tag = WUR
+        }
+    }
+	
+	continuous_focus_position = { x = 50 y = 1350 }
+	
+	default = no
+	
+	#Agrarian Society of Wurttemberg
+	focus = {
+		id = WUR_agrarian_society
+		icon = GFX_goal_focus_agriculture
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 0
+		mutually_exclusive = { } 
+		prerequisite = { }
+		cost = 35
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_agrarian_society_idea_1
+		}
+	}
+	
+	#The Geographical Disadvantage
+	focus = {
+		id = WUR_geo_disadvantage
+		icon = GFX_goal_focus_leave_continent_alone
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_agrarian_society }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_agrarian_society_idea_1
+				add_idea = WUR_agrarian_society_idea_2
+			}
+		}
+	}
+	
+	#Wurttemburgian Roads
+	focus = {
+		id = WUR_wurttembergian_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		ai_will_do = { factor = 40 }
+		x = 6
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_agrarian_society }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			WUR = {
+				owns_state = 50
+			}
+		}
+		
+		completion_reward = {
+			50 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Try To Draw People In
+	focus = {
+		id = WUR_draw_in_people
+		icon = GFX_goal_focus_refugee_management
+		ai_will_do = { factor = 40 }
+		x = 2
+		y = 1
+		mutually_exclusive = { focus = WUR_stop_emigration } 
+		prerequisite = { focus = WUR_agrarian_society }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			random_list = {
+				30 = {
+					custom_effect_tooltip = WUR_victorian_emigration_recover
+					hidden_effect = {
+						country_event = { id = wurttem.3 days = 7 }
+					}
+				}
+				70 = {
+					custom_effect_tooltip = WUR_victorian_emigration_continues
+					hidden_effect = {
+						country_event = { id = wurttem.4 days = 7 }
+					}
+				}
+			}
+		}
+	}
+	
+	#Forcefully Stop the Emigration
+	focus = {
+		id = WUR_stop_emigration
+		icon = GFX_goal_focus_forced_refugee_management
+		ai_will_do = { factor = 40 }
+		x = 0
+		y = 1
+		mutually_exclusive = { focus = WUR_draw_in_people } 
+		prerequisite = { focus = WUR_agrarian_society }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			random_list = {
+				60 = {
+					custom_effect_tooltip = WUR_victorian_emigration_stops
+					hidden_effect = {
+						country_event = { id = wurttem.1 days = 7 }
+					}
+				}
+				40 = {
+					custom_effect_tooltip = WUR_victorian_emigration_continues
+					hidden_effect = {
+						country_event = { id = wurttem.2 days = 7 }
+					}
+				}
+			}
+		}
+	}
+	
+	#Recover from the Inflation
+	focus = {
+		id = WUR_recover_from_inflation
+		icon = GFX_goal_focus_bankruptcy
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_geo_disadvantage }
+		prerequisite = { focus = WUR_stop_emigration focus = WUR_draw_in_people }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			remove_ideas = WUR_victorian_inflation
+		}
+	}
+	
+	#Address Unemployment Issues
+	focus = {
+		id = WUR_address_unemployment
+		icon = GFX_focus_generic_concessions
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_recover_from_inflation }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			remove_ideas = WUR_victorian_unemployment
+			add_timed_idea = {
+				idea = WUR_victorian_unemployment_recover
+				days = 365
+			}
+			
+			hidden_effect = {
+				country_event = { id = wurttem.5 days = 3 }
+			}
+		}
+	}
+	
+	#Wurttemburgian Craft
+	focus = {
+		id = WUR_wurttembergian_craft
+		icon = GFX_goal_focus_WUR_production
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_address_unemployment }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = WUR_victorian_unemployment_recover
+				}
+				modify_timed_idea = {
+					idea = WUR_victorian_unemployment_recover
+					days = -50
+				}
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = process_engineering_tech
+			}
+		}
+	}
+	
+	#Textile Focus
+	focus = {
+		id = WUR_textile_focus
+		icon = GFX_goal_focus_textile
+		ai_will_do = { factor = 40 }
+		x = 4
+		y = 5
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_wurttembergian_craft }
+		cost = 70
+		available_if_capitulated = no  
+		
+		available = {
+			WUR = {
+				owns_state = 50
+			}
+		}
+		
+		completion_reward = {
+			50 = {
+				add_resource = {
+					type = fabric
+					amount = 8
+				}
+			}
+		}
+	}
+	
+	#Stuttgarter Börse
+	focus = {
+		id = WUR_stuttgarter_boerse
+		icon = GFX_goal_focus_the_elite
+		ai_will_do = { factor = 40 }
+		x = 2
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_recover_from_inflation }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_bank_1
+		}
+	}
+	
+	#Württembergische Hofbank
+	focus = {
+		id = WUR_hofbank
+		icon = GFX_goal_focus_banks
+		ai_will_do = { factor = 40 }
+		x = 2
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_stuttgarter_boerse }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_victorian_bank_1
+				add_idea = WUR_victorian_bank_2
+			}
+		}
+	}
+	
+	#Steamboats
+	focus = {
+		id = WUR_steamboats
+		icon = GFX_goal_generic_navy_cruiser
+		ai_will_do = { factor = 40 }
+		x = 6
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_wurttembergian_roads }
+		cost = 70
+		available_if_capitulated = no  
+		
+		available = {
+			WUR = {
+				owns_state = 50
+			}
+		}
+		
+		completion_reward = {
+			50 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Württembergische Staats-Eisenbahnen
+	focus = {
+		id = WUR_staats_eisenbahnen
+		icon = GFX_goal_focus_WUR_infrastructure
+		ai_will_do = { factor = 40 }
+		x = 6
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_steamboats }
+		cost = 70
+		available_if_capitulated = no  
+		
+		available = {
+			WUR = {
+				owns_state = 50
+				owns_state = 950
+			}
+		}
+		
+		completion_reward = {
+			50 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			950 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Architecture Techniques
+	focus = {
+		id = WUR_architecture_techniques
+		icon = GFX_goal_generic_production
+		ai_will_do = { factor = 40 }
+		x = 6
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_staats_eisenbahnen }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = mechanical_engineering_tech
+			}
+		}
+	}
+	
+	#Stimulate Economy
+	focus = {
+		id = WUR_stimulate_economy
+		icon = GFX_goal_focus_stimulate_economy
+		ai_will_do = { factor = 40 }
+		x = 5
+		y = 6
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_architecture_techniques }
+		prerequisite = { focus = WUR_hofbank }
+		prerequisite = { focus = WUR_textile_focus }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_stimulate_economy
+		}
+	}
+	
+	#Stimulate Export
+	focus = {
+		id = WUR_stimulate_export
+		icon = GFX_goal_generic_positive_trade_relations
+		ai_will_do = { factor = 40 }
+		x = 3
+		y = 6
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_architecture_techniques }
+		prerequisite = { focus = WUR_hofbank }
+		prerequisite = { focus = WUR_textile_focus }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_stimulate_export
+		}
+	}
+	
+	#The Wurttemburgian Army
+	focus = {
+		id = WUR_wurttembergian_army
+		icon = GFX_goal_generic_political_pressure
+		ai_will_do = { factor = 40 }
+		x = 10
+		y = 0
+		mutually_exclusive = { } 
+		prerequisite = { }
+		cost = 35
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+	
+	#Strengthen the Gendarmerie
+	focus = {
+		id = WUR_strengthen_gendarmerie
+		icon = GFX_focus_secret_rearmament
+		ai_will_do = { factor = 40 }
+		x = 9
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_wurttembergian_army }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_army_g_1
+		}
+	}
+	
+	#Popularize the Landjägerkorps
+	focus = {
+		id = WUR_popularize_landjaeger
+		icon = GFX_focus_generic_little_entente
+		ai_will_do = { factor = 40 }
+		x = 9
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_strengthen_gendarmerie }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_g_1
+				add_idea = WUR_victorian_army_g_2
+			}
+		}
+	}
+	
+	#New Equipment for the Landjägerkorps
+	focus = {
+		id = WUR_equip_landjaeger
+		icon = GFX_goal_generic_military_sphere
+		ai_will_do = { factor = 40 }
+		x = 9
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_popularize_landjaeger }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_g_2
+				add_idea = WUR_victorian_army_g_3
+			}
+		}
+	}
+	
+	#Strengthen the Army
+	focus = {
+		id = WUR_strengthen_army
+		icon = GFX_goal_demand_sudetenland
+		ai_will_do = { factor = 40 }
+		x = 11
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_wurttembergian_army }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_army_1
+		}
+	}
+	
+	#Re-Establish the Landmiliz
+	focus = {
+		id = WUR_reestablish_landmiliz
+		icon = GFX_goal_generic_military_deal
+		ai_will_do = { factor = 40 }
+		x = 11
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_strengthen_army }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_1
+				add_idea = WUR_victorian_army_2
+			}
+		}
+	}
+	
+	#Re-Establish the Kriegsrat
+	focus = {
+		id = WUR_reestablish_kriegsrat
+		icon = GFX_goal_generic_air_doctrine
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+		x = 11
+		y = 3
+		mutually_exclusive = { focus = WUR_kriegsministerium } 
+		prerequisite = { focus = WUR_reestablish_landmiliz }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_2
+				add_idea = WUR_victorian_army_3_trad
+			}
+		}
+	}
+	
+	#Felddivisionen
+	focus = {
+		id = WUR_felddivisionen
+		icon = GFX_goal_generic_cavalry
+		ai_will_do = { factor = 40 }
+		x = 11
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_reestablish_kriegsrat }
+		prerequisite = { focus = WUR_equip_landjaeger }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	#Local Authorities
+	focus = {
+		id = WUR_local_authorities
+		icon = GFX_goal_focus_decentralisation_power
+		ai_will_do = { factor = 40 }
+		x = 9
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_reestablish_kriegsrat }
+		prerequisite = { focus = WUR_equip_landjaeger }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_3_trad
+				add_idea = WUR_victorian_army_4_trad
+			}
+		}
+	}
+	
+	#Traditional Army
+	focus = {
+		id = WUR_traditional_army
+		icon = GFX_goal_focus_traditional_army
+		ai_will_do = { factor = 40 }
+		x = 10
+		y = 5
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_felddivisionen }
+		prerequisite = { focus = WUR_local_authorities }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_traditional_army_replace_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = law_pre_industrial_army
+						}
+					}
+					add_ideas = law_pre_industrial_army
+				}
+			}
+			army_experience = 25
+		}
+	}
+	
+	#Kriegsministerium
+	focus = {
+		id = WUR_kriegsministerium
+		icon = GFX_goal_generic_army_doctrines
+		ai_will_do = {
+			factor = 40
+			
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 16
+		y = 3
+		mutually_exclusive = { focus = WUR_reestablish_kriegsrat } 
+		prerequisite = { focus = WUR_reestablish_landmiliz }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WUR_victorian_army_2
+				add_idea = WUR_victorian_army_3
+			}
+		}
+	}
+	
+	#Centralbureau
+	focus = {
+		id = WUR_centralbureau
+		icon = GFX_goal_focus_foreign_diplomacy_central
+		ai_will_do = { factor = 40 }
+		x = 16
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_kriegsministerium }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_army_3_centralbur
+		}
+	}
+	
+	#Ökonomieabteilung
+	focus = {
+		id = WUR_oekonomieabteilung
+		icon = GFX_goal_focus_foreign_diplomacy_economy
+		ai_will_do = { factor = 40 }
+		x = 18
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_kriegsministerium }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_army_3_oekonomieabteilung
+		}
+	}
+	
+	#Militärabteilung
+	focus = {
+		id = WUR_militaerabteilung
+		icon = GFX_goal_focus_foreign_diplomacy_military
+		ai_will_do = { factor = 40 }
+		x = 14
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_kriegsministerium }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_ideas = WUR_victorian_army_3_milabteilung
+		}
+	}
+	
+	#Reorganized Army
+	focus = {
+		id = WUR_reorganized_army
+		icon = GFX_goal_focus_reformed_army
+		ai_will_do = { factor = 40 }
+		x = 16
+		y = 5
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_centralbureau }
+		prerequisite = { focus = WUR_militaerabteilung }
+		prerequisite = { focus = WUR_oekonomieabteilung }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_traditional_army_replace_victorian_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = law_victorian_army
+						}
+					}
+					add_ideas = law_victorian_army
+				}
+			}
+			add_manpower = 5000
+		}
+	}
+	
+	#Recover from the Russian Campaign
+	focus = {
+		id = WUR_recover_russian_campaign
+		icon = GFX_focus_CZE_german_puppet
+		ai_will_do = { factor = 40 }
+		x = 13
+		y = 6
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_reorganized_army focus = WUR_traditional_army }
+		cost = 70
+		available_if_capitulated = no
+		
+		completion_reward = {
+			remove_ideas = WUR_russiancampaign
+		}
+	}
+	
+	#Integrate Wurttembergian Liberalism
+	focus = {
+		id = WUR_integrate_wurttembergian_liberalism
+		icon = GFX_goal_focus_democracy
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		x = 19
+		y = 0
+		mutually_exclusive = { focus = WUR_suppress_wurttembergian_liberalism } 
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = WUR_victorian_integrate_liberalism
+				days = 60
+			}
+			hidden_effect = {
+				every_country = {
+					news_event = { id = wurttem.6 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Friedrich von Römer
+	focus = {
+		id = WUR_friedrich_von_roemer
+		icon = GFX_goal_focus_friedrich_roemer
+		ai_will_do = { factor = 40 }
+		x = 19
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_integrate_wurttembergian_liberalism }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_friedrich_roemer
+			#unlocked via has_completed_focus trigger
+		}
+	}
+	
+	#Suppress Wurttembergian Liberalism
+	focus = {
+		id = WUR_suppress_wurttembergian_liberalism
+		icon = GFX_goal_focus_broken_democracy
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 21
+		y = 0
+		mutually_exclusive = { focus = WUR_integrate_wurttembergian_liberalism } 
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = WUR_victorian_suppress_liberalism
+				days = 60
+			}
+			hidden_effect = {
+				every_country = {
+					news_event = { id = wurttem.7 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Joseph von Linden
+	focus = {
+		id = WUR_joseph_von_linden
+		icon = GFX_goal_focus_joseph_linden
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 21
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_suppress_wurttembergian_liberalism }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_joseph_linden
+			#unlocked via has_completed_focus trigger
+		}
+	}
+	
+	#The Liberal Struggle
+	focus = {
+		id = WUR_the_liberal_struggle
+		icon = GFX_goal_focus_liberty
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 20
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_joseph_von_linden focus = WUR_friedrich_von_roemer }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			set_party_name = { 
+				ideology = centrism
+				long_name = WUR_victorian_centrism_liberal_struggle_long
+				name = WUR_victorian_centrism_liberal_struggle 
+			}
+			set_party_name = { 
+				ideology = traditional_conservatism
+				long_name = WUR_victorian_traditional_conservatism_liberal_struggle_long
+				name = WUR_victorian_traditional_conservatism_liberal_struggle 
+			}
+			add_political_power = 50
+		}
+	}
+	
+	#Regierungskreise
+	focus = {
+		id = WUR_regierungskreise
+		icon = GFX_goal_focus_decentralisation_power
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 23
+		y = 0
+		mutually_exclusive = { } 
+		prerequisite = {  }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	#Kommunalverwaltung
+	focus = {
+		id = WUR_kommunalverwaltung
+		icon = GFX_goal_focus_kommunalverwaltung
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 23
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_regierungskreise }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	#Enforce the Schultheißwesen
+	focus = {
+		id = WUR_enforce_the_schultheiss
+		icon = GFX_goal_generic_dangerous_deal
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 23
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_kommunalverwaltung }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_schultheisswesen
+			hidden_effect = {
+				country_event = { id = wurttem.8 days = 3 }
+			}
+		}
+	}
+	
+	#Aftermath of the Rumpfparlament
+	focus = {
+		id = WUR_aftermath_of_the_rumpfparlament
+		icon = GFX_goal_focus_government_icon
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 22
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_enforce_the_schultheiss }
+		prerequisite = { focus = WUR_the_liberal_struggle }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_rumpf_aftermath_advisors
+			#change this
+			#advisors unlocked with has_completed_focus in /ideas
+		}
+	}
+	
+	#Shifting Flow
+	focus = {
+		id = WUR_shifting_flow
+		icon = GFX_goal_focus_continent_west_europe
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 22
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_aftermath_of_the_rumpfparlament }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_shifting_flow
+			hidden_effect = {
+				country_event = { id = wurttem.9 days = 3 }
+			}
+		}
+	}
+	
+	#Alexander II
+	focus = {
+		id = WUR_alexander_ii
+		icon = GFX_goal_focus_alexander_ii
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 23
+		y = 5
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_shifting_flow }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_RUS_invite
+			hidden_effect = {
+				country_event = { id = wurttem.13 days = 3 }
+			}
+		}
+	}
+	
+	#Napoléon III
+	focus = {
+		id = WUR_napoleon_iii
+		icon = GFX_goal_focus_napoleon_iii
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 21
+		y = 5
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_shifting_flow }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+			FRA = {
+				has_country_leader = {
+					name = "Napoléon III"
+					ruling_only = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_FRA_invite
+			hidden_effect = {
+				country_event = { id = wurttem.14 days = 3 }
+			}
+		}
+	}
+	
+	#Zweikaisertreffen
+	focus = {
+		id = WUR_zweikaisertreffen
+		icon = GFX_goal_generic_major_alliance
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 22
+		y = 6
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_napoleon_iii }
+		prerequisite = { focus = WUR_alexander_ii }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = [WUR_customeffect_zweikaisertreffen_endpoint]
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = WUR_FRA_accepted_invite
+						has_country_flag = WUR_RUS_accepted_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.15 days = 3 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = WUR_FRA_denied_invite
+						has_country_flag = WUR_RUS_denied_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.16 days = 3 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = WUR_FRA_denied_invite
+						has_country_flag = WUR_RUS_accepted_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.21 days = 3 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = WUR_FRA_accepted_invite
+						has_country_flag = WUR_RUS_denied_invite
+					}
+					every_country = {
+						news_event = { id = wurttem.22 days = 3 }
+					}
+				}
+				
+				clr_country_flag = WUR_FRA_accepted_invite
+				clr_country_flag = WUR_RUS_accepted_invite
+				clr_country_flag = WUR_FRA_denied_invite
+				clr_country_flag = WUR_RUS_denied_invite
+			}
+		}
+	}
+	
+	#Inner Politics
+	focus = {
+		id = WUR_inner_politics
+		icon = GFX_goal_focus_foreign_diplomacy
+		ai_will_do = { factor = 40 }
+		x = 22
+		y = 7
+		mutually_exclusive = { focus = WUR_triaspolitik } 
+		prerequisite = { focus = WUR_zweikaisertreffen }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	#Triaspolitik
+	focus = {
+		id = WUR_triaspolitik
+		icon = GFX_goal_focus_foreign_diplomacy
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		x = 24
+		y = 7
+		mutually_exclusive = { focus = WUR_inner_politics } 
+		prerequisite = { focus = WUR_zweikaisertreffen }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = BAV_triasidea
+			
+			custom_effect_tooltip = BAV_customeffect_trias
+		}
+	}
+	
+	#The Way of Neutrality
+	focus = {
+		id = WUR_the_way_of_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		ai_will_do = { factor = 40 }
+		x = 20
+		y = 7
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_zweikaisertreffen }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			NOT = {
+				has_country_flag = WUR_victorian_wilhelm_dead
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = WUR_wayofneutrality
+		}
+	}
+	
+	#Karl I
+	focus = {
+		id = WUR_karl_i
+		icon = GFX_goal_focus_karl_i
+		ai_will_do = { factor = 100 }
+		x = 31
+		y = 0
+		mutually_exclusive = { } 
+		prerequisite = {  }
+		cost = 0
+		available_if_capitulated = no  
+		
+		available = {
+			has_country_flag = WUR_victorian_wilhelm_dead
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_karl_i_focus
+			add_stability = 0.10
+			hidden_effect = {
+				country_event = { id = wurttem.17 days = 3 }
+			}
+		}
+	}
+	
+	#Liberal Reforms
+	focus = {
+		id = WUR_liberal_reforms
+		icon = GFX_goal_support_democracy
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 28
+		y = 1
+		mutually_exclusive = { focus = WUR_conservative_norms } 
+		prerequisite = { focus = WUR_karl_i }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_start_liberalizing
+			
+			hidden_effect = {
+				country_event { id = wurttem.18 days = 3 }
+			}
+		}
+	}
+	
+	#Freedom of Press
+	focus = {
+		id = WUR_freedom_of_press
+		icon = GFX_goal_focus_freedom_press
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 30
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_liberal_reforms }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -100
+			
+			if = {
+				limit = {
+					has_idea = WUR_start_liberalize_hidden_1
+				}
+				modify_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 100
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 100
+				}
+			}
+		}
+	}
+	
+	#Freedom of Association
+	focus = {
+		id = WUR_freedom_of_association
+		icon = GFX_goal_focus_freedom_association
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 28
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_liberal_reforms }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -70
+			
+			if = {
+				limit = {
+					has_idea = WUR_start_liberalize_hidden_1
+				}
+				modify_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_liberalize_hidden_1
+					days = 60
+				}
+			}
+		}
+	}
+	
+	#Repeal Marriage Restrictions
+	focus = {
+		id = WUR_repeal_marriage_restrictions
+		icon = GFX_goal_focus_freedom_marriage
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 26
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_liberal_reforms }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -50
+			
+			add_timed_idea = {
+				idea = WUR_start_liberalize_hidden_2
+				days = 60
+			}
+		}
+	}
+	
+	#Civil Rights for the Jews
+	focus = {
+		id = WUR_civil_rights_for_the_jews
+		icon = GFX_focus_generic_concessions
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 26
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_repeal_marriage_restrictions }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -50
+			
+			if = {
+				limit = {
+					has_idea = WUR_start_liberalize_hidden_2
+				}
+				modify_timed_idea = {
+					idea = WUR_start_liberalize_hidden_2
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_liberalize_hidden_2
+					days = 60
+				}
+			}
+		}
+	}
+	
+	#Karl von Varnbüler
+	focus = {
+		id = WUR_karl_von_varnbueler
+		icon = GFX_goal_focus_karl_von_varnbueler
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 26
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_civil_rights_for_the_jews }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_karl_von_varnbueler_unlock
+			#advisors unlocked with has_completed_focus in /ideas
+		}
+	}
+	
+	#Right of Abode
+	focus = {
+		id = WUR_right_of_abode
+		icon = GFX_goal_focus_freedom_abode
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 28
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_freedom_of_association }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -50
+			
+			add_timed_idea = {
+				idea = WUR_start_liberalize_hidden_4
+				days = 60
+			}
+		}
+	}
+	
+	#Economic Freedom
+	focus = {
+		id = WUR_economic_freedom
+		icon = GFX_goal_focus_freedom_economy
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 30
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_freedom_of_association }
+		prerequisite = { focus = WUR_freedom_of_press }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -100
+		
+			add_timed_idea = {
+				idea = WUR_start_liberalize_hidden_3
+				days = 60
+			}
+		}
+	}
+	
+	#Reform Second Chamber
+	focus = {
+		id = WUR_reform_second_chamber
+		icon = GFX_goal_focus_reform_government
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 28
+		y = 5
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_economic_freedom }
+		prerequisite = { focus = WUR_right_of_abode }
+		prerequisite = { focus = WUR_karl_von_varnbueler }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_finish_liberalizing
+			
+			hidden_effect = {
+				country_event { id = wurttem.19 days = 3 }
+			}
+		}
+	}
+	
+	#Conservative Norms
+	focus = {
+		id = WUR_conservative_norms
+		icon = GFX_goal_focus_liberal_empire
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		x = 34
+		y = 1
+		mutually_exclusive = { focus = WUR_liberal_reforms } 
+		prerequisite = { focus = WUR_karl_i }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_start_suppression
+			
+			hidden_effect = {
+				country_event { id = wurttem.20 days = 3 }
+			}
+		}
+	}
+	
+	#Continue Suppression
+	focus = {
+		id = WUR_continue_suppression
+		icon = GFX_goal_focus_suppress_liberalism
+		ai_will_do = { factor = 40 }
+		x = 34
+		y = 2
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_conservative_norms }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -100
+		
+			add_timed_idea = {
+				idea = WUR_start_suppression_hidden_1
+				days = 60
+			}
+		}
+	}
+	
+	#Speak against Liberalism
+	focus = {
+		id = WUR_speak_against_liberalism
+		icon = GFX_goal_generic_propaganda
+		ai_will_do = { factor = 40 }
+		x = 34
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_continue_suppression }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -50
+			
+			add_timed_idea = {
+				idea = WUR_start_suppression_hidden_2
+				days = 60
+			}
+		}
+	}
+	
+	#Rally Neighbours Against Liberalism
+	focus = {
+		id = WUR_rally_neighbours_against_liberalism
+		icon = GFX_goal_generic_political_pressure
+		ai_will_do = { factor = 40 }
+		x = 32
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_continue_suppression }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -200
+			
+			custom_effect_tooltip = WUR_customeffect_rally_neighbours
+			
+			hidden_effect = {
+				every_neighbor_country = {
+					if = {
+						limit = {
+							NOT = {
+								tag = PRS
+							}
+						}
+						country_event = { id = wurttem.23 days = 3 }
+					}
+				}
+			}
+		}
+	}
+	
+	#Conservative Ministers
+	focus = {
+		id = WUR_conservative_ministers
+		icon = GFX_goal_generic_neutrality_focus
+		ai_will_do = { factor = 40 }
+		x = 36
+		y = 3
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_continue_suppression }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -100
+			
+			add_timed_idea = {
+				idea = WUR_start_suppression_hidden_3
+				days = 60
+			}
+		}
+	}
+	
+	#Autocratic Ministers
+	focus = {
+		id = WUR_autocratic_ministers
+		icon = GFX_focus_rom_royal_dictatorship
+		ai_will_do = { factor = 40 }
+		x = 36
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_conservative_ministers }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -100
+			
+			if = {
+				limit = {
+					has_idea = WUR_start_suppression_hidden_3
+				}
+				modify_timed_idea = {
+					idea = WUR_start_suppression_hidden_3
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_suppression_hidden_3
+					days = 60
+				}
+			}
+		}
+	}
+	
+	#Support Conservatives
+	focus = {
+		id = WUR_support_conservatives
+		icon = GFX_goal_generic_improve_relations
+		ai_will_do = { factor = 40 }
+		x = 32
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_rally_neighbours_against_liberalism }
+		prerequisite = { focus = WUR_speak_against_liberalism }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -100
+			
+			if = {
+				limit = {
+					has_idea = WUR_start_suppression_hidden_4
+				}
+				modify_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
+		}
+	}
+	
+	#Support Autocrats
+	focus = {
+		id = WUR_support_autocrats
+		icon = GFX_goal_generic_improve_relations
+		ai_will_do = { factor = 40 }
+		x = 34
+		y = 4
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_rally_neighbours_against_liberalism }
+		prerequisite = { focus = WUR_speak_against_liberalism }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			add_political_power = -100
+			
+			if = {
+				limit = {
+					has_idea = WUR_start_suppression_hidden_4
+				}
+				modify_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = WUR_start_suppression_hidden_4
+					days = 60
+				}
+			}
+		}
+	}
+	
+	#Reaffirm Landtag Influence
+	focus = {
+		id = WUR_reaffirm_landtag_influence
+		icon = GFX_goal_focus_government_control
+		ai_will_do = { factor = 40 }
+		x = 34
+		y = 5
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_support_autocrats }
+		prerequisite = { focus = WUR_support_conservatives }
+		prerequisite = { focus = WUR_autocratic_ministers }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_finish_suppression
+			
+			hidden_effect = {
+				country_event { id = wurttem.26 days = 3 }
+			}
+		}
+	}
+	
+	#Our Stance on Germany
+	focus = {
+		id = WUR_our_stance_on_germany
+		icon = GFX_goal_focus_form_germany
+		ai_will_do = { factor = 100 }
+		x = 31
+		y = 6
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_reaffirm_landtag_influence focus = WUR_reform_second_chamber }
+		cost = 125
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_german_stance
+			
+			add_political_power = 100
+			
+			hidden_effect = {
+				country_event = { id = wurttem.30 days = 3 }
+			}
+		}
+	}
+	
+	#The North
+	focus = {
+		id = WUR_the_north
+		icon = GFX_goal_focus_crown_of_prussia
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		x = 33
+		y = 7
+		mutually_exclusive = { focus = WUR_the_south focus = WUR_the_southern_states } 
+		prerequisite = { focus = WUR_our_stance_on_germany }
+		cost = 0
+		available_if_capitulated = no
+		
+		available = {
+			has_country_flag = WUR_bypass_stance_prussia
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_german_stance_news_north
+		
+			hidden_effect = {
+				clr_country_flag = WUR_bypass_stance_prussia
+				every_country = {
+					news_event = { id = wurttem.38 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Prussian Relations
+	focus = {
+		id = WUR_prussian_relations
+		icon = GFX_goal_focus_ally_PRS
+		ai_will_do = { factor = 40 }
+		x = 33
+		y = 8
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_the_north }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_german_stance_north
+		
+			hidden_effect = {
+				PRS = {
+					country_event = { id = wurttem.27 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#The South
+	focus = {
+		id = WUR_the_south
+		icon = GFX_goal_focus_crown_of_austria
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 29
+		y = 7
+		mutually_exclusive = { focus = WUR_the_north focus = WUR_the_southern_states } 
+		prerequisite = { focus = WUR_our_stance_on_germany }
+		cost = 0
+		available_if_capitulated = no
+		
+		available = {
+			has_country_flag = WUR_bypass_stance_austria
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_german_stance_news_south
+		
+			hidden_effect = {
+				clr_country_flag = WUR_bypass_stance_austria
+				every_country = {
+					news_event = { id = wurttem.37 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Austrian Relations
+	focus = {
+		id = WUR_austrian_relations
+		icon = GFX_goal_focus_ally_AUS
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 29
+		y = 8
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_the_south }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_german_stance_south
+			
+			hidden_effect = {
+				AUS = {
+					country_event = { id = wurttem.31 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#The Southern States
+	focus = {
+		id = WUR_the_southern_states
+		icon = GFX_goal_focus_the_german_question
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		x = 31
+		y = 7
+		mutually_exclusive = { focus = WUR_the_north focus = WUR_the_south } 
+		prerequisite = { focus = WUR_our_stance_on_germany }
+		cost = 0
+		available_if_capitulated = no  
+		
+		available = {
+			has_country_flag = WUR_bypass_stance_neutral
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_german_stance_news_middle
+		
+			hidden_effect = {
+				clr_country_flag = WUR_bypass_stance_neutral
+				every_country = {
+					news_event = { id = wurttem.39 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Old Friends
+	focus = {
+		id = WUR_old_friends
+		icon = GFX_goal_generic_national_unity
+		ai_will_do = { factor = 40 }
+		x = 31
+		y = 9
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_the_southern_states }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_german_stance_middle
+			
+			hidden_effect = {
+				BAV = {
+					country_event = { id = wurttem.34 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Befriend Bavaria
+	focus = {
+		id = WUR_befriend_bavaria
+		icon = GFX_goal_focus_convince_bayern
+		ai_will_do = { factor = 40 }
+		x = 30
+		y = 10
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_old_friends }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_befriend_bav
+			
+			hidden_effect = {
+				BAV = {
+					country_event = { id = wurttem.42 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Befriend Baden
+	focus = {
+		id = WUR_befriend_baden
+		icon = GFX_goal_focus_convince_baden
+		ai_will_do = { factor = 40 }
+		x = 32
+		y = 10
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_old_friends }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_befriend_bad
+			
+			hidden_effect = {
+				BAD = {
+					country_event = { id = wurttem.42 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Befriend Middle States
+	focus = {
+		id = WUR_befriend_middle_states
+		icon = GFX_focus_generic_diplomatic_treaty
+		ai_will_do = { factor = 40 }
+		x = 30
+		y = 11
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_befriend_bavaria }
+		prerequisite = { focus = WUR_befriend_baden }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_befriend_middle
+			
+			hidden_effect = {
+				HSD = {
+					country_event = { id = wurttem.42 days = 3 }
+				}
+				SAX = {
+					country_event = { id = wurttem.42 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Propose Trias
+	focus = {
+		id = WUR_propose_trias
+		icon = GFX_focus_generic_treaty
+		ai_will_do = { factor = 40 }
+		x = 32
+		y = 11
+		mutually_exclusive = { } 
+		prerequisite = { focus = WUR_befriend_bavaria }
+		prerequisite = { focus = WUR_befriend_baden }
+		cost = 70
+		available_if_capitulated = no
+		
+		available = {
+			has_idea = BAV_triasidea
+		}
+		
+		bypass = {
+			has_idea = BAV_member_trias
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_propose_trias
+			
+			hidden_effect = {
+				BAV = {
+					country_event = { id = wurttem.45 days = 3 }
+				}
+			}
+		}
+	}
+	
+	#Push for Pro-Prussian Approach
+	focus = {
+		id = WUR_push_for_pro_prussian_approach
+		icon = GFX_goal_generic_major_alliance
+		ai_will_do = { factor = 40 }
+		x = 33
+		y = 12
+		prerequisite = { focus = WUR_prussian_relations }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_push_prussian_approach
+			
+			hidden_effect = {
+				set_country_flag = eoanb_flag_sww_side_prs
+			}
+		}
+	}
+	
+	#Push for Neutral Approach
+	focus = {
+		id = WUR_push_for_pro_neutral_approach
+		icon = GFX_goal_generic_major_alliance
+		ai_will_do = { factor = 40 }
+		x = 31
+		y = 12
+		prerequisite = { focus = WUR_propose_trias }
+		prerequisite = { focus = WUR_befriend_middle_states }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_push_neutral_approach
+			
+			hidden_effect = {
+				set_country_flag = eoanb_flag_sww_side_mid
+			}
+		}
+	}
+	
+	#Push for Pro-Austrian Approach
+	focus = {
+		id = WUR_push_for_pro_austrian_approach
+		icon = GFX_goal_generic_major_alliance
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		x = 29
+		y = 12
+		prerequisite = { focus = WUR_austrian_relations }
+		cost = 70
+		available_if_capitulated = no  
+		
+		completion_reward = {
+			custom_effect_tooltip = WUR_customeffect_push_austrian_approach
+			
+			hidden_effect = {
+				set_country_flag = eoanb_flag_sww_side_aus
+			}
+		}
+	}
+}

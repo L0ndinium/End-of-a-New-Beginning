@@ -1,0 +1,32 @@
+focus_tree = {
+	id = nzl_vic_aoutearoua
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = NZL
+			date > 1871.1.1
+		}
+	}
+	default = no
+	focus = {
+		id = nzl_vic_aou_pakeha_government_intergration
+		icon = GFX_goal_focus_enact_law
+		cost = 70
+		x = 3
+		y = 0
+		completion_reward = {
+		}
+		ai_will_do = { factor = 11 } 
+	}
+	focus = {
+		id = nzl_vic_aou_maori_government_intergration
+		icon = GFX_goal_focus_enact_law
+		cost = 70
+		x = 5
+		y = 0
+		completion_reward = {
+		}
+		ai_will_do = { factor = 11 } 
+	}
+}

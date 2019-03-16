@@ -1776,7 +1776,7 @@ focus = {
 	
 	focus = {
 		id = BRA_restore_our_imperial_might
-		icon = GFX_goal_focus_authoritarian_empire
+		icon = GFX_goal_focus_imperial_might
 		cost = 70
 		x = 50
 		y = 12
@@ -1930,7 +1930,7 @@ focus = {
 
 focus = {
 		id = BRA_ave_imperio
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_focus_ave_imperio
 		cost = 30
 		x = 50
 		y = 16
@@ -2690,7 +2690,7 @@ country_event = brazil.25
 	
 	focus = {
 		id = BRA_reorganize_the_imperial_army
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_focus_brazilian_army
 		cost = 35
 		x = 63
 		y = 7

@@ -1,0 +1,856 @@
+﻿add_namespace = afr_rrp
+
+
+#Railway_Construction_1_Info
+country_event = {
+	id = afr_rrp.1
+	title = afr_rrp.1.t
+	desc = afr_rrp.1.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.1.a
+		ai_chance = { factor = 100 }
+		
+		
+	}
+	
+}
+
+ #Railway_Construction_1
+country_event = {
+	id = afr_rrp.2
+	title = afr_rrp.2.t
+	desc = afr_rrp.2.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.2.a
+		ai_chance = { factor = 30 }
+		FROM = { country_event = { days = 1 id = afr_rrp.3 } }
+		FROM = { activate_decision = afr_rrp_railway_infrastructure_construction }
+		ROOT = { activate_decision = afr_rrp_railway_infrastructure_construction_master }
+		FROM = {
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1 
+				technology = iron_railways
+			}
+		}
+		
+	}
+	
+	option = {
+		name = afr_rrp.3.b
+		ai_chance = { factor = 70 }
+		FROM = { country_event = { days = 1 id = afr_rrp.4 } }
+		FROM = {
+		
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1
+				technology = iron_railways
+			}
+		}
+	}
+	
+	option = {
+		name = afr_rrp.3.c
+		ai_chance = { factor = 0 }
+		FROM = { country_event = { days = 1 id = afr_rrp.5 } }
+	}
+	
+}
+
+#Railway_Infrastructure_Construction_1_Full_Yes
+country_event = {
+	id = afr_rrp.3
+	title = afr_rrp.3.t
+	desc = afr_rrp.3.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.3.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#Railway_Infrastructure_Construction_1_Yes
+country_event = {
+	id = afr_rrp.4
+	title = Britain_Lends_Some_Assistance.4.t
+	desc = afr_rrp.4.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.4.a
+		ai_chance = { factor = 100 }
+		set_country_flag = afr_rrp_railway_line
+	}
+}
+
+#Railway_Infrastructure_Construction_1_No
+country_event = {
+	id = afr_rrp.5
+	title = Britain_Declines_To_Aid.5.t
+	desc = afr_rrp.5.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.5.a
+		ai_chance = { factor = 10 }
+		set_country_flag = afr_rrp_railway_line
+	}
+	
+	option = {
+		name = Cancle_the_project.5.b
+		ai_chance = { factor = 90 }
+	}
+}
+
+
+#Main_Railway_Route_Construction_2_Info
+country_event = {
+	id = afr_rrp.6
+	title = Main_Railway_Route_Construction.6.t
+	desc = afr_rrp.6.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Lets_Hope_They_Agree.6.a
+		ai_chance = { factor = 100 }
+		FROM = { country_event = { days = 1 id = afr_rrp.7 } }
+		
+	}
+	
+}
+
+#Main_Railway_Route_Construction_2
+country_event = {
+	id = afr_rrp.7
+	title = Main_Railway_Route_Construction.7.t
+	desc = afr_rrp.7.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.7.a
+		ai_chance = { factor = 60 }
+		FROM = { country_event = { days = 1 id = afr_rrp.8 } }
+		FROM = { activate_decision = afr_rrp_main_railway_route_construction }
+		ROOT = { activate_decision = afr_rrp_main_railway_route_construction_master }
+		FROM = { 
+			add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+		
+	}
+	
+	option = {
+		name = Supervise_construction.7.b
+		ai_chance = { factor = 40 }
+		FROM = { country_event = { days = 1 id = afr_rrp.9 } }
+		FROM = { add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.7.c
+		ai_chance = { factor = 0 }
+		FROM = { country_event = { days = 1 id = afr_rrp.10 } }
+	}
+	
+}
+
+#Main_Railway_Route_Construction_2_Full_Yes
+country_event = {
+	id = afr_rrp.8
+	title = Britain_Gives_Full_Assistance.8.t
+	desc = afr_rrp.8.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.8.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#Main_Railway_Route_Construction_Construction_2_Yes
+country_event = {
+	id = afr_rrp.9
+	title = Britain_Lends_Some_Assistance.9.t
+	desc = afr_rrp.9.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = This_wont_delay_much.9.a
+		ai_chance = { factor = 100 }
+		set_country_flag = afr_rrp_railway_infrastructure_construction
+	}
+}
+
+#Main_Railway_Route_Construction_Construction_2_No
+country_event = {
+	id = afr_rrp.10
+	title = Britain_Declines_To_Aid.10.t
+	desc = afr_rrp.10.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.10.a
+		ai_chance = { factor = 50 }
+		set_country_flag = afr_rrp_railway_infrastructure_construction
+	}
+	
+	option = {
+		name = Cancle_the_project.10.b
+		ai_chance = { factor = 50 }
+	}
+}
+
+
+
+
+#Open Merchant Trade
+country_event = {
+	id = afr_rrp.11
+	title = African_Trade_Partner_Established.11.t
+	desc = afr_rrp.11.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_potential_colonies.11.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+		reverse_add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+	}
+}
+
+country_event = {
+	id = afr_rrp.12
+	title = African_Merchant_Partner_Wishes_To_Purchase_Design.12.t
+	desc = afr_rrp.12.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Approve_The_Sale.12.a
+		ai_chance = { factor = 100 }
+		FROM = {
+			create_production_license = {
+				target = ROOT
+				equipment = {
+					type = infantry_equipment_rifle_1
+				}
+				cost_factor = 0
+			}
+			hidden_effect = {
+				
+			}
+		}
+	}
+	
+	option = {
+		name = Decline.12.a
+		ai_chance = { factor = 0 }
+			hidden_effect = {
+			
+			}
+	}
+	
+}
+
+#Open ACS Affiliate 
+country_event = {
+	id = afr_rrp.13
+	title = ACS_Affiliate_Established.13.t
+	desc = afr_rrp.13.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_potential_colonies.13.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+		reverse_add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+	}
+}
+
+
+#ACS_Railway_Construction_1
+country_event = {
+	id = afr_rrp.14
+	title = Railway_Infrastructure_Construction.14.t
+	desc = afr_rrp.14.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.14.a
+		ai_chance = { factor = 100 }
+		FROM = { country_event = { days = 1 id = afr_rrp.15 } }
+		FROM = { activate_decision = afr_rrp_railway_infrastructure_construction }
+		ROOT = { activate_decision = afr_rrp_railway_infrastructure_construction_master }
+		FROM = {
+		custom_effect_tooltip = EDC_afr.3.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.3 hours = 1 } 
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 1 
+				technology = iron_railways
+			}
+		}
+		
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.14.c
+		ai_chance = { factor = 0 }
+		FROM = { country_event = { days = 1 id = afr_rrp.16 } }
+	}
+	
+}
+
+#Railway_Infrastructure_Construction_1_Full_Yes
+country_event = {
+	id = afr_rrp.15
+	title = Liberia_Gives_Full_Assistance.15.t
+	desc = afr_rrp.15.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.15.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#Railway_Infrastructure_Construction_1_No
+country_event = {
+	id = afr_rrp.16
+	title = Liberia_Declines_To_Aid.16.t
+	desc = afr_rrp.16.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.16.a
+		ai_chance = { factor = 10 }
+		set_country_flag = afr_rrp_railway_line
+	}
+	
+	option = {
+		name = Cancle_the_project.16.b
+		ai_chance = { factor = 90 }
+	}
+}
+
+
+#Main_Railway_Route_Construction_2
+country_event = {
+	id = afr_rrp.17
+	title = Main_Railway_Route_Construction.17.t
+	desc = afr_rrp.17.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Full_assistance_of_construction.17.a
+		ai_chance = { factor = 100 }
+		FROM = { country_event = { days = 1 id = afr_rrp.18 } }
+		FROM = { activate_decision = afr_rrp_main_railway_route_construction }
+		ROOT = { activate_decision = afr_rrp_main_railway_route_construction_master }
+		FROM = { 
+			add_tech_bonus = { 
+					bonus = 1
+					uses = 2
+					technology = steam_engine
+					technology = steam_locomotive
+				}
+		}
+		
+	}
+	
+	option = {
+		name = We_cannot_be_bothered.17.c
+		ai_chance = { factor = 0 }
+		FROM = { country_event = { days = 1 id = afr_rrp.19 } }
+	}
+	
+}
+
+#Main_Railway_Route_Construction_2_Full_Yes
+country_event = {
+	id = afr_rrp.18
+	title = Liberia_Gives_Full_Assistance.18.t
+	desc = afr_rrp.18.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = The_path_to_industrialization_has_started.18.a
+		ai_chance = { factor = 100 }
+		
+
+	}
+	
+}
+
+#Main_Railway_Route_Construction_Construction_2_No
+country_event = {
+	id = afr_rrp.19
+	title = Liberia_Declines_To_Aid.19.t
+	desc = afr_rrp.10.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = We_are_on_our_own.19.a
+		ai_chance = { factor = 50 }
+		set_country_flag = afr_rrp_railway_infrastructure_construction
+	}
+	
+	option = {
+		name = Cancle_the_project.19.b
+		ai_chance = { factor = 50 }
+	}
+}
+
+
+
+
+#Open Merchant Trade
+country_event = {
+	id = afr_rrp.11
+	title = African_Trade_Partner_Established.11.t
+	desc = afr_rrp.11.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Will_this_lead_to_potential_colonies.11.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+		reverse_add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+	}
+}
+
+country_event = {
+	id = afr_rrp.12
+	title = African_Merchant_Partner_Wishes_To_Purchase_Design.12.t
+	desc = afr_rrp.12.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Approve_The_Sale.12.a
+		ai_chance = { factor = 100 }
+		FROM = {
+			create_production_license = {
+				target = ROOT
+				equipment = {
+					type = infantry_equipment_rifle_1
+				}
+				cost_factor = 0
+			}
+			hidden_effect = {
+				
+			}
+		}
+	}
+	
+	option = {
+		name = Decline.12.a
+		ai_chance = { factor = 0 }
+			hidden_effect = {
+			
+			}
+	}
+	
+}
+
+#Open ACS Affiliate 
+country_event = {
+	id = afr_rrp.13 
+	title = ACS_Affiliate_Established.13.t
+	desc = afr_rrp.13.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = A_New_American_Colonizatio_Society_Affiliate.13.a
+		ai_chance = { factor = 100 }
+		add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+		reverse_add_opinion_modifier = { target = FROM modifier = eoanb_om_africa_trade_focus }
+	}
+}
+
+#Adopt American Ways
+country_event = {
+	id = afr_rrp.20
+	title = Our_First_Elections.20.t
+	desc = afr_rrp.1.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.20.a
+		ai_chance = { factor = 34 }
+		ROOT = {
+			country_event = { days = 30 id = afr_rrp.21 }
+			add_popularity = {
+				ideology = centrism
+				popularity = .12
+			}
+		}
+	}
+	
+	option = {
+		name = afr_rrp.20.b
+		ai_chance = { factor = 34 }
+		ROOT = {
+			country_event = { days = 30 id = afr_rrp.21 }
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = .12
+			}
+		}
+	}
+	
+	option = {
+		name = afr_rrp.20.c
+		ai_chance = { factor = 32 }
+		ROOT = {
+			country_event = { days = 30 id = afr_rrp.21 }
+			add_popularity = {
+				ideology = autocracy
+				popularity = .12
+			}
+		}
+	}
+	
+}
+
+#Election!
+country_event = {
+	id = afr_rrp.21
+	title = Election_Day.21.t
+	desc = afr_rrp.22.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.21.a
+		ai_chance = { factor = 100 }
+		hold_election = ROOT
+		ROOT = {
+			add_political_power = 50
+		}
+	}
+	
+}
+
+#Join Confederation!
+country_event = {
+	id = afr_rrp.22
+	title = Affiliate_Wishes_To_Join_Confederation.22.t
+	desc = afr_rrp.22.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.22.a
+		ai_chance = { factor = 100 }
+		LIB = {
+			add_political_power = 15
+		}
+		FROM = { country_event={id = afr_rrp.24} } 
+		LIB = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_dominion
+				freedom_level = 0.3
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						LIB = {
+							has_idea = usa_slavery_law
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = usa_slavery_law
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = segregation
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = segregation
+					}
+				}
+				if = {
+					limit = {
+					LIB = {
+							has_idea = racial_laws
+							}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = racial_laws
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = limited_equality
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = limited_equality
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = full_equality
+						}
+					}
+					swap_ideas = {
+						remove_idea = limited_equality
+						add_idea = full_equality
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = slavery
+						}
+					}
+					swap_ideas = {
+						remove_idea = limited_equality
+						add_idea = slavery
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = afr_rrp.22.b
+		ai_chance = { factor = 0 }
+		FROM = { country_event={id = afr_rrp.25} }
+	}
+	
+}
+
+#Found Confederation!
+country_event = {
+	id = afr_rrp.23
+	title = Affiliate_Wishes_To_Become_A_Colony.23.t
+	desc = afr_rrp.23.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Create_the_american_colonization_confederation.23.a
+		ai_chance = { factor = 100 }
+		LIB = {
+			add_political_power = 15
+			set_country_flag = american_colonial_confederation
+		}
+		FROM = { country_event={id = afr_rrp.24} } 
+		LIB = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_dominion
+				freedom_level = 0.3
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						LIB = {
+							has_idea = usa_slavery_law
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = usa_slavery_law
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = segregation
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = segregation
+					}
+				}
+				if = {
+					limit = {
+					LIB = {
+							has_idea = racial_laws
+							}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = racial_laws
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = limited_equality
+						}
+					}
+					swap_ideas = {
+						remove_idea = tribal_slavery
+						add_idea = limited_equality
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = full_equality
+						}
+					}
+					swap_ideas = {
+						remove_idea = limited_equality
+						add_idea = full_equality
+					}
+				}
+				if = {
+					limit = {
+						LIB = {
+							has_idea = slavery
+						}
+					}
+					swap_ideas = {
+						remove_idea = limited_equality
+						add_idea = slavery
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = afr_rrp.23.b
+		ai_chance = { factor = 0 }
+		FROM = { country_event={id = afr_rrp.25} }
+	}
+	
+}
+
+#YES!
+country_event = {
+	id = afr_rrp.24
+	title = Accepted.24.t
+	desc = afr_rrp.24.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.24.a
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_political_power = 200
+			set_country_flag = ACS_colony
+		} 
+	}
+	
+}
+
+#NO!
+country_event = {
+	id = afr_rrp.25
+	title = Declined.25.t
+	desc = afr_rrp.25.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_rrp.25.a
+		ai_chance = { factor = 100 }
+	}
+	
+}

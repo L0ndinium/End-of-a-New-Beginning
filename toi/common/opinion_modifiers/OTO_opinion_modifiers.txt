@@ -1,0 +1,18 @@
+opinion_modifiers = {
+
+	OTO_rail_partnership = {
+		value = 35
+	}
+
+	OTO_young_ottomans_and_france = {
+		value = 20
+	}
+
+	OTO_restricted_churches_opinion_malus = {
+		value = -50
+	}
+
+	GRE_OTO_teaching_greek = {
+		value = 15
+	}
+}

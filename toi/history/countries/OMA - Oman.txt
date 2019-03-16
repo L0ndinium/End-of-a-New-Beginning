@@ -3,7 +3,7 @@
 
   oob = "OMA_1857"
 
-  set_convoys = 5
+  set_convoys = 9
   
   set_research_slots = 2
 
@@ -35,8 +35,35 @@
     state_religion
 	religion_ibadi
          #NATIONAL SPIRITS
-	
+		OMA_economic_irrelevence
+		OMA_mothballed_shipyards
+		OMA_heavly_militerised_state
   }
+  
+	diplomatic_relation = {
+		country = ENG
+		relation = non_aggression_pact
+		active = yes
+	}
+	diplomatic_relation = {
+		country = ENG
+		relation = military_access
+		active = yes
+	}
+	ENG={
+		diplomatic_relation = {
+			country = OMA
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
+	PER={
+		diplomatic_relation = {
+			country = OMA
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
 
   set_politics = {
     parties = {

@@ -1,0 +1,31 @@
+scripted_gui = {
+
+	landtag = {
+		context_type = player_context
+		
+		window_name = "landtag_container"
+		
+		visible = {
+            OR = {
+				tag = BAV
+				tag = PRS
+				tag = WUR
+				tag = BAD
+				tag = HSD
+				tag = FRK
+				tag = HES
+				tag = THU
+				tag = SAX
+				tag = HAN
+				tag = MCK
+			}
+		}
+
+		effects = {
+            landtag_icon_click = {
+				set_variable = { show_local_landtag_menu = 1 }
+			}
+		}
+	}
+}
+

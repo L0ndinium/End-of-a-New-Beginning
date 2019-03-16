@@ -1,0 +1,122 @@
+WUR_shifting_flow = {
+	
+	#Shifting Flow Austria
+	eoanb_decision_WUR_shifting_flow_austria = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = WUR
+			country_exists = AUS
+			has_country_flag = WUR_pursue_shifting_flow
+			NOT = {
+				OR = {
+					AUS = {
+						has_opinion_modifier = wur_foreign_policy
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = WUR_customeffect_decision_shifting_flow
+			
+			hidden_effect = {
+				AUS = {
+					country_event = { id = wurttem.10 days = 3}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+		}
+	}
+	
+	#Shifting Flow France
+	eoanb_decision_WUR_shifting_flow_france = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = WUR
+			country_exists = FRA
+			has_country_flag = WUR_pursue_shifting_flow
+			NOT = {
+				OR = {
+					FRA = {
+						has_opinion_modifier = wur_foreign_policy
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = WUR_customeffect_decision_shifting_flow
+			
+			hidden_effect = {
+				FRA = {
+					country_event = { id = wurttem.10 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+		}
+	}
+	
+	#Shifting Flow Russia
+	eoanb_decision_WUR_shifting_flow_russia = {
+		icon = generic_political_discourse
+
+		available = {
+			has_stability > 0.5
+		}
+
+		visible = {
+			TAG = WUR
+			country_exists = RUS
+			has_country_flag = WUR_pursue_shifting_flow
+			NOT = {
+				OR = {
+					RUS = { 
+						has_opinion_modifier = wur_foreign_policy
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = WUR_customeffect_decision_shifting_flow
+			
+			hidden_effect = {
+				RUS = {
+					country_event = { id = wurttem.10 days = 3 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+		}
+	}
+}

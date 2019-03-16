@@ -1,0 +1,453 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "local_landtag_menu_container"
+		position = {x=700 y=250}
+		size = { width=480 height=500 }
+
+		show_sound = peace_conference
+		
+		fade_time = 1000
+		fade_type = linear
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_settings_popup_bg"
+		}
+		
+		buttonType = {
+			name = "local_landtag_menu_exit" 
+			position = {x=425 y=25}	
+			spriteType = "GFX_closebutton"
+		}
+		
+		iconType ={
+			name ="landtag_menu_icon"
+			spriteType = "GFX_goal_focus_government_icon"
+			position = { x = -43 y = -250 }
+			Orientation = "CENTER"
+		}
+		
+		iconType ={
+			name ="landtag_bg_icon"
+			spriteType = "GFX_landtag_name_bg"
+			position = { x = -256 y = -170 }
+			Orientation = "CENTER"
+		}
+		
+		iconType ={
+			name ="ch1_I_pres_bg"
+			spriteType = "GFX_group_name_bg" 
+			position = { x = -125 y = -46 }
+			Orientation = "CENTER"
+			alwaystransparent = yes
+		}
+		
+		iconType ={
+			name ="ch1_II_pres_bg"
+			spriteType = "GFX_group_name_bg" 
+			position = { x = -125 y = 19 }
+			Orientation = "CENTER"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_text"
+			position = { x= -8 y = 107 }
+			font = "hoi_30header"
+			text = "[LANDTAG_NAME]"
+			format = center
+			maxWidth = 500
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_country_text"
+			position = { x= -7 y = 80 }
+			font = "hoi_36header"
+			text = "[Root.GetName]"
+			format = center
+			maxWidth = 500
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_chamber_i_text"
+			position = { x= 120 y = 145 }
+			font = "hoi_24header"
+			text = "I. Chamber"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_I_president_text"
+			position = { x= 120 y = 175 }
+			font = "hoi_20bs"
+			text = "Current I. President:"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_I_president_current"
+			position = { x= 140 y = 205 }
+			font = "hoi_20bs"
+			text = "[I_PRES_ENDPOINT]"
+			format = center
+			maxWidth = 210
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "landtag_button_I_pres"
+			quadTextureSprite ="GFX_ideas_icon"
+			position = { x= 100 y = -57 }
+			Orientation = "CENTER"
+			buttonFont = "hoi_20bs"
+			clicksound = "decisions_ui_tab"
+			
+			pdx_tooltip = "LDT_BUTTON_I_TOOLTIP"
+			pdx_tooltip_delayed = "LDT_BUTTON_I_TOOLTIP_DESC"
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_II_president_text"
+			position = { x= 120 y = 240 }
+			font = "hoi_20bs"
+			text = "Current II. President:"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_II_president_current"
+			position = { x= 140 y = 270 }
+			font = "hoi_20bs"
+			text = "[II_PRES_ENDPOINT]"
+			format = center
+			maxWidth = 210
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "landtag_button_II_pres"
+			quadTextureSprite ="GFX_ideas_icon"
+			position = { x= 100 y = 9 }
+			Orientation = "CENTER"
+			buttonFont = "hoi_20bs"
+			clicksound = "decisions_ui_tab"
+			
+			pdx_tooltip = "LDT_BUTTON_II_TOOLTIP"
+			pdx_tooltip_delayed = "LDT_BUTTON_II_TOOLTIP_DESC"
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_chamber_ii_text"
+			position = { x= 120 y = 315 }
+			font = "hoi_24header"
+			text = "II. Chamber"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		iconType ={
+			name ="landtag_ii_chamber_bg_icon"
+			spriteType = "GFX_generic_bg_307x113"
+			position = { x = -148 y = 100 }
+			Orientation = "CENTER"
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_I_president_text"
+			position = { x= 120 y = 360 }
+			font = "hoi_20bs"
+			text = "Current I. President:"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_I_president_name"
+			position = { x= 120 y = 380 }
+			font = "hoi_20bs"
+			text = "[2CH_I_PRES_ENDPOINT]"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_II_president_text"
+			position = { x= 120 y = 405 }
+			font = "hoi_20bs"
+			text = "Current II. President:"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_II_president_name"
+			position = { x= 120 y = 425 }
+			font = "hoi_20bs"
+			text = "[2CH_II_PRES_ENDPOINT]"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "local_landtag_pres_I_menu_container"
+		position = {x=360 y=350}
+		size = { width=320 height=300 }
+		
+		fade_time = 1000
+		fade_type = linear
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_landtag_pres_bg"
+		}
+		
+		iconType ={
+			name ="landtag_ch_I_president1_name_bg"
+			spriteType = "GFX_generic_text_bg_258"
+			position = { x = -145 y = -65 }
+			Orientation = "CENTER"
+		}
+		
+		iconType ={
+			name ="landtag_ch_I_president2_name_bg"
+			spriteType = "GFX_generic_text_bg_258"
+			position = { x = -145 y = -7 }
+			Orientation = "CENTER"
+		}
+		
+		iconType ={
+			name ="landtag_ch_I_president3_name_bg"
+			spriteType = "GFX_generic_text_bg_258"
+			position = { x = -145 y = 55 }
+			Orientation = "CENTER"
+		}
+		
+		buttonType = {
+			name = "local_landtag_pres_I_menu_exit" 
+			position = {x=270 y=22}	
+			spriteType = "GFX_closebutton"
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_I_president_name"
+			position = { x= 30 y = 30 }
+			font = "hoi_20bs"
+			text = "Available I Presidents:"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_I_president1_name"
+			position = { x= 12 y = 87 }
+			font = "hoi_20bs"
+			text = "[I_PRES_1_ENDPOINT]"
+			format = center
+			maxWidth = 235
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_I_president2_name"
+			position = { x= 12 y = 146 }
+			font = "hoi_20bs"
+			text = "[I_PRES_2_ENDPOINT]"
+			format = center
+			maxWidth = 235
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_I_president3_name"
+			position = { x= 12 y = 208 }
+			font = "hoi_20bs"
+			text = "[I_PRES_3_ENDPOINT]"
+			format = center
+			maxWidth = 235
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "I_pres_1"
+			position = { x=80 y =-82}
+			quadTextureSprite ="GFX_idea_slot_political_advisor"
+			orientation = "CENTER"
+			buttonFont = "hoi_18mbs"
+		}
+		
+		buttonType = {
+			name = "I_pres_2"
+			position = { x=80 y =-22}
+			quadTextureSprite ="GFX_idea_slot_political_advisor"
+			orientation = "CENTER"
+			buttonFont = "hoi_18mbs"
+		}
+		
+		buttonType = {
+			name = "I_pres_3"
+			position = { x=80 y =42}
+			quadTextureSprite ="GFX_idea_slot_political_advisor"
+			orientation = "CENTER"
+			buttonFont = "hoi_18mbs"
+		}
+	}
+	
+	containerWindowType = {
+		name = "local_landtag_pres_II_menu_container"
+		position = {x=1200 y=350}
+		size = { width=300 height=320 }
+		
+		fade_time = 1000
+		fade_type = linear
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_landtag_pres_bg"
+		}
+		
+		iconType ={
+			name ="landtag_ch_II_president1_name_bg"
+			spriteType = "GFX_generic_text_bg_258"
+			position = { x = -135 y = -75 }
+			Orientation = "CENTER"
+		}
+		
+		iconType ={
+			name ="landtag_ch_II_president2_name_bg"
+			spriteType = "GFX_generic_text_bg_258"
+			position = { x = -135 y = -18 }
+			Orientation = "CENTER"
+		}
+		
+		iconType ={
+			name ="landtag_ch_II_president3_name_bg"
+			spriteType = "GFX_generic_text_bg_258"
+			position = { x = -135 y = 44 }
+			Orientation = "CENTER"
+		}
+		
+		buttonType = {
+			name = "local_landtag_pres_II_menu_exit" 
+			position = {x=270 y=22}	
+			spriteType = "GFX_closebutton"
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_II_president_name"
+			position = { x= 30 y = 30 }
+			font = "hoi_20bs"
+			text = "Available II Presidents:"
+			format = center
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_II_president1_name"
+			position = { x= 16 y = 87 }
+			font = "hoi_20bs"
+			text = "[II_PRES_1_ENDPOINT]"
+			format = center
+			maxWidth = 235
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_II_president2_name"
+			position = { x= 16 y = 146 }
+			font = "hoi_20bs"
+			text = "[II_PRES_2_ENDPOINT]"
+			format = center
+			maxWidth = 235
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name ="landtag_ch_II_president3_name"
+			position = { x= 16 y = 208 }
+			font = "hoi_20bs"
+			text = "[II_PRES_3_ENDPOINT]"
+			format = center
+			maxWidth = 235
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "II_pres_1"
+			position = { x=90 y =-92}
+			quadTextureSprite ="GFX_idea_slot_political_advisor"
+			orientation = "CENTER"
+			buttonFont = "hoi_18mbs"
+		}
+		
+		buttonType = {
+			name = "II_pres_2"
+			position = { x=90 y =-32}
+			quadTextureSprite ="GFX_idea_slot_political_advisor"
+			orientation = "CENTER"
+			buttonFont = "hoi_18mbs"
+		}
+		
+		buttonType = {
+			name = "II_pres_3"
+			position = { x=90 y =32}
+			quadTextureSprite ="GFX_idea_slot_political_advisor"
+			orientation = "CENTER"
+			buttonFont = "hoi_18mbs"
+		}
+	}
+	
+	containerWindowType = {
+		name = "landtag_container"
+		position = { x = -1030 y = 3 } #990
+		orientation = upper_right
+		
+		buttonType = {
+			name ="landtag_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 680 y = 1 }
+			
+			pdx_tooltip = "LDT_TOOLTIP"
+			pdx_tooltip_delayed = "LDT_TOOLTIP_DESC"
+		}
+	}
+}

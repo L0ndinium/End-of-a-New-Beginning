@@ -1,0 +1,1635 @@
+﻿add_namespace = wurttem
+
+#Wilhelm I dies
+country_event = {
+	id = wurttem.0
+	title = wurttem.0.t
+	desc = wurttem.0.d
+	picture = GFX_report_wittelsbachs
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = WUR
+		date > 1864.07.25
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = WUR_victorian_wilhelm_dead
+			kill_country_leader = yes
+			create_country_leader = { 
+				name = "Württemberg Regency" 
+				desc = "POLITICS_WURTTEMBERG_REGENCY_DESC"
+				picture = "Portrait_Wurttemberg_Regency.dds" 
+				ideology = despotism
+				traits = { }
+			}
+			add_ideas = BAV_noleader
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.0.a
+		
+		add_stability = -0.10
+	}
+}
+
+#Karl I takes over
+country_event = {
+	id = wurttem.17
+	title = wurttem.17.t
+	desc = wurttem.17.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = { 
+				name = "Karl I" 
+				desc = "POLITICS_KARL_I_DESC"
+				picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds" 
+				ideology = despotism
+				traits = { }
+			}
+			remove_ideas = BAV_noleader
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.17.a
+	}
+}
+
+#Force stop emigration good
+country_event = {
+	id = wurttem.1
+	title = wurttem.1.t
+	desc = wurttem.1.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.1.a
+		
+		remove_ideas = WUR_victorian_emigration_1
+	}
+}
+
+#Force stop emigration bad
+country_event = {
+	id = wurttem.2
+	title = wurttem.2.t
+	desc = wurttem.2.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.2.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_2
+		}
+	}
+}
+
+#Try to draw people in good
+country_event = {
+	id = wurttem.3
+	title = wurttem.1.t
+	desc = wurttem.1.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.1.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_3_good
+		}
+	}
+}
+
+#Try to draw people in bad
+country_event = {
+	id = wurttem.4
+	title = wurttem.2.t
+	desc = wurttem.4.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.2.a
+		
+		swap_ideas = {
+			remove_idea = WUR_victorian_emigration_1
+			add_idea = WUR_victorian_emigration_3_bad
+		}
+	}
+}
+
+#Uneployment recover
+country_event = {
+	id = wurttem.5
+	title = wurttem.5.t
+	desc = wurttem.5.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.5.a
+	}
+}
+
+#Integrate Liberalism
+news_event = {
+	id = wurttem.6
+	title = wurttem.6.t
+	desc = wurttem.6.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.6.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = WUR
+			}
+			has_government = centrism
+		}
+		name = wurttem.6.b
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = WUR
+				has_government = centrism
+			}
+		}
+		name = wurttem.6.c
+	}
+}
+
+#Suppress Liberalism
+news_event = {
+	id = wurttem.7
+	title = wurttem.7.t
+	desc = wurttem.7.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.7.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				tag = WUR
+			}
+			has_government = centrism
+		}
+		name = wurttem.7.b
+	}
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = WUR
+				has_government = centrism
+			}
+		}
+		name = wurttem.7.c
+	}
+}
+
+#Decide on Schultheißwesen
+country_event = {
+	id = wurttem.8
+	title = wurttem.8.t
+	desc = wurttem.8.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.8.a
+		add_ideas = WUR_victorian_schultheisswesen_neglect
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.8.b
+		add_ideas = WUR_victorian_schultheisswesen_enforce
+	}
+}
+
+#Decide on Shifting Flow
+country_event = {
+	id = wurttem.9
+	title = wurttem.9.t
+	desc = wurttem.9.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.9.a
+		custom_effect_tooltip = WUR_customeffect_allow_shitftin_flow
+		hidden_effect = {
+			set_country_flag = WUR_pursue_shifting_flow
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.9.b
+		custom_effect_tooltip = WUR_customeffect_deny_shitftin_flow
+	}
+}
+
+#Foreign Policy proxy
+country_event = {
+	id = wurttem.10
+	title = wurttem.10.t
+	desc = wurttem.10.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.10.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = WUR
+				modifier = wur_foreign_policy
+			}
+			WUR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = wur_foreign_policy 
+				}
+				
+				country_event = { id = wurttem.11 days = 1 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.10.b
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.12 days = 1 }
+			}
+		}
+	}
+}
+
+#Foreign Policy good
+country_event = {
+	id = wurttem.11
+	title = wurttem.11.t
+	desc = wurttem.11.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = wurttem.11.a
+	}
+}
+
+#Foreign Policy bad
+country_event = {
+	id = wurttem.12
+	title = wurttem.12.t
+	desc = wurttem.12.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = wurttem.12.a
+	}
+}
+
+#RUS invite
+country_event = {
+	id = wurttem.13
+	title = wurttem.13.t
+	desc = wurttem.13.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 80
+				RUS = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_RUS_accepted_invite
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 20
+				RUS = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.b
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_RUS_denied_invite
+			}
+		}
+	}
+}
+
+#FRA invite
+country_event = {
+	id = wurttem.14
+	title = wurttem.13.t
+	desc = wurttem.13.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes 
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 80
+				FRA = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_FRA_accepted_invite
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 20
+				FRA = { has_opinion_modifier = wur_foreign_policy }
+			}
+		}
+		name = wurttem.13.b
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			WUR = {
+				set_country_flag = WUR_FRA_denied_invite
+			}
+		}
+	}
+}
+
+#Zweikaisertreffen both
+news_event = {
+	id = wurttem.15
+	title = wurttem.15.t
+	desc = wurttem.15.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = WUR
+				tag = RUS
+				tag = FRA
+			}
+		}
+		name = wurttem.15.a
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.15.b
+	}
+}
+
+#Zweikaisertreffen none
+news_event = {
+	id = wurttem.16
+	title = wurttem.16.t
+	desc = wurttem.16.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			tag = WUR
+		}
+		name = wurttem.16.a
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = RUS
+				tag = FRA
+			}
+		}
+		name = wurttem.16.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.16.c
+	}
+}
+
+#Zweikaisertreffen RUS
+news_event = {
+	id = wurttem.21
+	title = wurttem.21.t
+	desc = wurttem.21.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = RUS
+				tag = WUR
+			}
+		}
+		name = wurttem.21.a
+	}
+	
+	option = {
+		trigger = {
+			tag = FRA
+		}
+		name = wurttem.21.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.21.c
+	}
+}
+
+#Zweikaisertreffen FRA
+news_event = {
+	id = wurttem.22
+	title = wurttem.22.t
+	desc = wurttem.22.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = WUR
+			}
+		}
+		name = wurttem.22.a
+	}
+	
+	option = {
+		trigger = {
+			tag = RUS
+		}
+		name = wurttem.22.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = RUS
+					tag = FRA
+				}
+			}
+		}
+		name = wurttem.22.c
+	}
+}
+
+#Start liberalizing
+country_event = {
+	id = wurttem.18
+	title = wurttem.18.t
+	desc = wurttem.18.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = WUR_start_liberalize
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.18.a
+		
+		custom_effect_tooltip = WUR_customeffect_start_liberalizing
+		
+		decrease_ps_by_one = yes
+	}
+}
+
+#Finish liberalizing
+country_event = {
+	id = wurttem.19
+	title = wurttem.19.t
+	desc = wurttem.19.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			remove_ideas = WUR_start_liberalize
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.19.a
+		
+		custom_effect_tooltip = WUR_customeffect_finish_liberalizing
+		
+		increase_ps_by_two = yes
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = centrism
+				popularity = 0.07
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = 0.04
+			}
+		}
+	}
+}
+
+#Start suppression
+country_event = {
+	id = wurttem.20
+	title = wurttem.20.t
+	desc = wurttem.20.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = WUR_start_suppression
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.20.a
+		
+		custom_effect_tooltip = WUR_customeffect_start_suppression
+		
+		decrease_ps_by_one = yes
+	}
+}
+
+#Rally neighbours
+country_event = {
+	id = wurttem.23
+	title = wurttem.23.t
+	desc = wurttem.23.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 80
+				has_government = autocracy
+			}
+		}
+		name = wurttem.23.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_agree
+		
+		add_timed_idea = {
+			idea = WUR_neighbour_supress_liberalism
+			days = 70
+		}
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.24 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 20
+				has_government = autocracy
+			}
+		}
+		name = wurttem.23.a
+		
+		custom_effect_tooltip = WUR_customeffect_foreign_policy_deny
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.25 days = 3 }
+			}
+		}
+	}
+}
+
+#Rally neighbours back good
+country_event = {
+	id = wurttem.24
+	title = wurttem.24.t
+	desc = wurttem.24.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.24.a
+	}
+}
+
+#Rally neighbours back bad
+country_event = {
+	id = wurttem.25
+	title = wurttem.25.t
+	desc = wurttem.25.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.25.a
+	}
+}
+
+#Finish suppression
+country_event = {
+	id = wurttem.26
+	title = wurttem.26.t
+	desc = wurttem.26.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			remove_ideas = WUR_start_suppression
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.26.a
+		
+		custom_effect_tooltip = WUR_customeffect_finish_suppression
+		
+		increase_ps_by_two = yes
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = centrism
+				popularity = -0.07
+			}
+			add_popularity = {
+				ideology = traditional_conservatism
+				popularity = -0.04
+			}
+		}
+	}
+}
+
+#The North
+country_event = {
+	id = wurttem.27
+	title = wurttem.27.t
+	desc = wurttem.27.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 70
+				has_government = autocracy
+			}
+		}
+		name = wurttem.27.a
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.28 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 30
+				has_government = autocracy
+			}
+		}
+		name = wurttem.27.a
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.29 days = 3 }
+			}
+		}
+	}
+}
+
+#The North - good
+country_event = {
+	id = wurttem.28
+	title = wurttem.28.t
+	desc = wurttem.28.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.28.a
+		
+		hidden_effect = {
+			set_country_flag = WUR_stance_prussia_accepted
+		}
+	}
+}
+
+#The North - bad
+country_event = {
+	id = wurttem.29
+	title = wurttem.29.t
+	desc = wurttem.29.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.29.a
+	}
+}
+
+#WUR German stance
+country_event = {
+	id = wurttem.30
+	title = wurttem.30.t
+	desc = wurttem.30.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	#Austria
+	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.30.a
+		
+		hidden_effect = {
+			set_country_flag = WUR_bypass_stance_austria
+		}
+	}
+	
+	#Neutral
+	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 80
+				is_historical_focus_on = no
+				has_opinion = {
+					target = BAV
+					value > 39
+				}
+			}
+		}
+		name = wurttem.30.b
+		
+		hidden_effect = {
+			set_country_flag = WUR_bypass_stance_neutral
+		}
+	}
+	
+	#Prussia
+	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.30.c
+		
+		hidden_effect = {
+			set_country_flag = WUR_bypass_stance_prussia
+		}
+	}
+}
+
+#The South
+country_event = {
+	id = wurttem.31
+	title = wurttem.31.t
+	desc = wurttem.31.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.31.a
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.32 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = wurttem.31.b
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.33 days = 3 }
+			}
+		}
+	}
+}
+
+#The South - good
+country_event = {
+	id = wurttem.32
+	title = wurttem.32.t
+	desc = wurttem.32.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.32.a
+		
+		hidden_effect = {
+			set_country_flag = WUR_stance_austria_accepted
+		}
+	}
+}
+
+#The South - bad
+country_event = {
+	id = wurttem.33
+	title = wurttem.33.t
+	desc = wurttem.33.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.33.a
+	}
+}
+
+#The Middle - BAV
+country_event = {
+	id = wurttem.34
+	title = wurttem.34.t
+	desc = wurttem.34.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 85
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
+			}
+		}
+		name = wurttem.34.a
+		
+		hidden_effect = {
+			BAD = {
+				country_event = { id = wurttem.35 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 15
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
+			}
+		}
+		name = wurttem.34.b
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.36 days = 3 }
+			}
+		}
+	}
+}
+
+#The Middle - BAD
+country_event = {
+	id = wurttem.41
+	title = wurttem.41.t
+	desc = wurttem.41.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 85
+				has_government = autocracy
+			}
+		}
+		name = wurttem.41.a
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.35 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 15
+				has_government = autocracy
+			}
+		}
+		name = wurttem.41.b
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.40 days = 3 }
+			}
+		}
+	}
+}
+
+#The Middle - good good
+country_event = {
+	id = wurttem.35
+	title = wurttem.35.t
+	desc = wurttem.35.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.35.a
+		
+		hidden_effect = {
+			set_country_flag = WUR_stance_middle_both_accepted
+		}
+	}
+}
+
+#The Middle - good bad
+country_event = {
+	id = wurttem.40
+	title = wurttem.40.t
+	desc = wurttem.40.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.40.a
+		
+		hidden_effect = {
+			set_country_flag = WUR_stance_middle_bav_accepted
+		}
+	}
+}
+
+#The Middle - bad
+country_event = {
+	id = wurttem.36
+	title = wurttem.36.t
+	desc = wurttem.36.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.36.a
+	}
+}
+
+#Stance Austria
+news_event = {
+	id = wurttem.37
+	title = wurttem.37.t
+	desc = wurttem.37.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.37.a
+	}
+	
+	option = {
+		trigger = {
+			tag = AUS
+		}
+		name = wurttem.37.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = AUS
+				}
+			}
+		}
+		name = wurttem.37.c
+	}
+}
+
+#Stance Prussia
+news_event = {
+	id = wurttem.38
+	title = wurttem.38.t
+	desc = wurttem.38.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.38.a
+	}
+	
+	option = {
+		trigger = {
+			tag = PRS
+		}
+		name = wurttem.38.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = PRS
+				}
+			}
+		}
+		name = wurttem.38.c
+	}
+}
+
+#Stance Middle
+news_event = {
+	id = wurttem.39
+	title = wurttem.39.t
+	desc = wurttem.39.d
+	picture = GFX_news_event_generic_rally2
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { 
+			tag = WUR
+		}
+		name = wurttem.39.a
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				tag = BAV
+				tag = BAD
+			}
+		}
+		name = wurttem.39.b
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WUR
+					tag = BAV
+					tag = BAD
+				}
+			}
+		}
+		name = wurttem.39.c
+	}
+}
+
+#Befriend
+country_event = {
+	id = wurttem.42
+	title = wurttem.42.t
+	desc = wurttem.42.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 85
+				WUR = {
+					has_country_flag = WUR_stance_middle_both_accepted
+				}
+			}
+			modifier = {
+				factor = 85
+				WUR = {
+					has_country_flag = WUR_stance_middle_bav_accepted
+				}
+				tag = BAV
+			}
+		}
+		name = wurttem.42.a
+		
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = WUR
+				modifier = wur_old_friends
+			}
+			WUR = {
+				country_event = { id = wurttem.43 }
+				clr_country_flag = WUR_stance_middle_both_accepted
+				clr_country_flag = WUR_stance_middle_bav_accepted
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 15
+				WUR = {
+					has_country_flag = WUR_stance_middle_both_accepted
+				}
+			}
+			modifier = {
+				factor = 85
+				WUR = {
+					has_country_flag = WUR_stance_middle_bav_accepted
+				}
+				tag = BAV
+			}
+		}
+		name = wurttem.42.b
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.44 }
+				clr_country_flag = WUR_stance_middle_both_accepted
+				clr_country_flag = WUR_stance_middle_bav_accepted
+			}
+		}
+	}
+}
+
+#Befriend - good
+country_event = {
+	id = wurttem.43
+	title = wurttem.43.t
+	desc = wurttem.43.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = wur_old_friends
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.43.a
+	}
+}
+
+#Befriend - bad
+country_event = {
+	id = wurttem.44
+	title = wurttem.44.t
+	desc = wurttem.44.d
+	picture = GFX_report_wittelsbachs
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = wurttem.44.a
+	}
+}
+
+#Invite to Trias - BAV
+country_event = {
+	id = wurttem.45
+	title = wurttem.45.t
+	desc = wurttem.45.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wurttem.45.a
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 85
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
+			}
+		}
+		custom_effect_tooltip = WUR_customeffect_propose_trias_accept
+		
+		hidden_effect = {
+			BAD = {
+				country_event = { id = wurttem.46 days = 3 }
+			}
+			WUR = {
+				country_event = { id = wurttem.49 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		name = wurttem.45.b
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 15
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
+			}
+		}
+		custom_effect_tooltip = WUR_customeffect_propose_trias_deny
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.47 days = 3 }
+			}
+		}
+	}
+}
+
+#Invite to Trias - BAD
+country_event = {
+	id = wurttem.46
+	title = wurttem.46.t
+	desc = wurttem.46.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wurttem.46.a
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 100
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 90
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
+			}
+		}
+		custom_effect_tooltip = WUR_customeffect_propose_trias_accept
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.48 days = 3 }
+			}
+		}
+	}
+	
+	option = {
+		name = wurttem.46.b
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				has_country_flag = eoanb_flag_sww_side_mid
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = WUR
+					value > 39
+				}
+			}
+		}
+		custom_effect_tooltip = WUR_customeffect_propose_trias_deny
+		
+		hidden_effect = {
+			WUR = {
+				country_event = { id = wurttem.47 days = 3 }
+			}
+		}
+	}
+}
+
+#Invite Trias (good good)
+country_event = {
+	id = wurttem.48
+	title = wurttem.48.t
+	desc = wurttem.48.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			WUR = {
+				add_ideas = BAV_member_trias
+			}
+			BAD = {
+				add_ideas = BAV_member_trias
+			}
+			BAV = {
+				add_ideas = BAV_member_trias
+			}
+		}
+	}
+	
+	option = {
+		name = wurttem.48.a
+	}
+}
+
+#Invite to Trias - BAV (good)
+country_event = {
+	id = wurttem.49
+	title = wurttem.49.t
+	desc = wurttem.49.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wurttem.49.a
+	}
+}
+
+#Invite to Trias (bad)
+country_event = {
+	id = wurttem.47
+	title = wurttem.47.t
+	desc = wurttem.47.d
+	picture = GFX_report_wittelsbachs
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wurttem.47.a
+	}
+}

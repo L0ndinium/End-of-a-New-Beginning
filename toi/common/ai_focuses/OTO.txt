@@ -1,0 +1,13 @@
+ai_historical_focus_list_OTO = {
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		oto_administrative_reform
+		OTO_increase_spending
+		OTO_western_diplomacy
+		OTO_eastern_diplomacy
+		OTO_military_reform
+		OTO_mass_literacy_programs
+		OTO_industrial_rail_services
+		OTO_private_rail_investors
+	}
+}

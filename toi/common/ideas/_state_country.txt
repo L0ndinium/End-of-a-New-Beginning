@@ -82,6 +82,9 @@ ideas = {
 				research_speed_factor = -0.1
 				production_speed_buildings_factor = -0.25
 				production_factory_max_efficiency_factor = -0.25
+				fuel_gain_factor = -0.1
+				fuel_gain_factor_from_states = -0.1
+				max_fuel_factor = -0.1
 			}
 
 			default = yes
@@ -115,6 +118,9 @@ ideas = {
 				research_speed_factor = -0.2
 				production_speed_buildings_factor = -0.2
 				production_factory_max_efficiency_factor = -0.2
+				fuel_gain_factor = -0.1
+				fuel_gain_factor_from_states = -0.1
+				max_fuel_factor = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -146,6 +152,8 @@ ideas = {
 				research_speed_factor = -0.3
 				production_speed_buildings_factor = -0.15
 				production_factory_max_efficiency_factor = -0.15
+				fuel_gain_factor = -0.1
+				fuel_gain_factor_from_states = -0.1
 			}
 			
 			cancel_if_invalid = no
@@ -177,6 +185,7 @@ ideas = {
 				research_speed_factor = -0.4
 				production_speed_buildings_factor = -0.1
 				production_factory_max_efficiency_factor = -0.1
+				fuel_gain_factor = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -208,6 +217,9 @@ ideas = {
 				research_speed_factor = -0.5
 				production_speed_buildings_factor = -0.05
 				production_factory_max_efficiency_factor = -0.05
+				fuel_gain_factor = 0.1
+				fuel_gain_factor_from_states = 0.05
+				max_fuel_factor = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -239,6 +251,9 @@ ideas = {
 				research_speed_factor = -0.6
 				production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
+				fuel_gain_factor = 0.15
+				fuel_gain_factor_from_states = 0.1
+				max_fuel_factor = 0.1
 			}
 			
 			cancel_if_invalid = no
@@ -270,6 +285,9 @@ ideas = {
 				research_speed_factor = -0.7
 				production_speed_buildings_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
+				fuel_gain_factor = 0.15
+				fuel_gain_factor_from_states = 0.15
+				max_fuel_factor = 0.15
 			}
 			
 			cancel_if_invalid = no
@@ -301,6 +319,9 @@ ideas = {
 				research_speed_factor = -0.8
 				production_speed_buildings_factor = 0.15
 				production_factory_max_efficiency_factor = 0.15
+				fuel_gain_factor = 0.2
+				fuel_gain_factor_from_states = 0.2
+				max_fuel_factor = 0.2
 			}
 			
 			cancel_if_invalid = no
@@ -332,6 +353,9 @@ ideas = {
 				research_speed_factor = -0.9
 				production_speed_buildings_factor = 0.2
 				production_factory_max_efficiency_factor = 0.2
+				fuel_gain_factor = 0.25
+				fuel_gain_factor_from_states = 0.25
+				max_fuel_factor = 0.25
 			}
 			
 			cancel_if_invalid = no
@@ -363,6 +387,9 @@ ideas = {
 				research_speed_factor = -1
 				production_speed_buildings_factor = 0.25
 				production_factory_max_efficiency_factor = 0.25
+				fuel_gain_factor = 0.25
+				fuel_gain_factor_from_states = 0.5
+				max_fuel_factor = 0.5
 			}
 			
 			cancel_if_invalid = no
@@ -1457,6 +1484,9 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.75
 				production_speed_arms_factory_factor = -0.75
 				production_speed_dockyard_factor = -0.75
+				fuel_gain_factor = -0.5
+				fuel_gain_factor_from_states = -0.75
+				max_fuel_factor = -0.75
 				political_power_gain = -0.1
 				army_morale_factor = -0.05
 				consumer_goods_factor = -0.1
@@ -1497,6 +1527,9 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.5
 				production_speed_arms_factory_factor = -0.5
 				production_speed_dockyard_factor = -0.5
+				fuel_gain_factor = -0.25
+				fuel_gain_factor_from_states = -0.5
+				max_fuel_factor = -0.5
 				political_power_gain = -0.05
 				consumer_goods_factor = -0.05
 				research_speed_factor = 0.02
@@ -1526,6 +1559,9 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.25
 				production_speed_arms_factory_factor = -0.25
 				production_speed_dockyard_factor = -0.25
+				fuel_gain_factor = -0.1
+				fuel_gain_factor_from_states = -0.25
+				max_fuel_factor = -0.25
 			}
 
 			ai_will_do = {
@@ -1565,6 +1601,9 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = -0.1
 				production_speed_dockyard_factor = -0.1
+				fuel_gain_factor = -0.05
+				fuel_gain_factor_from_states = -0.1
+				max_fuel_factor = -0.1
 				political_power_gain = 0.05
 				army_morale_factor = 0.05
 				consumer_goods_factor = 0.05
@@ -1599,6 +1638,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.1
+				fuel_gain_factor_from_states = 0.1
 				political_power_gain = 0.1
 				army_morale_factor = 0.075
 				consumer_goods_factor = 0.1

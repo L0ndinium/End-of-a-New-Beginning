@@ -1,5 +1,17 @@
 ideas = {
 	country = {
+		AF_T_Tribal_Army = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+
+			modifier = {
+			}
+		}
 		AF_T_unorganized_tribal_nation = {
 			allowed = {
 				always = yes
@@ -680,7 +692,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_purge #get a blueback gfx
+			picture = generic_purge
 
 			modifier = {
 				consumer_goods_factor = 0.25
@@ -973,5 +985,216 @@ ideas = {
 				trade_cost_for_target_factor = -0.5
 			}
 			
+		}
+		OMA_western_inspirations = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_international_inflow
+			
+			modifier = {
+				stability_factor = -0.125
+				research_time_factor = -0.05
+			}
+		}
+		OMA_isolatism = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_purge
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.05
+				army_core_defence_factor  = 0.1
+				enemy_partisan_effect  = -0.1
+			}
+		}
+		OMA_economic_irrelevence = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = great_depression
+			
+			modifier = {
+				stability_factor = -0.075
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				research_time_factor = 0.075
+				industrial_capacity_dockyard  = -0.15
+			}
+		}
+		OMA_economic_irrelevence_2 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = great_depression
+			
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				research_time_factor = 0.05
+				industrial_capacity_dockyard  = -0.1
+			}
+		}
+		OMA_economic_irrelevence_3 = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = great_depression
+			
+			modifier = {
+				stability_factor = -0.025
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				research_time_factor = 0.025
+				industrial_capacity_dockyard  = -0.05
+			}
+		}
+		OMA_agressive_modernisation = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_purge
+			
+			modifier = {
+				stability_factor = -0.25
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				research_time_factor = -0.1
+				industrial_capacity_dockyard  = 0.05
+			}
+		}
+		OMA_modernisation = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				stability_factor = -0.075
+				production_speed_buildings_factor = 0.02
+				research_time_factor = -0.05
+			}
+		}
+		OMA_mothballed_shipyards = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = ITA_Unorganized_Navy
+			
+			modifier = {
+				industrial_capacity_dockyard  = -0.99
+			}
+		}
+		OMA_heavly_militerised_state = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				conscription = 0.125
+				industrial_capacity_factory = -0.1
+				
+			}
+		}
+		OMA_indian_oman_trade= {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.075
+				min_export = 0.05
+			}
+		}
+		OMA_oman_indian_trade= {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+			}
+			targeted_modifier = { 
+				tag = OMA
+				trade_cost_for_target_factor = -0.20
+				extra_trade_to_target_factor = 0.10
+			}
+		}
+		ZAN_OMAtribute= {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = great_depression
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		ZAN_brothers_war= {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				surrender_limit = 1.50
+			}
+		}
+		WAK_hidden_state = {
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = AF_T_small_kingdom
+			
+			modifier = {
+			}
 		}
 }

@@ -9,6 +9,8 @@
   
   set_research_slots = 4
   
+  set_fuel_ratio = 0.05
+  
   create_import = {
     resource = cotton
     amount = 8

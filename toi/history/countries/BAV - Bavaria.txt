@@ -28,7 +28,7 @@
     limited_equality
     absolutism
 
-    no_constitution
+    constitution_adopted
     no_elections
 
     privileged_education
@@ -101,7 +101,7 @@
   # POLITICAL LEADERS
 
 	create_country_leader = {
-	  name = "Maximilian II."
+	  name = "Maximilian II"
 	  desc = POLITICS_MAXIMILIAN_II_DESC
 	  picture = "Portrait_BAV_Maximilian_II.dds"
 	  expire = "1864.3.10"

@@ -125,9 +125,9 @@ set_politics = {
   # POLITICAL LEADERS
 
 create_country_leader = {
-  name = "Alexandr Gorchakov"
+  name = "Alexander II"
   desc = "POLITICS_GEORGI_PLEKHANOV_DESC"
-  picture = "Portrait_RUS_Alexandr_Gorchakov.dds"
+  picture = "Portrait_RUS_Alexander_II.dds"
   expire = "1900.1.1"
   ideology = despotism
   traits = {

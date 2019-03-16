@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_diplo_influence_bg"
+		texturefile = "gfx/interface/diplo_influence_bg.dds"
+	}
+	
+}
