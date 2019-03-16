@@ -8,11 +8,30 @@
   }
 }
 
+
 units = {
 		#Capital
 		division= {
 			name = "1st Oman Infantry"
 			location = 10760
+			division_template = "Arabian Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "2nd Oman Infantry"
+			location = 4993
+			division_template = "Arabian Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "3rd Oman Infantry"
+			location = 8000
+			division_template = "Arabian Infantry"
+			start_experience_factor = 0.2
+		}
+		division= {
+			name = "4th Oman Infantry"
+			location = 2103
 			division_template = "Arabian Infantry"
 			start_experience_factor = 0.2
 		}

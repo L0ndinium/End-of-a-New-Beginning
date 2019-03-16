@@ -9,7 +9,6 @@
 
   add_ideas = { 
     #POLITICS 
-		  
     hos_is_leader
     victorian_era
 	law_victorian_army
@@ -35,11 +34,11 @@
     privileged_education
     state_religion
 	religion_catholic
-         #NATIONAL SPIRITS
-    
-  PRS_Zollverein
-  GER_general_idea_ger_confed
 	
+    #NATIONAL SPIRITS
+	PRS_Zollverein
+	GER_general_idea_ger_confed
+	BAD_russiancampaign
   }
 
   set_politics = {

@@ -1,0 +1,36 @@
+
+
+KRU_US_Investment_Diplomacy = {
+	icon = generic_democracy
+	visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+	}
+}
+
+KRU_Reconstruction = {
+	icon = generic_democracy
+	visible = {
+		has_completed_focus = LIB_reconstruction
+	}
+}
+
+KRU_ACS_US_Branch = {
+	icon = generic_democracy
+	visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+	}
+}
+
+KRU_End_Slave_Trade = {
+	icon = generic_democracy
+	visible = {
+		has_country_flag = LIB_end_slave_trade
+	}
+}
+
+KRU_Control_Slave_Trade = {
+	icon = generic_democracy
+	visible = {
+		has_country_flag = LIB_control_slave_trade
+	}
+}

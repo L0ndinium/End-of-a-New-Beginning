@@ -4,11 +4,14 @@ on_actions = {
         effect = {
 	        USA = {
 		        eoanb_score_system_calc = yes
-				eoanb_score_system_calc = yes
 			    eoanb_ledger_system_calc = yes
-				eoanb_score_system_calc = yes
-				eoanb_ledger_system_calc = yes
-			
+		        eoanb_score_system_calc = yes
+			    eoanb_ledger_system_calc = yes
+				country_event = {
+				    id = influence_index.0
+				    days = 15  
+				}
+			    #eoanb_influence_calc_init = yes 
 		    }
 	    }
     }
@@ -32,22 +35,24 @@ on_actions = {
                 if = {
                     limit = {
                         check_variable = {
-                        global.time_counter > 14
+                            global.time_counter = 14
                         }
                     }
-					set_variable = { global.time_counter = 0 }
                     eoanb_score_system_calc = yes 
                     eoanb_ledger_system_calc = yes 
                 }
-                # if = {
-                    # limit = {
-                        # check_variable = {
-                        # global.time_counter > 30
-                        # }
-                    # }
-                    # set_variable = { global.time_counter = 0 }
-                    # eoanb_ledger_system_calc = yes 
-                # }
+                if = {
+                    limit = {
+                        check_variable = {
+                            global.time_counter > 29 
+                        }
+                    }
+                    set_variable = { global.time_counter = 0 }
+				    country_event = {
+	        			id = influence_index.1
+		        		days = 1 
+				    } 
+                }
             }
             else_if = {
                 limit = {
@@ -74,6 +79,10 @@ on_actions = {
 						set_variable = { global.time_counter = 0 }
                         eoanb_score_system_calc = yes 
 						eoanb_ledger_system_calc = yes
+				        country_event = {
+			            	id = influence_index.1 
+				            days = 1 
+				        }
                     }
                     # if = {
                         # limit = {

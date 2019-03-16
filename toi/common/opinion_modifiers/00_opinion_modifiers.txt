@@ -5,7 +5,7 @@
 # min_trust
 # max_trust
 # decay
-# Decay uses the unit you use for the modifier (timer), and is calculated normally. 
+# Decay uses the unit you use for the modifier (timer), and is calculated normally.
 # This means a positive decay is required to annul negative modifiers, and the other way around applies for positive modifiers.
 # Further Research implies decay is always per month (?) and can use non-whole numbers (like 2.3)
 # If a unit of time is put, but no decay - is the modifier removed after that time? Further testing required
@@ -788,41 +788,41 @@ opinion_modifiers = {
 	eoanb_om_heydt_edict = {
 	    value = -40
 	}
-	
+
 	eoanb_om_HAM_PRS_friend = {
 		value = 50
 	}
-	
+
 	eoanb_om_PRS_NGC_improved = {
 		value = 30
 	}
-	
+
 	eoanb_om_PRS_focus_like = {
 		value = 50
 		decay = 1
 	}
-	
+
 	eoanb_om_PRS_focus_dislike = {
 		value = -50
 		decay = 1
 	}
-	
+
 	eoanb_om_PRS_annexes_SCH = {
 		value = -25
 	}
-	
+
 	eoanb_om_PRS_annexes_HLS = {
 		value = -25
 	}
-	
+
 	eoanb_om_ENG_developed_IOM = {
 		value = 10
 	}
-	
+
 	eoanb_om_PRS_annex_NGC_subject = {
 		value = -25
 	}
-	
+
 	HES_diplomacy = {
 	    value = 70
 	}
@@ -839,218 +839,218 @@ opinion_modifiers = {
 		trade = yes
 		value = -200
 	}
-	
+
 	eoanb_om_GER_world_trade = {
 		trade = yes
 		value = 10
 	}
-	
+
 	eoanb_om_GER_isolates_FRA = {
 		value = -25
 	}
-	
+
 	eoanb_om_GER_mission_radowitz = {
 		value = 40
 	}
-	
+
 	eoanb_om_GER_three_emperors = {
 		value = 10
 	}
-	
+
 	eoanb_om_GER_reapproach_AUS = {
 		value = 25
 	}
-	
+
 	eoanb_om_GER_AUS_alliance_failed = {
 		value = -10
 	}
-	
+
 	eoanb_om_GER_ITA_rome_delegation = {
 		value = 25
 	}
-	
+
 	eoanb_om_GER_ITA_alliance_failed = {
 		value = -10
 	}
-	
+
 	eoanb_om_GER_KOR_treaty = {
 		value = 25
 	}
-	
+
 	eoanb_om_GER_PER_treaty = {
 		value = 25
 	}
-	
+
 	eoanb_om_GER_approaches_MEX = {
 		value = 40
 	}
-	
+
 	eoanb_om_GER_established_denhardt = {
 		value = 25
 	}
-	
+
 	eoanb_om_GER_established_nachtigal = {
 		value = 25
 	}
-	
+
 	eoanb_om_PRS_focus_bismarck_foreign = {
 		value = -30
 	}
-	
+
     GRE_Ionian_Islands_modifier = {
 	    value = 40
 	}
-	
+
 	eoanb_om_GER_crisis_warinsight_goodover = {
 		value = 25
 		decay = 1
 	}
-	
+
 	eoanb_om_PRS_eulenburg_expedition = {
 		value = 10
 	}
-	
+
     CET_Opinion_Arkadi_Explosion = {
-	    value = 25 
+	    value = 25
 	}
-	
+
 	eoanb_om_repealed_gse_act_ENG_RAJ = {
 		value = 20
 	}
-	
+
 	eoanb_om_prepared_negotiations_ENG_RAJ = {
 		value = 10
 	}
-	
+
 	eoanb_om_ENG_CHI_arrow_incident = {
 		value = -100
 	}
-	
+
 	eoanb_om_USA_CHI_opium_neutral = {
 		value = 5
 	}
-	
+
 	eoanb_om_USA_CHI_barrier_forts = {
 		value = -40
 	}
-	
+
 	eoanb_om_USA_ENG_barrier_forts = {
 		value = 15
 	}
-	
+
 	eoanb_om_USA_FRA_barrier_forts = {
 		value = 15
 	}
-	
+
 	eoanb_om_RUS_CHI_arrow_incident = {
 		value = -40
 	}
-	
+
 	eoanb_om_RUS_ENG_arrow_incident = {
 		value = 15
 	}
-	
+
 	eoanb_om_RUS_FRA_arrow_incident = {
 		value = 15
 	}
-	
+
 	eoanb_om_FRA_CHI_arrow_incident = {
 		value = -40
 	}
-	
+
 	eoanb_om_FRA_ENG_arrow_incident = {
 		value = 15
 	}
-	
+
 	eoanb_om_FRA_CHI_ignored_chapdelaine = {
 		value = 10
 	}
-	
+
 	eoanb_om_FRA_CHI_gave_reparations = {
 		value = 20
 	}
-	
+
 	eoanb_om_CHI_dislikes_winners = {
 		value = -50
 	}
-	
+
 	eoanb_om_ENG_TSH_friendship = {
 		value = 20
 	}
-	
+
 	eoanb_om_ENG_TSH_fauxpas = {
 		value = -10
 	}
-	
+
 	eoanb_om_RAJ_ENG_friendship = {
 		value = 25
 	}
-	
+
 	eoanb_om_RAJ_ENG_friendly_release = {
-		value = 50 
+		value = 50
 	}
-	
+
 	eoanb_om_tsushima_ENG_didnt_help = {
 		value = -10
 		years = 10
 		#decay = 1
 	}
-	
+
 	eoanb_om_tsushima_ENG_did_help = {
 		value = 25
 		years = 5
 		#decay = -5
 	}
-	
+
 	eoanb_om_tsushima_clashes = {
 		value = -10
 		years = 10
 		#decay = 1
 	}
-	
+
 	eoanb_om_tsushima_incident = {
 		value = -10
 		years = 10
 		#decay = 1
 	}
-	
+
 	eoanb_om_ENG_supports_against_RUS = {
 		value = -25
 		years = 5
 		#decay = 5
 	}
-	
+
 	eoanb_om_tsushima_TSH_broke_treaty = {
 		value = -75
 		years = 75
 		#decay = 1
 	}
-	
+
 	eoanb_om_canada_negotiation_failure = {
 		value = -25
 		years = 10
 	}
-	
+
 	eoanb_om_canada_negotiation_failure_severe = {
 		value = -75
 		years = 25
 	}
-	
+
 	eoanb_om_ENG_CAN_endorsed = {
 		value = 25
 		years = 50
 	}
-	
+
 	eoanb_om_ENG_CAN_denounced = {
 		value = -25
 		years = 50
 	}
-	
+
 	eoanb_om_CAN_pro_ENG_quebec = {
 		value = 10
 		years = 100
 	}
-	
+
 	eoanb_om_ENG_CAN_no_recognition = {
 		value = -25
 		years = 25

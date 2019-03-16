@@ -1,0 +1,699 @@
+KRU_US_Investment_Diplomacy = {
+
+
+KRU_Request_Gov_Road_Investment = {
+
+    available = {
+		
+    }
+
+    visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	 complete_effect = {
+		USA = { country_event = { days = 1 id = liberia.31 } }
+		set_country_flag = LIB_request_gov_road_investment
+    }
+}
+
+KRU_Request_Gov_Road_Investment_1 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+KRU_Request_Gov_Road_Investment_2 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.07
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+KRU_Request_Gov_Road_Investment_3 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.12
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+	
+KRU_Request_Gov_Road_Investment_4 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.20
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+KRU_Request_Gov_Road_Investment_5 = {
+
+    available = { 
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 180
+	
+	modifier = {
+		consumer_goods_factor = 0.27
+	}
+	
+	complete_effect = {
+		add_stability = 0.05
+		USA = { country_event = { days = 180 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = logging_camp
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = logging_camp
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = logging_camp
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+	
+	
+KRU_Seek_Plantation_Company  = {
+
+    available = {
+		has_country_flag = LIB_request_gov_road_investment
+		has_stability > 0.2
+		num_of_available_civilian_factories > 1
+		298 = {
+			infrastructure > 1 
+		}
+    }
+
+    visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	days_remove = 60
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+		civilian_factory_use = 1
+	}
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = cotton_farm
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = cotton_farm
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = cotton_farm
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	complete_effect = {
+
+    }
+}
+
+KRU_US_Gov_Port_Investment = {
+
+    available = {
+		has_country_flag = LIB_request_gov_road_investment
+		has_stability > 0.3
+		has_resources_amount = {
+			resource = wood
+			amount > 7
+			state = 298
+		}
+		num_of_available_civilian_factories > 1
+		298 = {
+			infrastructure > 2
+		}
+    }
+
+    visible = {
+				has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	days_remove = 280
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+		civilian_factory_use = 1
+	}
+	
+	complete_effect = {
+		USA = { country_event = { days = 280 id = liberia.35 } }
+	}
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = naval_base
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = naval_base
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+}
+	
+
+
+KRU_Seek_Textile_Company  = {
+
+    available = {
+		has_stability > 0.7
+		has_idea =  AF_T_small_scale_railways 
+		cotton_farm > 1
+		num_of_available_civilian_factories > 1
+		298 = {
+			infrastructure > 3
+		}
+		298 = {
+			naval_base > 2
+		}
+    }
+
+    visible = {
+		has_completed_focus = LIB_prepare_infrastructure
+    }
+	
+	fire_only_once = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+
+    cost = 0
+	
+	days_remove = 120
+	
+	modifier = {
+		consumer_goods_factor = 0.03
+		civilian_factory_use = 1
+	}
+	
+	remove_effect = {
+		298 = {
+			if={
+				limit = {
+					free_building_slots = {
+						building = fabric_weavery
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = fabric_weavery
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = fabric_weavery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	complete_effect = {
+
+    }
+}
+
+}
+
+internal_politics_eoanb = {
+
+KRU_Mandatory_Vaccines = {
+
+    available = {
+		OR = {
+			AND = {
+				LIB = {
+					has_completed_focus = LIB_ministry_of_health_and_social_welfare
+				}
+				LIB = {
+					has_tech = early_vaccination
+				}
+			}
+			has_tech = early_vaccination
+		}
+		
+    }
+
+    visible = {
+		AND = {
+			TAG = KRU
+			OR = {
+				KRU = {
+					has_country_flag = KRU_self_governance
+				}
+				KRU = {
+					has_country_flag = KRU_colonial_governance 
+				}
+			}
+		}
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	days_remove = 360
+	
+	modifier = {
+		political_power_gain = -1
+	}
+	
+	remove_effect = {
+		remove_ideas = LIB_Low_Life_Expectancy
+		
+    }
+}
+
+KRU_request_education_investment = {
+
+    available = {
+		LIB = {
+			num_of_factories > 1
+		}
+
+    }
+
+    visible = {
+		AND = {
+			TAG = KRU
+			OR = {
+				KRU = {
+					has_country_flag = KRU_self_governance
+				}
+				KRU = {
+					has_country_flag = KRU_colonial_governance 
+				}
+			}
+		}
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	complete_effect = {
+		LIB = { country_event = {id = kru.1} }
+    }
+}
+
+KRU_building_schools = {
+
+    available = {
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	days_remove = 90
+	
+	modifier = {
+		political_power_gain = -1
+		
+	}
+	
+	remove_effect = {
+		KRU = {
+			add_research_slot = 1
+		}
+    }
+}
+
+KRU_building_colonial_schools = {
+
+    available = {
+		always = no
+    }
+
+    visible = {
+		always = no
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	ai_will_do = {
+		factor = 1
+	}
+	
+	days_remove = 90
+	
+	modifier = {
+		civilian_factory_use = 1
+		
+	}
+	
+	remove_effect = {
+		KRU = {
+			add_autonomy_score = {
+				value = -50
+				localization = EXAMPLE
+			}
+		}
+    }
+}
+
+}

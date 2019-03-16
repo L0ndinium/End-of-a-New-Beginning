@@ -1,0 +1,10 @@
+afr_rrp_foreign_diplomacy = {
+	icon = generic_democracy
+
+	visible = {
+		has_idea = afr_reforming_kingdom		
+		NOT = {
+			TAG = ETH
+		}
+	}
+}

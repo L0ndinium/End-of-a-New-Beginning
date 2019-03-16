@@ -1,0 +1,17 @@
+scripted_gui = {
+
+	ps_system = {
+		context_type = player_context
+		
+		window_name = "ps_system_container"
+		
+		visible = {
+            always = yes
+		}
+
+		effects = {
+            
+		}
+	}
+    
+}

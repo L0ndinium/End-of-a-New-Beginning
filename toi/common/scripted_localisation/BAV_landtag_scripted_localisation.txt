@@ -1,0 +1,226 @@
+defined_text = {
+	name = LANDTAG_NAME
+	
+	text = {
+		trigger = {
+			tag = WUR
+		}
+		localization_key = "WUR_LANDTAG"
+	}
+	text = {
+		trigger = {
+			OR = {
+				tag = BAV
+				tag = PRS
+				tag = WUR
+				tag = BAD
+				tag = HSD
+				tag = FRK
+				tag = HES
+				tag = THU
+				tag = SAX
+				tag = HAN
+				tag = MCK
+			}
+		}
+		localization_key = "GENERIC_LANDTAG"
+	}
+}
+
+defined_text = {
+	name = I_PRES_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { I_pres_current = 1 } 
+		}
+		localization_key = "BAV_PRES_I_name_2"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { I_pres_current = 2 }
+		}
+		localization_key = "BAV_PRES_I_name_3"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { I_pres_current = 3 }
+		}
+		localization_key = "BAV_PRES_I_name_1"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { I_pres_current = 0 }
+		}
+		localization_key = "BAV_PRES_none"
+	}
+}
+
+defined_text = {
+	name = II_PRES_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { II_pres_current = 1 } 
+		}
+		localization_key = "BAV_PRES_II_name_2"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { II_pres_current = 2 }
+		}
+		localization_key = "BAV_PRES_II_name_3"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { II_pres_current = 3 }
+		}
+		localization_key = "BAV_PRES_II_name_1"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { II_pres_current = 0 }
+		}
+		localization_key = "BAV_PRES_none"
+	}
+}
+
+defined_text = {
+	name = I_PRES_1_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+		}
+		localization_key = "BAV_PRES_I_name_1"
+	}
+}
+
+defined_text = {
+	name = I_PRES_2_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+		}
+		localization_key = "BAV_PRES_I_name_2"
+	}
+}
+
+defined_text = {
+	name = I_PRES_3_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+		}
+		localization_key = "BAV_PRES_I_name_3"
+	}
+}
+
+defined_text = {
+	name = II_PRES_1_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+		}
+		localization_key = "BAV_PRES_II_name_1"
+	}
+}
+
+defined_text = {
+	name = II_PRES_2_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+		}
+		localization_key = "BAV_PRES_II_name_2"
+	}
+}
+
+defined_text = {
+	name = II_PRES_3_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+		}
+		localization_key = "BAV_PRES_II_name_3"
+	}
+}
+
+defined_text = {
+	name = 2CH_I_PRES_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_I_pres_current = 1 } 
+		}
+		localization_key = "BAV_2CH_PRES_I_name_1"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_I_pres_current = 2 }
+		}
+		localization_key = "BAV_2CH_PRES_I_name_2"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_I_pres_current = 3 }
+		}
+		localization_key = "BAV_2CH_PRES_I_name_3"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_I_pres_current = 0 }
+		}
+		localization_key = "BAV_PRES_none"
+	}
+}
+
+defined_text = {
+	name = 2CH_II_PRES_ENDPOINT
+	
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_II_pres_current = 1 } 
+		}
+		localization_key = "BAV_2CH_PRES_II_name_1"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_II_pres_current = 2 }
+		}
+		localization_key = "BAV_2CH_PRES_II_name_2"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_II_pres_current = 3 }
+		}
+		localization_key = "BAV_2CH_PRES_II_name_3"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			check_variable = { 2CH_II_pres_current = 0 }
+		}
+		localization_key = "BAV_PRES_none"
+	}
+}

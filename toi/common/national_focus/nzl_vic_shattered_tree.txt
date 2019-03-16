@@ -1,0 +1,17 @@
+focus_tree = {
+	id = nzl_vic_shattered
+	country = {
+		factor = 0
+	}
+	default = no
+	focus = {
+		id = nzl_vic_sha_rebuilding
+		icon = GFX_goal_focus_enact_law
+		cost = 70
+		x = 3
+		y = 0
+		completion_reward = {
+		}
+		ai_will_do = { factor = 11 } 
+	}
+}

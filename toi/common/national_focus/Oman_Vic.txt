@@ -1,0 +1,934 @@
+focus_tree = {
+	id = Oman_victorian
+	country = {
+		factor = 0
+		modifier = {#
+			add = 10
+			OR = {
+				tag = OMA
+			}
+		}
+	}
+	default = no
+	focus = {
+		id = oma_vic_question_of_the_brother
+		icon = GFX_goal_focus_reform_administration
+		cost = 35
+		x = 5
+		y = 0
+		completion_reward = {
+			add_political_power = 75
+		}
+		select_effect = {
+			country_event ={id = arab_events.1 days = 10}
+		}
+		cancel = {
+			OR = {
+				NOT ={ZAN = {is_subject_of = ROOT}}
+				has_country_flag = OMA_abanoned_colonial_empire
+			}
+		}
+		available={
+			ZAN = {is_subject_of = ROOT}
+			NOT={has_country_flag = OMA_abanoned_colonial_empire}
+		}
+		bypass={
+			OR = {
+				ZAN={
+					OR={
+					has_country_flag = accepted_OMA_lordship
+					has_country_flag = forced_under_OMA_lordship
+					}
+				}
+				AND ={
+					controls_state = 1220
+					controls_state = 825
+				}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_reign_ZAN_in
+		icon = GFX_goal_focus_reform_administration
+		cost = 140
+		x = 4
+		y = 1
+		completion_reward = {
+			if={
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				custom_effect_tooltip = ZAN_regined_in_tfv
+				hidden_effect={
+					set_autonomy = {
+						target = ZAN
+						autonomy_state = autonomy_colony
+					}
+					set_autonomy = {
+						target = MOM
+						autonomy_state = autonomy_colony
+					}
+					ZAN={
+						set_country_flag = accepted_OMA_lordship
+						set_political_party = {
+							ideology = autocracy
+							popularity = 100
+						}
+					}
+					MOM={
+						set_political_party = {
+							ideology = autocracy
+							popularity = 100
+						}
+					}
+				}
+			}
+			else={
+				custom_effect_tooltip = ZAN_regined_in
+			}
+		}
+		
+		prerequisite = {
+			focus = oma_vic_question_of_the_brother
+		}
+		cancel = {
+			OR = {
+				NOT ={ZAN = {is_subject_of = ROOT}}
+				has_country_flag = OMA_abanoned_colonial_empire
+			}
+		}
+		available={
+			ZAN = {is_subject_of = ROOT}
+		}
+		bypass={
+			ZAN = {has_country_flag = forced_under_OMA_lordship}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_begin_to_enforce_old_colonial_borders
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 4
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+		}
+		select_effect = {
+			ENG = {country_event ={id = arab_events.7 days = 5}}
+			OMA = {country_event ={id = arab_events.9 days = 15}}
+			OMA = {country_event ={id = arab_events.11 days = 30}}
+		}
+		prerequisite = {
+			focus = oma_vic_reign_ZAN_in
+		}
+		available={
+			ZAN = {is_subject_of = ROOT}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_ZAN_expansion
+		icon = GFX_goal_focus_reform_administration
+		cost = 100
+		x = 0
+		y = 3
+		select_effect = {
+			ZAN = {country_event ={id = arab_events.14 days = 50}}##ZAN gets event to move on Luguru 
+		}
+		completion_reward = {
+			ZAN={
+				add_state_claim = 908
+				add_state_claim = 546
+				add_state_claim = 907
+				add_state_claim = 905
+				add_state_claim = 904
+				add_state_claim = 895
+				set_country_flag = ZAN_expedition
+			}
+		}
+		prerequisite = {
+			focus = oma_vic_begin_to_enforce_old_colonial_borders
+		}
+		available={
+			ZAN = {is_subject_of = ROOT}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_ZAN_industrialisation
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 0
+		y = 4
+		completion_reward = {
+			ZAN={
+				hidden_effect = {
+					load_focus_tree = industrialilzing_power_africa
+				}
+				swap_ideas = {
+					add_idea = afr_reforming_kingdom
+					remove_idea = AF_T_small_kingdom
+				}
+			}
+		}
+		prerequisite = {
+			focus = oma_vic_ZAN_expansion
+		}
+		available={
+			ZAN = {is_subject_of = ROOT}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_KEN_expeditions
+		icon = GFX_goal_focus_reform_administration
+		cost = 100
+		x = 4
+		y = 3
+		select_effect = {
+			MOM = {country_event ={id = arab_events.16 days = 25}}##MOM event chain to colonise kenya
+		}
+		completion_reward = {
+			MOM={
+				add_state_claim = 906
+				add_state_claim = 911
+				add_state_claim = 912
+				add_state_claim = 547
+				add_state_claim = 914
+				add_state_claim = 913
+				add_state_claim = 915
+				add_state_claim = 910
+				set_cosmetic_tag = omani_KEN
+				set_country_flag = MOM_expedition
+			}
+		}
+		prerequisite = {
+			focus = oma_vic_begin_to_enforce_old_colonial_borders
+		}
+		available={
+			OR={
+				MOM = {is_subject_of = ROOT}
+				AND={
+					MOM = {is_subject_of = ZAN}
+					ZAN = {is_subject_of = ROOT}
+				}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_MOM_industrialisation
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 4
+		y = 4
+		completion_reward = {
+			MOM={
+				hidden_effect = {
+					load_focus_tree = industrialilzing_power_africa
+				}
+				swap_ideas = {
+					add_idea = afr_reforming_kingdom
+					remove_idea = AF_T_small_kingdom
+				}
+			}
+		}
+		prerequisite = {
+			focus = oma_vic_ZAN_expansion
+		}
+		available={
+			ZAN = {is_subject_of = ROOT}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_remind_SOM_of_place
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 2
+		y = 3
+		select_effect = {
+			country_event ={id = arab_events.18 days = 25}#Two Events about reclaiming SOM
+		}
+		completion_reward = {
+			custom_effect_tooltip = OMA_SOM_Founding
+			hidden_effect={
+				country_event ={id = arab_events.25}#founding of somalia
+			}
+		}
+		prerequisite = {
+			focus = oma_vic_begin_to_enforce_old_colonial_borders
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_our_colonial_strength
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 2
+		y = 4
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 250
+		}
+		prerequisite = {
+			focus = oma_vic_remind_SOM_of_place
+		}
+		prerequisite = {
+			focus = oma_vic_KEN_expeditions
+		}
+		prerequisite = {
+			focus = oma_vic_ZAN_expansion
+		}
+		available={
+			MOM = {is_subject_of = ROOT}
+			ZAN = {is_subject_of = ROOT}		
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_enforce_will_on_mahra
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 2
+		y = 5
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = oma_vic_our_colonial_strength
+		}
+		bypass={
+			OR={
+				MAH = {is_subject_of = ROOT}
+				owns_state = 1196
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_demand_TCS
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 0
+		y = 5
+		completion_reward = {
+			TCS={country_event ={id = arab_events.26 days = 25}}#Demand sent to TCS
+		}
+		prerequisite = {
+			focus = oma_vic_our_colonial_strength
+		}
+		bypass={
+			OR={
+				TCS = {is_subject_of = ROOT}
+				owns_state = 658
+			}
+		}
+		available={
+			658={
+				OR={
+					is_core_of = OMA
+					is_claimed_by = OMA
+				}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_intergrate_TCS
+		icon = GFX_goal_focus_reform_administration
+		cost = 70
+		x = 0
+		y = 6
+		completion_reward = {
+			annex_country = {
+				target = TCS
+				transfer_troops = yes
+			}
+		}
+		prerequisite = {
+			focus = oma_vic_demand_TCS
+		}
+		bypass={
+			OR={
+				TCS = {exists = no}
+				owns_state = 658
+			}
+		}
+		available={
+			658={
+				OR={
+					is_core_of = OMA
+					is_claimed_by = OMA
+				}
+			}
+			TCS = {is_subject_of = ROOT}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_western_question
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 70
+		x = 12
+		y = 0
+		completion_reward = {
+			custom_effect_tooltip = OMA_decide_future
+			hidden_effect={
+				country_event ={id = arab_events.29}#finalise our foreign policy towards the west
+			}
+		}
+		select_effect = {
+			country_event ={id = arab_events.23 days = 15}#choose british policy
+			country_event ={id = arab_events.24 days = 30}#choose whether to modernise or not
+		}
+		available={
+			
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_western_inspirations
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 70
+		x = 11
+		y = 1
+		prerequisite = {
+			focus = oma_vic_western_question
+		}
+		completion_reward = {
+			add_ideas={
+				OMA_western_inspirations
+			}
+			custom_effect_tooltip = OMA_unlocks_victorization_branch
+			hidden_effect={
+				load_focus_tree = Oman_victorian
+			}
+		}
+		available={
+			has_country_flag=OMA_western
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_western_practises
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 1
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = oma_vic_western_inspirations
+		}
+		allow_branch={
+			has_country_flag=OMA_western
+		}
+		available={
+			has_country_flag=OMA_western
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_naval_reforms
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 10
+		y = 3
+		prerequisite = {
+			focus = oma_vic_western_practises
+		}
+		completion_reward={
+			navy_experience = 25
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_muscat_port_exspansion
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 100
+		x = 10
+		y = 4
+		prerequisite = {
+			focus = oma_vic_naval_reforms
+		}
+		completion_reward={
+			294={
+				set_building_level = {
+					type = naval_base
+					level = 3
+					province = 107060
+				}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_modern_warship_designs
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 100
+		x = 10
+		y = 5
+		prerequisite = {
+			focus = oma_vic_muscat_port_exspansion
+		}
+		prerequisite = {
+			focus = oma_vic_invest_in_steamships
+		}
+		completion_reward={
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 3
+				category = naval_equipment
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_rebuild_our_shipyards
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 100
+		x = 10
+		y = 6
+		prerequisite = {
+			focus = oma_vic_modern_warship_designs
+		}
+		completion_reward={
+			remove_ideas={
+				OMA_mothballed_shipyards
+			}
+			294={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_economic_reforms
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 12
+		y = 3
+		prerequisite = {
+			focus = oma_vic_western_practises
+		}
+		completion_reward={
+			swap_ideas={
+				add_idea = OMA_economic_irrelevence_2
+				remove_idea = OMA_economic_irrelevence
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_invest_in_steamships
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 70
+		x = 12
+		y = 4
+		prerequisite = {
+			focus = oma_vic_economic_reforms
+		}
+		available={
+			has_political_power > 49
+		}
+		completion_reward={
+			add_political_power = -50
+			set_technology = {
+				tech_naval_1830_gunboat = 1
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_expand_personal_trade_fleet
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 12
+		y = 5
+		prerequisite = {
+			focus = oma_vic_invest_in_steamships
+		}
+		completion_reward={
+			custom_effect_tooltip= OMA_steamships_for_personal_fleet
+			hidden_effect={
+				load_oob = "OMA_Steamboat_1"
+			}
+			swap_ideas={
+				add_idea = OMA_economic_irrelevence_3
+				remove_idea = OMA_economic_irrelevence_2
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_military_reforms
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 14
+		y = 3
+		prerequisite = {
+			focus = oma_vic_western_practises
+		}
+		completion_reward={
+			army_experience = 25
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_western_rifles
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 70
+		x = 14
+		y = 4
+		prerequisite = {
+			focus = oma_vic_military_reforms
+		}
+		completion_reward={
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_western_cannons
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 70
+		x = 16
+		y = 5
+		prerequisite = {
+			focus = oma_vic_western_rifles
+		}
+		completion_reward={
+			add_tech_bonus = {
+				bonus = 0.33
+				uses = 1
+				category = artillery
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_increased_training
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 70
+		x = 14
+		y = 5
+		prerequisite = {
+			focus = oma_vic_western_rifles
+		}
+		completion_reward={
+			army_experience = 25
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_victorianization
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 12
+		y = 7
+		prerequisite = {
+			focus = oma_vic_expand_personal_trade_fleet
+		}
+		prerequisite = {
+			focus = oma_vic_increased_training
+		}
+		prerequisite = {
+			focus = oma_vic_rebuild_our_shipyards
+		}
+		completion_reward={
+			remove_ideas={
+				OMA_economic_irrelevence_3
+			}
+			swap_ideas={
+				remove_idea = pre_industrial_era
+				add_idea = victorian_era
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_industrial_research
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 9
+		y = 8
+		prerequisite = {
+			focus = oma_vic_victorianization
+		}
+		completion_reward={
+			add_tech_bonus = { bonus = 0.33 uses = 1 category = process_engineering_tech }
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_national_schools
+		icon = GFX_focus_research
+		cost = 80
+		x = 9
+		y = 9
+		prerequisite = {
+			focus = oma_vic_industrial_research
+		}
+		completion_reward={
+			if = {
+				limit = {
+					has_idea = oral_tradition
+				}
+				swap_ideas = {
+					add_idea = privileged_education
+					remove_idea = oral_tradition
+				}
+			}
+			if = {
+				limit = {
+					has_idea = open_schools
+				}
+				swap_ideas = {
+					add_idea = compulsory_education
+					remove_idea = open_schools
+				}
+			}
+			if = {
+				limit = {
+					has_idea = privileged_education
+				}
+				swap_ideas = {
+					add_idea = open_schools
+					remove_idea = privileged_education
+				}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_naval_research
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 11
+		y = 8
+		prerequisite = {
+			focus = oma_vic_victorianization
+		}
+		completion_reward={
+			add_tech_bonus = { bonus = 0.33 uses = 1 category = naval_equipment }
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_offer_cheaper_trade_to_india
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 11
+		y = 9
+		prerequisite = {
+			focus = oma_vic_naval_research
+		}
+		prerequisite = {
+			focus = oma_vic_fund_industrialsion
+		}
+		completion_reward={
+			if={
+				limit={
+					SRS= {exists = yes}
+					ENG={has_completed_focus = ENG_focus_humiliation_by_sepoy}
+				}
+				#a choice of india
+				country_event ={id = arab_events.27}
+			}
+			else_if={
+				limit={
+					SRS= {exists = no}
+					RAJ = {exists = yes}
+				}
+				#send event to india
+				RAJ = {country_event ={id = arab_events.28}}
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_fund_industrialsion
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 13
+		y = 8
+		prerequisite = {
+			focus = oma_vic_victorianization
+		}
+		completion_reward={
+			
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_begin_coastal_resource_surveys
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 120
+		x = 13
+		y = 9
+		prerequisite = {
+			focus = oma_vic_fund_industrialsion
+		}
+		completion_reward={
+			
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_continue_isolation
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 70
+		x = 13
+		y = 1
+		prerequisite = {
+			focus = oma_vic_western_question
+		}
+		completion_reward = {
+			add_ideas={
+				OMA_isolatism
+			}
+			custom_effect_tooltip = OMA_unlocks_isolation_branch
+			hidden_effect={
+				load_focus_tree = Oman_victorian
+			}
+		}
+		available={
+			has_country_flag=OMA_isolation
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = oma_vic_omani_practises
+		icon = GFX_goal_focus_continent_west_europe
+		cost = 1
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = oma_vic_continue_isolation
+		}
+		completion_reward = {
+			add_ideas={
+				OMA_western_inspirations
+			}
+		}
+		allow_branch={
+			has_country_flag=OMA_isolation
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

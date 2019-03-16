@@ -87,7 +87,7 @@ country_event = {
 					var = pol_stab_accident_factor
 					value = 0
 				}
-				
+
 				hidden_effect = {
 					country_event = { id = generic.18 days = 3 }
 				}
@@ -462,7 +462,7 @@ country_event = {
 	desc = generic.17.d
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.17.a
 		ai_chance = { factor = 0 }
@@ -941,24 +941,24 @@ country_event = {
 	id = generic.19
 	title = generic.19.t
 	desc = generic.19.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = generic.19.a
 		ai_chance = { factor = 0 }
 	}
-	
+
 	option = {
 		name = generic.19.b
 		ai_chance = { factor = 0 }
 	}
-	
+
 	option = {
 		name = generic.19.c
 		ai_chance = { factor = 0 }
 	}
-	
+
 	option = {
 		name = generic.19.e
 		ai_chance = { factor = 100 }

@@ -1,0 +1,117 @@
+﻿add_namespace = kru_border_conflict
+add_namespace = kru
+
+
+#Kru wins
+country_event = {
+	id = kru_border_conflict.6
+	title = kru_border_conflict.6.t
+	desc = kru_border_conflict.6.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = A_succesful_raid.6.a
+		ai_chance = { factor = 100 }
+			army_experience = 10
+			add_war_support = 0.05
+			add_manpower = 1000
+			set_country_flag = KRU_enslaved_neighbors
+	}
+}
+#Kru loses
+country_event = {
+	id = kru_border_conflict.7
+	title = kru_border_conflict.7.t
+	desc = kru_border_conflict.7.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+
+	option = {
+		name = A_lost_oppurtunity.7.a
+		ai_chance = { factor = 100 }
+		add_war_support = -0.05
+		army_experience = 5
+	}
+}
+
+#stalemate
+country_event = {
+	id = kru_border_conflict.8
+	title = kru_border_conflict.8.t
+	desc = kru_border_conflict.8.desc
+	picture = GFX_report_event_japanese_army_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = we_cannot_sustain_this.8.a
+		ai_chance = { factor = 100 }
+		add_war_support = -0.03
+	}
+}
+
+#MND wins
+country_event = {
+	id = kru_border_conflict.9
+	title = kru_border_conflict.9.t
+	desc = kru_border_conflict.9.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = A_succesful_defence.9.a
+		ai_chance = { factor = 100 }
+		army_experience = 10
+			add_war_support = 0.05
+	}
+}
+
+#MND loses
+country_event = {
+	id = kru_border_conflict.10
+	title = Villages_Raided_And_Enslaved.10.t
+	desc = kru_border_conflict.10.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = This_is_horrible.10.a
+		ai_chance = { factor = 100 }
+		army_experience = 5
+			add_war_support = -0.05
+	}
+}
+
+#Investments
+country_event = {
+	id = kru.1
+	title = Maryland_Requests_Infrastructure.1.t
+	desc = kru.1.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = Do_what_we_can.1.a
+		ai_chance = { factor = 100 }
+		KRU = {
+			activate_decision = KRU_building_schools
+			swap_ideas = {
+				remove_idea = oral_tradition
+				add_idea = privileged_education
+			}
+		}
+		activate_decision = KRU_building_colonial_schools
+	}
+	
+	option = {
+		name = No.1.b
+		ai_chance = { factor = 0 }
+		
+	}
+}

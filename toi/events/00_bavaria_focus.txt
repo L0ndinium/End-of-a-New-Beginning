@@ -89,6 +89,10 @@ country_event = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 2
+				has_completed_focus = BAV_supportbismarcksparliament
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sideprussia
 		
@@ -101,6 +105,10 @@ country_event = {
 		name = bavariafocus.2.b
 		ai_chance = {
 			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = BAV_ludwigvonderpfordten
+			}
 		}
 		custom_effect_tooltip = BAV_customeffect_sideaustria
 		

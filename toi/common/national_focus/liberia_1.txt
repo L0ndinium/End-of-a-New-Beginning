@@ -1,0 +1,916 @@
+#liberia FT, Victorian Era
+#Takes around 11 years to complete, completed in 1868
+focus_tree = {
+	id = liberia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LIB
+		}
+	}
+	continuous_focus_position = {x = 6000 y = 10000 }
+
+	
+	default = no
+	
+
+	
+	focus = {
+		id = LIB_annexation_of_maryland_republic
+		icon = GFX_goal_generic_build_tank
+		x = 10
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			country_event = { days = 1 id = liberia.30 }
+		
+			hidden_effect = {
+			LIB = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = large_increase
+				}
+				add_opinion_modifier = {
+					target = CSA
+					modifier = large_increase
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = LIB
+					modifier = large_increase
+				}
+			}
+			CSA = {
+				add_opinion_modifier = {
+					target = LIB
+					modifier = large_increase
+				}
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = LIB_kru_war_aftermath
+		icon = GFX_goal_generic_build_tank
+		x = 3
+		y = 1
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { days = 1 id = liberia.3 }
+			
+			hidden_effect = {
+				KRU = {
+					add_opinion_modifier = {
+						target = LIB
+						modifier = large_decrease
+					}
+				}
+				LIB = {
+					add_opinion_modifier = {
+						target = KRU
+						modifier = medium_decrease
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = LIB_prepare_for_second_kru_war 
+		icon = GFX_goal_generic_build_tank
+		x = 3
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		available = {
+			has_country_flag = LIB_KRU_raids_stockpile
+			has_stability	> .50
+			has_war_support > .50
+			KRU = {
+					is_puppet = no
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass={
+			has_country_flag = LIB_second_kru_raid
+		}
+		prerequisite = { 
+			focus = LIB_kru_war_aftermath
+		}
+		completion_reward = {
+			hidden_effect = {
+				
+			}
+		}
+	}
+	
+	focus = {
+		id = LIB_back_up_plan
+		icon = GFX_goal_generic_build_tank
+		x = 4
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		available = {
+			OR = {
+				country_exists = USA
+				country_exists = CSA
+			}
+			has_country_flag = LIB_second_kru_raid
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_prepare_for_second_kru_war 
+		}
+		completion_reward = {
+			country_event = { days = 1 id = liberia.15 }
+		}
+	}
+	
+	focus = {
+		id = LIB_operation_sleeping_lion
+		icon = GFX_goal_generic_build_tank
+		x = 2
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		available = {
+			has_stability > .7
+			has_war_support > .8
+			country_exists = KRU
+			has_country_flag = LIB_second_kru_raid
+			KRU = {
+				OR = {
+					has_idea = AF_T_unorganized_tribal_nation_5
+					has_idea = AF_T_unorganized_tribal_nation_4
+					has_idea = AF_T_unorganized_tribal_nation_3
+					has_idea = AF_T_unorganized_tribal_nation_2
+					has_idea = AF_T_unorganized_tribal_nation
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_prepare_for_second_kru_war 
+		}
+		mutually_exclusive = {
+			focus = LIB_operation_charging_alligator
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = KRU
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = LIB_operation_charging_alligator
+		icon = GFX_goal_generic_build_tank
+		x = 0
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		available = {
+			has_stability > .7
+			has_war_support > .8
+			country_exists = KRU
+			has_country_flag = LIB_second_kru_raid
+			KRU = {
+				OR = {
+					NOT = {
+						has_idea = AF_T_unorganized_tribal_nation_5
+						has_idea = AF_T_unorganized_tribal_nation_4
+						has_idea = AF_T_unorganized_tribal_nation_3
+						has_idea = AF_T_unorganized_tribal_nation_2
+						has_idea = AF_T_unorganized_tribal_nation
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_prepare_for_second_kru_war 
+		}
+		mutually_exclusive = {
+			focus = LIB_operation_sleeping_lion
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = KRU
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = LIB_second_kru_war_aftermath
+		icon = GFX_goal_generic_build_tank
+		x = 2
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_operation_sleeping_lion
+			focus = LIB_operation_charging_alligator
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = LIB_continue_interstate_slave_trade
+		icon = GFX_goal_generic_build_tank
+		x = 6
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		available = {
+			has_idea = usa_slavery_law
+			any_neighbor_country = {
+				OR = {
+					has_idea = slavery
+					has_idea = usa_slavery_law
+					has_idea = tribal_slavery
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_control_slave_trade
+		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = LIB
+					modifier = small_decrease
+				}
+			}
+			hidden_effect = {
+				every_neighbor_country = {
+					if = { 
+						limit = {
+							OR = {
+								has_idea = tribal_slavery
+								has_idea = slavery
+								has_idea = usa_slavery_law
+							}
+						}
+						add_opinion_modifier = {
+							target = LIB
+							modifier = medium_increase
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = LIB_american_colonial_confederation
+		icon = GFX_goal_generic_build_tank
+		x = 0
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = LIB_kru_annexation
+		}
+		prerequisite = { 
+			focus = LIB_second_kru_war_aftermath
+		}
+		completion_reward = {
+			set_country_flag = american_colonial_confederation
+			KRU = {
+				set_capital = 761
+				transfer_state = 761
+				remove_state_core = 760
+			}
+			760 = {
+				add_manpower = -6000
+			}
+			761 = {
+				add_manpower = 6000
+			}
+			LIB = {
+				set_autonomy = {
+					target = KRU
+					autonomy_state = autonomy_dominion
+					freedom_level = 0.3
+				}
+			}
+			country_event = {id = liberia.24}
+			LIB = {
+				transfer_state = 760
+				add_state_core = 760
+			}
+			760 = {
+				add_manpower = 1000
+				
+			}
+			298 = {
+				add_manpower = -1000
+			}
+		}
+	}
+	
+	focus = {
+		id = LIB_kru_annexation
+		icon = GFX_goal_generic_build_tank
+		x = 2
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_second_kru_war_aftermath
+		}
+		mutually_exclusive = {
+			focus = LIB_relocate_kru_tribes
+		}
+		completion_reward = {
+			LIB = {
+				transfer_state = 760
+			}
+			760 = {
+				add_manpower = 1000
+			}
+			298 = {
+				add_manpower = -1000
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = LIB_american_colonization_society
+		icon = GFX_goal_generic_build_tank
+		x = 10
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_annexation_of_maryland_republic 
+		}
+		prerequisite = { 
+			focus = LIB_kru_war_aftermath
+		}
+		completion_reward = {
+			country_event = { days = 1 id = liberia.36 }
+			set_country_flag = ACS_colony
+		}
+	}
+	
+	focus = {
+		id = LIB_adopt_strong_ACS_policies
+		icon = GFX_goal_generic_build_tank
+		x = 13
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = LIB_american_colonization_society }
+		mutually_exclusive = {	
+		
+			focus = LIB_status_quo 
+			focus = LIB_ignore_most_ACS_policies
+		
+		}
+		completion_reward = {
+			USA = {
+					add_opinion_modifier = {
+						target = LIB
+						modifier = small_increase
+					}
+			}
+			USA = { country_event = { days = 1 id = liberia.1 } }
+			set_country_flag = LIB_adopted_ACS_policy
+		
+		}
+	}
+	
+	focus = {
+		id = LIB_prepare_infrastructure
+		icon = GFX_goal_generic_build_tank
+		x = 13
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_political_power > 100
+		}
+		
+		prerequisite = { 
+			focus = LIB_adopt_strong_ACS_policies 
+			focus = LIB_status_quo	
+		}
+		
+		completion_reward = {
+			add_political_power = -100
+		}
+	}
+	
+	focus = {
+		id = LIB_home_of_the_free
+		icon = GFX_goal_generic_build_tank
+		x = 13
+		y = 6
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = { 
+				has_idea = LIB_poor_infrastructure
+			}
+			OR = {
+				has_idea = Liberia_immigration_1
+				has_idea = Liberia_immigration_2
+				has_idea = Liberia_immigration_3
+			}
+		}
+		prerequisite = { focus = LIB_prepare_infrastructure }
+		
+		completion_reward = {
+			add_stability = .07
+			if = {
+				limit = {
+					AND = {
+						has_idea = Liberia_immigration_1 
+						has_idea = usa_slavery_law
+					} 
+				}
+				swap_ideas={
+					remove_idea = Liberia_immigration_1
+					add_idea = Liberia_immigration_3
+				}
+			}
+
+			if = {
+				limit = {
+					AND = {
+						has_idea = Liberia_immigration_2 
+						has_idea = usa_slavery_law
+					}
+				}
+				swap_ideas={
+					remove_idea = Liberia_immigration_2
+					add_idea = Liberia_immigration_3
+				}
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						has_idea = Liberia_immigration_3 
+						has_idea = usa_slavery_law
+					}
+				}
+				swap_ideas={
+					remove_idea = Liberia_immigration_3
+					add_idea = Liberia_immigration_3
+				}
+			}
+			
+			#NO SLAVERY
+			if = {
+				limit = {
+					AND = {
+						has_idea = Liberia_immigration_1 
+						NOT = {
+							has_idea = usa_slavery_law
+						}
+					}
+				}
+				swap_ideas={
+					remove_idea = Liberia_immigration_1
+					add_idea = Liberia_immigration_3
+				}
+			}
+
+			if = {
+				limit = {
+					AND = {
+						has_idea = Liberia_immigration_2 
+						NOT = {
+							has_idea = usa_slavery_law
+						}
+					}
+				}
+				swap_ideas={
+					remove_idea = Liberia_immigration_2
+					add_idea = Liberia_immigration_3
+				}
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						has_idea = Liberia_immigration_3 
+						NOT = {
+							has_idea = usa_slavery_law
+						}
+					}
+				}
+				swap_ideas={
+					remove_idea = Liberia_immigration_3
+					add_idea = Liberia_immigration_3
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = LIB_ignore_most_ACS_policies
+		icon = GFX_goal_generic_build_tank
+		x = 7
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = LIB_american_colonization_society }
+		mutually_exclusive = {	
+		
+			focus = LIB_status_quo 
+			focus = LIB_adopt_strong_ACS_policies
+		
+		}
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = LIB_transatlantic
+					add_idea = LIB_illegal_transatlantic
+				}
+				set_country_flag = LIB_oppose_ACS_policy
+				
+				
+		}
+	}
+	
+	
+	focus = {
+		id = LIB_control_slave_trade
+		icon = GFX_goal_generic_build_tank
+		x = 5
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = { 
+			focus = LIB_ignore_most_ACS_policies 
+			focus = LIB_status_quo
+		}
+		mutually_exclusive = {
+			focus = LIB_end_slave_trade
+		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = LIB
+					modifier = small_decrease
+				}
+			}	
+				
+		}
+	}
+	
+	
+	
+	focus = {
+		id = LIB_end_slave_trade
+		icon = GFX_goal_generic_build_tank
+		x = 11
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = { 
+			focus = LIB_adopt_strong_ACS_policies
+			focus = LIB_status_quo
+		}
+		mutually_exclusive = {
+			focus = LIB_control_slave_trade
+		}
+		completion_reward = {
+			ENG = {
+					add_opinion_modifier = {
+						target = LIB
+						modifier = small_increase
+					}
+			}	
+				
+		}
+	}
+	
+	focus = {
+		id = LIB_liberian_enforcment_of_british_slavery_ban
+		icon = GFX_goal_generic_build_tank
+		x = 10
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			command_power > 100
+			NOT = {
+				has_idea = usa_slavery_law
+			}
+		}
+		prerequisite = { 
+			focus = LIB_end_slave_trade
+		}
+		completion_reward = {
+			add_command_power = -100
+			swap_ideas = {
+				remove_idea = LIB_transatlantic
+				add_idea = LIB_shining_example_transatlantic
+			}
+			ENG = {
+					add_opinion_modifier = {
+						target = LIB
+						modifier = large_increase
+					}
+			}	
+			hidden_effect = {
+				every_country = {
+					if = { 
+						limit = {
+							OR = {
+								has_idea = tribal_slavery
+								has_idea = usa_slavery_law
+							}
+						}
+						add_opinion_modifier = {
+							target = LIB
+							modifier = small_decrease
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = LIB_status_quo
+		icon = GFX_goal_generic_build_tank
+		x = 9
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = LIB_american_colonization_society }
+		mutually_exclusive = {	
+		
+			focus = LIB_ignore_most_ACS_policies 
+			focus = LIB_adopt_strong_ACS_policies
+		
+		}
+		completion_reward = {
+			set_country_flag = LIB_status_quo
+				
+				
+		}
+	}
+
+	
+	focus = {
+		id = LIB_social_reforms
+		icon = GFX_goal_generic_build_tank
+		x = 17
+		y = 2
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = LIB_annexation_of_maryland_republic 
+		}
+		prerequisite = { 
+			focus = LIB_kru_war_aftermath
+		}
+		completion_reward = {
+
+		
+		}
+	}
+	
+	focus = {
+		id = LIB_ministry_of_health_and_social_welfare
+		icon = GFX_goal_generic_build_tank
+		x = 17
+		y = 3
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = hygiene
+		}
+		prerequisite = { 
+			focus = LIB_social_reforms
+		}
+		completion_reward = {
+			add_stability = 0.07
+		}
+	}
+	
+	focus = {
+		id = LIB_it_was_unavoidable
+		icon = GFX_goal_generic_build_tank
+		x = 15
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_completed_focus = LIB_control_slave_trade
+			}
+			owns_state = 760
+		}
+		prerequisite = { 
+			focus = LIB_adopt_strong_ACS_policies
+		}
+		prerequisite = { 
+			focus = LIB_social_reforms
+		}
+		mutually_exclusive = {
+			focus = LIB_keep_slavery
+		}
+		completion_reward = {
+			start_civil_war = {
+				ruling_party = centrism
+				ideology = traditional_conservatism 
+				size = 0.5
+				states = {
+					760
+				}
+			}
+			swap_ideas = { remove_idea = usa_slavery_law add_idea = segregation }	
+		}
+	}
+	
+	focus = {
+		id = LIB_reconstruction
+		icon = GFX_goal_generic_build_tank
+		x = 14
+		y = 5
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_civil_war = no
+			has_political_power > 50
+		}
+		prerequisite = { 
+			focus = LIB_it_was_unavoidable
+		}
+		prerequisite = { 
+			focus = LIB_prepare_infrastructure
+		}
+		completion_reward = {
+			add_political_power = -50
+				
+		}
+	}
+	
+	focus = {
+		id = LIB_keep_slavery
+		icon = GFX_goal_generic_build_tank
+		x = 19
+		y = 4
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = { 
+			focus = LIB_social_reforms
+		}
+		mutually_exclusive = {
+			focus = LIB_it_was_unavoidable
+		}
+		completion_reward = {
+				
+				
+		}
+	}
+	
+	
+	
+	focus = {
+		id = LIB_gem_of_africa
+		icon = GFX_goal_generic_build_tank
+		x = 11
+		y = 7
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = { 
+				has_idea = LIB_low_life_expectancy
+			}
+			has_idea =  AF_T_small_scale_railways 
+			298 = {
+				infrastructure > 3
+				naval_base > 2
+				fabric_weavery > 0
+			}
+		}
+		prerequisite = { 
+			focus = LIB_home_of_the_free
+		}
+		prerequisite = { 
+			focus = LIB_end_slave_trade
+		}
+		completion_reward = {
+				
+				
+		}
+	}
+	
+}
+	

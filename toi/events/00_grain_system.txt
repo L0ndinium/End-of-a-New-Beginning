@@ -1,0 +1,53 @@
+﻿add_namespace = grainsys
+
+country_event = {
+	id = grainsys.0
+	title = grainsys.0.t
+	desc = grainsys.0.d
+	
+	is_triggered_only = yes
+	
+	hidden = no
+	
+	#mean_time_to_happen = {
+	#	days = 30
+	#}
+	
+	#trigger = {
+	#	
+	#}
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				var = needed_grain
+				value = 6500
+			}
+			multiply_variable = {
+				var = needed_grain
+				value = -1
+			}
+			
+			set_variable = {
+				var = needed_grain
+				value = 6500
+			}
+			multiply_variable = {
+				var = needed_grain
+				value = -1
+			}
+		
+			#add_equipment_to_stockpile = {
+			#	type = grain_consumable
+			#	amount = needed_grain
+			#}
+			
+			clear_variable = needed_grain
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = grainsys.0.a
+	}
+}

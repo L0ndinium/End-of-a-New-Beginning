@@ -1,0 +1,28 @@
+﻿l_english:
+ #First Chamber
+ BAV_PRES_I_name_1:0 "Philipp Schenk von Stauffenberg (§HAutocratic§!)"
+ BAV_PRES_I_name_2:0 "Karl zu Leiningen (§GCentristic§!)"
+ BAV_PRES_I_name_3:0 "Georg Arbogast von und zu Franckenstein (§MTrad. Conservative§!)"
+ BAV_PRES_II_name_1:0 "Friedrich von Zu Rhein (§HAutocratic§!)"
+ BAV_PRES_II_name_2:0 "Ludwig Kraft Ernst Karl (§GCentristic§!)"
+ BAV_PRES_II_name_3:0 "Karl von Seinsheim (§MTrad. Conservative§!)"
+ #Second Chamber
+ BAV_2CH_PRES_I_name_1:0 "Joseph Pözl (§HAutocratic§!)"
+ BAV_2CH_PRES_I_name_2:0 "Friedrich von Hegnenberg-Dux (§GCentristic§!)"
+ BAV_2CH_PRES_I_name_3:0 "Ludwig Weis (§MTrad. Conservative§!)"
+ BAV_2CH_PRES_II_name_1:0 "Karl Kirchgeßner (§HAutocratic§!)"
+ BAV_2CH_PRES_II_name_2:0 "Gustav von Schlör (§GCentristic§!)"
+ BAV_2CH_PRES_II_name_3:0 "Adolph Xaver Paur (§MTrad. Conservative§!)"
+ 
+ BAV_PRES_none:0 "NONE"
+ 
+ #Landtag Names
+ WUR_LANDTAG:0 "Landstände"
+ GENERIC_LANDTAG:0 "Landtag"
+ 
+ LDT_TOOLTIP:0 "§YLandtag§!"
+ LDT_TOOLTIP_DESC:0 "Assign your first and second president in the first chamber of the Landtag to get certain effects. The members of the second chamber get elected by the people of the country and get filled out automatically."
+ LDT_BUTTON_I_TOOLTIP:0 "§YChange your first president with Legislative Power.§!"
+ LDT_BUTTON_I_TOOLTIP_DESC:0 "Depending on which president you choose you will get different effects."
+ LDT_BUTTON_II_TOOLTIP:0 "§YChange your second president with Legislative Power.§!"
+ LDT_BUTTON_II_TOOLTIP_DESC:0 "Depending on which president you choose you will get different effects."

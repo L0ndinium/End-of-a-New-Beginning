@@ -1,0 +1,233 @@
+scripted_gui = {
+
+	local_landtag_menu = {
+		context_type = player_context
+		
+		window_name = "local_landtag_menu_container"
+		
+		visible={
+			check_variable = { show_local_landtag_menu > 0.00 }
+		}
+		
+		effects = {
+		 	local_landtag_menu_exit_click = {
+				set_variable = { show_local_landtag_menu = 0 }
+			}
+			
+			landtag_button_I_pres_click = {
+				set_variable = { show_local_landtag_I_pres = 1 }
+			}
+			
+			landtag_button_II_pres_click = {
+				set_variable = { show_local_landtag_II_pres = 1 }
+			}
+		}
+	}
+	
+	local_landtag_pres_I_menu = {
+		context_type = player_context
+		
+		window_name = "local_landtag_pres_I_menu_container"
+		
+		visible={
+			check_variable = { show_local_landtag_I_pres > 0.00 }
+		}
+		
+		triggers = {
+			I_pres_1_click_enabled = { 
+				check_variable = { 
+					I_pres_1_available < 1
+				}
+			}
+		
+			I_pres_2_click_enabled = { 
+				check_variable = { 
+					I_pres_2_available < 1
+				}
+			}
+			
+			I_pres_3_click_enabled = { 
+				check_variable = { 
+					I_pres_3_available < 1
+				}
+			}
+		}
+		
+		effects = {
+			local_landtag_pres_I_menu_exit_click = {
+				set_variable = { show_local_landtag_I_pres = 0 }
+			}
+			
+			I_pres_1_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							I_pres_1_clicked < 1
+						}
+					}
+					set_variable = { I_pres_1_clicked = 1 }
+					set_variable = { I_pres_2_available = 0 }
+					set_variable = { I_pres_3_available = 0 }
+					
+					set_variable = { I_pres_current = 0 }
+				}
+				else = {
+					set_variable = { I_pres_1_clicked = 0 }
+					set_variable = { I_pres_2_available = 1 }
+					set_variable = { I_pres_3_available = 1 }
+					
+					set_variable = { I_pres_current = 3 }
+				}
+			}
+			
+			I_pres_2_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							I_pres_2_clicked < 1
+						}
+					}
+					set_variable = { I_pres_2_clicked = 1 }
+					set_variable = { I_pres_1_available = 0 }
+					set_variable = { I_pres_3_available = 0 }
+					
+					set_variable = { I_pres_current = 0 }
+				}
+				else = {
+					set_variable = { I_pres_2_clicked = 0 }
+					set_variable = { I_pres_1_available = 1 }
+					set_variable = { I_pres_3_available = 1 }
+					
+					set_variable = { I_pres_current = 1 }
+				}
+			}
+			
+			I_pres_3_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							I_pres_3_clicked < 1
+						}
+					}
+					set_variable = { I_pres_3_clicked = 1 }
+					set_variable = { I_pres_1_available = 0 }
+					set_variable = { I_pres_2_available = 0 }
+					
+					set_variable = { I_pres_current = 0 }
+				}
+				else = {
+					set_variable = { I_pres_3_clicked = 0 }
+					set_variable = { I_pres_1_available = 1 }
+					set_variable = { I_pres_2_available = 1 }
+					
+					set_variable = { I_pres_current = 2 }
+				}
+			}
+		}
+	}
+	
+	
+	local_landtag_pres_II_menu = {
+		context_type = player_context
+		
+		window_name = "local_landtag_pres_II_menu_container"
+		
+		visible={
+			NOT = { tag = WUR }
+			check_variable = { show_local_landtag_II_pres > 0.00 }
+		}
+		
+		triggers = {
+			II_pres_1_click_enabled = { 
+				check_variable = { 
+					II_pres_1_available < 1
+				}
+			}
+		
+			II_pres_2_click_enabled = { 
+				check_variable = { 
+					II_pres_2_available < 1
+				}
+			}
+			
+			II_pres_3_click_enabled = { 
+				check_variable = { 
+					II_pres_3_available < 1
+				}
+			}
+		}
+		
+		effects = {
+			local_landtag_pres_II_menu_exit_click = {
+				set_variable = { show_local_landtag_II_pres = 0 }
+			}
+			
+			II_pres_1_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							II_pres_1_clicked < 1
+						}
+					}
+					set_variable = { II_pres_1_clicked = 1 }
+					set_variable = { II_pres_2_available = 0 }
+					set_variable = { II_pres_3_available = 0 }
+					
+					set_variable = { II_pres_current = 0 }
+				}
+				else = {
+					set_variable = { II_pres_1_clicked = 0 }
+					set_variable = { II_pres_2_available = 1 }
+					set_variable = { II_pres_3_available = 1 }
+					
+					set_variable = { II_pres_current = 3 }
+				}
+			}
+			
+			II_pres_2_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							II_pres_2_clicked < 1
+						}
+					}
+					set_variable = { II_pres_2_clicked = 1 }
+					set_variable = { II_pres_1_available = 0 }
+					set_variable = { II_pres_3_available = 0 }
+					
+					set_variable = { II_pres_current = 0 }
+				}
+				else = {
+					set_variable = { II_pres_2_clicked = 0 }
+					set_variable = { II_pres_1_available = 1 }
+					set_variable = { II_pres_3_available = 1 }
+					
+					set_variable = { II_pres_current = 1 }
+				}
+			}
+			
+			II_pres_3_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							II_pres_3_clicked < 1
+						}
+					}
+					set_variable = { II_pres_3_clicked = 1 }
+					set_variable = { II_pres_1_available = 0 }
+					set_variable = { II_pres_2_available = 0 }
+					
+					set_variable = { II_pres_current = 0 }
+				}
+				else = {
+					set_variable = { II_pres_3_clicked = 0 }
+					set_variable = { II_pres_1_available = 1 }
+					set_variable = { II_pres_2_available = 1 }
+					
+					set_variable = { II_pres_current = 2 }
+				}
+			}
+		}
+	}
+}
+
