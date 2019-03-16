@@ -774,19 +774,19 @@ add_namespace = russiaforeign
 								compare = greater_than_or_equals
 							}
 						}
-						RUS = {
-							transfer_state = 561
-							transfer_state = 1246
-							transfer_state = 560
-							transfer_state = 1247
-							transfer_state = 1248
-							transfer_state = 1244
-							transfer_state = 1249
-							transfer_state = 657
-							transfer_state = 1250
-							transfer_state = 409
-							transfer_state = 408
-						}
+					}
+					RUS = {
+						transfer_state = 561
+						transfer_state = 1246
+						transfer_state = 560
+						transfer_state = 1247
+						transfer_state = 1248
+						transfer_state = 1244
+						transfer_state = 1249
+						transfer_state = 657
+						transfer_state = 1250
+						transfer_state = 409
+						transfer_state = 408
 					}
 				}
 			}
