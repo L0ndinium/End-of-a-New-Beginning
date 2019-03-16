@@ -489,10 +489,6 @@ country_event = {
 					transfer_troops = no
 				}
 				annex_country = {
-					target = EQA
-					transfer_troops = no
-				}
-				annex_country = {
 					target = YEK
 					transfer_troops = no
 				}
@@ -553,15 +549,7 @@ country_event = {
 					transfer_troops = no
 				}
 				annex_country = {
-					target = MOM
-					transfer_troops = no
-				}
-				annex_country = {
 					target = FTT
-					transfer_troops = no
-				}
-				annex_country = {
-					target = SNG
 					transfer_troops = no
 				}
 				annex_country = {
@@ -602,10 +590,6 @@ country_event = {
 				}
 				annex_country = {
 					target = AKA
-					transfer_troops = no
-				}
-				annex_country = {
-					target = GBS
 					transfer_troops = no
 				}
 				annex_country = {
@@ -658,10 +642,6 @@ country_event = {
 				}
 				annex_country = {
 					target = MMA
-					transfer_troops = no
-				}
-				annex_country = {
-					target = MOM
 					transfer_troops = no
 				}
 				annex_country = {
@@ -738,10 +718,6 @@ country_event = {
 				}
 				annex_country = {
 					target = LGR
-					transfer_troops = no
-				}
-				annex_country = {
-					target = ZAN
 					transfer_troops = no
 				}
 				annex_country = {
