@@ -648,26 +648,124 @@ ideas = {
                 production_speed_buildings_factor = 0.07
             }
         }
-    }
-    #PEOPLE
-    
-	political_advisor = {
-		RUS_idea_alexander_gorchakov = {						
+		
+RUS_idea_railroads = {
 			allowed = {
-				original_tag = RUS
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_build_infrastructure
+			
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+		
+		RUS_idea_iskra = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RUS_idea_iskra
+
+			modifier = {
+			anarchism_drift = 0.02
+			collectivist_socialism_drift = 0.01
+			}	
+		}	
+		
+		RUS_idea_miserables = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RUS_idea_miserables
+
+			modifier = {
+			collectivist_socialism_drift = 0.01
+			}	
+		}
+		
+		RUS_idea_gorky_library = {
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ?
+
+			modifier = {
+			planning_speed = 0.02
+			}		
+		}
+		
+		RUS_TSH_trade = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_foreign_trade
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+	}
+
+ 
+    #PEOPLE	
+    
+	political_advisor = {		
+		RUS_alexander_gorchakov = {
+			
+			
+			allowed = {
+				original_tag = "RUS"
 			}
 			available = {
-				has_completed_focus = RUS_promote_gorchakov_to_foreign_minister
+				has_completed_focus = RUS_vic_promote_gorchakov_to_foreign_minister
 			}
 			
 			traits = { popular_figurehead }
 		}
-		RUS_idea_mikhail_von_reutern= {						
+		RUS_mikhail_von_reutern= {
+			
+			
 			allowed = {
-				original_tag = RUS
+				original_tag = "RUS"
 			}
 			available = {
-				has_completed_focus = RUS_promote_mikhail_von_reutern
+				has_completed_focus = RUS_vic_promote_mikhail_to_finance_minister
 			}
 			
 			traits = { 
@@ -675,12 +773,14 @@ ideas = {
 				tax_collector
 			}
 		}
-		RUS_idea_vicktor_panin = {						
+		RUS_vicktor_panin= {
+			
+			
 			allowed = {
-				original_tag = RUS
+				original_tag = "RUS"
 			}
 			available = {
-				has_completed_focus = RUS_give_viktor_panin_count_title
+				has_completed_focus = RUS_vic_promote_mikhail_to_finance_minister
 			}
 			
 			traits = { 
@@ -899,7 +999,6 @@ ideas = {
 				political_power_factor = 0.05
 			}
 		}
-<<<<<<< HEAD
         
         RUS_idea_fund_railroad_constructionb = {
             allowed = {
@@ -1001,143 +1100,5 @@ ideas = {
             }
         }
     }
-=======
-		RUS_railroads = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			picture = generic_build_infrastructure
-			
-			modifier = {
-				army_speed_factor = 0.05
-			}
-		}
-		
-		RUS_idea_iskra = {
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = RUS_idea_iskra
-
-			modifier = {
-			anarchism_drift = 0.02
-			collectivist_socialism_drift = 0.01
-			}	
-		}	
-		
-		RUS_idea_miserables = {
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = RUS_idea_miserables
-
-			modifier = {
-			collectivist_socialism_drift = 0.01
-			}	
-		}
-		
-		RUS_idea_gorky_library = {
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = ?
-
-			modifier = {
-			planning_speed = 0.02
-			}		
-		}
-		
-		RUS_TSH_trade = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = JAP_foreign_trade
-
-			modifier = {
-				consumer_goods_factor = -0.02
-			}
-		}
-		
-	}
-	political_advisor = {
-		RUS_alexander_gorchakov = {
-			
-			
-			allowed = {
-				original_tag = "RUS"
-			}
-			available = {
-				has_completed_focus = RUS_vic_promote_gorchakov_to_foreign_minister
-			}
-			
-			traits = { popular_figurehead }
-		}
-		RUS_mikhail_von_reutern= {
-			
-			
-			allowed = {
-				original_tag = "RUS"
-			}
-			available = {
-				has_completed_focus = RUS_vic_promote_mikhail_to_finance_minister
-			}
-			
-			traits = { 
-				administrative_genius
-				tax_collector
-			}
-		}
-		RUS_vicktor_panin= {
-			
-			
-			allowed = {
-				original_tag = "RUS"
-			}
-			available = {
-				has_completed_focus = RUS_vic_promote_mikhail_to_finance_minister
-			}
-			
-			traits = { 
-				eoanb_trait_strict_authoritarian
-				tax_collector
-			}
-		}
-	}
->>>>>>> master
 }
 	

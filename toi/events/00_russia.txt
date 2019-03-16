@@ -1,6 +1,7 @@
 ﻿add_namespace = russia
 add_namespace = russiapolitical
 add_namespace = russiamisc
+add_namespace = russiaforeign
 
     country_event = {  #Krenholm 
 		id = russia.1
@@ -639,5 +640,204 @@ add_namespace = russiamisc
 		}		
 		option = {
 			name = russiamisc.9.a
+		}
+	}
+	
+	country_event = { #Defining Manchurian Borders
+		id = russiaforeign.1
+		title = russiaforeign.1.t
+		desc = russiaforeign.1.d
+		picture = GFX_report_event_russian_manchuria
+		fire_only_once = yes
+		trigger = {
+			tag = RUS
+			date > 1858.04.28
+		}
+		option = { #Order Muraviev-Amursky to pack up for Manchuria!
+			name = russiaforeign.1.a
+			RUS = {
+				country_event = {
+					id = russiaforeign.2
+					days = 30
+				}
+			}
+			CHI = {
+				country_event = {
+					id = russiaforeign.3
+					days = 5
+				}
+			}
+			ai_chance = {
+				factor = 100
+			}
+		}
+	}
+	
+	country_event = { #Aigun Treaty
+		id = russiaforeign.2
+		title = russiaforeign.2.t
+		desc = russiaforeign.2.d
+		picture = GFX_report_event_russian_manchuria
+		
+		is_triggered_only = yes
+		
+		option = { #Let's see where this takes us.
+			name = russiaforeign.2.a
+			RUS = {
+				country_event = {
+					id = russiaforeign.4
+					days = 5
+				}
+			}
+			CHI = {
+				country_event = {
+					id = russiaforeign.5
+					days = 5
+				}
+			}
+			if = {
+				limit = {
+					#AND = {										DYNAMIC OUTCOMES TO BE IMPLEMENTED AFTER DEM
+						is_historical_focus_on = yes
+					#	RUS = {
+					#		is_ai = yes
+					#	}
+					#}
+				}
+				set_variable = {
+					var = rus_var_manchurian_influence
+					value = 2
+				}
+			}
+			ai_chance = {
+				factor = 100
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						RUS = {
+							check_variable = {
+								var = rus_var_manchurian_influence
+								value = 0
+								compare = equals
+							}
+						}
+					}
+					add_political_power = -10
+				}
+				else_if = {
+					limit = {
+						RUS = {
+							check_variable = {
+								var = rus_var_manchurian_influence 
+								value = 1
+								compare = equals
+							}
+						}
+					}
+					RUS = {
+						transfer_state = 561
+						transfer_state = 1246
+						transfer_state = 560
+						transfer_state = 1247
+						transfer_state = 1248
+					}
+				}
+				else_if = {
+					limit = {
+						RUS = {
+							check_variable = {
+								var = rus_var_manchurian_influence 
+								value = 2
+								compare = equals
+							}
+						}
+					}
+					RUS = {
+						transfer_state = 561
+						transfer_state = 1246
+						transfer_state = 560
+						transfer_state = 1247
+						transfer_state = 1248
+						transfer_state = 1244
+						transfer_state = 1249
+						transfer_state = 657
+						transfer_state = 1250
+					}
+				}
+				else_if = {
+					limit = {
+						RUS = {
+							check_variable = {
+								var = rus_var_manchurian_influence
+								value = 3
+								compare = greater_than_or_equals
+							}
+						}
+						RUS = {
+							transfer_state = 561
+							transfer_state = 1246
+							transfer_state = 560
+							transfer_state = 1247
+							transfer_state = 1248
+							transfer_state = 1244
+							transfer_state = 1249
+							transfer_state = 657
+							transfer_state = 1250
+							transfer_state = 409
+							transfer_state = 408
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	country_event = { #CHI- An invitation from the Russians
+		id = russiaforeign.3
+		title = russiaforeign.3.t
+		desc = russiaforeign.3.d
+		picture = GFX_report_event_russian_manchuria
+		
+		is_triggered_only = yes
+		
+		option = { #We have no other choice but to give in.
+			name = russiaforeign.3.a
+			CHI = {
+				country_event = {
+					id = russiaforeign.2
+					days = 25
+				}
+			}
+		}
+	}
+
+	country_event = { #RUS- The results of the Aigun treaty
+		id = russiaforeign.4
+		title = russiaforeign.4.t
+		desc = russiaforeign.4.d
+		picture = GFX_report_event_russian_manchuria
+		
+		is_triggered_only = yes
+		
+		option = { #God Save the Tsar! | A humiliating defeat for the Empire.
+			name = russiaforeign.4.a
+			set_variable = {
+				var = rus_var_manchurian_influence
+				value = 0
+			}
+		}
+	}
+	
+	country_event = { #CHI- The results of the Aigun treaty
+		id = russiaforeign.5
+		title = russiaforeign.5.t
+		desc = russiaforeign.5.d
+		picture = GFX_report_event_russian_manchuria
+		
+		is_triggered_only = yes
+		
+		option = { #Let's hope that China recovers from this humiliation. | The Era of Chinese downfall is coming to an end!
+			name = russiaforeign.5.a
 		}
 	}

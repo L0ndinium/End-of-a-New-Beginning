@@ -101,6 +101,11 @@ set_politics = {
 	  ruling_party = autocracy
   }
   
+  set_variable = {
+	var = rus_var_manchurian_influence
+	value = 0
+  }
+  
   add_opinion_modifier = { target = CHI modifier = eoanb_om_RUS_CHI_arrow_incident }
   add_opinion_modifier = { target = ENG modifier = eoanb_om_RUS_ENG_arrow_incident }
   add_opinion_modifier = { target = FRA modifier = eoanb_om_RUS_FRA_arrow_incident }
