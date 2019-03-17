@@ -74,7 +74,9 @@
 
 	  ruling_party = autocracy
   }
-
+  
+  set_cosmetic_tag = MAN_cosmetic_qing_puppet
+  
   set_technology = {
 	infantry_weapons = 1
 	tech_infantry_napoleonic_uniform = 1

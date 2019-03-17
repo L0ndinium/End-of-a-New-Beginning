@@ -5,7 +5,8 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = CHI
+		owner = MAN
+		add_core_of = MAN
 		add_core_of = CHI
 		buildings = {
 			infrastructure = 2

@@ -2487,6 +2487,11 @@ spriteTypes = {
 		name = "GFX_report_event_krenholm_manufacture"
 		texturefile = "gfx/event_pictures/russia/report_event_krenholm_manufacture.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_report_event_russian_manchuria"
+		texturefile = "gfx/event_pictures/russia/report_event_russian_manchuria.dds"
+	}
 
 	# Argentina
 

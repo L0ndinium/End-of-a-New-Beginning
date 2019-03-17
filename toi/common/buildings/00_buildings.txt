@@ -151,13 +151,11 @@ buildings = {
 		base_cost = 15000
 		icon_frame = 26
 		shares_slots = yes
-		value = 4
+		value = 5
 		infrastructure_construction_effect = yes
-		fuel_silo = yes
-		max_level = 50
 		
 		show_modifier = yes
-		max_fuel_building = 50.0
+		fuel_gain_from_states = 2.0 #per hour
 	}
 
 	fuel_silo_modern = {

@@ -101,12 +101,6 @@
  PRS_anarchism_party:0 "Freie Vereinigung deutscher Gewerkschaften"
  PRS_fundamentalism_party:0 "Kirche der Altpreußischen Union"
 
- BAV_social_egalitarianism_party:0 "Arbeiterverein"
- BAV_traditional_conservatism_party:0 "Bayerische Patriotenpartei"
- BAV_radical_democracy_party:0 "Kammer der Reichsräte"
- BAV_autocracy_party:0 "House of Wittelsbach"
- BAV_fundamentalism_party:0 "Erzbistum München und Freising"
-
  DEN_vanguard_communism_party:0 "Danmarks Kommunistiske Parti"
  DEN_collectivist_socialism_party:0 "Socialistisk Folkeparti"
  DEN_social_egalitarianism_party:0 "Socialdemokraterne "
@@ -499,6 +493,7 @@
  HOL_collectivist_socialism_SDV_long:0 "Sociaal-Democratische Vereeniging"
  HOL_collectivist_socialism_SDV:0 "SDV"
 
+ 
  HAN_autocracy_party:0 "House of Hanover"
 
  MCK_autocracy_party:0 "House of Mecklenburg-Strelitz"
@@ -545,7 +540,27 @@
 
  BAD_autocracy_party:0 "House of Zähringen"
 
+ BAV_social_egalitarianism_party:0 "Arbeiterverein"
+ BAV_traditional_conservatism_party:0 "Bayerische Patriotenpartei"
+ BAV_radical_democracy_party:0 "Kammer der Landsräte"
+ BAV_autocracy_party:0 "House of Wittelsbach"
+ BAV_fundamentalism_party:0 "Erzbistum München und Freising"
+ BAV_centrism_party_party:0 "Liberale Fraktion"
+ BAV_chauvinist_populism_party:0 "Deutscher Reformverein"
+ BAV_anarchism_party:0 "Arbeiterverein"
+ BAV_collectivist_socialism_party:0 "Arbeiterverein"
+ BAV_vanguard_communism_party:0 "Arbeiterverein"
+ 
  WUR_autocracy_party:0 "House of Württemberg"
+ WUR_centrism_party:0 "Liberale Fraktion"
+ WUR_fundamentalism_party:0 "Christlich-Konservative Fraktion"
+ WUR_radical_democracy_party:0 "Radikale Fraktion"
+ WUR_traditional_conservatism_party:0 "Liberale Fraktion"
+ WUR_chauvinist_populism_party:0 "Deutscher Reformverein"
+ WUR_anarchism_party:0 "Arbeiterverein"
+ WUR_collectivist_socialism_party:0 "Arbeiterverein"
+ WUR_social_egalitarianism_party:0 "Arbeiterverein"
+ WUR_vanguard_communism_party:0 "Arbeiterverein"
 
  OLD_autocracy_party:0 "House of Holstein-Gottorp"
 

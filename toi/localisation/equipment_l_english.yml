@@ -372,7 +372,7 @@
  infantry_equipment_mg_0_desc:0 "An early heavy machine gun for infantry use."
  infantry_equipment_mg_1:0 "M1918 Browning"
  infantry_equipment_mg_1_desc:0 "An improved design of the heavy infantry machine gun."
- 
+
  flamethrower_equipment:0 "Flamethrowers"
  flamethrower_equipment_desc:0 "Flamethrowers are very effective against hostile infantry, but are considered inhumane and can easily lead to accidents."
  flamethrower_equipment_0:0 "Early Flamethrower"
@@ -465,7 +465,7 @@
  BAD_infantry_equipment_rifle_0:0 "Badisches Infanteriegewehr M 1813"
  BAD_infantry_equipment_rifle_0_short:0 "Infanteriegewehr M 1813"
  BAD_infantry_equipment_rifle_2:0 " Badische Infanteriegewehr M 1861"
- BAD_infantry_equipment_rifle_2_short:0 "Infanteriegewehr M 1861" 
+ BAD_infantry_equipment_rifle_2_short:0 "Infanteriegewehr M 1861"
  #BAV
  BAV_infantry_equipment_rifle_0:0 "Gewehr 1801"
  BAV_infantry_equipment_rifle_0_short:0 "Gewehr 1801"
@@ -805,3 +805,8 @@
  siege_gun_equipment_desc:0 "Heavy Artillery that can launch projectiles at high angle and for long distances, making it perfect for sieging fortified positions."
  howitzer_equipment:0 "Howitzers"
  howitzer_equipment_desc:0 "Light, mobile artillery pieces that shine in infantry skirmishes."
+ grain_equipment:0 "Grain"
+ grain_equipment_desc:0 "Products made out of grain are used by all kinds of people as food."
+ grain_consumable:0 "Baked Goods"
+ grain_consumable_desc:0 "Products made out of grain are used by all kinds of people as food."
+ grain_consumable_short:0 "Baked Goods"

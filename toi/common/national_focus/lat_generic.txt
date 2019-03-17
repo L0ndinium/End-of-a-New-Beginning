@@ -2148,7 +2148,6 @@ focus_tree = {
 		x = 36
 		y = 3
 		completion_reward = {
-			start_civil_war = { ideology = anarchism size = 0.5 }
 			swap_ideas = {
 				remove_idea = racial_laws
 				add_idea = slavery
@@ -2165,6 +2164,8 @@ focus_tree = {
 				remove_idea = full_equality
 				add_idea = slavery
 			}
+			add_political_power = -135
+			add_stability = -0.15
 		}
 
 	}

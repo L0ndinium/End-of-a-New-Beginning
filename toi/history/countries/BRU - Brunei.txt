@@ -74,6 +74,8 @@
 
 	  ruling_party = autocracy
  }
+  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = BRU }
+  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = BRU }
 
   set_technology = {
 	infantry_weapons = 1

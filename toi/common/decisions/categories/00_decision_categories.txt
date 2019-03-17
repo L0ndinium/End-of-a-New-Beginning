@@ -5,9 +5,8 @@ ITA_Culture_category_decisions = {
     picture = GFX_decision_cat_ita_culture
 
     allowed = {
-        original_tag = PIE
+        tag = PIE
         date < 1900.1.1
-        has_cosmetic_tag = ITA
     }
 }
 ITA_Referendum_category_decisions = {

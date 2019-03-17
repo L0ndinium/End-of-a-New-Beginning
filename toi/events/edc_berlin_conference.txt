@@ -10,7 +10,7 @@ country_event = {
 	fire_only_once = yes
 	#is_triggered_only = yes ##untill i finish
 	trigger = {
-		tag = POR
+		original_tag = POR
 		PRS = {
 			PRS_trigger_formed_germany = yes
 		}
@@ -594,7 +594,7 @@ country_event = {
 			}
 		}
 		set_country_flag = berlin_conferance_voter
-		POR = {
+		FROM = {
 			set_country_flag = berlin_conferance_voter
 		}
 		ai_chance = {
@@ -620,7 +620,7 @@ country_event = {
 			}
 			set_country_flag = berlin_conferance_voter
 		}
-		POR = {
+		FROM = {
 			set_country_flag = berlin_conferance_voter
 		}
 		ai_chance = {
@@ -967,7 +967,7 @@ country_event = {# start of the colony voting- first ping event
 		set_variable = {GER.rus_conferance_vote = 0}
 		set_variable = {GER.hab_conferance_vote = 0}
 		every_country = {
-				if = {
+			if = {
 				limit ={
 					has_country_flag = berlin_conferance_voter
 				}
@@ -986,7 +986,7 @@ country_event = {# assign cores - last ping event
 	mean_time_to_happen = {
 		days = 2
 	}
-	hidden = yes
+	#hidden = yes
 	trigger = {
 		has_country_flag = berlin_conferance_host
 		check_variable = {var = GER.afr_number_of_votes_in_the_conference var = GER.afr_total_bc_attendance compare = greater_than_or_equals}
@@ -995,64 +995,66 @@ country_event = {# assign cores - last ping event
 		}
 	}
 	immediate = {##ok
-		FRA={afr_ber_assign_extra_votes_for_owned_states = yes }
-		ENG={afr_ber_assign_extra_votes_for_owned_states = yes }
-		POR={afr_ber_assign_extra_votes_for_owned_states = yes }
-		SPR={afr_ber_assign_extra_votes_for_owned_states = yes }
-		HOL={afr_ber_assign_extra_votes_for_owned_states = yes }
-		BEL={afr_ber_assign_extra_votes_for_owned_states = yes }
-		GER={afr_ber_assign_extra_votes_for_owned_states = yes }
-		ITA={afr_ber_assign_extra_votes_for_owned_states = yes }
-		PIE={afr_ber_assign_extra_votes_for_owned_states = yes }
-		RUS={afr_ber_assign_extra_votes_for_owned_states = yes }
-		AUS={afr_ber_assign_extra_votes_for_owned_states = yes }
-		DEN={afr_ber_assign_extra_votes_for_owned_states = yes }
-		SWE={afr_ber_assign_extra_votes_for_owned_states = yes }
-		afr_ber_check_votes = yes
-		every_country = {
-			#if = {
-				limit = {
-					is_subject_of = event_target:afr_ber_reigion_winner
-					afr_ber_check_if_owns_colonial_state = yes
-				}
-				save_event_target_as = afr_colonial_nation
-			#}
-		}		
-		event_target:afr_colonial_nation = {
-			afr_ber_assign_cores_to_winner = yes
-		}
-		event_target:afr_ber_reigion_winner = {
-			if = {
-				limit = {
-					NOT = {
-						any_country = {
-							is_subject_of = event_target:afr_ber_reigion_winner
-							afr_ber_check_if_owns_colonial_state = yes
+		#hidden_effect={
+			FRA={afr_ber_assign_extra_votes_for_owned_states = yes }
+			ENG={afr_ber_assign_extra_votes_for_owned_states = yes }
+			POR={afr_ber_assign_extra_votes_for_owned_states = yes }
+			SPR={afr_ber_assign_extra_votes_for_owned_states = yes }
+			HOL={afr_ber_assign_extra_votes_for_owned_states = yes }
+			BEL={afr_ber_assign_extra_votes_for_owned_states = yes }
+			PRS={afr_ber_assign_extra_votes_for_owned_states = yes }
+			ITA={afr_ber_assign_extra_votes_for_owned_states = yes }
+			PIE={afr_ber_assign_extra_votes_for_owned_states = yes }
+			RUS={afr_ber_assign_extra_votes_for_owned_states = yes }
+			AUS={afr_ber_assign_extra_votes_for_owned_states = yes }
+			DEN={afr_ber_assign_extra_votes_for_owned_states = yes }
+			SWE={afr_ber_assign_extra_votes_for_owned_states = yes }
+			afr_ber_check_votes = yes
+			every_country = {
+				#if = {
+					limit = {
+						is_subject_of = event_target:afr_ber_reigion_winner
+						afr_ber_check_if_owns_colonial_state = yes
+					}
+					save_event_target_as = afr_colonial_nation
+				#}
+			}		
+			event_target:afr_colonial_nation = {
+				afr_ber_assign_cores_to_winner = yes
+			}
+			event_target:afr_ber_reigion_winner = {
+				if = {
+					limit = {
+						NOT = {
+							any_country = {
+								is_subject_of = event_target:afr_ber_reigion_winner
+								afr_ber_check_if_owns_colonial_state = yes
+							}
 						}
 					}
+					afr_ber_assign_claims_to_winner = yes 
 				}
-				afr_ber_assign_claims_to_winner = yes 
+				country_event = { id = EDC_berlin_con.20 hours = 1 }
 			}
-			country_event = { id = EDC_berlin_con.20 hours = 1 }
-		}
-		set_variable ={GER.afr_number_of_votes_in_the_conference=0}
-		if = {
-			limit = {
-				check_variable = {GER.current_region_conferance_vote < 22}
+			set_variable ={GER.afr_number_of_votes_in_the_conference=0}
+			if = {
+				limit = {
+					check_variable = {GER.current_region_conferance_vote < 22}
+				}
+				country_event = { id = EDC_berlin_con.15 hours = 1 }
 			}
-			country_event = { id = EDC_berlin_con.15 hours = 1 }
-		}
-		else = {
-			news_event = { id = EDC_berlin_con.17 hours = 24 }## end of the conference
-			clear_global_event_target = afr_ber_reigion_winner
-				every_country = {
-					limit ={
-						has_country_flag = berlin_conferance_voter
+			else = {
+				news_event = { id = EDC_berlin_con.17 hours = 24 }## end of the conference
+				clear_global_event_target = afr_ber_reigion_winner
+					every_country = {
+						limit ={
+							has_country_flag = berlin_conferance_voter
+						}
+						clr_country_flag = berlin_conferance_voter
 					}
-					clr_country_flag = berlin_conferance_voter
-				}
-			clr_country_flag = berlin_conferance_host
-		}
+				clr_country_flag = berlin_conferance_host
+			}
+		#}
 	}
 	option = {
 		name = EDC_berlin_con.16.a
@@ -1094,5 +1096,62 @@ country_event = {# assign cores - last ping event
 	hidden = yes
 	immediate = {##ok
 		add_political_power = 25
+	}
+}
+
+# portugal discusses a conference about africa
+country_event = {
+	id = EDC_berlin_con.1
+	title = EDC_berlin_con.1.t
+	desc = EDC_berlin_con.1.desc
+	picture = GFX_report_event_chinese_army_training
+	
+	fire_only_once = yes
+	#is_triggered_only = yes ##untill i finish
+	trigger = {
+		original_tag = POR
+		PRS = {
+			PRS_trigger_formed_germany = yes
+		}
+		country_exists = ENG
+		date > 1884.05.05
+	}
+	
+	option = {##Yes we should, lets go to our ally britian and get backing
+		name = EDC_berlin_con.1.a
+		ai_chance = { 
+			factor = 90 
+		}
+		hidden_effect = {
+			ENG = {
+				country_event = { id = EDC_berlin_con.4 hours = 20 }
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				add = 100
+				is_historical_focus_on = yes
+			}	
+		}
+	}
+	option = {#yes, lets go to germany directly
+		name = EDC_berlin_con.1.b
+		ai_chance = { factor = 9 }
+		hidden_effect = {
+			PRS ={
+				country_event = { id = EDC_berlin_con.5 hours = 20 }
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {#no, why should we care?
+		ai_chance = { factor = 1 }
+		name = EDC_berlin_con.1.c
+		ai_chance = {
+			factor = 25
+		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿l_english:
+  PRODUCTION_MATERIALS_GRAIN:0 "Grain"
   PRODUCTION_MATERIALS_COAL:0 "Coal"
   PRODUCTION_MATERIALS_WOOD:0 "Wood"
   PRODUCTION_MATERIALS_FABRIC:0 "Fabric"
@@ -16,6 +17,7 @@
   wood_desc:0 "Wood is a very versatile material used in the construction of rifles, ships, and generally most other things you can imagine."
   fabric_desc:0 "Fabric is primarily needed for uniforms, but can have its uses in other production venues."
   machine_parts_desc:0 "Machine Parts are an advanced type of resource used in technologically complicated equipment."
+  grain_desc:0 "Grain is used by people as food."
   iron_desc:0 "Raw Iron, or Pig Iron, is Iron that has been unrefined. this requres refining in order to create §YSteel§!"
   cotton_desc:0 "Cotton, and other fibers are a prerequisite of fabrics predomantly used for clothing"
   plastics_desc:0 "Plastics, are used as a light weight waterproof material, but it was not until the later half of the 20th century that plastic was used in a large amount of areas, Including application in electronics and the military"
@@ -49,4 +51,3 @@
   resource_production.6.t:0 "Not enough Rare Earth Metals for Generator manufactoring"
   resource_production.6.d:0 "Earlier today, one of our Generator Manufactories ran out of the various raw materials required to produce Generators, and as such have closed down"
   resource_production.6.a:0 "We must obtain more Rare Earth Metals"
-  

@@ -1,0 +1,279 @@
+#+1
+increase_ps_by_one = {
+	custom_effect_tooltip = PS_tooltip_increase_by_one
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp1
+				value = pol_stability
+			}
+			add_to_variable = {
+				var = PS_temp1
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp1 < 4 }
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stability
+				value = 3
+			}
+		}
+		clear_variable = PS_temp1
+	}
+}
+
+#+2
+increase_ps_by_two = {
+	custom_effect_tooltip = PS_tooltip_increase_by_two
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp2
+				value = pol_stability
+			}
+			add_to_variable = {
+				var = PS_temp2
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp2 < 4 }
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability
+				value = 2
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stability
+				value = 3
+			}
+		}
+		clear_variable = PS_temp2
+	}
+}
+
+#+3
+increase_ps_by_three = {
+	custom_effect_tooltip = PS_tooltip_increase_by_three
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp3
+				value = pol_stability
+			}
+			add_to_variable = {
+				var = PS_temp3
+				value = 3
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp3 < 4 }
+			}
+			add_to_variable = {
+				var = ROOT.pol_stability
+				value = 3
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stability
+				value = 3
+			}
+		}
+		clear_variable = PS_temp3
+	}
+}
+
+#-1
+decrease_ps_by_one = {
+	custom_effect_tooltip = PS_tooltip_decrease_by_one
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp4
+				value = pol_stability
+			}
+			subtract_from_variable = {
+				var = PS_temp4
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp4 > -6 }
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stability
+				value = -5
+			}
+		}
+		clear_variable = PS_temp4
+	}
+}
+
+#-2
+decrease_ps_by_two = {
+	custom_effect_tooltip = PS_tooltip_decrease_by_two
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp5
+				value = pol_stability
+			}
+			subtract_from_variable = {
+				var = PS_temp5
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp5 > -6 }
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability
+				value = 2
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stability
+				value = -5
+			}
+		}
+		clear_variable = PS_temp5
+	}
+}
+
+#-3
+decrease_ps_by_three = {
+	custom_effect_tooltip = PS_tooltip_decrease_by_three
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp6
+				value = pol_stability
+			}
+			subtract_from_variable = {
+				var = PS_temp6
+				value = 3
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp6 > -6 }
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stability
+				value = 3
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stability
+				value = -5
+			}
+		}
+		clear_variable = PS_temp6
+	}
+}
+
+### YEARLY CHANGE ###
+#increase accident factor by one
+clear_ps_accidents = {
+	clear_variable = pol_stab_accident_factor
+}
+
+increase_ps_accidents_by_one = {
+	add_to_variable = {
+		var = ROOT.pol_stab_accident_factor
+		value = 1
+	}
+}
+
+increase_ps_accidents_by_two = {
+	add_to_variable = {
+		var = ROOT.pol_stab_accident_factor
+		value = 2
+	}
+}
+
+decrease_ps_accidents_by_one = {
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp7
+				value = pol_stab_accident_factor
+			}
+			subtract_from_variable = {
+				var = PS_temp7
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp7 > -1 }
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stab_accident_factor
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stab_accident_factor
+				value = 0
+			}
+		}
+		clear_variable = PS_temp7
+	}
+}
+
+decrease_ps_accidents_by_two = {
+	hidden_effect = {
+		ROOT = {
+			set_variable = {
+				var = PS_temp8
+				value = pol_stab_accident_factor
+			}
+			subtract_from_variable = {
+				var = PS_temp8
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.PS_temp8 > -1 }
+			}
+			subtract_from_variable = {
+				var = ROOT.pol_stab_accident_factor
+				value = 2
+			}
+		}
+		else = {
+			set_variable = {
+				var = ROOT.pol_stab_accident_factor
+				value = 0
+			}
+		}
+		clear_variable = PS_temp8
+	}
+}

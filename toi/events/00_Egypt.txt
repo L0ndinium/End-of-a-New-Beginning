@@ -33,7 +33,7 @@ country_event = {
 				has_dlc = "Death or Dishonor"
 			}
 			FROM = {
-				add_autonomy_ratio = {
+				add_autonomy_score = {
 					value = 100
 					localization = OTO_allows_EGY_army_expansion
 				}
@@ -223,6 +223,7 @@ country_event = {
 				has_idea = has_heir
 				has_idea = dethroned_heir
 			}
+			has_country_flag = heir_ismail
 		}
 		create_country_leader = {
 			name = "Isma'il Pasha"
@@ -232,6 +233,43 @@ country_event = {
 			ideology = despotism
 			traits = {
 				industrial_promoter
+			}
+		}
+		OTO={
+			every_unit_leader={
+				limit={
+					has_id = 28
+					#name = "Ismail Pasha"
+				}
+				set_nationality = EGY
+			}
+		}
+		if ={
+			limit = {
+				has_idea = weak_heir
+			}
+			add_stability = -0.05
+		}
+		
+	}
+	option = { #Praise Ahmad, not historical, but if he survived he would be crowned
+		name = afr_EGY_vic.6.b
+		trigger= {
+			OR = {
+				has_idea = weak_heir
+				has_idea = has_heir
+				has_idea = dethroned_heir
+			}
+			has_country_flag = heir_ahmad
+		}
+		create_country_leader = {
+			name = "Ahmad Rifaat Pasha"
+			desc = "POLITICS_GEORGE_V_DESC"
+			picture = "Portrait_EGY_regency.dds" ##until i colorise his portrait
+			expire = "1879.1.1"
+			ideology = despotism
+			traits = {
+				#industrial_promoter
 			}
 		}
 		if ={
@@ -285,6 +323,7 @@ country_event = {
 					controversial_figure
 				}
 			}
+			add_stability = -0.15#well he is not egyptian
 		}
 		set_autonomy = {#the loyal leader is, well loyal
 			target = FROM
@@ -583,21 +622,139 @@ country_event = { #ENG - friction with FRA over EGY administration
 		
 	option = {#fully take over
 		name = afr_EGY_vic.15.a
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 50 }
 		
 	}
-	option = {#fully take over
+	option = {#leave it to france
 		name = afr_EGY_vic.15.b
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 25 }
 		trigger ={
 		
 		}
 		
 	}
-	option = {#fully take over
+	option = {#attempt to smooth relations
 		name = afr_EGY_vic.15.c
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 25 }
 		
 	}
 }
+country_event = { #OTO - due to EGY independance, lose hold on AWS and HRR
+	id = afr_EGY_vic.16
+	title = afr_EGY_vic.16.t
+	desc = afr_EGY_vic.16.d 
+	
+	trigger={
+		NOT={controls_state = 268}
+		NOT={controls_state = 983}
+		NOT={controls_state = 550}
+		MED = {
+			if={
+				limit={
+					is_subject = yes
+				}
+				NOT={is_subject_of = OTO}
+				OVERLORD={
+					if={
+						limit={
+							is_subject = yes
+						}
+						NOT={is_subject_of = OTO}
+					}
+				}
+			}
+		}
+		tag = OTO
+		HRR = {
+			is_subject_of = OTO
+		}
+		AWS = {
+			is_subject_of  = OTO
+		}
+	}
+	mean_time_to_happen={
+		days = 10
+	}
+		
+	option = {#damn
+		name = afr_EGY_vic.16.a
+		ai_chance = { factor = 50 }
+		if={
+			limit ={
+				HRR = {
+					is_subject_of = OTO
+				}
+			}
+			set_autonomy = {
+				target = HRR
+				autonomy_state = autonomy_free
+			}
+		}
+		if={
+			limit ={
+				AWS = {
+					is_subject_of = OTO
+				}
+			}
+			set_autonomy = {
+				target = AWS
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+}
 
+country_event = { #EGY - Ahmed dies in a accident
+	id = afr_EGY_vic.17
+	title = afr_EGY_vic.17.t
+	desc = afr_EGY_vic.17.d 
+	
+	is_triggered_only = yes
+	
+	option = {#Isma'il is the heir now
+		name = afr_EGY_vic.17.a
+		clr_country_flag = heir_ahmad
+		set_country_flag = heir_ismail
+	}
+}
+country_event = {
+	id = afr_EGY_vic.18
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1862.5.23
+		date < 1862.5.30
+		has_country_leader = {
+			name = "Muhammad Sa'id Pasha"
+			ruling_only = yes
+		}
+		tag = EGY
+	}
+	mean_time_to_happen={
+		days = 8
+	}
+	
+	immediate = {
+		random_list = {
+			70 = { EGY = { country_event = { id = afr_EGY_vic.17 } } }
+			30 = { EGY = { country_event = { id = afr_EGY_vic.19 } } }
+		}
+	}
+	
+	option = {
+		name = afr_EGY_vic.18.a
+	}
+}
+country_event = { #EGY - Ahmed accident avoided
+	id = afr_EGY_vic.19
+	title = afr_EGY_vic.19.t
+	desc = afr_EGY_vic.19.d 
+	
+	is_triggered_only = yes
+	
+	option = {#a most fortuitus event
+		name = afr_EGY_vic.19.a
+	}
+}

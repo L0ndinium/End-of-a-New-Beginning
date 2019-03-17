@@ -8,11 +8,11 @@
   set_research_slots = 2
 
   add_ideas = { 
-          #POLITICS
+    #POLITICS
     hos_is_leader
     victorian_era
 	law_victorian_army
-    industrializing
+    agrarian
     has_heir
     constitutional_monarchy
 
@@ -34,9 +34,14 @@
     privileged_education
     state_religion
 	religion_protestant
-         #NATIONAL SPIRITS
+	
+    #NATIONAL SPIRITS
 	GER_general_idea_ger_confed
-   PRS_Zollverein
+    PRS_Zollverein
+	WUR_russiancampaign
+	WUR_victorian_emigration_1
+	WUR_victorian_inflation
+	WUR_victorian_unemployment
   }
 
   set_politics = {
@@ -54,10 +59,10 @@
         popularity = 0
       }
       centrism = {
-        popularity = 0
+        popularity = 20
       }
       traditional_conservatism = {
-        popularity = 5
+        popularity = 10
       }
       radical_democracy = {
         popularity = 0
@@ -66,10 +71,10 @@
         popularity = 0
       }
       autocracy = {
-        popularity = 85
+        popularity = 70
       }
       fundamentalism = {
-        popularity = 10
+        popularity = 0
       }
     }
 
@@ -97,8 +102,8 @@
 
   create_country_leader = {
     name = "Wilhelm I"
-    desc = "POLITICS_WILHELM_I_WURTTEMBERG__DESC"
-    picture = "Portrait_WUR_Charles_I_of_Wurttemberg.dds"
+    desc = "POLITICS_WILHELM_I_WURTTEMBERG_DESC"
+    picture = "Portrait_WUR_Wilhelm_I_of_Wurttemberg.dds"
     expire = "1864.1.1"
     ideology = despotism
     traits = { }

@@ -1,0 +1,6 @@
+﻿l_english:
+ 
+ INFLUENCE_TOOLTIP_TOPBAR:0 "§Y[?GetName] Influence§!"
+ DELAYED_INFLUENCE_TOOLTIP_TOPBAR:0 "How much influence we have."
+ INFLUENCR_TOOLTIP_TOPBAR:0 "§YMain Influencer§!"
+ DELAYED_INFLUENCR_TOOLTIP_TOPBAR:0 "Shows the main influencer and how much influence that country has over our nation."

@@ -25,7 +25,7 @@
     stagnation_growth
     border_control
 	limited_conscription
-    slavery
+    segregation
     absolutism
 
     no_constitution
@@ -89,8 +89,40 @@
 create_country_leader = {
     name = "Pōtatau Te Wherowhero"
     desc = "POLITICS_TEMP_DESC"
-    picture = "Portrait_NZL_Potatau Te Wherowhero.dds"
-    expire = 1900.1.1
+    picture = "Portrait_NZL_Potatau_Te_Wherowhero.dds"
+    expire = 1860.5.25
     ideology = despotism
 }
+
+	create_corps_commander = {
+		name = "Tūkāroto Matutaera Pōtatau Te Wherowhero Tāwhiao"
+		picture = "Portrait_KIN_Tawhiao.dds"
+		traits = { infantry_officer trait_engineer}
+		skill = 3	
+		id = 1
+		attack_skill = 1
+		defense_skill = 4
+		planning_skill = 1
+		logistics_skill = 4
+	}
+	create_corps_commander = {
+		name = "Wiremu Tamihana Tarapipipi Te Waharoa"
+		picture = "Portrait_KIN_Wiremu_Tamihana.dds"
+		traits = { infantry_officer trait_engineer}
+		skill = 3	
+		attack_skill = 1
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 5
+	}
+	create_field_marshal = {
+		name = "Rewi Manga Maniapoto"
+		picture = "Portrait_KIN_Rewi_Manga_Maniapoto.dds"
+		traits = { infantry_officer logistics_wizard trait_engineer}
+		skill = 3	
+		attack_skill = 1
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 3
+	}
 }

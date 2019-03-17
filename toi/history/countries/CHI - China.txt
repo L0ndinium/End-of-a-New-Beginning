@@ -6,7 +6,8 @@
   set_convoys = 0
   
   set_research_slots = 3
-
+  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = CHI }
+  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = CHI }
   add_ideas = { 
     #POLITICS 
 		  
@@ -78,6 +79,20 @@
   add_opinion_modifier = { target = USA modifier = eoanb_om_USA_CHI_opium_neutral }
   add_opinion_modifier = { target = ENG modifier = eoanb_om_ENG_CHI_arrow_incident }
   reverse_add_opinion_modifier = { target = ENG modifier = eoanb_om_ENG_CHI_arrow_incident }
+  
+  if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = MAN
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.35
+	}
+	else = {
+		puppet = MAN
+	}
+}
 
   set_technology = {
 	infantry_weapons = 1

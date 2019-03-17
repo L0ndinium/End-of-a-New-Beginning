@@ -1,10 +1,137 @@
 ideas = {
 	country = {
-
 	
-		ETH_anglo_ethiopian_shipyard_company  = {
+		ETH_EGY_War = {
 			allowed = {
 				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				ai_call_ally_desire_factor = -1000
+			}
+		}
+	
+		ETH_strike_eritrea_plan = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				surrender_limit = 0.50
+				army_core_attack_factor = 0.35
+				army_core_defence_factor = 0.35
+			}
+		}
+	
+		ETH_generals_inspire  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				army_org_Factor = 0.05
+				army_morale_factor = 0.05
+				army_defence_factor = 0.05
+				land_reinforce_rate = 1.15
+				army_org = 30
+			}
+		}
+	
+	
+		ETH_the_generals_plan_1  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				army_org_Factor = 0.50
+				army_morale_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.15
+				max_dig_in = 7
+				dig_in_speed = 0.50
+				land_reinforce_rate = 1
+			}
+		}
+		
+		ETH_the_generals_plan_2  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				army_org_Factor = 0.50
+				army_morale_factor = 0.1
+				army_defence_factor = 0.1
+				army_attack_factor = 0.10
+				army_speed_factor = 0.05
+				max_dig_in = 5
+				dig_in_speed = 0.25
+				land_reinforce_rate = 1
+			}
+		}
+		
+		ETH_the_generals_plan_3  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				army_morale_factor = 0.05
+				max_dig_in = 3
+				dig_in_speed = 0.10
+				land_reinforce_rate = 1
+			}
+		}
+
+	
+		ETH_sudanese_islamic_unrest  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				army_org_Factor = -0.15
+				army_attack_factor = -0.05
+				stability_factor = -0.25
+				fundamentalism_drift = 0.01
+			}
+		}
+		
+		ETH_german_ethiopian_shipyard_company  = {
+			allowed = {
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
 			}
 
 			removal_cost = -1
@@ -15,13 +142,104 @@ ideas = {
 				local_resources_factor = 0.05
 				production_speed_dockyard_factor = -0.1
 				min_export = 0.1
-				centrism_drift = 0.01
+				
+			}
+		}
+		
+		ETH_german_ethiopian_cotton_company  = {
+			allowed = {
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				local_resources_factor = 0.15
+				min_export = 0.1
+				
+			}
+		}
+		
+		ETH_german_ethiopian_rubber_company  = {
+			allowed = {
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				local_resources_factor = 0.15
+				min_export = 0.1
+				
+			}
+		}
+		
+		ETH_german_ethiopian_company_profits  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				consumer_goods_factor = -0.07
+			}
+		}
+		
+		
+		ETH_german_ethiopian_shipyard_company_profits  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+	
+		ETH_anglo_ethiopian_shipyard_company  = {
+			allowed = {
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_british
+
+			modifier = {
+				local_resources_factor = 0.05
+				production_speed_dockyard_factor = -0.1
+				min_export = 0.1
+				
 			}
 		}
 		
 		ETH_anglo_ethiopian_cotton_company  = {
 			allowed = {
-				always = yes
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
 			}
 
 			removal_cost = -1
@@ -31,13 +249,16 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.15
 				min_export = 0.1
-				centrism_drift = 0.01
+				
 			}
 		}
 		
 		ETH_anglo_ethiopian_rubber_company  = {
 			allowed = {
-				always = yes
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
 			}
 
 			removal_cost = -1
@@ -47,7 +268,7 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.15
 				min_export = 0.1
-				centrism_drift = 0.01
+				
 			}
 		}
 		
@@ -55,6 +276,7 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			
 
 			removal_cost = -1
 
@@ -84,7 +306,10 @@ ideas = {
 		
 		ETH_portugese_ethiopian_shipyard_company  = {
 			allowed = {
-				always = yes
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
 			}
 
 			removal_cost = -1
@@ -95,13 +320,16 @@ ideas = {
 				local_resources_factor = 0.05
 				production_speed_dockyard_factor = -0.1
 				min_export = 0.1
-				traditional_conservatism_drift = 0.01
+				
 			}
 		}
 		
 		ETH_portugese_ethiopian_logging_company  = {
 			allowed = {
-				always = yes
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
 			}
 
 			removal_cost = -1
@@ -111,13 +339,16 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.15
 				min_export = 0.1
-				traditional_conservatism_drift = 0.01
+				
 			}
 		}
 		
 		ETH_portugese_ethiopian_cotton_company  = {
 			allowed = {
-				always = yes
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
 			}
 
 			removal_cost = -1
@@ -127,7 +358,7 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.15
 				min_export = 0.1
-				traditional_conservatism_drift = 0.01
+			
 			}
 		}
 		
@@ -160,6 +391,94 @@ ideas = {
 				consumer_goods_factor = -0.02
 			}
 		}
+		
+		ETH_french_ethiopian_shipyard_company  = {
+			allowed = {
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_portugese
+
+			modifier = {
+				local_resources_factor = 0.05
+				production_speed_dockyard_factor = -0.1
+				min_export = 0.1
+		
+			}
+		}
+		
+		ETH_french_ethiopian_logging_company  = {
+			allowed = {
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_portugese
+
+			modifier = {
+				local_resources_factor = 0.15
+				min_export = 0.1
+		
+			}
+		}
+		
+		ETH_french_ethiopian_cotton_company  = {
+			allowed = {
+				tag = ETH
+			}
+			allowed_civil_war = {
+				tag = ETH
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_portugese
+
+			modifier = {
+				local_resources_factor = 0.15
+				min_export = 0.1
+		
+			}
+		}
+		
+		ETH_french_ethiopian_company_profits  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_portugese
+
+			modifier = {
+				consumer_goods_factor = -0.07
+			}
+		}
+	
+	
+		ETH_french_ethiopian_shipyard_company_profits  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_focus_merchants_portugese
+
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
 	
 	
 	
@@ -167,6 +486,7 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			
 
 			removal_cost = -1
 
@@ -181,6 +501,9 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			allowed_civil_war = {
+					original_tag = ETH
+			}
 
 			removal_cost = -1
 
@@ -194,6 +517,15 @@ ideas = {
 		ETH_idea_tewodros_social_reforms  = {
 			allowed = {
 				always = yes
+			}
+			allowed_civil_war = {
+				AND = {
+					original_tag = ETH
+					NOT = {
+						tag = ETH
+					}
+				}
+				
 			}
 
 			removal_cost = -1
@@ -226,9 +558,29 @@ ideas = {
 		}
 		
 		
+		ETH_idea_furious_parish_clergy  = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_goal_generic_national_unity
+
+			modifier = {
+				political_power_cost = 0.4
+				stability_factor = -0.20
+				fundamentalism_drift = 0.1
+			}
+		}
+		
+		
 		ETH_idea_heavily_taxed_peasantry  = {
 			allowed = {
 				always = yes
+			}
+			allowed_civil_war = {
+				original_tag = ETH
 			}
 
 			removal_cost = -1
@@ -242,10 +594,31 @@ ideas = {
 			}
 		}
 		
+		ETH_idea_tribal_military_structure = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				original_tag = ETH
+			}
+
+			removal_cost = -1
+
+			picture = SWE_Inept_Army
+
+			modifier = {
+				army_org_Factor = -0.25
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+			}
+		}
 		
 		ETH_idea_reformed_military_staff  = {
 			allowed = {
 				always = yes
+			}
+			allowed_civil_war = {
+				original_tag = ETH
 			}
 
 			removal_cost = -1
@@ -264,7 +637,9 @@ ideas = {
 			allowed = {
 				always = yes
 			}
-
+			allowed_civil_war = {
+				always = yes
+			}
 			removal_cost = -1
 
 			picture = RUS_disconnected_country
@@ -277,6 +652,9 @@ ideas = {
 		}
 		ETH_idea_isolated_villages_2 = {
 			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
 				always = yes
 			}
 
@@ -295,6 +673,9 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 
 			removal_cost = -1
 
@@ -308,6 +689,9 @@ ideas = {
 		}
 		ETH_idea_internal_unrest_2 = {
 			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
 				always = yes
 			}
 
@@ -325,6 +709,9 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			allowed_civil_war = {
+				original_tag = ETH
+			}
 
 			removal_cost = -1
 
@@ -340,6 +727,9 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			allowed_civil_war = {
+				original_tag = ETH
+			}
 
 			removal_cost = -1
 
@@ -354,6 +744,9 @@ ideas = {
 		ETH_idea_northern_oromo_militias_3 = {
 			allowed = {
 				always = yes
+			}
+			allowed_civil_war = {
+				original_tag = ETH
 			}
 
 			removal_cost = -1

@@ -4,9 +4,9 @@ spriteTypes = {
 		name = "GFX_fuel_strip"
 		texturefile = "gfx//interface//unitcontrol//fuel_strip.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
-		noOfFrames = 3		
+		noOfFrames = 3
 	}
-	
+
 	spriteType = {
 		name = "GFX_fuel"
 		texturefile = "gfx//interface//topbar//fuel_icon.dds"
@@ -16,9 +16,9 @@ spriteTypes = {
 		name = "GFX_fuel_state"
 		texturefile = "gfx//interface//topbar//fuel_state_icon.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
-		noOfFrames = 3		
+		noOfFrames = 3
 	}
-	
+
 	spriteType = {
 		name = "GFX_playlist_bg"
 		texturefile = "gfx//interface//topbar//musicplayer//playlist_bg.dds"
@@ -28,13 +28,13 @@ spriteTypes = {
 		name = "GFX_playlist_button"
 		texturefile = "gfx//interface//topbar//musicplayer//playlist_button.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_music_pause_button"
 		texturefile = "gfx//interface//topbar//musicplayer//music_pause_button.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
-		noOfFrames = 2		
+		noOfFrames = 2
 	}
 
 	spriteType = {
@@ -60,7 +60,7 @@ spriteTypes = {
 		allwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
-	
+
 	frameAnimatedSpriteType = {
 		name = "GFX_WT_anim_strip"
 		texturefile = "gfx//interface//WT_anim_strip.dds"
@@ -82,23 +82,23 @@ spriteTypes = {
 		name = "GFX_map_modes_bg"
 		texturefile = "gfx//interface//map_modes_bg.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_reopen_lobby"
 		texturefile = "gfx//interface//reopen_lobby.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_world_tension_icon"
 		texturefile = "gfx//interface//world_tension_icon.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_world_tension_icon_big_strip"
 		texturefile = "gfx//interface//world_tension_icon_big_strip.dds"
-		noOfFrames = 10		
+		noOfFrames = 10
 	}
-	
+
 	frameAnimatedSpriteType = {
 		name = "GFX_world_tension_icon_big_glow"
 		texturefile = "gfx//interface//world_tension_icon_big_glow.dds"
@@ -109,8 +109,8 @@ spriteTypes = {
 		pause_on_loop = 0.0
 		allwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_date_pause_button_bg"
 		texturefile = "gfx//interface//date_pause_button_bg.dds"
@@ -131,7 +131,7 @@ spriteTypes = {
 		name = "GFX_open_find_view_button"
 		texturefile = "gfx//interface/open_find_view_button.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_button_allied_plans"
 		texturefile = "gfx//interface//allied_plans_button.dds"
@@ -159,20 +159,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_find_screen_button"
 		texturefile = "gfx//interface//find_screen_button.dds"
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_player_counters_toggle"
 		texturefile = "gfx//interface//player_counters_toggle.dds"
 		noOfFrames = 2
-	}	
+	}
 
 	spriteType = {
 		name = "GFX_day_night_toggle"
 		texturefile = "gfx//interface//day_night_toggle.dds"
 		noOfFrames = 2
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_industrial_capacity_icon"
 		texturefile = "gfx//interface//industrial_capacity_icon.dds"
@@ -187,8 +187,8 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ships_icon"
 		texturefile = "gfx//interface//ships_icon.dds"
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_manpower_icon"
 		texturefile = "gfx//interface//manpower_icon.dds"
@@ -200,20 +200,30 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_pol_stab_1"
+		texturefile = "gfx//interface//pol_stab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_stab_2"
+		texturefile = "gfx//interface//pol_stab_2.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_pol_power_icon"
 		texturefile = "gfx//interface//pol_power_icon.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_war_support_icon"
 		texturefile = "gfx//interface//war_support_icon.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_stability_icon"
 		texturefile = "gfx//interface//stability_icon.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_command_power"
 		texturefile = "gfx/interface/command_power_icon.dds"
@@ -228,7 +238,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_empty_button"
 		texturefile = "gfx//interface//empty_button.dds"
-	}	
+	}
 
 	spriteType = {
 		name = "GFX_topbar_background"
@@ -242,7 +252,7 @@ spriteTypes = {
 		noOfFrames = 3
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	
+
 	spriteType = {
 		name = "GFX_button_speedup"
 		texturefile = "gfx//interface//button_speedup.tga"
@@ -255,23 +265,23 @@ spriteTypes = {
 		texturefile = "gfx//interface//button_speeddown.tga"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_topbar_production"
 		texturefile = "gfx//interface//topbar//toolbar//production_button.dds"
-	}	
-	
+	}
+
 	spriteType = {
 		name = "GFX_topbar_technology"
 		texturefile = "gfx//interface//topbar//toolbar//sience_button.dds"
 	}
-		
+
 	spriteType = {
 		name = "GFX_topbar_decisionview_button"
 		texturefile = "gfx//interface//topbar//toolbar//topbar_decisionview_button.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_topbar_diplomacy"
 		texturefile = "gfx//interface//topbar//toolbar//diplomacy_button.dds"
@@ -290,36 +300,36 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_airoverview_button"
 		texturefile = "gfx//interface//topbar//airoverview_button.dds"
-		noOfFrames = 2		
-	}	
-	
+		noOfFrames = 2
+	}
+
 	spriteType = {
 		name = "GFX_navyoverview_button"
 		texturefile = "gfx//interface//topbar//navyoverview_button.dds"
-		noOfFrames = 2		
-	}	
-	
+		noOfFrames = 2
+	}
+
 	spriteType = {
 		name = "GFX_armyoverview_button"
 		texturefile = "gfx//interface//topbar//armyoverview_button.dds"
-		noOfFrames = 2		
+		noOfFrames = 2
 	}
-	
+
 	spriteType = {
 		name = "GFX_construction_button"
 		texturefile = "gfx//interface//topbar//toolbar//construction_button.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_topbar_trade_button"
 		texturefile = "gfx//interface//topbar//toolbar//trade_button.dds"
-	}		
-	
+	}
+
 	spriteType = {
 		name = "GFX_topbar_nuke"
 		texturefile = "gfx//interface//topbar//nuke_icon.dds"
 	}
-	
+
 	progressbartype = {
 		name = "GFX_topbar_fuel_bar"
 		color = { 0.0 0.5 0.0 }
@@ -329,7 +339,7 @@ spriteTypes = {
 		size = { x = 54 y = 8 }
 		effectFile = "gfx/FX/progress_startend.lua"
 	}
-	
+
 	frameAnimatedSpriteType = {
 		name = "GFX_observer_flag_overlay"
 		texturefile = "gfx//interface//topbar//observer_flag_overlay.dds"
@@ -341,5 +351,5 @@ spriteTypes = {
 		allwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
-	
+
 }

@@ -375,7 +375,9 @@ eoanb_score_system_calc = {
 				}
 				else = {
 				}
-
+            
+			multiply_variable = { industrial_score = 0.5 }
+			multiply_variable = { military_score = 0.5 }
 			add_to_variable = { overall_score = industrial_score }				
 			add_to_variable = { overall_score = military_score }
 			add_to_variable = { overall_score = prestige_score }				

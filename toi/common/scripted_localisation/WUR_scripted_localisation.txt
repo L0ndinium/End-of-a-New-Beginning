@@ -1,0 +1,114 @@
+defined_text = {
+	name = WUR_customeffect_zweikaisertreffen_endpoint
+	
+	text = {
+		trigger = {
+			WUR = {
+				has_completed_focus = WUR_zweikaisertreffen
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_done"
+	}
+	text = {
+		trigger = {
+			WUR = {
+				NOT = {
+					OR = {
+						has_country_flag = WUR_FRA_accepted_invite
+						has_country_flag = WUR_RUS_accepted_invite
+						has_country_flag = WUR_FRA_denied_invite
+						has_country_flag = WUR_RUS_denied_invite
+					}
+				}
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_neutral"
+	}
+	text = {
+		trigger = {
+			WUR = {
+				OR = {
+					has_country_flag = WUR_FRA_accepted_invite
+					has_country_flag = WUR_FRA_denied_invite
+				}
+				NOT = {
+					OR = {
+						has_country_flag = WUR_RUS_accepted_invite
+						has_country_flag = WUR_RUS_denied_invite
+					}
+				}
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_neutral_one"
+	}
+	text = {
+		trigger = {
+			WUR = {
+				OR = {
+					has_country_flag = WUR_RUS_accepted_invite
+					has_country_flag = WUR_RUS_denied_invite
+				}
+				NOT = {
+					OR = {
+						has_country_flag = WUR_FRA_accepted_invite
+						has_country_flag = WUR_FRA_denied_invite
+					}
+				}
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_neutral_one"
+	}
+	text = {
+		trigger = {
+			WUR = {
+				has_country_flag = WUR_FRA_accepted_invite
+				has_country_flag = WUR_RUS_accepted_invite
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_positive"
+	}
+	text = {
+		trigger = {
+			WUR = {
+				has_country_flag = WUR_FRA_denied_invite
+				has_country_flag = WUR_RUS_denied_invite
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_negative"
+	}
+	text = {
+		trigger = {
+			WUR = {
+				has_country_flag = WUR_FRA_accepted_invite
+				has_country_flag = WUR_RUS_denied_invite
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_FRA_positive"
+	}
+	text = {
+		trigger = {
+			WUR = {
+				has_country_flag = WUR_FRA_denied_invite
+				has_country_flag = WUR_RUS_accepted_invite
+			}
+		}
+		localization_key = "WUR_customeffect_zweikaisertreffen_RUS_positive"
+	}
+}
+
+defined_text = {
+	name = WUR_zweikaisertreffen_tag_addition
+	
+	text = {
+		trigger = {
+			tag = RUS
+		}
+		localization_key = "WUR_zweikaisertreffen_RUS"
+	}
+	text = {
+		trigger = {
+			tag = FRA
+		}
+		localization_key = "WUR_zweikaisertreffen_FRA"
+	}
+}

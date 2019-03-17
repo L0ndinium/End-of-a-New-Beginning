@@ -1,0 +1,2774 @@
+focus_tree = {
+	id = ottoman_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = OTO
+		}
+	}
+	default = no
+	focus = {
+		id = oto_administrative_reform
+		text = OTO_administrative_reform
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		x = 17
+		y = 0
+		historical_ai = {
+			always = yes
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = OTO_young_ottoman_constitution
+		text = OTO_young_ottoman_constitution
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_backtread_on_tanzimat
+			focus = OTO_repeal_tanzimat
+		}
+		x = 17
+		y = 6
+
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = OTO_young_ottoman_constitution_signed
+			add_opinion_modifier = {
+				target = FRA
+				modifier = OTO_young_ottomans_and_france
+			}
+			news_event = {
+					id = OTO_young_ottomans.0
+			}
+			remove_ideas = OTO_declaration_of_seriat
+			add_popularity = {
+				ideology = centrism
+				popularity = 15
+			}
+			#This weakens the stance of the extreme islamists in favour of liberal islamism
+			add_popularity = {
+				ideology = fundamentalism
+				popularity = -5
+			}
+			add_popularity = {
+				ideology = autocracy
+				popularity = -5
+			}
+			add_timed_idea = {
+				#Decision to repeal the consitution is unavailable for 2 years
+				idea = OTO_young_ottoman_constitution_recently_signed
+				days = 730
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_increase_spending
+		text = OTO_increase_spending
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		mutually_exclusive = {
+			focus = OTO_save_money
+		}
+		x = 4
+		y = 0
+		historical_ai = {
+			always = yes
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_timed_idea = {
+				#The effects of the reform will wear off after 45 years if not removed manually.
+				#Add decision to remove manually
+				idea = OTO_increased_spending_bonus
+				days = 1825
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_save_money
+		text = OTO_save_money
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		mutually_exclusive = {
+			focus = OTO_increase_spending
+			focus = OTO_ramazan_decree
+		}
+		x = 11
+		y = 0
+		historical_ai = {
+			always = no
+		}
+
+		completion_reward = {
+			add_political_power = -10
+			add_timed_idea = {
+				#The effects of the reform will wear off after 45 years if not removed manually.
+				#Add decision to remove manually
+				idea = OTO_save_money_malus
+				days = 1825
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_western_diplomacy
+		text = OTO_western_diplomacy
+		icon = GFX_focus_AST_never_gallipoli
+		cost = 10.00
+		x = 35
+		y = 0
+
+		completion_reward = {
+			country_event = OTO_focus.0
+		}
+
+	}
+	focus = {
+		id = OTO_eastern_diplomacy
+		text = OTO_eastern_diplomacy
+		icon = GFX_focus_jap_manchurian_project
+		cost = 10.00
+		x = 49
+		y = 0
+
+		completion_reward = {
+			country_event = OTO_focus.1
+		}
+
+	}
+
+	#WIP
+	focus = {
+		id = OTO_post_congress_diplomacy
+		text = OTO_post_congress_diplomacy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = OTO_military_reform
+		text = OTO_military_reform
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_increase_spending
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_mass_literacy_programs
+		text = OTO_mass_literacy_programs
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_increase_spending
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = tech_humanities
+			}
+			add_timed_idea = {
+				#5 years of small research bonus
+				idea = OTO_mass_literacy_programs
+				days = 1825
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_classical_languages
+		text = OTO_classical_languages
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_mass_literacy_programs
+		}
+		x = 1
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 1
+				category = tech_humanities
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_arabic_legal_language
+		text = OTO_arabic_legal_language
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_classical_languages
+		}
+		mutually_exclusive = {
+			focus = OTO_turkish_legal_language
+		}
+		x = 1
+		y = 3
+		completion_reward = {
+			add_ideas = OTO_arabic_legal_language_chosen
+		}
+
+	}
+	focus = {
+		id = OTO_european_languages
+		text = OTO_european_languages
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_mass_literacy_programs
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_turkish_legal_language
+		text = OTO_turkish_legal_language
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_european_languages
+		}
+		mutually_exclusive = {
+			focus = OTO_arabic_legal_language
+		}
+		x = 3
+		y = 3
+		historical_ai = {
+			always = yes
+		}
+		completion_reward = {
+			add_ideas = OTO_turkish_legal_language_chosen
+		}
+
+	}
+	focus = {
+		id = OTO_open_kucuksu_palace
+		text = OTO_open_kucuksu_palace
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_increase_spending
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			add_political_power = 20
+			add_stability = 0.01
+			country_event = OTO_focus.2
+		}
+
+	}
+	focus = {
+		id = OTO_expand_the_railways
+		text = OTO_expand_the_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_increase_spending
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_agricultural_rail_services
+		text = OTO_agricultural_rail_services
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_expand_the_railways
+		}
+		mutually_exclusive = {
+			focus = OTO_industrial_rail_services
+		}
+		x = 5
+		y = 2
+		historical_ai = {
+			always = no
+		}
+		completion_reward = {
+			random_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = OTO_agricultural_rail_bonus
+				days = 1460
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_industrial_rail_services
+		text = OTO_industrial_rail_services
+		icon = GFX_focus_generic_tungsten
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_expand_the_railways
+		}
+		mutually_exclusive = {
+			focus = OTO_agricultural_rail_services
+		}
+		x = 7
+		y = 2
+		historical_ai = {
+			always = yes
+		}
+
+		completion_reward = {
+			random_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = OTO_industrial_rail_bonus
+				days = 1460
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_private_rail_investors
+		text = OTO_private_rail_investors
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_agricultural_rail_services
+			focus = OTO_industrial_rail_services
+		}
+		mutually_exclusive = {
+			focus = OTO_nationalise_the_railways
+		}
+		x = 5
+		y = 3
+		historical_ai = {
+			always = yes
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			add_timed_idea = {
+				idea = OTO_rail_investors
+				days = 1460
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_deutsche_bank_partnership
+		text = OTO_deutsche_bank_partnership
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_private_rail_investors
+		}
+		mutually_exclusive = {
+			focus = OTO_bank_of_england_partnership
+			focus = OTO_banque_de_france_partnership
+		}
+		x = 3
+		y = 4
+		historical_ai = {
+			always = yes
+		}
+		available = {
+			OR = {
+				country_exists = GER
+				country_exists = PRS
+			}
+			AND = {
+				NOT = { has_war_with = GER }
+				NOT = { has_war_with = PRS }
+			}
+			
+		}
+		completion_reward = {
+			add_political_power = -5
+			country_event = OTO_focus.3
+			add_ideas = OTO_bank_of_germany_rail_partner
+			if = {
+				limit = {
+					country_exists = GER
+				}
+				add_opinion_modifier = {
+					target = GER
+					modifier = OTO_rail_partnership
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PRS
+				}
+				add_opinion_modifier = {
+					target = PRS
+					modifier = OTO_rail_partnership
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = OTO_bank_of_england_partnership
+		text = OTO_bank_of_england_partnership
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_private_rail_investors
+		}
+		mutually_exclusive = {
+			focus = OTO_deutsche_bank_partnership
+			focus = OTO_banque_de_france_partnership
+		}
+		x = 5
+		y = 4
+		available = {
+			country_exists = ENG
+			NOT = { has_war_with = ENG }
+		}
+		completion_reward = {
+			add_political_power = -5
+			country_event = OTO_focus.4
+			add_ideas = OTO_bank_of_england_rail_partner
+			add_opinion_modifier = {
+				target = ENG
+				modifier = OTO_rail_partnership
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_nationalise_the_railways
+		text = OTO_nationalise_the_railways
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_agricultural_rail_services
+			focus = OTO_industrial_rail_services
+		}
+		mutually_exclusive = {
+			focus = OTO_private_rail_investors
+		}
+		x = 7
+		y = 3
+		historical_ai = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = OTO_nationalised_rail
+		}
+
+	}
+	focus = {
+		id = OTO_banque_de_france_partnership
+		text = OTO_banque_de_france_partnership
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_private_rail_investors
+		}
+		mutually_exclusive = {
+			focus = OTO_bank_of_england_partnership
+			focus = OTO_deutsche_bank_partnership
+		}
+		x = 7
+		y = 4
+		available = {
+			country_exists = FRA
+			NOT = { has_war_with = FRA }
+		}
+		completion_reward = {
+			add_political_power = -5
+			country_event = OTO_focus.5
+			add_ideas = OTO_bank_of_france_rail_partner
+			add_opinion_modifier = {
+				target = FRA
+				modifier = OTO_rail_partnership
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_port_projects
+		text = OTO_port_projects
+		icon = GFX_focus_generic_destroyer
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_increase_spending
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = naval_base
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = naval_base
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_subsidise_international_ports
+		text = OTO_subsidise_international_ports
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_port_projects
+		}
+		x = 9
+		y = 2
+		completion_reward = {
+			add_timed_idea = {
+				idea = OTO_international_port_subsidy
+				days = 3650
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_industrial_shipping
+		text = OTO_industrial_shipping
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_subsidise_international_ports
+		}
+		prerequisite = {
+			focus = OTO_industrial_rail_services
+		}
+		x = 9
+		y = 3
+		completion_reward = {
+			add_timed_idea = {
+				idea = OTO_industrial_shipping
+				days = 3650
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_defund_charities
+		text = OTO_defund_charities
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_save_money
+		}
+		mutually_exclusive = {
+			focus = OTO_army_cutbacks
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.05
+		}
+
+	}
+	focus = {
+		id = OTO_army_cutbacks
+		text = OTO_army_cutbacks
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_save_money
+		}
+		mutually_exclusive = {
+			focus = OTO_defund_charities
+		}
+		x = 12
+		y = 1
+		completion_reward = {
+			add_command_power = -50
+			add_war_support = -0.1
+		}
+
+	}
+	focus = {
+		id = OTO_close_down_provincial_palaces
+		text = OTO_close_down_provincial_palaces
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_defund_charities
+			focus = OTO_army_cutbacks
+		}
+		x = 11
+		y = 2
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.05
+		}
+
+	}
+	focus = {
+		id = OTO_first_crimean_war_debt_payoff
+		text = OTO_first_crimean_war_debt_payoff
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_close_down_provincial_palaces
+		}
+		x = 11
+		y = 3
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.08
+		}
+
+	}
+	focus = {
+		id = OTO_auction_state_assets
+		text = OTO_auction_state_assets
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_first_crimean_war_debt_payoff
+		}
+		mutually_exclusive = {
+			focus = OTO_close_down_embassies
+			focus = OTO_restrict_foreign_land_ownership
+		}
+		x = 9
+		y = 4
+		completion_reward = {
+			add_political_power = 50
+			add_timed_idea = {
+				idea = OTO_auctioned_state_assets
+				days = 3650
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_close_down_embassies
+		text = OTO_close_down_embassies
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_first_crimean_war_debt_payoff
+		}
+		mutually_exclusive = {
+			focus = OTO_auction_state_assets
+		}
+		x = 11
+		y = 4
+		completion_reward = {
+			add_timed_idea = {
+				idea = OTO_closed_embassies
+				days = 3650
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_final_crimean_war_debt_payment
+		text = OTO_final_crimean_war_debt_payment
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_auction_state_assets
+			focus = OTO_close_down_embassies
+		}
+		x = 10
+		y = 5
+		completion_reward = {
+			news_event = { id = OTO_focus.4 }
+			remove_ideas = OTO_crimean_war_debt
+		}
+
+	}
+	focus = {
+		id = OTO_decree_in_favour_of_seriat
+		text = OTO_decree_in_favour_of_seriat
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = oto_administrative_reform
+		}
+		mutually_exclusive = {
+			focus = OTO_legislate_on_tanzimat
+		}
+		x = 15
+		y = 1
+		historical_ai = {
+			always = no
+		}
+		completion_reward = {
+
+			add_ideas = OTO_declaration_of_seriat
+			#Decision to repeal is not immediately available
+			add_timed_idea = { 
+				idea = OTO_recent_declaration_of_seriat
+				days = 750
+			}
+			
+		}
+
+	}
+	focus = {
+		id = OTO_dissolve_court_of_ordinances
+		text = OTO_dissolve_court_of_ordinances
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_decree_in_favour_of_seriat
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+			#Change the law and order law
+			add_political_power = 50
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.05
+			}
+			add_stability = -0.05
+			
+		}
+
+	}
+	focus = {
+		id = OTO_empower_grand_mufti
+		text = OTO_empower_grand_mufti
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_dissolve_court_of_ordinances
+		}
+		mutually_exclusive = {
+			focus = OTO_caliphal_authority
+		}
+		x = 14
+		y = 3
+		completion_reward = {
+			#Gradual increase in power towards fundamentalist
+			add_ideas = OTO_grand_mufti_empowered
+			#Possibility for event chain towards the Grand Mufti becoming de-facto head of government, replacing Grand Vizier or Prime-minister
+			country_event = OTO_focus.6
+		}
+		
+
+	}
+	focus = {
+		id = OTO_repeal_tanzimat
+		text = OTO_repeal_tanzimat
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_empower_grand_mufti
+		}
+		x = 14
+		y = 4
+		completion_reward = {
+			#Decrease religious tolerance towards Christians and Jews
+			remove_ideas = OTO_tanzimat_reform
+		}
+		
+
+	}
+	focus = {
+		id = OTO_caliphal_authority
+		text = OTO_caliphal_authority
+		icon = GFX_focus_AST_war_japan
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_dissolve_court_of_ordinances
+		}
+		mutually_exclusive = {
+			focus = OTO_empower_grand_mufti
+		}
+		x = 16
+		y = 3
+		completion_reward = {
+			#Decrease religious tolerance towards Shiite
+			#Increase cultural tolerance towards Arabs, Egyptians, Kurds and Persians
+			add_political_power = 150
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fundamentalism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.05
+			}
+			
+		}
+
+	}
+	focus = {
+		id = OTO_backtread_on_tanzimat
+		text = OTO_backtread_on_tanzimat
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_caliphal_authority
+		}
+		x = 16
+		y = 4
+		completion_reward = {
+			#Decrease religious tolerance towards Christians and Jews
+			remove_ideas = OTO_tanzimat_reform
+			add_stability = -0.1
+			add_political_power = -75
+			
+		}
+
+	}
+	focus = {
+		id = OTO_reinstitute_devshirme
+		text = OTO_reinstitute_devshirme
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_repeal_tanzimat
+			focus = OTO_backtread_on_tanzimat
+		}
+		x = 11
+		y = 6
+		completion_reward = {
+			#Decrease cultural tolerance towards non-Turks
+			#Decreased social climbing for non-Turks, increased manpower.
+			add_ideas = OTO_devshirme
+			
+		}
+
+	}
+	focus = {
+		id = OTO_prohibit_building_churches
+		text = OTO_prohibit_building_churches
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_repeal_tanzimat
+			focus = OTO_backtread_on_tanzimat
+		}
+		mutually_exclusive = {
+			focus = OTO_secular_land_reform
+		}
+		x = 13
+		y = 6
+		completion_reward = {
+			#Decrease religious tolerance towards Christians
+			#Increase religious assimilation towards Sunni
+			add_popularity = {
+				ideology = fundamentalism
+				popularity = 0.05
+			}
+			news_event = OTO_focus.7
+			add_political_power = 150
+			add_ideas = OTO_restricted_churches
+			reverse_add_opinion_modifier = {
+				target = RUS
+				modifier = OTO_restricted_churches_opinion_malus
+			}
+			reverse_add_opinion_modifier = {
+				target = AUS
+				modifier = OTO_restricted_churches_opinion_malus
+			}
+			reverse_add_opinion_modifier = {
+				target = SER
+				modifier = OTO_restricted_churches_opinion_malus
+			}
+			reverse_add_opinion_modifier = {
+				target = ROM
+				modifier = OTO_restricted_churches_opinion_malus
+			}
+			reverse_add_opinion_modifier = {
+				target = WAL
+				modifier = OTO_restricted_churches_opinion_malus
+			}
+			reverse_add_opinion_modifier = {
+				target = GEO
+				modifier = OTO_restricted_churches_opinion_malus
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_remake_the_sublime_porte_school
+		text = OTO_remake_the_sublime_porte_school
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_repeal_tanzimat
+			focus = OTO_backtread_on_tanzimat
+		}
+		x = 15
+		y = 6
+		completion_reward = {
+			#Increase religious tolerance towards Shiite
+			#Increase cultural tolerance towards Arabs, Egyptians and Persians
+			add_ideas = OTO_sublime_porte_school
+		}
+
+	}
+	focus = {
+		id = OTO_legislate_on_tanzimat
+		text = OTO_legislate_on_tanzimat
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = oto_administrative_reform
+		}
+		mutually_exclusive = {
+			focus = OTO_decree_in_favour_of_seriat
+		}
+		x = 19
+		y = 1
+		historical_ai = {
+			always = yes
+		}
+		completion_reward = {
+			#Increase religious tolerance towards Christians and Jews
+			add_political_power = 150
+			add_stability = 0.01
+			
+		}
+
+	}
+	focus = {
+		id = OTO_empower_grand_vizier
+		text = OTO_empower_grand_vizier
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_legislate_on_tanzimat
+		}
+		mutually_exclusive = {
+			focus = OTO_empower_sultan
+		}
+		x = 18
+		y = 2
+		historical_ai = {
+			always = yes
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.02
+			
+		}
+
+	}
+	focus = {
+		id = OTO_civil_service_colleges
+		text = OTO_civil_service_colleges
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_empower_grand_vizier
+		}
+		x = 18
+		y = 3
+		completion_reward = {
+			add_political_power = 150
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = tech_humanities
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_sponsor_arab_students
+		text = OTO_sponsor_arab_students
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_civil_service_colleges
+		}
+		x = 18
+		y = 5
+		completion_reward = {
+			#Increase cultural tolerance towards Arabs
+			#Choose how to sponsor and trigger an event for the appropriate Arab countries
+			country_event = OTO_focus.8
+		}
+
+	}
+	focus = {
+		id = OTO_empower_sultan
+		text = OTO_empower_sultan
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_legislate_on_tanzimat
+		}
+		mutually_exclusive = {
+			focus = OTO_empower_grand_vizier
+		}
+		x = 20
+		y = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = autocracy
+				popularity = 4
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_purge_the_justice_system
+		text = OTO_purge_the_justice_system
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_empower_sultan
+		}
+		x = 20
+		y = 3
+		completion_reward = {
+			country_event = {
+					id = OTO_focus.9
+			}
+			add_stability = -0.01
+		}
+
+	}
+	focus = {
+		id = OTO_press_regulations
+		text = OTO_press_regulations
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_civil_service_colleges
+			focus = OTO_purge_the_justice_system
+		}
+		x = 19
+		y = 4
+		completion_reward = {
+				country_event = {
+						#Choose what kind of press regulations to instate, and get the appropriate idea
+						id = OTO_focus.10
+				}
+		}
+
+	}
+	focus = {
+		id = OTO_replace_grand_vizier_prime_minister
+		text = OTO_replace_grand_vizier_prime_minister
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_purge_the_justice_system
+		}
+		x = 21
+		y = 4
+		completion_reward = {
+				country_event = {
+						#Cancel the Grand Vizier replacement system and remove the national ideas
+						id = OTO_focus.11
+				}
+				#Grand viziers will henceforth be elected by parliament.
+				set_country_flag = OTO_prime_minister_system
+		}
+
+	}
+	focus = {
+		id = OTO_absolutist_cabinet
+		text = OTO_absolutist_cabinet
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_replace_grand_vizier_prime_minister
+		}
+		mutually_exclusive = {
+			focus = OTO_constitutional_monarchy
+		}
+		x = 21
+		y = 5
+		completion_reward = {
+				add_popularity = {
+						ideology = autocracy
+						popularity = 0.05
+				}
+		}
+
+	}
+	focus = {
+		id = OTO_economic_reform
+		text = OTO_economic_reform
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = oto_administrative_reform
+		}
+		x = 26
+		y = 1
+		completion_reward ={
+				add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = OTO_national_school_of_economics
+		text = OTO_national_school_of_economics
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_legislate_on_tanzimat
+		}
+		prerequisite = {
+			focus = OTO_economic_reform
+		}
+		x = 22
+		y = 2
+		completion_reward = {
+				add_political_power = 100
+				country_event = {
+						#Open the national school, add an idea
+						id = OTO_focus.12
+				}
+		}
+
+	}
+	focus = {
+		id = OTO_common_citizenship
+		text = OTO_common_citizenship
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_sponsor_arab_students
+			focus = OTO_replace_grand_vizier_prime_minister
+		}
+		x = 19
+		y = 6
+		completion_reward = {
+				#Increase religious tolerance towards Christians and Jews
+				add_stability = 0.05
+				add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = OTO_teach_greek_in_schools
+		text = OTO_teach_greek_in_schools
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_common_citizenship
+		}
+		x = 22
+		y = 7
+		completion_reward = {
+				#Increase cultural tolerance towards Greeks
+				#Increase religious tolerance towards Christians
+				#Will make it easier to core Greek areas (with culture mechanics)
+				set_country_flag = OTO_teaching_greek
+				reverse_add_opinion_modifier = {
+						target = GRE
+						modifier = GRE_OTO_teaching_greek
+				}
+				add_to_variable = {
+					var = extra_freedom
+					value = 1
+				}
+		}
+
+	}
+	focus = {
+		id = OTO_the_land_code
+		text = OTO_the_land_code
+		icon = GFX_focus_generic_industry_1
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_economic_reform
+		}
+		x = 26
+		y = 2
+		completion_reward = {
+				#Increase religious tolerance towards Christians and Jews
+				add_political_power = 75
+				country_event = {
+						#Implementation of the land code
+						id = OTO_focus.13
+				}
+		}
+
+	}
+	focus = {
+		id = OTO_provincial_reform
+		text = OTO_provincial_reform
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_the_land_code
+		}
+		x = 24
+		y = 3
+		completion_reward = {
+			add_political_power = 75
+			country_event = {
+				#Reorganisation of the provinces - player gets a choice on how to reorganise them.
+				id = OTO_focus.14
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_levantine_land_registration
+		text = OTO_levantine_land_registration
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_the_land_code
+		}
+		x = 26
+		y = 3
+		completion_reward = {
+			#Decrease cultural tolerance towards non-Turks
+			#Increas assimilation rate towards Turkish
+			add_political_power = 50
+			add_ideas = {OTO_levantine_land_registration}
+			country_event = {
+				#This forces many minorities in the Levant to be displaced from their land where they may have been
+				# indentured. It also displeases a large number of wealthy, if corrupt, landowners.
+				id = OTO_focus.141
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_restrict_foreign_land_ownership
+		text = OTO_restrict_foreign_land_ownership
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_levantine_land_registration
+		}
+		mutually_exclusive = {
+			focus = OTO_privatise_peasant_estates
+			focus = OTO_auction_state_assets
+		}
+		x = 24
+		y = 4
+		historical_ai = {
+			always = no
+		}
+		completion_reward = {
+			#Decrease cultural tolerance towards non-Turks
+			add_political_power = 75
+			#####
+			#Idea limits purchase of land by foreign pops (yet to be implemented)
+			#add_ideas = OTO_restrict_foreign_land_ownership
+			####
+			news_event = {
+				#Seizure of foreign assets which violate new terms
+				id = OTO_focus.15
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_regulate_foreign_companies
+		text = OTO_regulate_foreign_companies
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_restrict_foreign_land_ownership
+		}
+		x = 24
+		y = 5
+		completion_reward = {
+			#Decrease religious tolerance towards Christians and Jews
+			#Decrease cultural tolerance towards non-Turks
+			add_political_power = 25
+			####
+			#Limit foreign investment, add a bonus to local investment
+			#add_ideas = OTO_foreign_company_regulation
+			####
+		}
+
+	}
+	focus = {
+		id = OTO_emancipation_reform_decree
+		text = OTO_emancipation_reform_decree
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_levantine_land_registration
+		}
+		x = 26
+		y = 6
+		completion_reward = {
+			#Add religious tolerance towards Christians and Jews
+			add_political_power = -50
+			#Emancipation of non-muslim minorities, allowing them to hold land.
+			add_ideas = {OTO_emancipation_reform}
+			news_event = {
+				#Good news for western Christian powers
+				id = OTO_focus.16
+			}
+		}
+
+	}
+	focus = {
+		id = OTO_secular_land_reform
+		text = OTO_secular_land_reform
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_emancipation_reform_decree
+		}
+		mutually_exclusive = {
+			focus = OTO_prohibit_building_churches
+			focus = OTO_embrace_wahhabism
+		}
+		x = 26
+		y = 7
+		completion_reward = {
+			#Add religious tolerance towards Christians and Jews
+		}
+
+	}
+	focus = {
+		id = OTO_privatise_peasant_estates
+		text = OTO_privatise_peasant_estates
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_levantine_land_registration
+		}
+		mutually_exclusive = {
+			focus = OTO_restrict_foreign_land_ownership
+		}
+		x = 27
+		y = 4
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_partition_levantine_land
+		text = OTO_partition_levantine_land
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_privatise_peasant_estates
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = OTO_crack_down_on_tax_farmers
+		text = OTO_crack_down_on_tax_farmers
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_the_land_code
+		}
+		x = 28
+		y = 3
+
+	}
+	focus = {
+		id = OTO_national_credit
+		text = OTO_national_credit
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_crack_down_on_tax_farmers
+		}
+		x = 29
+		y = 4
+
+	}
+	focus = {
+		id = OTO_ramazan_decree
+		text = OTO_ramazan_decree
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_national_credit
+		}
+		mutually_exclusive = {
+			focus = OTO_save_money
+		}
+		x = 29
+		y = 5
+
+	}
+	focus = {
+		id = OTO_westernise_state_uniforms
+		text = OTO_westernise_state_uniforms
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_western_diplomacy
+		}
+		x = 30
+		y = 1
+
+	}
+	focus = {
+		id = OTO_protect_christian_missionaries
+		text = OTO_protect_christian_missionaries
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_western_diplomacy
+		}
+		mutually_exclusive = {
+			focus = OTO_eject_foreign_missionaries
+		}
+		x = 32
+		y = 1
+
+	}
+	focus = {
+		id = OTO_christian_special_status
+		text = OTO_christian_special_status
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_protect_christian_missionaries
+		}
+		mutually_exclusive = {
+			focus = OTO_christian_jewish_equality
+			focus = OTO_embrace_wahhabism
+		}
+		x = 31
+		y = 2
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_christian_jewish_equality
+		text = OTO_christian_jewish_equality
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_protect_christian_missionaries
+		}
+		mutually_exclusive = {
+			focus = OTO_christian_special_status
+		}
+		x = 33
+		y = 2
+		historical_ai = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = OTO_balkan_nation_states
+		text = OTO_balkan_nation_states
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_western_diplomacy
+		}
+		mutually_exclusive = {
+			focus = OTO_balkan_religious_states
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = OTO_balkan_religious_states
+		text = OTO_balkan_religious_states
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_western_diplomacy
+		}
+		mutually_exclusive = {
+			focus = OTO_balkan_nation_states
+		}
+		x = 36
+		y = 1
+
+	}
+	focus = {
+		id = OTO_new_balkan_police
+		text = OTO_new_balkan_police
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_balkan_nation_states
+			focus = OTO_balkan_religious_states
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = OTO_suez_canal_involvement
+		text = OTO_suez_canal_involvement
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_western_diplomacy
+		}
+		x = 38
+		y = 1
+
+	}
+	focus = {
+		id = OTO_approve_the_armenian_constitution
+		text = OTO_approve_the_armenian_constitution
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_eastern_diplomacy
+		}
+		mutually_exclusive = {
+			focus = OTO_deny_armenian_constitution
+		}
+		x = 43
+		y = 1
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_armenian_substate
+		text = OTO_armenian_substate
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_approve_the_armenian_constitution
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = OTO_armenia_separate_but_equal
+		text = OTO_armenia_separate_but_equal
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_armenian_substate
+		}
+		mutually_exclusive = {
+			focus = OTO_armenian_sovereignty
+		}
+		x = 42
+		y = 3
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_armenian_sovereignty
+		text = OTO_armenian_sovereignty
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_armenian_substate
+		}
+		mutually_exclusive = {
+			focus = OTO_armenia_separate_but_equal
+		}
+		x = 44
+		y = 3
+		historical_ai = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = OTO_independent_armenian_partnership
+		text = OTO_independent_armenian_partnership
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_armenian_sovereignty
+		}
+		x = 44
+		y = 4
+
+	}
+	focus = {
+		id = OTO_deny_armenian_constitution
+		text = OTO_deny_armenian_constitution
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_eastern_diplomacy
+		}
+		mutually_exclusive = {
+			focus = OTO_approve_the_armenian_constitution
+		}
+		x = 46
+		y = 1
+		historical_ai = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = OTO_kurdish_amnesty
+		text = OTO_kurdish_amnesty
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_deny_armenian_constitution
+		}
+		x = 46
+		y = 2
+
+	}
+	focus = {
+		id = OTO_kurdish_representation
+		text = OTO_kurdish_representation
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_kurdish_amnesty
+		}
+		x = 46
+		y = 3
+
+	}
+	focus = {
+		id = OTO_greater_kurdistan
+		text = OTO_greater_kurdistan
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_kurdish_representation
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = OTO_iranian_kurdistan_ultimatum
+		text = OTO_iranian_kurdistan_ultimatum
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_greater_kurdistan
+		}
+		mutually_exclusive = {
+			focus = OTO_kurdish_resettlement
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = OTO_kurdish_resettlement
+		text = OTO_kurdish_resettlement
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_greater_kurdistan
+		}
+		mutually_exclusive = {
+			focus = OTO_iranian_kurdistan_ultimatum
+		}
+		x = 47
+		y = 5
+
+	}
+	focus = {
+		id = OTO_cossack_migrant_crisis
+		text = OTO_cossack_migrant_crisis
+		icon = GFX_focus_cze_german_puppet
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_eastern_diplomacy
+		}
+		x = 51
+		y = 1
+
+	}
+	focus = {
+		id = OTO_close_the_borders
+		text = OTO_close_the_borders
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_cossack_migrant_crisis
+		}
+		mutually_exclusive = {
+			focus = OTO_open_arms
+		}
+		x = 50
+		y = 2
+		historical_ai = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = OTO_deport_the_cossacks
+		text = OTO_deport_the_cossacks
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_close_the_borders
+		}
+		x = 50
+		y = 3
+
+	}
+	focus = {
+		id = OTO_cossacks_into_bosnia
+		text = OTO_cossacks_into_bosnia
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_deport_the_cossacks
+		}
+		mutually_exclusive = {
+			focus = OTO_cossacks_into_egypt
+			focus = OTO_cossacks_back_to_russia
+		}
+		x = 48
+		y = 4
+
+	}
+	focus = {
+		id = OTO_cossacks_into_egypt
+		text = OTO_cossacks_into_egypt
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_deport_the_cossacks
+		}
+		mutually_exclusive = {
+			focus = OTO_cossacks_into_bosnia
+			focus = OTO_cossacks_back_to_russia
+		}
+		x = 50
+		y = 4
+
+	}
+	focus = {
+		id = OTO_cossacks_back_to_russia
+		text = OTO_cossacks_back_to_russia
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_deport_the_cossacks
+		}
+		mutually_exclusive = {
+			focus = OTO_cossacks_into_egypt
+			focus = OTO_cossacks_into_bosnia
+		}
+		x = 52
+		y = 4
+
+	}
+	focus = {
+		id = OTO_open_arms
+		text = OTO_open_arms
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_cossack_migrant_crisis
+		}
+		mutually_exclusive = {
+			focus = OTO_close_the_borders
+		}
+		x = 55
+		y = 2
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_integrate_the_cossacks
+		text = OTO_integrate_the_cossacks
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_open_arms
+		}
+		x = 55
+		y = 3
+
+	}
+	focus = {
+		id = OTO_balkan_tatar_settlements
+		text = OTO_balkan_tatar_settlements
+		icon = GFX_focus_generic_industry_1
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_integrate_the_cossacks
+		}
+		x = 54
+		y = 4
+
+	}
+	focus = {
+		id = OTO_anatolian_tatar_settlements
+		text = OTO_anatolian_tatar_settlements
+		icon = GFX_focus_generic_industry_1
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_integrate_the_cossacks
+		}
+		x = 56
+		y = 4
+
+	}
+	focus = {
+		id = OTO_extend_land_law_to_egypt
+		text = OTO_extend_land_law_to_egypt
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_eastern_diplomacy
+		}
+		x = 59
+		y = 1
+
+	}
+	focus = {
+		id = OTO_new_talks_with_egypt
+		text = OTO_new_talks_with_egypt
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_extend_land_law_to_egypt
+		}
+		x = 59
+		y = 2
+
+	}
+	focus = {
+		id = OTO_egyptian_sovereignty
+		text = OTO_egyptian_sovereignty
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_new_talks_with_egypt
+		}
+		mutually_exclusive = {
+			focus = OTO_control_in_egypt
+		}
+		x = 58
+		y = 3
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_control_in_egypt
+		text = OTO_control_in_egypt
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_new_talks_with_egypt
+		}
+		mutually_exclusive = {
+			focus = OTO_egyptian_sovereignty
+		}
+		x = 60
+		y = 3
+		historical_ai = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = OTO_blockade_egypt
+		text = OTO_blockade_egypt
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_control_in_egypt
+		}
+		x = 60
+		y = 4
+
+	}
+	focus = {
+		id = OTO_sieze_egyptian_private_assets
+		text = OTO_sieze_egyptian_private_assets
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_blockade_egypt
+		}
+		x = 60
+		y = 5
+
+	}
+	focus = {
+		id = OTO_influence_in_arabia
+		text = OTO_influence_in_arabia
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_eastern_diplomacy
+		}
+		x = 64
+		y = 1
+
+	}
+	focus = {
+		id = OTO_support_al_saud
+		text = OTO_support_al_saud
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_influence_in_arabia
+		}
+		mutually_exclusive = {
+			focus = OTO_support_al_rashid
+			focus = OTO_direct_rule_in_arabia
+		}
+		x = 62
+		y = 2
+		historical_ai = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = OTO_embrace_wahhabism
+		text = OTO_embrace_wahhabism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_support_al_saud
+		}
+		mutually_exclusive = {
+			focus = OTO_secular_land_reform
+			focus = OTO_christian_special_status
+		}
+		x = 62
+		y = 3
+
+	}
+	focus = {
+		id = OTO_support_al_rashid
+		text = OTO_support_al_rashid
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_influence_in_arabia
+		}
+		mutually_exclusive = {
+			focus = OTO_support_al_saud
+			focus = OTO_direct_rule_in_arabia
+		}
+		x = 64
+		y = 2
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_confirm_rashidi_successors
+		text = OTO_confirm_rashidi_successors
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_support_al_rashid
+		}
+		x = 64
+		y = 3
+
+	}
+	focus = {
+		id = OTO_accountable_monarchy
+		text = OTO_accountable_monarchy
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_common_citizenship
+			focus = OTO_young_ottoman_constitution
+		}
+		x = 19
+		y = 7
+
+	}
+	focus = {
+		id = OTO_constitutional_monarchy
+		text = OTO_constitutional_monarchy
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_accountable_monarchy
+		}
+		mutually_exclusive = {
+			focus = OTO_absolutist_cabinet
+		}
+		x = 19
+		y = 8
+
+	}
+	focus = {
+		id = OTO_provincial_seats
+		text = OTO_provincial_seats
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_constitutional_monarchy
+		}
+		x = 19
+		y = 9
+
+	}
+	focus = {
+		id = OTO_rein_in_parliament
+		text = OTO_rein_in_parliament
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_provincial_seats
+		}
+		mutually_exclusive = {
+			focus = OTO_give_parliament_power
+		}
+		x = 19
+		y = 10
+		historical_ai = {
+			always = yes
+		}
+
+	}
+	focus = {
+		id = OTO_give_parliament_power
+		text = OTO_give_parliament_power
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_provincial_seats
+		}
+		mutually_exclusive = {
+			focus = OTO_rein_in_parliament
+			focus = OTO_exile_reformers
+		}
+		x = 23
+		y = 10
+		historical_ai = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = OTO_parliamentary_council
+		text = OTO_parliamentary_council
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_give_parliament_power
+		}
+		mutually_exclusive = {
+			focus = OTO_political_parties
+		}
+		x = 22
+		y = 11
+
+	}
+	focus = {
+		id = OTO_political_parties
+		text = OTO_political_parties
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_give_parliament_power
+		}
+		mutually_exclusive = {
+			focus = OTO_parliamentary_council
+		}
+		x = 24
+		y = 11
+
+	}
+	focus = {
+		id = OTO_extend_voting_rights
+		text = OTO_extend_voting_rights
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_parliamentary_council
+			focus = OTO_political_parties
+		}
+		x = 22
+		y = 12
+
+	}
+	focus = {
+		id = OTO_parliamentary_control_of_the_army
+		text = OTO_parliamentary_control_of_the_army
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_parliamentary_council
+			focus = OTO_political_parties
+		}
+		x = 24
+		y = 12
+
+	}
+	focus = {
+		id = OTO_eject_foreign_missionaries
+		text = OTO_eject_foreign_missionaries
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_prohibit_building_churches
+		}
+		mutually_exclusive = {
+			focus = OTO_protect_christian_missionaries
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = OTO_international_islam
+		text = OTO_international_islam
+		icon = GFX_focus_ger_great_red_menace
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_remake_the_sublime_porte_school
+		}
+		x = 15
+		y = 7
+
+	}
+	focus = {
+		id = OTO_reform_the_caliphate
+		text = OTO_reform_the_caliphate
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_international_islam
+		}
+		x = 14
+		y = 8
+
+	}
+	focus = {
+		id = OTO_limit_patriarchs_authority
+		text = OTO_limit_patriarchs_authority
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_eject_foreign_missionaries
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = OTO_crack_down_on_heresy
+		text = OTO_crack_down_on_heresy
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_reform_the_caliphate
+		}
+		mutually_exclusive = {
+			focus = OTO_islamic_pluralism
+		}
+		x = 13
+		y = 9
+
+	}
+	focus = {
+		id = OTO_islamic_pluralism
+		text = OTO_islamic_pluralism
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_reform_the_caliphate
+		}
+		mutually_exclusive = {
+			focus = OTO_crack_down_on_heresy
+		}
+		x = 15
+		y = 9
+
+	}
+	focus = {
+		id = OTO_exile_shia
+		text = OTO_exile_shia
+		icon = GFX_focus_cze_german_puppet
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_crack_down_on_heresy
+		}
+		x = 10
+		y = 10
+
+	}
+	focus = {
+		id = OTO_exile_the_ibadi
+		text = OTO_exile_the_ibadi
+		icon = GFX_focus_cze_german_puppet
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_crack_down_on_heresy
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
+		id = OTO_special_regiments
+		text = OTO_special_regiments
+		icon = GFX_focus_yug_ikarus
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_islamic_pluralism
+		}
+		x = 14
+		y = 10
+
+	}
+	focus = {
+		id = OTO_holy_warriors
+		text = OTO_holy_warriors
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_crack_down_on_heresy
+			focus = OTO_special_regiments
+		}
+		x = 14
+		y = 11
+
+	}
+	focus = {
+		id = OTO_renewed_jihad
+		text = OTO_renewed_jihad
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_holy_warriors
+		}
+		x = 14
+		y = 12
+
+	}
+	focus = {
+		id = OTO_exile_greek_traitors
+		text = OTO_exile_greek_traitors
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_limit_patriarchs_authority
+		}
+		x = 11
+		y = 9
+
+	}
+	focus = {
+		id = OTO_eliminate_greece
+		text = OTO_eliminate_greece
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_renewed_jihad
+		}
+		x = 16
+		y = 13
+
+	}
+	focus = {
+		id = OTO_reunite_bosnia
+		text = OTO_reunite_bosnia
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_renewed_jihad
+		}
+		x = 14
+		y = 13
+
+	}
+	focus = {
+		id = OTO_invade_hungary
+		text = OTO_invade_hungary
+		icon = GFX_focus_proclaim_the_restauration_of_austria_hungary
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_reunite_bosnia
+		}
+		x = 14
+		y = 14
+
+	}
+	focus = {
+		id = OTO_african_islamic_alliance
+		text = OTO_african_islamic_alliance
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_islamic_pluralism
+		}
+		x = 16
+		y = 10
+
+	}
+	focus = {
+		id = OTO_crimean_protectorate
+		text = OTO_crimean_protectorate
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_eliminate_greece
+		}
+		x = 17
+		y = 14
+
+	}
+	focus = {
+		id = OTO_admit_defeat
+		text = OTO_admit_defeat
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_renewed_jihad
+		}
+		x = 12
+		y = 13
+
+	}
+	focus = {
+		id = OTO_force_abdication
+		text = OTO_force_abdication
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_admit_defeat
+		}
+		x = 12
+		y = 14
+
+	}
+	focus = {
+		id = OTO_new_treaty
+		text = OTO_new_treaty
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_invade_hungary
+			focus = OTO_crimean_protectorate
+		}
+		x = 15
+		y = 15
+
+	}
+	focus = {
+		id = OTO_the_military_plot
+		text = OTO_the_military_plot
+		icon = GFX_focus_ger_oppose_hitler
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_parliamentary_control_of_the_army
+		}
+		mutually_exclusive = {
+			focus = OTO_reform_army_hierarchy
+		}
+		x = 23
+		y = 13
+
+	}
+	focus = {
+		id = OTO_rouse_the_rabble
+		text = OTO_rouse_the_rabble
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_the_military_plot
+		}
+		mutually_exclusive = {
+			focus = OTO_seek_french_revolution_aid
+			focus = OTO_side_with_the_arabs
+		}
+		x = 21
+		y = 14
+
+	}
+	focus = {
+		id = OTO_seek_french_revolution_aid
+		text = OTO_seek_french_revolution_aid
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_the_military_plot
+		}
+		mutually_exclusive = {
+			focus = OTO_rouse_the_rabble
+			focus = OTO_side_with_the_arabs
+			focus = OTO_young_ottoman_constitution
+		}
+		x = 23
+		y = 14
+
+	}
+	focus = {
+		id = OTO_side_with_the_arabs
+		text = OTO_side_with_the_arabs
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_the_military_plot
+		}
+		mutually_exclusive = {
+			focus = OTO_seek_french_revolution_aid
+			focus = OTO_rouse_the_rabble
+			focus = OTO_direct_rule_in_arabia
+		}
+		x = 25
+		y = 14
+
+	}
+	focus = {
+		id = OTO_remove_the_monarchy
+		text = OTO_remove_the_monarchy
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_challenge_the_monarchy
+		}
+		x = 23
+		y = 16
+
+	}
+	focus = {
+		id = OTO_challenge_the_monarchy
+		text = OTO_challenge_the_monarchy
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_rouse_the_rabble
+			focus = OTO_seek_french_revolution_aid
+			focus = OTO_side_with_the_arabs
+		}
+		x = 23
+		y = 15
+
+	}
+	focus = {
+		id = OTO_reform_army_hierarchy
+		text = OTO_reform_army_hierarchy
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_parliamentary_control_of_the_army
+		}
+		mutually_exclusive = {
+			focus = OTO_the_military_plot
+		}
+		x = 26
+		y = 13
+
+	}
+	focus = {
+		id = OTO_rethink_tanzimat
+		text = OTO_rethink_tanzimat
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_rein_in_parliament
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = OTO_ban_personal_weapons
+		text = OTO_ban_personal_weapons
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_rethink_tanzimat
+			focus = OTO_reform_army_hierarchy
+		}
+		x = 20
+		y = 13
+
+	}
+	focus = {
+		id = OTO_martial_law_constitution
+		text = OTO_martial_law_constitution
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_the_military_plot
+			focus = OTO_rein_in_parliament
+		}
+		x = 18
+		y = 11
+
+	}
+	focus = {
+		id = OTO_exile_reformers
+		text = OTO_exile_reformers
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_martial_law_constitution
+		}
+		mutually_exclusive = {
+			focus = OTO_give_parliament_power
+		}
+		x = 18
+		y = 12
+
+	}
+	focus = {
+		id = OTO_limit_armenian_millets
+		text = OTO_limit_armenian_millets
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_armenia_separate_but_equal
+		}
+		x = 42
+		y = 4
+
+	}
+	focus = {
+		id = OTO_state_of_emergency
+		text = OTO_state_of_emergency
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_force_abdication
+		}
+		x = 12
+		y = 15
+
+	}
+	focus = {
+		id = OTO_crush_the_rebellion
+		text = OTO_crush_the_rebellion
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_state_of_emergency
+		}
+		mutually_exclusive = {
+			focus = OTO_crush_the_old_order
+		}
+		x = 11
+		y = 16
+
+	}
+	focus = {
+		id = OTO_crush_the_old_order
+		text = OTO_crush_the_old_order
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_state_of_emergency
+		}
+		mutually_exclusive = {
+			focus = OTO_crush_the_rebellion
+		}
+		x = 13
+		y = 16
+
+	}
+	focus = {
+		id = OTO_new_republic
+		text = OTO_new_republic
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_crush_the_rebellion
+		}
+		mutually_exclusive = {
+			focus = OTO_reinstate_the_monarchy
+		}
+		x = 10
+		y = 17
+
+	}
+	focus = {
+		id = OTO_reinstate_the_monarchy
+		text = OTO_reinstate_the_monarchy
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_crush_the_rebellion
+		}
+		mutually_exclusive = {
+			focus = OTO_new_republic
+		}
+		x = 12
+		y = 17
+
+	}
+	focus = {
+		id = OTO_communist_union_tree
+		text = OTO_communist_union_tree
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_crush_the_old_order
+		}
+		x = 13
+		y = 18
+
+	}
+	focus = {
+		id = OTO_mecelle
+		text = OTO_mecelle
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_reform_the_caliphate
+			focus = OTO_common_citizenship
+		}
+		x = 17
+		y = 8
+
+	}
+	focus = {
+		id = OTO_formally_recognise_egypt
+		text = OTO_formally_recognise_egypt
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_egyptian_sovereignty
+		}
+		x = 58
+		y = 4
+
+	}
+	focus = {
+		id = OTO_egyptian_european_trade_agreement
+		text = OTO_egyptian_european_trade_agreement
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_formally_recognise_egypt
+		}
+		x = 58
+		y = 5
+
+	}
+	focus = {
+		id = OTO_direct_rule_in_arabia
+		text = OTO_direct_rule_in_arabia
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = OTO_influence_in_arabia
+		}
+		mutually_exclusive = {
+			focus = OTO_support_al_rashid
+			focus = OTO_support_al_saud
+			focus = OTO_side_with_the_arabs
+		}
+		x = 66
+		y = 2
+
+	}
+}

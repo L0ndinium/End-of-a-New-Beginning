@@ -11,7 +11,7 @@ state={
 	state_category = town
 
 	history={
-		owner = CHI
+		owner = MAN
 		victory_points = {
 			957 15
 		}
@@ -25,6 +25,7 @@ state={
 			}
 		}
 		add_core_of = CHI
+		add_core_of = MAN
 	}
 
 	provinces={

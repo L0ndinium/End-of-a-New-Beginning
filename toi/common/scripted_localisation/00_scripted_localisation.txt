@@ -88,21 +88,33 @@ defined_text = {
 	name = GetPowerStatusName
 	text = {
 		trigger = {
-            check_variable = { this.score_array_position_var <  8 }			
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 8		
+			compare = less_than_or_equals 
+			}			
 		}
 		localization_key = "Great Power" 
 	}
 	text = {
 		trigger = {	
-            check_variable = { this.score_array_position_var >  7 }		
-            check_variable = { this.score_array_position_var <  16 }				
+            check_variable = { this.score_array_position_var >  8 }		
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 16 		
+			compare = less_than_or_equals 
+			}			
 		}
 		localization_key = "Secondary Power"
 	}
 	text = {
 		trigger = {		
             check_variable = { this.score_array_position_var >  16 }		
-            check_variable = { this.score_array_position_var <  40 }		
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 40 		
+			compare = less_than_or_equals 
+			}		
 		}
 		localization_key = "Minor Power"
 	}
@@ -187,5 +199,32 @@ defined_text = {
 	}
 	text = {
 	    localization_key = "Anarchy"
+	}
+}
+
+defined_text = {
+	name = GetInfluenceLevel
+	text = {
+		trigger = {
+            check_variable = { 
+			var = this.score_array_position_var
+            value = 8		
+			compare = less_than_or_equals 
+			}			
+		}
+		localization_key = "Is a Great Power" 
+	}
+	text = {
+		trigger = {
+		THIS = {
+            check_variable = { 
+			    influencer_array^0 > 0.50 
+			}			
+		}
+		} 
+		localization_key = "Is in the sphere of [?influencer_tag_array^0.GetNameWithFlag]" 
+	}
+	text = {
+	    localization_key = "Independent Nation"
 	}
 }

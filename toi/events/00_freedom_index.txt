@@ -1,4 +1,4 @@
-﻿add_namespace = freedom_index
+add_namespace = freedom_index
 
 news_event = {
     id = freedom_index.0
@@ -33,12 +33,6 @@ news_event = {
             set_variable = {
                 var = liberty
                 value = 50
-            }
-
-            clamp_variable = {
-                var = liberty
-                min = 0
-                max = 100
             }
 
             add_to_variable = { liberty = modified_liberty }
@@ -539,9 +533,15 @@ news_event = {
                 add_to_variable = { liberty = -10 }
             }
 
+            clamp_variable = {
+                var = liberty
+                min = 0
+                max = 100
+            }
+
             #Now add this country's liberty to the global liberty index.
             #Scale it for population. Bigger countries have a bigger effect on global liberty average
-            set_variable = { pop_modified_liberty = liberty }
+            set_variable = { score_modified_liberty = liberty }
             
             #Set a liberty level for all industrial era nations. This is separate to non-industrial nations, which tend to be less free overall, but rely on more traditional systems
             if = {
@@ -550,9 +550,9 @@ news_event = {
                         has_idea = pre_industrial_era
                     }                
                 }
-            multiply_variable = { pop_modified_liberty = big_calcs_country_pop }
-            add_to_variable = { global.global_industrial_liberty = pop_modified_liberty }
-            add_to_variable = { global.global_liberty = pop_modified_liberty }   
+            multiply_variable = { score_modified_liberty = overall_score }
+            add_to_variable = { global.global_industrial_liberty = score_modified_liberty }
+            add_to_variable = { global.global_liberty = score_modified_liberty }   
             }
 
             #Set a liberty level for all agrarian nations
@@ -560,9 +560,9 @@ news_event = {
                 limit = {
                     has_idea = pre_industrial_era               
                 }
-            multiply_variable = { pop_modified_liberty = big_calcs_country_pop }
-            add_to_variable = { global.global_agrarian_liberty = pop_modified_liberty }
-            add_to_variable = { global.global_liberty = pop_modified_liberty }   
+            multiply_variable = { score_modified_liberty = overall_score }
+            add_to_variable = { global.global_agrarian_liberty = score_modified_liberty }
+            add_to_variable = { global.global_liberty = score_modified_liberty }   
             }
         }
 
@@ -608,12 +608,6 @@ news_event = {
                 value = 50
             }
 
-            clamp_variable = {
-                var = consciousness
-                min = 0
-                max = 100
-            }
-
             add_to_variable = { consciousness = modified_consciousness }
 
             #Border laws
@@ -642,7 +636,7 @@ news_event = {
                         has_idea = property_owners_suffrage
                     }
                 }
-                add_to_variable = { consciousness = 5 }
+                add_to_variable = { consciousness = 3 }
             }
 
             if = {
@@ -651,7 +645,7 @@ news_event = {
                         has_idea = universal_male_suffrage
                     }
                 }
-                add_to_variable = { consciousness = 10 }
+                add_to_variable = { consciousness = 6 }
             }
 
             if = {
@@ -660,7 +654,7 @@ news_event = {
                         has_idea = universal_suffrage
                     }
                 }
-                add_to_variable = { consciousness = 20 }
+                add_to_variable = { consciousness = 10 }
             }
 
             #Governmental laws
@@ -671,7 +665,7 @@ news_event = {
                         has_idea = constitution_adopted
                     }
                 }
-                add_to_variable = { consciousness = 10 }
+                add_to_variable = { consciousness = 5 }
             }
 
             if = {
@@ -680,7 +674,7 @@ news_event = {
                         has_idea = human_rights
                     }
                 }
-                add_to_variable = { consciousness = 10 }
+                add_to_variable = { consciousness = 5 }
             }
 
             if = {
@@ -719,7 +713,7 @@ news_event = {
                         has_idea = free_elections
                     }
                 }
-                add_to_variable = { consciousness = 10 }
+                add_to_variable = { consciousness = 5 }
             }
 
             #Religious laws
@@ -765,7 +759,7 @@ news_event = {
                         }
                     }
                 }
-                add_to_variable = { consciousness = 5 }
+                add_to_variable = { consciousness = 3 }
             }
 
             if = {
@@ -780,7 +774,7 @@ news_event = {
                         }
                     }
                 }
-                add_to_variable = { consciousness = 10 }
+                add_to_variable = { consciousness = 8 }
             }
 
             if = {
@@ -795,7 +789,7 @@ news_event = {
                         }
                     }
                 }
-                add_to_variable = { consciousness = 20 }
+                add_to_variable = { consciousness = 15 }
             }
 
             # Negative modifiers for authoritarian education schemes
@@ -1061,10 +1055,62 @@ news_event = {
                 add_to_variable = { consciousness = -5 }
             }
 
+            # Reduce consciousness in pre-industrial nations
+            if = {
+                limit = {
+                    has_idea = pre_industrial_era
+                }
+                add_to_variable = { consciousness = -5 }
+            }
+
+            if = {
+                limit = {
+                    has_war = yes
+                }
+
+                # During war, consciousness is up if war support is low / consciousness is down if war support is high
+                set_temp_variable = {
+                    var = consciousness_from_war
+                    value = war_support
+                }
+
+                divide_temp_variable = { consciousness_from_war = 2 }
+
+                subtract_from_temp_variable = { consciousness_from_war = 25 }
+
+                subtract_from_variable = { consciousness = consciousness_from_war }
+            }
+
+            # Clamp the variable between 0 and 100
+
+            clamp_variable = {
+                var = consciousness
+                min = 0
+                max = 100
+            }
+
+            # Get the difference between Consciousness and liberty
+
+            set_variable = {
+                var = consciousness_disparity
+                value = consciousness
+            }
+
+            subtract_from_variable = {
+                var = consciousness_disparity
+                value = liberty
+            }
+
+            clamp_variable = {
+                var = consciousness_disparity
+                min = 1
+                max = 100
+            }
+
 
             #Now add this country's consciousness to the global consciousness index.
             #Scale it for population. Bigger countries have a bigger effect on global consciousness average
-            set_variable = { pop_modified_consciousness = consciousness }
+            set_variable = { score_modified_consciousness = consciousness }
             
             #Set a consciousness level for all industrial era nations. This is separate to non-industrial nations, which tend to be less free overall, but rely on more traditional systems
             if = {
@@ -1073,9 +1119,9 @@ news_event = {
                         has_idea = pre_industrial_era
                     }                
                 }
-            multiply_variable = { pop_modified_consciousness = big_calcs_country_pop }
-            add_to_variable = { global.global_industrial_consciousness = pop_modified_consciousness }
-            add_to_variable = { global.global_consciousness = pop_modified_consciousness }   
+            multiply_variable = { score_modified_consciousness = overall_score }
+            add_to_variable = { global.global_industrial_consciousness = score_modified_consciousness }
+            add_to_variable = { global.global_consciousness = score_modified_consciousness }   
             }
 
             #Set a consciousness level for all agrarian nations
@@ -1083,9 +1129,9 @@ news_event = {
                 limit = {
                     has_idea = pre_industrial_era               
                 }
-            multiply_variable = { pop_modified_consciousness = big_calcs_country_pop }
-            add_to_variable = { global.global_agrarian_consciousness = pop_modified_consciousness }
-            add_to_variable = { global.global_consciousness = pop_modified_consciousness }   
+            multiply_variable = { score_modified_consciousness = overall_score }
+            add_to_variable = { global.global_agrarian_consciousness = score_modified_consciousness }
+            add_to_variable = { global.global_consciousness = score_modified_consciousness }   
             }
         }
 

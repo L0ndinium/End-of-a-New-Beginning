@@ -1,0 +1,462 @@
+afr_rrp_foreign_diplomacy = {
+
+afr_rrp_british_company_port = {
+
+    available = {
+		country_exists = ENG
+		OR = { 
+			any_state = {
+				is_coastal = yes
+			}
+			PRS = { 
+				is_neighbor_of = ROOT
+			}
+			AND = {
+				any_country = {
+					is_subject_of = ENG
+				}
+				is_neighbor_of = ROOT
+			}
+		}
+		NOT = {
+			has_active_mission = my_mission
+		}
+		
+    }
+	days_remove = 2
+    visible = {
+		OR = { 
+			NOT = {
+				has_country_flag = afr_rrp_hamburg_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_french_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_german_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_bremen_company_port
+			}
+		}
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		ENG = { country_event = { days = 1 id = afr_rrp.11 } }
+		set_country_flag = afr_rrp_british_company_port
+    }
+}
+
+afr_rrp_french_company_port = {
+
+    available = {
+		country_exists = FRA
+		OR = { 
+			any_state = {
+				is_coastal = yes
+			}
+			PRS = { 
+				is_neighbor_of = ROOT
+			}
+			AND = {
+				any_country = {
+					is_subject_of = FRA
+				}
+				is_neighbor_of = ROOT
+			}
+		}
+		NOT = {
+			has_active_mission = my_mission
+		}
+		
+    }
+	days_remove = 2
+    visible = {
+		OR = { 
+			NOT = {
+				has_country_flag = afr_rrp_british_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_hamburg_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_german_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_bremen_company_port
+			}
+		}
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		FRA = { country_event = { days = 1 id = afr_rrp.11 } }
+		set_country_flag = afr_rrp_french_company_port
+    }
+}
+
+afr_rrp_prussian_company_port = {
+
+    available = {
+		
+		country_exists = PRS
+		OR = { 
+			any_state = {
+				is_coastal = yes
+			}
+			PRS = { 
+				is_neighbor_of = ROOT
+			}
+			AND = {
+				any_country = {
+					is_subject_of = PRS
+				}
+				is_neighbor_of = ROOT
+			}
+		}
+		NOT = {
+			has_active_mission = my_mission
+		}
+		
+    }
+	days_remove = 2
+    visible = {
+		OR = { 
+			NOT = {
+				has_country_flag = afr_rrp_british_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_french_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_hamburg_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_bremen_company_port
+			}
+		}
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		PRS = { country_event = { days = 1 id = afr_rrp.11 } }
+		set_country_flag = afr_rrp_german_company_port
+    }
+}
+
+afr_rrp_bremen_company_port = {
+
+    available = {
+		
+		country_exists = BRE
+		OR = { 
+			any_state = {
+				is_coastal = yes
+			}
+			PRS = { 
+				is_neighbor_of = ROOT
+			}
+			AND = {
+				any_country = {
+					is_subject_of = BRE
+				}
+				is_neighbor_of = ROOT
+			}
+		}
+		NOT = {
+			has_active_mission = my_mission
+		}
+    }
+	days_remove = 2
+    visible = {
+		OR = { 
+			NOT = {
+				has_country_flag = afr_rrp_british_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_french_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_german_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_hamburg_company_port
+			}
+		}
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		BRE = { country_event = { days = 1 id = afr_rrp.11 } }
+		set_country_flag = afr_rrp_bremen_company_port
+    }
+}
+
+afr_rrp_hamburg_company_port = {
+
+    available = {
+		country_exists = HAM
+		OR = { 
+			any_state = {
+				is_coastal = yes
+			}
+			HAM = { 
+				is_neighbor_of = ROOT
+			}
+			AND = {
+				any_country = {
+					is_subject_of = HAM
+				}
+				is_neighbor_of = ROOT
+			}
+		}
+		NOT = {
+			has_active_mission = my_mission
+		}
+		
+    }
+	days_remove = 2
+    visible = {
+		OR = { 
+			NOT = {
+				has_country_flag = afr_rrp_british_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_french_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_german_company_port
+			}
+			NOT = {
+				has_country_flag = afr_rrp_hamburg_company_port
+			}
+		}
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		HAM = { country_event = { days = 1 id = afr_rrp.11 } }
+		set_country_flag = afr_rrp_hamburg_company_port
+    }
+}
+
+
+
+afr_rrp_railway_line_1 = {
+
+    available = {
+		has_country_flag = afr_rrp_british_company_port
+		country_exists = ENG
+		ROOT = { has_completed_focus = afr_Build_more_roads }
+    }
+
+    visible = {
+		has_country_flag = afr_rrp_british_company_port
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		ROOT = { country_event = { days = 1 id = afr_rrp.1 } }
+		ENG = { country_event = { days = 1 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+}
+
+afr_rrp_railway_line_2 = {
+
+    available = {
+		has_country_flag = afr_rrp_french_company_port
+		country_exists = FRA
+		ROOT = { has_completed_focus = afr_Build_more_roads }
+    }
+
+    visible = {
+			has_country_flag = afr_rrp_french_company_port
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		ROOT = { country_event = { days = 1 id = afr_rrp.1 } }
+		FRA = { country_event = { days = 1 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+}
+
+afr_rrp_railway_line_3 = {
+
+    available = {
+		has_country_flag = afr_rrp_german_company_port
+		country_exists = PRS
+		ROOT = { has_completed_focus = afr_Build_more_roads }
+		
+    }
+
+    visible = {
+			has_country_flag = afr_rrp_german_company_port
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		ROOT = { country_event = { days = 1 id = afr_rrp.1 } }
+		PRS = { country_event = { days = 1 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+}
+
+afr_rrp_railway_line_4 = {
+
+    available = {
+		has_country_flag = afr_rrp_bremen_company_port
+		country_exists = BRE
+		ROOT = { has_completed_focus = afr_Build_more_roads }
+    }
+
+    visible = {
+			has_country_flag = afr_rrp_bremen_company_port
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		ROOT = { country_event = { days = 1 id = afr_rrp.1 } }
+		BRE = { country_event = { days = 1 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+}
+
+afr_rrp_railway_line_5 = {
+
+    available = {
+		has_country_flag = afr_rrp_hamburg_company_port
+		country_exists = HAM
+		ROOT = { has_completed_focus = afr_Build_more_roads }
+    }
+
+    visible = {
+		has_country_flag = afr_rrp_hamburg_company_port
+    }
+	
+	fire_only_once = yes
+
+    cost = 0
+	
+	 complete_effect = {
+		ROOT = { country_event = { days = 1 id = afr_rrp.1 } }
+		HAM = { country_event = { days = 1 id = afr_rrp.2 } }
+		set_country_flag = afr_rrp_railway_line_began
+    }
+}
+
+afr_rrp_railway_infrastructure_construction = {
+
+    available = {
+		has_tech = iron_railways
+    }
+
+    visible = {
+		has_country_flag = afr_rrp_railway_line
+    }
+	
+	fire_only_once = yes
+	
+	days_remove = 180
+
+    cost = 0
+	
+	 remove_effect = {
+			country_event = { days = 1 id = afr_rrp.7 }
+			custom_effect_tooltip = EDC_afr.6.t
+			hidden_effect = {
+				country_event = { id = EDC_afr.6 hours = 1 } 
+			}
+			random_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+	}
+}
+
+afr_rrp_main_railway_route_construction = {
+
+    available = {
+		AND = {
+				has_tech = iron_railways
+				has_tech = steam_engine
+				has_tech = steam_locomotive
+		}
+    }
+
+    visible = {
+		has_country_flag = afr_rrp_railway_infrastructure_construction
+    }
+	
+	fire_only_once = yes
+	
+	days_remove = 360
+
+    cost = 0
+	
+	 remove_effect = {
+			custom_effect_tooltip = EDC_afr_20ip
+			hidden_effect = {
+				country_event = { id = EDC_afr.6 hours = 1 }
+				country_event = { id = EDC_afr.6 hours = 1 } 
+			}
+			add_ideas = { AF_T_small_scale_railways }
+			set_country_flag = afr_rrp_main_railway_route
+    }
+}
+
+
+}

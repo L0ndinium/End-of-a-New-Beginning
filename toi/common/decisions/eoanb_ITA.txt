@@ -77,7 +77,7 @@ ITA_Referendum_category_decisions = {
 
 		cost = 100
 
-
+		fire_only_once = yes
 
 	}
 
@@ -96,6 +96,8 @@ ITA_brigindage_category_decisions = {
 	visible = {
 		always = yes
 	}
+
+	fire_only_once = yes
 
 
 

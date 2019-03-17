@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+		BAD_russiancampaign = {
+			allowed = {
+				original_tag = BAD
+			}
+			
+			allowed_civil_war = {
+			   always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_army_problems
+		
+			modifier = {
+				army_morale_factor = -0.25
+			}
+		}
+	}
+}

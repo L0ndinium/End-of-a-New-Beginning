@@ -122,3 +122,7 @@ PAP_RRP = {
 	color = rgb { 103 29 32 }
 	color_ui = rgb { 103 29 32 }
    }
+MAN_cosmetic_qing_puppet = {
+	color = rgb { 237  152  18 }
+	color_ui = rgb { 237  152  18 }
+}

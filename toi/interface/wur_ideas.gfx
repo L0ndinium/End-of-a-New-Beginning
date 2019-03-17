@@ -1,0 +1,41 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_karl_von_varnbueler"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_karl_von_varnbueler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_fidel_von_baur_breitenfeld"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_fidel_von_baur_breitenfeld.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_friedrich_von_roemer"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_friedrich_von_roemer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_joseph_von_linden"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_joseph_von_linden.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_johannes_von_kuhn"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_johannes_von_kuhn.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_gottlob_tafel"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_gottlob_tafel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_theodor_von_gessler"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_theodor_von_gessler.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_WUR_advisor_adolph_gottlieb_ferdinand_schoder"
+		texturefile = "gfx/interface/ideas/WUR/WUR_advisor_adolph_gottlieb_ferdinand_schoder.dds"
+	}
+}

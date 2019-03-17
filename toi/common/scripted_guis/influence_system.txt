@@ -1,0 +1,209 @@
+scripted_gui = {
+
+	influence_power_info = {
+		context_type = player_context
+		
+		window_name = "influence_power_info1"
+		parent_window_token = top_bar 	
+		
+		visible = {
+		#is_ai = no  
+		}
+		 
+		effects = {
+		}
+		
+		triggers = {
+		}
+
+		ai_weights = {
+		}
+	}
+	
+	influence_power_info2 = {
+		context_type = selected_country_context
+		
+		window_name = "influence_power_info2"
+		parent_window_token = selected_country_view_diplomacy  
+		
+		visible = {
+		#is_ai = no  
+		    THIS = {
+			    is_ai = yes  						
+			}
+		}
+		 
+		effects = {
+			influence_open_click = {
+			ROOT = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_influence_actions }
+                set_variable = { show_influence_actions = show }
+			}
+			}
+		    show_influencers_button_click = {
+			ROOT = {
+                set_temp_variable = { show_1 = 1 }
+                subtract_from_temp_variable = { show_1 = show_influencers }
+                set_variable = { show_influencers = show_1 }
+			}			
+			}
+		}
+		
+		triggers = {
+		    influence_open_click_enabled = {
+                ROOT = {
+                    check_variable = { 
+		                var = score_array_position_var
+                        value = 16 		
+		                compare = less_than_or_equals 
+			        }			    
+			    }
+			}
+		}
+
+		ai_weights = {
+		}
+	}
+	
+	influencer_info = {
+		context_type = selected_country_context
+		
+		window_name = "influencer_info"
+		parent_window_token = selected_country_view_diplomacy
+		
+		visible = {
+		ROOT = {
+			check_variable = {
+			    show_influencers > 0 
+			}  			
+		}
+		}
+		 
+		effects = {
+		    close_influencer_info_view_click = {
+			ROOT = {
+                set_temp_variable = { show_1 = 1 }
+                subtract_from_temp_variable = { show_1 = show_influencers }
+                set_variable = { show_influencers = show_1 }
+			}		
+            } 			
+		}
+		
+		dynamic_lists = {
+			show_grid = {
+				array = this.influencer_tag_array
+				entry_container = show_entry_2
+			} 
+		}
+		
+		triggers = {
+		}
+
+		ai_weights = {
+		}
+	}
+	
+	influence_power_actions = {
+		context_type = selected_country_context
+		
+		window_name = "influence_power_actions"
+		parent_window_token = selected_country_view_diplomacy  
+		
+		visible = {
+		    ROOT = {
+			    check_variable = {
+			        show_influence_actions > 0 
+			    }  			
+		    }
+		    THIS = {
+			    is_ai = yes
+			}
+		} 
+		 
+		effects = {
+		    add_influence_button_click = {
+			    THIS = {
+			        remove_from_array = { influencer_array = influencer_var@ROOT }
+			        add_to_variable = { influencer_var@ROOT = 0.05 }
+					add_to_array = { 
+					    array = influencer_array 
+						index = influencer_array_index 
+						value = influencer_var@ROOT 
+					}	
+					set_temp_variable = { length_temp = influencer_tag_array^num }
+	                for_loop_effect = {
+                        start = 0
+                        end = length_temp
+                        add = 1
+                        value = v  
+						if = { 
+						    limit = {
+							    check_variable = { influencer_tag_array^v = root.id }
+							}
+						}
+		             	remove_from_array = { influencer_tag_array = root.id }
+	                }	
+					add_to_array = { 
+					    array = influencer_tag_array 
+						index = influencer_array_index 
+						value = root.id 
+					}					
+	                clamp_variable = {
+	                    var = influencer_var@ROOT 
+                   	    max = 1 
+	                 	min = 0 
+	                }					
+				}
+				ROOT = { 
+				    subtract_from_variable = { influence_var = 0.05 }
+			    }
+			}
+		    reset_influence_button_click = {
+			    THIS = {
+			        set_variable = { influencer_var@ROOT = 0 } 
+					clear_array = influencer_tag_array 
+					clear_array = influencer_array 
+				}
+			}
+		    add_5_influence_root_button_click = {
+			    ROOT = {
+				    add_to_variable = { influence_var = 0.05 }
+				}
+			}
+		}
+		
+		triggers = {
+		    add_influence_button_click_enabled  = {
+			   ROOT = { 
+				    check_variable = { influence_var > 0.05 } 
+				}
+				OR = {
+                    NOT = {
+                        check_variable = { 
+			                var = this.score_array_position_var
+                            value = 8		
+		                    compare = less_than_or_equals 
+			            }	
+				    }
+                    AND = {					
+                        check_variable = { root.score_array_position_var >  8 }						
+				        NOT = {		
+                            check_variable = { 
+		                   	    var = this.score_array_position_var
+                                value = 16 		
+		                   	    compare = less_than_or_equals 
+			                }					
+				        }			
+				    }
+				}
+                THIS = {
+			        check_variable = { influencer_array^i < 6 }
+				}					
+			}
+	    }
+
+		ai_weights = {
+		}
+    }
+}
