@@ -87,7 +87,7 @@ ITA_brigindage_category_decisions = {
 	
 	ITA_decision_deal_with_brigindage = {
 
-	icon = ita_skull
+	icon = generic_prepare_civil_war
 
 	available = {
 			has_completed_focus = ITA_Deal_with_Brigandage
