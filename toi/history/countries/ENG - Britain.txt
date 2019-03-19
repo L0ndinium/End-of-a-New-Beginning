@@ -8,6 +8,9 @@
   add_political_power = 5
   
   set_research_slots = 4
+  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = ENG }
+  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = ENG }
+  set_fuel_ratio = 0.05
   
   create_import = {
     resource = cotton

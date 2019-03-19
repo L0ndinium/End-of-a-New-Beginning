@@ -127,7 +127,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				war_support_weekly = 0.0025
+				war_support_weekly = 0.001
 			}
 		}
 
@@ -230,6 +230,7 @@ ideas = {
 			modifier = {
 				local_resources_factor = 0.05
 				min_export = -0.1
+				max_fuel_factor = 0.05
 			}
 		}
 

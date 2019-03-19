@@ -8,7 +8,8 @@
   set_research_slots = 2
   
   set_stability = 0.05
-  
+  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = EGY }
+  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = EGY }
   set_variable = { debt_level = 1 }
   set_country_flag = heir_ahmad
 

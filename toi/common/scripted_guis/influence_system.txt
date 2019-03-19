@@ -51,6 +51,15 @@ scripted_gui = {
 		}
 		
 		triggers = {
+		    influence_open_click_enabled = {
+                ROOT = {
+                    check_variable = { 
+		                var = score_array_position_var
+                        value = 16 		
+		                compare = less_than_or_equals 
+			        }			    
+			    }
+			}
 		}
 
 		ai_weights = {
@@ -102,11 +111,11 @@ scripted_gui = {
 		parent_window_token = selected_country_view_diplomacy  
 		
 		visible = {
-		ROOT = {
-			check_variable = {
-			    show_influence_actions > 0 
-			}  			
-		}
+		    ROOT = {
+			    check_variable = {
+			        show_influence_actions > 0 
+			    }  			
+		    }
 		    THIS = {
 			    is_ai = yes
 			}
@@ -114,27 +123,32 @@ scripted_gui = {
 		 
 		effects = {
 		    add_influence_button_click = {
-			    if = {
-				    limit = { 
-					    ROOT = { 
-						    check_variable = { influence_var > 0.05 } 
-						}
-                        NOT = {
-                            check_variable = { 
-			                    var = this.score_array_position_var
-                                value = 8		
-		                    	compare = less_than_or_equals 
-			                }	
-						}
-                        THIS = {
-						    check_variable = { influencer_array^i < 6 }
-						} 						
-					}
 			    THIS = {
 			        remove_from_array = { influencer_array = influencer_var@ROOT }
-					remove_from_array = { influencer_tag_array = Root.ID }
 			        add_to_variable = { influencer_var@ROOT = 0.05 }
-					add_to_array = { influencer_array = influencer_var@ROOT }
+					add_to_array = { 
+					    array = influencer_array 
+						index = influencer_array_index 
+						value = influencer_var@ROOT 
+					}	
+					set_temp_variable = { length_temp = influencer_tag_array^num }
+	                for_loop_effect = {
+                        start = 0
+                        end = length_temp
+                        add = 1
+                        value = v  
+						if = { 
+						    limit = {
+							    check_variable = { influencer_tag_array^v = root.id }
+							}
+						}
+		             	remove_from_array = { influencer_tag_array = root.id }
+	                }	
+					add_to_array = { 
+					    array = influencer_tag_array 
+						index = influencer_array_index 
+						value = root.id 
+					}					
 	                clamp_variable = {
 	                    var = influencer_var@ROOT 
                    	    max = 1 
@@ -143,7 +157,6 @@ scripted_gui = {
 				}
 				ROOT = { 
 				    subtract_from_variable = { influence_var = 0.05 }
-			    }
 			    }
 			}
 		    reset_influence_button_click = {
@@ -159,16 +172,36 @@ scripted_gui = {
 				}
 			}
 		}
-			
-		# dynamic_lists = {
-			# show_grid = {
-				# array = this.influencer_tag_array
-				# entry_container = show_entry_2
-			# } 
-		# }
 		
 		triggers = {
-		}
+		    add_influence_button_click_enabled  = {
+			   ROOT = { 
+				    check_variable = { influence_var > 0.05 } 
+				}
+				OR = {
+                    NOT = {
+                        check_variable = { 
+			                var = this.score_array_position_var
+                            value = 8		
+		                    compare = less_than_or_equals 
+			            }	
+				    }
+                    AND = {					
+                        check_variable = { root.score_array_position_var >  8 }						
+				        NOT = {		
+                            check_variable = { 
+		                   	    var = this.score_array_position_var
+                                value = 16 		
+		                   	    compare = less_than_or_equals 
+			                }					
+				        }			
+				    }
+				}
+                THIS = {
+			        check_variable = { influencer_array^i < 6 }
+				}					
+			}
+	    }
 
 		ai_weights = {
 		}

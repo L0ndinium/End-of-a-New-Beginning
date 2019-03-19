@@ -218,7 +218,7 @@ defined_text = {
 		trigger = {
 		THIS = {
             check_variable = { 
-			    influencer_array^0 > 50 
+			    influencer_array^0 > 0.50 
 			}			
 		}
 		} 

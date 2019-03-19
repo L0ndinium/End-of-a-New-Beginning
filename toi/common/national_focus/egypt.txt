@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = EGY_vic_begin_army_exspansion
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_focus_conscription
 		cost = 140
 		x = 2
 		y = 0
@@ -162,7 +162,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_advances_in_the_army
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_focus_reformed_army
 		cost = 140
 		prerequisite = {
 			focus = EGY_vic_military_production
@@ -340,6 +340,23 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = EGY_vic_expand_military_training
+		icon = GFX_focus_generic_little_entente
+		cost = 70
+		prerequisite = {
+			focus = EGY_vic_new_army_expansion
+		}
+		x = 4
+		y = 7
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	focus = {
 		id = EGY_vic_plan_military_campaigns
 		icon = GFX_goal_focus_napoleonic_tactics
 		cost = 70
@@ -364,7 +381,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_abyssian_campaign
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_imperialism
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_plan_military_campaigns
@@ -588,7 +605,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_prepare_to_annex_south_sudan
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_Colonial_Troops
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_plan_military_campaigns
@@ -651,7 +668,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_admin_reforms
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_reform_government
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_reforms_of_ismail
@@ -668,7 +685,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_continue_admin_reforms
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_reform_government
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_admin_reforms
@@ -685,7 +702,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_finish_admin_reforms
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_focus_government_icon
 		cost = 15
 		prerequisite = {
 			focus = EGY_vic_continue_admin_reforms
@@ -729,13 +746,54 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = EGY_vic_expand_our_schooling_system
+		icon = GFX_goal_focus_reform_administration
+		cost = 140
+		prerequisite = {
+			focus = EGY_vic_reforms_of_ahmad
+		}
+		x = 12
+		y = 6
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = EGY_afr_increase_debt_1
+			hidden_effect = {
+				add_to_variable = {var = debt_level value = 1}
+			}
+			if={
+				limit={has_idea = privileged_education}
+				swap_ideas={
+					add_idea=open_schools
+					remove_idea = privileged_education
+				}
+			}
+			else_if={
+				limit={has_idea = open_schools}
+				swap_ideas={
+					add_idea=compulsory_education
+					remove_idea = open_schools
+				}
+			}
+			else={
+				swap_ideas={
+					add_idea=privileged_education
+					remove_idea = oral_tradition
+				}
+			}
+		}
+	}
+	focus = {
 		id = EGY_vic_fund_a_national_research_group
 		icon = GFX_focus_research
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_import_european_tech
+			focus = EGY_vic_expand_our_schooling_system
 		}
-		x = 10
+		x = 11
 		y = 7
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1176,6 +1234,33 @@ focus_tree = {
 				target = ROOT
 				autonomy_state = autonomy_free
 			}
+			if={
+				limit={
+					OR={
+						has_country_leader = {
+							name = "Ahmad Rifaat Pasha"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "Isma'il Pasha"
+							ruling_only = yes
+						}
+					}
+				}
+				custom_effect_tooltip = EDC_egypt_vic_age_of_egpyt
+			
+			}
+			else_if={
+				limit={
+				
+				}
+				custom_effect_tooltip = EDC_egypt_age_of_ahmad
+			
+			}
+			else={
+				custom_effect_tooltip = EDC_egypt_age_of_ismail
+			
+			}
 		}
 	}
 	focus = {
@@ -1540,7 +1625,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_vic_found_fabric_mills
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_focus_textile
 		cost = 70
 		prerequisite = {
 			focus = EGY_vic_increase_cotton_investments

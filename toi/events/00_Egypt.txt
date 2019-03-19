@@ -323,6 +323,7 @@ country_event = {
 					controversial_figure
 				}
 			}
+			add_stability = -0.15#well he is not egyptian
 		}
 		set_autonomy = {#the loyal leader is, well loyal
 			target = FROM

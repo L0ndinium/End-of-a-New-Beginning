@@ -1895,6 +1895,21 @@ spriteTypes = {
 		name = "GFX_goal_focus_caxias_plan"
 		texturefile = "gfx/interface/goals/brazil/caxias_plan.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_goal_focus_imperial_might"
+		texturefile = "gfx/interface/goals/brazil/imperial_might.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_focus_ave_imperio"
+		texturefile = "gfx/interface/goals/brazil/ave_imperio.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_focus_brazilian_army"
+		texturefile = "gfx/interface/goals/brazil/brazilian_army.dds"
+	}
 
 	### Belgium
 
@@ -1964,6 +1979,10 @@ spriteTypes = {
 	}
 
 	### Wurttemberg
+	SpriteType = {
+		name = "GFX_goal_focus_crown_of_austria"
+		texturefile = "gfx/interface/goals/austria/focus_crown_of_austria.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_goal_focus_convince_bayern"

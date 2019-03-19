@@ -981,6 +981,10 @@
  COL_granadine_anarchism_ADJ:0 "Granadine"
  COL_granadine_chauvinist_populism_ADJ:0 "Granadine"
  COL_granadine_fundamentalism_ADJ:0 "Granadine"
+ 
+ MAN_cosmetic_qing_puppet_autocracy:0 "Manchuria"
+ MAN_cosmetic_qing_puppet_autocracy_ADJ:0 "Manchurian"
+ MAN_cosmetic_qing_puppet_autocracy_DEF:0 "The Province of Manchuria"
 
  
  PAP_RRP_radical_democracy:0 "Third Roman Republic"

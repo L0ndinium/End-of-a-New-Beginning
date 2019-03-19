@@ -4,7 +4,8 @@
   oob = "EST_1857"
 
   set_convoys = 0
-  
+  add_equipment_to_stockpile = { type = infantry_equipment_rifle_0 amount = 1000 producer = EST }
+  add_equipment_to_stockpile = { type = uniform_equipment_0 amount = 1000 producer = EST }
   set_research_slots = 3
 
   add_ideas = { 

@@ -11,7 +11,7 @@ state={
 	state_category = rural
 
 	history={
-		owner = CHI
+		owner = MAN
 		victory_points = {
 			12189 1
 		}
@@ -24,6 +24,7 @@ state={
 			}
 		}
 		add_core_of = CHI
+		add_core_of = MAN
 	}
 
 	provinces={

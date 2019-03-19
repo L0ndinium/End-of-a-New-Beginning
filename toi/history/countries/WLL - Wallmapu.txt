@@ -93,10 +93,10 @@ set_technology = {
         popularity = 0
       }
       autocracy = {
-        popularity = 65
+        popularity = 95
       }
       fundamentalism = {
-        popularity = 35
+        popularity = 5
       }
     }
 
@@ -113,11 +113,45 @@ set_technology = {
   # POLITICAL LEADERS
 
   create_country_leader = {
-    name = "Unorganized Government"
+    name = "Quilapán"
     desc = "POLITICS_WALLMAPU_UNORGANIZED_GOVERNMENT_DESC"
-    picture = "Portrait_WLL_Mapuche_Unorganized.dds"
-    expire = 1891.12.31
-    ideology = despotism
+    picture = "Portrait_WLL_Kulapang.dds"
+    expire = 1875.1.1
+    ideology = tribe
     traits = { }
   }
+  
+    create_corps_commander = {
+    name = "Quilapán"
+    picture = "Portrait_WLL_Kulapang.dds"
+    traits = { }
+    skill = 5
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 4
+  }
+  
+   create_corps_commander = {
+    name = "Modesto Inacayal"
+    picture = "Portrait_WLL_Modesto_Inacayal.dds"
+    traits = { }
+    skill = 3
+    attack_skill = 1
+    defense_skill = 3
+    planning_skill = 1
+    logistics_skill = 3
+  }
+  
+    create_corps_commander = {
+    name = "Valentin Sayhueque"
+    picture = "Portrait_WLL_Valentin_Sayhueque.dds"
+    traits = { }
+    skill = 2
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+  }
+  
 }

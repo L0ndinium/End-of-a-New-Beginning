@@ -251,8 +251,8 @@ USA = {
 }
 MON = {
 	#color = HSV { 0.1 0.15 0.4 }
-	color = rgb { 108 140 42 }
-	color_ui = rgb { 209 247 133 }
+	color = rgb { 237  152  18 }
+	color_ui = rgb { 237  152  18 }
 }
 MEN = {
 	color = rgb { 185  255  152 }
@@ -422,8 +422,8 @@ BLR = {
 	color_ui = rgb { 180 220 190 }
 }
 MAN = {
-	color = rgb { 255 120 71 }
-	color_ui = rgb { 255 120 71 }
+	color = rgb { 237  152  18 }
+	color_ui = rgb { 237  152  18 }
 }
 ANG = {
 	color = rgb { 37 140 61 }

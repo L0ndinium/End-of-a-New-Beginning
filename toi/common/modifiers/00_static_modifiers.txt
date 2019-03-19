@@ -424,11 +424,12 @@ diff_strong_ai_generic = {
 	army_core_attack_factor = 0.125
 	army_core_defence_factor = 0.125
 
+	command_power_gain_mult = 0.25
 	attrition = -0.075
 	MONTHLY_POPULATION = 0.625
 
 	# production/research
-	production_factory_max_efficiency_factor = 0.125
+	production_factory_max_efficiency_factor = 0.025
 	production_factory_efficiency_gain_factor = 0.125
 	industrial_capacity_factory = 0.125
 	production_speed_buildings_factor = 0.25
@@ -441,6 +442,8 @@ diff_strong_ai_generic = {
 	army_fuel_consumption_factor = -0.125
 	air_fuel_consumption_factor = -0.125
  	navy_fuel_consumption_factor = -0.125
+	fuel_gain_factor = 0.125
+	fuel_gain_factor_from_states = 0.25
 
 	# xp gain
 	experience_gain_air_factor = 0.25
@@ -462,6 +465,7 @@ diff_weak_ai_generic = {
 	army_core_attack_factor = -0.05
 	army_core_defence_factor = -0.05
 
+	command_power_gain_mult = -0.125
 	attrition = 0.05
 	MONTHLY_POPULATION = -0.125
 

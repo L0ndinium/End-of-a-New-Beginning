@@ -259,25 +259,25 @@ guiTypes = {
 						#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
 					}
 
-					buttonType = {
-						name = "grain_icon"
-						position = { x=350 y=2 }
-						spriteType = "GFX_resources_strip"
-						frame = 11
-					}
+					# buttonType = {
+						# name = "grain_icon"
+						# position = { x=350 y=2 }
+						# spriteType = "GFX_resources_strip"
+						# frame = 11
+					# }
 
-					instantTextboxType = {
-						name = "grain_value"
-						position = { x = 382 y = 5 }
-						textureFile = ""
-						font = "hoi_18mbs"
-						borderSize = {x = 0 y = 0}
-						text = "999"
-						maxWidth = 50
-						maxHeight = 20
-						format = left
-						#pdx_tooltip = "PRODUCTION_MATERIALS_GRAIN"
-					}
+					# instantTextboxType = {
+						# name = "grain_value"
+						# position = { x = 382 y = 5 }
+						# textureFile = ""
+						# font = "hoi_18mbs"
+						# borderSize = {x = 0 y = 0}
+						# text = "999"
+						# maxWidth = 50
+						# maxHeight = 20
+						# format = left
+						# #pdx_tooltip = "PRODUCTION_MATERIALS_GRAIN"
+					# }
 					
 					buttonType = {
 						name = "coal_icon"

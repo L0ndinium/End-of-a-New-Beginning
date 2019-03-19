@@ -1114,6 +1114,12 @@ focus_tree = {
 			NOT = {
 				has_country_flag = WUR_victorian_wilhelm_dead
 			}
+			FRA = {
+				has_country_leader = {
+					name = "Napoléon III"
+					ruling_only = yes
+				}
+			}
 		}
 		
 		completion_reward = {

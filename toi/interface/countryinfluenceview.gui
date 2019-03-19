@@ -19,13 +19,15 @@ guiTypes = {
 	
 	instantTextboxType = { 
 		name = "influence_power"
-		position = { x = 1355 y = 10 }
+		position = { x = 1355 y = 10 } 
 		font = "hoi_18mbs"
 		text = "[?ROOT.influence_var|%1]"
 		maxWidth = 57
 		maxHeight = 24
 		fixedsize = yes            
 		format = center
+		pdx_tooltip = INFLUENCE_TOOLTIP_TOPBAR 
+		pdx_tooltip_delayed = DELAYED_INFLUENCE_TOOLTIP_TOPBAR
 	}	
 	
 	instantTextboxType = { 
@@ -37,6 +39,8 @@ guiTypes = {
 		maxHeight = 24
 		fixedsize = yes         
 		format = center 
+		pdx_tooltip = INFLUENCR_TOOLTIP_TOPBAR 
+		pdx_tooltip_delayed = DELAYED_INFLUENCR_TOOLTIP_TOPBAR
 	}	
 	
 }
@@ -64,7 +68,7 @@ guiTypes = {
 	
 	instantTextboxType = { 
 		name = "sphere_status"
-		position = { x = 15 y = 825 }
+		position = { x = 15 y = 810 } 
 		font = "hoi_18mbs"
 		text = "[?this.GetInfluenceLevel]"
 		#maxWidth = 120
@@ -116,7 +120,7 @@ guiTypes = {
 		instantTextBoxType = { 
 			name ="influencer_tag_name"
 			font = "hoi_18mbs"
-			position = { x = 2 y = 15 }
+			position = { x = 20 y = 15 }
 			text = "Country"
 			format = centre 
 			maxWidth = 132
@@ -127,12 +131,12 @@ guiTypes = {
 		instantTextBoxType = { 
 			name ="influencer_power_name"
 			font = "hoi_18mbs"
-			position = { x = 72 y = 15 }
+			position = { x = 90 y = 15 }
 			text = "Influence"
 			format = centre 
 			maxWidth = 132
 			maxHeight = 68
-			fixedsize = no
+			fixedsize = no  
 		}
 		
 		iconType = {
@@ -177,7 +181,7 @@ guiTypes = {
 		instantTextBoxType = { 
 			name ="influencer_tag"
 			font = "hoi_18mbs"
-			position = { x = 0 y = 0 }
+			position = { x = 10 y = 0 }
 			text = "[?influencer_tag_array^i.GetNameWithFlag]"
 			format = centre 
 			maxWidth = 132
@@ -186,9 +190,9 @@ guiTypes = {
 		} 
 		
 		instantTextBoxType = {  
-			name ="influencer_power"
+			name ="influencer_power" 
 			font = "hoi_18mbs"
-			position = { x = 80 y = 0 }
+			position = { x = 95 y = 0 }
 			text = "[?this.influencer_array^i|%1]"
 			format = centre 
 			maxWidth = 132

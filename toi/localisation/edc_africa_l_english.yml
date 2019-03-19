@@ -1062,3 +1062,7 @@
  oma_vic_MOM_industrialisation:0 "The Industrialisation of [MOM.GetNameDef]"
  oma_vic_our_colonial_strength:0 "Our Colonial Strength"
  oma_vic_our_colonial_strength_desc:0 "Our Colonial Strength"
+ EDC_egypt_vic_age_of_egpyt:0 "Switches to the §YIndependant Victorian§! Focus Tree"
+ EDC_egypt_the_new_paraoh:0 "Switches to the §YPharaonic Victorian§! Focus tree"
+ EGY_vic_expand_military_training:0 "Expand Egyptian Military Training"
+ EGY_vic_expand_military_training_desc:0 "In order to take our rightful place as a independant nation, our army must be well trained"
