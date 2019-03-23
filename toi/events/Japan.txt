@@ -60,6 +60,7 @@ country_event = {
 	    }
 }
 
+##FOCUS TREE EVENTS##
 #monetary policy
 country_event = {
 	    id = shogunate_japan.3
@@ -120,6 +121,102 @@ country_event = {
 
 	    option = { 
 	    	name = shogunate_japan.6.a
+	    	##placeholder
+	    }
+}
+
+#kaigun denshujo
+country_event = {
+	    id = shogunate_japan.7
+	    title = shogunate_japan.7.t
+	    desc = shogunate_japan.7.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.7.a
+	    	##placeholder
+	    }
+}
+
+#fate of kaigun denshujo
+country_event = {
+	    id = shogunate_japan.8
+	    title = shogunate_japan.8.t
+	    desc = shogunate_japan.8.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.8.a
+	    	##placeholder
+	    }
+}
+
+#cadets abroad
+country_event = {
+	    id = shogunate_japan.9
+	    title = shogunate_japan.9.t
+	    desc = shogunate_japan.9.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.9.a
+	    	##placeholder
+	    }
+}
+
+#foreign steamship deal
+country_event = {
+	    id = shogunate_japan.10
+	    title = shogunate_japan.10.t
+	    desc = shogunate_japan.10.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.10.a
+	    	##placeholder
+	    }
+}
+
+#ironclad deal
+country_event = {
+	    id = shogunate_japan.11
+	    title = shogunate_japan.11.t
+	    desc = shogunate_japan.11.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.11.a
+	    	##placeholder
+	    }
+}
+
+#shanghai docking rights request
+country_event = {
+	    id = shogunate_japan.12
+	    title = shogunate_japan.12.t
+	    desc = shogunate_japan.12.d
+
+	    fire_only_once = yes
+
+	    is_triggered_only = yes
+
+	    option = { 
+	    	name = shogunate_japan.12.a
 	    	##placeholder
 	    }
 }

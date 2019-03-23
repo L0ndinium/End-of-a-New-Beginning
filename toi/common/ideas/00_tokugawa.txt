@@ -327,5 +327,34 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		TSH_gunboat_tactics = {
+
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.1
+				convoy_escort_efficiency = 0.1
+			}
+		}
+	}
+	country = {
+		TSH_modern_fleet_exercises = {
+
+			modifier = {
+				navy_max_range_factor = 0.05
+				ships_at_battle_start = 0.25
+				
+			}
+		}
+	}
+	country = {
+		TSH_foreign_naval_training = {
+
+			modifier = {
+				naval_coordination = 0.05
+				spotting_chance = 0.05
+				navy_screen_attack_factor = 0.05
+			}
+		}
+	}
 }
 	

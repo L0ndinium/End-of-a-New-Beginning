@@ -38,7 +38,10 @@
  TSH_unbacked_notes_issued:0 "Unbacked Notes Issued"
  TSH_koninklijke_marine_training:0 "Koninklijke Marine Training"
  TSH_royal_navy_training:0 "Royal Navy Training"
-
+ TSH_gunboat_tactics:0 "New Gunboat Tactics"
+ TSH_modern_fleet_exercises:0 "Adopted Modern Fleet Exercises"
+ TSH_foreign_naval_training:0 "Foreign Naval Training"
+ 
  ####OPINION MODIFIERS####
 
  ####POLITICAL AND OTHER ADVISORS####
