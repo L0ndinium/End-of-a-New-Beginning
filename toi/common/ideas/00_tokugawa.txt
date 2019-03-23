@@ -356,5 +356,43 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		TSH_rallied_daimyo_levies = {
+
+			modifier = {
+				monthly_population = 0.03
+			}
+		}
+	}
+	country = {
+		TSH_blockade_effort = {
+
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.4
+				spotting_chance = 0.2
+				convoy_escort_efficiency = 0.2
+			}
+		}
+	}
+	country = {
+		TSH_the_warrior's_spirit = {
+
+			modifier = {
+				attrition = -0.1
+				land_reinforce_rate = 0.25
+				army_morale_factor = 0.1
+			}
+		}
+	}
+	country = {
+		TSH_the_koyo_chinbutai = {
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				supply_consumption_factor = -0.05	
+			}
+		}
+	}
 }
 	

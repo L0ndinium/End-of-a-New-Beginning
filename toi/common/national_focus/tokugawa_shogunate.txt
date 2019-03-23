@@ -1682,4 +1682,135 @@ focus_tree = {
 			country_event = {id = shogunate_japan.12}
 		}		
 	}
+	focus = {
+		id = TSH_vic_defend_the_shogunate
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 10
+		completion_reward = { 
+			add_stability = 0.05
+			add_war_support = 0.2
+			army_experience = 10
+			add_timed_idea = { idea = TSH_rallied_daimyo_levies days = 200 }
+		}		
+	}
+	focus = {
+		id = TSH_vic_bolster_the_navy
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_defend_the_shogunate
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 9
+		y = 11
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = { 
+				bonus = 0.25
+				uses = 2
+				category = naval_doctrine
+			}
+		}		
+	}
+	focus = {
+		id = TSH_vic_strike_imperial_shipping
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_bolster_the_navy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 9
+		y = 12
+		completion_reward = {
+			add_timed_idea = { idea = TSH_blockade_effort days = 100 }
+		}		
+	}
+	focus = {
+		id = TSH_vic_aggressive_stance 
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_defend_the_shogunate
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_defensive_stance
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 11
+		completion_reward = {
+			add_war_support = 0.05
+		}		
+	}
+	focus = {
+		id = TSH_vic_form_the_koyo_chinbutai
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_aggressive_stance
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 12
+		completion_reward = {
+			add_political_power = -25
+			add_timed_idea = { idea = TSH_the_koyo_chinbutai days = 200 }
+		}		
+	}
+	focus = {
+		id = TSH_vic_the_warrior's_spirit
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_form_the_koyo_chinbutai
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 13
+		completion_reward = {
+			add_timed_idea = { idea = TSH_the_warrior's_spirit days = 200 }
+		}		
+	}
+	focus = {
+		id = TSH_vic_defensive_stance
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_defend_the_shogunate
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_aggressive_stance
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 11
+		completion_reward = {
+			add_stability = 0.20
+		}		
+	}
 }

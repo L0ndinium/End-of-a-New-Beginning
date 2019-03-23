@@ -41,7 +41,10 @@
  TSH_gunboat_tactics:0 "New Gunboat Tactics"
  TSH_modern_fleet_exercises:0 "Adopted Modern Fleet Exercises"
  TSH_foreign_naval_training:0 "Foreign Naval Training"
- 
+ TSH_rallied_daimyo_levies:0 "Rallied Daimyo Levies"
+ TSH_blockade_effort:0 "Blockade Effort"
+ TSH_the_koyo_chinbutai:0 "The Koyo Chinbutai"
+ TSH_the_warrior's_spirit:0 "The Warrior's Spirit"
  ####OPINION MODIFIERS####
 
  ####POLITICAL AND OTHER ADVISORS####
