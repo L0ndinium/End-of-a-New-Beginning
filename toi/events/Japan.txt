@@ -220,3 +220,19 @@ country_event = {
 	    	##placeholder
 	    }
 }
+
+#appeal to the west
+country_event = {
+		id = shogunate_japan.13
+		title = shogunate_japan.13.t
+		desc = shogunate_japan.13.d
+
+		fire_only_once = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = shogunate_japan.13.a
+			##placeholder
+		}
+}

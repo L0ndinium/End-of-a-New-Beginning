@@ -1690,7 +1690,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		x = 13
+		x = 12
 		y = 10
 		completion_reward = { 
 			add_stability = 0.05
@@ -1811,6 +1811,164 @@ focus_tree = {
 		y = 11
 		completion_reward = {
 			add_stability = 0.20
+		}		
+	}
+	focus = {
+		id = TSH_vic_the_roches_plan
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_defensive_stance
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_fortress_osaka
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 12
+		completion_reward = {
+			add_timed_idea = { idea = TSH_the_roches_plan days = 200 }
+			532 = {
+				add_building_construction = { type = bunker province = 10125 level = 2 instant_build = yes }
+			}
+		}		
+	}
+	focus = {
+		id = TSH_vic_fortress_osaka
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_defensive_stance
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_the_roches_plan
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 12
+		completion_reward = {
+			add_timed_idea = { idea = TSH_fortress_osaka days = 200 }
+			1263 = {
+				add_building_construction = { type = bunker province = 7072 level = 2 instant_build = yes }
+			}
+			1264 = {
+				add_building_construction = { type = bunker province = 1051 level = 2 instant_build = yes }
+			}
+		}		
+	}
+	focus = {
+		id = TSH_vic_a_sturdy_defense
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_form_the_koyo_chinbutai
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 13
+		completion_reward = {
+			add_timed_idea = { idea = TSH_a_sturdy_defense days = 200 }
+		}		
+	}
+	focus = {
+		id = TSH_vic_appeal_to_the_west
+		icon = GFX_focus_gold_exodus
+		cost = 15
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_defend_the_shogunate
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 11
+		completion_reward = {
+			add_political_power = -75
+			add_stability = -0.15
+			country_event = {id = shogunate_japan.13}
+		}		
+	}
+	focus = {
+		id = TSH_vic_equipment_from_the_west
+		icon = GFX_focus_gold_exodus
+		cost = 70
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_appeal_to_the_west
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 15
+		y = 12
+		completion_reward = {
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_rifle_0
+				amount = 500
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = cannon_equipment_0
+				amount = 100
+				producer = FRA
+			}
+		}		
+	}
+	focus = {
+		id = TSH_vic_the_surrender_of_edo
+		icon = GFX_focus_gold_exodus
+		cost = 0
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_strike_imperial_shipping
+			focus = TSH_vic_the_warrior's_spirit
+			focus = TSH_vic_a_sturdy_defense
+			focus = TSH_vic_equipment_from_the_west
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_the_shogunate_triumphant
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 13
+		y = 14
+		completion_reward = {
+
+		}		
+	}
+	focus = {
+		id = TSH_vic_the_shogunate_triumphant
+		icon = GFX_focus_gold_exodus
+		cost = 0
+		available_if_capitulated = no
+		prerequisite = {
+			focus = TSH_vic_strike_imperial_shipping
+			focus = TSH_vic_the_warrior's_spirit
+			focus = TSH_vic_a_sturdy_defense
+			focus = TSH_vic_equipment_from_the_west
+		}
+		mutually_exclusive = {
+			focus = TSH_vic_the_surrender_of_edo
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 11
+		y = 14
+		completion_reward = {
+
 		}		
 	}
 }

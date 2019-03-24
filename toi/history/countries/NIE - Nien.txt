@@ -91,6 +91,7 @@
 
 create_country_leader = {
     name = "Zhang Lexing"
+    picture = "Portrait_NIE_Zhang_Lexing.dds"
     desc = "POLITICS_TEMP_DESC"
     expire = 1891.12.31
     ideology = despotism
@@ -98,6 +99,7 @@ create_country_leader = {
 
 create_corps_commander = {
   name = "Zhang Lexing"
+  picture = "Portrait_NIE_Zhang_Lexing.dds"
   traits = { }
   skill = 2
   attack_skill = 1

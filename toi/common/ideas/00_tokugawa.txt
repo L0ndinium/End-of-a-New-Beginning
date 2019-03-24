@@ -394,5 +394,35 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		TSH_the_roches_plan = {
+
+			modifier = {
+				army_infantry_defence_factor = 0.05
+				max_planning = 0.05
+				max_dig_in = 1.0
+			}
+		}
+	}
+	country = {
+		TSH_fortress_osaka = {
+
+			modifier = {
+				army_infantry_defence_factor = 0.05
+				max_planning = 0.05
+				max_dig_in = 1.0
+			}
+		}
+	}
+	country = {
+		TSH_a_sturdy_defense = {
+
+			modifier = {
+				planning_speed = 0.10
+				land_reinforce_rate = 0.05
+				recon_factor = 0.05
+			}
+		}
+	}
 }
 	
