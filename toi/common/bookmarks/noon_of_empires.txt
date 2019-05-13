@@ -2,9 +2,9 @@ bookmarks = {
   bookmark = {
     name = "NOON_OF_EMPIRES_NAME"
     desc = "NOON_OF_EMPIRES_DESC"
-    date = 1885.1.1
+    date = 1885.11.1
     picture = "GFX_select_date_1885"
-    default_country = "PRS"
+    default_country = "GER"
     default = yes
 
     "ENG" = {
@@ -15,18 +15,6 @@ bookmarks = {
       }
       focuses = {
         
-      }
-    }
-    "PRS" = {
-      history = "PRS_NOON_OF_EMPIRES_DESC"
-      ideology = autocracy
-      ideas={
-       
-      }
-      focuses = {
-        PRS_unlock_germany
-        PRS_focus_new_candidate
-        PRS_the_army
       }
     }
     "USA" = {
@@ -55,12 +43,6 @@ bookmarks = {
       focuses = {
       }
     }
-    "RUS" = {
-      history = "RUS_NOON_OF_EMPIRES_DESC"
-      ideology = autocracy
-		ideas = {
-		}
-    }
     "AUS" = {
       history = "AUS_NOON_OF_EMPIRES_DESC"
       ideology = autocracy
@@ -70,7 +52,7 @@ bookmarks = {
       }
     } 
 
-    "PIE" = {
+    "ITA" = {
       history = "ITA_NOON_OF_EMPIRES_DESC"
       ideology = centrism
       ideas={
@@ -84,52 +66,6 @@ bookmarks = {
 			history = "OTHER_EONAB_DESC"
 	}	
 
-  "HOL" = {
-      history = "HOL_NOON_OF_EMPIRES_DESC"
-      ideology = traditional_conservatism
-      minor = yes
-      ideas={
-      }
-      focuses = {
-      }
-    } 
-
-  "CHI" = {
-      history = "CHI_NOON_OF_EMPIRES_DESC"
-      ideology = autocracy
-      minor = yes
-    } 
-	
-	"BRA" = {
-  	  history = "BRA_NOON_OF_EMPIRES_DESC"
-  	  ideology = autocracy
-  	  minor = yes
-	  ideas={
-      }
-    }     
-	
-	"GRE" = {
-      history = "GRE_NOON_OF_EMPIRES_DESC"
-      ideology = autocracy
-      minor = yes
-      ideas={
-      }
-      focuses = {
-      }
-    }
-
-    "JAP" = {
-      history = "JAP_NOON_OF_EMPIRES_DESC"
-      ideology = fundamentalism
-      minor = yes
-    }
-	
-	"PRU" = {
-  	  history = "PRU_NOON_OF_EMPIRES_DESC"
-  	  ideology = centrism
-  	  minor = yes
-	  ideas={
-      }
-    } 
+ 
   }
 }
